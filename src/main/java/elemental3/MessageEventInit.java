@@ -1,0 +1,166 @@
+package elemental3;
+
+import elemental2.core.JsArray;
+import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
+import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
+
+@Generated("org.realityforge.webtack")
+@JsType(
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "?"
+)
+public interface MessageEventInit extends EventInit {
+  @JsOverlay
+  @Nonnull
+  static MessageEventInit create() {
+    return Js.uncheckedCast( JsPropertyMap.of() );
+  }
+
+  @JsProperty
+  @Nullable
+  Any getData();
+
+  @JsProperty
+  void setData(@Nullable Any data);
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit data(@Nullable final Any data) {
+    setData( data );
+    return this;
+  }
+
+  @JsProperty
+  String getLastEventId();
+
+  @JsProperty
+  void setLastEventId(@Nonnull String lastEventId);
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit lastEventId(@Nonnull final String lastEventId) {
+    setLastEventId( lastEventId );
+    return this;
+  }
+
+  @JsProperty
+  String getOrigin();
+
+  @JsProperty
+  void setOrigin(@Nonnull String origin);
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit origin(@Nonnull final String origin) {
+    setOrigin( origin );
+    return this;
+  }
+
+  @JsProperty
+  JsArray<MessagePort> getPorts();
+
+  @JsProperty
+  void setPorts(@Nonnull JsArray<MessagePort> ports);
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit ports(@Nonnull final JsArray<MessagePort> ports) {
+    setPorts( ports );
+    return this;
+  }
+
+  @JsOverlay
+  default void setPorts(@Nonnull final MessagePort... ports) {
+    setPorts( JsArray.asJsArray( ports ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit ports(@Nonnull final MessagePort... ports) {
+    setPorts( ports );
+    return this;
+  }
+
+  @JsProperty
+  @Nullable
+  MessageEventSource getSource();
+
+  @JsProperty
+  void setSource(@Nullable MessageEventSource source);
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit source(@Nonnull final MessageEventSource source) {
+    setSource( source );
+    return this;
+  }
+
+  @JsOverlay
+  default void setSource(@Nonnull final Window source) {
+    setSource( MessageEventSource.of( source ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit source(@Nonnull final Window source) {
+    setSource( source );
+    return this;
+  }
+
+  @JsOverlay
+  default void setSource(@Nonnull final MessagePort source) {
+    setSource( MessageEventSource.of( source ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit source(@Nonnull final MessagePort source) {
+    setSource( source );
+    return this;
+  }
+
+  @JsOverlay
+  default void setSource(@Nonnull final ServiceWorker source) {
+    setSource( MessageEventSource.of( source ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit source(@Nonnull final ServiceWorker source) {
+    setSource( source );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default MessageEventInit bubbles(final boolean bubbles) {
+    setBubbles( bubbles );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default MessageEventInit cancelable(final boolean cancelable) {
+    setCancelable( cancelable );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default MessageEventInit composed(final boolean composed) {
+    setComposed( composed );
+    return this;
+  }
+}
