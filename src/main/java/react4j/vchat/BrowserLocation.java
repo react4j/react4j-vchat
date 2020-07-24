@@ -30,7 +30,7 @@ import javax.annotation.Nonnull;
  * the view. Observing the browser location will allow the application to decide whether the
  * route should be updated.</p>
  */
-@ArezComponent( requireId = Feature.DISABLE )
+@ArezComponent( service = Feature.ENABLE, requireId = Feature.DISABLE )
 abstract class BrowserLocation
 {
   @Nonnull
