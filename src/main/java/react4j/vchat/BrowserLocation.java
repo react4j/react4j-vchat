@@ -45,10 +45,6 @@ public abstract class BrowserLocation
    */
   @Nonnull
   private String _targetLocation;
-  /**
-   * Should we prevent the default action associated with hash change?
-   */
-  private boolean _preventDefault = true;
 
   /**
    * Create the model object.
@@ -64,26 +60,6 @@ public abstract class BrowserLocation
   BrowserLocation()
   {
     _targetLocation = _location = getHash();
-  }
-
-  /**
-   * Return true if component will prevent default actions when hash.
-   *
-   * @return true if component will prevent default actions when hash.
-   */
-  public boolean shouldPreventDefault()
-  {
-    return _preventDefault;
-  }
-
-  /**
-   * Set a flag to determine whether events default action will be prevented.
-   *
-   * @param preventDefault true to prevent default action.
-   */
-  public void setPreventDefault( final boolean preventDefault )
-  {
-    _preventDefault = preventDefault;
   }
 
   /**
@@ -171,10 +147,7 @@ public abstract class BrowserLocation
 
   private void onHashChangeEvent( @Nonnull final Event e )
   {
-    if ( _preventDefault )
-    {
-      e.preventDefault();
-    }
+    e.preventDefault();
     updateBrowserLocation();
   }
 
