@@ -1,0 +1,8 @@
+<module rename-to='hrm_dev'>
+  <inherits name='react4j.vchat.VideoChat'/>
+  <inherits name='react4j.dom.DomDev'/>
+  <inherits name='arez.ArezDebug'/>
+
+  <source path='ignore'/>
+  <public path='public/dev'/>
+</module>
