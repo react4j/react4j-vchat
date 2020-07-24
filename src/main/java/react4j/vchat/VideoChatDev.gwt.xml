@@ -1,4 +1,4 @@
-<module rename-to='hrm_dev'>
+<module rename-to='vchat_dev'>
   <inherits name='react4j.vchat.VideoChat'/>
   <inherits name='react4j.dom.DomDev'/>
   <inherits name='arez.ArezDebug'/>

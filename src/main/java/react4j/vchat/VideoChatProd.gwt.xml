@@ -1,4 +1,4 @@
-<module rename-to='hrm'>
+<module rename-to='vchat'>
   <inherits name='react4j.vchat.VideoChat'/>
   <inherits name='com.google.gwt.precompress.Precompress'/>
 
