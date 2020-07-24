@@ -31,7 +31,7 @@ import javax.annotation.Nonnull;
  * route should be updated.</p>
  */
 @ArezComponent( requireId = Feature.DISABLE )
-public abstract class BrowserLocation
+abstract class BrowserLocation
 {
   @Nonnull
   private final EventListener _listener = this::onHashChangeEvent;
@@ -52,7 +52,7 @@ public abstract class BrowserLocation
    * @return the BrowserLocation instance.
    */
   @Nonnull
-  public static BrowserLocation create()
+  static BrowserLocation create()
   {
     return new Arez_BrowserLocation();
   }
@@ -70,7 +70,7 @@ public abstract class BrowserLocation
    * @param targetLocation the location to change to.
    */
   @Action( verifyRequired = false )
-  public void changeLocation( @Nonnull final String targetLocation )
+  void changeLocation( @Nonnull final String targetLocation )
   {
     _targetLocation = targetLocation;
     if ( targetLocation.equals( getBrowserLocation() ) )
@@ -88,7 +88,7 @@ public abstract class BrowserLocation
    * Revert the browsers location to the application location.
    */
   @Action
-  public void resetBrowserLocation()
+  void resetBrowserLocation()
   {
     changeLocation( getLocation() );
   }
@@ -101,7 +101,7 @@ public abstract class BrowserLocation
    */
   @Observable
   @Nonnull
-  public String getLocation()
+  String getLocation()
   {
     return _location;
   }
@@ -114,7 +114,7 @@ public abstract class BrowserLocation
 
   @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
   @Nonnull
-  public String getBrowserLocation()
+  String getBrowserLocation()
   {
     return getHash();
   }
