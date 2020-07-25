@@ -64,10 +64,10 @@ public class URL {
   @Nonnull
   public native String toJSON();
 
+  public static native void revokeObjectURL(@Nonnull String url);
+
   @Nonnull
   public static native String createObjectURL(@Nonnull Blob blob);
-
-  public static native void revokeObjectURL(@Nonnull String url);
 
   @Nonnull
   public static native String createObjectURL(@Nonnull MediaSource mediaSource);
