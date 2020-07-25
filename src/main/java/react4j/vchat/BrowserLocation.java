@@ -35,36 +35,30 @@ abstract class BrowserLocation
 
   @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
   @Nonnull
-  String getBrowserLocation()
+  String getLocation()
   {
     final String hash = DomGlobal.window.location.hash;
     return null == hash ? "" : hash.substring( 1 );
   }
 
   @OnActivate
-  void onBrowserLocationActivate()
+  void onLocationActivate()
   {
     DomGlobal.window.addEventListener( "hashchange", _listener, false );
   }
 
   @OnDeactivate
-  void onBrowserLocationDeactivate()
+  void onLocationDeactivate()
   {
     DomGlobal.window.removeEventListener( "hashchange", _listener, false );
   }
 
   @ComputableValueRef
-  abstract ComputableValue<?> getBrowserLocationComputableValue();
+  abstract ComputableValue<?> getLocationComputableValue();
 
   @Action
-  void updateBrowserLocation()
+  void onHashChangeEvent( @Nonnull final Event e )
   {
-    getBrowserLocationComputableValue().reportPossiblyChanged();
-  }
-
-  private void onHashChangeEvent( @Nonnull final Event e )
-  {
-    e.preventDefault();
-    updateBrowserLocation();
+    getLocationComputableValue().reportPossiblyChanged();
   }
 }
