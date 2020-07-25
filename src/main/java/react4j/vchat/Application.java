@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import react4j.ReactNode;
 import react4j.annotations.Render;
 import react4j.annotations.View;
-import static react4j.dom.DOM.*;
 
 @View( type = View.Type.TRACKING )
 abstract class Application
@@ -24,6 +23,6 @@ abstract class Application
     final String location = _location.getLocation();
     return location.isEmpty() ?
            SelectRoomViewBuilder.build() :
-           h1( "Room " + _connection.getRoomId() );
+           RoomViewBuilder.connection( _connection );
   }
 }

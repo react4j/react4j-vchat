@@ -1,7 +1,9 @@
 package react4j.vchat;
 
+import arez.annotations.Action;
 import arez.annotations.ArezComponent;
 import arez.annotations.ComponentDependency;
+import arez.annotations.Observable;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -28,5 +30,37 @@ abstract class RoomConnection
   {
     final String location = _browserLocation.getLocation();
     return location.isEmpty() ? null : location;
+  }
+
+  @Observable
+  abstract boolean isAudioEnabled();
+
+  abstract void setAudioEnabled( boolean audioEnabled );
+
+  @Action
+  void toggleAudio()
+  {
+    setAudioEnabled( !isAudioEnabled() );
+  }
+
+  @Observable
+  abstract boolean isVideoEnabled();
+
+  abstract void setVideoEnabled( boolean videoEnabled );
+
+  @Action
+  void toggleVideo()
+  {
+    setVideoEnabled( !isVideoEnabled() );
+  }
+
+  boolean isConnecting()
+  {
+    return false;
+  }
+
+  boolean isWaiting()
+  {
+    return true;
   }
 }
