@@ -245,10 +245,6 @@ public class Navigator {
   @Nonnull
   public native JsArray<Gamepad> getGamepads();
 
-  public native void getUserMedia(@Nonnull MediaStreamConstraints constraints,
-      @Nonnull NavigatorUserMediaSuccessCallback successCallback,
-      @Nonnull NavigatorUserMediaErrorCallback errorCallback);
-
   public native boolean vibrate(@Nonnull VibratePattern pattern);
 
   public native boolean vibrate(int pattern);
