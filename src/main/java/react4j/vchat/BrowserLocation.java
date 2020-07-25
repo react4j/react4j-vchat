@@ -15,9 +15,6 @@ import javax.annotation.Nonnull;
 
 /**
  * This is a simple abstraction over browser location as a hash.
- * It should be noted that this is a stripped down version extracted from the <code>arez-browserlocation</code> library.
- *
- * @link https://github.com/arez/arez-browserlocation
  */
 @ArezComponent
 abstract class BrowserLocation
