@@ -680,4 +680,204 @@ public interface MediaTrackConstraintSet {
     setWidth( width );
     return this;
   }
+
+  @JsProperty
+  ConstrainDOMString getCursor();
+
+  @JsProperty
+  void setCursor(@Nonnull ConstrainDOMString cursor);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet cursor(@Nonnull final ConstrainDOMString cursor) {
+    setCursor( cursor );
+    return this;
+  }
+
+  @JsOverlay
+  default void setCursor(@Nonnull final String cursor) {
+    setCursor( ConstrainDOMString.of( cursor ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet cursor(@Nonnull final String cursor) {
+    setCursor( cursor );
+    return this;
+  }
+
+  @JsOverlay
+  default void setCursor(@Nonnull final JsArray<String> cursor) {
+    setCursor( ConstrainDOMString.of( cursor ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet cursor(@Nonnull final JsArray<String> cursor) {
+    setCursor( cursor );
+    return this;
+  }
+
+  @JsOverlay
+  default void setCursor(@Nonnull final String... cursor) {
+    setCursor( ConstrainDOMString.of( cursor ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet cursor(@Nonnull final String... cursor) {
+    setCursor( cursor );
+    return this;
+  }
+
+  @JsOverlay
+  default void setCursor(@Nonnull final ConstrainDOMStringParameters cursor) {
+    setCursor( ConstrainDOMString.of( cursor ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet cursor(@Nonnull final ConstrainDOMStringParameters cursor) {
+    setCursor( cursor );
+    return this;
+  }
+
+  @JsProperty
+  ConstrainDOMString getDisplaySurface();
+
+  @JsProperty
+  void setDisplaySurface(@Nonnull ConstrainDOMString displaySurface);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet displaySurface(@Nonnull final ConstrainDOMString displaySurface) {
+    setDisplaySurface( displaySurface );
+    return this;
+  }
+
+  @JsOverlay
+  default void setDisplaySurface(@Nonnull final String displaySurface) {
+    setDisplaySurface( ConstrainDOMString.of( displaySurface ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet displaySurface(@Nonnull final String displaySurface) {
+    setDisplaySurface( displaySurface );
+    return this;
+  }
+
+  @JsOverlay
+  default void setDisplaySurface(@Nonnull final JsArray<String> displaySurface) {
+    setDisplaySurface( ConstrainDOMString.of( displaySurface ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet displaySurface(@Nonnull final JsArray<String> displaySurface) {
+    setDisplaySurface( displaySurface );
+    return this;
+  }
+
+  @JsOverlay
+  default void setDisplaySurface(@Nonnull final String... displaySurface) {
+    setDisplaySurface( ConstrainDOMString.of( displaySurface ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet displaySurface(@Nonnull final String... displaySurface) {
+    setDisplaySurface( displaySurface );
+    return this;
+  }
+
+  @JsOverlay
+  default void setDisplaySurface(@Nonnull final ConstrainDOMStringParameters displaySurface) {
+    setDisplaySurface( ConstrainDOMString.of( displaySurface ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet displaySurface(
+      @Nonnull final ConstrainDOMStringParameters displaySurface) {
+    setDisplaySurface( displaySurface );
+    return this;
+  }
+
+  @JsProperty
+  ConstrainBoolean getLogicalSurface();
+
+  @JsProperty
+  void setLogicalSurface(@Nonnull ConstrainBoolean logicalSurface);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet logicalSurface(@Nonnull final ConstrainBoolean logicalSurface) {
+    setLogicalSurface( logicalSurface );
+    return this;
+  }
+
+  @JsOverlay
+  default void setLogicalSurface(final boolean logicalSurface) {
+    setLogicalSurface( ConstrainBoolean.of( logicalSurface ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet logicalSurface(final boolean logicalSurface) {
+    setLogicalSurface( logicalSurface );
+    return this;
+  }
+
+  @JsOverlay
+  default void setLogicalSurface(@Nonnull final ConstrainBooleanParameters logicalSurface) {
+    setLogicalSurface( ConstrainBoolean.of( logicalSurface ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet logicalSurface(
+      @Nonnull final ConstrainBooleanParameters logicalSurface) {
+    setLogicalSurface( logicalSurface );
+    return this;
+  }
+
+  @JsProperty
+  ConstrainBoolean getRestrictOwnAudio();
+
+  @JsProperty
+  void setRestrictOwnAudio(@Nonnull ConstrainBoolean restrictOwnAudio);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet restrictOwnAudio(
+      @Nonnull final ConstrainBoolean restrictOwnAudio) {
+    setRestrictOwnAudio( restrictOwnAudio );
+    return this;
+  }
+
+  @JsOverlay
+  default void setRestrictOwnAudio(final boolean restrictOwnAudio) {
+    setRestrictOwnAudio( ConstrainBoolean.of( restrictOwnAudio ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet restrictOwnAudio(final boolean restrictOwnAudio) {
+    setRestrictOwnAudio( restrictOwnAudio );
+    return this;
+  }
+
+  @JsOverlay
+  default void setRestrictOwnAudio(@Nonnull final ConstrainBooleanParameters restrictOwnAudio) {
+    setRestrictOwnAudio( ConstrainBoolean.of( restrictOwnAudio ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackConstraintSet restrictOwnAudio(
+      @Nonnull final ConstrainBooleanParameters restrictOwnAudio) {
+    setRestrictOwnAudio( restrictOwnAudio );
+    return this;
+  }
 }

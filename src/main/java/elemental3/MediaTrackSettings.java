@@ -216,4 +216,43 @@ public interface MediaTrackSettings {
     setWidth( width );
     return this;
   }
+
+  @JsProperty
+  String getCursor();
+
+  @JsProperty
+  void setCursor(@Nonnull String cursor);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackSettings cursor(@Nonnull final String cursor) {
+    setCursor( cursor );
+    return this;
+  }
+
+  @JsProperty
+  String getDisplaySurface();
+
+  @JsProperty
+  void setDisplaySurface(@Nonnull String displaySurface);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackSettings displaySurface(@Nonnull final String displaySurface) {
+    setDisplaySurface( displaySurface );
+    return this;
+  }
+
+  @JsProperty
+  boolean isLogicalSurface();
+
+  @JsProperty
+  void setLogicalSurface(boolean logicalSurface);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackSettings logicalSurface(final boolean logicalSurface) {
+    setLogicalSurface( logicalSurface );
+    return this;
+  }
 }

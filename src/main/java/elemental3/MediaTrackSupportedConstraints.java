@@ -216,4 +216,56 @@ public interface MediaTrackSupportedConstraints {
     setWidth( width );
     return this;
   }
+
+  @JsProperty
+  boolean isCursor();
+
+  @JsProperty
+  void setCursor(boolean cursor);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackSupportedConstraints cursor(final boolean cursor) {
+    setCursor( cursor );
+    return this;
+  }
+
+  @JsProperty
+  boolean isDisplaySurface();
+
+  @JsProperty
+  void setDisplaySurface(boolean displaySurface);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackSupportedConstraints displaySurface(final boolean displaySurface) {
+    setDisplaySurface( displaySurface );
+    return this;
+  }
+
+  @JsProperty
+  boolean isLogicalSurface();
+
+  @JsProperty
+  void setLogicalSurface(boolean logicalSurface);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackSupportedConstraints logicalSurface(final boolean logicalSurface) {
+    setLogicalSurface( logicalSurface );
+    return this;
+  }
+
+  @JsProperty
+  boolean isRestrictOwnAudio();
+
+  @JsProperty
+  void setRestrictOwnAudio(boolean restrictOwnAudio);
+
+  @JsOverlay
+  @Nonnull
+  default MediaTrackSupportedConstraints restrictOwnAudio(final boolean restrictOwnAudio) {
+    setRestrictOwnAudio( restrictOwnAudio );
+    return this;
+  }
 }

@@ -32,4 +32,11 @@ public class MediaDevices extends EventTarget {
 
   @Nonnull
   public native Promise<MediaStream> getUserMedia();
+
+  @Nonnull
+  public native Promise<MediaStream> getDisplayMedia(
+      @Nonnull DisplayMediaStreamConstraints constraints);
+
+  @Nonnull
+  public native Promise<MediaStream> getDisplayMedia();
 }
