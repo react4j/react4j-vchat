@@ -89,12 +89,14 @@ abstract class RoomConnection
 
   abstract void setLocalStreamErrorMessage( @Nullable String message );
 
+  @Action
   void onLocalStream( @Nonnull final MediaStream stream )
   {
     setLocalStream( stream );
     setLocalStreamErrorMessage( null );
   }
 
+  @Action
   void onLocalStreamError( @Nonnull final DOMException exception )
   {
     setLocalStream( null );
