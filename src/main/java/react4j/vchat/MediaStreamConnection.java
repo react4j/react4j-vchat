@@ -59,14 +59,10 @@ abstract class MediaStreamConnection
 
   @Observable( initializer = Feature.ENABLE )
   abstract boolean isEnabled();
-
-  abstract void setEnabled( boolean screenShareEnabled );
-
-  @Action
-  void toggleEnabled()
+@Action
+  public void setEnabled( final boolean enabled )
   {
-    final boolean enabled = !isEnabled();
-    setEnabled( enabled );
+    _setEnabled( enabled );
     final MediaStream stream = getStream();
     if ( enabled )
     {
@@ -85,6 +81,15 @@ abstract class MediaStreamConnection
         } );
       }
     }
+  }
+
+  @Observable( name = "enabled" )
+  abstract void _setEnabled( boolean enabled );
+
+  @Action
+  void toggleEnabled()
+  {
+    setEnabled( !isEnabled() );
   }
 
   @Observable( initializer = Feature.ENABLE )

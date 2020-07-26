@@ -1,8 +1,8 @@
 package react4j.vchat;
 
+import arez.annotations.PreDispose;
 import elemental3.HTMLVideoElement;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.base.JsPropertyMap;
 import react4j.ReactElement;
 import react4j.ReactNode;
@@ -19,12 +19,13 @@ import static react4j.dom.DOM.*;
 @View( type = View.Type.TRACKING )
 abstract class RoomView
 {
-  @Nullable
-  private HTMLVideoElement _remoteVideo;
-
   @Input( immutable = true )
   @Nonnull
   abstract RoomConnection connection();
+
+  @Input( immutable = true )
+  @Nonnull
+  abstract MediaStreamConnection camStream();
 
   @Input( immutable = true )
   @Nonnull
@@ -33,7 +34,14 @@ abstract class RoomView
   @PostMount
   void postMount()
   {
-    connection().connectLocalMedia();
+    camStream().setEnabled( true );
+  }
+
+  @PreDispose
+  void preDispose()
+  {
+    camStream().setEnabled( false );
+    screenShareStream().setEnabled( false );
   }
 
   @Nonnull
@@ -41,10 +49,10 @@ abstract class RoomView
   ReactNode render()
   {
     final RoomConnection connection = connection();
+    final MediaStreamConnection camStream = camStream();
     final MediaStreamConnection screenShareStream = screenShareStream();
-    final RefConsumer localRef = e -> connection().setLocalVideoElement( (HTMLVideoElement) e );
+    final RefConsumer localRef = e -> camStream.setVideoElement( (HTMLVideoElement) e );
     final RefConsumer screenShareRef = e -> screenShareStream.setVideoElement( (HTMLVideoElement) e );
-    final RefConsumer removeRef = e -> _remoteVideo = (HTMLVideoElement) e;
     return div( new HtmlProps().className( "video-wrapper" ),
                 div( new HtmlProps().className( "local-video-wrapper" ),
                      ReactElement.createHostElement( "video",
@@ -70,7 +78,7 @@ abstract class RoomView
                 ),
                 ReactElement.createHostElement( "video",
                                                 null,
-                                                removeRef,
+                                                null,
                                                 JsPropertyMap.of( "autoPlay",
                                                                   true,
                                                                   "className",
@@ -89,17 +97,17 @@ abstract class RoomView
                                     .width( 32 )
                                     .height( 32 ) )
                      ),
-                     button( new BtnProps().className( "control-btn" ).onClick( e -> connection.toggleAudio() ),
+                     button( new BtnProps().className( "control-btn" ).onClick( e -> camStream.toggleAudio() ),
                              // TODO: Should generate svg factory methods and props so don't have to ref as img
                              img( new ImgProps()
-                                    .src( connection.isAudioEnabled() ? "img/mic_on.svg" : "img/mic_off.svg" )
+                                    .src( camStream.isAudioEnabled() ? "img/mic_on.svg" : "img/mic_off.svg" )
                                     .width( 32 )
                                     .height( 32 ) )
                      ),
-                     button( new BtnProps().className( "control-btn" ).onClick( e -> connection.toggleVideo() ),
+                     button( new BtnProps().className( "control-btn" ).onClick( e -> camStream.toggleVideo() ),
                              // TODO: Should generate svg factory methods and props so don't have to ref as img
                              img( new ImgProps()
-                                    .src( connection.isVideoEnabled() ? "img/cam_on.svg" : "img/cam_off.svg" )
+                                    .src( camStream.isVideoEnabled() ? "img/cam_on.svg" : "img/cam_off.svg" )
                                     .width( 32 )
                                     .height( 32 ) )
                      )
