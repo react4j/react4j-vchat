@@ -59,7 +59,8 @@ abstract class MediaStreamConnection
 
   @Observable( initializer = Feature.ENABLE )
   abstract boolean isEnabled();
-@Action
+
+  @Action
   public void setEnabled( final boolean enabled )
   {
     _setEnabled( enabled );
