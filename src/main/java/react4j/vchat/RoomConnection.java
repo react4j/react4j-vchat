@@ -5,11 +5,20 @@ import arez.annotations.ArezComponent;
 import arez.annotations.ComponentDependency;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
+import arez.annotations.Observe;
+import elemental2.dom.DomGlobal;
+import elemental3.ConstrainULongRange;
 import elemental3.DOMException;
+import elemental3.HTMLVideoElement;
+import elemental3.MediaProvider;
 import elemental3.MediaStream;
+import elemental3.MediaStreamConstraints;
+import elemental3.MediaTrackConstraints;
+import elemental3.Navigator;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.base.Js;
 
 @ArezComponent
 abstract class RoomConnection
@@ -20,7 +29,7 @@ abstract class RoomConnection
   @Nonnull
   static RoomConnection create( @Nonnull final BrowserLocation browserLocation )
   {
-    return new Arez_RoomConnection( browserLocation, true, true );
+    return new Arez_RoomConnection( browserLocation, true, true, false );
   }
 
   RoomConnection( @Nonnull final BrowserLocation browserLocation )
@@ -77,17 +86,58 @@ abstract class RoomConnection
     return true;
   }
 
-  @Observable( writeOutsideTransaction = Feature.ENABLE )
+  @Observable
   @Nullable
   abstract MediaStream getLocalStream();
 
   abstract void setLocalStream( @Nullable MediaStream localStream );
 
-  @Observable( writeOutsideTransaction = Feature.ENABLE )
+  @Observable
   @Nullable
   abstract String getLocalStreamErrorMessage();
 
   abstract void setLocalStreamErrorMessage( @Nullable String message );
+
+  @Observable( writeOutsideTransaction = Feature.ENABLE )
+  @Nullable
+  abstract HTMLVideoElement getLocalVideoElement();
+
+  abstract void setLocalVideoElement( @Nullable HTMLVideoElement videoElement );
+
+  void connectLocalMedia()
+  {
+    getNavigator()
+      .mediaDevices()
+      .getUserMedia( MediaStreamConstraints
+                       .create()
+                       .audio( true )
+                       .video( MediaTrackConstraints
+                                 .create()
+                                 .width( ConstrainULongRange.create().min( 160 ).ideal( 640 ).max( 1280 ) )
+                                 .height( ConstrainULongRange.create().min( 120 ).ideal( 360 ).max( 720 ) ) ) )
+      .then( stream -> {
+        onLocalStream( stream );
+        return null;
+      } )
+      .catch_( error -> {
+        if ( error instanceof DOMException )
+        {
+          onLocalStreamError( (DOMException) error );
+        }
+        return null;
+      } );
+  }
+
+  @Observe
+  void maintainLocalVideo()
+  {
+    final MediaStream stream = getLocalStream();
+    final HTMLVideoElement videoElement = getLocalVideoElement();
+    if ( null != stream && null != videoElement )
+    {
+      videoElement.srcObject = MediaProvider.of( stream );
+    }
+  }
 
   @Action
   void onLocalStream( @Nonnull final MediaStream stream )
