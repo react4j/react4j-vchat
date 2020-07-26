@@ -47,7 +47,6 @@ abstract class RoomConnection
     final MediaStream localStream = getLocalStream();
     if ( null != localStream )
     {
-
       localStream.getAudioTracks().forEach( ( track, index, array ) -> track.enabled = !track.enabled );
     }
   }
