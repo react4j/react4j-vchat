@@ -26,6 +26,10 @@ abstract class RoomView
   @Nonnull
   abstract RoomConnection connection();
 
+  @Input( immutable = true )
+  @Nonnull
+  abstract MediaStreamConnection screenShareStream();
+
   @PostMount
   void postMount()
   {
@@ -37,8 +41,9 @@ abstract class RoomView
   ReactNode render()
   {
     final RoomConnection connection = connection();
+    final MediaStreamConnection screenShareStream = screenShareStream();
     final RefConsumer localRef = e -> connection().setLocalVideoElement( (HTMLVideoElement) e );
-    final RefConsumer screenShareRef = e -> connection().setScreenShareVideoElement( (HTMLVideoElement) e );
+    final RefConsumer screenShareRef = e -> screenShareStream.setVideoElement( (HTMLVideoElement) e );
     final RefConsumer removeRef = e -> _remoteVideo = (HTMLVideoElement) e;
     return div( new HtmlProps().className( "video-wrapper" ),
                 div( new HtmlProps().className( "local-video-wrapper" ),
@@ -51,7 +56,7 @@ abstract class RoomView
                                                                        true,
                                                                        "id",
                                                                        "localVideo" ) ),
-                     connection.isScreenShareEnabled() ?
+                     screenShareStream.isEnabled() ?
                      ReactElement.createHostElement( "video",
                                                      null,
                                                      screenShareRef,
@@ -74,10 +79,11 @@ abstract class RoomView
                                                                   "id",
                                                                   "remoteVideo" ) ),
                 div( new HtmlProps().className( "controls" ),
-                     button( new BtnProps().className( "control-btn" ).onClick( e -> connection.toggleScreenShare() ),
+                     button( new BtnProps().className( "control-btn" )
+                               .onClick( e -> screenShareStream.toggleEnabled() ),
                              // TODO: Should generate svg factory methods and props so don't have to ref as img
                              img( new ImgProps()
-                                    .src( connection.isScreenShareEnabled() ?
+                                    .src( screenShareStream.isEnabled() ?
                                           "img/screen_share_on.svg" :
                                           "img/screen_share_off.svg" )
                                     .width( 32 )

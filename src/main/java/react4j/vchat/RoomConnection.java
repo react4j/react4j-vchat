@@ -2,11 +2,11 @@ package react4j.vchat;
 
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
+import arez.annotations.CascadeDispose;
 import arez.annotations.ComponentDependency;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
 import arez.annotations.Observe;
-import elemental2.dom.DomGlobal;
 import elemental3.ConstrainULongRange;
 import elemental3.DOMException;
 import elemental3.HTMLVideoElement;
@@ -14,27 +14,33 @@ import elemental3.MediaProvider;
 import elemental3.MediaStream;
 import elemental3.MediaStreamConstraints;
 import elemental3.MediaTrackConstraints;
-import elemental3.Navigator;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import jsinterop.base.Js;
 
 @ArezComponent
 abstract class RoomConnection
 {
   @ComponentDependency
   final BrowserLocation _browserLocation;
+  @CascadeDispose
+  final MediaStreamConnection _screenShareStream =
+    MediaStreamConnection.create( () -> Elemental3Util.getNavigator().mediaDevices().getDisplayMedia(), false );
 
   @Nonnull
   static RoomConnection create( @Nonnull final BrowserLocation browserLocation )
   {
-    return new Arez_RoomConnection( browserLocation, true, true, false );
+    return new Arez_RoomConnection( browserLocation, true, true );
   }
 
   RoomConnection( @Nonnull final BrowserLocation browserLocation )
   {
     _browserLocation = Objects.requireNonNull( browserLocation );
+  }
+
+  MediaStreamConnection getScreenShareStream()
+  {
+    return _screenShareStream;
   }
 
   @Nullable
@@ -106,7 +112,7 @@ abstract class RoomConnection
 
   void connectLocalMedia()
   {
-    getNavigator()
+    Elemental3Util.getNavigator()
       .mediaDevices()
       .getUserMedia( MediaStreamConstraints
                        .create()
@@ -174,127 +180,5 @@ abstract class RoomConnection
         setLocalStreamErrorMessage( "Unexpected error occurred accessing the audio or video stream" );
         break;
     }
-  }
-
-  @Observable
-  @Nullable
-  abstract MediaStream getScreenShareStream();
-
-  abstract void setScreenShareStream( @Nullable MediaStream localStream );
-
-  @Observable
-  @Nullable
-  abstract String getScreenShareStreamErrorMessage();
-
-  abstract void setScreenShareStreamErrorMessage( @Nullable String message );
-
-  @Observable( initializer = Feature.ENABLE )
-  abstract boolean isScreenShareEnabled();
-
-  abstract void setScreenShareEnabled( boolean screenShareEnabled );
-
-  @Action
-  void toggleScreenShare()
-  {
-    final boolean enabled = !isScreenShareEnabled();
-    setScreenShareEnabled( enabled );
-    final MediaStream stream = getScreenShareStream();
-    if ( enabled )
-    {
-      if ( null == stream )
-      {
-        requestConnectScreenShare();
-      }
-    }
-    else
-    {
-      if ( null != stream )
-      {
-        stream.getTracks().forEach( ( track, index, array ) -> {
-          track.stop();
-          return null;
-        } );
-      }
-    }
-  }
-
-  void requestConnectScreenShare()
-  {
-    getNavigator()
-      .mediaDevices()
-      .getDisplayMedia()
-      .then( stream -> {
-        screenShareStreamConnected( stream );
-        stream.getVideoTracks().forEach( ( track, index, tracks ) -> {
-          track.onended = e -> {
-            screenShareDisconnected();
-            return null;
-          };
-          return null;
-        } );
-        return null;
-      } )
-      .catch_( error -> {
-        screenShareStreamError( error );
-        return null;
-      } );
-  }
-
-  @Action
-  void screenShareStreamConnected( @Nonnull final MediaStream stream )
-  {
-    setScreenShareStream( stream );
-    setScreenShareStreamErrorMessage( null );
-  }
-
-  @Action
-  void screenShareDisconnected()
-  {
-    setScreenShareStream( null );
-    setScreenShareStreamErrorMessage( null );
-    setScreenShareEnabled( false );
-  }
-
-  @Action
-  void screenShareStreamError( @Nonnull final Object error )
-  {
-    setScreenShareStream( null );
-    final String errorSuffix;
-    if ( error instanceof DOMException )
-    {
-      final DOMException e = (DOMException) error;
-      errorSuffix = e.name() + ": " + e.message();
-    }
-    else
-    {
-      errorSuffix = String.valueOf( error );
-    }
-    setScreenShareStreamErrorMessage( "Error occurred attempting to share screen. Error: " + errorSuffix );
-  }
-
-  @Observable( writeOutsideTransaction = Feature.ENABLE )
-  @Nullable
-  abstract HTMLVideoElement getScreenShareVideoElement();
-
-  abstract void setScreenShareVideoElement( @Nullable HTMLVideoElement videoElement );
-
-  @Observe
-  void maintainScreenShareVideo()
-  {
-    final MediaStream stream = getScreenShareStream();
-    final HTMLVideoElement videoElement = getScreenShareVideoElement();
-    if ( null != stream && null != videoElement )
-    {
-      videoElement.srcObject = MediaProvider.of( stream );
-    }
-  }
-
-  @Nonnull
-  private Navigator getNavigator()
-  {
-    final Navigator navigator = Js.cast( DomGlobal.navigator );
-    //noinspection ConstantConditions
-    assert null != navigator;
-    return navigator;
   }
 }
