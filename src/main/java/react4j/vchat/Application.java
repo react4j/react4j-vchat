@@ -14,7 +14,10 @@ abstract class Application
   final BrowserLocation _location = BrowserLocation.create();
   @CascadeDispose
   final MediaStreamConnection _screenShareStream =
-    MediaStreamConnection.create( () -> Elemental3Util.getNavigator().mediaDevices().getDisplayMedia(), false );
+    MediaStreamConnection.create( () -> Elemental3Util.getNavigator().mediaDevices().getDisplayMedia(),
+                                  false,
+                                  true,
+                                  true );
   @CascadeDispose
   @Nonnull
   final RoomConnection _connection = RoomConnection.create( _location );

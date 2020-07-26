@@ -26,9 +26,12 @@ abstract class MediaStreamConnection
   private final Supplier<Promise<MediaStream>> _connect;
 
   @Nonnull
-  static MediaStreamConnection create( @Nonnull final Supplier<Promise<MediaStream>> connect, final boolean enabled )
+  static MediaStreamConnection create( @Nonnull final Supplier<Promise<MediaStream>> connect,
+                                       final boolean enabled,
+                                       final boolean audioEnabled,
+                                       final boolean videoEnabled )
   {
-    return new Arez_MediaStreamConnection( connect, enabled );
+    return new Arez_MediaStreamConnection( connect, enabled, audioEnabled, videoEnabled );
   }
 
   MediaStreamConnection( @Nonnull final Supplier<Promise<MediaStream>> connect )
@@ -81,6 +84,38 @@ abstract class MediaStreamConnection
           return null;
         } );
       }
+    }
+  }
+
+  @Observable( initializer = Feature.ENABLE )
+  abstract boolean isAudioEnabled();
+
+  abstract void setAudioEnabled( boolean audioEnabled );
+
+  @Action
+  void toggleAudio()
+  {
+    setAudioEnabled( !isAudioEnabled() );
+    final MediaStream stream = getStream();
+    if ( null != stream )
+    {
+      stream.getAudioTracks().forEach( ( track, index, array ) -> track.enabled = !track.enabled );
+    }
+  }
+
+  @Observable( initializer = Feature.ENABLE )
+  abstract boolean isVideoEnabled();
+
+  abstract void setVideoEnabled( boolean videoEnabled );
+
+  @Action
+  void toggleVideo()
+  {
+    setVideoEnabled( !isVideoEnabled() );
+    final MediaStream stream = getStream();
+    if ( null != stream )
+    {
+      stream.getVideoTracks().forEach( ( track, index, array ) -> track.enabled = !track.enabled );
     }
   }
 
