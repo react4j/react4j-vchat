@@ -2,7 +2,6 @@ package react4j.vchat;
 
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
-import arez.annotations.CascadeDispose;
 import arez.annotations.ComponentDependency;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
@@ -23,9 +22,6 @@ abstract class RoomConnection
 {
   @ComponentDependency
   final BrowserLocation _browserLocation;
-  @CascadeDispose
-  final MediaStreamConnection _screenShareStream =
-    MediaStreamConnection.create( () -> Elemental3Util.getNavigator().mediaDevices().getDisplayMedia(), false );
 
   @Nonnull
   static RoomConnection create( @Nonnull final BrowserLocation browserLocation )
@@ -36,11 +32,6 @@ abstract class RoomConnection
   RoomConnection( @Nonnull final BrowserLocation browserLocation )
   {
     _browserLocation = Objects.requireNonNull( browserLocation );
-  }
-
-  MediaStreamConnection getScreenShareStream()
-  {
-    return _screenShareStream;
   }
 
   @Nullable
