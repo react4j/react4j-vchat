@@ -51,6 +51,7 @@ abstract class RoomView
                                                                        true,
                                                                        "id",
                                                                        "localVideo" ) ),
+                     connection.isScreenShareEnabled() ?
                      ReactElement.createHostElement( "video",
                                                      null,
                                                      screenShareRef,
@@ -59,7 +60,8 @@ abstract class RoomView
                                                                        "muted",
                                                                        true,
                                                                        "id",
-                                                                       "screenShareVideo" ) )
+                                                                       "screenShareVideo" ) ) :
+                     null
                 ),
                 ReactElement.createHostElement( "video",
                                                 null,
