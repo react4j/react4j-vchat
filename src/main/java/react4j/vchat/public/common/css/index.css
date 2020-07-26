@@ -48,7 +48,7 @@ body, html {
   display: flex;
 }
 
-#localVideo {
+#localVideo, #screenShareVideo {
   height: 112px;
   right: 0;
   margin: 24px auto;
@@ -106,7 +106,7 @@ body, html {
     max-width: 100vw;
   }
 
-  #localVideo {
+  #localVideo, #screenShareVideo {
     height: 80px;
   }
 
@@ -118,7 +118,7 @@ body, html {
 }
 
 @media screen and (orientation: landscape) {
-  #localVideo {
+  #localVideo, #screenShareVideo {
     position: absolute;
     left: 0;
     top: 0;
@@ -131,5 +131,9 @@ body, html {
   #localVideo {
     margin-left: 32px;
     margin-top: 12px;
+  }
+  #screenShareVideo {
+    margin-left: 32px;
+    margin-top: 124px;
   }
 }
