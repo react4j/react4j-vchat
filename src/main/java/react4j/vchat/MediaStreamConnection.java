@@ -156,8 +156,6 @@ abstract class MediaStreamConnection
   void streamConnected( @Nonnull final MediaStream stream )
   {
     setStream( stream );
-    setErrorName( null );
-    setErrorMessage( null );
     stream.getTracks().forEach( ( track, index, tracks ) -> {
       track.onended = e -> {
         streamDisconnected();
@@ -190,7 +188,6 @@ abstract class MediaStreamConnection
   @Action
   void streamError( @Nonnull final Object error )
   {
-    setStream( null );
     if ( error instanceof DOMException )
     {
       final DOMException e = (DOMException) error;
