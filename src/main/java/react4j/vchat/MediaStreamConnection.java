@@ -219,7 +219,11 @@ abstract class MediaStreamConnection
     final HTMLVideoElement videoElement = getVideoElement();
     if ( null != stream && null != videoElement )
     {
-      videoElement.srcObject = MediaProvider.of( stream );
+      final MediaProvider provider = MediaProvider.of( stream );
+      if ( provider != videoElement.srcObject )
+      {
+        videoElement.srcObject = provider;
+      }
     }
   }
 
