@@ -77,6 +77,7 @@ abstract class MediaStreamConnection
       if ( null != stream )
       {
         stopTracks( stream );
+        setStream( null );
       }
     }
   }
