@@ -38,6 +38,11 @@ abstract class MediaStreamConnection
   }
 
   @Observable
+  abstract boolean isConnecting();
+
+  abstract void setConnecting( boolean connecting );
+
+  @Observable
   @Nullable
   abstract MediaStream getStream();
 
@@ -128,6 +133,7 @@ abstract class MediaStreamConnection
     _requestId++;
     final int requestId = _requestId;
     clearState();
+    setConnecting( true );
     _connect.get()
       .then( stream -> {
         if ( _requestId == requestId )
@@ -152,6 +158,7 @@ abstract class MediaStreamConnection
   @Action
   void streamConnected( @Nonnull final MediaStream stream )
   {
+    setConnecting( false );
     setStream( stream );
     stream.getTracks().forEach( ( track, index, tracks ) -> {
       track.onended = e -> {
@@ -185,6 +192,7 @@ abstract class MediaStreamConnection
   @Action
   void streamError( @Nonnull final Object error )
   {
+    setConnecting( false );
     if ( error instanceof DOMException )
     {
       final DOMException e = (DOMException) error;
