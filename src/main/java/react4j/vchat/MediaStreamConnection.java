@@ -125,6 +125,7 @@ abstract class MediaStreamConnection
 
   void requestConnect()
   {
+    clearState();
     _connect.get()
       .then( stream -> {
         streamConnected( stream );
@@ -157,9 +158,7 @@ abstract class MediaStreamConnection
   void streamDisconnected()
   {
     final MediaStream stream = getStream();
-    setStream( null );
-    setErrorName( null );
-    setErrorMessage( null );
+    clearState();
     setEnabled( false );
     if ( null != stream )
     {
@@ -207,13 +206,11 @@ abstract class MediaStreamConnection
     }
   }
 
-  @Nonnull
-  private Navigator getNavigator()
+  private void clearState()
   {
-    final Navigator navigator = Js.cast( DomGlobal.navigator );
-    //noinspection ConstantConditions
-    assert null != navigator;
-    return navigator;
+    setStream( null );
+    setErrorName( null );
+    setErrorMessage( null );
   }
 
   private void stopTracks( @Nonnull final MediaStream stream )
