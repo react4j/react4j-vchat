@@ -76,10 +76,7 @@ abstract class MediaStreamConnection
     {
       if ( null != stream )
       {
-        stream.getTracks().forEach( ( track, index, array ) -> {
-          track.stop();
-          return null;
-        } );
+        stopTracks( stream );
       }
     }
   }
@@ -216,5 +213,16 @@ abstract class MediaStreamConnection
     //noinspection ConstantConditions
     assert null != navigator;
     return navigator;
+  }
+
+  private void stopTracks( @Nonnull final MediaStream stream )
+  {
+    stream.getTracks().forEach( ( track, index, array ) -> {
+      if ( MediaStreamTrackState.live.equals( track.readyState() ) )
+      {
+        track.stop();
+      }
+      return null;
+    } );
   }
 }
