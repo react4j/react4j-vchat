@@ -5,19 +5,16 @@ import arez.annotations.ArezComponent;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
 import arez.annotations.Observe;
-import elemental2.dom.DomGlobal;
 import elemental2.promise.Promise;
 import elemental3.DOMException;
 import elemental3.HTMLVideoElement;
 import elemental3.MediaProvider;
 import elemental3.MediaStream;
 import elemental3.MediaStreamTrackState;
-import elemental3.Navigator;
 import java.util.Objects;
 import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import jsinterop.base.Js;
 
 @ArezComponent
 abstract class MediaStreamConnection
