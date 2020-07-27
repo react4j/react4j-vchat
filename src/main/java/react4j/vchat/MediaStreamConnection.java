@@ -222,6 +222,8 @@ abstract class MediaStreamConnection
       final MediaProvider provider = MediaProvider.of( stream );
       if ( provider != videoElement.srcObject )
       {
+        // We make sure we do not assign srcObject to the same object again
+        // as otherwise the video stream will flicker
         videoElement.srcObject = provider;
       }
     }
