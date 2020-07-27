@@ -35,6 +35,11 @@ abstract class RoomConnection
     return false;
   }
 
+  boolean isJoined()
+  {
+    return false;
+  }
+
   boolean isWaiting()
   {
     return true;

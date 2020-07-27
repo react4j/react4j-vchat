@@ -34,7 +34,8 @@ abstract class Application
     final String location = _location.getLocation();
     return location.isEmpty() ?
            SelectRoomViewBuilder.build() :
-           RoomViewBuilder.connection( _connection ).camStream( _camStream ).screenShareStream( _screenShareStream );
+           RoomLobbyBuilder.connection( _connection ).camStream( _camStream );
+           //RoomViewBuilder.connection( _connection ).camStream( _camStream ).screenShareStream( _screenShareStream );
   }
 
   @Nonnull
