@@ -24,6 +24,7 @@ abstract class MediaStreamConnection
 {
   @Nonnull
   private final Supplier<Promise<MediaStream>> _connect;
+  private int _requestId;
 
   @Nonnull
   static MediaStreamConnection create( @Nonnull final Supplier<Promise<MediaStream>> connect,
@@ -125,14 +126,28 @@ abstract class MediaStreamConnection
 
   void requestConnect()
   {
+    // keep an id for request so that we don't set state on completion if
+    // we have issued another request in the meantime
+    _requestId++;
+    final int requestId = _requestId;
     clearState();
     _connect.get()
       .then( stream -> {
-        streamConnected( stream );
+        if ( _requestId == requestId )
+        {
+          streamConnected( stream );
+        }
+        else
+        {
+          stopTracks( stream );
+        }
         return null;
       } )
       .catch_( error -> {
-        streamError( error );
+        if ( _requestId == requestId )
+        {
+          streamError( error );
+        }
         return null;
       } );
   }
