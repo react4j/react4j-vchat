@@ -24,19 +24,6 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
   }
 
   @JsProperty
-  double getAudioLevel();
-
-  @JsProperty
-  void setAudioLevel(double audioLevel);
-
-  @JsOverlay
-  @Nonnull
-  default RTCAudioReceiverStats audioLevel(final double audioLevel) {
-    setAudioLevel( audioLevel );
-    return this;
-  }
-
-  @JsProperty
   int getConcealedSamples();
 
   @JsProperty
@@ -139,32 +126,6 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
   @Nonnull
   default RTCAudioReceiverStats silentConcealedSamples(final int silentConcealedSamples) {
     setSilentConcealedSamples( silentConcealedSamples );
-    return this;
-  }
-
-  @JsProperty
-  double getTotalAudioEnergy();
-
-  @JsProperty
-  void setTotalAudioEnergy(double totalAudioEnergy);
-
-  @JsOverlay
-  @Nonnull
-  default RTCAudioReceiverStats totalAudioEnergy(final double totalAudioEnergy) {
-    setTotalAudioEnergy( totalAudioEnergy );
-    return this;
-  }
-
-  @JsProperty
-  double getTotalSamplesDuration();
-
-  @JsProperty
-  void setTotalSamplesDuration(double totalSamplesDuration);
-
-  @JsOverlay
-  @Nonnull
-  default RTCAudioReceiverStats totalSamplesDuration(final double totalSamplesDuration) {
-    setTotalSamplesDuration( totalSamplesDuration );
     return this;
   }
 

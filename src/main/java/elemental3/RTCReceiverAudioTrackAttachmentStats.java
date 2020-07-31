@@ -25,14 +25,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
   @JsOverlay
   @Nonnull
   @Override
-  default RTCReceiverAudioTrackAttachmentStats audioLevel(final double audioLevel) {
-    setAudioLevel( audioLevel );
-    return this;
-  }
-
-  @JsOverlay
-  @Nonnull
-  @Override
   default RTCReceiverAudioTrackAttachmentStats concealedSamples(final int concealedSamples) {
     setConcealedSamples( concealedSamples );
     return this;
@@ -96,23 +88,6 @@ public interface RTCReceiverAudioTrackAttachmentStats extends RTCAudioReceiverSt
   default RTCReceiverAudioTrackAttachmentStats silentConcealedSamples(
       final int silentConcealedSamples) {
     setSilentConcealedSamples( silentConcealedSamples );
-    return this;
-  }
-
-  @JsOverlay
-  @Nonnull
-  @Override
-  default RTCReceiverAudioTrackAttachmentStats totalAudioEnergy(final double totalAudioEnergy) {
-    setTotalAudioEnergy( totalAudioEnergy );
-    return this;
-  }
-
-  @JsOverlay
-  @Nonnull
-  @Override
-  default RTCReceiverAudioTrackAttachmentStats totalSamplesDuration(
-      final double totalSamplesDuration) {
-    setTotalSamplesDuration( totalSamplesDuration );
     return this;
   }
 
