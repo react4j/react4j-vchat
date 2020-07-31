@@ -11,6 +11,7 @@ import react4j.annotations.PostMount;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 import react4j.dom.proptypes.html.BtnProps;
+import react4j.dom.proptypes.html.CssProps;
 import react4j.dom.proptypes.html.HtmlProps;
 import react4j.dom.proptypes.html.ImgProps;
 import react4j.dom.proptypes.html.RefConsumer;
@@ -47,7 +48,9 @@ abstract class RoomLobby
                                                      JsPropertyMap.of( "autoPlay",
                                                                        true,
                                                                        "muted",
-                                                                       true ) ),
+                                                                       true,
+                                                                       "style",
+                                                                       new CssProps().transform( "scaleX(-1)" ) ) ),
                      null != camStream.getStream() ?
                      div( new HtmlProps().className( "local-cam-video-controls" ),
                           button( new BtnProps().className( "control-btn" ).onClick( e -> camStream.toggleAudio() ),
