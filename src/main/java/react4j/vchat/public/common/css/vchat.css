@@ -6,8 +6,14 @@ body, html {
   height: 100%;
 }
 
-.room-lobby {
+#app {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   height: 100%;
+}
+
+.room-lobby {
   display: flex;
   justify-content: center;
   align-content: center;
