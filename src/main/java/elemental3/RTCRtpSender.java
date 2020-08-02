@@ -8,6 +8,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The RTCRtpSender interface provides the ability to control and obtain details about how a particular MediaStreamTrack is encoded and sent to a remote peer.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender">RTCRtpSender - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -18,6 +23,11 @@ public class RTCRtpSender {
   RTCRtpSender() {
   }
 
+  /**
+   * The track read-only property of the RTCRtpSender interface returns the MediaStreamTrack which is being handled by the RTCRtpSender.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/track">RTCRtpSender.track - MDN</a>
+   */
   @JsProperty(
       name = "track"
   )
@@ -30,6 +40,11 @@ public class RTCRtpSender {
   @Nullable
   public native RTCDtlsTransport transport();
 
+  /**
+   * The read-only dtmf property on the RTCRtpSender interface returns a RTCDTMFSender object which can be used to send DTMF tones over the RTCPeerConnection. See Using DTMF for details on how to make use of the returned RTCDTMFSender object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/dtmf">RTCRtpSender.dtmf - MDN</a>
+   */
   @JsProperty(
       name = "dtmf"
   )

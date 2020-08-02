@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The interface of the the WebRTC API provides an object represents a certificate that an RTCPeerConnection uses to authenticate.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate">RTCCertificate - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

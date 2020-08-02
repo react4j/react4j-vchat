@@ -9,6 +9,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport">RTCDtlsTransport - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -25,12 +30,22 @@ public class RTCDtlsTransport extends EventTarget {
   RTCDtlsTransport() {
   }
 
+  /**
+   * The read-only RTCDtlsTransport property iceTransport contains a reference to the underlying RTCIceTransport.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/iceTransport">RTCDtlsTransport.iceTransport - MDN</a>
+   */
   @JsProperty(
       name = "iceTransport"
   )
   @Nonnull
   public native RTCIceTransport iceTransport();
 
+  /**
+   * The state read-only property of the RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport state.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/state">RTCDtlsTransport.state - MDN</a>
+   */
   @JsProperty(
       name = "state"
   )

@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * Listen to these events using addEventListener() or by assigning an event listener to the oneventname property of this interface.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender">RTCDTMFSender - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -25,6 +30,11 @@ public class RTCDTMFSender extends EventTarget {
   )
   public native boolean canInsertDTMF();
 
+  /**
+   * The RTCDTMFSender interface's toneBuffer property returns a string containing a list of the DTMF tones currently queued for sending to the remote peer over the RTCPeerConnection. To place tones into the buffer, call insertDTMF().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/toneBuffer">RTCDTMFSender.toneBuffer - MDN</a>
+   */
   @JsProperty(
       name = "toneBuffer"
   )
