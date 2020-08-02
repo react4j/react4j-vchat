@@ -22,8 +22,10 @@ public interface MediaTrackSupportedConstraints {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAspectRatio();
+  @JsProperty(
+      name = "aspectRatio"
+  )
+  boolean aspectRatio();
 
   @JsProperty
   void setAspectRatio(boolean aspectRatio);
@@ -35,8 +37,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isAutoGainControl();
+  @JsProperty(
+      name = "autoGainControl"
+  )
+  boolean autoGainControl();
 
   @JsProperty
   void setAutoGainControl(boolean autoGainControl);
@@ -48,8 +52,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isChannelCount();
+  @JsProperty(
+      name = "channelCount"
+  )
+  boolean channelCount();
 
   @JsProperty
   void setChannelCount(boolean channelCount);
@@ -61,8 +67,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isDeviceId();
+  @JsProperty(
+      name = "deviceId"
+  )
+  boolean deviceId();
 
   @JsProperty
   void setDeviceId(boolean deviceId);
@@ -74,8 +82,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isEchoCancellation();
+  @JsProperty(
+      name = "echoCancellation"
+  )
+  boolean echoCancellation();
 
   @JsProperty
   void setEchoCancellation(boolean echoCancellation);
@@ -87,8 +97,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isFacingMode();
+  @JsProperty(
+      name = "facingMode"
+  )
+  boolean facingMode();
 
   @JsProperty
   void setFacingMode(boolean facingMode);
@@ -100,8 +112,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isFrameRate();
+  @JsProperty(
+      name = "frameRate"
+  )
+  boolean frameRate();
 
   @JsProperty
   void setFrameRate(boolean frameRate);
@@ -113,8 +127,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isGroupId();
+  @JsProperty(
+      name = "groupId"
+  )
+  boolean groupId();
 
   @JsProperty
   void setGroupId(boolean groupId);
@@ -126,8 +142,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isHeight();
+  @JsProperty(
+      name = "height"
+  )
+  boolean height();
 
   @JsProperty
   void setHeight(boolean height);
@@ -139,8 +157,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isLatency();
+  @JsProperty(
+      name = "latency"
+  )
+  boolean latency();
 
   @JsProperty
   void setLatency(boolean latency);
@@ -152,8 +172,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isNoiseSuppression();
+  @JsProperty(
+      name = "noiseSuppression"
+  )
+  boolean noiseSuppression();
 
   @JsProperty
   void setNoiseSuppression(boolean noiseSuppression);
@@ -165,8 +187,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isResizeMode();
+  @JsProperty(
+      name = "resizeMode"
+  )
+  boolean resizeMode();
 
   @JsProperty
   void setResizeMode(boolean resizeMode);
@@ -178,8 +202,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isSampleRate();
+  @JsProperty(
+      name = "sampleRate"
+  )
+  boolean sampleRate();
 
   @JsProperty
   void setSampleRate(boolean sampleRate);
@@ -191,8 +217,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isSampleSize();
+  @JsProperty(
+      name = "sampleSize"
+  )
+  boolean sampleSize();
 
   @JsProperty
   void setSampleSize(boolean sampleSize);
@@ -204,8 +232,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isWidth();
+  @JsProperty(
+      name = "width"
+  )
+  boolean width();
 
   @JsProperty
   void setWidth(boolean width);
@@ -217,8 +247,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isCursor();
+  @JsProperty(
+      name = "cursor"
+  )
+  boolean cursor();
 
   @JsProperty
   void setCursor(boolean cursor);
@@ -230,8 +262,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isDisplaySurface();
+  @JsProperty(
+      name = "displaySurface"
+  )
+  boolean displaySurface();
 
   @JsProperty
   void setDisplaySurface(boolean displaySurface);
@@ -243,8 +277,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isLogicalSurface();
+  @JsProperty(
+      name = "logicalSurface"
+  )
+  boolean logicalSurface();
 
   @JsProperty
   void setLogicalSurface(boolean logicalSurface);
@@ -256,8 +292,10 @@ public interface MediaTrackSupportedConstraints {
     return this;
   }
 
-  @JsProperty
-  boolean isRestrictOwnAudio();
+  @JsProperty(
+      name = "restrictOwnAudio"
+  )
+  boolean restrictOwnAudio();
 
   @JsProperty
   void setRestrictOwnAudio(boolean restrictOwnAudio);

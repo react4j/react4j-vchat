@@ -22,8 +22,10 @@ public interface RsaOtherPrimesInfo {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getD();
+  @JsProperty(
+      name = "d"
+  )
+  String d();
 
   @JsProperty
   void setD(@Nonnull String d);
@@ -35,8 +37,10 @@ public interface RsaOtherPrimesInfo {
     return this;
   }
 
-  @JsProperty
-  String getR();
+  @JsProperty(
+      name = "r"
+  )
+  String r();
 
   @JsProperty
   void setR(@Nonnull String r);
@@ -48,8 +52,10 @@ public interface RsaOtherPrimesInfo {
     return this;
   }
 
-  @JsProperty
-  String getT();
+  @JsProperty(
+      name = "t"
+  )
+  String t();
 
   @JsProperty
   void setT(@Nonnull String t);

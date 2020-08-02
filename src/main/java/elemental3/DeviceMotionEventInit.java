@@ -22,8 +22,10 @@ public interface DeviceMotionEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  DeviceMotionEventAccelerationInit getAcceleration();
+  @JsProperty(
+      name = "acceleration"
+  )
+  DeviceMotionEventAccelerationInit acceleration();
 
   @JsProperty
   void setAcceleration(@Nonnull DeviceMotionEventAccelerationInit acceleration);
@@ -36,8 +38,10 @@ public interface DeviceMotionEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  DeviceMotionEventAccelerationInit getAccelerationIncludingGravity();
+  @JsProperty(
+      name = "accelerationIncludingGravity"
+  )
+  DeviceMotionEventAccelerationInit accelerationIncludingGravity();
 
   @JsProperty
   void setAccelerationIncludingGravity(
@@ -51,8 +55,10 @@ public interface DeviceMotionEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  double getInterval();
+  @JsProperty(
+      name = "interval"
+  )
+  double interval();
 
   @JsProperty
   void setInterval(double interval);
@@ -64,8 +70,10 @@ public interface DeviceMotionEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  DeviceMotionEventRotationRateInit getRotationRate();
+  @JsProperty(
+      name = "rotationRate"
+  )
+  DeviceMotionEventRotationRateInit rotationRate();
 
   @JsProperty
   void setRotationRate(@Nonnull DeviceMotionEventRotationRateInit rotationRate);

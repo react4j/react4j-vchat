@@ -118,9 +118,11 @@ public interface AesCtrParams extends Algorithm {
     return Js.<AesCtrParams>uncheckedCast( JsPropertyMap.of() ).name( name ).counter( counter ).length( length );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "counter"
+  )
   @Nonnull
-  BufferSource getCounter();
+  BufferSource counter();
 
   @JsProperty
   void setCounter(@Nonnull BufferSource counter);
@@ -276,8 +278,10 @@ public interface AesCtrParams extends Algorithm {
     return this;
   }
 
-  @JsProperty
-  short getLength();
+  @JsProperty(
+      name = "length"
+  )
+  short length();
 
   @JsProperty
   void setLength(short length);

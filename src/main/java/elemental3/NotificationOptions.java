@@ -25,8 +25,10 @@ public interface NotificationOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<NotificationAction> getActions();
+  @JsProperty(
+      name = "actions"
+  )
+  JsArray<NotificationAction> actions();
 
   @JsProperty
   void setActions(@Nonnull JsArray<NotificationAction> actions);
@@ -50,8 +52,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  String getBadge();
+  @JsProperty(
+      name = "badge"
+  )
+  String badge();
 
   @JsProperty
   void setBadge(@Nonnull String badge);
@@ -63,8 +67,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  String getBody();
+  @JsProperty(
+      name = "body"
+  )
+  String body();
 
   @JsProperty
   void setBody(@Nonnull String body);
@@ -76,9 +82,11 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "data"
+  )
   @Nullable
-  Any getData();
+  Any data();
 
   @JsProperty
   void setData(@Nullable Any data);
@@ -90,8 +98,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  String getDir();
+  @JsProperty(
+      name = "dir"
+  )
+  String dir();
 
   @JsProperty
   void setDir(@Nonnull String dir);
@@ -103,8 +113,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  String getIcon();
+  @JsProperty(
+      name = "icon"
+  )
+  String icon();
 
   @JsProperty
   void setIcon(@Nonnull String icon);
@@ -116,8 +128,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  String getImage();
+  @JsProperty(
+      name = "image"
+  )
+  String image();
 
   @JsProperty
   void setImage(@Nonnull String image);
@@ -129,8 +143,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  String getLang();
+  @JsProperty(
+      name = "lang"
+  )
+  String lang();
 
   @JsProperty
   void setLang(@Nonnull String lang);
@@ -142,8 +158,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isRenotify();
+  @JsProperty(
+      name = "renotify"
+  )
+  boolean renotify();
 
   @JsProperty
   void setRenotify(boolean renotify);
@@ -155,8 +173,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isRequireInteraction();
+  @JsProperty(
+      name = "requireInteraction"
+  )
+  boolean requireInteraction();
 
   @JsProperty
   void setRequireInteraction(boolean requireInteraction);
@@ -168,8 +188,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isSilent();
+  @JsProperty(
+      name = "silent"
+  )
+  boolean silent();
 
   @JsProperty
   void setSilent(boolean silent);
@@ -181,8 +203,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  String getTag();
+  @JsProperty(
+      name = "tag"
+  )
+  String tag();
 
   @JsProperty
   void setTag(@Nonnull String tag);
@@ -194,8 +218,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  int getTimestamp();
+  @JsProperty(
+      name = "timestamp"
+  )
+  int timestamp();
 
   @JsProperty
   void setTimestamp(int timestamp);
@@ -207,8 +233,10 @@ public interface NotificationOptions {
     return this;
   }
 
-  @JsProperty
-  VibratePattern getVibrate();
+  @JsProperty(
+      name = "vibrate"
+  )
+  VibratePattern vibrate();
 
   @JsProperty
   void setVibrate(@Nonnull VibratePattern vibrate);

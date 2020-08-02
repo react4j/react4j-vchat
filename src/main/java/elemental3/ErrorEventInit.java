@@ -24,8 +24,10 @@ public interface ErrorEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getColno();
+  @JsProperty(
+      name = "colno"
+  )
+  int colno();
 
   @JsProperty
   void setColno(int colno);
@@ -37,9 +39,11 @@ public interface ErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "error"
+  )
   @Nullable
-  Any getError();
+  Any error();
 
   @JsProperty
   void setError(@Nullable Any error);
@@ -51,8 +55,10 @@ public interface ErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getFilename();
+  @JsProperty(
+      name = "filename"
+  )
+  String filename();
 
   @JsProperty
   void setFilename(@Nonnull String filename);
@@ -64,8 +70,10 @@ public interface ErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  int getLineno();
+  @JsProperty(
+      name = "lineno"
+  )
+  int lineno();
 
   @JsProperty
   void setLineno(int lineno);
@@ -77,8 +85,10 @@ public interface ErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getMessage();
+  @JsProperty(
+      name = "message"
+  )
+  String message();
 
   @JsProperty
   void setMessage(@Nonnull String message);

@@ -22,8 +22,10 @@ public interface PublicKeyCredentialParameters {
     return Js.<PublicKeyCredentialParameters>uncheckedCast( JsPropertyMap.of() ).alg( alg ).type( type );
   }
 
-  @JsProperty
-  int getAlg();
+  @JsProperty(
+      name = "alg"
+  )
+  int alg();
 
   @JsProperty
   void setAlg(int alg);
@@ -35,9 +37,11 @@ public interface PublicKeyCredentialParameters {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "type"
+  )
   @Nonnull
-  String getType();
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

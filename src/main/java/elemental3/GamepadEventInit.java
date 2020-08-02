@@ -22,9 +22,11 @@ public interface GamepadEventInit extends EventInit {
     return Js.<GamepadEventInit>uncheckedCast( JsPropertyMap.of() ).gamepad( gamepad );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "gamepad"
+  )
   @Nonnull
-  Gamepad getGamepad();
+  Gamepad gamepad();
 
   @JsProperty
   void setGamepad(@Nonnull Gamepad gamepad);

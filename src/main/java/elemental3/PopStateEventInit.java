@@ -24,9 +24,11 @@ public interface PopStateEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "state"
+  )
   @Nullable
-  Any getState();
+  Any state();
 
   @JsProperty
   void setState(@Nullable Any state);

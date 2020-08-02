@@ -23,9 +23,11 @@ public interface AnimationPlaybackEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "currentTime"
+  )
   @Nullable
-  Double getCurrentTime();
+  Double currentTime();
 
   @JsProperty
   void setCurrentTime(@Nullable Double currentTime);
@@ -37,9 +39,11 @@ public interface AnimationPlaybackEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "timelineTime"
+  )
   @Nullable
-  Double getTimelineTime();
+  Double timelineTime();
 
   @JsProperty
   void setTimelineTime(@Nullable Double timelineTime);

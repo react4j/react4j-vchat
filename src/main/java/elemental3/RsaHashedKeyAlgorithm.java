@@ -24,9 +24,11 @@ public interface RsaHashedKeyAlgorithm extends RsaKeyAlgorithm {
     return Js.<RsaHashedKeyAlgorithm>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "hash"
+  )
   @Nonnull
-  KeyAlgorithm getHash();
+  KeyAlgorithm hash();
 
   @JsProperty
   void setHash(@Nonnull KeyAlgorithm hash);

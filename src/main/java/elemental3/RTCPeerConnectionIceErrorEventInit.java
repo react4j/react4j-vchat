@@ -23,9 +23,11 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
     return Js.<RTCPeerConnectionIceErrorEventInit>uncheckedCast( JsPropertyMap.of() ).errorCode( errorCode );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "address"
+  )
   @Nullable
-  String getAddress();
+  String address();
 
   @JsProperty
   void setAddress(@Nullable String address);
@@ -37,8 +39,10 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  int getErrorCode();
+  @JsProperty(
+      name = "errorCode"
+  )
+  int errorCode();
 
   @JsProperty
   void setErrorCode(int errorCode);
@@ -50,9 +54,11 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "port"
+  )
   @Nullable
-  Double getPort();
+  Double port();
 
   @JsProperty
   void setPort(@Nullable Double port);
@@ -64,8 +70,10 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getStatusText();
+  @JsProperty(
+      name = "statusText"
+  )
+  String statusText();
 
   @JsProperty
   void setStatusText(@Nonnull String statusText);
@@ -77,8 +85,10 @@ public interface RTCPeerConnectionIceErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getUrl();
+  @JsProperty(
+      name = "url"
+  )
+  String url();
 
   @JsProperty
   void setUrl(@Nonnull String url);

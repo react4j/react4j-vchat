@@ -22,8 +22,10 @@ public interface PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
     return Js.<PublicKeyCredentialRpEntity>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  String getId();
+  @JsProperty(
+      name = "id"
+  )
+  String id();
 
   @JsProperty
   void setId(@Nonnull String id);

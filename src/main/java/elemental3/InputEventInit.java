@@ -23,9 +23,11 @@ public interface InputEventInit extends UIEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "data"
+  )
   @Nullable
-  String getData();
+  String data();
 
   @JsProperty
   void setData(@Nullable String data);
@@ -37,8 +39,10 @@ public interface InputEventInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  String getInputType();
+  @JsProperty(
+      name = "inputType"
+  )
+  String inputType();
 
   @JsProperty
   void setInputType(@Nonnull String inputType);
@@ -50,8 +54,10 @@ public interface InputEventInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isIsComposing();
+  @JsProperty(
+      name = "isComposing"
+  )
+  boolean isComposing();
 
   @JsProperty
   void setIsComposing(boolean isComposing);

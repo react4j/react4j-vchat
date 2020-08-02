@@ -22,8 +22,10 @@ public interface RTCRtpHeaderExtensionParameters {
     return Js.<RTCRtpHeaderExtensionParameters>uncheckedCast( JsPropertyMap.of() ).id( id ).uri( uri );
   }
 
-  @JsProperty
-  boolean isEncrypted();
+  @JsProperty(
+      name = "encrypted"
+  )
+  boolean encrypted();
 
   @JsProperty
   void setEncrypted(boolean encrypted);
@@ -35,8 +37,10 @@ public interface RTCRtpHeaderExtensionParameters {
     return this;
   }
 
-  @JsProperty
-  int getId();
+  @JsProperty(
+      name = "id"
+  )
+  int id();
 
   @JsProperty
   void setId(int id);
@@ -48,9 +52,11 @@ public interface RTCRtpHeaderExtensionParameters {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "uri"
+  )
   @Nonnull
-  String getUri();
+  String uri();
 
   @JsProperty
   void setUri(@Nonnull String uri);

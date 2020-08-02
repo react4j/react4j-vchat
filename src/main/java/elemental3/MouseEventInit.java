@@ -23,8 +23,10 @@ public interface MouseEventInit extends EventModifierInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  short getButton();
+  @JsProperty(
+      name = "button"
+  )
+  short button();
 
   @JsProperty
   void setButton(short button);
@@ -36,8 +38,10 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  int getButtons();
+  @JsProperty(
+      name = "buttons"
+  )
+  int buttons();
 
   @JsProperty
   void setButtons(int buttons);
@@ -49,9 +53,11 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "relatedTarget"
+  )
   @Nullable
-  EventTarget getRelatedTarget();
+  EventTarget relatedTarget();
 
   @JsProperty
   void setRelatedTarget(@Nullable EventTarget relatedTarget);
@@ -63,8 +69,10 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  double getClientX();
+  @JsProperty(
+      name = "clientX"
+  )
+  double clientX();
 
   @JsProperty
   void setClientX(double clientX);
@@ -76,8 +84,10 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  double getClientY();
+  @JsProperty(
+      name = "clientY"
+  )
+  double clientY();
 
   @JsProperty
   void setClientY(double clientY);
@@ -89,8 +99,10 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  double getScreenX();
+  @JsProperty(
+      name = "screenX"
+  )
+  double screenX();
 
   @JsProperty
   void setScreenX(double screenX);
@@ -102,8 +114,10 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  double getScreenY();
+  @JsProperty(
+      name = "screenY"
+  )
+  double screenY();
 
   @JsProperty
   void setScreenY(double screenY);
@@ -115,8 +129,10 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  int getMovementX();
+  @JsProperty(
+      name = "movementX"
+  )
+  int movementX();
 
   @JsProperty
   void setMovementX(int movementX);
@@ -128,8 +144,10 @@ public interface MouseEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  int getMovementY();
+  @JsProperty(
+      name = "movementY"
+  )
+  int movementY();
 
   @JsProperty
   void setMovementY(int movementY);

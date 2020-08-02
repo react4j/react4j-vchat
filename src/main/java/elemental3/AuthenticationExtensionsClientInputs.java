@@ -23,8 +23,10 @@ public interface AuthenticationExtensionsClientInputs {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getAppid();
+  @JsProperty(
+      name = "appid"
+  )
+  String appid();
 
   @JsProperty
   void setAppid(@Nonnull String appid);
@@ -36,8 +38,10 @@ public interface AuthenticationExtensionsClientInputs {
     return this;
   }
 
-  @JsProperty
-  String getTxAuthSimple();
+  @JsProperty(
+      name = "txAuthSimple"
+  )
+  String txAuthSimple();
 
   @JsProperty
   void setTxAuthSimple(@Nonnull String txAuthSimple);
@@ -49,8 +53,10 @@ public interface AuthenticationExtensionsClientInputs {
     return this;
   }
 
-  @JsProperty
-  txAuthGenericArg getTxAuthGeneric();
+  @JsProperty(
+      name = "txAuthGeneric"
+  )
+  txAuthGenericArg txAuthGeneric();
 
   @JsProperty
   void setTxAuthGeneric(@Nonnull txAuthGenericArg txAuthGeneric);
@@ -63,8 +69,10 @@ public interface AuthenticationExtensionsClientInputs {
     return this;
   }
 
-  @JsProperty
-  JsArray<BufferSource> getAuthnSel();
+  @JsProperty(
+      name = "authnSel"
+  )
+  JsArray<BufferSource> authnSel();
 
   @JsProperty
   void setAuthnSel(@Nonnull JsArray<BufferSource> authnSel);
@@ -89,8 +97,10 @@ public interface AuthenticationExtensionsClientInputs {
     return this;
   }
 
-  @JsProperty
-  boolean isExts();
+  @JsProperty(
+      name = "exts"
+  )
+  boolean exts();
 
   @JsProperty
   void setExts(boolean exts);
@@ -102,8 +112,10 @@ public interface AuthenticationExtensionsClientInputs {
     return this;
   }
 
-  @JsProperty
-  boolean isUvi();
+  @JsProperty(
+      name = "uvi"
+  )
+  boolean uvi();
 
   @JsProperty
   void setUvi(boolean uvi);
@@ -115,8 +127,10 @@ public interface AuthenticationExtensionsClientInputs {
     return this;
   }
 
-  @JsProperty
-  boolean isLoc();
+  @JsProperty(
+      name = "loc"
+  )
+  boolean loc();
 
   @JsProperty
   void setLoc(boolean loc);
@@ -128,8 +142,10 @@ public interface AuthenticationExtensionsClientInputs {
     return this;
   }
 
-  @JsProperty
-  boolean isUvm();
+  @JsProperty(
+      name = "uvm"
+  )
+  boolean uvm();
 
   @JsProperty
   void setUvm(boolean uvm);

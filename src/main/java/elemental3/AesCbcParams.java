@@ -105,9 +105,11 @@ public interface AesCbcParams extends Algorithm {
     return Js.<AesCbcParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "iv"
+  )
   @Nonnull
-  BufferSource getIv();
+  BufferSource iv();
 
   @JsProperty
   void setIv(@Nonnull BufferSource iv);

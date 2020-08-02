@@ -22,8 +22,10 @@ public interface ConstantSourceOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  float getOffset();
+  @JsProperty(
+      name = "offset"
+  )
+  float offset();
 
   @JsProperty
   void setOffset(float offset);

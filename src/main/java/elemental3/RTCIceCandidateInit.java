@@ -23,8 +23,10 @@ public interface RTCIceCandidateInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getCandidate();
+  @JsProperty(
+      name = "candidate"
+  )
+  String candidate();
 
   @JsProperty
   void setCandidate(@Nonnull String candidate);
@@ -36,9 +38,11 @@ public interface RTCIceCandidateInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "sdpMLineIndex"
+  )
   @Nullable
-  Double getSdpMLineIndex();
+  Double sdpMLineIndex();
 
   @JsProperty
   void setSdpMLineIndex(@Nullable Double sdpMLineIndex);
@@ -50,9 +54,11 @@ public interface RTCIceCandidateInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "sdpMid"
+  )
   @Nullable
-  String getSdpMid();
+  String sdpMid();
 
   @JsProperty
   void setSdpMid(@Nullable String sdpMid);
@@ -64,9 +70,11 @@ public interface RTCIceCandidateInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "usernameFragment"
+  )
   @Nullable
-  String getUsernameFragment();
+  String usernameFragment();
 
   @JsProperty
   void setUsernameFragment(@Nullable String usernameFragment);

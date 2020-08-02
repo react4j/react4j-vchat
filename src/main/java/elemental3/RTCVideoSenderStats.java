@@ -23,8 +23,10 @@ public interface RTCVideoSenderStats extends RTCVideoHandlerStats {
     return Js.<RTCVideoSenderStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
-  @JsProperty
-  String getMediaSourceId();
+  @JsProperty(
+      name = "mediaSourceId"
+  )
+  String mediaSourceId();
 
   @JsProperty
   void setMediaSourceId(@Nonnull String mediaSourceId);
@@ -36,8 +38,10 @@ public interface RTCVideoSenderStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesCaptured();
+  @JsProperty(
+      name = "framesCaptured"
+  )
+  int framesCaptured();
 
   @JsProperty
   void setFramesCaptured(int framesCaptured);
@@ -49,8 +53,10 @@ public interface RTCVideoSenderStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesSent();
+  @JsProperty(
+      name = "framesSent"
+  )
+  int framesSent();
 
   @JsProperty
   void setFramesSent(int framesSent);
@@ -62,8 +68,10 @@ public interface RTCVideoSenderStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getHugeFramesSent();
+  @JsProperty(
+      name = "hugeFramesSent"
+  )
+  int hugeFramesSent();
 
   @JsProperty
   void setHugeFramesSent(int hugeFramesSent);
@@ -75,8 +83,10 @@ public interface RTCVideoSenderStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getKeyFramesSent();
+  @JsProperty(
+      name = "keyFramesSent"
+  )
+  int keyFramesSent();
 
   @JsProperty
   void setKeyFramesSent(int keyFramesSent);

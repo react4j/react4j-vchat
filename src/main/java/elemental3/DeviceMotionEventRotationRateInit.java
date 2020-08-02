@@ -23,9 +23,11 @@ public interface DeviceMotionEventRotationRateInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "alpha"
+  )
   @Nullable
-  Double getAlpha();
+  Double alpha();
 
   @JsProperty
   void setAlpha(@Nullable Double alpha);
@@ -37,9 +39,11 @@ public interface DeviceMotionEventRotationRateInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "beta"
+  )
   @Nullable
-  Double getBeta();
+  Double beta();
 
   @JsProperty
   void setBeta(@Nullable Double beta);
@@ -51,9 +55,11 @@ public interface DeviceMotionEventRotationRateInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "gamma"
+  )
   @Nullable
-  Double getGamma();
+  Double gamma();
 
   @JsProperty
   void setGamma(@Nullable Double gamma);

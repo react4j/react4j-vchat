@@ -119,9 +119,11 @@ public interface PublicKeyCredentialDescriptor {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "id"
+  )
   @Nonnull
-  BufferSource getId();
+  BufferSource id();
 
   @JsProperty
   void setId(@Nonnull BufferSource id);
@@ -277,8 +279,10 @@ public interface PublicKeyCredentialDescriptor {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getTransports();
+  @JsProperty(
+      name = "transports"
+  )
+  JsArray<String> transports();
 
   @JsProperty
   void setTransports(@Nonnull JsArray<String> transports);
@@ -302,9 +306,11 @@ public interface PublicKeyCredentialDescriptor {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "type"
+  )
   @Nonnull
-  String getType();
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

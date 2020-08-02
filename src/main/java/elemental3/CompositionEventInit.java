@@ -23,8 +23,10 @@ public interface CompositionEventInit extends UIEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getData();
+  @JsProperty(
+      name = "data"
+  )
+  String data();
 
   @JsProperty
   void setData(@Nonnull String data);

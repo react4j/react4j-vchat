@@ -22,8 +22,10 @@ public interface RTCRtcpParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getCname();
+  @JsProperty(
+      name = "cname"
+  )
+  String cname();
 
   @JsProperty
   void setCname(@Nonnull String cname);
@@ -35,8 +37,10 @@ public interface RTCRtcpParameters {
     return this;
   }
 
-  @JsProperty
-  boolean isReducedSize();
+  @JsProperty(
+      name = "reducedSize"
+  )
+  boolean reducedSize();
 
   @JsProperty
   void setReducedSize(boolean reducedSize);

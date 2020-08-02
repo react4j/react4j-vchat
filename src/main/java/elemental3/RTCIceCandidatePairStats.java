@@ -25,8 +25,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return Js.<RTCIceCandidatePairStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).localCandidateId( localCandidateId ).remoteCandidateId( remoteCandidateId ).state( state ).transportId( transportId );
   }
 
-  @JsProperty
-  double getAvailableIncomingBitrate();
+  @JsProperty(
+      name = "availableIncomingBitrate"
+  )
+  double availableIncomingBitrate();
 
   @JsProperty
   void setAvailableIncomingBitrate(double availableIncomingBitrate);
@@ -38,8 +40,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getAvailableOutgoingBitrate();
+  @JsProperty(
+      name = "availableOutgoingBitrate"
+  )
+  double availableOutgoingBitrate();
 
   @JsProperty
   void setAvailableOutgoingBitrate(double availableOutgoingBitrate);
@@ -51,8 +55,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getBytesDiscardedOnSend();
+  @JsProperty(
+      name = "bytesDiscardedOnSend"
+  )
+  int bytesDiscardedOnSend();
 
   @JsProperty
   void setBytesDiscardedOnSend(int bytesDiscardedOnSend);
@@ -64,8 +70,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getBytesReceived();
+  @JsProperty(
+      name = "bytesReceived"
+  )
+  int bytesReceived();
 
   @JsProperty
   void setBytesReceived(int bytesReceived);
@@ -77,8 +85,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getBytesSent();
+  @JsProperty(
+      name = "bytesSent"
+  )
+  int bytesSent();
 
   @JsProperty
   void setBytesSent(int bytesSent);
@@ -90,8 +100,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getCircuitBreakerTriggerCount();
+  @JsProperty(
+      name = "circuitBreakerTriggerCount"
+  )
+  int circuitBreakerTriggerCount();
 
   @JsProperty
   void setCircuitBreakerTriggerCount(int circuitBreakerTriggerCount);
@@ -104,8 +116,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getConsentExpiredTimestamp();
+  @JsProperty(
+      name = "consentExpiredTimestamp"
+  )
+  double consentExpiredTimestamp();
 
   @JsProperty
   void setConsentExpiredTimestamp(double consentExpiredTimestamp);
@@ -117,8 +131,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getConsentRequestBytesSent();
+  @JsProperty(
+      name = "consentRequestBytesSent"
+  )
+  int consentRequestBytesSent();
 
   @JsProperty
   void setConsentRequestBytesSent(int consentRequestBytesSent);
@@ -130,8 +146,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getConsentRequestsSent();
+  @JsProperty(
+      name = "consentRequestsSent"
+  )
+  int consentRequestsSent();
 
   @JsProperty
   void setConsentRequestsSent(int consentRequestsSent);
@@ -143,8 +161,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getCurrentRoundTripTime();
+  @JsProperty(
+      name = "currentRoundTripTime"
+  )
+  double currentRoundTripTime();
 
   @JsProperty
   void setCurrentRoundTripTime(double currentRoundTripTime);
@@ -156,8 +176,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getFirstRequestTimestamp();
+  @JsProperty(
+      name = "firstRequestTimestamp"
+  )
+  double firstRequestTimestamp();
 
   @JsProperty
   void setFirstRequestTimestamp(double firstRequestTimestamp);
@@ -169,8 +191,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getLastPacketReceivedTimestamp();
+  @JsProperty(
+      name = "lastPacketReceivedTimestamp"
+  )
+  double lastPacketReceivedTimestamp();
 
   @JsProperty
   void setLastPacketReceivedTimestamp(double lastPacketReceivedTimestamp);
@@ -183,8 +207,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getLastPacketSentTimestamp();
+  @JsProperty(
+      name = "lastPacketSentTimestamp"
+  )
+  double lastPacketSentTimestamp();
 
   @JsProperty
   void setLastPacketSentTimestamp(double lastPacketSentTimestamp);
@@ -196,8 +222,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getLastRequestTimestamp();
+  @JsProperty(
+      name = "lastRequestTimestamp"
+  )
+  double lastRequestTimestamp();
 
   @JsProperty
   void setLastRequestTimestamp(double lastRequestTimestamp);
@@ -209,8 +237,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getLastResponseTimestamp();
+  @JsProperty(
+      name = "lastResponseTimestamp"
+  )
+  double lastResponseTimestamp();
 
   @JsProperty
   void setLastResponseTimestamp(double lastResponseTimestamp);
@@ -222,9 +252,11 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "localCandidateId"
+  )
   @Nonnull
-  String getLocalCandidateId();
+  String localCandidateId();
 
   @JsProperty
   void setLocalCandidateId(@Nonnull String localCandidateId);
@@ -236,8 +268,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  boolean isNominated();
+  @JsProperty(
+      name = "nominated"
+  )
+  boolean nominated();
 
   @JsProperty
   void setNominated(boolean nominated);
@@ -249,8 +283,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsDiscardedOnSend();
+  @JsProperty(
+      name = "packetsDiscardedOnSend"
+  )
+  int packetsDiscardedOnSend();
 
   @JsProperty
   void setPacketsDiscardedOnSend(int packetsDiscardedOnSend);
@@ -262,8 +298,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsReceived();
+  @JsProperty(
+      name = "packetsReceived"
+  )
+  int packetsReceived();
 
   @JsProperty
   void setPacketsReceived(int packetsReceived);
@@ -275,8 +313,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsSent();
+  @JsProperty(
+      name = "packetsSent"
+  )
+  int packetsSent();
 
   @JsProperty
   void setPacketsSent(int packetsSent);
@@ -288,9 +328,11 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "remoteCandidateId"
+  )
   @Nonnull
-  String getRemoteCandidateId();
+  String remoteCandidateId();
 
   @JsProperty
   void setRemoteCandidateId(@Nonnull String remoteCandidateId);
@@ -302,8 +344,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getRequestBytesSent();
+  @JsProperty(
+      name = "requestBytesSent"
+  )
+  int requestBytesSent();
 
   @JsProperty
   void setRequestBytesSent(int requestBytesSent);
@@ -315,8 +359,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getRequestsReceived();
+  @JsProperty(
+      name = "requestsReceived"
+  )
+  int requestsReceived();
 
   @JsProperty
   void setRequestsReceived(int requestsReceived);
@@ -328,8 +374,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getRequestsSent();
+  @JsProperty(
+      name = "requestsSent"
+  )
+  int requestsSent();
 
   @JsProperty
   void setRequestsSent(int requestsSent);
@@ -341,8 +389,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getResponseBytesSent();
+  @JsProperty(
+      name = "responseBytesSent"
+  )
+  int responseBytesSent();
 
   @JsProperty
   void setResponseBytesSent(int responseBytesSent);
@@ -354,8 +404,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getResponsesReceived();
+  @JsProperty(
+      name = "responsesReceived"
+  )
+  int responsesReceived();
 
   @JsProperty
   void setResponsesReceived(int responsesReceived);
@@ -367,8 +419,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getResponsesSent();
+  @JsProperty(
+      name = "responsesSent"
+  )
+  int responsesSent();
 
   @JsProperty
   void setResponsesSent(int responsesSent);
@@ -380,8 +434,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getRetransmissionsReceived();
+  @JsProperty(
+      name = "retransmissionsReceived"
+  )
+  int retransmissionsReceived();
 
   @JsProperty
   void setRetransmissionsReceived(int retransmissionsReceived);
@@ -393,8 +449,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getRetransmissionsSent();
+  @JsProperty(
+      name = "retransmissionsSent"
+  )
+  int retransmissionsSent();
 
   @JsProperty
   void setRetransmissionsSent(int retransmissionsSent);
@@ -406,9 +464,11 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "state"
+  )
   @Nonnull
-  String getState();
+  String state();
 
   @JsProperty
   void setState(@Nonnull String state);
@@ -420,8 +480,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalRoundTripTime();
+  @JsProperty(
+      name = "totalRoundTripTime"
+  )
+  double totalRoundTripTime();
 
   @JsProperty
   void setTotalRoundTripTime(double totalRoundTripTime);
@@ -433,9 +495,11 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "transportId"
+  )
   @Nonnull
-  String getTransportId();
+  String transportId();
 
   @JsProperty
   void setTransportId(@Nonnull String transportId);
@@ -447,8 +511,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getCurrentRtt();
+  @JsProperty(
+      name = "currentRtt"
+  )
+  double currentRtt();
 
   @JsProperty
   void setCurrentRtt(double currentRtt);
@@ -460,8 +526,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPriority();
+  @JsProperty(
+      name = "priority"
+  )
+  int priority();
 
   @JsProperty
   void setPriority(int priority);
@@ -473,8 +541,10 @@ public interface RTCIceCandidatePairStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalRtt();
+  @JsProperty(
+      name = "totalRtt"
+  )
+  double totalRtt();
 
   @JsProperty
   void setTotalRtt(double totalRtt);

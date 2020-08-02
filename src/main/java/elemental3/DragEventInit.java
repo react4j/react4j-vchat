@@ -23,9 +23,11 @@ public interface DragEventInit extends MouseEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "dataTransfer"
+  )
   @Nullable
-  DataTransfer getDataTransfer();
+  DataTransfer dataTransfer();
 
   @JsProperty
   void setDataTransfer(@Nullable DataTransfer dataTransfer);

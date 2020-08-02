@@ -22,8 +22,10 @@ public interface FocusOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isPreventScroll();
+  @JsProperty(
+      name = "preventScroll"
+  )
+  boolean preventScroll();
 
   @JsProperty
   void setPreventScroll(boolean preventScroll);

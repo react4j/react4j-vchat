@@ -22,8 +22,10 @@ public interface RTCRtpCodecCapability {
     return Js.<RTCRtpCodecCapability>uncheckedCast( JsPropertyMap.of() ).clockRate( clockRate ).mimeType( mimeType );
   }
 
-  @JsProperty
-  int getChannels();
+  @JsProperty(
+      name = "channels"
+  )
+  int channels();
 
   @JsProperty
   void setChannels(int channels);
@@ -35,8 +37,10 @@ public interface RTCRtpCodecCapability {
     return this;
   }
 
-  @JsProperty
-  int getClockRate();
+  @JsProperty(
+      name = "clockRate"
+  )
+  int clockRate();
 
   @JsProperty
   void setClockRate(int clockRate);
@@ -48,9 +52,11 @@ public interface RTCRtpCodecCapability {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "mimeType"
+  )
   @Nonnull
-  String getMimeType();
+  String mimeType();
 
   @JsProperty
   void setMimeType(@Nonnull String mimeType);
@@ -62,8 +68,10 @@ public interface RTCRtpCodecCapability {
     return this;
   }
 
-  @JsProperty
-  String getSdpFmtpLine();
+  @JsProperty(
+      name = "sdpFmtpLine"
+  )
+  String sdpFmtpLine();
 
   @JsProperty
   void setSdpFmtpLine(@Nonnull String sdpFmtpLine);

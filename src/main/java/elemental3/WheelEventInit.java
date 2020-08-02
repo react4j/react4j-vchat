@@ -23,8 +23,10 @@ public interface WheelEventInit extends MouseEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getDeltaMode();
+  @JsProperty(
+      name = "deltaMode"
+  )
+  int deltaMode();
 
   @JsProperty
   void setDeltaMode(int deltaMode);
@@ -36,8 +38,10 @@ public interface WheelEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  double getDeltaX();
+  @JsProperty(
+      name = "deltaX"
+  )
+  double deltaX();
 
   @JsProperty
   void setDeltaX(double deltaX);
@@ -49,8 +53,10 @@ public interface WheelEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  double getDeltaY();
+  @JsProperty(
+      name = "deltaY"
+  )
+  double deltaY();
 
   @JsProperty
   void setDeltaY(double deltaY);
@@ -62,8 +68,10 @@ public interface WheelEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  double getDeltaZ();
+  @JsProperty(
+      name = "deltaZ"
+  )
+  double deltaZ();
 
   @JsProperty
   void setDeltaZ(double deltaZ);

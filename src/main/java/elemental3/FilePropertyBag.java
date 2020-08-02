@@ -22,8 +22,10 @@ public interface FilePropertyBag extends BlobPropertyBag {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getLastModified();
+  @JsProperty(
+      name = "lastModified"
+  )
+  int lastModified();
 
   @JsProperty
   void setLastModified(int lastModified);

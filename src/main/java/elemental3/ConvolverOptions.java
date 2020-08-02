@@ -23,9 +23,11 @@ public interface ConvolverOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "buffer"
+  )
   @Nullable
-  AudioBuffer getBuffer();
+  AudioBuffer buffer();
 
   @JsProperty
   void setBuffer(@Nullable AudioBuffer buffer);
@@ -37,8 +39,10 @@ public interface ConvolverOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isDisableNormalization();
+  @JsProperty(
+      name = "disableNormalization"
+  )
+  boolean disableNormalization();
 
   @JsProperty
   void setDisableNormalization(boolean disableNormalization);

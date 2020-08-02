@@ -24,8 +24,10 @@ public interface RsaKeyGenParams extends Algorithm {
     return Js.<RsaKeyGenParams>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent );
   }
 
-  @JsProperty
-  int getModulusLength();
+  @JsProperty(
+      name = "modulusLength"
+  )
+  int modulusLength();
 
   @JsProperty
   void setModulusLength(int modulusLength);
@@ -37,9 +39,11 @@ public interface RsaKeyGenParams extends Algorithm {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "publicExponent"
+  )
   @Nonnull
-  Uint8Array getPublicExponent();
+  Uint8Array publicExponent();
 
   @JsProperty
   void setPublicExponent(@Nonnull Uint8Array publicExponent);

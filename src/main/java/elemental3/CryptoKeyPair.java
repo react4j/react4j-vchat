@@ -22,8 +22,10 @@ public interface CryptoKeyPair {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  CryptoKey getPrivateKey();
+  @JsProperty(
+      name = "privateKey"
+  )
+  CryptoKey privateKey();
 
   @JsProperty
   void setPrivateKey(@Nonnull CryptoKey privateKey);
@@ -35,8 +37,10 @@ public interface CryptoKeyPair {
     return this;
   }
 
-  @JsProperty
-  CryptoKey getPublicKey();
+  @JsProperty(
+      name = "publicKey"
+  )
+  CryptoKey publicKey();
 
   @JsProperty
   void setPublicKey(@Nonnull CryptoKey publicKey);

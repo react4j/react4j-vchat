@@ -22,8 +22,10 @@ public interface StorageEstimate {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getQuota();
+  @JsProperty(
+      name = "quota"
+  )
+  int quota();
 
   @JsProperty
   void setQuota(int quota);
@@ -35,8 +37,10 @@ public interface StorageEstimate {
     return this;
   }
 
-  @JsProperty
-  int getUsage();
+  @JsProperty(
+      name = "usage"
+  )
+  int usage();
 
   @JsProperty
   void setUsage(int usage);

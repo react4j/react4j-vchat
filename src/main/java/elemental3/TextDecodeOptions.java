@@ -22,8 +22,10 @@ public interface TextDecodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isStream();
+  @JsProperty(
+      name = "stream"
+  )
+  boolean stream();
 
   @JsProperty
   void setStream(boolean stream);

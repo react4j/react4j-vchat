@@ -22,8 +22,10 @@ public interface AudioParamDescriptor {
     return Js.<AudioParamDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  String getAutomationRate();
+  @JsProperty(
+      name = "automationRate"
+  )
+  String automationRate();
 
   @JsProperty
   void setAutomationRate(@Nonnull String automationRate);
@@ -35,8 +37,10 @@ public interface AudioParamDescriptor {
     return this;
   }
 
-  @JsProperty
-  float getDefaultValue();
+  @JsProperty(
+      name = "defaultValue"
+  )
+  float defaultValue();
 
   @JsProperty
   void setDefaultValue(float defaultValue);
@@ -48,8 +52,10 @@ public interface AudioParamDescriptor {
     return this;
   }
 
-  @JsProperty
-  float getMaxValue();
+  @JsProperty(
+      name = "maxValue"
+  )
+  float maxValue();
 
   @JsProperty
   void setMaxValue(float maxValue);
@@ -61,8 +67,10 @@ public interface AudioParamDescriptor {
     return this;
   }
 
-  @JsProperty
-  float getMinValue();
+  @JsProperty(
+      name = "minValue"
+  )
+  float minValue();
 
   @JsProperty
   void setMinValue(float minValue);
@@ -74,9 +82,11 @@ public interface AudioParamDescriptor {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "name"
+  )
   @Nonnull
-  String getName();
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);

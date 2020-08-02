@@ -23,9 +23,11 @@ public interface AudioProcessingEventInit extends EventInit {
     return Js.<AudioProcessingEventInit>uncheckedCast( JsPropertyMap.of() ).inputBuffer( inputBuffer ).outputBuffer( outputBuffer ).playbackTime( playbackTime );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "inputBuffer"
+  )
   @Nonnull
-  AudioBuffer getInputBuffer();
+  AudioBuffer inputBuffer();
 
   @JsProperty
   void setInputBuffer(@Nonnull AudioBuffer inputBuffer);
@@ -37,9 +39,11 @@ public interface AudioProcessingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "outputBuffer"
+  )
   @Nonnull
-  AudioBuffer getOutputBuffer();
+  AudioBuffer outputBuffer();
 
   @JsProperty
   void setOutputBuffer(@Nonnull AudioBuffer outputBuffer);
@@ -51,8 +55,10 @@ public interface AudioProcessingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  double getPlaybackTime();
+  @JsProperty(
+      name = "playbackTime"
+  )
+  double playbackTime();
 
   @JsProperty
   void setPlaybackTime(double playbackTime);

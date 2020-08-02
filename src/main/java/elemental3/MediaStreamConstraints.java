@@ -22,8 +22,10 @@ public interface MediaStreamConstraints {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  BooleanOrMediaTrackConstraintsUnion getAudio();
+  @JsProperty(
+      name = "audio"
+  )
+  BooleanOrMediaTrackConstraintsUnion audio();
 
   @JsProperty
   void setAudio(@Nonnull BooleanOrMediaTrackConstraintsUnion audio);
@@ -52,8 +54,10 @@ public interface MediaStreamConstraints {
     return this;
   }
 
-  @JsProperty
-  BooleanOrMediaTrackConstraintsUnion getVideo();
+  @JsProperty(
+      name = "video"
+  )
+  BooleanOrMediaTrackConstraintsUnion video();
 
   @JsProperty
   void setVideo(@Nonnull BooleanOrMediaTrackConstraintsUnion video);

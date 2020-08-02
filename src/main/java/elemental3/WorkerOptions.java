@@ -22,8 +22,10 @@ public interface WorkerOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getCredentials();
+  @JsProperty(
+      name = "credentials"
+  )
+  String credentials();
 
   @JsProperty
   void setCredentials(@Nonnull String credentials);
@@ -35,8 +37,10 @@ public interface WorkerOptions {
     return this;
   }
 
-  @JsProperty
-  String getName();
+  @JsProperty(
+      name = "name"
+  )
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);
@@ -48,8 +52,10 @@ public interface WorkerOptions {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

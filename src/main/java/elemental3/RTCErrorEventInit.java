@@ -22,9 +22,11 @@ public interface RTCErrorEventInit extends EventInit {
     return Js.<RTCErrorEventInit>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "error"
+  )
   @Nonnull
-  RTCError getError();
+  RTCError error();
 
   @JsProperty
   void setError(@Nonnull RTCError error);

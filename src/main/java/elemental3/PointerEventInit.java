@@ -23,8 +23,10 @@ public interface PointerEventInit extends MouseEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getHeight();
+  @JsProperty(
+      name = "height"
+  )
+  double height();
 
   @JsProperty
   void setHeight(double height);
@@ -36,8 +38,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isIsPrimary();
+  @JsProperty(
+      name = "isPrimary"
+  )
+  boolean isPrimary();
 
   @JsProperty
   void setIsPrimary(boolean isPrimary);
@@ -49,8 +53,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  int getPointerId();
+  @JsProperty(
+      name = "pointerId"
+  )
+  int pointerId();
 
   @JsProperty
   void setPointerId(int pointerId);
@@ -62,8 +68,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  String getPointerType();
+  @JsProperty(
+      name = "pointerType"
+  )
+  String pointerType();
 
   @JsProperty
   void setPointerType(@Nonnull String pointerType);
@@ -75,8 +83,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  float getPressure();
+  @JsProperty(
+      name = "pressure"
+  )
+  float pressure();
 
   @JsProperty
   void setPressure(float pressure);
@@ -88,8 +98,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  float getTangentialPressure();
+  @JsProperty(
+      name = "tangentialPressure"
+  )
+  float tangentialPressure();
 
   @JsProperty
   void setTangentialPressure(float tangentialPressure);
@@ -101,8 +113,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  int getTiltX();
+  @JsProperty(
+      name = "tiltX"
+  )
+  int tiltX();
 
   @JsProperty
   void setTiltX(int tiltX);
@@ -114,8 +128,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  int getTiltY();
+  @JsProperty(
+      name = "tiltY"
+  )
+  int tiltY();
 
   @JsProperty
   void setTiltY(int tiltY);
@@ -127,8 +143,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  int getTwist();
+  @JsProperty(
+      name = "twist"
+  )
+  int twist();
 
   @JsProperty
   void setTwist(int twist);
@@ -140,8 +158,10 @@ public interface PointerEventInit extends MouseEventInit {
     return this;
   }
 
-  @JsProperty
-  double getWidth();
+  @JsProperty(
+      name = "width"
+  )
+  double width();
 
   @JsProperty
   void setWidth(double width);

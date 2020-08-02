@@ -22,8 +22,10 @@ public interface AnimationEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getAnimationName();
+  @JsProperty(
+      name = "animationName"
+  )
+  String animationName();
 
   @JsProperty
   void setAnimationName(@Nonnull String animationName);
@@ -35,8 +37,10 @@ public interface AnimationEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  double getElapsedTime();
+  @JsProperty(
+      name = "elapsedTime"
+  )
+  double elapsedTime();
 
   @JsProperty
   void setElapsedTime(double elapsedTime);
@@ -48,8 +52,10 @@ public interface AnimationEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getPseudoElement();
+  @JsProperty(
+      name = "pseudoElement"
+  )
+  String pseudoElement();
 
   @JsProperty
   void setPseudoElement(@Nonnull String pseudoElement);

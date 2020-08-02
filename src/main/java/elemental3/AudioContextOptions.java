@@ -22,8 +22,10 @@ public interface AudioContextOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  AudioContextLatencyCategoryOrDoubleUnion getLatencyHint();
+  @JsProperty(
+      name = "latencyHint"
+  )
+  AudioContextLatencyCategoryOrDoubleUnion latencyHint();
 
   @JsProperty
   void setLatencyHint(@Nonnull AudioContextLatencyCategoryOrDoubleUnion latencyHint);
@@ -52,8 +54,10 @@ public interface AudioContextOptions {
     return this;
   }
 
-  @JsProperty
-  float getSampleRate();
+  @JsProperty(
+      name = "sampleRate"
+  )
+  float sampleRate();
 
   @JsProperty
   void setSampleRate(float sampleRate);

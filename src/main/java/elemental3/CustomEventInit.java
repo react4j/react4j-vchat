@@ -24,9 +24,11 @@ public interface CustomEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "detail"
+  )
   @Nullable
-  Any getDetail();
+  Any detail();
 
   @JsProperty
   void setDetail(@Nullable Any detail);

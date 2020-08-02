@@ -22,9 +22,11 @@ public interface MediaStreamTrackEventInit extends EventInit {
     return Js.<MediaStreamTrackEventInit>uncheckedCast( JsPropertyMap.of() ).track( track );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "track"
+  )
   @Nonnull
-  MediaStreamTrack getTrack();
+  MediaStreamTrack track();
 
   @JsProperty
   void setTrack(@Nonnull MediaStreamTrack track);

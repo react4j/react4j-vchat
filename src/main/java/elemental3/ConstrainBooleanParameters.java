@@ -22,8 +22,10 @@ public interface ConstrainBooleanParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isExact();
+  @JsProperty(
+      name = "exact"
+  )
+  boolean exact();
 
   @JsProperty
   void setExact(boolean exact);
@@ -35,8 +37,10 @@ public interface ConstrainBooleanParameters {
     return this;
   }
 
-  @JsProperty
-  boolean isIdeal();
+  @JsProperty(
+      name = "ideal"
+  )
+  boolean ideal();
 
   @JsProperty
   void setIdeal(boolean ideal);

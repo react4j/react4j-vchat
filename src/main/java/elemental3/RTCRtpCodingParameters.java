@@ -22,8 +22,10 @@ public interface RTCRtpCodingParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getRid();
+  @JsProperty(
+      name = "rid"
+  )
+  String rid();
 
   @JsProperty
   void setRid(@Nonnull String rid);

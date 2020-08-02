@@ -22,8 +22,10 @@ public interface ChannelMergerOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getNumberOfInputs();
+  @JsProperty(
+      name = "numberOfInputs"
+  )
+  int numberOfInputs();
 
   @JsProperty
   void setNumberOfInputs(int numberOfInputs);

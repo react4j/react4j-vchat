@@ -23,8 +23,10 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
     return Js.<RTCRtpSynchronizationSource>uncheckedCast( JsPropertyMap.of() ).rtpTimestamp( rtpTimestamp ).source( source ).timestamp( timestamp );
   }
 
-  @JsProperty
-  boolean isVoiceActivityFlag();
+  @JsProperty(
+      name = "voiceActivityFlag"
+  )
+  boolean voiceActivityFlag();
 
   @JsProperty
   void setVoiceActivityFlag(boolean voiceActivityFlag);

@@ -300,9 +300,11 @@ public interface Pbkdf2Params extends Algorithm {
     return Js.<Pbkdf2Params>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).iterations( iterations ).salt( salt );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "hash"
+  )
   @Nonnull
-  AlgorithmIdentifier getHash();
+  AlgorithmIdentifier hash();
 
   @JsProperty
   void setHash(@Nonnull AlgorithmIdentifier hash);
@@ -338,8 +340,10 @@ public interface Pbkdf2Params extends Algorithm {
     return this;
   }
 
-  @JsProperty
-  int getIterations();
+  @JsProperty(
+      name = "iterations"
+  )
+  int iterations();
 
   @JsProperty
   void setIterations(int iterations);
@@ -351,9 +355,11 @@ public interface Pbkdf2Params extends Algorithm {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "salt"
+  )
   @Nonnull
-  BufferSource getSalt();
+  BufferSource salt();
 
   @JsProperty
   void setSalt(@Nonnull BufferSource salt);

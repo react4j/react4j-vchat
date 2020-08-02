@@ -22,9 +22,11 @@ public interface KeyAlgorithm {
     return Js.<KeyAlgorithm>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "name"
+  )
   @Nonnull
-  String getName();
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);

@@ -45,9 +45,11 @@ public interface RTCRtpCapabilities {
     return Js.<RTCRtpCapabilities>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "codecs"
+  )
   @Nonnull
-  JsArray<RTCRtpCodecCapability> getCodecs();
+  JsArray<RTCRtpCodecCapability> codecs();
 
   @JsProperty
   void setCodecs(@Nonnull JsArray<RTCRtpCodecCapability> codecs);
@@ -71,9 +73,11 @@ public interface RTCRtpCapabilities {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "headerExtensions"
+  )
   @Nonnull
-  JsArray<RTCRtpHeaderExtensionCapability> getHeaderExtensions();
+  JsArray<RTCRtpHeaderExtensionCapability> headerExtensions();
 
   @JsProperty
   void setHeaderExtensions(@Nonnull JsArray<RTCRtpHeaderExtensionCapability> headerExtensions);

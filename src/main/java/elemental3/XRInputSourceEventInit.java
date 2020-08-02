@@ -23,9 +23,11 @@ public interface XRInputSourceEventInit extends EventInit {
     return Js.<XRInputSourceEventInit>uncheckedCast( JsPropertyMap.of() ).frame( frame ).inputSource( inputSource );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "frame"
+  )
   @Nonnull
-  XRFrame getFrame();
+  XRFrame frame();
 
   @JsProperty
   void setFrame(@Nonnull XRFrame frame);
@@ -37,9 +39,11 @@ public interface XRInputSourceEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "inputSource"
+  )
   @Nonnull
-  XRInputSource getInputSource();
+  XRInputSource inputSource();
 
   @JsProperty
   void setInputSource(@Nonnull XRInputSource inputSource);

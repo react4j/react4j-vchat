@@ -22,9 +22,11 @@ public interface MediaRecorderErrorEventInit extends EventInit {
     return Js.<MediaRecorderErrorEventInit>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "error"
+  )
   @Nonnull
-  DOMException getError();
+  DOMException error();
 
   @JsProperty
   void setError(@Nonnull DOMException error);

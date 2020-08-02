@@ -26,9 +26,11 @@ public interface IntersectionObserverEntryInit {
     return Js.<IntersectionObserverEntryInit>uncheckedCast( JsPropertyMap.of() ).boundingClientRect( boundingClientRect ).intersectionRatio( intersectionRatio ).intersectionRect( intersectionRect ).isIntersecting( isIntersecting ).rootBounds( rootBounds ).target( target ).time( time );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "boundingClientRect"
+  )
   @Nonnull
-  DOMRectInit getBoundingClientRect();
+  DOMRectInit boundingClientRect();
 
   @JsProperty
   void setBoundingClientRect(@Nonnull DOMRectInit boundingClientRect);
@@ -41,8 +43,10 @@ public interface IntersectionObserverEntryInit {
     return this;
   }
 
-  @JsProperty
-  double getIntersectionRatio();
+  @JsProperty(
+      name = "intersectionRatio"
+  )
+  double intersectionRatio();
 
   @JsProperty
   void setIntersectionRatio(double intersectionRatio);
@@ -54,9 +58,11 @@ public interface IntersectionObserverEntryInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "intersectionRect"
+  )
   @Nonnull
-  DOMRectInit getIntersectionRect();
+  DOMRectInit intersectionRect();
 
   @JsProperty
   void setIntersectionRect(@Nonnull DOMRectInit intersectionRect);
@@ -69,8 +75,10 @@ public interface IntersectionObserverEntryInit {
     return this;
   }
 
-  @JsProperty
-  boolean isIsIntersecting();
+  @JsProperty(
+      name = "isIntersecting"
+  )
+  boolean isIntersecting();
 
   @JsProperty
   void setIsIntersecting(boolean isIntersecting);
@@ -82,9 +90,11 @@ public interface IntersectionObserverEntryInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "rootBounds"
+  )
   @Nullable
-  DOMRectInit getRootBounds();
+  DOMRectInit rootBounds();
 
   @JsProperty
   void setRootBounds(@Nullable DOMRectInit rootBounds);
@@ -96,9 +106,11 @@ public interface IntersectionObserverEntryInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "target"
+  )
   @Nonnull
-  Element getTarget();
+  Element target();
 
   @JsProperty
   void setTarget(@Nonnull Element target);
@@ -110,8 +122,10 @@ public interface IntersectionObserverEntryInit {
     return this;
   }
 
-  @JsProperty
-  double getTime();
+  @JsProperty(
+      name = "time"
+  )
+  double time();
 
   @JsProperty
   void setTime(double time);

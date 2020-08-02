@@ -22,8 +22,10 @@ public interface CanvasRenderingContext2DSettings {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAlpha();
+  @JsProperty(
+      name = "alpha"
+  )
+  boolean alpha();
 
   @JsProperty
   void setAlpha(boolean alpha);
@@ -35,8 +37,10 @@ public interface CanvasRenderingContext2DSettings {
     return this;
   }
 
-  @JsProperty
-  boolean isDesynchronized();
+  @JsProperty(
+      name = "desynchronized"
+  )
+  boolean desynchronized();
 
   @JsProperty
   void setDesynchronized(boolean desynchronized);

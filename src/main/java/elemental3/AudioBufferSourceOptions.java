@@ -23,9 +23,11 @@ public interface AudioBufferSourceOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "buffer"
+  )
   @Nullable
-  AudioBuffer getBuffer();
+  AudioBuffer buffer();
 
   @JsProperty
   void setBuffer(@Nullable AudioBuffer buffer);
@@ -37,8 +39,10 @@ public interface AudioBufferSourceOptions {
     return this;
   }
 
-  @JsProperty
-  float getDetune();
+  @JsProperty(
+      name = "detune"
+  )
+  float detune();
 
   @JsProperty
   void setDetune(float detune);
@@ -50,8 +54,10 @@ public interface AudioBufferSourceOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isLoop();
+  @JsProperty(
+      name = "loop"
+  )
+  boolean loop();
 
   @JsProperty
   void setLoop(boolean loop);
@@ -63,8 +69,10 @@ public interface AudioBufferSourceOptions {
     return this;
   }
 
-  @JsProperty
-  double getLoopEnd();
+  @JsProperty(
+      name = "loopEnd"
+  )
+  double loopEnd();
 
   @JsProperty
   void setLoopEnd(double loopEnd);
@@ -76,8 +84,10 @@ public interface AudioBufferSourceOptions {
     return this;
   }
 
-  @JsProperty
-  double getLoopStart();
+  @JsProperty(
+      name = "loopStart"
+  )
+  double loopStart();
 
   @JsProperty
   void setLoopStart(double loopStart);
@@ -89,8 +99,10 @@ public interface AudioBufferSourceOptions {
     return this;
   }
 
-  @JsProperty
-  float getPlaybackRate();
+  @JsProperty(
+      name = "playbackRate"
+  )
+  float playbackRate();
 
   @JsProperty
   void setPlaybackRate(float playbackRate);

@@ -22,8 +22,10 @@ public interface RTCCertificateExpiration {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getExpires();
+  @JsProperty(
+      name = "expires"
+  )
+  int expires();
 
   @JsProperty
   void setExpires(int expires);

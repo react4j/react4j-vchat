@@ -23,8 +23,10 @@ public interface RTCIceServerStats extends RTCStats {
     return Js.<RTCIceServerStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).url( url );
   }
 
-  @JsProperty
-  int getPort();
+  @JsProperty(
+      name = "port"
+  )
+  int port();
 
   @JsProperty
   void setPort(int port);
@@ -36,8 +38,10 @@ public interface RTCIceServerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getRelayProtocol();
+  @JsProperty(
+      name = "relayProtocol"
+  )
+  String relayProtocol();
 
   @JsProperty
   void setRelayProtocol(@Nonnull String relayProtocol);
@@ -49,8 +53,10 @@ public interface RTCIceServerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getTotalRequestsSent();
+  @JsProperty(
+      name = "totalRequestsSent"
+  )
+  int totalRequestsSent();
 
   @JsProperty
   void setTotalRequestsSent(int totalRequestsSent);
@@ -62,8 +68,10 @@ public interface RTCIceServerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getTotalResponsesReceived();
+  @JsProperty(
+      name = "totalResponsesReceived"
+  )
+  int totalResponsesReceived();
 
   @JsProperty
   void setTotalResponsesReceived(int totalResponsesReceived);
@@ -75,8 +83,10 @@ public interface RTCIceServerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalRoundTripTime();
+  @JsProperty(
+      name = "totalRoundTripTime"
+  )
+  double totalRoundTripTime();
 
   @JsProperty
   void setTotalRoundTripTime(double totalRoundTripTime);
@@ -88,9 +98,11 @@ public interface RTCIceServerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "url"
+  )
   @Nonnull
-  String getUrl();
+  String url();
 
   @JsProperty
   void setUrl(@Nonnull String url);

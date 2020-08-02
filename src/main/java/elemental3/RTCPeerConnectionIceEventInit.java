@@ -23,9 +23,11 @@ public interface RTCPeerConnectionIceEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "candidate"
+  )
   @Nullable
-  RTCIceCandidate getCandidate();
+  RTCIceCandidate candidate();
 
   @JsProperty
   void setCandidate(@Nullable RTCIceCandidate candidate);
@@ -37,9 +39,11 @@ public interface RTCPeerConnectionIceEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "url"
+  )
   @Nullable
-  String getUrl();
+  String url();
 
   @JsProperty
   void setUrl(@Nullable String url);

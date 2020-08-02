@@ -22,8 +22,10 @@ public interface ImageBitmapOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getColorSpaceConversion();
+  @JsProperty(
+      name = "colorSpaceConversion"
+  )
+  String colorSpaceConversion();
 
   @JsProperty
   void setColorSpaceConversion(@Nonnull String colorSpaceConversion);
@@ -35,8 +37,10 @@ public interface ImageBitmapOptions {
     return this;
   }
 
-  @JsProperty
-  String getImageOrientation();
+  @JsProperty(
+      name = "imageOrientation"
+  )
+  String imageOrientation();
 
   @JsProperty
   void setImageOrientation(@Nonnull String imageOrientation);
@@ -48,8 +52,10 @@ public interface ImageBitmapOptions {
     return this;
   }
 
-  @JsProperty
-  String getPremultiplyAlpha();
+  @JsProperty(
+      name = "premultiplyAlpha"
+  )
+  String premultiplyAlpha();
 
   @JsProperty
   void setPremultiplyAlpha(@Nonnull String premultiplyAlpha);
@@ -61,8 +67,10 @@ public interface ImageBitmapOptions {
     return this;
   }
 
-  @JsProperty
-  int getResizeHeight();
+  @JsProperty(
+      name = "resizeHeight"
+  )
+  int resizeHeight();
 
   @JsProperty
   void setResizeHeight(int resizeHeight);
@@ -74,8 +82,10 @@ public interface ImageBitmapOptions {
     return this;
   }
 
-  @JsProperty
-  String getResizeQuality();
+  @JsProperty(
+      name = "resizeQuality"
+  )
+  String resizeQuality();
 
   @JsProperty
   void setResizeQuality(@Nonnull String resizeQuality);
@@ -87,8 +97,10 @@ public interface ImageBitmapOptions {
     return this;
   }
 
-  @JsProperty
-  int getResizeWidth();
+  @JsProperty(
+      name = "resizeWidth"
+  )
+  int resizeWidth();
 
   @JsProperty
   void setResizeWidth(int resizeWidth);

@@ -22,8 +22,10 @@ public interface DevicePermissionDescriptor extends PermissionDescriptor {
     return Js.<DevicePermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  String getDeviceId();
+  @JsProperty(
+      name = "deviceId"
+  )
+  String deviceId();
 
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);

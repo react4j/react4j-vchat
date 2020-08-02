@@ -35,8 +35,10 @@ public interface RTCIceServer {
     return Js.<RTCIceServer>uncheckedCast( JsPropertyMap.of() ).urls( urls );
   }
 
-  @JsProperty
-  String getCredential();
+  @JsProperty(
+      name = "credential"
+  )
+  String credential();
 
   @JsProperty
   void setCredential(@Nonnull String credential);
@@ -48,8 +50,10 @@ public interface RTCIceServer {
     return this;
   }
 
-  @JsProperty
-  String getCredentialType();
+  @JsProperty(
+      name = "credentialType"
+  )
+  String credentialType();
 
   @JsProperty
   void setCredentialType(@Nonnull String credentialType);
@@ -61,9 +65,11 @@ public interface RTCIceServer {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "urls"
+  )
   @Nonnull
-  StringOrStringArrayUnion getUrls();
+  StringOrStringArrayUnion urls();
 
   @JsProperty
   void setUrls(@Nonnull StringOrStringArrayUnion urls);
@@ -104,8 +110,10 @@ public interface RTCIceServer {
     return this;
   }
 
-  @JsProperty
-  String getUsername();
+  @JsProperty(
+      name = "username"
+  )
+  String username();
 
   @JsProperty
   void setUsername(@Nonnull String username);

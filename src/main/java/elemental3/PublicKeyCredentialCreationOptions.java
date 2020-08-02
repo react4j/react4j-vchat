@@ -262,8 +262,10 @@ public interface PublicKeyCredentialCreationOptions {
     return Js.<PublicKeyCredentialCreationOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).pubKeyCredParams( pubKeyCredParams ).rp( rp ).user( user );
   }
 
-  @JsProperty
-  String getAttestation();
+  @JsProperty(
+      name = "attestation"
+  )
+  String attestation();
 
   @JsProperty
   void setAttestation(@Nonnull String attestation);
@@ -275,8 +277,10 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
-  AuthenticatorSelectionCriteria getAuthenticatorSelection();
+  @JsProperty(
+      name = "authenticatorSelection"
+  )
+  AuthenticatorSelectionCriteria authenticatorSelection();
 
   @JsProperty
   void setAuthenticatorSelection(@Nonnull AuthenticatorSelectionCriteria authenticatorSelection);
@@ -289,9 +293,11 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "challenge"
+  )
   @Nonnull
-  BufferSource getChallenge();
+  BufferSource challenge();
 
   @JsProperty
   void setChallenge(@Nonnull BufferSource challenge);
@@ -447,8 +453,10 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
-  JsArray<PublicKeyCredentialDescriptor> getExcludeCredentials();
+  @JsProperty(
+      name = "excludeCredentials"
+  )
+  JsArray<PublicKeyCredentialDescriptor> excludeCredentials();
 
   @JsProperty
   void setExcludeCredentials(@Nonnull JsArray<PublicKeyCredentialDescriptor> excludeCredentials);
@@ -475,8 +483,10 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
-  AuthenticationExtensionsClientInputs getExtensions();
+  @JsProperty(
+      name = "extensions"
+  )
+  AuthenticationExtensionsClientInputs extensions();
 
   @JsProperty
   void setExtensions(@Nonnull AuthenticationExtensionsClientInputs extensions);
@@ -489,9 +499,11 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "pubKeyCredParams"
+  )
   @Nonnull
-  JsArray<PublicKeyCredentialParameters> getPubKeyCredParams();
+  JsArray<PublicKeyCredentialParameters> pubKeyCredParams();
 
   @JsProperty
   void setPubKeyCredParams(@Nonnull JsArray<PublicKeyCredentialParameters> pubKeyCredParams);
@@ -518,9 +530,11 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "rp"
+  )
   @Nonnull
-  PublicKeyCredentialRpEntity getRp();
+  PublicKeyCredentialRpEntity rp();
 
   @JsProperty
   void setRp(@Nonnull PublicKeyCredentialRpEntity rp);
@@ -532,8 +546,10 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
-  int getTimeout();
+  @JsProperty(
+      name = "timeout"
+  )
+  int timeout();
 
   @JsProperty
   void setTimeout(int timeout);
@@ -545,9 +561,11 @@ public interface PublicKeyCredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "user"
+  )
   @Nonnull
-  PublicKeyCredentialUserEntity getUser();
+  PublicKeyCredentialUserEntity user();
 
   @JsProperty
   void setUser(@Nonnull PublicKeyCredentialUserEntity user);

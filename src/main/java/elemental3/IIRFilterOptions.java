@@ -45,9 +45,11 @@ public interface IIRFilterOptions extends AudioNodeOptions {
     return Js.<IIRFilterOptions>uncheckedCast( JsPropertyMap.of() ).feedback( feedback ).feedforward( feedforward );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "feedback"
+  )
   @Nonnull
-  JsArray<Double> getFeedback();
+  JsArray<Double> feedback();
 
   @JsProperty
   void setFeedback(@Nonnull JsArray<Double> feedback);
@@ -71,9 +73,11 @@ public interface IIRFilterOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "feedforward"
+  )
   @Nonnull
-  JsArray<Double> getFeedforward();
+  JsArray<Double> feedforward();
 
   @JsProperty
   void setFeedforward(@Nonnull JsArray<Double> feedforward);

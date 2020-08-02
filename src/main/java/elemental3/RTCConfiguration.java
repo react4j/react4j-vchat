@@ -23,8 +23,10 @@ public interface RTCConfiguration {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getBundlePolicy();
+  @JsProperty(
+      name = "bundlePolicy"
+  )
+  String bundlePolicy();
 
   @JsProperty
   void setBundlePolicy(@Nonnull String bundlePolicy);
@@ -36,8 +38,10 @@ public interface RTCConfiguration {
     return this;
   }
 
-  @JsProperty
-  JsArray<RTCCertificate> getCertificates();
+  @JsProperty(
+      name = "certificates"
+  )
+  JsArray<RTCCertificate> certificates();
 
   @JsProperty
   void setCertificates(@Nonnull JsArray<RTCCertificate> certificates);
@@ -61,8 +65,10 @@ public interface RTCConfiguration {
     return this;
   }
 
-  @JsProperty
-  short getIceCandidatePoolSize();
+  @JsProperty(
+      name = "iceCandidatePoolSize"
+  )
+  short iceCandidatePoolSize();
 
   @JsProperty
   void setIceCandidatePoolSize(short iceCandidatePoolSize);
@@ -74,8 +80,10 @@ public interface RTCConfiguration {
     return this;
   }
 
-  @JsProperty
-  JsArray<RTCIceServer> getIceServers();
+  @JsProperty(
+      name = "iceServers"
+  )
+  JsArray<RTCIceServer> iceServers();
 
   @JsProperty
   void setIceServers(@Nonnull JsArray<RTCIceServer> iceServers);
@@ -99,8 +107,10 @@ public interface RTCConfiguration {
     return this;
   }
 
-  @JsProperty
-  String getIceTransportPolicy();
+  @JsProperty(
+      name = "iceTransportPolicy"
+  )
+  String iceTransportPolicy();
 
   @JsProperty
   void setIceTransportPolicy(@Nonnull String iceTransportPolicy);
@@ -112,8 +122,10 @@ public interface RTCConfiguration {
     return this;
   }
 
-  @JsProperty
-  String getRtcpMuxPolicy();
+  @JsProperty(
+      name = "rtcpMuxPolicy"
+  )
+  String rtcpMuxPolicy();
 
   @JsProperty
   void setRtcpMuxPolicy(@Nonnull String rtcpMuxPolicy);

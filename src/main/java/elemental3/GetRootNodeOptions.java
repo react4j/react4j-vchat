@@ -22,8 +22,10 @@ public interface GetRootNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isComposed();
+  @JsProperty(
+      name = "composed"
+  )
+  boolean composed();
 
   @JsProperty
   void setComposed(boolean composed);

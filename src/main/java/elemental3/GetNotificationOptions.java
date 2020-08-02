@@ -22,8 +22,10 @@ public interface GetNotificationOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getTag();
+  @JsProperty(
+      name = "tag"
+  )
+  String tag();
 
   @JsProperty
   void setTag(@Nonnull String tag);

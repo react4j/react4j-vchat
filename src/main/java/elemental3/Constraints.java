@@ -23,8 +23,10 @@ public interface Constraints extends ConstraintSet {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<ConstraintSet> getAdvanced();
+  @JsProperty(
+      name = "advanced"
+  )
+  JsArray<ConstraintSet> advanced();
 
   @JsProperty
   void setAdvanced(@Nonnull JsArray<ConstraintSet> advanced);

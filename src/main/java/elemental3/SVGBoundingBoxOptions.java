@@ -22,8 +22,10 @@ public interface SVGBoundingBoxOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isClipped();
+  @JsProperty(
+      name = "clipped"
+  )
+  boolean clipped();
 
   @JsProperty
   void setClipped(boolean clipped);
@@ -35,8 +37,10 @@ public interface SVGBoundingBoxOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isFill();
+  @JsProperty(
+      name = "fill"
+  )
+  boolean fill();
 
   @JsProperty
   void setFill(boolean fill);
@@ -48,8 +52,10 @@ public interface SVGBoundingBoxOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isMarkers();
+  @JsProperty(
+      name = "markers"
+  )
+  boolean markers();
 
   @JsProperty
   void setMarkers(boolean markers);
@@ -61,8 +67,10 @@ public interface SVGBoundingBoxOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isStroke();
+  @JsProperty(
+      name = "stroke"
+  )
+  boolean stroke();
 
   @JsProperty
   void setStroke(boolean stroke);

@@ -23,8 +23,10 @@ public interface FederatedCredentialInit extends CredentialData {
     return Js.<FederatedCredentialInit>uncheckedCast( JsPropertyMap.of() ).id( id ).origin( origin ).provider( provider );
   }
 
-  @JsProperty
-  String getIconURL();
+  @JsProperty(
+      name = "iconURL"
+  )
+  String iconURL();
 
   @JsProperty
   void setIconURL(@Nonnull String iconURL);
@@ -36,8 +38,10 @@ public interface FederatedCredentialInit extends CredentialData {
     return this;
   }
 
-  @JsProperty
-  String getName();
+  @JsProperty(
+      name = "name"
+  )
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);
@@ -49,9 +53,11 @@ public interface FederatedCredentialInit extends CredentialData {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "origin"
+  )
   @Nonnull
-  String getOrigin();
+  String origin();
 
   @JsProperty
   void setOrigin(@Nonnull String origin);
@@ -63,8 +69,10 @@ public interface FederatedCredentialInit extends CredentialData {
     return this;
   }
 
-  @JsProperty
-  String getProtocol();
+  @JsProperty(
+      name = "protocol"
+  )
+  String protocol();
 
   @JsProperty
   void setProtocol(@Nonnull String protocol);
@@ -76,9 +84,11 @@ public interface FederatedCredentialInit extends CredentialData {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "provider"
+  )
   @Nonnull
-  String getProvider();
+  String provider();
 
   @JsProperty
   void setProvider(@Nonnull String provider);

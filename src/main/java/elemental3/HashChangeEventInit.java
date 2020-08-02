@@ -22,8 +22,10 @@ public interface HashChangeEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getNewURL();
+  @JsProperty(
+      name = "newURL"
+  )
+  String newURL();
 
   @JsProperty
   void setNewURL(@Nonnull String newURL);
@@ -35,8 +37,10 @@ public interface HashChangeEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getOldURL();
+  @JsProperty(
+      name = "oldURL"
+  )
+  String oldURL();
 
   @JsProperty
   void setOldURL(@Nonnull String oldURL);

@@ -23,9 +23,11 @@ public interface FocusEventInit extends UIEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "relatedTarget"
+  )
   @Nullable
-  EventTarget getRelatedTarget();
+  EventTarget relatedTarget();
 
   @JsProperty
   void setRelatedTarget(@Nullable EventTarget relatedTarget);

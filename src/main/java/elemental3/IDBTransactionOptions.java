@@ -22,8 +22,10 @@ public interface IDBTransactionOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getDurability();
+  @JsProperty(
+      name = "durability"
+  )
+  String durability();
 
   @JsProperty
   void setDurability(@Nonnull String durability);

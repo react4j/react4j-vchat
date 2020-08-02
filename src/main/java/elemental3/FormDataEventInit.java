@@ -22,9 +22,11 @@ public interface FormDataEventInit extends EventInit {
     return Js.<FormDataEventInit>uncheckedCast( JsPropertyMap.of() ).formData( formData );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "formData"
+  )
   @Nonnull
-  FormData getFormData();
+  FormData formData();
 
   @JsProperty
   void setFormData(@Nonnull FormData formData);

@@ -22,8 +22,10 @@ public interface ScrollOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getBehavior();
+  @JsProperty(
+      name = "behavior"
+  )
+  String behavior();
 
   @JsProperty
   void setBehavior(@Nonnull String behavior);

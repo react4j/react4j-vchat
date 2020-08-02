@@ -23,8 +23,10 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
     return Js.<RTCRemoteInboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
-  @JsProperty
-  double getFractionLost();
+  @JsProperty(
+      name = "fractionLost"
+  )
+  double fractionLost();
 
   @JsProperty
   void setFractionLost(double fractionLost);
@@ -36,8 +38,10 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
     return this;
   }
 
-  @JsProperty
-  String getLocalId();
+  @JsProperty(
+      name = "localId"
+  )
+  String localId();
 
   @JsProperty
   void setLocalId(@Nonnull String localId);
@@ -49,8 +53,10 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
     return this;
   }
 
-  @JsProperty
-  int getReportsReceived();
+  @JsProperty(
+      name = "reportsReceived"
+  )
+  int reportsReceived();
 
   @JsProperty
   void setReportsReceived(int reportsReceived);
@@ -62,8 +68,10 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
     return this;
   }
 
-  @JsProperty
-  double getRoundTripTime();
+  @JsProperty(
+      name = "roundTripTime"
+  )
+  double roundTripTime();
 
   @JsProperty
   void setRoundTripTime(double roundTripTime);
@@ -75,8 +83,10 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
     return this;
   }
 
-  @JsProperty
-  int getRoundTripTimeMeasurements();
+  @JsProperty(
+      name = "roundTripTimeMeasurements"
+  )
+  int roundTripTimeMeasurements();
 
   @JsProperty
   void setRoundTripTimeMeasurements(int roundTripTimeMeasurements);
@@ -89,8 +99,10 @@ public interface RTCRemoteInboundRtpStreamStats extends RTCReceivedRtpStreamStat
     return this;
   }
 
-  @JsProperty
-  double getTotalRoundTripTime();
+  @JsProperty(
+      name = "totalRoundTripTime"
+  )
+  double totalRoundTripTime();
 
   @JsProperty
   void setTotalRoundTripTime(double totalRoundTripTime);

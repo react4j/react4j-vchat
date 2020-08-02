@@ -22,9 +22,11 @@ public interface XRReferenceSpaceEventInit extends EventInit {
     return Js.<XRReferenceSpaceEventInit>uncheckedCast( JsPropertyMap.of() ).referenceSpace( referenceSpace );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "referenceSpace"
+  )
   @Nonnull
-  XRReferenceSpace getReferenceSpace();
+  XRReferenceSpace referenceSpace();
 
   @JsProperty
   void setReferenceSpace(@Nonnull XRReferenceSpace referenceSpace);
@@ -36,8 +38,10 @@ public interface XRReferenceSpaceEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  XRRigidTransform getTransform();
+  @JsProperty(
+      name = "transform"
+  )
+  XRRigidTransform transform();
 
   @JsProperty
   void setTransform(@Nonnull XRRigidTransform transform);

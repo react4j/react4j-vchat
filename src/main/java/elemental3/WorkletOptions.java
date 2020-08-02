@@ -22,8 +22,10 @@ public interface WorkletOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getCredentials();
+  @JsProperty(
+      name = "credentials"
+  )
+  String credentials();
 
   @JsProperty
   void setCredentials(@Nonnull String credentials);

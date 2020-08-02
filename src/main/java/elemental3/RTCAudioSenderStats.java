@@ -23,8 +23,10 @@ public interface RTCAudioSenderStats extends RTCAudioHandlerStats {
     return Js.<RTCAudioSenderStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
-  @JsProperty
-  String getMediaSourceId();
+  @JsProperty(
+      name = "mediaSourceId"
+  )
+  String mediaSourceId();
 
   @JsProperty
   void setMediaSourceId(@Nonnull String mediaSourceId);
@@ -36,8 +38,10 @@ public interface RTCAudioSenderStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getEchoReturnLoss();
+  @JsProperty(
+      name = "echoReturnLoss"
+  )
+  double echoReturnLoss();
 
   @JsProperty
   void setEchoReturnLoss(double echoReturnLoss);
@@ -49,8 +53,10 @@ public interface RTCAudioSenderStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getEchoReturnLossEnhancement();
+  @JsProperty(
+      name = "echoReturnLossEnhancement"
+  )
+  double echoReturnLossEnhancement();
 
   @JsProperty
   void setEchoReturnLossEnhancement(double echoReturnLossEnhancement);
@@ -62,8 +68,10 @@ public interface RTCAudioSenderStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getTotalSamplesSent();
+  @JsProperty(
+      name = "totalSamplesSent"
+  )
+  int totalSamplesSent();
 
   @JsProperty
   void setTotalSamplesSent(int totalSamplesSent);

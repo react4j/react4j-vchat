@@ -24,8 +24,10 @@ public interface FetchEventInit extends ExtendableEventInit {
     return Js.<FetchEventInit>uncheckedCast( JsPropertyMap.of() ).request( request );
   }
 
-  @JsProperty
-  String getClientId();
+  @JsProperty(
+      name = "clientId"
+  )
+  String clientId();
 
   @JsProperty
   void setClientId(@Nonnull String clientId);
@@ -37,8 +39,10 @@ public interface FetchEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
-  Promise<Void> getHandled();
+  @JsProperty(
+      name = "handled"
+  )
+  Promise<Void> handled();
 
   @JsProperty
   void setHandled(@Nonnull Promise<Void> handled);
@@ -50,8 +54,10 @@ public interface FetchEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
-  Promise<Any> getPreloadResponse();
+  @JsProperty(
+      name = "preloadResponse"
+  )
+  Promise<Any> preloadResponse();
 
   @JsProperty
   void setPreloadResponse(@Nonnull Promise<Any> preloadResponse);
@@ -63,8 +69,10 @@ public interface FetchEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
-  String getReplacesClientId();
+  @JsProperty(
+      name = "replacesClientId"
+  )
+  String replacesClientId();
 
   @JsProperty
   void setReplacesClientId(@Nonnull String replacesClientId);
@@ -76,9 +84,11 @@ public interface FetchEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "request"
+  )
   @Nonnull
-  Request getRequest();
+  Request request();
 
   @JsProperty
   void setRequest(@Nonnull Request request);
@@ -90,8 +100,10 @@ public interface FetchEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
-  String getResultingClientId();
+  @JsProperty(
+      name = "resultingClientId"
+  )
+  String resultingClientId();
 
   @JsProperty
   void setResultingClientId(@Nonnull String resultingClientId);

@@ -23,8 +23,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return Js.<RTCAudioReceiverStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
-  @JsProperty
-  int getConcealedSamples();
+  @JsProperty(
+      name = "concealedSamples"
+  )
+  int concealedSamples();
 
   @JsProperty
   void setConcealedSamples(int concealedSamples);
@@ -36,8 +38,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getConcealmentEvents();
+  @JsProperty(
+      name = "concealmentEvents"
+  )
+  int concealmentEvents();
 
   @JsProperty
   void setConcealmentEvents(int concealmentEvents);
@@ -49,8 +53,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getEstimatedPlayoutTimestamp();
+  @JsProperty(
+      name = "estimatedPlayoutTimestamp"
+  )
+  double estimatedPlayoutTimestamp();
 
   @JsProperty
   void setEstimatedPlayoutTimestamp(double estimatedPlayoutTimestamp);
@@ -62,8 +68,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getInsertedSamplesForDeceleration();
+  @JsProperty(
+      name = "insertedSamplesForDeceleration"
+  )
+  int insertedSamplesForDeceleration();
 
   @JsProperty
   void setInsertedSamplesForDeceleration(int insertedSamplesForDeceleration);
@@ -76,8 +84,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getJitterBufferDelay();
+  @JsProperty(
+      name = "jitterBufferDelay"
+  )
+  double jitterBufferDelay();
 
   @JsProperty
   void setJitterBufferDelay(double jitterBufferDelay);
@@ -89,8 +99,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getJitterBufferEmittedCount();
+  @JsProperty(
+      name = "jitterBufferEmittedCount"
+  )
+  int jitterBufferEmittedCount();
 
   @JsProperty
   void setJitterBufferEmittedCount(int jitterBufferEmittedCount);
@@ -102,8 +114,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getRemovedSamplesForAcceleration();
+  @JsProperty(
+      name = "removedSamplesForAcceleration"
+  )
+  int removedSamplesForAcceleration();
 
   @JsProperty
   void setRemovedSamplesForAcceleration(int removedSamplesForAcceleration);
@@ -116,8 +130,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getSilentConcealedSamples();
+  @JsProperty(
+      name = "silentConcealedSamples"
+  )
+  int silentConcealedSamples();
 
   @JsProperty
   void setSilentConcealedSamples(int silentConcealedSamples);
@@ -129,8 +145,10 @@ public interface RTCAudioReceiverStats extends RTCAudioHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getTotalSamplesReceived();
+  @JsProperty(
+      name = "totalSamplesReceived"
+  )
+  int totalSamplesReceived();
 
   @JsProperty
   void setTotalSamplesReceived(int totalSamplesReceived);

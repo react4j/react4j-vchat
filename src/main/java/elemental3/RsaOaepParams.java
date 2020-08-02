@@ -33,8 +33,10 @@ public interface RsaOaepParams extends Algorithm {
     return Js.<RsaOaepParams>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  BufferSource getLabel();
+  @JsProperty(
+      name = "label"
+  )
+  BufferSource label();
 
   @JsProperty
   void setLabel(@Nonnull BufferSource label);

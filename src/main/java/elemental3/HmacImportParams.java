@@ -35,9 +35,11 @@ public interface HmacImportParams extends Algorithm {
     return Js.<HmacImportParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "hash"
+  )
   @Nonnull
-  AlgorithmIdentifier getHash();
+  AlgorithmIdentifier hash();
 
   @JsProperty
   void setHash(@Nonnull AlgorithmIdentifier hash);
@@ -73,8 +75,10 @@ public interface HmacImportParams extends Algorithm {
     return this;
   }
 
-  @JsProperty
-  int getLength();
+  @JsProperty(
+      name = "length"
+  )
+  int length();
 
   @JsProperty
   void setLength(int length);

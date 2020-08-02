@@ -24,8 +24,10 @@ public interface RTCRtpTransceiverStats extends RTCStats {
     return Js.<RTCRtpTransceiverStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).receiverId( receiverId ).senderId( senderId );
   }
 
-  @JsProperty
-  String getMid();
+  @JsProperty(
+      name = "mid"
+  )
+  String mid();
 
   @JsProperty
   void setMid(@Nonnull String mid);
@@ -37,9 +39,11 @@ public interface RTCRtpTransceiverStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "receiverId"
+  )
   @Nonnull
-  String getReceiverId();
+  String receiverId();
 
   @JsProperty
   void setReceiverId(@Nonnull String receiverId);
@@ -51,9 +55,11 @@ public interface RTCRtpTransceiverStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "senderId"
+  )
   @Nonnull
-  String getSenderId();
+  String senderId();
 
   @JsProperty
   void setSenderId(@Nonnull String senderId);

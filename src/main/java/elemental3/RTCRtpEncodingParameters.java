@@ -22,8 +22,10 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isActive();
+  @JsProperty(
+      name = "active"
+  )
+  boolean active();
 
   @JsProperty
   void setActive(boolean active);
@@ -35,8 +37,10 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
     return this;
   }
 
-  @JsProperty
-  int getMaxBitrate();
+  @JsProperty(
+      name = "maxBitrate"
+  )
+  int maxBitrate();
 
   @JsProperty
   void setMaxBitrate(int maxBitrate);
@@ -48,8 +52,10 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
     return this;
   }
 
-  @JsProperty
-  double getScaleResolutionDownBy();
+  @JsProperty(
+      name = "scaleResolutionDownBy"
+  )
+  double scaleResolutionDownBy();
 
   @JsProperty
   void setScaleResolutionDownBy(double scaleResolutionDownBy);
@@ -61,8 +67,10 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
     return this;
   }
 
-  @JsProperty
-  String getNetworkPriority();
+  @JsProperty(
+      name = "networkPriority"
+  )
+  String networkPriority();
 
   @JsProperty
   void setNetworkPriority(@Nonnull String networkPriority);
@@ -74,8 +82,10 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
     return this;
   }
 
-  @JsProperty
-  String getPriority();
+  @JsProperty(
+      name = "priority"
+  )
+  String priority();
 
   @JsProperty
   void setPriority(@Nonnull String priority);

@@ -23,8 +23,10 @@ public interface RTCDataChannelStats extends RTCStats {
     return Js.<RTCDataChannelStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).state( state ).transportId( transportId );
   }
 
-  @JsProperty
-  int getBytesReceived();
+  @JsProperty(
+      name = "bytesReceived"
+  )
+  int bytesReceived();
 
   @JsProperty
   void setBytesReceived(int bytesReceived);
@@ -36,8 +38,10 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getBytesSent();
+  @JsProperty(
+      name = "bytesSent"
+  )
+  int bytesSent();
 
   @JsProperty
   void setBytesSent(int bytesSent);
@@ -49,8 +53,10 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getDataChannelIdentifier();
+  @JsProperty(
+      name = "dataChannelIdentifier"
+  )
+  int dataChannelIdentifier();
 
   @JsProperty
   void setDataChannelIdentifier(int dataChannelIdentifier);
@@ -62,8 +68,10 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getLabel();
+  @JsProperty(
+      name = "label"
+  )
+  String label();
 
   @JsProperty
   void setLabel(@Nonnull String label);
@@ -75,8 +83,10 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getMessagesReceived();
+  @JsProperty(
+      name = "messagesReceived"
+  )
+  int messagesReceived();
 
   @JsProperty
   void setMessagesReceived(int messagesReceived);
@@ -88,8 +98,10 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getMessagesSent();
+  @JsProperty(
+      name = "messagesSent"
+  )
+  int messagesSent();
 
   @JsProperty
   void setMessagesSent(int messagesSent);
@@ -101,8 +113,10 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getProtocol();
+  @JsProperty(
+      name = "protocol"
+  )
+  String protocol();
 
   @JsProperty
   void setProtocol(@Nonnull String protocol);
@@ -114,9 +128,11 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "state"
+  )
   @Nonnull
-  String getState();
+  String state();
 
   @JsProperty
   void setState(@Nonnull String state);
@@ -128,9 +144,11 @@ public interface RTCDataChannelStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "transportId"
+  )
   @Nonnull
-  String getTransportId();
+  String transportId();
 
   @JsProperty
   void setTransportId(@Nonnull String transportId);

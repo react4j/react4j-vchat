@@ -22,8 +22,10 @@ public interface GainOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  float getGain();
+  @JsProperty(
+      name = "gain"
+  )
+  float gain();
 
   @JsProperty
   void setGain(float gain);

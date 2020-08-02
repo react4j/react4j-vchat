@@ -22,9 +22,11 @@ public interface BlobEventInit {
     return Js.<BlobEventInit>uncheckedCast( JsPropertyMap.of() ).data( data );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "data"
+  )
   @Nonnull
-  Blob getData();
+  Blob data();
 
   @JsProperty
   void setData(@Nonnull Blob data);
@@ -36,8 +38,10 @@ public interface BlobEventInit {
     return this;
   }
 
-  @JsProperty
-  double getTimecode();
+  @JsProperty(
+      name = "timecode"
+  )
+  double timecode();
 
   @JsProperty
   void setTimecode(double timecode);

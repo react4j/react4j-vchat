@@ -22,9 +22,11 @@ public interface EcKeyImportParams extends Algorithm {
     return Js.<EcKeyImportParams>uncheckedCast( JsPropertyMap.of() ).name( name ).namedCurve( namedCurve );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "namedCurve"
+  )
   @Nonnull
-  String getNamedCurve();
+  String namedCurve();
 
   @JsProperty
   void setNamedCurve(@Nonnull String namedCurve);

@@ -23,8 +23,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return Js.<RTCOutboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
-  @JsProperty
-  double getAverageRtcpInterval();
+  @JsProperty(
+      name = "averageRtcpInterval"
+  )
+  double averageRtcpInterval();
 
   @JsProperty
   void setAverageRtcpInterval(double averageRtcpInterval);
@@ -36,8 +38,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getBytesDiscardedOnSend();
+  @JsProperty(
+      name = "bytesDiscardedOnSend"
+  )
+  int bytesDiscardedOnSend();
 
   @JsProperty
   void setBytesDiscardedOnSend(int bytesDiscardedOnSend);
@@ -49,8 +53,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getEncoderImplementation();
+  @JsProperty(
+      name = "encoderImplementation"
+  )
+  String encoderImplementation();
 
   @JsProperty
   void setEncoderImplementation(@Nonnull String encoderImplementation);
@@ -63,8 +69,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFecPacketsSent();
+  @JsProperty(
+      name = "fecPacketsSent"
+  )
+  int fecPacketsSent();
 
   @JsProperty
   void setFecPacketsSent(int fecPacketsSent);
@@ -76,8 +84,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFirCount();
+  @JsProperty(
+      name = "firCount"
+  )
+  int firCount();
 
   @JsProperty
   void setFirCount(int firCount);
@@ -89,8 +99,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFrameBitDepth();
+  @JsProperty(
+      name = "frameBitDepth"
+  )
+  int frameBitDepth();
 
   @JsProperty
   void setFrameBitDepth(int frameBitDepth);
@@ -102,8 +114,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFrameHeight();
+  @JsProperty(
+      name = "frameHeight"
+  )
+  int frameHeight();
 
   @JsProperty
   void setFrameHeight(int frameHeight);
@@ -115,8 +129,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFrameWidth();
+  @JsProperty(
+      name = "frameWidth"
+  )
+  int frameWidth();
 
   @JsProperty
   void setFrameWidth(int frameWidth);
@@ -128,8 +144,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesDiscardedOnSend();
+  @JsProperty(
+      name = "framesDiscardedOnSend"
+  )
+  int framesDiscardedOnSend();
 
   @JsProperty
   void setFramesDiscardedOnSend(int framesDiscardedOnSend);
@@ -141,8 +159,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesEncoded();
+  @JsProperty(
+      name = "framesEncoded"
+  )
+  int framesEncoded();
 
   @JsProperty
   void setFramesEncoded(int framesEncoded);
@@ -154,8 +174,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getFramesPerSecond();
+  @JsProperty(
+      name = "framesPerSecond"
+  )
+  double framesPerSecond();
 
   @JsProperty
   void setFramesPerSecond(double framesPerSecond);
@@ -167,8 +189,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesSent();
+  @JsProperty(
+      name = "framesSent"
+  )
+  int framesSent();
 
   @JsProperty
   void setFramesSent(int framesSent);
@@ -180,8 +204,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getHeaderBytesSent();
+  @JsProperty(
+      name = "headerBytesSent"
+  )
+  int headerBytesSent();
 
   @JsProperty
   void setHeaderBytesSent(int headerBytesSent);
@@ -193,8 +219,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getHugeFramesSent();
+  @JsProperty(
+      name = "hugeFramesSent"
+  )
+  int hugeFramesSent();
 
   @JsProperty
   void setHugeFramesSent(int hugeFramesSent);
@@ -206,8 +234,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getKeyFramesEncoded();
+  @JsProperty(
+      name = "keyFramesEncoded"
+  )
+  int keyFramesEncoded();
 
   @JsProperty
   void setKeyFramesEncoded(int keyFramesEncoded);
@@ -219,8 +249,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getLastPacketSentTimestamp();
+  @JsProperty(
+      name = "lastPacketSentTimestamp"
+  )
+  double lastPacketSentTimestamp();
 
   @JsProperty
   void setLastPacketSentTimestamp(double lastPacketSentTimestamp);
@@ -232,8 +264,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getMediaSourceId();
+  @JsProperty(
+      name = "mediaSourceId"
+  )
+  String mediaSourceId();
 
   @JsProperty
   void setMediaSourceId(@Nonnull String mediaSourceId);
@@ -245,8 +279,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getNackCount();
+  @JsProperty(
+      name = "nackCount"
+  )
+  int nackCount();
 
   @JsProperty
   void setNackCount(int nackCount);
@@ -258,8 +294,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsDiscardedOnSend();
+  @JsProperty(
+      name = "packetsDiscardedOnSend"
+  )
+  int packetsDiscardedOnSend();
 
   @JsProperty
   void setPacketsDiscardedOnSend(int packetsDiscardedOnSend);
@@ -271,8 +309,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getPerDscpPacketsSent();
+  @JsProperty(
+      name = "perDscpPacketsSent"
+  )
+  JsPropertyMap<Double> perDscpPacketsSent();
 
   @JsProperty
   void setPerDscpPacketsSent(@Nonnull JsPropertyMap<Double> perDscpPacketsSent);
@@ -285,8 +325,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPliCount();
+  @JsProperty(
+      name = "pliCount"
+  )
+  int pliCount();
 
   @JsProperty
   void setPliCount(int pliCount);
@@ -298,8 +340,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getQpSum();
+  @JsProperty(
+      name = "qpSum"
+  )
+  int qpSum();
 
   @JsProperty
   void setQpSum(int qpSum);
@@ -311,8 +355,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getQualityLimitationDurations();
+  @JsProperty(
+      name = "qualityLimitationDurations"
+  )
+  JsPropertyMap<Double> qualityLimitationDurations();
 
   @JsProperty
   void setQualityLimitationDurations(@Nonnull JsPropertyMap<Double> qualityLimitationDurations);
@@ -325,8 +371,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getQualityLimitationReason();
+  @JsProperty(
+      name = "qualityLimitationReason"
+  )
+  String qualityLimitationReason();
 
   @JsProperty
   void setQualityLimitationReason(@Nonnull String qualityLimitationReason);
@@ -339,8 +387,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getQualityLimitationResolutionChanges();
+  @JsProperty(
+      name = "qualityLimitationResolutionChanges"
+  )
+  int qualityLimitationResolutionChanges();
 
   @JsProperty
   void setQualityLimitationResolutionChanges(int qualityLimitationResolutionChanges);
@@ -353,8 +403,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getRemoteId();
+  @JsProperty(
+      name = "remoteId"
+  )
+  String remoteId();
 
   @JsProperty
   void setRemoteId(@Nonnull String remoteId);
@@ -366,8 +418,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getRetransmittedBytesSent();
+  @JsProperty(
+      name = "retransmittedBytesSent"
+  )
+  int retransmittedBytesSent();
 
   @JsProperty
   void setRetransmittedBytesSent(int retransmittedBytesSent);
@@ -379,8 +433,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getRetransmittedPacketsSent();
+  @JsProperty(
+      name = "retransmittedPacketsSent"
+  )
+  int retransmittedPacketsSent();
 
   @JsProperty
   void setRetransmittedPacketsSent(int retransmittedPacketsSent);
@@ -392,8 +448,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getRid();
+  @JsProperty(
+      name = "rid"
+  )
+  String rid();
 
   @JsProperty
   void setRid(@Nonnull String rid);
@@ -405,8 +463,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getRtxSsrc();
+  @JsProperty(
+      name = "rtxSsrc"
+  )
+  int rtxSsrc();
 
   @JsProperty
   void setRtxSsrc(int rtxSsrc);
@@ -418,8 +478,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getSamplesEncodedWithCelt();
+  @JsProperty(
+      name = "samplesEncodedWithCelt"
+  )
+  int samplesEncodedWithCelt();
 
   @JsProperty
   void setSamplesEncodedWithCelt(int samplesEncodedWithCelt);
@@ -431,8 +493,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getSamplesEncodedWithSilk();
+  @JsProperty(
+      name = "samplesEncodedWithSilk"
+  )
+  int samplesEncodedWithSilk();
 
   @JsProperty
   void setSamplesEncodedWithSilk(int samplesEncodedWithSilk);
@@ -444,8 +508,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getSenderId();
+  @JsProperty(
+      name = "senderId"
+  )
+  String senderId();
 
   @JsProperty
   void setSenderId(@Nonnull String senderId);
@@ -457,8 +523,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getSliCount();
+  @JsProperty(
+      name = "sliCount"
+  )
+  int sliCount();
 
   @JsProperty
   void setSliCount(int sliCount);
@@ -470,8 +538,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTargetBitrate();
+  @JsProperty(
+      name = "targetBitrate"
+  )
+  double targetBitrate();
 
   @JsProperty
   void setTargetBitrate(double targetBitrate);
@@ -483,8 +553,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalEncodeTime();
+  @JsProperty(
+      name = "totalEncodeTime"
+  )
+  double totalEncodeTime();
 
   @JsProperty
   void setTotalEncodeTime(double totalEncodeTime);
@@ -496,8 +568,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getTotalEncodedBytesTarget();
+  @JsProperty(
+      name = "totalEncodedBytesTarget"
+  )
+  int totalEncodedBytesTarget();
 
   @JsProperty
   void setTotalEncodedBytesTarget(int totalEncodedBytesTarget);
@@ -509,8 +583,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalPacketSendDelay();
+  @JsProperty(
+      name = "totalPacketSendDelay"
+  )
+  double totalPacketSendDelay();
 
   @JsProperty
   void setTotalPacketSendDelay(double totalPacketSendDelay);
@@ -522,8 +598,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getTotalSamplesSent();
+  @JsProperty(
+      name = "totalSamplesSent"
+  )
+  int totalSamplesSent();
 
   @JsProperty
   void setTotalSamplesSent(int totalSamplesSent);
@@ -535,8 +613,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  boolean isVoiceActivityFlag();
+  @JsProperty(
+      name = "voiceActivityFlag"
+  )
+  boolean voiceActivityFlag();
 
   @JsProperty
   void setVoiceActivityFlag(boolean voiceActivityFlag);
@@ -548,8 +628,10 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getTrackId();
+  @JsProperty(
+      name = "trackId"
+  )
+  String trackId();
 
   @JsProperty
   void setTrackId(@Nonnull String trackId);

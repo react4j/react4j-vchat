@@ -23,8 +23,10 @@ public interface MutationObserverInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<String> getAttributeFilter();
+  @JsProperty(
+      name = "attributeFilter"
+  )
+  JsArray<String> attributeFilter();
 
   @JsProperty
   void setAttributeFilter(@Nonnull JsArray<String> attributeFilter);
@@ -48,8 +50,10 @@ public interface MutationObserverInit {
     return this;
   }
 
-  @JsProperty
-  boolean isAttributeOldValue();
+  @JsProperty(
+      name = "attributeOldValue"
+  )
+  boolean attributeOldValue();
 
   @JsProperty
   void setAttributeOldValue(boolean attributeOldValue);
@@ -61,8 +65,10 @@ public interface MutationObserverInit {
     return this;
   }
 
-  @JsProperty
-  boolean isAttributes();
+  @JsProperty(
+      name = "attributes"
+  )
+  boolean attributes();
 
   @JsProperty
   void setAttributes(boolean attributes);
@@ -74,8 +80,10 @@ public interface MutationObserverInit {
     return this;
   }
 
-  @JsProperty
-  boolean isCharacterData();
+  @JsProperty(
+      name = "characterData"
+  )
+  boolean characterData();
 
   @JsProperty
   void setCharacterData(boolean characterData);
@@ -87,8 +95,10 @@ public interface MutationObserverInit {
     return this;
   }
 
-  @JsProperty
-  boolean isCharacterDataOldValue();
+  @JsProperty(
+      name = "characterDataOldValue"
+  )
+  boolean characterDataOldValue();
 
   @JsProperty
   void setCharacterDataOldValue(boolean characterDataOldValue);
@@ -100,8 +110,10 @@ public interface MutationObserverInit {
     return this;
   }
 
-  @JsProperty
-  boolean isChildList();
+  @JsProperty(
+      name = "childList"
+  )
+  boolean childList();
 
   @JsProperty
   void setChildList(boolean childList);
@@ -113,8 +125,10 @@ public interface MutationObserverInit {
     return this;
   }
 
-  @JsProperty
-  boolean isSubtree();
+  @JsProperty(
+      name = "subtree"
+  )
+  boolean subtree();
 
   @JsProperty
   void setSubtree(boolean subtree);

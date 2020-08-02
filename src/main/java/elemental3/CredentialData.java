@@ -22,9 +22,11 @@ public interface CredentialData {
     return Js.<CredentialData>uncheckedCast( JsPropertyMap.of() ).id( id );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "id"
+  )
   @Nonnull
-  String getId();
+  String id();
 
   @JsProperty
   void setId(@Nonnull String id);

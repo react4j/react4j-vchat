@@ -22,9 +22,11 @@ public interface RTCDataChannelEventInit extends EventInit {
     return Js.<RTCDataChannelEventInit>uncheckedCast( JsPropertyMap.of() ).channel( channel );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "channel"
+  )
   @Nonnull
-  RTCDataChannel getChannel();
+  RTCDataChannel channel();
 
   @JsProperty
   void setChannel(@Nonnull RTCDataChannel channel);

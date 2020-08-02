@@ -23,8 +23,10 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<MediaTrackConstraintSet> getAdvanced();
+  @JsProperty(
+      name = "advanced"
+  )
+  JsArray<MediaTrackConstraintSet> advanced();
 
   @JsProperty
   void setAdvanced(@Nonnull JsArray<MediaTrackConstraintSet> advanced);

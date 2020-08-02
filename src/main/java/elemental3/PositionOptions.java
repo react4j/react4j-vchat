@@ -22,8 +22,10 @@ public interface PositionOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isEnableHighAccuracy();
+  @JsProperty(
+      name = "enableHighAccuracy"
+  )
+  boolean enableHighAccuracy();
 
   @JsProperty
   void setEnableHighAccuracy(boolean enableHighAccuracy);
@@ -35,8 +37,10 @@ public interface PositionOptions {
     return this;
   }
 
-  @JsProperty
-  int getMaximumAge();
+  @JsProperty(
+      name = "maximumAge"
+  )
+  int maximumAge();
 
   @JsProperty
   void setMaximumAge(int maximumAge);
@@ -48,8 +52,10 @@ public interface PositionOptions {
     return this;
   }
 
-  @JsProperty
-  int getTimeout();
+  @JsProperty(
+      name = "timeout"
+  )
+  int timeout();
 
   @JsProperty
   void setTimeout(int timeout);

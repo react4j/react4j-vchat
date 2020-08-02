@@ -23,8 +23,10 @@ public interface EventModifierInit extends UIEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAltKey();
+  @JsProperty(
+      name = "altKey"
+  )
+  boolean altKey();
 
   @JsProperty
   void setAltKey(boolean altKey);
@@ -36,8 +38,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isCtrlKey();
+  @JsProperty(
+      name = "ctrlKey"
+  )
+  boolean ctrlKey();
 
   @JsProperty
   void setCtrlKey(boolean ctrlKey);
@@ -49,8 +53,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isMetaKey();
+  @JsProperty(
+      name = "metaKey"
+  )
+  boolean metaKey();
 
   @JsProperty
   void setMetaKey(boolean metaKey);
@@ -62,8 +68,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierAltGraph();
+  @JsProperty(
+      name = "modifierAltGraph"
+  )
+  boolean modifierAltGraph();
 
   @JsProperty
   void setModifierAltGraph(boolean modifierAltGraph);
@@ -75,8 +83,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierCapsLock();
+  @JsProperty(
+      name = "modifierCapsLock"
+  )
+  boolean modifierCapsLock();
 
   @JsProperty
   void setModifierCapsLock(boolean modifierCapsLock);
@@ -88,8 +98,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierFn();
+  @JsProperty(
+      name = "modifierFn"
+  )
+  boolean modifierFn();
 
   @JsProperty
   void setModifierFn(boolean modifierFn);
@@ -101,8 +113,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierFnLock();
+  @JsProperty(
+      name = "modifierFnLock"
+  )
+  boolean modifierFnLock();
 
   @JsProperty
   void setModifierFnLock(boolean modifierFnLock);
@@ -114,8 +128,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierHyper();
+  @JsProperty(
+      name = "modifierHyper"
+  )
+  boolean modifierHyper();
 
   @JsProperty
   void setModifierHyper(boolean modifierHyper);
@@ -127,8 +143,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierNumLock();
+  @JsProperty(
+      name = "modifierNumLock"
+  )
+  boolean modifierNumLock();
 
   @JsProperty
   void setModifierNumLock(boolean modifierNumLock);
@@ -140,8 +158,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierScrollLock();
+  @JsProperty(
+      name = "modifierScrollLock"
+  )
+  boolean modifierScrollLock();
 
   @JsProperty
   void setModifierScrollLock(boolean modifierScrollLock);
@@ -153,8 +173,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierSuper();
+  @JsProperty(
+      name = "modifierSuper"
+  )
+  boolean modifierSuper();
 
   @JsProperty
   void setModifierSuper(boolean modifierSuper);
@@ -166,8 +188,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierSymbol();
+  @JsProperty(
+      name = "modifierSymbol"
+  )
+  boolean modifierSymbol();
 
   @JsProperty
   void setModifierSymbol(boolean modifierSymbol);
@@ -179,8 +203,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isModifierSymbolLock();
+  @JsProperty(
+      name = "modifierSymbolLock"
+  )
+  boolean modifierSymbolLock();
 
   @JsProperty
   void setModifierSymbolLock(boolean modifierSymbolLock);
@@ -192,8 +218,10 @@ public interface EventModifierInit extends UIEventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isShiftKey();
+  @JsProperty(
+      name = "shiftKey"
+  )
+  boolean shiftKey();
 
   @JsProperty
   void setShiftKey(boolean shiftKey);

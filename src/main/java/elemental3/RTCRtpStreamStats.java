@@ -23,8 +23,10 @@ public interface RTCRtpStreamStats extends RTCStats {
     return Js.<RTCRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
-  @JsProperty
-  String getCodecId();
+  @JsProperty(
+      name = "codecId"
+  )
+  String codecId();
 
   @JsProperty
   void setCodecId(@Nonnull String codecId);
@@ -36,9 +38,11 @@ public interface RTCRtpStreamStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "kind"
+  )
   @Nonnull
-  String getKind();
+  String kind();
 
   @JsProperty
   void setKind(@Nonnull String kind);
@@ -50,8 +54,10 @@ public interface RTCRtpStreamStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getSsrc();
+  @JsProperty(
+      name = "ssrc"
+  )
+  int ssrc();
 
   @JsProperty
   void setSsrc(int ssrc);
@@ -63,8 +69,10 @@ public interface RTCRtpStreamStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getTransportId();
+  @JsProperty(
+      name = "transportId"
+  )
+  String transportId();
 
   @JsProperty
   void setTransportId(@Nonnull String transportId);
@@ -76,8 +84,10 @@ public interface RTCRtpStreamStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getAverageRTCPInterval();
+  @JsProperty(
+      name = "averageRTCPInterval"
+  )
+  double averageRTCPInterval();
 
   @JsProperty
   void setAverageRTCPInterval(double averageRTCPInterval);
@@ -89,8 +99,10 @@ public interface RTCRtpStreamStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getMediaType();
+  @JsProperty(
+      name = "mediaType"
+  )
+  String mediaType();
 
   @JsProperty
   void setMediaType(@Nonnull String mediaType);

@@ -23,8 +23,10 @@ public interface ConstrainDOMStringParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  StringOrStringArrayUnion getExact();
+  @JsProperty(
+      name = "exact"
+  )
+  StringOrStringArrayUnion exact();
 
   @JsProperty
   void setExact(@Nonnull StringOrStringArrayUnion exact);
@@ -65,8 +67,10 @@ public interface ConstrainDOMStringParameters {
     return this;
   }
 
-  @JsProperty
-  StringOrStringArrayUnion getIdeal();
+  @JsProperty(
+      name = "ideal"
+  )
+  StringOrStringArrayUnion ideal();
 
   @JsProperty
   void setIdeal(@Nonnull StringOrStringArrayUnion ideal);

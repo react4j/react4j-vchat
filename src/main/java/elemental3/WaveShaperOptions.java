@@ -23,8 +23,10 @@ public interface WaveShaperOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<Double> getCurve();
+  @JsProperty(
+      name = "curve"
+  )
+  JsArray<Double> curve();
 
   @JsProperty
   void setCurve(@Nonnull JsArray<Double> curve);
@@ -48,8 +50,10 @@ public interface WaveShaperOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getOversample();
+  @JsProperty(
+      name = "oversample"
+  )
+  String oversample();
 
   @JsProperty
   void setOversample(@Nonnull String oversample);

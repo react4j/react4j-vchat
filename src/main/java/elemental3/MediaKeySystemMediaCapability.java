@@ -22,8 +22,10 @@ public interface MediaKeySystemMediaCapability {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getContentType();
+  @JsProperty(
+      name = "contentType"
+  )
+  String contentType();
 
   @JsProperty
   void setContentType(@Nonnull String contentType);
@@ -35,8 +37,10 @@ public interface MediaKeySystemMediaCapability {
     return this;
   }
 
-  @JsProperty
-  String getRobustness();
+  @JsProperty(
+      name = "robustness"
+  )
+  String robustness();
 
   @JsProperty
   void setRobustness(@Nonnull String robustness);

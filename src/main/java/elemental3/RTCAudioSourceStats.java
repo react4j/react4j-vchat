@@ -24,8 +24,10 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
     return Js.<RTCAudioSourceStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).trackIdentifier( trackIdentifier );
   }
 
-  @JsProperty
-  double getAudioLevel();
+  @JsProperty(
+      name = "audioLevel"
+  )
+  double audioLevel();
 
   @JsProperty
   void setAudioLevel(double audioLevel);
@@ -37,8 +39,10 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  double getEchoReturnLoss();
+  @JsProperty(
+      name = "echoReturnLoss"
+  )
+  double echoReturnLoss();
 
   @JsProperty
   void setEchoReturnLoss(double echoReturnLoss);
@@ -50,8 +54,10 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  double getEchoReturnLossEnhancement();
+  @JsProperty(
+      name = "echoReturnLossEnhancement"
+  )
+  double echoReturnLossEnhancement();
 
   @JsProperty
   void setEchoReturnLossEnhancement(double echoReturnLossEnhancement);
@@ -63,8 +69,10 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalAudioEnergy();
+  @JsProperty(
+      name = "totalAudioEnergy"
+  )
+  double totalAudioEnergy();
 
   @JsProperty
   void setTotalAudioEnergy(double totalAudioEnergy);
@@ -76,8 +84,10 @@ public interface RTCAudioSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalSamplesDuration();
+  @JsProperty(
+      name = "totalSamplesDuration"
+  )
+  double totalSamplesDuration();
 
   @JsProperty
   void setTotalSamplesDuration(double totalSamplesDuration);

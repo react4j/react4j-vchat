@@ -22,8 +22,10 @@ public interface ValidityStateFlags {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isBadInput();
+  @JsProperty(
+      name = "badInput"
+  )
+  boolean badInput();
 
   @JsProperty
   void setBadInput(boolean badInput);
@@ -35,8 +37,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isCustomError();
+  @JsProperty(
+      name = "customError"
+  )
+  boolean customError();
 
   @JsProperty
   void setCustomError(boolean customError);
@@ -48,8 +52,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isPatternMismatch();
+  @JsProperty(
+      name = "patternMismatch"
+  )
+  boolean patternMismatch();
 
   @JsProperty
   void setPatternMismatch(boolean patternMismatch);
@@ -61,8 +67,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isRangeOverflow();
+  @JsProperty(
+      name = "rangeOverflow"
+  )
+  boolean rangeOverflow();
 
   @JsProperty
   void setRangeOverflow(boolean rangeOverflow);
@@ -74,8 +82,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isRangeUnderflow();
+  @JsProperty(
+      name = "rangeUnderflow"
+  )
+  boolean rangeUnderflow();
 
   @JsProperty
   void setRangeUnderflow(boolean rangeUnderflow);
@@ -87,8 +97,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isStepMismatch();
+  @JsProperty(
+      name = "stepMismatch"
+  )
+  boolean stepMismatch();
 
   @JsProperty
   void setStepMismatch(boolean stepMismatch);
@@ -100,8 +112,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isTooLong();
+  @JsProperty(
+      name = "tooLong"
+  )
+  boolean tooLong();
 
   @JsProperty
   void setTooLong(boolean tooLong);
@@ -113,8 +127,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isTooShort();
+  @JsProperty(
+      name = "tooShort"
+  )
+  boolean tooShort();
 
   @JsProperty
   void setTooShort(boolean tooShort);
@@ -126,8 +142,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isTypeMismatch();
+  @JsProperty(
+      name = "typeMismatch"
+  )
+  boolean typeMismatch();
 
   @JsProperty
   void setTypeMismatch(boolean typeMismatch);
@@ -139,8 +157,10 @@ public interface ValidityStateFlags {
     return this;
   }
 
-  @JsProperty
-  boolean isValueMissing();
+  @JsProperty(
+      name = "valueMissing"
+  )
+  boolean valueMissing();
 
   @JsProperty
   void setValueMissing(boolean valueMissing);

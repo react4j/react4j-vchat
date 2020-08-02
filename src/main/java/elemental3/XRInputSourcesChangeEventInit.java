@@ -24,9 +24,11 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
     return Js.<XRInputSourcesChangeEventInit>uncheckedCast( JsPropertyMap.of() ).added( added ).removed( removed ).session( session );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "added"
+  )
   @Nonnull
-  JsArray<XRInputSource> getAdded();
+  JsArray<XRInputSource> added();
 
   @JsProperty
   void setAdded(@Nonnull JsArray<XRInputSource> added);
@@ -38,9 +40,11 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "removed"
+  )
   @Nonnull
-  JsArray<XRInputSource> getRemoved();
+  JsArray<XRInputSource> removed();
 
   @JsProperty
   void setRemoved(@Nonnull JsArray<XRInputSource> removed);
@@ -52,9 +56,11 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "session"
+  )
   @Nonnull
-  XRSession getSession();
+  XRSession session();
 
   @JsProperty
   void setSession(@Nonnull XRSession session);

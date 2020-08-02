@@ -22,9 +22,11 @@ public interface XRSessionEventInit extends EventInit {
     return Js.<XRSessionEventInit>uncheckedCast( JsPropertyMap.of() ).session( session );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "session"
+  )
   @Nonnull
-  XRSession getSession();
+  XRSession session();
 
   @JsProperty
   void setSession(@Nonnull XRSession session);

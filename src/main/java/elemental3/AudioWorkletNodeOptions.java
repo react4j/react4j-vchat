@@ -23,8 +23,10 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getNumberOfInputs();
+  @JsProperty(
+      name = "numberOfInputs"
+  )
+  int numberOfInputs();
 
   @JsProperty
   void setNumberOfInputs(int numberOfInputs);
@@ -36,8 +38,10 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  int getNumberOfOutputs();
+  @JsProperty(
+      name = "numberOfOutputs"
+  )
+  int numberOfOutputs();
 
   @JsProperty
   void setNumberOfOutputs(int numberOfOutputs);
@@ -49,8 +53,10 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getOutputChannelCount();
+  @JsProperty(
+      name = "outputChannelCount"
+  )
+  JsArray<Double> outputChannelCount();
 
   @JsProperty
   void setOutputChannelCount(@Nonnull JsArray<Double> outputChannelCount);
@@ -75,8 +81,10 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getParameterData();
+  @JsProperty(
+      name = "parameterData"
+  )
+  JsPropertyMap<Double> parameterData();
 
   @JsProperty
   void setParameterData(@Nonnull JsPropertyMap<Double> parameterData);
@@ -89,8 +97,10 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  Object getProcessorOptions();
+  @JsProperty(
+      name = "processorOptions"
+  )
+  Object processorOptions();
 
   @JsProperty
   void setProcessorOptions(@Nonnull Object processorOptions);

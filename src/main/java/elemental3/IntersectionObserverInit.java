@@ -24,9 +24,11 @@ public interface IntersectionObserverInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "root"
+  )
   @Nullable
-  Element getRoot();
+  Element root();
 
   @JsProperty
   void setRoot(@Nullable Element root);
@@ -38,8 +40,10 @@ public interface IntersectionObserverInit {
     return this;
   }
 
-  @JsProperty
-  String getRootMargin();
+  @JsProperty(
+      name = "rootMargin"
+  )
+  String rootMargin();
 
   @JsProperty
   void setRootMargin(@Nonnull String rootMargin);
@@ -51,8 +55,10 @@ public interface IntersectionObserverInit {
     return this;
   }
 
-  @JsProperty
-  DoubleOrDoubleArrayUnion getThreshold();
+  @JsProperty(
+      name = "threshold"
+  )
+  DoubleOrDoubleArrayUnion threshold();
 
   @JsProperty
   void setThreshold(@Nonnull DoubleOrDoubleArrayUnion threshold);

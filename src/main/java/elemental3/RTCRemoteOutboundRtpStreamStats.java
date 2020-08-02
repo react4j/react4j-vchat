@@ -23,8 +23,10 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return Js.<RTCRemoteOutboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
-  @JsProperty
-  String getLocalId();
+  @JsProperty(
+      name = "localId"
+  )
+  String localId();
 
   @JsProperty
   void setLocalId(@Nonnull String localId);
@@ -36,8 +38,10 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getRemoteTimestamp();
+  @JsProperty(
+      name = "remoteTimestamp"
+  )
+  double remoteTimestamp();
 
   @JsProperty
   void setRemoteTimestamp(double remoteTimestamp);
@@ -49,8 +53,10 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getReportsSent();
+  @JsProperty(
+      name = "reportsSent"
+  )
+  int reportsSent();
 
   @JsProperty
   void setReportsSent(int reportsSent);

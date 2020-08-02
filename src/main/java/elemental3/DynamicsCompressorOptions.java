@@ -22,8 +22,10 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  float getAttack();
+  @JsProperty(
+      name = "attack"
+  )
+  float attack();
 
   @JsProperty
   void setAttack(float attack);
@@ -35,8 +37,10 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getKnee();
+  @JsProperty(
+      name = "knee"
+  )
+  float knee();
 
   @JsProperty
   void setKnee(float knee);
@@ -48,8 +52,10 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getRatio();
+  @JsProperty(
+      name = "ratio"
+  )
+  float ratio();
 
   @JsProperty
   void setRatio(float ratio);
@@ -61,8 +67,10 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getRelease();
+  @JsProperty(
+      name = "release"
+  )
+  float release();
 
   @JsProperty
   void setRelease(float release);
@@ -74,8 +82,10 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getThreshold();
+  @JsProperty(
+      name = "threshold"
+  )
+  float threshold();
 
   @JsProperty
   void setThreshold(float threshold);

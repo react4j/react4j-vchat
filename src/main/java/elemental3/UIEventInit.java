@@ -23,8 +23,10 @@ public interface UIEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getDetail();
+  @JsProperty(
+      name = "detail"
+  )
+  int detail();
 
   @JsProperty
   void setDetail(int detail);
@@ -36,9 +38,11 @@ public interface UIEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "view"
+  )
   @Nullable
-  Window getView();
+  Window view();
 
   @JsProperty
   void setView(@Nullable Window view);

@@ -22,8 +22,10 @@ public interface ImageBitmapRenderingContextSettings {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAlpha();
+  @JsProperty(
+      name = "alpha"
+  )
+  boolean alpha();
 
   @JsProperty
   void setAlpha(boolean alpha);

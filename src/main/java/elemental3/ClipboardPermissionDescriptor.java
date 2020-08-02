@@ -22,8 +22,10 @@ public interface ClipboardPermissionDescriptor extends PermissionDescriptor {
     return Js.<ClipboardPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  boolean isAllowWithoutGesture();
+  @JsProperty(
+      name = "allowWithoutGesture"
+  )
+  boolean allowWithoutGesture();
 
   @JsProperty
   void setAllowWithoutGesture(boolean allowWithoutGesture);

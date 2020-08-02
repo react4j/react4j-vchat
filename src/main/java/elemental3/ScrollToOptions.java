@@ -22,8 +22,10 @@ public interface ScrollToOptions extends ScrollOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getLeft();
+  @JsProperty(
+      name = "left"
+  )
+  double left();
 
   @JsProperty
   void setLeft(double left);
@@ -35,8 +37,10 @@ public interface ScrollToOptions extends ScrollOptions {
     return this;
   }
 
-  @JsProperty
-  double getTop();
+  @JsProperty(
+      name = "top"
+  )
+  double top();
 
   @JsProperty
   void setTop(double top);

@@ -22,8 +22,10 @@ public interface RTCDTMFToneChangeEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getTone();
+  @JsProperty(
+      name = "tone"
+  )
+  String tone();
 
   @JsProperty
   void setTone(@Nonnull String tone);

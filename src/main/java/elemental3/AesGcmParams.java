@@ -105,8 +105,10 @@ public interface AesGcmParams extends Algorithm {
     return Js.<AesGcmParams>uncheckedCast( JsPropertyMap.of() ).name( name ).iv( iv );
   }
 
-  @JsProperty
-  BufferSource getAdditionalData();
+  @JsProperty(
+      name = "additionalData"
+  )
+  BufferSource additionalData();
 
   @JsProperty
   void setAdditionalData(@Nonnull BufferSource additionalData);
@@ -262,9 +264,11 @@ public interface AesGcmParams extends Algorithm {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "iv"
+  )
   @Nonnull
-  BufferSource getIv();
+  BufferSource iv();
 
   @JsProperty
   void setIv(@Nonnull BufferSource iv);
@@ -420,8 +424,10 @@ public interface AesGcmParams extends Algorithm {
     return this;
   }
 
-  @JsProperty
-  short getTagLength();
+  @JsProperty(
+      name = "tagLength"
+  )
+  short tagLength();
 
   @JsProperty
   void setTagLength(short tagLength);

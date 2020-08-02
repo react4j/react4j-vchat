@@ -22,8 +22,10 @@ public interface EventSourceInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isWithCredentials();
+  @JsProperty(
+      name = "withCredentials"
+  )
+  boolean withCredentials();
 
   @JsProperty
   void setWithCredentials(boolean withCredentials);

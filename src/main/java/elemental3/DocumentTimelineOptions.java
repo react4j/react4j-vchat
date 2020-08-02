@@ -22,8 +22,10 @@ public interface DocumentTimelineOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getOriginTime();
+  @JsProperty(
+      name = "originTime"
+  )
+  double originTime();
 
   @JsProperty
   void setOriginTime(double originTime);

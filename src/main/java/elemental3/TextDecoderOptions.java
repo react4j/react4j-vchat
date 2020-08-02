@@ -22,8 +22,10 @@ public interface TextDecoderOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isFatal();
+  @JsProperty(
+      name = "fatal"
+  )
+  boolean fatal();
 
   @JsProperty
   void setFatal(boolean fatal);
@@ -35,8 +37,10 @@ public interface TextDecoderOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isIgnoreBOM();
+  @JsProperty(
+      name = "ignoreBOM"
+  )
+  boolean ignoreBOM();
 
   @JsProperty
   void setIgnoreBOM(boolean ignoreBOM);

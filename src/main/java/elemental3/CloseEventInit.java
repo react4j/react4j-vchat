@@ -22,8 +22,10 @@ public interface CloseEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getCode();
+  @JsProperty(
+      name = "code"
+  )
+  int code();
 
   @JsProperty
   void setCode(int code);
@@ -35,8 +37,10 @@ public interface CloseEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getReason();
+  @JsProperty(
+      name = "reason"
+  )
+  String reason();
 
   @JsProperty
   void setReason(@Nonnull String reason);
@@ -48,8 +52,10 @@ public interface CloseEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isWasClean();
+  @JsProperty(
+      name = "wasClean"
+  )
+  boolean wasClean();
 
   @JsProperty
   void setWasClean(boolean wasClean);

@@ -22,8 +22,10 @@ public interface BlobPropertyBag {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getEndings();
+  @JsProperty(
+      name = "endings"
+  )
+  String endings();
 
   @JsProperty
   void setEndings(@Nonnull String endings);
@@ -35,8 +37,10 @@ public interface BlobPropertyBag {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

@@ -22,8 +22,10 @@ public interface OscillatorOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  float getDetune();
+  @JsProperty(
+      name = "detune"
+  )
+  float detune();
 
   @JsProperty
   void setDetune(float detune);
@@ -35,8 +37,10 @@ public interface OscillatorOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getFrequency();
+  @JsProperty(
+      name = "frequency"
+  )
+  float frequency();
 
   @JsProperty
   void setFrequency(float frequency);
@@ -48,8 +52,10 @@ public interface OscillatorOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  PeriodicWave getPeriodicWave();
+  @JsProperty(
+      name = "periodicWave"
+  )
+  PeriodicWave periodicWave();
 
   @JsProperty
   void setPeriodicWave(@Nonnull PeriodicWave periodicWave);
@@ -61,8 +67,10 @@ public interface OscillatorOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

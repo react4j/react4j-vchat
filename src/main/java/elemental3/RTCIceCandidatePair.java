@@ -22,8 +22,10 @@ public interface RTCIceCandidatePair {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  RTCIceCandidate getLocal();
+  @JsProperty(
+      name = "local"
+  )
+  RTCIceCandidate local();
 
   @JsProperty
   void setLocal(@Nonnull RTCIceCandidate local);
@@ -35,8 +37,10 @@ public interface RTCIceCandidatePair {
     return this;
   }
 
-  @JsProperty
-  RTCIceCandidate getRemote();
+  @JsProperty(
+      name = "remote"
+  )
+  RTCIceCandidate remote();
 
   @JsProperty
   void setRemote(@Nonnull RTCIceCandidate remote);

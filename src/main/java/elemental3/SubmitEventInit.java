@@ -23,9 +23,11 @@ public interface SubmitEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "submitter"
+  )
   @Nullable
-  HTMLElement getSubmitter();
+  HTMLElement submitter();
 
   @JsProperty
   void setSubmitter(@Nullable HTMLElement submitter);

@@ -23,8 +23,10 @@ public interface RTCVideoHandlerStats extends RTCMediaHandlerStats {
     return Js.<RTCVideoHandlerStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
-  @JsProperty
-  int getFrameHeight();
+  @JsProperty(
+      name = "frameHeight"
+  )
+  int frameHeight();
 
   @JsProperty
   void setFrameHeight(int frameHeight);
@@ -36,8 +38,10 @@ public interface RTCVideoHandlerStats extends RTCMediaHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getFrameWidth();
+  @JsProperty(
+      name = "frameWidth"
+  )
+  int frameWidth();
 
   @JsProperty
   void setFrameWidth(int frameWidth);
@@ -49,8 +53,10 @@ public interface RTCVideoHandlerStats extends RTCMediaHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getFramesPerSecond();
+  @JsProperty(
+      name = "framesPerSecond"
+  )
+  double framesPerSecond();
 
   @JsProperty
   void setFramesPerSecond(double framesPerSecond);

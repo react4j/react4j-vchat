@@ -22,8 +22,10 @@ public interface ShadowRootInit {
     return Js.<ShadowRootInit>uncheckedCast( JsPropertyMap.of() ).mode( mode );
   }
 
-  @JsProperty
-  boolean isDelegatesFocus();
+  @JsProperty(
+      name = "delegatesFocus"
+  )
+  boolean delegatesFocus();
 
   @JsProperty
   void setDelegatesFocus(boolean delegatesFocus);
@@ -35,9 +37,11 @@ public interface ShadowRootInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "mode"
+  )
   @Nonnull
-  String getMode();
+  String mode();
 
   @JsProperty
   void setMode(@Nonnull String mode);

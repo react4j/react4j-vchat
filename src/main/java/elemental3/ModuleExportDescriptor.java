@@ -22,9 +22,11 @@ public interface ModuleExportDescriptor {
     return Js.<ModuleExportDescriptor>uncheckedCast( JsPropertyMap.of() ).kind( kind ).name( name );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "kind"
+  )
   @Nonnull
-  String getKind();
+  String kind();
 
   @JsProperty
   void setKind(@Nonnull String kind);
@@ -36,9 +38,11 @@ public interface ModuleExportDescriptor {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "name"
+  )
   @Nonnull
-  String getName();
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);

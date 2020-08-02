@@ -22,8 +22,10 @@ public interface ProgressEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isLengthComputable();
+  @JsProperty(
+      name = "lengthComputable"
+  )
+  boolean lengthComputable();
 
   @JsProperty
   void setLengthComputable(boolean lengthComputable);
@@ -35,8 +37,10 @@ public interface ProgressEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  int getLoaded();
+  @JsProperty(
+      name = "loaded"
+  )
+  int loaded();
 
   @JsProperty
   void setLoaded(int loaded);
@@ -48,8 +52,10 @@ public interface ProgressEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  int getTotal();
+  @JsProperty(
+      name = "total"
+  )
+  int total();
 
   @JsProperty
   void setTotal(int total);

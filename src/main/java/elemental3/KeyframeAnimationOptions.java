@@ -22,8 +22,10 @@ public interface KeyframeAnimationOptions extends KeyframeEffectOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getId();
+  @JsProperty(
+      name = "id"
+  )
+  String id();
 
   @JsProperty
   void setId(@Nonnull String id);

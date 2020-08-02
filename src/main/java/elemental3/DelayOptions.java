@@ -22,8 +22,10 @@ public interface DelayOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getDelayTime();
+  @JsProperty(
+      name = "delayTime"
+  )
+  double delayTime();
 
   @JsProperty
   void setDelayTime(double delayTime);
@@ -35,8 +37,10 @@ public interface DelayOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getMaxDelayTime();
+  @JsProperty(
+      name = "maxDelayTime"
+  )
+  double maxDelayTime();
 
   @JsProperty
   void setMaxDelayTime(double maxDelayTime);

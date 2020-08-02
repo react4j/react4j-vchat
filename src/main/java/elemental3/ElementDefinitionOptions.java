@@ -22,8 +22,10 @@ public interface ElementDefinitionOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getExtends();
+  @JsProperty(
+      name = "extends"
+  )
+  String _extends();
 
   @JsProperty
   void setExtends(@Nonnull String _extends);

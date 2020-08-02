@@ -22,8 +22,10 @@ public interface RTCRtpHeaderExtensionCapability {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getUri();
+  @JsProperty(
+      name = "uri"
+  )
+  String uri();
 
   @JsProperty
   void setUri(@Nonnull String uri);

@@ -23,8 +23,10 @@ public interface PostMessageOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<Object> getTransfer();
+  @JsProperty(
+      name = "transfer"
+  )
+  JsArray<Object> transfer();
 
   @JsProperty
   void setTransfer(@Nonnull JsArray<Object> transfer);

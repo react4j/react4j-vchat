@@ -22,8 +22,10 @@ public interface NavigationPreloadState {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isEnabled();
+  @JsProperty(
+      name = "enabled"
+  )
+  boolean enabled();
 
   @JsProperty
   void setEnabled(boolean enabled);
@@ -35,8 +37,10 @@ public interface NavigationPreloadState {
     return this;
   }
 
-  @JsProperty
-  String getHeaderValue();
+  @JsProperty(
+      name = "headerValue"
+  )
+  String headerValue();
 
   @JsProperty
   void setHeaderValue(@Nonnull String headerValue);

@@ -22,8 +22,10 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getNumberOfOutputs();
+  @JsProperty(
+      name = "numberOfOutputs"
+  )
+  int numberOfOutputs();
 
   @JsProperty
   void setNumberOfOutputs(int numberOfOutputs);

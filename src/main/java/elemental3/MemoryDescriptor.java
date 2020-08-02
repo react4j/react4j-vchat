@@ -22,8 +22,10 @@ public interface MemoryDescriptor {
     return Js.<MemoryDescriptor>uncheckedCast( JsPropertyMap.of() ).initial( initial );
   }
 
-  @JsProperty
-  int getInitial();
+  @JsProperty(
+      name = "initial"
+  )
+  int initial();
 
   @JsProperty
   void setInitial(int initial);
@@ -35,8 +37,10 @@ public interface MemoryDescriptor {
     return this;
   }
 
-  @JsProperty
-  int getMaximum();
+  @JsProperty(
+      name = "maximum"
+  )
+  int maximum();
 
   @JsProperty
   void setMaximum(int maximum);

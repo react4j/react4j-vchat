@@ -23,8 +23,10 @@ public interface ResponseInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  HeadersInit getHeaders();
+  @JsProperty(
+      name = "headers"
+  )
+  HeadersInit headers();
 
   @JsProperty
   void setHeaders(@Nonnull HeadersInit headers);
@@ -74,8 +76,10 @@ public interface ResponseInit {
     return this;
   }
 
-  @JsProperty
-  int getStatus();
+  @JsProperty(
+      name = "status"
+  )
+  int status();
 
   @JsProperty
   void setStatus(int status);
@@ -87,8 +91,10 @@ public interface ResponseInit {
     return this;
   }
 
-  @JsProperty
-  String getStatusText();
+  @JsProperty(
+      name = "statusText"
+  )
+  String statusText();
 
   @JsProperty
   void setStatusText(@Nonnull String statusText);

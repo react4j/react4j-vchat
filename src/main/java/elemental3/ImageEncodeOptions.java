@@ -22,8 +22,10 @@ public interface ImageEncodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getQuality();
+  @JsProperty(
+      name = "quality"
+  )
+  double quality();
 
   @JsProperty
   void setQuality(double quality);
@@ -35,8 +37,10 @@ public interface ImageEncodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

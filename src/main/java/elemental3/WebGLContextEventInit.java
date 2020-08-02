@@ -22,8 +22,10 @@ public interface WebGLContextEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getStatusMessage();
+  @JsProperty(
+      name = "statusMessage"
+  )
+  String statusMessage();
 
   @JsProperty
   void setStatusMessage(@Nonnull String statusMessage);

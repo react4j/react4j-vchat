@@ -22,8 +22,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isIs2D();
+  @JsProperty(
+      name = "is2D"
+  )
+  boolean is2D();
 
   @JsProperty
   void setIs2D(boolean is2D);
@@ -35,8 +37,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM13();
+  @JsProperty(
+      name = "m13"
+  )
+  double m13();
 
   @JsProperty
   void setM13(double m13);
@@ -48,8 +52,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM14();
+  @JsProperty(
+      name = "m14"
+  )
+  double m14();
 
   @JsProperty
   void setM14(double m14);
@@ -61,8 +67,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM23();
+  @JsProperty(
+      name = "m23"
+  )
+  double m23();
 
   @JsProperty
   void setM23(double m23);
@@ -74,8 +82,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM24();
+  @JsProperty(
+      name = "m24"
+  )
+  double m24();
 
   @JsProperty
   void setM24(double m24);
@@ -87,8 +97,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM31();
+  @JsProperty(
+      name = "m31"
+  )
+  double m31();
 
   @JsProperty
   void setM31(double m31);
@@ -100,8 +112,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM32();
+  @JsProperty(
+      name = "m32"
+  )
+  double m32();
 
   @JsProperty
   void setM32(double m32);
@@ -113,8 +127,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM33();
+  @JsProperty(
+      name = "m33"
+  )
+  double m33();
 
   @JsProperty
   void setM33(double m33);
@@ -126,8 +142,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM34();
+  @JsProperty(
+      name = "m34"
+  )
+  double m34();
 
   @JsProperty
   void setM34(double m34);
@@ -139,8 +157,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM43();
+  @JsProperty(
+      name = "m43"
+  )
+  double m43();
 
   @JsProperty
   void setM43(double m43);
@@ -152,8 +172,10 @@ public interface DOMMatrixInit extends DOMMatrix2DInit {
     return this;
   }
 
-  @JsProperty
-  double getM44();
+  @JsProperty(
+      name = "m44"
+  )
+  double m44();
 
   @JsProperty
   void setM44(double m44);

@@ -24,8 +24,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAppid();
+  @JsProperty(
+      name = "appid"
+  )
+  boolean appid();
 
   @JsProperty
   void setAppid(boolean appid);
@@ -37,8 +39,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return this;
   }
 
-  @JsProperty
-  String getTxAuthSimple();
+  @JsProperty(
+      name = "txAuthSimple"
+  )
+  String txAuthSimple();
 
   @JsProperty
   void setTxAuthSimple(@Nonnull String txAuthSimple);
@@ -50,8 +54,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return this;
   }
 
-  @JsProperty
-  ArrayBuffer getTxAuthGeneric();
+  @JsProperty(
+      name = "txAuthGeneric"
+  )
+  ArrayBuffer txAuthGeneric();
 
   @JsProperty
   void setTxAuthGeneric(@Nonnull ArrayBuffer txAuthGeneric);
@@ -64,8 +70,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return this;
   }
 
-  @JsProperty
-  boolean isAuthnSel();
+  @JsProperty(
+      name = "authnSel"
+  )
+  boolean authnSel();
 
   @JsProperty
   void setAuthnSel(boolean authnSel);
@@ -77,8 +85,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getExts();
+  @JsProperty(
+      name = "exts"
+  )
+  JsArray<String> exts();
 
   @JsProperty
   void setExts(@Nonnull JsArray<String> exts);
@@ -102,8 +112,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return this;
   }
 
-  @JsProperty
-  ArrayBuffer getUvi();
+  @JsProperty(
+      name = "uvi"
+  )
+  ArrayBuffer uvi();
 
   @JsProperty
   void setUvi(@Nonnull ArrayBuffer uvi);
@@ -115,8 +127,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return this;
   }
 
-  @JsProperty
-  Coordinates getLoc();
+  @JsProperty(
+      name = "loc"
+  )
+  Coordinates loc();
 
   @JsProperty
   void setLoc(@Nonnull Coordinates loc);
@@ -128,8 +142,10 @@ public interface AuthenticationExtensionsClientOutputs {
     return this;
   }
 
-  @JsProperty
-  JsArray<JsArray<Double>> getUvm();
+  @JsProperty(
+      name = "uvm"
+  )
+  JsArray<JsArray<Double>> uvm();
 
   @JsProperty
   void setUvm(@Nonnull JsArray<JsArray<Double>> uvm);

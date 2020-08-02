@@ -22,8 +22,10 @@ public interface XRWebGLLayerInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAlpha();
+  @JsProperty(
+      name = "alpha"
+  )
+  boolean alpha();
 
   @JsProperty
   void setAlpha(boolean alpha);
@@ -35,8 +37,10 @@ public interface XRWebGLLayerInit {
     return this;
   }
 
-  @JsProperty
-  boolean isAntialias();
+  @JsProperty(
+      name = "antialias"
+  )
+  boolean antialias();
 
   @JsProperty
   void setAntialias(boolean antialias);
@@ -48,8 +52,10 @@ public interface XRWebGLLayerInit {
     return this;
   }
 
-  @JsProperty
-  boolean isDepth();
+  @JsProperty(
+      name = "depth"
+  )
+  boolean depth();
 
   @JsProperty
   void setDepth(boolean depth);
@@ -61,8 +67,10 @@ public interface XRWebGLLayerInit {
     return this;
   }
 
-  @JsProperty
-  double getFramebufferScaleFactor();
+  @JsProperty(
+      name = "framebufferScaleFactor"
+  )
+  double framebufferScaleFactor();
 
   @JsProperty
   void setFramebufferScaleFactor(double framebufferScaleFactor);
@@ -74,8 +82,10 @@ public interface XRWebGLLayerInit {
     return this;
   }
 
-  @JsProperty
-  boolean isIgnoreDepthValues();
+  @JsProperty(
+      name = "ignoreDepthValues"
+  )
+  boolean ignoreDepthValues();
 
   @JsProperty
   void setIgnoreDepthValues(boolean ignoreDepthValues);
@@ -87,8 +97,10 @@ public interface XRWebGLLayerInit {
     return this;
   }
 
-  @JsProperty
-  boolean isStencil();
+  @JsProperty(
+      name = "stencil"
+  )
+  boolean stencil();
 
   @JsProperty
   void setStencil(boolean stencil);

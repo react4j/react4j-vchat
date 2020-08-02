@@ -22,8 +22,10 @@ public interface FullscreenOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getNavigationUI();
+  @JsProperty(
+      name = "navigationUI"
+  )
+  String navigationUI();
 
   @JsProperty
   void setNavigationUI(@Nonnull String navigationUI);

@@ -23,8 +23,10 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<Double> getImag();
+  @JsProperty(
+      name = "imag"
+  )
+  JsArray<Double> imag();
 
   @JsProperty
   void setImag(@Nonnull JsArray<Double> imag);
@@ -48,8 +50,10 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getReal();
+  @JsProperty(
+      name = "real"
+  )
+  JsArray<Double> real();
 
   @JsProperty
   void setReal(@Nonnull JsArray<Double> real);

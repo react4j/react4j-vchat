@@ -24,9 +24,11 @@ public interface txAuthGenericArg {
     return Js.<txAuthGenericArg>uncheckedCast( JsPropertyMap.of() ).content( content ).contentType( contentType );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "content"
+  )
   @Nonnull
-  ArrayBuffer getContent();
+  ArrayBuffer content();
 
   @JsProperty
   void setContent(@Nonnull ArrayBuffer content);
@@ -38,9 +40,11 @@ public interface txAuthGenericArg {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "contentType"
+  )
   @Nonnull
-  String getContentType();
+  String contentType();
 
   @JsProperty
   void setContentType(@Nonnull String contentType);

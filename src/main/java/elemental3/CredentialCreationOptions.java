@@ -22,8 +22,10 @@ public interface CredentialCreationOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  AbortSignal getSignal();
+  @JsProperty(
+      name = "signal"
+  )
+  AbortSignal signal();
 
   @JsProperty
   void setSignal(@Nonnull AbortSignal signal);
@@ -35,8 +37,10 @@ public interface CredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
-  PasswordCredentialInit getPassword();
+  @JsProperty(
+      name = "password"
+  )
+  PasswordCredentialInit password();
 
   @JsProperty
   void setPassword(@Nonnull PasswordCredentialInit password);
@@ -72,8 +76,10 @@ public interface CredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
-  FederatedCredentialInit getFederated();
+  @JsProperty(
+      name = "federated"
+  )
+  FederatedCredentialInit federated();
 
   @JsProperty
   void setFederated(@Nonnull FederatedCredentialInit federated);
@@ -85,8 +91,10 @@ public interface CredentialCreationOptions {
     return this;
   }
 
-  @JsProperty
-  PublicKeyCredentialCreationOptions getPublicKey();
+  @JsProperty(
+      name = "publicKey"
+  )
+  PublicKeyCredentialCreationOptions publicKey();
 
   @JsProperty
   void setPublicKey(@Nonnull PublicKeyCredentialCreationOptions publicKey);

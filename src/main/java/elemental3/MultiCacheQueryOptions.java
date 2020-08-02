@@ -22,8 +22,10 @@ public interface MultiCacheQueryOptions extends CacheQueryOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getCacheName();
+  @JsProperty(
+      name = "cacheName"
+  )
+  String cacheName();
 
   @JsProperty
   void setCacheName(@Nonnull String cacheName);

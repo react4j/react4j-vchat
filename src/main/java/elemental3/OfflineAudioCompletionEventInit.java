@@ -22,9 +22,11 @@ public interface OfflineAudioCompletionEventInit extends EventInit {
     return Js.<OfflineAudioCompletionEventInit>uncheckedCast( JsPropertyMap.of() ).renderedBuffer( renderedBuffer );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "renderedBuffer"
+  )
   @Nonnull
-  AudioBuffer getRenderedBuffer();
+  AudioBuffer renderedBuffer();
 
   @JsProperty
   void setRenderedBuffer(@Nonnull AudioBuffer renderedBuffer);

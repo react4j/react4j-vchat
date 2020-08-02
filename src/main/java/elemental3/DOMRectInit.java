@@ -22,8 +22,10 @@ public interface DOMRectInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getHeight();
+  @JsProperty(
+      name = "height"
+  )
+  double height();
 
   @JsProperty
   void setHeight(double height);
@@ -35,8 +37,10 @@ public interface DOMRectInit {
     return this;
   }
 
-  @JsProperty
-  double getWidth();
+  @JsProperty(
+      name = "width"
+  )
+  double width();
 
   @JsProperty
   void setWidth(double width);
@@ -48,8 +52,10 @@ public interface DOMRectInit {
     return this;
   }
 
-  @JsProperty
-  double getX();
+  @JsProperty(
+      name = "x"
+  )
+  double x();
 
   @JsProperty
   void setX(double x);
@@ -61,8 +67,10 @@ public interface DOMRectInit {
     return this;
   }
 
-  @JsProperty
-  double getY();
+  @JsProperty(
+      name = "y"
+  )
+  double y();
 
   @JsProperty
   void setY(double y);

@@ -22,8 +22,10 @@ public interface CacheQueryOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isIgnoreMethod();
+  @JsProperty(
+      name = "ignoreMethod"
+  )
+  boolean ignoreMethod();
 
   @JsProperty
   void setIgnoreMethod(boolean ignoreMethod);
@@ -35,8 +37,10 @@ public interface CacheQueryOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isIgnoreSearch();
+  @JsProperty(
+      name = "ignoreSearch"
+  )
+  boolean ignoreSearch();
 
   @JsProperty
   void setIgnoreSearch(boolean ignoreSearch);
@@ -48,8 +52,10 @@ public interface CacheQueryOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isIgnoreVary();
+  @JsProperty(
+      name = "ignoreVary"
+  )
+  boolean ignoreVary();
 
   @JsProperty
   void setIgnoreVary(boolean ignoreVary);

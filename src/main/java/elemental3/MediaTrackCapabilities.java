@@ -23,8 +23,10 @@ public interface MediaTrackCapabilities {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  DoubleRange getAspectRatio();
+  @JsProperty(
+      name = "aspectRatio"
+  )
+  DoubleRange aspectRatio();
 
   @JsProperty
   void setAspectRatio(@Nonnull DoubleRange aspectRatio);
@@ -36,8 +38,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  JsArray<Boolean> getAutoGainControl();
+  @JsProperty(
+      name = "autoGainControl"
+  )
+  JsArray<Boolean> autoGainControl();
 
   @JsProperty
   void setAutoGainControl(@Nonnull JsArray<Boolean> autoGainControl);
@@ -61,8 +65,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  ULongRange getChannelCount();
+  @JsProperty(
+      name = "channelCount"
+  )
+  ULongRange channelCount();
 
   @JsProperty
   void setChannelCount(@Nonnull ULongRange channelCount);
@@ -74,8 +80,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  String getDeviceId();
+  @JsProperty(
+      name = "deviceId"
+  )
+  String deviceId();
 
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
@@ -87,8 +95,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  JsArray<Boolean> getEchoCancellation();
+  @JsProperty(
+      name = "echoCancellation"
+  )
+  JsArray<Boolean> echoCancellation();
 
   @JsProperty
   void setEchoCancellation(@Nonnull JsArray<Boolean> echoCancellation);
@@ -113,8 +123,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getFacingMode();
+  @JsProperty(
+      name = "facingMode"
+  )
+  JsArray<String> facingMode();
 
   @JsProperty
   void setFacingMode(@Nonnull JsArray<String> facingMode);
@@ -138,8 +150,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  DoubleRange getFrameRate();
+  @JsProperty(
+      name = "frameRate"
+  )
+  DoubleRange frameRate();
 
   @JsProperty
   void setFrameRate(@Nonnull DoubleRange frameRate);
@@ -151,8 +165,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  String getGroupId();
+  @JsProperty(
+      name = "groupId"
+  )
+  String groupId();
 
   @JsProperty
   void setGroupId(@Nonnull String groupId);
@@ -164,8 +180,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  ULongRange getHeight();
+  @JsProperty(
+      name = "height"
+  )
+  ULongRange height();
 
   @JsProperty
   void setHeight(@Nonnull ULongRange height);
@@ -177,8 +195,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  DoubleRange getLatency();
+  @JsProperty(
+      name = "latency"
+  )
+  DoubleRange latency();
 
   @JsProperty
   void setLatency(@Nonnull DoubleRange latency);
@@ -190,8 +210,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  JsArray<Boolean> getNoiseSuppression();
+  @JsProperty(
+      name = "noiseSuppression"
+  )
+  JsArray<Boolean> noiseSuppression();
 
   @JsProperty
   void setNoiseSuppression(@Nonnull JsArray<Boolean> noiseSuppression);
@@ -216,8 +238,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getResizeMode();
+  @JsProperty(
+      name = "resizeMode"
+  )
+  JsArray<String> resizeMode();
 
   @JsProperty
   void setResizeMode(@Nonnull JsArray<String> resizeMode);
@@ -241,8 +265,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  ULongRange getSampleRate();
+  @JsProperty(
+      name = "sampleRate"
+  )
+  ULongRange sampleRate();
 
   @JsProperty
   void setSampleRate(@Nonnull ULongRange sampleRate);
@@ -254,8 +280,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  ULongRange getSampleSize();
+  @JsProperty(
+      name = "sampleSize"
+  )
+  ULongRange sampleSize();
 
   @JsProperty
   void setSampleSize(@Nonnull ULongRange sampleSize);
@@ -267,8 +295,10 @@ public interface MediaTrackCapabilities {
     return this;
   }
 
-  @JsProperty
-  ULongRange getWidth();
+  @JsProperty(
+      name = "width"
+  )
+  ULongRange width();
 
   @JsProperty
   void setWidth(@Nonnull ULongRange width);

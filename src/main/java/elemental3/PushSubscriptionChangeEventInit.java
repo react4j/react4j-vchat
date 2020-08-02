@@ -22,8 +22,10 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  PushSubscription getNewSubscription();
+  @JsProperty(
+      name = "newSubscription"
+  )
+  PushSubscription newSubscription();
 
   @JsProperty
   void setNewSubscription(@Nonnull PushSubscription newSubscription);
@@ -36,8 +38,10 @@ public interface PushSubscriptionChangeEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
-  PushSubscription getOldSubscription();
+  @JsProperty(
+      name = "oldSubscription"
+  )
+  PushSubscription oldSubscription();
 
   @JsProperty
   void setOldSubscription(@Nonnull PushSubscription oldSubscription);

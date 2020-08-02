@@ -25,9 +25,11 @@ public interface RTCIceCandidateStats extends RTCStats {
     return Js.<RTCIceCandidateStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).candidateType( candidateType ).transportId( transportId );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "address"
+  )
   @Nullable
-  String getAddress();
+  String address();
 
   @JsProperty
   void setAddress(@Nullable String address);
@@ -39,9 +41,11 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "candidateType"
+  )
   @Nonnull
-  String getCandidateType();
+  String candidateType();
 
   @JsProperty
   void setCandidateType(@Nonnull String candidateType);
@@ -53,8 +57,10 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPort();
+  @JsProperty(
+      name = "port"
+  )
+  int port();
 
   @JsProperty
   void setPort(int port);
@@ -66,8 +72,10 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPriority();
+  @JsProperty(
+      name = "priority"
+  )
+  int priority();
 
   @JsProperty
   void setPriority(int priority);
@@ -79,8 +87,10 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getProtocol();
+  @JsProperty(
+      name = "protocol"
+  )
+  String protocol();
 
   @JsProperty
   void setProtocol(@Nonnull String protocol);
@@ -92,8 +102,10 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getRelayProtocol();
+  @JsProperty(
+      name = "relayProtocol"
+  )
+  String relayProtocol();
 
   @JsProperty
   void setRelayProtocol(@Nonnull String relayProtocol);
@@ -105,9 +117,11 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "transportId"
+  )
   @Nonnull
-  String getTransportId();
+  String transportId();
 
   @JsProperty
   void setTransportId(@Nonnull String transportId);
@@ -119,8 +133,10 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getUrl();
+  @JsProperty(
+      name = "url"
+  )
+  String url();
 
   @JsProperty
   void setUrl(@Nonnull String url);
@@ -132,8 +148,10 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  boolean isDeleted();
+  @JsProperty(
+      name = "deleted"
+  )
+  boolean deleted();
 
   @JsProperty
   void setDeleted(boolean deleted);
@@ -145,8 +163,10 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  boolean isIsRemote();
+  @JsProperty(
+      name = "isRemote"
+  )
+  boolean isRemote();
 
   @JsProperty
   void setIsRemote(boolean isRemote);

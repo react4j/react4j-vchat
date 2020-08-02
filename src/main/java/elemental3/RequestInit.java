@@ -36,9 +36,11 @@ public interface RequestInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "body"
+  )
   @Nullable
-  BodyInit getBody();
+  BodyInit body();
 
   @JsProperty
   void setBody(@Nullable BodyInit body);
@@ -278,8 +280,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getCache();
+  @JsProperty(
+      name = "cache"
+  )
+  String cache();
 
   @JsProperty
   void setCache(@Nonnull String cache);
@@ -291,8 +295,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getCredentials();
+  @JsProperty(
+      name = "credentials"
+  )
+  String credentials();
 
   @JsProperty
   void setCredentials(@Nonnull String credentials);
@@ -304,8 +310,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  HeadersInit getHeaders();
+  @JsProperty(
+      name = "headers"
+  )
+  HeadersInit headers();
 
   @JsProperty
   void setHeaders(@Nonnull HeadersInit headers);
@@ -355,8 +363,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getIntegrity();
+  @JsProperty(
+      name = "integrity"
+  )
+  String integrity();
 
   @JsProperty
   void setIntegrity(@Nonnull String integrity);
@@ -368,8 +378,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  boolean isKeepalive();
+  @JsProperty(
+      name = "keepalive"
+  )
+  boolean keepalive();
 
   @JsProperty
   void setKeepalive(boolean keepalive);
@@ -381,8 +393,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getMethod();
+  @JsProperty(
+      name = "method"
+  )
+  String method();
 
   @JsProperty
   void setMethod(@Nonnull String method);
@@ -394,8 +408,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getMode();
+  @JsProperty(
+      name = "mode"
+  )
+  String mode();
 
   @JsProperty
   void setMode(@Nonnull String mode);
@@ -407,8 +423,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getRedirect();
+  @JsProperty(
+      name = "redirect"
+  )
+  String redirect();
 
   @JsProperty
   void setRedirect(@Nonnull String redirect);
@@ -420,8 +438,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getReferrer();
+  @JsProperty(
+      name = "referrer"
+  )
+  String referrer();
 
   @JsProperty
   void setReferrer(@Nonnull String referrer);
@@ -433,8 +453,10 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
-  String getReferrerPolicy();
+  @JsProperty(
+      name = "referrerPolicy"
+  )
+  String referrerPolicy();
 
   @JsProperty
   void setReferrerPolicy(@Nonnull String referrerPolicy);
@@ -446,9 +468,11 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "signal"
+  )
   @Nullable
-  AbortSignal getSignal();
+  AbortSignal signal();
 
   @JsProperty
   void setSignal(@Nullable AbortSignal signal);
@@ -460,9 +484,11 @@ public interface RequestInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "window"
+  )
   @Nullable
-  Any getWindow();
+  Any window();
 
   @JsProperty
   void setWindow(@Nullable Any window);

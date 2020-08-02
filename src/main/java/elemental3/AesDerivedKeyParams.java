@@ -22,8 +22,10 @@ public interface AesDerivedKeyParams extends Algorithm {
     return Js.<AesDerivedKeyParams>uncheckedCast( JsPropertyMap.of() ).name( name ).length( length );
   }
 
-  @JsProperty
-  int getLength();
+  @JsProperty(
+      name = "length"
+  )
+  int length();
 
   @JsProperty
   void setLength(int length);

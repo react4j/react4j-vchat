@@ -23,8 +23,10 @@ public interface MediaKeySystemConfiguration {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<MediaKeySystemMediaCapability> getAudioCapabilities();
+  @JsProperty(
+      name = "audioCapabilities"
+  )
+  JsArray<MediaKeySystemMediaCapability> audioCapabilities();
 
   @JsProperty
   void setAudioCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> audioCapabilities);
@@ -51,8 +53,10 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
-  @JsProperty
-  String getDistinctiveIdentifier();
+  @JsProperty(
+      name = "distinctiveIdentifier"
+  )
+  String distinctiveIdentifier();
 
   @JsProperty
   void setDistinctiveIdentifier(@Nonnull String distinctiveIdentifier);
@@ -65,8 +69,10 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getInitDataTypes();
+  @JsProperty(
+      name = "initDataTypes"
+  )
+  JsArray<String> initDataTypes();
 
   @JsProperty
   void setInitDataTypes(@Nonnull JsArray<String> initDataTypes);
@@ -90,8 +96,10 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
-  @JsProperty
-  String getLabel();
+  @JsProperty(
+      name = "label"
+  )
+  String label();
 
   @JsProperty
   void setLabel(@Nonnull String label);
@@ -103,8 +111,10 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
-  @JsProperty
-  String getPersistentState();
+  @JsProperty(
+      name = "persistentState"
+  )
+  String persistentState();
 
   @JsProperty
   void setPersistentState(@Nonnull String persistentState);
@@ -116,8 +126,10 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getSessionTypes();
+  @JsProperty(
+      name = "sessionTypes"
+  )
+  JsArray<String> sessionTypes();
 
   @JsProperty
   void setSessionTypes(@Nonnull JsArray<String> sessionTypes);
@@ -141,8 +153,10 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
-  @JsProperty
-  JsArray<MediaKeySystemMediaCapability> getVideoCapabilities();
+  @JsProperty(
+      name = "videoCapabilities"
+  )
+  JsArray<MediaKeySystemMediaCapability> videoCapabilities();
 
   @JsProperty
   void setVideoCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> videoCapabilities);

@@ -24,8 +24,10 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
     return Js.<RTCRtpContributingSourceStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).contributorSsrc( contributorSsrc ).inboundRtpStreamId( inboundRtpStreamId );
   }
 
-  @JsProperty
-  double getAudioLevel();
+  @JsProperty(
+      name = "audioLevel"
+  )
+  double audioLevel();
 
   @JsProperty
   void setAudioLevel(double audioLevel);
@@ -37,8 +39,10 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getContributorSsrc();
+  @JsProperty(
+      name = "contributorSsrc"
+  )
+  int contributorSsrc();
 
   @JsProperty
   void setContributorSsrc(int contributorSsrc);
@@ -50,9 +54,11 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "inboundRtpStreamId"
+  )
   @Nonnull
-  String getInboundRtpStreamId();
+  String inboundRtpStreamId();
 
   @JsProperty
   void setInboundRtpStreamId(@Nonnull String inboundRtpStreamId);
@@ -65,8 +71,10 @@ public interface RTCRtpContributingSourceStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsContributedTo();
+  @JsProperty(
+      name = "packetsContributedTo"
+  )
+  int packetsContributedTo();
 
   @JsProperty
   void setPacketsContributedTo(int packetsContributedTo);

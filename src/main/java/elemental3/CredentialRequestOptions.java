@@ -22,8 +22,10 @@ public interface CredentialRequestOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getMediation();
+  @JsProperty(
+      name = "mediation"
+  )
+  String mediation();
 
   @JsProperty
   void setMediation(@Nonnull String mediation);
@@ -35,8 +37,10 @@ public interface CredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  AbortSignal getSignal();
+  @JsProperty(
+      name = "signal"
+  )
+  AbortSignal signal();
 
   @JsProperty
   void setSignal(@Nonnull AbortSignal signal);
@@ -48,8 +52,10 @@ public interface CredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isPassword();
+  @JsProperty(
+      name = "password"
+  )
+  boolean password();
 
   @JsProperty
   void setPassword(boolean password);
@@ -61,8 +67,10 @@ public interface CredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  FederatedCredentialRequestOptions getFederated();
+  @JsProperty(
+      name = "federated"
+  )
+  FederatedCredentialRequestOptions federated();
 
   @JsProperty
   void setFederated(@Nonnull FederatedCredentialRequestOptions federated);
@@ -75,8 +83,10 @@ public interface CredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  PublicKeyCredentialRequestOptions getPublicKey();
+  @JsProperty(
+      name = "publicKey"
+  )
+  PublicKeyCredentialRequestOptions publicKey();
 
   @JsProperty
   void setPublicKey(@Nonnull PublicKeyCredentialRequestOptions publicKey);

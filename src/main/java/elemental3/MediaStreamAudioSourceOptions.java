@@ -22,9 +22,11 @@ public interface MediaStreamAudioSourceOptions {
     return Js.<MediaStreamAudioSourceOptions>uncheckedCast( JsPropertyMap.of() ).mediaStream( mediaStream );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "mediaStream"
+  )
   @Nonnull
-  MediaStream getMediaStream();
+  MediaStream mediaStream();
 
   @JsProperty
   void setMediaStream(@Nonnull MediaStream mediaStream);

@@ -22,8 +22,10 @@ public interface KeyframeEffectOptions extends EffectTiming {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getComposite();
+  @JsProperty(
+      name = "composite"
+  )
+  String composite();
 
   @JsProperty
   void setComposite(@Nonnull String composite);
@@ -35,8 +37,10 @@ public interface KeyframeEffectOptions extends EffectTiming {
     return this;
   }
 
-  @JsProperty
-  String getIterationComposite();
+  @JsProperty(
+      name = "iterationComposite"
+  )
+  String iterationComposite();
 
   @JsProperty
   void setIterationComposite(@Nonnull String iterationComposite);

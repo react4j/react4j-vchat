@@ -22,8 +22,10 @@ public interface DoubleRange {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getMax();
+  @JsProperty(
+      name = "max"
+  )
+  double max();
 
   @JsProperty
   void setMax(double max);
@@ -35,8 +37,10 @@ public interface DoubleRange {
     return this;
   }
 
-  @JsProperty
-  double getMin();
+  @JsProperty(
+      name = "min"
+  )
+  double min();
 
   @JsProperty
   void setMin(double min);

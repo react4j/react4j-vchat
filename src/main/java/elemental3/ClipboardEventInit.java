@@ -23,9 +23,11 @@ public interface ClipboardEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "clipboardData"
+  )
   @Nullable
-  DataTransfer getClipboardData();
+  DataTransfer clipboardData();
 
   @JsProperty
   void setClipboardData(@Nullable DataTransfer clipboardData);

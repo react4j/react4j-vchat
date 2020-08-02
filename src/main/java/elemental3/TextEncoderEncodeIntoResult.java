@@ -22,8 +22,10 @@ public interface TextEncoderEncodeIntoResult {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getRead();
+  @JsProperty(
+      name = "read"
+  )
+  int read();
 
   @JsProperty
   void setRead(int read);
@@ -35,8 +37,10 @@ public interface TextEncoderEncodeIntoResult {
     return this;
   }
 
-  @JsProperty
-  int getWritten();
+  @JsProperty(
+      name = "written"
+  )
+  int written();
 
   @JsProperty
   void setWritten(int written);

@@ -23,9 +23,11 @@ public interface XRRenderStateInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "baseLayer"
+  )
   @Nullable
-  XRWebGLLayer getBaseLayer();
+  XRWebGLLayer baseLayer();
 
   @JsProperty
   void setBaseLayer(@Nullable XRWebGLLayer baseLayer);
@@ -37,8 +39,10 @@ public interface XRRenderStateInit {
     return this;
   }
 
-  @JsProperty
-  double getDepthFar();
+  @JsProperty(
+      name = "depthFar"
+  )
+  double depthFar();
 
   @JsProperty
   void setDepthFar(double depthFar);
@@ -50,8 +54,10 @@ public interface XRRenderStateInit {
     return this;
   }
 
-  @JsProperty
-  double getDepthNear();
+  @JsProperty(
+      name = "depthNear"
+  )
+  double depthNear();
 
   @JsProperty
   void setDepthNear(double depthNear);
@@ -63,8 +69,10 @@ public interface XRRenderStateInit {
     return this;
   }
 
-  @JsProperty
-  double getInlineVerticalFieldOfView();
+  @JsProperty(
+      name = "inlineVerticalFieldOfView"
+  )
+  double inlineVerticalFieldOfView();
 
   @JsProperty
   void setInlineVerticalFieldOfView(double inlineVerticalFieldOfView);

@@ -22,8 +22,10 @@ public interface authenticatorBiometricPerfBounds {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  float getFAR();
+  @JsProperty(
+      name = "FAR"
+  )
+  float FAR();
 
   @JsProperty
   void setFAR(float FAR);
@@ -35,8 +37,10 @@ public interface authenticatorBiometricPerfBounds {
     return this;
   }
 
-  @JsProperty
-  float getFRR();
+  @JsProperty(
+      name = "FRR"
+  )
+  float FRR();
 
   @JsProperty
   void setFRR(float FRR);

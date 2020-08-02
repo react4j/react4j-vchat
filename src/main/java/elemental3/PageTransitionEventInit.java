@@ -22,8 +22,10 @@ public interface PageTransitionEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isPersisted();
+  @JsProperty(
+      name = "persisted"
+  )
+  boolean persisted();
 
   @JsProperty
   void setPersisted(boolean persisted);

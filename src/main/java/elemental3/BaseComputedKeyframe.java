@@ -23,8 +23,10 @@ public interface BaseComputedKeyframe {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getComposite();
+  @JsProperty(
+      name = "composite"
+  )
+  String composite();
 
   @JsProperty
   void setComposite(@Nonnull String composite);
@@ -36,8 +38,10 @@ public interface BaseComputedKeyframe {
     return this;
   }
 
-  @JsProperty
-  double getComputedOffset();
+  @JsProperty(
+      name = "computedOffset"
+  )
+  double computedOffset();
 
   @JsProperty
   void setComputedOffset(double computedOffset);
@@ -49,8 +53,10 @@ public interface BaseComputedKeyframe {
     return this;
   }
 
-  @JsProperty
-  String getEasing();
+  @JsProperty(
+      name = "easing"
+  )
+  String easing();
 
   @JsProperty
   void setEasing(@Nonnull String easing);
@@ -62,9 +68,11 @@ public interface BaseComputedKeyframe {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "offset"
+  )
   @Nullable
-  Double getOffset();
+  Double offset();
 
   @JsProperty
   void setOffset(@Nullable Double offset);

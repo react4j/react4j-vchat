@@ -23,8 +23,10 @@ public interface KeyboardEventInit extends EventModifierInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getCode();
+  @JsProperty(
+      name = "code"
+  )
+  String code();
 
   @JsProperty
   void setCode(@Nonnull String code);
@@ -36,8 +38,10 @@ public interface KeyboardEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  boolean isIsComposing();
+  @JsProperty(
+      name = "isComposing"
+  )
+  boolean isComposing();
 
   @JsProperty
   void setIsComposing(boolean isComposing);
@@ -49,8 +53,10 @@ public interface KeyboardEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  String getKey();
+  @JsProperty(
+      name = "key"
+  )
+  String key();
 
   @JsProperty
   void setKey(@Nonnull String key);
@@ -62,8 +68,10 @@ public interface KeyboardEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  int getLocation();
+  @JsProperty(
+      name = "location"
+  )
+  int location();
 
   @JsProperty
   void setLocation(int location);
@@ -75,8 +83,10 @@ public interface KeyboardEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  boolean isRepeat();
+  @JsProperty(
+      name = "repeat"
+  )
+  boolean repeat();
 
   @JsProperty
   void setRepeat(boolean repeat);

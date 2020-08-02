@@ -22,8 +22,10 @@ public interface SyncEventInit extends ExtendableEventInit {
     return Js.<SyncEventInit>uncheckedCast( JsPropertyMap.of() ).tag( tag );
   }
 
-  @JsProperty
-  boolean isLastChance();
+  @JsProperty(
+      name = "lastChance"
+  )
+  boolean lastChance();
 
   @JsProperty
   void setLastChance(boolean lastChance);
@@ -35,9 +37,11 @@ public interface SyncEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "tag"
+  )
   @Nonnull
-  String getTag();
+  String tag();
 
   @JsProperty
   void setTag(@Nonnull String tag);

@@ -23,8 +23,10 @@ public interface RTCTransportStats extends RTCStats {
     return Js.<RTCTransportStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).dtlsState( dtlsState );
   }
 
-  @JsProperty
-  int getBytesReceived();
+  @JsProperty(
+      name = "bytesReceived"
+  )
+  int bytesReceived();
 
   @JsProperty
   void setBytesReceived(int bytesReceived);
@@ -36,8 +38,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getBytesSent();
+  @JsProperty(
+      name = "bytesSent"
+  )
+  int bytesSent();
 
   @JsProperty
   void setBytesSent(int bytesSent);
@@ -49,8 +53,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getDtlsCipher();
+  @JsProperty(
+      name = "dtlsCipher"
+  )
+  String dtlsCipher();
 
   @JsProperty
   void setDtlsCipher(@Nonnull String dtlsCipher);
@@ -62,9 +68,11 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "dtlsState"
+  )
   @Nonnull
-  String getDtlsState();
+  String dtlsState();
 
   @JsProperty
   void setDtlsState(@Nonnull String dtlsState);
@@ -76,8 +84,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getIceLocalUsernameFragment();
+  @JsProperty(
+      name = "iceLocalUsernameFragment"
+  )
+  String iceLocalUsernameFragment();
 
   @JsProperty
   void setIceLocalUsernameFragment(@Nonnull String iceLocalUsernameFragment);
@@ -90,8 +100,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getIceRole();
+  @JsProperty(
+      name = "iceRole"
+  )
+  String iceRole();
 
   @JsProperty
   void setIceRole(@Nonnull String iceRole);
@@ -103,8 +115,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getIceState();
+  @JsProperty(
+      name = "iceState"
+  )
+  String iceState();
 
   @JsProperty
   void setIceState(@Nonnull String iceState);
@@ -116,8 +130,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getLocalCertificateId();
+  @JsProperty(
+      name = "localCertificateId"
+  )
+  String localCertificateId();
 
   @JsProperty
   void setLocalCertificateId(@Nonnull String localCertificateId);
@@ -129,8 +145,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsReceived();
+  @JsProperty(
+      name = "packetsReceived"
+  )
+  int packetsReceived();
 
   @JsProperty
   void setPacketsReceived(int packetsReceived);
@@ -142,8 +160,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsSent();
+  @JsProperty(
+      name = "packetsSent"
+  )
+  int packetsSent();
 
   @JsProperty
   void setPacketsSent(int packetsSent);
@@ -155,8 +175,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getRemoteCertificateId();
+  @JsProperty(
+      name = "remoteCertificateId"
+  )
+  String remoteCertificateId();
 
   @JsProperty
   void setRemoteCertificateId(@Nonnull String remoteCertificateId);
@@ -168,8 +190,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getRtcpTransportStatsId();
+  @JsProperty(
+      name = "rtcpTransportStatsId"
+  )
+  String rtcpTransportStatsId();
 
   @JsProperty
   void setRtcpTransportStatsId(@Nonnull String rtcpTransportStatsId);
@@ -181,8 +205,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getSelectedCandidatePairChanges();
+  @JsProperty(
+      name = "selectedCandidatePairChanges"
+  )
+  int selectedCandidatePairChanges();
 
   @JsProperty
   void setSelectedCandidatePairChanges(int selectedCandidatePairChanges);
@@ -194,8 +220,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getSelectedCandidatePairId();
+  @JsProperty(
+      name = "selectedCandidatePairId"
+  )
+  String selectedCandidatePairId();
 
   @JsProperty
   void setSelectedCandidatePairId(@Nonnull String selectedCandidatePairId);
@@ -207,8 +235,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getSrtpCipher();
+  @JsProperty(
+      name = "srtpCipher"
+  )
+  String srtpCipher();
 
   @JsProperty
   void setSrtpCipher(@Nonnull String srtpCipher);
@@ -220,8 +250,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getTlsGroup();
+  @JsProperty(
+      name = "tlsGroup"
+  )
+  String tlsGroup();
 
   @JsProperty
   void setTlsGroup(@Nonnull String tlsGroup);
@@ -233,8 +265,10 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getTlsVersion();
+  @JsProperty(
+      name = "tlsVersion"
+  )
+  String tlsVersion();
 
   @JsProperty
   void setTlsVersion(@Nonnull String tlsVersion);

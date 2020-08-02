@@ -33,8 +33,10 @@ public interface PushEventInit extends ExtendableEventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  PushMessageDataInit getData();
+  @JsProperty(
+      name = "data"
+  )
+  PushMessageDataInit data();
 
   @JsProperty
   void setData(@Nonnull PushMessageDataInit data);

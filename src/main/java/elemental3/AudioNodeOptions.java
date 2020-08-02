@@ -22,8 +22,10 @@ public interface AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getChannelCount();
+  @JsProperty(
+      name = "channelCount"
+  )
+  int channelCount();
 
   @JsProperty
   void setChannelCount(int channelCount);
@@ -35,8 +37,10 @@ public interface AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getChannelCountMode();
+  @JsProperty(
+      name = "channelCountMode"
+  )
+  String channelCountMode();
 
   @JsProperty
   void setChannelCountMode(@Nonnull String channelCountMode);
@@ -48,8 +52,10 @@ public interface AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getChannelInterpretation();
+  @JsProperty(
+      name = "channelInterpretation"
+  )
+  String channelInterpretation();
 
   @JsProperty
   void setChannelInterpretation(@Nonnull String channelInterpretation);

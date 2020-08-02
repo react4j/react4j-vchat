@@ -23,9 +23,11 @@ public interface DeviceMotionEventAccelerationInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "x"
+  )
   @Nullable
-  Double getX();
+  Double x();
 
   @JsProperty
   void setX(@Nullable Double x);
@@ -37,9 +39,11 @@ public interface DeviceMotionEventAccelerationInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "y"
+  )
   @Nullable
-  Double getY();
+  Double y();
 
   @JsProperty
   void setY(@Nullable Double y);
@@ -51,9 +55,11 @@ public interface DeviceMotionEventAccelerationInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "z"
+  )
   @Nullable
-  Double getZ();
+  Double z();
 
   @JsProperty
   void setZ(@Nullable Double z);

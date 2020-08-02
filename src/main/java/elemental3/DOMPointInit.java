@@ -22,8 +22,10 @@ public interface DOMPointInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getW();
+  @JsProperty(
+      name = "w"
+  )
+  double w();
 
   @JsProperty
   void setW(double w);
@@ -35,8 +37,10 @@ public interface DOMPointInit {
     return this;
   }
 
-  @JsProperty
-  double getX();
+  @JsProperty(
+      name = "x"
+  )
+  double x();
 
   @JsProperty
   void setX(double x);
@@ -48,8 +52,10 @@ public interface DOMPointInit {
     return this;
   }
 
-  @JsProperty
-  double getY();
+  @JsProperty(
+      name = "y"
+  )
+  double y();
 
   @JsProperty
   void setY(double y);
@@ -61,8 +67,10 @@ public interface DOMPointInit {
     return this;
   }
 
-  @JsProperty
-  double getZ();
+  @JsProperty(
+      name = "z"
+  )
+  double z();
 
   @JsProperty
   void setZ(double z);

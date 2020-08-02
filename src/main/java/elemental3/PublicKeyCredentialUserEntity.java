@@ -118,9 +118,11 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
     return Js.<PublicKeyCredentialUserEntity>uncheckedCast( JsPropertyMap.of() ).name( name ).displayName( displayName ).id( id );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "displayName"
+  )
   @Nonnull
-  String getDisplayName();
+  String displayName();
 
   @JsProperty
   void setDisplayName(@Nonnull String displayName);
@@ -132,9 +134,11 @@ public interface PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "id"
+  )
   @Nonnull
-  BufferSource getId();
+  BufferSource id();
 
   @JsProperty
   void setId(@Nonnull BufferSource id);

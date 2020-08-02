@@ -22,8 +22,10 @@ public interface ConstrainDoubleRange extends DoubleRange {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getExact();
+  @JsProperty(
+      name = "exact"
+  )
+  double exact();
 
   @JsProperty
   void setExact(double exact);
@@ -35,8 +37,10 @@ public interface ConstrainDoubleRange extends DoubleRange {
     return this;
   }
 
-  @JsProperty
-  double getIdeal();
+  @JsProperty(
+      name = "ideal"
+  )
+  double ideal();
 
   @JsProperty
   void setIdeal(double ideal);

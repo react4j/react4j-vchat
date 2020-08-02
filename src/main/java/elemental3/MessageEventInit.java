@@ -25,9 +25,11 @@ public interface MessageEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "data"
+  )
   @Nullable
-  Any getData();
+  Any data();
 
   @JsProperty
   void setData(@Nullable Any data);
@@ -39,8 +41,10 @@ public interface MessageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getLastEventId();
+  @JsProperty(
+      name = "lastEventId"
+  )
+  String lastEventId();
 
   @JsProperty
   void setLastEventId(@Nonnull String lastEventId);
@@ -52,8 +56,10 @@ public interface MessageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getOrigin();
+  @JsProperty(
+      name = "origin"
+  )
+  String origin();
 
   @JsProperty
   void setOrigin(@Nonnull String origin);
@@ -65,8 +71,10 @@ public interface MessageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<MessagePort> getPorts();
+  @JsProperty(
+      name = "ports"
+  )
+  JsArray<MessagePort> ports();
 
   @JsProperty
   void setPorts(@Nonnull JsArray<MessagePort> ports);
@@ -90,9 +98,11 @@ public interface MessageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "source"
+  )
   @Nullable
-  MessageEventSource getSource();
+  MessageEventSource source();
 
   @JsProperty
   void setSource(@Nullable MessageEventSource source);

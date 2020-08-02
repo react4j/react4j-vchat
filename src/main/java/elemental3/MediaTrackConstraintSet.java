@@ -23,8 +23,10 @@ public interface MediaTrackConstraintSet {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  ConstrainDouble getAspectRatio();
+  @JsProperty(
+      name = "aspectRatio"
+  )
+  ConstrainDouble aspectRatio();
 
   @JsProperty
   void setAspectRatio(@Nonnull ConstrainDouble aspectRatio);
@@ -60,8 +62,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainBoolean getAutoGainControl();
+  @JsProperty(
+      name = "autoGainControl"
+  )
+  ConstrainBoolean autoGainControl();
 
   @JsProperty
   void setAutoGainControl(@Nonnull ConstrainBoolean autoGainControl);
@@ -98,8 +102,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainULong getChannelCount();
+  @JsProperty(
+      name = "channelCount"
+  )
+  ConstrainULong channelCount();
 
   @JsProperty
   void setChannelCount(@Nonnull ConstrainULong channelCount);
@@ -135,8 +141,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDOMString getDeviceId();
+  @JsProperty(
+      name = "deviceId"
+  )
+  ConstrainDOMString deviceId();
 
   @JsProperty
   void setDeviceId(@Nonnull ConstrainDOMString deviceId);
@@ -196,8 +204,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainBoolean getEchoCancellation();
+  @JsProperty(
+      name = "echoCancellation"
+  )
+  ConstrainBoolean echoCancellation();
 
   @JsProperty
   void setEchoCancellation(@Nonnull ConstrainBoolean echoCancellation);
@@ -235,8 +245,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDOMString getFacingMode();
+  @JsProperty(
+      name = "facingMode"
+  )
+  ConstrainDOMString facingMode();
 
   @JsProperty
   void setFacingMode(@Nonnull ConstrainDOMString facingMode);
@@ -297,8 +309,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDouble getFrameRate();
+  @JsProperty(
+      name = "frameRate"
+  )
+  ConstrainDouble frameRate();
 
   @JsProperty
   void setFrameRate(@Nonnull ConstrainDouble frameRate);
@@ -334,8 +348,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDOMString getGroupId();
+  @JsProperty(
+      name = "groupId"
+  )
+  ConstrainDOMString groupId();
 
   @JsProperty
   void setGroupId(@Nonnull ConstrainDOMString groupId);
@@ -395,8 +411,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainULong getHeight();
+  @JsProperty(
+      name = "height"
+  )
+  ConstrainULong height();
 
   @JsProperty
   void setHeight(@Nonnull ConstrainULong height);
@@ -432,8 +450,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDouble getLatency();
+  @JsProperty(
+      name = "latency"
+  )
+  ConstrainDouble latency();
 
   @JsProperty
   void setLatency(@Nonnull ConstrainDouble latency);
@@ -469,8 +489,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainBoolean getNoiseSuppression();
+  @JsProperty(
+      name = "noiseSuppression"
+  )
+  ConstrainBoolean noiseSuppression();
 
   @JsProperty
   void setNoiseSuppression(@Nonnull ConstrainBoolean noiseSuppression);
@@ -508,8 +530,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDOMString getResizeMode();
+  @JsProperty(
+      name = "resizeMode"
+  )
+  ConstrainDOMString resizeMode();
 
   @JsProperty
   void setResizeMode(@Nonnull ConstrainDOMString resizeMode);
@@ -570,8 +594,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainULong getSampleRate();
+  @JsProperty(
+      name = "sampleRate"
+  )
+  ConstrainULong sampleRate();
 
   @JsProperty
   void setSampleRate(@Nonnull ConstrainULong sampleRate);
@@ -607,8 +633,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainULong getSampleSize();
+  @JsProperty(
+      name = "sampleSize"
+  )
+  ConstrainULong sampleSize();
 
   @JsProperty
   void setSampleSize(@Nonnull ConstrainULong sampleSize);
@@ -644,8 +672,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainULong getWidth();
+  @JsProperty(
+      name = "width"
+  )
+  ConstrainULong width();
 
   @JsProperty
   void setWidth(@Nonnull ConstrainULong width);
@@ -681,8 +711,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDOMString getCursor();
+  @JsProperty(
+      name = "cursor"
+  )
+  ConstrainDOMString cursor();
 
   @JsProperty
   void setCursor(@Nonnull ConstrainDOMString cursor);
@@ -742,8 +774,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainDOMString getDisplaySurface();
+  @JsProperty(
+      name = "displaySurface"
+  )
+  ConstrainDOMString displaySurface();
 
   @JsProperty
   void setDisplaySurface(@Nonnull ConstrainDOMString displaySurface);
@@ -804,8 +838,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainBoolean getLogicalSurface();
+  @JsProperty(
+      name = "logicalSurface"
+  )
+  ConstrainBoolean logicalSurface();
 
   @JsProperty
   void setLogicalSurface(@Nonnull ConstrainBoolean logicalSurface);
@@ -842,8 +878,10 @@ public interface MediaTrackConstraintSet {
     return this;
   }
 
-  @JsProperty
-  ConstrainBoolean getRestrictOwnAudio();
+  @JsProperty(
+      name = "restrictOwnAudio"
+  )
+  ConstrainBoolean restrictOwnAudio();
 
   @JsProperty
   void setRestrictOwnAudio(@Nonnull ConstrainBoolean restrictOwnAudio);

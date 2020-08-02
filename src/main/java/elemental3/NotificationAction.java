@@ -22,9 +22,11 @@ public interface NotificationAction {
     return Js.<NotificationAction>uncheckedCast( JsPropertyMap.of() ).action( action ).title( title );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "action"
+  )
   @Nonnull
-  String getAction();
+  String action();
 
   @JsProperty
   void setAction(@Nonnull String action);
@@ -36,8 +38,10 @@ public interface NotificationAction {
     return this;
   }
 
-  @JsProperty
-  String getIcon();
+  @JsProperty(
+      name = "icon"
+  )
+  String icon();
 
   @JsProperty
   void setIcon(@Nonnull String icon);
@@ -49,9 +53,11 @@ public interface NotificationAction {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "title"
+  )
   @Nonnull
-  String getTitle();
+  String title();
 
   @JsProperty
   void setTitle(@Nonnull String title);

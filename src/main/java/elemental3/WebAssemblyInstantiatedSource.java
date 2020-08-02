@@ -23,9 +23,11 @@ public interface WebAssemblyInstantiatedSource {
     return Js.<WebAssemblyInstantiatedSource>uncheckedCast( JsPropertyMap.of() ).instance( instance ).module( module );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "instance"
+  )
   @Nonnull
-  Instance getInstance();
+  Instance instance();
 
   @JsProperty
   void setInstance(@Nonnull Instance instance);
@@ -37,9 +39,11 @@ public interface WebAssemblyInstantiatedSource {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "module"
+  )
   @Nonnull
-  Module getModule();
+  Module module();
 
   @JsProperty
   void setModule(@Nonnull Module module);

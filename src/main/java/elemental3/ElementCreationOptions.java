@@ -22,8 +22,10 @@ public interface ElementCreationOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getIs();
+  @JsProperty(
+      name = "is"
+  )
+  String is();
 
   @JsProperty
   void setIs(@Nonnull String is);

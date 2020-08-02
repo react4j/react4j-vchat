@@ -3576,9 +3576,11 @@ public interface HkdfParams extends Algorithm {
     return Js.<HkdfParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).info( info ).salt( salt );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "hash"
+  )
   @Nonnull
-  AlgorithmIdentifier getHash();
+  AlgorithmIdentifier hash();
 
   @JsProperty
   void setHash(@Nonnull AlgorithmIdentifier hash);
@@ -3614,9 +3616,11 @@ public interface HkdfParams extends Algorithm {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "info"
+  )
   @Nonnull
-  BufferSource getInfo();
+  BufferSource info();
 
   @JsProperty
   void setInfo(@Nonnull BufferSource info);
@@ -3772,9 +3776,11 @@ public interface HkdfParams extends Algorithm {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "salt"
+  )
   @Nonnull
-  BufferSource getSalt();
+  BufferSource salt();
 
   @JsProperty
   void setSalt(@Nonnull BufferSource salt);

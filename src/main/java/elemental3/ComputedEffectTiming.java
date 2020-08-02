@@ -23,8 +23,10 @@ public interface ComputedEffectTiming extends EffectTiming {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getActiveDuration();
+  @JsProperty(
+      name = "activeDuration"
+  )
+  double activeDuration();
 
   @JsProperty
   void setActiveDuration(double activeDuration);
@@ -36,9 +38,11 @@ public interface ComputedEffectTiming extends EffectTiming {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "currentIteration"
+  )
   @Nullable
-  Double getCurrentIteration();
+  Double currentIteration();
 
   @JsProperty
   void setCurrentIteration(@Nullable Double currentIteration);
@@ -50,8 +54,10 @@ public interface ComputedEffectTiming extends EffectTiming {
     return this;
   }
 
-  @JsProperty
-  double getEndTime();
+  @JsProperty(
+      name = "endTime"
+  )
+  double endTime();
 
   @JsProperty
   void setEndTime(double endTime);
@@ -63,9 +69,11 @@ public interface ComputedEffectTiming extends EffectTiming {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "localTime"
+  )
   @Nullable
-  Double getLocalTime();
+  Double localTime();
 
   @JsProperty
   void setLocalTime(@Nullable Double localTime);
@@ -77,9 +85,11 @@ public interface ComputedEffectTiming extends EffectTiming {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "progress"
+  )
   @Nullable
-  Double getProgress();
+  Double progress();
 
   @JsProperty
   void setProgress(@Nullable Double progress);

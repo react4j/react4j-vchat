@@ -49,9 +49,11 @@ public interface RTCRtpParameters {
     return Js.<RTCRtpParameters>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "codecs"
+  )
   @Nonnull
-  JsArray<RTCRtpCodecParameters> getCodecs();
+  JsArray<RTCRtpCodecParameters> codecs();
 
   @JsProperty
   void setCodecs(@Nonnull JsArray<RTCRtpCodecParameters> codecs);
@@ -75,9 +77,11 @@ public interface RTCRtpParameters {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "headerExtensions"
+  )
   @Nonnull
-  JsArray<RTCRtpHeaderExtensionParameters> getHeaderExtensions();
+  JsArray<RTCRtpHeaderExtensionParameters> headerExtensions();
 
   @JsProperty
   void setHeaderExtensions(@Nonnull JsArray<RTCRtpHeaderExtensionParameters> headerExtensions);
@@ -104,9 +108,11 @@ public interface RTCRtpParameters {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "rtcp"
+  )
   @Nonnull
-  RTCRtcpParameters getRtcp();
+  RTCRtcpParameters rtcp();
 
   @JsProperty
   void setRtcp(@Nonnull RTCRtcpParameters rtcp);

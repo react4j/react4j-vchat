@@ -22,8 +22,10 @@ public interface AnalyserOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getFftSize();
+  @JsProperty(
+      name = "fftSize"
+  )
+  int fftSize();
 
   @JsProperty
   void setFftSize(int fftSize);
@@ -35,8 +37,10 @@ public interface AnalyserOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getMaxDecibels();
+  @JsProperty(
+      name = "maxDecibels"
+  )
+  double maxDecibels();
 
   @JsProperty
   void setMaxDecibels(double maxDecibels);
@@ -48,8 +52,10 @@ public interface AnalyserOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getMinDecibels();
+  @JsProperty(
+      name = "minDecibels"
+  )
+  double minDecibels();
 
   @JsProperty
   void setMinDecibels(double minDecibels);
@@ -61,8 +67,10 @@ public interface AnalyserOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getSmoothingTimeConstant();
+  @JsProperty(
+      name = "smoothingTimeConstant"
+  )
+  double smoothingTimeConstant();
 
   @JsProperty
   void setSmoothingTimeConstant(double smoothingTimeConstant);

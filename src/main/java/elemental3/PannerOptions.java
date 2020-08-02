@@ -22,8 +22,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getConeInnerAngle();
+  @JsProperty(
+      name = "coneInnerAngle"
+  )
+  double coneInnerAngle();
 
   @JsProperty
   void setConeInnerAngle(double coneInnerAngle);
@@ -35,8 +37,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getConeOuterAngle();
+  @JsProperty(
+      name = "coneOuterAngle"
+  )
+  double coneOuterAngle();
 
   @JsProperty
   void setConeOuterAngle(double coneOuterAngle);
@@ -48,8 +52,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getConeOuterGain();
+  @JsProperty(
+      name = "coneOuterGain"
+  )
+  double coneOuterGain();
 
   @JsProperty
   void setConeOuterGain(double coneOuterGain);
@@ -61,8 +67,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getDistanceModel();
+  @JsProperty(
+      name = "distanceModel"
+  )
+  String distanceModel();
 
   @JsProperty
   void setDistanceModel(@Nonnull String distanceModel);
@@ -74,8 +82,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getMaxDistance();
+  @JsProperty(
+      name = "maxDistance"
+  )
+  double maxDistance();
 
   @JsProperty
   void setMaxDistance(double maxDistance);
@@ -87,8 +97,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getOrientationX();
+  @JsProperty(
+      name = "orientationX"
+  )
+  float orientationX();
 
   @JsProperty
   void setOrientationX(float orientationX);
@@ -100,8 +112,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getOrientationY();
+  @JsProperty(
+      name = "orientationY"
+  )
+  float orientationY();
 
   @JsProperty
   void setOrientationY(float orientationY);
@@ -113,8 +127,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getOrientationZ();
+  @JsProperty(
+      name = "orientationZ"
+  )
+  float orientationZ();
 
   @JsProperty
   void setOrientationZ(float orientationZ);
@@ -126,8 +142,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getPanningModel();
+  @JsProperty(
+      name = "panningModel"
+  )
+  String panningModel();
 
   @JsProperty
   void setPanningModel(@Nonnull String panningModel);
@@ -139,8 +157,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getPositionX();
+  @JsProperty(
+      name = "positionX"
+  )
+  float positionX();
 
   @JsProperty
   void setPositionX(float positionX);
@@ -152,8 +172,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getPositionY();
+  @JsProperty(
+      name = "positionY"
+  )
+  float positionY();
 
   @JsProperty
   void setPositionY(float positionY);
@@ -165,8 +187,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getPositionZ();
+  @JsProperty(
+      name = "positionZ"
+  )
+  float positionZ();
 
   @JsProperty
   void setPositionZ(float positionZ);
@@ -178,8 +202,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getRefDistance();
+  @JsProperty(
+      name = "refDistance"
+  )
+  double refDistance();
 
   @JsProperty
   void setRefDistance(double refDistance);
@@ -191,8 +217,10 @@ public interface PannerOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  double getRolloffFactor();
+  @JsProperty(
+      name = "rolloffFactor"
+  )
+  double rolloffFactor();
 
   @JsProperty
   void setRolloffFactor(double rolloffFactor);

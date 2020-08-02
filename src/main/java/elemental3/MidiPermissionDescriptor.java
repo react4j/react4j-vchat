@@ -22,8 +22,10 @@ public interface MidiPermissionDescriptor extends PermissionDescriptor {
     return Js.<MidiPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  boolean isSysex();
+  @JsProperty(
+      name = "sysex"
+  )
+  boolean sysex();
 
   @JsProperty
   void setSysex(boolean sysex);

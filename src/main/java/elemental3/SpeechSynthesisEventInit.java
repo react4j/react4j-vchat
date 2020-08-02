@@ -22,8 +22,10 @@ public interface SpeechSynthesisEventInit extends EventInit {
     return Js.<SpeechSynthesisEventInit>uncheckedCast( JsPropertyMap.of() ).utterance( utterance );
   }
 
-  @JsProperty
-  int getCharIndex();
+  @JsProperty(
+      name = "charIndex"
+  )
+  int charIndex();
 
   @JsProperty
   void setCharIndex(int charIndex);
@@ -35,8 +37,10 @@ public interface SpeechSynthesisEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  int getCharLength();
+  @JsProperty(
+      name = "charLength"
+  )
+  int charLength();
 
   @JsProperty
   void setCharLength(int charLength);
@@ -48,8 +52,10 @@ public interface SpeechSynthesisEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  float getElapsedTime();
+  @JsProperty(
+      name = "elapsedTime"
+  )
+  float elapsedTime();
 
   @JsProperty
   void setElapsedTime(float elapsedTime);
@@ -61,8 +67,10 @@ public interface SpeechSynthesisEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getName();
+  @JsProperty(
+      name = "name"
+  )
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);
@@ -74,9 +82,11 @@ public interface SpeechSynthesisEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "utterance"
+  )
   @Nonnull
-  SpeechSynthesisUtterance getUtterance();
+  SpeechSynthesisUtterance utterance();
 
   @JsProperty
   void setUtterance(@Nonnull SpeechSynthesisUtterance utterance);

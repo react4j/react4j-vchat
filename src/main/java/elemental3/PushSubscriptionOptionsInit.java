@@ -34,9 +34,11 @@ public interface PushSubscriptionOptionsInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "applicationServerKey"
+  )
   @Nullable
-  BufferSourceOrStringUnion getApplicationServerKey();
+  BufferSourceOrStringUnion applicationServerKey();
 
   @JsProperty
   void setApplicationServerKey(@Nullable BufferSourceOrStringUnion applicationServerKey);
@@ -223,8 +225,10 @@ public interface PushSubscriptionOptionsInit {
     return this;
   }
 
-  @JsProperty
-  boolean isUserVisibleOnly();
+  @JsProperty(
+      name = "userVisibleOnly"
+  )
+  boolean userVisibleOnly();
 
   @JsProperty
   void setUserVisibleOnly(boolean userVisibleOnly);

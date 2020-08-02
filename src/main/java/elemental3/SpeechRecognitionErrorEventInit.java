@@ -22,9 +22,11 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
     return Js.<SpeechRecognitionErrorEventInit>uncheckedCast( JsPropertyMap.of() ).error( error );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "error"
+  )
   @Nonnull
-  String getError();
+  String error();
 
   @JsProperty
   void setError(@Nonnull String error);
@@ -36,8 +38,10 @@ public interface SpeechRecognitionErrorEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getMessage();
+  @JsProperty(
+      name = "message"
+  )
+  String message();
 
   @JsProperty
   void setMessage(@Nonnull String message);

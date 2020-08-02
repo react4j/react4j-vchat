@@ -23,9 +23,11 @@ public interface MediaStreamTrackAudioSourceOptions {
     return Js.<MediaStreamTrackAudioSourceOptions>uncheckedCast( JsPropertyMap.of() ).mediaStreamTrack( mediaStreamTrack );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "mediaStreamTrack"
+  )
   @Nonnull
-  MediaStreamTrack getMediaStreamTrack();
+  MediaStreamTrack mediaStreamTrack();
 
   @JsProperty
   void setMediaStreamTrack(@Nonnull MediaStreamTrack mediaStreamTrack);

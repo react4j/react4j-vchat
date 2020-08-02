@@ -23,8 +23,10 @@ public interface PushSubscriptionJSON {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getEndpoint();
+  @JsProperty(
+      name = "endpoint"
+  )
+  String endpoint();
 
   @JsProperty
   void setEndpoint(@Nonnull String endpoint);
@@ -36,9 +38,11 @@ public interface PushSubscriptionJSON {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "expirationTime"
+  )
   @Nullable
-  int getExpirationTime();
+  int expirationTime();
 
   @JsProperty
   void setExpirationTime(@Nullable int expirationTime);
@@ -50,8 +54,10 @@ public interface PushSubscriptionJSON {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<String> getKeys();
+  @JsProperty(
+      name = "keys"
+  )
+  JsPropertyMap<String> keys();
 
   @JsProperty
   void setKeys(@Nonnull JsPropertyMap<String> keys);

@@ -24,9 +24,11 @@ public interface MediaKeyMessageEventInit extends EventInit {
     return Js.<MediaKeyMessageEventInit>uncheckedCast( JsPropertyMap.of() ).message( message ).messageType( messageType );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "message"
+  )
   @Nonnull
-  ArrayBuffer getMessage();
+  ArrayBuffer message();
 
   @JsProperty
   void setMessage(@Nonnull ArrayBuffer message);
@@ -38,9 +40,11 @@ public interface MediaKeyMessageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "messageType"
+  )
   @Nonnull
-  String getMessageType();
+  String messageType();
 
   @JsProperty
   void setMessageType(@Nonnull String messageType);

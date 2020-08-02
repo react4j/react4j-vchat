@@ -23,8 +23,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return Js.<RTCVideoReceiverStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
-  @JsProperty
-  double getEstimatedPlayoutTimestamp();
+  @JsProperty(
+      name = "estimatedPlayoutTimestamp"
+  )
+  double estimatedPlayoutTimestamp();
 
   @JsProperty
   void setEstimatedPlayoutTimestamp(double estimatedPlayoutTimestamp);
@@ -36,8 +38,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesDecoded();
+  @JsProperty(
+      name = "framesDecoded"
+  )
+  int framesDecoded();
 
   @JsProperty
   void setFramesDecoded(int framesDecoded);
@@ -49,8 +53,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesDropped();
+  @JsProperty(
+      name = "framesDropped"
+  )
+  int framesDropped();
 
   @JsProperty
   void setFramesDropped(int framesDropped);
@@ -62,8 +68,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesReceived();
+  @JsProperty(
+      name = "framesReceived"
+  )
+  int framesReceived();
 
   @JsProperty
   void setFramesReceived(int framesReceived);
@@ -75,8 +83,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getFullFramesLost();
+  @JsProperty(
+      name = "fullFramesLost"
+  )
+  int fullFramesLost();
 
   @JsProperty
   void setFullFramesLost(int fullFramesLost);
@@ -88,8 +98,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getJitterBufferDelay();
+  @JsProperty(
+      name = "jitterBufferDelay"
+  )
+  double jitterBufferDelay();
 
   @JsProperty
   void setJitterBufferDelay(double jitterBufferDelay);
@@ -101,8 +113,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getJitterBufferEmittedCount();
+  @JsProperty(
+      name = "jitterBufferEmittedCount"
+  )
+  int jitterBufferEmittedCount();
 
   @JsProperty
   void setJitterBufferEmittedCount(int jitterBufferEmittedCount);
@@ -114,8 +128,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getKeyFramesReceived();
+  @JsProperty(
+      name = "keyFramesReceived"
+  )
+  int keyFramesReceived();
 
   @JsProperty
   void setKeyFramesReceived(int keyFramesReceived);
@@ -127,8 +143,10 @@ public interface RTCVideoReceiverStats extends RTCVideoHandlerStats {
     return this;
   }
 
-  @JsProperty
-  int getPartialFramesLost();
+  @JsProperty(
+      name = "partialFramesLost"
+  )
+  int partialFramesLost();
 
   @JsProperty
   void setPartialFramesLost(int partialFramesLost);

@@ -23,8 +23,10 @@ public interface RTCAudioHandlerStats extends RTCMediaHandlerStats {
     return Js.<RTCAudioHandlerStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
-  @JsProperty
-  double getAudioLevel();
+  @JsProperty(
+      name = "audioLevel"
+  )
+  double audioLevel();
 
   @JsProperty
   void setAudioLevel(double audioLevel);
@@ -36,8 +38,10 @@ public interface RTCAudioHandlerStats extends RTCMediaHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalAudioEnergy();
+  @JsProperty(
+      name = "totalAudioEnergy"
+  )
+  double totalAudioEnergy();
 
   @JsProperty
   void setTotalAudioEnergy(double totalAudioEnergy);
@@ -49,8 +53,10 @@ public interface RTCAudioHandlerStats extends RTCMediaHandlerStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalSamplesDuration();
+  @JsProperty(
+      name = "totalSamplesDuration"
+  )
+  double totalSamplesDuration();
 
   @JsProperty
   void setTotalSamplesDuration(double totalSamplesDuration);
@@ -62,8 +68,10 @@ public interface RTCAudioHandlerStats extends RTCMediaHandlerStats {
     return this;
   }
 
-  @JsProperty
-  boolean isVoiceActivityFlag();
+  @JsProperty(
+      name = "voiceActivityFlag"
+  )
+  boolean voiceActivityFlag();
 
   @JsProperty
   void setVoiceActivityFlag(boolean voiceActivityFlag);

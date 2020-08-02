@@ -22,8 +22,10 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isIceRestart();
+  @JsProperty(
+      name = "iceRestart"
+  )
+  boolean iceRestart();
 
   @JsProperty
   void setIceRestart(boolean iceRestart);
@@ -35,8 +37,10 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isOfferToReceiveAudio();
+  @JsProperty(
+      name = "offerToReceiveAudio"
+  )
+  boolean offerToReceiveAudio();
 
   @JsProperty
   void setOfferToReceiveAudio(boolean offerToReceiveAudio);
@@ -48,8 +52,10 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isOfferToReceiveVideo();
+  @JsProperty(
+      name = "offerToReceiveVideo"
+  )
+  boolean offerToReceiveVideo();
 
   @JsProperty
   void setOfferToReceiveVideo(boolean offerToReceiveVideo);

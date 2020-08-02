@@ -23,9 +23,11 @@ public interface HmacKeyAlgorithm extends KeyAlgorithm {
     return Js.<HmacKeyAlgorithm>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash ).length( length );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "hash"
+  )
   @Nonnull
-  KeyAlgorithm getHash();
+  KeyAlgorithm hash();
 
   @JsProperty
   void setHash(@Nonnull KeyAlgorithm hash);
@@ -37,8 +39,10 @@ public interface HmacKeyAlgorithm extends KeyAlgorithm {
     return this;
   }
 
-  @JsProperty
-  int getLength();
+  @JsProperty(
+      name = "length"
+  )
+  int length();
 
   @JsProperty
   void setLength(int length);

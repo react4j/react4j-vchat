@@ -22,8 +22,10 @@ public interface SpeechRecognitionEventInit extends EventInit {
     return Js.<SpeechRecognitionEventInit>uncheckedCast( JsPropertyMap.of() ).results( results );
   }
 
-  @JsProperty
-  int getResultIndex();
+  @JsProperty(
+      name = "resultIndex"
+  )
+  int resultIndex();
 
   @JsProperty
   void setResultIndex(int resultIndex);
@@ -35,9 +37,11 @@ public interface SpeechRecognitionEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "results"
+  )
   @Nonnull
-  SpeechRecognitionResultList getResults();
+  SpeechRecognitionResultList results();
 
   @JsProperty
   void setResults(@Nonnull SpeechRecognitionResultList results);

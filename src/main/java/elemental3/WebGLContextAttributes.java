@@ -22,8 +22,10 @@ public interface WebGLContextAttributes {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAlpha();
+  @JsProperty(
+      name = "alpha"
+  )
+  boolean alpha();
 
   @JsProperty
   void setAlpha(boolean alpha);
@@ -35,8 +37,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isAntialias();
+  @JsProperty(
+      name = "antialias"
+  )
+  boolean antialias();
 
   @JsProperty
   void setAntialias(boolean antialias);
@@ -48,8 +52,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isDepth();
+  @JsProperty(
+      name = "depth"
+  )
+  boolean depth();
 
   @JsProperty
   void setDepth(boolean depth);
@@ -61,8 +67,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isDesynchronized();
+  @JsProperty(
+      name = "desynchronized"
+  )
+  boolean desynchronized();
 
   @JsProperty
   void setDesynchronized(boolean desynchronized);
@@ -74,8 +82,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isFailIfMajorPerformanceCaveat();
+  @JsProperty(
+      name = "failIfMajorPerformanceCaveat"
+  )
+  boolean failIfMajorPerformanceCaveat();
 
   @JsProperty
   void setFailIfMajorPerformanceCaveat(boolean failIfMajorPerformanceCaveat);
@@ -88,8 +98,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  String getPowerPreference();
+  @JsProperty(
+      name = "powerPreference"
+  )
+  String powerPreference();
 
   @JsProperty
   void setPowerPreference(@Nonnull String powerPreference);
@@ -101,8 +113,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isPremultipliedAlpha();
+  @JsProperty(
+      name = "premultipliedAlpha"
+  )
+  boolean premultipliedAlpha();
 
   @JsProperty
   void setPremultipliedAlpha(boolean premultipliedAlpha);
@@ -114,8 +128,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isPreserveDrawingBuffer();
+  @JsProperty(
+      name = "preserveDrawingBuffer"
+  )
+  boolean preserveDrawingBuffer();
 
   @JsProperty
   void setPreserveDrawingBuffer(boolean preserveDrawingBuffer);
@@ -127,8 +143,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isStencil();
+  @JsProperty(
+      name = "stencil"
+  )
+  boolean stencil();
 
   @JsProperty
   void setStencil(boolean stencil);
@@ -140,8 +158,10 @@ public interface WebGLContextAttributes {
     return this;
   }
 
-  @JsProperty
-  boolean isXrCompatible();
+  @JsProperty(
+      name = "xrCompatible"
+  )
+  boolean xrCompatible();
 
   @JsProperty
   void setXrCompatible(boolean xrCompatible);

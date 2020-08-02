@@ -22,9 +22,11 @@ public interface MediaElementAudioSourceOptions {
     return Js.<MediaElementAudioSourceOptions>uncheckedCast( JsPropertyMap.of() ).mediaElement( mediaElement );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "mediaElement"
+  )
   @Nonnull
-  HTMLMediaElement getMediaElement();
+  HTMLMediaElement mediaElement();
 
   @JsProperty
   void setMediaElement(@Nonnull HTMLMediaElement mediaElement);

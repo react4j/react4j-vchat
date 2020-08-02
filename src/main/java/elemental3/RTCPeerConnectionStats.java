@@ -23,8 +23,10 @@ public interface RTCPeerConnectionStats extends RTCStats {
     return Js.<RTCPeerConnectionStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type );
   }
 
-  @JsProperty
-  int getDataChannelsAccepted();
+  @JsProperty(
+      name = "dataChannelsAccepted"
+  )
+  int dataChannelsAccepted();
 
   @JsProperty
   void setDataChannelsAccepted(int dataChannelsAccepted);
@@ -36,8 +38,10 @@ public interface RTCPeerConnectionStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getDataChannelsClosed();
+  @JsProperty(
+      name = "dataChannelsClosed"
+  )
+  int dataChannelsClosed();
 
   @JsProperty
   void setDataChannelsClosed(int dataChannelsClosed);
@@ -49,8 +53,10 @@ public interface RTCPeerConnectionStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getDataChannelsOpened();
+  @JsProperty(
+      name = "dataChannelsOpened"
+  )
+  int dataChannelsOpened();
 
   @JsProperty
   void setDataChannelsOpened(int dataChannelsOpened);
@@ -62,8 +68,10 @@ public interface RTCPeerConnectionStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getDataChannelsRequested();
+  @JsProperty(
+      name = "dataChannelsRequested"
+  )
+  int dataChannelsRequested();
 
   @JsProperty
   void setDataChannelsRequested(int dataChannelsRequested);

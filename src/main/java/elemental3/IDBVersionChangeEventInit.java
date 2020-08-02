@@ -23,9 +23,11 @@ public interface IDBVersionChangeEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "newVersion"
+  )
   @Nullable
-  Double getNewVersion();
+  Double newVersion();
 
   @JsProperty
   void setNewVersion(@Nullable Double newVersion);
@@ -37,8 +39,10 @@ public interface IDBVersionChangeEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  int getOldVersion();
+  @JsProperty(
+      name = "oldVersion"
+  )
+  int oldVersion();
 
   @JsProperty
   void setOldVersion(int oldVersion);

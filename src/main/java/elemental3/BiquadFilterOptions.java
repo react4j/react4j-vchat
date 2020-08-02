@@ -22,8 +22,10 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  float getQ();
+  @JsProperty(
+      name = "Q"
+  )
+  float Q();
 
   @JsProperty
   void setQ(float Q);
@@ -35,8 +37,10 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getDetune();
+  @JsProperty(
+      name = "detune"
+  )
+  float detune();
 
   @JsProperty
   void setDetune(float detune);
@@ -48,8 +52,10 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getFrequency();
+  @JsProperty(
+      name = "frequency"
+  )
+  float frequency();
 
   @JsProperty
   void setFrequency(float frequency);
@@ -61,8 +67,10 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  float getGain();
+  @JsProperty(
+      name = "gain"
+  )
+  float gain();
 
   @JsProperty
   void setGain(float gain);
@@ -74,8 +82,10 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

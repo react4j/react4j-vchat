@@ -23,8 +23,10 @@ public interface RTCRtpContributingSource {
     return Js.<RTCRtpContributingSource>uncheckedCast( JsPropertyMap.of() ).rtpTimestamp( rtpTimestamp ).source( source ).timestamp( timestamp );
   }
 
-  @JsProperty
-  double getAudioLevel();
+  @JsProperty(
+      name = "audioLevel"
+  )
+  double audioLevel();
 
   @JsProperty
   void setAudioLevel(double audioLevel);
@@ -36,8 +38,10 @@ public interface RTCRtpContributingSource {
     return this;
   }
 
-  @JsProperty
-  int getRtpTimestamp();
+  @JsProperty(
+      name = "rtpTimestamp"
+  )
+  int rtpTimestamp();
 
   @JsProperty
   void setRtpTimestamp(int rtpTimestamp);
@@ -49,8 +53,10 @@ public interface RTCRtpContributingSource {
     return this;
   }
 
-  @JsProperty
-  int getSource();
+  @JsProperty(
+      name = "source"
+  )
+  int source();
 
   @JsProperty
   void setSource(int source);
@@ -62,8 +68,10 @@ public interface RTCRtpContributingSource {
     return this;
   }
 
-  @JsProperty
-  double getTimestamp();
+  @JsProperty(
+      name = "timestamp"
+  )
+  double timestamp();
 
   @JsProperty
   void setTimestamp(double timestamp);

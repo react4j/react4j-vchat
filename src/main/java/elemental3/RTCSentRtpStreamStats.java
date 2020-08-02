@@ -23,8 +23,10 @@ public interface RTCSentRtpStreamStats extends RTCRtpStreamStats {
     return Js.<RTCSentRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
-  @JsProperty
-  int getBytesSent();
+  @JsProperty(
+      name = "bytesSent"
+  )
+  int bytesSent();
 
   @JsProperty
   void setBytesSent(int bytesSent);
@@ -36,8 +38,10 @@ public interface RTCSentRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsSent();
+  @JsProperty(
+      name = "packetsSent"
+  )
+  int packetsSent();
 
   @JsProperty
   void setPacketsSent(int packetsSent);

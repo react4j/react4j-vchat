@@ -24,8 +24,10 @@ public interface BasePropertyIndexedKeyframe {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion getComposite();
+  @JsProperty(
+      name = "composite"
+  )
+  CompositeOperationOrAutoOrCompositeOperationOrAutoArrayUnion composite();
 
   @JsProperty
   void setComposite(
@@ -67,8 +69,10 @@ public interface BasePropertyIndexedKeyframe {
     return this;
   }
 
-  @JsProperty
-  StringOrStringArrayUnion getEasing();
+  @JsProperty(
+      name = "easing"
+  )
+  StringOrStringArrayUnion easing();
 
   @JsProperty
   void setEasing(@Nonnull StringOrStringArrayUnion easing);
@@ -109,9 +113,11 @@ public interface BasePropertyIndexedKeyframe {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "offset"
+  )
   @Nullable
-  DoubleOrDoubleArrayUnion getOffset();
+  DoubleOrDoubleArrayUnion offset();
 
   @JsProperty
   void setOffset(@Nullable DoubleOrDoubleArrayUnion offset);

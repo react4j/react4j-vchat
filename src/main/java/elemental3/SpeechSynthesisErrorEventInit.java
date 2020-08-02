@@ -23,9 +23,11 @@ public interface SpeechSynthesisErrorEventInit extends SpeechSynthesisEventInit 
     return Js.<SpeechSynthesisErrorEventInit>uncheckedCast( JsPropertyMap.of() ).utterance( utterance ).error( error );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "error"
+  )
   @Nonnull
-  String getError();
+  String error();
 
   @JsProperty
   void setError(@Nonnull String error);

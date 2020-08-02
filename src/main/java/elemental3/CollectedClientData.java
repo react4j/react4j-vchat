@@ -23,9 +23,11 @@ public interface CollectedClientData {
     return Js.<CollectedClientData>uncheckedCast( JsPropertyMap.of() ).challenge( challenge ).origin( origin ).type( type );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "challenge"
+  )
   @Nonnull
-  String getChallenge();
+  String challenge();
 
   @JsProperty
   void setChallenge(@Nonnull String challenge);
@@ -37,9 +39,11 @@ public interface CollectedClientData {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "origin"
+  )
   @Nonnull
-  String getOrigin();
+  String origin();
 
   @JsProperty
   void setOrigin(@Nonnull String origin);
@@ -51,8 +55,10 @@ public interface CollectedClientData {
     return this;
   }
 
-  @JsProperty
-  TokenBinding getTokenBinding();
+  @JsProperty(
+      name = "tokenBinding"
+  )
+  TokenBinding tokenBinding();
 
   @JsProperty
   void setTokenBinding(@Nonnull TokenBinding tokenBinding);
@@ -64,9 +70,11 @@ public interface CollectedClientData {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "type"
+  )
   @Nonnull
-  String getType();
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

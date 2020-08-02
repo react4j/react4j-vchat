@@ -23,8 +23,10 @@ public interface PasswordCredentialData extends CredentialData {
     return Js.<PasswordCredentialData>uncheckedCast( JsPropertyMap.of() ).id( id ).origin( origin ).password( password );
   }
 
-  @JsProperty
-  String getIconURL();
+  @JsProperty(
+      name = "iconURL"
+  )
+  String iconURL();
 
   @JsProperty
   void setIconURL(@Nonnull String iconURL);
@@ -36,8 +38,10 @@ public interface PasswordCredentialData extends CredentialData {
     return this;
   }
 
-  @JsProperty
-  String getName();
+  @JsProperty(
+      name = "name"
+  )
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);
@@ -49,9 +53,11 @@ public interface PasswordCredentialData extends CredentialData {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "origin"
+  )
   @Nonnull
-  String getOrigin();
+  String origin();
 
   @JsProperty
   void setOrigin(@Nonnull String origin);
@@ -63,9 +69,11 @@ public interface PasswordCredentialData extends CredentialData {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "password"
+  )
   @Nonnull
-  String getPassword();
+  String password();
 
   @JsProperty
   void setPassword(@Nonnull String password);

@@ -22,8 +22,10 @@ public interface AudioTimestamp {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getContextTime();
+  @JsProperty(
+      name = "contextTime"
+  )
+  double contextTime();
 
   @JsProperty
   void setContextTime(double contextTime);
@@ -35,8 +37,10 @@ public interface AudioTimestamp {
     return this;
   }
 
-  @JsProperty
-  double getPerformanceTime();
+  @JsProperty(
+      name = "performanceTime"
+  )
+  double performanceTime();
 
   @JsProperty
   void setPerformanceTime(double performanceTime);

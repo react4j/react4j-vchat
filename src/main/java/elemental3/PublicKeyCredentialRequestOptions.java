@@ -106,8 +106,10 @@ public interface PublicKeyCredentialRequestOptions {
     return Js.<PublicKeyCredentialRequestOptions>uncheckedCast( JsPropertyMap.of() ).challenge( challenge );
   }
 
-  @JsProperty
-  JsArray<PublicKeyCredentialDescriptor> getAllowCredentials();
+  @JsProperty(
+      name = "allowCredentials"
+  )
+  JsArray<PublicKeyCredentialDescriptor> allowCredentials();
 
   @JsProperty
   void setAllowCredentials(@Nonnull JsArray<PublicKeyCredentialDescriptor> allowCredentials);
@@ -134,9 +136,11 @@ public interface PublicKeyCredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "challenge"
+  )
   @Nonnull
-  BufferSource getChallenge();
+  BufferSource challenge();
 
   @JsProperty
   void setChallenge(@Nonnull BufferSource challenge);
@@ -292,8 +296,10 @@ public interface PublicKeyCredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  AuthenticationExtensionsClientInputs getExtensions();
+  @JsProperty(
+      name = "extensions"
+  )
+  AuthenticationExtensionsClientInputs extensions();
 
   @JsProperty
   void setExtensions(@Nonnull AuthenticationExtensionsClientInputs extensions);
@@ -306,8 +312,10 @@ public interface PublicKeyCredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  String getRpId();
+  @JsProperty(
+      name = "rpId"
+  )
+  String rpId();
 
   @JsProperty
   void setRpId(@Nonnull String rpId);
@@ -319,8 +327,10 @@ public interface PublicKeyCredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  int getTimeout();
+  @JsProperty(
+      name = "timeout"
+  )
+  int timeout();
 
   @JsProperty
   void setTimeout(int timeout);
@@ -332,8 +342,10 @@ public interface PublicKeyCredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  String getUserVerification();
+  @JsProperty(
+      name = "userVerification"
+  )
+  String userVerification();
 
   @JsProperty
   void setUserVerification(@Nonnull String userVerification);

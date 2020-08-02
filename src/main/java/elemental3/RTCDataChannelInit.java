@@ -22,8 +22,10 @@ public interface RTCDataChannelInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getId();
+  @JsProperty(
+      name = "id"
+  )
+  int id();
 
   @JsProperty
   void setId(int id);
@@ -35,8 +37,10 @@ public interface RTCDataChannelInit {
     return this;
   }
 
-  @JsProperty
-  int getMaxPacketLifeTime();
+  @JsProperty(
+      name = "maxPacketLifeTime"
+  )
+  int maxPacketLifeTime();
 
   @JsProperty
   void setMaxPacketLifeTime(int maxPacketLifeTime);
@@ -48,8 +52,10 @@ public interface RTCDataChannelInit {
     return this;
   }
 
-  @JsProperty
-  int getMaxRetransmits();
+  @JsProperty(
+      name = "maxRetransmits"
+  )
+  int maxRetransmits();
 
   @JsProperty
   void setMaxRetransmits(int maxRetransmits);
@@ -61,8 +67,10 @@ public interface RTCDataChannelInit {
     return this;
   }
 
-  @JsProperty
-  boolean isNegotiated();
+  @JsProperty(
+      name = "negotiated"
+  )
+  boolean negotiated();
 
   @JsProperty
   void setNegotiated(boolean negotiated);
@@ -74,8 +82,10 @@ public interface RTCDataChannelInit {
     return this;
   }
 
-  @JsProperty
-  boolean isOrdered();
+  @JsProperty(
+      name = "ordered"
+  )
+  boolean ordered();
 
   @JsProperty
   void setOrdered(boolean ordered);
@@ -87,8 +97,10 @@ public interface RTCDataChannelInit {
     return this;
   }
 
-  @JsProperty
-  String getProtocol();
+  @JsProperty(
+      name = "protocol"
+  )
+  String protocol();
 
   @JsProperty
   void setProtocol(@Nonnull String protocol);
@@ -100,8 +112,10 @@ public interface RTCDataChannelInit {
     return this;
   }
 
-  @JsProperty
-  String getPriority();
+  @JsProperty(
+      name = "priority"
+  )
+  String priority();
 
   @JsProperty
   void setPriority(@Nonnull String priority);

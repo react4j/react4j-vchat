@@ -22,8 +22,10 @@ public interface AudioBufferOptions {
     return Js.<AudioBufferOptions>uncheckedCast( JsPropertyMap.of() ).length( length ).sampleRate( sampleRate );
   }
 
-  @JsProperty
-  int getLength();
+  @JsProperty(
+      name = "length"
+  )
+  int length();
 
   @JsProperty
   void setLength(int length);
@@ -35,8 +37,10 @@ public interface AudioBufferOptions {
     return this;
   }
 
-  @JsProperty
-  int getNumberOfChannels();
+  @JsProperty(
+      name = "numberOfChannels"
+  )
+  int numberOfChannels();
 
   @JsProperty
   void setNumberOfChannels(int numberOfChannels);
@@ -48,8 +52,10 @@ public interface AudioBufferOptions {
     return this;
   }
 
-  @JsProperty
-  float getSampleRate();
+  @JsProperty(
+      name = "sampleRate"
+  )
+  float sampleRate();
 
   @JsProperty
   void setSampleRate(float sampleRate);

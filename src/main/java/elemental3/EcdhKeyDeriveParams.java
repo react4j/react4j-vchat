@@ -22,9 +22,11 @@ public interface EcdhKeyDeriveParams extends Algorithm {
     return Js.<EcdhKeyDeriveParams>uncheckedCast( JsPropertyMap.of() ).name( name )._public( _public );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "public"
+  )
   @Nonnull
-  CryptoKey getPublic();
+  CryptoKey _public();
 
   @JsProperty
   void setPublic(@Nonnull CryptoKey _public);

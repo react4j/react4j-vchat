@@ -22,9 +22,11 @@ public interface TableDescriptor {
     return Js.<TableDescriptor>uncheckedCast( JsPropertyMap.of() ).element( element ).initial( initial );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "element"
+  )
   @Nonnull
-  String getElement();
+  String element();
 
   @JsProperty
   void setElement(@Nonnull String element);
@@ -36,8 +38,10 @@ public interface TableDescriptor {
     return this;
   }
 
-  @JsProperty
-  int getInitial();
+  @JsProperty(
+      name = "initial"
+  )
+  int initial();
 
   @JsProperty
   void setInitial(int initial);
@@ -49,8 +53,10 @@ public interface TableDescriptor {
     return this;
   }
 
-  @JsProperty
-  int getMaximum();
+  @JsProperty(
+      name = "maximum"
+  )
+  int maximum();
 
   @JsProperty
   void setMaximum(int maximum);

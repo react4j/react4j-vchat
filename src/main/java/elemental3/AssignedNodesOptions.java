@@ -22,8 +22,10 @@ public interface AssignedNodesOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isFlatten();
+  @JsProperty(
+      name = "flatten"
+  )
+  boolean flatten();
 
   @JsProperty
   void setFlatten(boolean flatten);

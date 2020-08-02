@@ -22,8 +22,10 @@ public interface RTCLocalSessionDescriptionInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getSdp();
+  @JsProperty(
+      name = "sdp"
+  )
+  String sdp();
 
   @JsProperty
   void setSdp(@Nonnull String sdp);
@@ -35,8 +37,10 @@ public interface RTCLocalSessionDescriptionInit {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

@@ -34,9 +34,11 @@ public interface EcdsaParams extends Algorithm {
     return Js.<EcdsaParams>uncheckedCast( JsPropertyMap.of() ).name( name ).hash( hash );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "hash"
+  )
   @Nonnull
-  AlgorithmIdentifier getHash();
+  AlgorithmIdentifier hash();
 
   @JsProperty
   void setHash(@Nonnull AlgorithmIdentifier hash);

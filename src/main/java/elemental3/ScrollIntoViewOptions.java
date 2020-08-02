@@ -22,8 +22,10 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getBlock();
+  @JsProperty(
+      name = "block"
+  )
+  String block();
 
   @JsProperty
   void setBlock(@Nonnull String block);
@@ -35,8 +37,10 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
     return this;
   }
 
-  @JsProperty
-  String getInline();
+  @JsProperty(
+      name = "inline"
+  )
+  String inline();
 
   @JsProperty
   void setInline(@Nonnull String inline);

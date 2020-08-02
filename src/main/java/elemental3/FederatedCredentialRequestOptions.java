@@ -23,8 +23,10 @@ public interface FederatedCredentialRequestOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<String> getProtocols();
+  @JsProperty(
+      name = "protocols"
+  )
+  JsArray<String> protocols();
 
   @JsProperty
   void setProtocols(@Nonnull JsArray<String> protocols);
@@ -48,8 +50,10 @@ public interface FederatedCredentialRequestOptions {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getProviders();
+  @JsProperty(
+      name = "providers"
+  )
+  JsArray<String> providers();
 
   @JsProperty
   void setProviders(@Nonnull JsArray<String> providers);

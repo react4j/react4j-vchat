@@ -23,8 +23,10 @@ public interface DeviceOrientationEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAbsolute();
+  @JsProperty(
+      name = "absolute"
+  )
+  boolean absolute();
 
   @JsProperty
   void setAbsolute(boolean absolute);
@@ -36,9 +38,11 @@ public interface DeviceOrientationEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "alpha"
+  )
   @Nullable
-  Double getAlpha();
+  Double alpha();
 
   @JsProperty
   void setAlpha(@Nullable Double alpha);
@@ -50,9 +54,11 @@ public interface DeviceOrientationEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "beta"
+  )
   @Nullable
-  Double getBeta();
+  Double beta();
 
   @JsProperty
   void setBeta(@Nullable Double beta);
@@ -64,9 +70,11 @@ public interface DeviceOrientationEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "gamma"
+  )
   @Nullable
-  Double getGamma();
+  Double gamma();
 
   @JsProperty
   void setGamma(@Nullable Double gamma);

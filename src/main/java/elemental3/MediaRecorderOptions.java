@@ -22,8 +22,10 @@ public interface MediaRecorderOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getAudioBitrateMode();
+  @JsProperty(
+      name = "audioBitrateMode"
+  )
+  String audioBitrateMode();
 
   @JsProperty
   void setAudioBitrateMode(@Nonnull String audioBitrateMode);
@@ -35,8 +37,10 @@ public interface MediaRecorderOptions {
     return this;
   }
 
-  @JsProperty
-  int getAudioBitsPerSecond();
+  @JsProperty(
+      name = "audioBitsPerSecond"
+  )
+  int audioBitsPerSecond();
 
   @JsProperty
   void setAudioBitsPerSecond(int audioBitsPerSecond);
@@ -48,8 +52,10 @@ public interface MediaRecorderOptions {
     return this;
   }
 
-  @JsProperty
-  int getBitsPerSecond();
+  @JsProperty(
+      name = "bitsPerSecond"
+  )
+  int bitsPerSecond();
 
   @JsProperty
   void setBitsPerSecond(int bitsPerSecond);
@@ -61,8 +67,10 @@ public interface MediaRecorderOptions {
     return this;
   }
 
-  @JsProperty
-  String getMimeType();
+  @JsProperty(
+      name = "mimeType"
+  )
+  String mimeType();
 
   @JsProperty
   void setMimeType(@Nonnull String mimeType);
@@ -74,8 +82,10 @@ public interface MediaRecorderOptions {
     return this;
   }
 
-  @JsProperty
-  int getVideoBitsPerSecond();
+  @JsProperty(
+      name = "videoBitsPerSecond"
+  )
+  int videoBitsPerSecond();
 
   @JsProperty
   void setVideoBitsPerSecond(int videoBitsPerSecond);

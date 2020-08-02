@@ -22,8 +22,10 @@ public interface AuthenticatorSelectionCriteria {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getAuthenticatorAttachment();
+  @JsProperty(
+      name = "authenticatorAttachment"
+  )
+  String authenticatorAttachment();
 
   @JsProperty
   void setAuthenticatorAttachment(@Nonnull String authenticatorAttachment);
@@ -36,8 +38,10 @@ public interface AuthenticatorSelectionCriteria {
     return this;
   }
 
-  @JsProperty
-  boolean isRequireResidentKey();
+  @JsProperty(
+      name = "requireResidentKey"
+  )
+  boolean requireResidentKey();
 
   @JsProperty
   void setRequireResidentKey(boolean requireResidentKey);
@@ -49,8 +53,10 @@ public interface AuthenticatorSelectionCriteria {
     return this;
   }
 
-  @JsProperty
-  String getUserVerification();
+  @JsProperty(
+      name = "userVerification"
+  )
+  String userVerification();
 
   @JsProperty
   void setUserVerification(@Nonnull String userVerification);

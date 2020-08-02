@@ -24,9 +24,11 @@ public interface RTCMediaSourceStats extends RTCStats {
     return Js.<RTCMediaSourceStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).trackIdentifier( trackIdentifier );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "kind"
+  )
   @Nonnull
-  String getKind();
+  String kind();
 
   @JsProperty
   void setKind(@Nonnull String kind);
@@ -38,8 +40,10 @@ public interface RTCMediaSourceStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  boolean isRelayedSource();
+  @JsProperty(
+      name = "relayedSource"
+  )
+  boolean relayedSource();
 
   @JsProperty
   void setRelayedSource(boolean relayedSource);
@@ -51,9 +55,11 @@ public interface RTCMediaSourceStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "trackIdentifier"
+  )
   @Nonnull
-  String getTrackIdentifier();
+  String trackIdentifier();
 
   @JsProperty
   void setTrackIdentifier(@Nonnull String trackIdentifier);

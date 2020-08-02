@@ -22,8 +22,10 @@ public interface ULongRange {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getMax();
+  @JsProperty(
+      name = "max"
+  )
+  int max();
 
   @JsProperty
   void setMax(int max);
@@ -35,8 +37,10 @@ public interface ULongRange {
     return this;
   }
 
-  @JsProperty
-  int getMin();
+  @JsProperty(
+      name = "min"
+  )
+  int min();
 
   @JsProperty
   void setMin(int min);

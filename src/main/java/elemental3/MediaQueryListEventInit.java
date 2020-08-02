@@ -22,8 +22,10 @@ public interface MediaQueryListEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isMatches();
+  @JsProperty(
+      name = "matches"
+  )
+  boolean matches();
 
   @JsProperty
   void setMatches(boolean matches);
@@ -35,8 +37,10 @@ public interface MediaQueryListEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getMedia();
+  @JsProperty(
+      name = "media"
+  )
+  String media();
 
   @JsProperty
   void setMedia(@Nonnull String media);

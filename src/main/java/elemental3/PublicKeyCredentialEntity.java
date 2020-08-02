@@ -22,8 +22,10 @@ public interface PublicKeyCredentialEntity {
     return Js.<PublicKeyCredentialEntity>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  String getIcon();
+  @JsProperty(
+      name = "icon"
+  )
+  String icon();
 
   @JsProperty
   void setIcon(@Nonnull String icon);
@@ -35,9 +37,11 @@ public interface PublicKeyCredentialEntity {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "name"
+  )
   @Nonnull
-  String getName();
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);

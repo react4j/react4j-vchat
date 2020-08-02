@@ -23,8 +23,10 @@ public interface RTCMediaHandlerStats extends RTCStats {
     return Js.<RTCMediaHandlerStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
-  @JsProperty
-  boolean isEnded();
+  @JsProperty(
+      name = "ended"
+  )
+  boolean ended();
 
   @JsProperty
   void setEnded(boolean ended);
@@ -36,9 +38,11 @@ public interface RTCMediaHandlerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "kind"
+  )
   @Nonnull
-  String getKind();
+  String kind();
 
   @JsProperty
   void setKind(@Nonnull String kind);
@@ -50,8 +54,10 @@ public interface RTCMediaHandlerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getTrackIdentifier();
+  @JsProperty(
+      name = "trackIdentifier"
+  )
+  String trackIdentifier();
 
   @JsProperty
   void setTrackIdentifier(@Nonnull String trackIdentifier);
@@ -63,8 +69,10 @@ public interface RTCMediaHandlerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getPriority();
+  @JsProperty(
+      name = "priority"
+  )
+  String priority();
 
   @JsProperty
   void setPriority(@Nonnull String priority);
@@ -76,8 +84,10 @@ public interface RTCMediaHandlerStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  boolean isRemoteSource();
+  @JsProperty(
+      name = "remoteSource"
+  )
+  boolean remoteSource();
 
   @JsProperty
   void setRemoteSource(boolean remoteSource);

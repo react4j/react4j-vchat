@@ -22,8 +22,10 @@ public interface IDBDatabaseInfo {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getName();
+  @JsProperty(
+      name = "name"
+  )
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);
@@ -35,8 +37,10 @@ public interface IDBDatabaseInfo {
     return this;
   }
 
-  @JsProperty
-  int getVersion();
+  @JsProperty(
+      name = "version"
+  )
+  int version();
 
   @JsProperty
   void setVersion(int version);

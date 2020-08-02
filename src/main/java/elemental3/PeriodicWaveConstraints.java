@@ -22,8 +22,10 @@ public interface PeriodicWaveConstraints {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isDisableNormalization();
+  @JsProperty(
+      name = "disableNormalization"
+  )
+  boolean disableNormalization();
 
   @JsProperty
   void setDisableNormalization(boolean disableNormalization);

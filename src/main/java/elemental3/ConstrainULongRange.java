@@ -22,8 +22,10 @@ public interface ConstrainULongRange extends ULongRange {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  int getExact();
+  @JsProperty(
+      name = "exact"
+  )
+  int exact();
 
   @JsProperty
   void setExact(int exact);
@@ -35,8 +37,10 @@ public interface ConstrainULongRange extends ULongRange {
     return this;
   }
 
-  @JsProperty
-  int getIdeal();
+  @JsProperty(
+      name = "ideal"
+  )
+  int ideal();
 
   @JsProperty
   void setIdeal(int ideal);

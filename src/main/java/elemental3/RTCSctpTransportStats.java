@@ -23,8 +23,10 @@ public interface RTCSctpTransportStats extends RTCStats {
     return Js.<RTCSctpTransportStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type );
   }
 
-  @JsProperty
-  int getCongestionWindow();
+  @JsProperty(
+      name = "congestionWindow"
+  )
+  int congestionWindow();
 
   @JsProperty
   void setCongestionWindow(int congestionWindow);
@@ -36,8 +38,10 @@ public interface RTCSctpTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getMtu();
+  @JsProperty(
+      name = "mtu"
+  )
+  int mtu();
 
   @JsProperty
   void setMtu(int mtu);
@@ -49,8 +53,10 @@ public interface RTCSctpTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getReceiverWindow();
+  @JsProperty(
+      name = "receiverWindow"
+  )
+  int receiverWindow();
 
   @JsProperty
   void setReceiverWindow(int receiverWindow);
@@ -62,8 +68,10 @@ public interface RTCSctpTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getSmoothedRoundTripTime();
+  @JsProperty(
+      name = "smoothedRoundTripTime"
+  )
+  double smoothedRoundTripTime();
 
   @JsProperty
   void setSmoothedRoundTripTime(double smoothedRoundTripTime);
@@ -75,8 +83,10 @@ public interface RTCSctpTransportStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getUnackData();
+  @JsProperty(
+      name = "unackData"
+  )
+  int unackData();
 
   @JsProperty
   void setUnackData(int unackData);

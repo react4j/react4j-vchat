@@ -22,8 +22,10 @@ public interface ClientQueryOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isIncludeUncontrolled();
+  @JsProperty(
+      name = "includeUncontrolled"
+  )
+  boolean includeUncontrolled();
 
   @JsProperty
   void setIncludeUncontrolled(boolean includeUncontrolled);
@@ -35,8 +37,10 @@ public interface ClientQueryOptions {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

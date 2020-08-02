@@ -23,8 +23,10 @@ public interface PerformanceObserverInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isBuffered();
+  @JsProperty(
+      name = "buffered"
+  )
+  boolean buffered();
 
   @JsProperty
   void setBuffered(boolean buffered);
@@ -36,8 +38,10 @@ public interface PerformanceObserverInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getEntryTypes();
+  @JsProperty(
+      name = "entryTypes"
+  )
+  JsArray<String> entryTypes();
 
   @JsProperty
   void setEntryTypes(@Nonnull JsArray<String> entryTypes);
@@ -61,8 +65,10 @@ public interface PerformanceObserverInit {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

@@ -24,8 +24,10 @@ public interface RTCCodecStats extends RTCStats {
     return Js.<RTCCodecStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).mimeType( mimeType ).payloadType( payloadType ).transportId( transportId );
   }
 
-  @JsProperty
-  int getChannels();
+  @JsProperty(
+      name = "channels"
+  )
+  int channels();
 
   @JsProperty
   void setChannels(int channels);
@@ -37,8 +39,10 @@ public interface RTCCodecStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getClockRate();
+  @JsProperty(
+      name = "clockRate"
+  )
+  int clockRate();
 
   @JsProperty
   void setClockRate(int clockRate);
@@ -50,8 +54,10 @@ public interface RTCCodecStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getCodecType();
+  @JsProperty(
+      name = "codecType"
+  )
+  String codecType();
 
   @JsProperty
   void setCodecType(@Nonnull String codecType);
@@ -63,9 +69,11 @@ public interface RTCCodecStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "mimeType"
+  )
   @Nonnull
-  String getMimeType();
+  String mimeType();
 
   @JsProperty
   void setMimeType(@Nonnull String mimeType);
@@ -77,8 +85,10 @@ public interface RTCCodecStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  int getPayloadType();
+  @JsProperty(
+      name = "payloadType"
+  )
+  int payloadType();
 
   @JsProperty
   void setPayloadType(int payloadType);
@@ -90,8 +100,10 @@ public interface RTCCodecStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getSdpFmtpLine();
+  @JsProperty(
+      name = "sdpFmtpLine"
+  )
+  String sdpFmtpLine();
 
   @JsProperty
   void setSdpFmtpLine(@Nonnull String sdpFmtpLine);
@@ -103,9 +115,11 @@ public interface RTCCodecStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "transportId"
+  )
   @Nonnull
-  String getTransportId();
+  String transportId();
 
   @JsProperty
   void setTransportId(@Nonnull String transportId);
@@ -117,8 +131,10 @@ public interface RTCCodecStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getImplementation();
+  @JsProperty(
+      name = "implementation"
+  )
+  String implementation();
 
   @JsProperty
   void setImplementation(@Nonnull String implementation);

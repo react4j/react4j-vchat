@@ -23,9 +23,11 @@ public interface StaticRangeInit {
     return Js.<StaticRangeInit>uncheckedCast( JsPropertyMap.of() ).endContainer( endContainer ).endOffset( endOffset ).startContainer( startContainer ).startOffset( startOffset );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "endContainer"
+  )
   @Nonnull
-  Node getEndContainer();
+  Node endContainer();
 
   @JsProperty
   void setEndContainer(@Nonnull Node endContainer);
@@ -37,8 +39,10 @@ public interface StaticRangeInit {
     return this;
   }
 
-  @JsProperty
-  int getEndOffset();
+  @JsProperty(
+      name = "endOffset"
+  )
+  int endOffset();
 
   @JsProperty
   void setEndOffset(int endOffset);
@@ -50,9 +54,11 @@ public interface StaticRangeInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "startContainer"
+  )
   @Nonnull
-  Node getStartContainer();
+  Node startContainer();
 
   @JsProperty
   void setStartContainer(@Nonnull Node startContainer);
@@ -64,8 +70,10 @@ public interface StaticRangeInit {
     return this;
   }
 
-  @JsProperty
-  int getStartOffset();
+  @JsProperty(
+      name = "startOffset"
+  )
+  int startOffset();
 
   @JsProperty
   void setStartOffset(int startOffset);

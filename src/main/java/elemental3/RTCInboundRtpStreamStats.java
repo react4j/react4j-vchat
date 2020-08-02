@@ -24,8 +24,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return Js.<RTCInboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc ).receiverId( receiverId );
   }
 
-  @JsProperty
-  double getAudioLevel();
+  @JsProperty(
+      name = "audioLevel"
+  )
+  double audioLevel();
 
   @JsProperty
   void setAudioLevel(double audioLevel);
@@ -37,8 +39,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getAverageRtcpInterval();
+  @JsProperty(
+      name = "averageRtcpInterval"
+  )
+  double averageRtcpInterval();
 
   @JsProperty
   void setAverageRtcpInterval(double averageRtcpInterval);
@@ -50,8 +54,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getBytesReceived();
+  @JsProperty(
+      name = "bytesReceived"
+  )
+  int bytesReceived();
 
   @JsProperty
   void setBytesReceived(int bytesReceived);
@@ -63,8 +69,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getConcealedSamples();
+  @JsProperty(
+      name = "concealedSamples"
+  )
+  int concealedSamples();
 
   @JsProperty
   void setConcealedSamples(int concealedSamples);
@@ -76,8 +84,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getConcealmentEvents();
+  @JsProperty(
+      name = "concealmentEvents"
+  )
+  int concealmentEvents();
 
   @JsProperty
   void setConcealmentEvents(int concealmentEvents);
@@ -89,8 +99,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getDecoderImplementation();
+  @JsProperty(
+      name = "decoderImplementation"
+  )
+  String decoderImplementation();
 
   @JsProperty
   void setDecoderImplementation(@Nonnull String decoderImplementation);
@@ -103,8 +115,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getEstimatedPlayoutTimestamp();
+  @JsProperty(
+      name = "estimatedPlayoutTimestamp"
+  )
+  double estimatedPlayoutTimestamp();
 
   @JsProperty
   void setEstimatedPlayoutTimestamp(double estimatedPlayoutTimestamp);
@@ -117,8 +131,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFecPacketsDiscarded();
+  @JsProperty(
+      name = "fecPacketsDiscarded"
+  )
+  int fecPacketsDiscarded();
 
   @JsProperty
   void setFecPacketsDiscarded(int fecPacketsDiscarded);
@@ -130,8 +146,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFecPacketsReceived();
+  @JsProperty(
+      name = "fecPacketsReceived"
+  )
+  int fecPacketsReceived();
 
   @JsProperty
   void setFecPacketsReceived(int fecPacketsReceived);
@@ -143,8 +161,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFirCount();
+  @JsProperty(
+      name = "firCount"
+  )
+  int firCount();
 
   @JsProperty
   void setFirCount(int firCount);
@@ -156,8 +176,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFrameBitDepth();
+  @JsProperty(
+      name = "frameBitDepth"
+  )
+  int frameBitDepth();
 
   @JsProperty
   void setFrameBitDepth(int frameBitDepth);
@@ -169,8 +191,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFrameHeight();
+  @JsProperty(
+      name = "frameHeight"
+  )
+  int frameHeight();
 
   @JsProperty
   void setFrameHeight(int frameHeight);
@@ -182,8 +206,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFrameWidth();
+  @JsProperty(
+      name = "frameWidth"
+  )
+  int frameWidth();
 
   @JsProperty
   void setFrameWidth(int frameWidth);
@@ -195,8 +221,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesDecoded();
+  @JsProperty(
+      name = "framesDecoded"
+  )
+  int framesDecoded();
 
   @JsProperty
   void setFramesDecoded(int framesDecoded);
@@ -208,8 +236,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getFramesPerSecond();
+  @JsProperty(
+      name = "framesPerSecond"
+  )
+  double framesPerSecond();
 
   @JsProperty
   void setFramesPerSecond(double framesPerSecond);
@@ -221,8 +251,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesReceived();
+  @JsProperty(
+      name = "framesReceived"
+  )
+  int framesReceived();
 
   @JsProperty
   void setFramesReceived(int framesReceived);
@@ -234,8 +266,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getHeaderBytesReceived();
+  @JsProperty(
+      name = "headerBytesReceived"
+  )
+  int headerBytesReceived();
 
   @JsProperty
   void setHeaderBytesReceived(int headerBytesReceived);
@@ -247,8 +281,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getInsertedSamplesForDeceleration();
+  @JsProperty(
+      name = "insertedSamplesForDeceleration"
+  )
+  int insertedSamplesForDeceleration();
 
   @JsProperty
   void setInsertedSamplesForDeceleration(int insertedSamplesForDeceleration);
@@ -261,8 +297,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getJitterBufferDelay();
+  @JsProperty(
+      name = "jitterBufferDelay"
+  )
+  double jitterBufferDelay();
 
   @JsProperty
   void setJitterBufferDelay(double jitterBufferDelay);
@@ -274,8 +312,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getJitterBufferEmittedCount();
+  @JsProperty(
+      name = "jitterBufferEmittedCount"
+  )
+  int jitterBufferEmittedCount();
 
   @JsProperty
   void setJitterBufferEmittedCount(int jitterBufferEmittedCount);
@@ -287,8 +327,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getKeyFramesDecoded();
+  @JsProperty(
+      name = "keyFramesDecoded"
+  )
+  int keyFramesDecoded();
 
   @JsProperty
   void setKeyFramesDecoded(int keyFramesDecoded);
@@ -300,8 +342,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getLastPacketReceivedTimestamp();
+  @JsProperty(
+      name = "lastPacketReceivedTimestamp"
+  )
+  double lastPacketReceivedTimestamp();
 
   @JsProperty
   void setLastPacketReceivedTimestamp(double lastPacketReceivedTimestamp);
@@ -314,8 +358,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getNackCount();
+  @JsProperty(
+      name = "nackCount"
+  )
+  int nackCount();
 
   @JsProperty
   void setNackCount(int nackCount);
@@ -327,8 +373,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsDuplicated();
+  @JsProperty(
+      name = "packetsDuplicated"
+  )
+  int packetsDuplicated();
 
   @JsProperty
   void setPacketsDuplicated(int packetsDuplicated);
@@ -340,8 +388,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsFailedDecryption();
+  @JsProperty(
+      name = "packetsFailedDecryption"
+  )
+  int packetsFailedDecryption();
 
   @JsProperty
   void setPacketsFailedDecryption(int packetsFailedDecryption);
@@ -353,8 +403,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getPerDscpPacketsReceived();
+  @JsProperty(
+      name = "perDscpPacketsReceived"
+  )
+  JsPropertyMap<Double> perDscpPacketsReceived();
 
   @JsProperty
   void setPerDscpPacketsReceived(@Nonnull JsPropertyMap<Double> perDscpPacketsReceived);
@@ -367,8 +419,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPliCount();
+  @JsProperty(
+      name = "pliCount"
+  )
+  int pliCount();
 
   @JsProperty
   void setPliCount(int pliCount);
@@ -380,8 +434,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getQpSum();
+  @JsProperty(
+      name = "qpSum"
+  )
+  int qpSum();
 
   @JsProperty
   void setQpSum(int qpSum);
@@ -393,9 +449,11 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "receiverId"
+  )
   @Nonnull
-  String getReceiverId();
+  String receiverId();
 
   @JsProperty
   void setReceiverId(@Nonnull String receiverId);
@@ -407,8 +465,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getRemoteId();
+  @JsProperty(
+      name = "remoteId"
+  )
+  String remoteId();
 
   @JsProperty
   void setRemoteId(@Nonnull String remoteId);
@@ -420,8 +480,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getRemovedSamplesForAcceleration();
+  @JsProperty(
+      name = "removedSamplesForAcceleration"
+  )
+  int removedSamplesForAcceleration();
 
   @JsProperty
   void setRemovedSamplesForAcceleration(int removedSamplesForAcceleration);
@@ -434,8 +496,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getSamplesDecodedWithCelt();
+  @JsProperty(
+      name = "samplesDecodedWithCelt"
+  )
+  int samplesDecodedWithCelt();
 
   @JsProperty
   void setSamplesDecodedWithCelt(int samplesDecodedWithCelt);
@@ -447,8 +511,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getSamplesDecodedWithSilk();
+  @JsProperty(
+      name = "samplesDecodedWithSilk"
+  )
+  int samplesDecodedWithSilk();
 
   @JsProperty
   void setSamplesDecodedWithSilk(int samplesDecodedWithSilk);
@@ -460,8 +526,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getSilentConcealedSamples();
+  @JsProperty(
+      name = "silentConcealedSamples"
+  )
+  int silentConcealedSamples();
 
   @JsProperty
   void setSilentConcealedSamples(int silentConcealedSamples);
@@ -473,8 +541,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getSliCount();
+  @JsProperty(
+      name = "sliCount"
+  )
+  int sliCount();
 
   @JsProperty
   void setSliCount(int sliCount);
@@ -486,8 +556,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalAudioEnergy();
+  @JsProperty(
+      name = "totalAudioEnergy"
+  )
+  double totalAudioEnergy();
 
   @JsProperty
   void setTotalAudioEnergy(double totalAudioEnergy);
@@ -499,8 +571,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalDecodeTime();
+  @JsProperty(
+      name = "totalDecodeTime"
+  )
+  double totalDecodeTime();
 
   @JsProperty
   void setTotalDecodeTime(double totalDecodeTime);
@@ -512,8 +586,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalInterFrameDelay();
+  @JsProperty(
+      name = "totalInterFrameDelay"
+  )
+  double totalInterFrameDelay();
 
   @JsProperty
   void setTotalInterFrameDelay(double totalInterFrameDelay);
@@ -525,8 +601,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalSamplesDuration();
+  @JsProperty(
+      name = "totalSamplesDuration"
+  )
+  double totalSamplesDuration();
 
   @JsProperty
   void setTotalSamplesDuration(double totalSamplesDuration);
@@ -538,8 +616,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getTotalSamplesReceived();
+  @JsProperty(
+      name = "totalSamplesReceived"
+  )
+  int totalSamplesReceived();
 
   @JsProperty
   void setTotalSamplesReceived(int totalSamplesReceived);
@@ -551,8 +631,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getTotalSquaredInterFrameDelay();
+  @JsProperty(
+      name = "totalSquaredInterFrameDelay"
+  )
+  double totalSquaredInterFrameDelay();
 
   @JsProperty
   void setTotalSquaredInterFrameDelay(double totalSquaredInterFrameDelay);
@@ -565,8 +647,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  boolean isVoiceActivityFlag();
+  @JsProperty(
+      name = "voiceActivityFlag"
+  )
+  boolean voiceActivityFlag();
 
   @JsProperty
   void setVoiceActivityFlag(boolean voiceActivityFlag);
@@ -578,8 +662,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getFractionLost();
+  @JsProperty(
+      name = "fractionLost"
+  )
+  double fractionLost();
 
   @JsProperty
   void setFractionLost(double fractionLost);
@@ -591,8 +677,10 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  String getTrackId();
+  @JsProperty(
+      name = "trackId"
+  )
+  String trackId();
 
   @JsProperty
   void setTrackId(@Nonnull String trackId);

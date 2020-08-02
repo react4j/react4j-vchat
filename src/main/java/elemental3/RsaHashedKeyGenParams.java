@@ -38,9 +38,11 @@ public interface RsaHashedKeyGenParams extends RsaKeyGenParams {
     return Js.<RsaHashedKeyGenParams>uncheckedCast( JsPropertyMap.of() ).name( name ).modulusLength( modulusLength ).publicExponent( publicExponent ).hash( hash );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "hash"
+  )
   @Nonnull
-  AlgorithmIdentifier getHash();
+  AlgorithmIdentifier hash();
 
   @JsProperty
   void setHash(@Nonnull AlgorithmIdentifier hash);

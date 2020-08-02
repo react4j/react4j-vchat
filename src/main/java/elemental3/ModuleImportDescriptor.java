@@ -23,9 +23,11 @@ public interface ModuleImportDescriptor {
     return Js.<ModuleImportDescriptor>uncheckedCast( JsPropertyMap.of() ).kind( kind ).module( module ).name( name );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "kind"
+  )
   @Nonnull
-  String getKind();
+  String kind();
 
   @JsProperty
   void setKind(@Nonnull String kind);
@@ -37,9 +39,11 @@ public interface ModuleImportDescriptor {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "module"
+  )
   @Nonnull
-  String getModule();
+  String module();
 
   @JsProperty
   void setModule(@Nonnull String module);
@@ -51,9 +55,11 @@ public interface ModuleImportDescriptor {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "name"
+  )
   @Nonnull
-  String getName();
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);

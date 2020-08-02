@@ -22,8 +22,10 @@ public interface NotificationEventInit extends ExtendableEventInit {
     return Js.<NotificationEventInit>uncheckedCast( JsPropertyMap.of() ).notification( notification );
   }
 
-  @JsProperty
-  String getAction();
+  @JsProperty(
+      name = "action"
+  )
+  String action();
 
   @JsProperty
   void setAction(@Nonnull String action);
@@ -35,9 +37,11 @@ public interface NotificationEventInit extends ExtendableEventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "notification"
+  )
   @Nonnull
-  Notification getNotification();
+  Notification notification();
 
   @JsProperty
   void setNotification(@Nonnull Notification notification);

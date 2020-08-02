@@ -24,9 +24,11 @@ public interface RTCTrackEventInit extends EventInit {
     return Js.<RTCTrackEventInit>uncheckedCast( JsPropertyMap.of() ).receiver( receiver ).track( track ).transceiver( transceiver );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "receiver"
+  )
   @Nonnull
-  RTCRtpReceiver getReceiver();
+  RTCRtpReceiver receiver();
 
   @JsProperty
   void setReceiver(@Nonnull RTCRtpReceiver receiver);
@@ -38,8 +40,10 @@ public interface RTCTrackEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<MediaStream> getStreams();
+  @JsProperty(
+      name = "streams"
+  )
+  JsArray<MediaStream> streams();
 
   @JsProperty
   void setStreams(@Nonnull JsArray<MediaStream> streams);
@@ -63,9 +67,11 @@ public interface RTCTrackEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "track"
+  )
   @Nonnull
-  MediaStreamTrack getTrack();
+  MediaStreamTrack track();
 
   @JsProperty
   void setTrack(@Nonnull MediaStreamTrack track);
@@ -77,9 +83,11 @@ public interface RTCTrackEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "transceiver"
+  )
   @Nonnull
-  RTCRtpTransceiver getTransceiver();
+  RTCRtpTransceiver transceiver();
 
   @JsProperty
   void setTransceiver(@Nonnull RTCRtpTransceiver transceiver);

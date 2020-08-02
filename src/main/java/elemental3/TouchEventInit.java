@@ -24,8 +24,10 @@ public interface TouchEventInit extends EventModifierInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<Touch> getChangedTouches();
+  @JsProperty(
+      name = "changedTouches"
+  )
+  JsArray<Touch> changedTouches();
 
   @JsProperty
   void setChangedTouches(@Nonnull JsArray<Touch> changedTouches);
@@ -49,8 +51,10 @@ public interface TouchEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<Touch> getTargetTouches();
+  @JsProperty(
+      name = "targetTouches"
+  )
+  JsArray<Touch> targetTouches();
 
   @JsProperty
   void setTargetTouches(@Nonnull JsArray<Touch> targetTouches);
@@ -74,8 +78,10 @@ public interface TouchEventInit extends EventModifierInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<Touch> getTouches();
+  @JsProperty(
+      name = "touches"
+  )
+  JsArray<Touch> touches();
 
   @JsProperty
   void setTouches(@Nonnull JsArray<Touch> touches);

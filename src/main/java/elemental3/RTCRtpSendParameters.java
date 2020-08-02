@@ -93,9 +93,11 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
     return Js.<RTCRtpSendParameters>uncheckedCast( JsPropertyMap.of() ).codecs( codecs ).headerExtensions( headerExtensions ).rtcp( rtcp ).encodings( encodings ).transactionId( transactionId );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "encodings"
+  )
   @Nonnull
-  JsArray<RTCRtpEncodingParameters> getEncodings();
+  JsArray<RTCRtpEncodingParameters> encodings();
 
   @JsProperty
   void setEncodings(@Nonnull JsArray<RTCRtpEncodingParameters> encodings);
@@ -120,9 +122,11 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "transactionId"
+  )
   @Nonnull
-  String getTransactionId();
+  String transactionId();
 
   @JsProperty
   void setTransactionId(@Nonnull String transactionId);

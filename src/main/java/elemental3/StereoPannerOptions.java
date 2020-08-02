@@ -22,8 +22,10 @@ public interface StereoPannerOptions extends AudioNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  float getPan();
+  @JsProperty(
+      name = "pan"
+  )
+  float pan();
 
   @JsProperty
   void setPan(float pan);

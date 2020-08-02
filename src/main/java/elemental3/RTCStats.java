@@ -23,9 +23,11 @@ public interface RTCStats {
     return Js.<RTCStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "id"
+  )
   @Nonnull
-  String getId();
+  String id();
 
   @JsProperty
   void setId(@Nonnull String id);
@@ -37,8 +39,10 @@ public interface RTCStats {
     return this;
   }
 
-  @JsProperty
-  double getTimestamp();
+  @JsProperty(
+      name = "timestamp"
+  )
+  double timestamp();
 
   @JsProperty
   void setTimestamp(double timestamp);
@@ -50,9 +54,11 @@ public interface RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "type"
+  )
   @Nonnull
-  String getType();
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);

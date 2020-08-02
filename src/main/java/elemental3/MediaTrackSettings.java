@@ -22,8 +22,10 @@ public interface MediaTrackSettings {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getAspectRatio();
+  @JsProperty(
+      name = "aspectRatio"
+  )
+  double aspectRatio();
 
   @JsProperty
   void setAspectRatio(double aspectRatio);
@@ -35,8 +37,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  boolean isAutoGainControl();
+  @JsProperty(
+      name = "autoGainControl"
+  )
+  boolean autoGainControl();
 
   @JsProperty
   void setAutoGainControl(boolean autoGainControl);
@@ -48,8 +52,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  int getChannelCount();
+  @JsProperty(
+      name = "channelCount"
+  )
+  int channelCount();
 
   @JsProperty
   void setChannelCount(int channelCount);
@@ -61,8 +67,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  String getDeviceId();
+  @JsProperty(
+      name = "deviceId"
+  )
+  String deviceId();
 
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
@@ -74,8 +82,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  boolean isEchoCancellation();
+  @JsProperty(
+      name = "echoCancellation"
+  )
+  boolean echoCancellation();
 
   @JsProperty
   void setEchoCancellation(boolean echoCancellation);
@@ -87,8 +97,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  String getFacingMode();
+  @JsProperty(
+      name = "facingMode"
+  )
+  String facingMode();
 
   @JsProperty
   void setFacingMode(@Nonnull String facingMode);
@@ -100,8 +112,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  double getFrameRate();
+  @JsProperty(
+      name = "frameRate"
+  )
+  double frameRate();
 
   @JsProperty
   void setFrameRate(double frameRate);
@@ -113,8 +127,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  String getGroupId();
+  @JsProperty(
+      name = "groupId"
+  )
+  String groupId();
 
   @JsProperty
   void setGroupId(@Nonnull String groupId);
@@ -126,8 +142,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  int getHeight();
+  @JsProperty(
+      name = "height"
+  )
+  int height();
 
   @JsProperty
   void setHeight(int height);
@@ -139,8 +157,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  double getLatency();
+  @JsProperty(
+      name = "latency"
+  )
+  double latency();
 
   @JsProperty
   void setLatency(double latency);
@@ -152,8 +172,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  boolean isNoiseSuppression();
+  @JsProperty(
+      name = "noiseSuppression"
+  )
+  boolean noiseSuppression();
 
   @JsProperty
   void setNoiseSuppression(boolean noiseSuppression);
@@ -165,8 +187,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  String getResizeMode();
+  @JsProperty(
+      name = "resizeMode"
+  )
+  String resizeMode();
 
   @JsProperty
   void setResizeMode(@Nonnull String resizeMode);
@@ -178,8 +202,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  int getSampleRate();
+  @JsProperty(
+      name = "sampleRate"
+  )
+  int sampleRate();
 
   @JsProperty
   void setSampleRate(int sampleRate);
@@ -191,8 +217,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  int getSampleSize();
+  @JsProperty(
+      name = "sampleSize"
+  )
+  int sampleSize();
 
   @JsProperty
   void setSampleSize(int sampleSize);
@@ -204,8 +232,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  int getWidth();
+  @JsProperty(
+      name = "width"
+  )
+  int width();
 
   @JsProperty
   void setWidth(int width);
@@ -217,8 +247,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  String getCursor();
+  @JsProperty(
+      name = "cursor"
+  )
+  String cursor();
 
   @JsProperty
   void setCursor(@Nonnull String cursor);
@@ -230,8 +262,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  String getDisplaySurface();
+  @JsProperty(
+      name = "displaySurface"
+  )
+  String displaySurface();
 
   @JsProperty
   void setDisplaySurface(@Nonnull String displaySurface);
@@ -243,8 +277,10 @@ public interface MediaTrackSettings {
     return this;
   }
 
-  @JsProperty
-  boolean isLogicalSurface();
+  @JsProperty(
+      name = "logicalSurface"
+  )
+  boolean logicalSurface();
 
   @JsProperty
   void setLogicalSurface(boolean logicalSurface);

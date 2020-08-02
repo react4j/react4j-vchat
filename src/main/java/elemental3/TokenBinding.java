@@ -22,8 +22,10 @@ public interface TokenBinding {
     return Js.<TokenBinding>uncheckedCast( JsPropertyMap.of() ).status( status );
   }
 
-  @JsProperty
-  String getId();
+  @JsProperty(
+      name = "id"
+  )
+  String id();
 
   @JsProperty
   void setId(@Nonnull String id);
@@ -35,9 +37,11 @@ public interface TokenBinding {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "status"
+  )
   @Nonnull
-  String getStatus();
+  String status();
 
   @JsProperty
   void setStatus(@Nonnull String status);

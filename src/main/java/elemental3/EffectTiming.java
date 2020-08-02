@@ -22,8 +22,10 @@ public interface EffectTiming {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getDelay();
+  @JsProperty(
+      name = "delay"
+  )
+  double delay();
 
   @JsProperty
   void setDelay(double delay);
@@ -35,8 +37,10 @@ public interface EffectTiming {
     return this;
   }
 
-  @JsProperty
-  String getDirection();
+  @JsProperty(
+      name = "direction"
+  )
+  String direction();
 
   @JsProperty
   void setDirection(@Nonnull String direction);
@@ -48,8 +52,10 @@ public interface EffectTiming {
     return this;
   }
 
-  @JsProperty
-  UnrestrictedDoubleOrStringUnion getDuration();
+  @JsProperty(
+      name = "duration"
+  )
+  UnrestrictedDoubleOrStringUnion duration();
 
   @JsProperty
   void setDuration(@Nonnull UnrestrictedDoubleOrStringUnion duration);
@@ -78,8 +84,10 @@ public interface EffectTiming {
     return this;
   }
 
-  @JsProperty
-  String getEasing();
+  @JsProperty(
+      name = "easing"
+  )
+  String easing();
 
   @JsProperty
   void setEasing(@Nonnull String easing);
@@ -91,8 +99,10 @@ public interface EffectTiming {
     return this;
   }
 
-  @JsProperty
-  double getEndDelay();
+  @JsProperty(
+      name = "endDelay"
+  )
+  double endDelay();
 
   @JsProperty
   void setEndDelay(double endDelay);
@@ -104,8 +114,10 @@ public interface EffectTiming {
     return this;
   }
 
-  @JsProperty
-  String getFill();
+  @JsProperty(
+      name = "fill"
+  )
+  String fill();
 
   @JsProperty
   void setFill(@Nonnull String fill);
@@ -117,8 +129,10 @@ public interface EffectTiming {
     return this;
   }
 
-  @JsProperty
-  double getIterationStart();
+  @JsProperty(
+      name = "iterationStart"
+  )
+  double iterationStart();
 
   @JsProperty
   void setIterationStart(double iterationStart);
@@ -130,8 +144,10 @@ public interface EffectTiming {
     return this;
   }
 
-  @JsProperty
-  double getIterations();
+  @JsProperty(
+      name = "iterations"
+  )
+  double iterations();
 
   @JsProperty
   void setIterations(double iterations);

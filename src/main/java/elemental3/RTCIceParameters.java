@@ -22,8 +22,10 @@ public interface RTCIceParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getPassword();
+  @JsProperty(
+      name = "password"
+  )
+  String password();
 
   @JsProperty
   void setPassword(@Nonnull String password);
@@ -35,8 +37,10 @@ public interface RTCIceParameters {
     return this;
   }
 
-  @JsProperty
-  String getUsernameFragment();
+  @JsProperty(
+      name = "usernameFragment"
+  )
+  String usernameFragment();
 
   @JsProperty
   void setUsernameFragment(@Nonnull String usernameFragment);

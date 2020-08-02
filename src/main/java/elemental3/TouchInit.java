@@ -22,8 +22,10 @@ public interface TouchInit {
     return Js.<TouchInit>uncheckedCast( JsPropertyMap.of() ).identifier( identifier ).target( target );
   }
 
-  @JsProperty
-  double getAltitudeAngle();
+  @JsProperty(
+      name = "altitudeAngle"
+  )
+  double altitudeAngle();
 
   @JsProperty
   void setAltitudeAngle(double altitudeAngle);
@@ -35,8 +37,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  double getAzimuthAngle();
+  @JsProperty(
+      name = "azimuthAngle"
+  )
+  double azimuthAngle();
 
   @JsProperty
   void setAzimuthAngle(double azimuthAngle);
@@ -48,8 +52,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  double getClientX();
+  @JsProperty(
+      name = "clientX"
+  )
+  double clientX();
 
   @JsProperty
   void setClientX(double clientX);
@@ -61,8 +67,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  double getClientY();
+  @JsProperty(
+      name = "clientY"
+  )
+  double clientY();
 
   @JsProperty
   void setClientY(double clientY);
@@ -74,8 +82,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  float getForce();
+  @JsProperty(
+      name = "force"
+  )
+  float force();
 
   @JsProperty
   void setForce(float force);
@@ -87,8 +97,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  int getIdentifier();
+  @JsProperty(
+      name = "identifier"
+  )
+  int identifier();
 
   @JsProperty
   void setIdentifier(int identifier);
@@ -100,8 +112,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  double getPageX();
+  @JsProperty(
+      name = "pageX"
+  )
+  double pageX();
 
   @JsProperty
   void setPageX(double pageX);
@@ -113,8 +127,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  double getPageY();
+  @JsProperty(
+      name = "pageY"
+  )
+  double pageY();
 
   @JsProperty
   void setPageY(double pageY);
@@ -126,8 +142,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  float getRadiusX();
+  @JsProperty(
+      name = "radiusX"
+  )
+  float radiusX();
 
   @JsProperty
   void setRadiusX(float radiusX);
@@ -139,8 +157,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  float getRadiusY();
+  @JsProperty(
+      name = "radiusY"
+  )
+  float radiusY();
 
   @JsProperty
   void setRadiusY(float radiusY);
@@ -152,8 +172,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  float getRotationAngle();
+  @JsProperty(
+      name = "rotationAngle"
+  )
+  float rotationAngle();
 
   @JsProperty
   void setRotationAngle(float rotationAngle);
@@ -165,8 +187,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  double getScreenX();
+  @JsProperty(
+      name = "screenX"
+  )
+  double screenX();
 
   @JsProperty
   void setScreenX(double screenX);
@@ -178,8 +202,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  double getScreenY();
+  @JsProperty(
+      name = "screenY"
+  )
+  double screenY();
 
   @JsProperty
   void setScreenY(double screenY);
@@ -191,9 +217,11 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "target"
+  )
   @Nonnull
-  EventTarget getTarget();
+  EventTarget target();
 
   @JsProperty
   void setTarget(@Nonnull EventTarget target);
@@ -205,8 +233,10 @@ public interface TouchInit {
     return this;
   }
 
-  @JsProperty
-  String getTouchType();
+  @JsProperty(
+      name = "touchType"
+  )
+  String touchType();
 
   @JsProperty
   void setTouchType(@Nonnull String touchType);

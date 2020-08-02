@@ -23,8 +23,10 @@ public interface RTCRtpTransceiverInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getDirection();
+  @JsProperty(
+      name = "direction"
+  )
+  String direction();
 
   @JsProperty
   void setDirection(@Nonnull String direction);
@@ -36,8 +38,10 @@ public interface RTCRtpTransceiverInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<RTCRtpEncodingParameters> getSendEncodings();
+  @JsProperty(
+      name = "sendEncodings"
+  )
+  JsArray<RTCRtpEncodingParameters> sendEncodings();
 
   @JsProperty
   void setSendEncodings(@Nonnull JsArray<RTCRtpEncodingParameters> sendEncodings);
@@ -63,8 +67,10 @@ public interface RTCRtpTransceiverInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<MediaStream> getStreams();
+  @JsProperty(
+      name = "streams"
+  )
+  JsArray<MediaStream> streams();
 
   @JsProperty
   void setStreams(@Nonnull JsArray<MediaStream> streams);

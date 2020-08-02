@@ -24,8 +24,10 @@ public interface IDBObjectStoreParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAutoIncrement();
+  @JsProperty(
+      name = "autoIncrement"
+  )
+  boolean autoIncrement();
 
   @JsProperty
   void setAutoIncrement(boolean autoIncrement);
@@ -37,9 +39,11 @@ public interface IDBObjectStoreParameters {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "keyPath"
+  )
   @Nullable
-  StringOrStringArrayUnion getKeyPath();
+  StringOrStringArrayUnion keyPath();
 
   @JsProperty
   void setKeyPath(@Nullable StringOrStringArrayUnion keyPath);

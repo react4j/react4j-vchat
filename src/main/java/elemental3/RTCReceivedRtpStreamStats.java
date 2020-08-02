@@ -23,8 +23,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return Js.<RTCReceivedRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
-  @JsProperty
-  int getBurstDiscardCount();
+  @JsProperty(
+      name = "burstDiscardCount"
+  )
+  int burstDiscardCount();
 
   @JsProperty
   void setBurstDiscardCount(int burstDiscardCount);
@@ -36,8 +38,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getBurstDiscardRate();
+  @JsProperty(
+      name = "burstDiscardRate"
+  )
+  double burstDiscardRate();
 
   @JsProperty
   void setBurstDiscardRate(double burstDiscardRate);
@@ -49,8 +53,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getBurstLossCount();
+  @JsProperty(
+      name = "burstLossCount"
+  )
+  int burstLossCount();
 
   @JsProperty
   void setBurstLossCount(int burstLossCount);
@@ -62,8 +68,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getBurstLossRate();
+  @JsProperty(
+      name = "burstLossRate"
+  )
+  double burstLossRate();
 
   @JsProperty
   void setBurstLossRate(double burstLossRate);
@@ -75,8 +83,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getBurstPacketsDiscarded();
+  @JsProperty(
+      name = "burstPacketsDiscarded"
+  )
+  int burstPacketsDiscarded();
 
   @JsProperty
   void setBurstPacketsDiscarded(int burstPacketsDiscarded);
@@ -88,8 +98,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getBurstPacketsLost();
+  @JsProperty(
+      name = "burstPacketsLost"
+  )
+  int burstPacketsLost();
 
   @JsProperty
   void setBurstPacketsLost(int burstPacketsLost);
@@ -101,8 +113,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFramesDropped();
+  @JsProperty(
+      name = "framesDropped"
+  )
+  int framesDropped();
 
   @JsProperty
   void setFramesDropped(int framesDropped);
@@ -114,8 +128,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getFullFramesLost();
+  @JsProperty(
+      name = "fullFramesLost"
+  )
+  int fullFramesLost();
 
   @JsProperty
   void setFullFramesLost(int fullFramesLost);
@@ -127,8 +143,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getGapDiscardRate();
+  @JsProperty(
+      name = "gapDiscardRate"
+  )
+  double gapDiscardRate();
 
   @JsProperty
   void setGapDiscardRate(double gapDiscardRate);
@@ -140,8 +158,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getGapLossRate();
+  @JsProperty(
+      name = "gapLossRate"
+  )
+  double gapLossRate();
 
   @JsProperty
   void setGapLossRate(double gapLossRate);
@@ -153,8 +173,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  double getJitter();
+  @JsProperty(
+      name = "jitter"
+  )
+  double jitter();
 
   @JsProperty
   void setJitter(double jitter);
@@ -166,8 +188,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsDiscarded();
+  @JsProperty(
+      name = "packetsDiscarded"
+  )
+  int packetsDiscarded();
 
   @JsProperty
   void setPacketsDiscarded(int packetsDiscarded);
@@ -179,8 +203,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsLost();
+  @JsProperty(
+      name = "packetsLost"
+  )
+  int packetsLost();
 
   @JsProperty
   void setPacketsLost(int packetsLost);
@@ -192,8 +218,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsReceived();
+  @JsProperty(
+      name = "packetsReceived"
+  )
+  int packetsReceived();
 
   @JsProperty
   void setPacketsReceived(int packetsReceived);
@@ -205,8 +233,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPacketsRepaired();
+  @JsProperty(
+      name = "packetsRepaired"
+  )
+  int packetsRepaired();
 
   @JsProperty
   void setPacketsRepaired(int packetsRepaired);
@@ -218,8 +248,10 @@ public interface RTCReceivedRtpStreamStats extends RTCRtpStreamStats {
     return this;
   }
 
-  @JsProperty
-  int getPartialFramesLost();
+  @JsProperty(
+      name = "partialFramesLost"
+  )
+  int partialFramesLost();
 
   @JsProperty
   void setPartialFramesLost(int partialFramesLost);

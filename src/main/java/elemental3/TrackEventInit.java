@@ -23,9 +23,11 @@ public interface TrackEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "track"
+  )
   @Nullable
-  VideoTrackOrAudioTrackOrTextTrackUnion getTrack();
+  VideoTrackOrAudioTrackOrTextTrackUnion track();
 
   @JsProperty
   void setTrack(@Nullable VideoTrackOrAudioTrackOrTextTrackUnion track);

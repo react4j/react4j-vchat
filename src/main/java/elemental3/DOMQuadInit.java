@@ -22,8 +22,10 @@ public interface DOMQuadInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  DOMPointInit getP1();
+  @JsProperty(
+      name = "p1"
+  )
+  DOMPointInit p1();
 
   @JsProperty
   void setP1(@Nonnull DOMPointInit p1);
@@ -35,8 +37,10 @@ public interface DOMQuadInit {
     return this;
   }
 
-  @JsProperty
-  DOMPointInit getP2();
+  @JsProperty(
+      name = "p2"
+  )
+  DOMPointInit p2();
 
   @JsProperty
   void setP2(@Nonnull DOMPointInit p2);
@@ -48,8 +52,10 @@ public interface DOMQuadInit {
     return this;
   }
 
-  @JsProperty
-  DOMPointInit getP3();
+  @JsProperty(
+      name = "p3"
+  )
+  DOMPointInit p3();
 
   @JsProperty
   void setP3(@Nonnull DOMPointInit p3);
@@ -61,8 +67,10 @@ public interface DOMQuadInit {
     return this;
   }
 
-  @JsProperty
-  DOMPointInit getP4();
+  @JsProperty(
+      name = "p4"
+  )
+  DOMPointInit p4();
 
   @JsProperty
   void setP4(@Nonnull DOMPointInit p4);

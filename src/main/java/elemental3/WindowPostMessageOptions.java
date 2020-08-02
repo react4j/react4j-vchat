@@ -23,8 +23,10 @@ public interface WindowPostMessageOptions extends PostMessageOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getTargetOrigin();
+  @JsProperty(
+      name = "targetOrigin"
+  )
+  String targetOrigin();
 
   @JsProperty
   void setTargetOrigin(@Nonnull String targetOrigin);

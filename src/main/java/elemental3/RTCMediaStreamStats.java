@@ -24,8 +24,10 @@ public interface RTCMediaStreamStats extends RTCStats {
     return Js.<RTCMediaStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type );
   }
 
-  @JsProperty
-  String getStreamIdentifier();
+  @JsProperty(
+      name = "streamIdentifier"
+  )
+  String streamIdentifier();
 
   @JsProperty
   void setStreamIdentifier(@Nonnull String streamIdentifier);
@@ -37,8 +39,10 @@ public interface RTCMediaStreamStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getTrackIds();
+  @JsProperty(
+      name = "trackIds"
+  )
+  JsArray<String> trackIds();
 
   @JsProperty
   void setTrackIds(@Nonnull JsArray<String> trackIds);

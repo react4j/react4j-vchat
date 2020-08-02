@@ -22,8 +22,10 @@ public interface GlobalDescriptor {
     return Js.<GlobalDescriptor>uncheckedCast( JsPropertyMap.of() ).value( value );
   }
 
-  @JsProperty
-  boolean isMutable();
+  @JsProperty(
+      name = "mutable"
+  )
+  boolean mutable();
 
   @JsProperty
   void setMutable(boolean mutable);
@@ -35,9 +37,11 @@ public interface GlobalDescriptor {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "value"
+  )
   @Nonnull
-  String getValue();
+  String value();
 
   @JsProperty
   void setValue(@Nonnull String value);

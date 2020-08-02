@@ -22,9 +22,11 @@ public interface RTCErrorInit {
     return Js.<RTCErrorInit>uncheckedCast( JsPropertyMap.of() ).errorDetail( errorDetail );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "errorDetail"
+  )
   @Nonnull
-  String getErrorDetail();
+  String errorDetail();
 
   @JsProperty
   void setErrorDetail(@Nonnull String errorDetail);
@@ -36,8 +38,10 @@ public interface RTCErrorInit {
     return this;
   }
 
-  @JsProperty
-  int getReceivedAlert();
+  @JsProperty(
+      name = "receivedAlert"
+  )
+  int receivedAlert();
 
   @JsProperty
   void setReceivedAlert(int receivedAlert);
@@ -49,8 +53,10 @@ public interface RTCErrorInit {
     return this;
   }
 
-  @JsProperty
-  int getSctpCauseCode();
+  @JsProperty(
+      name = "sctpCauseCode"
+  )
+  int sctpCauseCode();
 
   @JsProperty
   void setSctpCauseCode(int sctpCauseCode);
@@ -62,8 +68,10 @@ public interface RTCErrorInit {
     return this;
   }
 
-  @JsProperty
-  int getSdpLineNumber();
+  @JsProperty(
+      name = "sdpLineNumber"
+  )
+  int sdpLineNumber();
 
   @JsProperty
   void setSdpLineNumber(int sdpLineNumber);
@@ -75,8 +83,10 @@ public interface RTCErrorInit {
     return this;
   }
 
-  @JsProperty
-  int getSentAlert();
+  @JsProperty(
+      name = "sentAlert"
+  )
+  int sentAlert();
 
   @JsProperty
   void setSentAlert(int sentAlert);

@@ -24,9 +24,11 @@ public interface RTCCertificateStats extends RTCStats {
     return Js.<RTCCertificateStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).base64Certificate( base64Certificate ).fingerprint( fingerprint ).fingerprintAlgorithm( fingerprintAlgorithm );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "base64Certificate"
+  )
   @Nonnull
-  String getBase64Certificate();
+  String base64Certificate();
 
   @JsProperty
   void setBase64Certificate(@Nonnull String base64Certificate);
@@ -38,9 +40,11 @@ public interface RTCCertificateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "fingerprint"
+  )
   @Nonnull
-  String getFingerprint();
+  String fingerprint();
 
   @JsProperty
   void setFingerprint(@Nonnull String fingerprint);
@@ -52,9 +56,11 @@ public interface RTCCertificateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "fingerprintAlgorithm"
+  )
   @Nonnull
-  String getFingerprintAlgorithm();
+  String fingerprintAlgorithm();
 
   @JsProperty
   void setFingerprintAlgorithm(@Nonnull String fingerprintAlgorithm);
@@ -66,8 +72,10 @@ public interface RTCCertificateStats extends RTCStats {
     return this;
   }
 
-  @JsProperty
-  String getIssuerCertificateId();
+  @JsProperty(
+      name = "issuerCertificateId"
+  )
+  String issuerCertificateId();
 
   @JsProperty
   void setIssuerCertificateId(@Nonnull String issuerCertificateId);

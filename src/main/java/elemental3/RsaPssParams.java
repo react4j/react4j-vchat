@@ -22,8 +22,10 @@ public interface RsaPssParams extends Algorithm {
     return Js.<RsaPssParams>uncheckedCast( JsPropertyMap.of() ).name( name ).saltLength( saltLength );
   }
 
-  @JsProperty
-  int getSaltLength();
+  @JsProperty(
+      name = "saltLength"
+  )
+  int saltLength();
 
   @JsProperty
   void setSaltLength(int saltLength);

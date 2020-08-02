@@ -23,8 +23,10 @@ public interface JsonWebKey {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getAlg();
+  @JsProperty(
+      name = "alg"
+  )
+  String alg();
 
   @JsProperty
   void setAlg(@Nonnull String alg);
@@ -36,8 +38,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getCrv();
+  @JsProperty(
+      name = "crv"
+  )
+  String crv();
 
   @JsProperty
   void setCrv(@Nonnull String crv);
@@ -49,8 +53,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getD();
+  @JsProperty(
+      name = "d"
+  )
+  String d();
 
   @JsProperty
   void setD(@Nonnull String d);
@@ -62,8 +68,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getDp();
+  @JsProperty(
+      name = "dp"
+  )
+  String dp();
 
   @JsProperty
   void setDp(@Nonnull String dp);
@@ -75,8 +83,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getDq();
+  @JsProperty(
+      name = "dq"
+  )
+  String dq();
 
   @JsProperty
   void setDq(@Nonnull String dq);
@@ -88,8 +98,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getE();
+  @JsProperty(
+      name = "e"
+  )
+  String e();
 
   @JsProperty
   void setE(@Nonnull String e);
@@ -101,8 +113,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  boolean isExt();
+  @JsProperty(
+      name = "ext"
+  )
+  boolean ext();
 
   @JsProperty
   void setExt(boolean ext);
@@ -114,8 +128,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getK();
+  @JsProperty(
+      name = "k"
+  )
+  String k();
 
   @JsProperty
   void setK(@Nonnull String k);
@@ -127,8 +143,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  JsArray<String> getKey_ops();
+  @JsProperty(
+      name = "key_ops"
+  )
+  JsArray<String> key_ops();
 
   @JsProperty
   void setKey_ops(@Nonnull JsArray<String> key_ops);
@@ -152,8 +170,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getKty();
+  @JsProperty(
+      name = "kty"
+  )
+  String kty();
 
   @JsProperty
   void setKty(@Nonnull String kty);
@@ -165,8 +185,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getN();
+  @JsProperty(
+      name = "n"
+  )
+  String n();
 
   @JsProperty
   void setN(@Nonnull String n);
@@ -178,8 +200,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  JsArray<RsaOtherPrimesInfo> getOth();
+  @JsProperty(
+      name = "oth"
+  )
+  JsArray<RsaOtherPrimesInfo> oth();
 
   @JsProperty
   void setOth(@Nonnull JsArray<RsaOtherPrimesInfo> oth);
@@ -203,8 +227,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getP();
+  @JsProperty(
+      name = "p"
+  )
+  String p();
 
   @JsProperty
   void setP(@Nonnull String p);
@@ -216,8 +242,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getQ();
+  @JsProperty(
+      name = "q"
+  )
+  String q();
 
   @JsProperty
   void setQ(@Nonnull String q);
@@ -229,8 +257,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getQi();
+  @JsProperty(
+      name = "qi"
+  )
+  String qi();
 
   @JsProperty
   void setQi(@Nonnull String qi);
@@ -242,8 +272,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getUse();
+  @JsProperty(
+      name = "use"
+  )
+  String use();
 
   @JsProperty
   void setUse(@Nonnull String use);
@@ -255,8 +287,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getX();
+  @JsProperty(
+      name = "x"
+  )
+  String x();
 
   @JsProperty
   void setX(@Nonnull String x);
@@ -268,8 +302,10 @@ public interface JsonWebKey {
     return this;
   }
 
-  @JsProperty
-  String getY();
+  @JsProperty(
+      name = "y"
+  )
+  String y();
 
   @JsProperty
   void setY(@Nonnull String y);

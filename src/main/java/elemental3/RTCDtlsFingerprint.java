@@ -22,8 +22,10 @@ public interface RTCDtlsFingerprint {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getAlgorithm();
+  @JsProperty(
+      name = "algorithm"
+  )
+  String algorithm();
 
   @JsProperty
   void setAlgorithm(@Nonnull String algorithm);
@@ -35,8 +37,10 @@ public interface RTCDtlsFingerprint {
     return this;
   }
 
-  @JsProperty
-  String getValue();
+  @JsProperty(
+      name = "value"
+  )
+  String value();
 
   @JsProperty
   void setValue(@Nonnull String value);

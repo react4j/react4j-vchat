@@ -24,9 +24,11 @@ public interface MediaEncryptedEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "initData"
+  )
   @Nullable
-  ArrayBuffer getInitData();
+  ArrayBuffer initData();
 
   @JsProperty
   void setInitData(@Nullable ArrayBuffer initData);
@@ -38,8 +40,10 @@ public interface MediaEncryptedEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getInitDataType();
+  @JsProperty(
+      name = "initDataType"
+  )
+  String initDataType();
 
   @JsProperty
   void setInitDataType(@Nonnull String initDataType);

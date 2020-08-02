@@ -22,8 +22,10 @@ public interface RegistrationOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getScope();
+  @JsProperty(
+      name = "scope"
+  )
+  String scope();
 
   @JsProperty
   void setScope(@Nonnull String scope);
@@ -35,8 +37,10 @@ public interface RegistrationOptions {
     return this;
   }
 
-  @JsProperty
-  String getType();
+  @JsProperty(
+      name = "type"
+  )
+  String type();
 
   @JsProperty
   void setType(@Nonnull String type);
@@ -48,8 +52,10 @@ public interface RegistrationOptions {
     return this;
   }
 
-  @JsProperty
-  String getUpdateViaCache();
+  @JsProperty(
+      name = "updateViaCache"
+  )
+  String updateViaCache();
 
   @JsProperty
   void setUpdateViaCache(@Nonnull String updateViaCache);

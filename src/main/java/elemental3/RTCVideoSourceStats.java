@@ -24,8 +24,10 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
     return Js.<RTCVideoSourceStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).trackIdentifier( trackIdentifier );
   }
 
-  @JsProperty
-  int getBitDepth();
+  @JsProperty(
+      name = "bitDepth"
+  )
+  int bitDepth();
 
   @JsProperty
   void setBitDepth(int bitDepth);
@@ -37,8 +39,10 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  int getFrames();
+  @JsProperty(
+      name = "frames"
+  )
+  int frames();
 
   @JsProperty
   void setFrames(int frames);
@@ -50,8 +54,10 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  double getFramesPerSecond();
+  @JsProperty(
+      name = "framesPerSecond"
+  )
+  double framesPerSecond();
 
   @JsProperty
   void setFramesPerSecond(double framesPerSecond);
@@ -63,8 +69,10 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  int getHeight();
+  @JsProperty(
+      name = "height"
+  )
+  int height();
 
   @JsProperty
   void setHeight(int height);
@@ -76,8 +84,10 @@ public interface RTCVideoSourceStats extends RTCMediaSourceStats {
     return this;
   }
 
-  @JsProperty
-  int getWidth();
+  @JsProperty(
+      name = "width"
+  )
+  int width();
 
   @JsProperty
   void setWidth(int width);
