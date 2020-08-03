@@ -25,7 +25,7 @@ public interface ElementCreationOptions {
   @JsProperty(
       name = "is"
   )
-  String is();
+  String _is();
 
   @JsProperty
   void setIs(@Nonnull String is);
