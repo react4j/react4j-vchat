@@ -54,12 +54,12 @@ public class IDBCursor {
   @JsMethod(
       name = "continue"
   )
-  public native void _continue(@Nullable Any key);
+  public native void continue_(@Nullable Any key);
 
   @JsMethod(
       name = "continue"
   )
-  public native void _continue();
+  public native void continue_();
 
   public native void continuePrimaryKey(@Nullable Any key, @Nullable Any primaryKey);
 

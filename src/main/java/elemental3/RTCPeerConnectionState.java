@@ -15,7 +15,7 @@ public final class RTCPeerConnectionState {
   public static final String disconnected = "disconnected";
 
   @Nonnull
-  public static final String _new = "new";
+  public static final String new_ = "new";
 
   @Nonnull
   public static final String connecting = "connecting";

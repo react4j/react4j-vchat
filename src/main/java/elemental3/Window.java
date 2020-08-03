@@ -670,7 +670,7 @@ public class Window extends EventTarget {
   public native void print();
 
   @Nullable
-  public native String prompt(@Nonnull String message, @Nonnull String _default);
+  public native String prompt(@Nonnull String message, @Nonnull String default_);
 
   @Nullable
   public native String prompt(@Nonnull String message);

@@ -29,7 +29,7 @@ public class HTMLTrackElement extends HTMLElement {
   @JsProperty(
       name = "default"
   )
-  public boolean _default;
+  public boolean default_;
 
   @Nonnull
   public String kind;

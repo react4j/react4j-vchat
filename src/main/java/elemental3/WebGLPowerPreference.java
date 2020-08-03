@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class WebGLPowerPreference {
   @Nonnull
-  public static final String _default = "default";
+  public static final String default_ = "default";
 
   @Nonnull
   public static final String high_performance = "high-performance";

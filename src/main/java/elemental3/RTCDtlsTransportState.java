@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class RTCDtlsTransportState {
   @Nonnull
-  public static final String _new = "new";
+  public static final String new_ = "new";
 
   @Nonnull
   public static final String connecting = "connecting";

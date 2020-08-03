@@ -18,23 +18,23 @@ import jsinterop.base.JsPropertyMap;
 public interface EcdhKeyDeriveParams extends Algorithm {
   @JsOverlay
   @Nonnull
-  static EcdhKeyDeriveParams create(@Nonnull final String name, @Nonnull final CryptoKey _public) {
-    return Js.<EcdhKeyDeriveParams>uncheckedCast( JsPropertyMap.of() ).name( name )._public( _public );
+  static EcdhKeyDeriveParams create(@Nonnull final String name, @Nonnull final CryptoKey public_) {
+    return Js.<EcdhKeyDeriveParams>uncheckedCast( JsPropertyMap.of() ).name( name ).public_( public_ );
   }
 
   @JsProperty(
       name = "public"
   )
   @Nonnull
-  CryptoKey _public();
+  CryptoKey public_();
 
   @JsProperty
-  void setPublic(@Nonnull CryptoKey _public);
+  void setPublic(@Nonnull CryptoKey public_);
 
   @JsOverlay
   @Nonnull
-  default EcdhKeyDeriveParams _public(@Nonnull final CryptoKey _public) {
-    setPublic( _public );
+  default EcdhKeyDeriveParams public_(@Nonnull final CryptoKey public_) {
+    setPublic( public_ );
     return this;
   }
 

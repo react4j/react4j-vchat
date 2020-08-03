@@ -214,7 +214,7 @@ public class Response {
       name = "clone"
   )
   @Nonnull
-  public native Response _clone();
+  public native Response clone_();
 
   @Nonnull
   public native Promise<ArrayBuffer> arrayBuffer();

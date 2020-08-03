@@ -25,15 +25,15 @@ public interface ElementDefinitionOptions {
   @JsProperty(
       name = "extends"
   )
-  String _extends();
+  String extends_();
 
   @JsProperty
-  void setExtends(@Nonnull String _extends);
+  void setExtends(@Nonnull String extends_);
 
   @JsOverlay
   @Nonnull
-  default ElementDefinitionOptions _extends(@Nonnull final String _extends) {
-    setExtends( _extends );
+  default ElementDefinitionOptions extends_(@Nonnull final String extends_) {
+    setExtends( extends_ );
     return this;
   }
 }

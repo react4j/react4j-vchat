@@ -12,7 +12,7 @@ public final class ResponseType {
   public static final String cors = "cors";
 
   @Nonnull
-  public static final String _default = "default";
+  public static final String default_ = "default";
 
   @Nonnull
   public static final String error = "error";

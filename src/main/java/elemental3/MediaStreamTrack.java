@@ -69,7 +69,7 @@ public class MediaStreamTrack extends EventTarget {
       name = "clone"
   )
   @Nonnull
-  public native MediaStreamTrack _clone();
+  public native MediaStreamTrack clone_();
 
   @Nonnull
   public native MediaTrackCapabilities getCapabilities();

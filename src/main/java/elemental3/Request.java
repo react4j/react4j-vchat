@@ -138,7 +138,7 @@ public class Request {
       name = "clone"
   )
   @Nonnull
-  public native Request _clone();
+  public native Request clone_();
 
   @Nonnull
   public native Promise<ArrayBuffer> arrayBuffer();

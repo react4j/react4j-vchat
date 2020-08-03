@@ -51,7 +51,7 @@ public class MediaStream extends EventTarget {
       name = "clone"
   )
   @Nonnull
-  public native MediaStream _clone();
+  public native MediaStream clone_();
 
   @Nonnull
   public native JsArray<MediaStreamTrack> getAudioTracks();

@@ -634,7 +634,7 @@ public class Document extends Node {
   public native Element createElementNS(@Nullable String namespace, @Nonnull String qualifiedName);
 
   @Nonnull
-  public native Event createEvent(@Nonnull String _interface);
+  public native Event createEvent(@Nonnull String interface_);
 
   @Nonnull
   public native NodeIterator createNodeIterator(@Nonnull Node root, int whatToShow,
