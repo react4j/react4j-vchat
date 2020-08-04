@@ -10,6 +10,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -629,93 +634,283 @@ public class Window extends EventTarget {
   @Nonnull
   public native Storage sessionStorage();
 
+  /**
+   * The Window.alert() method displays an alert dialog with the optional specified content and an OK button.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">Window.alert - MDN</a>
+   */
   public native void alert();
 
+  /**
+   * The Window.alert() method displays an alert dialog with the optional specified content and an OK button.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert">Window.alert - MDN</a>
+   */
   public native void alert(@Nonnull String message);
 
+  /**
+   * Shifts focus away from the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/blur">Window.blur - MDN</a>
+   */
   public native void blur();
 
+  /**
+   * The Window.close() method closes the current window, or the window on which it was called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/close">Window.close - MDN</a>
+   */
   public native void close();
 
+  /**
+   * The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm - MDN</a>
+   */
   public native boolean confirm(@Nonnull String message);
 
+  /**
+   * The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm">Window.confirm - MDN</a>
+   */
   public native boolean confirm();
 
+  /**
+   * Makes a request to bring the window to the front. It may fail due to user settings and the window isn't guaranteed to be frontmost before this method returns.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus">Window.focus - MDN</a>
+   */
   public native void focus();
 
+  /**
+   * The Window interface's open() method loads the specified resource into the new or existing browsing context (window, iframe or tab) with the specified name. If the name doesn't exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
+   */
   @Nullable
   public native Window open(@Nonnull String url, @Nonnull String target, @Nonnull String features);
 
+  /**
+   * The Window interface's open() method loads the specified resource into the new or existing browsing context (window, iframe or tab) with the specified name. If the name doesn't exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
+   */
   @Nullable
   public native Window open(@Nonnull String url, @Nonnull String target);
 
+  /**
+   * The Window interface's open() method loads the specified resource into the new or existing browsing context (window, iframe or tab) with the specified name. If the name doesn't exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
+   */
   @Nullable
   public native Window open(@Nonnull String url);
 
+  /**
+   * The Window interface's open() method loads the specified resource into the new or existing browsing context (window, iframe or tab) with the specified name. If the name doesn't exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/open">Window.open - MDN</a>
+   */
   @Nullable
   public native Window open();
 
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin,
       @Nonnull JsArray<Object> transfer);
 
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin,
       @Nonnull Object[] transfer);
 
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin);
 
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull WindowPostMessageOptions options);
 
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message);
 
+  /**
+   * Opens the Print Dialog to print the current document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/print">Window.print - MDN</a>
+   */
   public native void print();
 
+  /**
+   * The Window.prompt() displays a dialog with an optional message prompting the user to input some text.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
+   */
   @Nullable
   public native String prompt(@Nonnull String message, @Nonnull String default_);
 
+  /**
+   * The Window.prompt() displays a dialog with an optional message prompting the user to input some text.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
+   */
   @Nullable
   public native String prompt(@Nonnull String message);
 
+  /**
+   * The Window.prompt() displays a dialog with an optional message prompting the user to input some text.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt">Window.prompt - MDN</a>
+   */
   @Nullable
   public native String prompt();
 
+  /**
+   * The window.stop() stops further resource loading in the current browsing context, equivalent to the stop button in the browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/stop">Window.stop - MDN</a>
+   */
   public native void stop();
 
+  /**
+   * The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">Window.getComputedStyle - MDN</a>
+   */
   @Nonnull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt,
       @Nonnull String pseudoElt);
 
+  /**
+   * The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle">Window.getComputedStyle - MDN</a>
+   */
   @Nonnull
   public native CSSStyleDeclaration getComputedStyle(@Nonnull Element elt);
 
+  /**
+   * The Window interface's matchMedia() method returns a new MediaQueryList object that can then be used to determine if the document matches the media query string, as well as to monitor the document to detect when it matches (or stops matching) that media query.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia">Window.matchMedia - MDN</a>
+   */
   @Nonnull
   public native MediaQueryList matchMedia(@Nonnull String query);
 
+  /**
+   * The moveBy() method of the Window interface moves the current window by a specified amount.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy">Window.moveBy - MDN</a>
+   */
   public native void moveBy(int x, int y);
 
+  /**
+   * The moveTo() method of the Window interface moves the current window to the specified coordinates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/moveTo">Window.moveTo - MDN</a>
+   */
   public native void moveTo(int x, int y);
 
+  /**
+   * The Window.resizeBy() method resizes the current window by a specified amount.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeBy">Window.resizeBy - MDN</a>
+   */
   public native void resizeBy(int x, int y);
 
+  /**
+   * The Window.resizeTo() method dynamically resizes the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeTo">Window.resizeTo - MDN</a>
+   */
   public native void resizeTo(int width, int height);
 
+  /**
+   * The Window.scroll() method scrolls the window to a particular place in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll">Window.scroll - MDN</a>
+   */
   public native void scroll(@Nonnull ScrollToOptions options);
 
+  /**
+   * The Window.scroll() method scrolls the window to a particular place in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll">Window.scroll - MDN</a>
+   */
   public native void scroll();
 
+  /**
+   * The Window.scroll() method scrolls the window to a particular place in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll">Window.scroll - MDN</a>
+   */
   public native void scroll(double x, double y);
 
+  /**
+   * The Window.scrollBy() method scrolls the document in the window by the given amount.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy">Window.scrollBy - MDN</a>
+   */
   public native void scrollBy(@Nonnull ScrollToOptions options);
 
+  /**
+   * The Window.scrollBy() method scrolls the document in the window by the given amount.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy">Window.scrollBy - MDN</a>
+   */
   public native void scrollBy();
 
+  /**
+   * The Window.scrollBy() method scrolls the document in the window by the given amount.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy">Window.scrollBy - MDN</a>
+   */
   public native void scrollBy(double x, double y);
 
+  /**
+   * Window.scrollTo() scrolls to a particular set of coordinates in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
+   */
   public native void scrollTo(@Nonnull ScrollToOptions options);
 
+  /**
+   * Window.scrollTo() scrolls to a particular set of coordinates in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
+   */
   public native void scrollTo();
 
+  /**
+   * Window.scrollTo() scrolls to a particular set of coordinates in the document.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">Window.scrollTo - MDN</a>
+   */
   public native void scrollTo(double x, double y);
 
+  /**
+   * The Window.getSelection() method returns a Selection object representing the range of text selected by the user or the current position of the caret.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection">Window.getSelection - MDN</a>
+   */
   @Nullable
   public native Selection getSelection();
 
@@ -948,7 +1143,17 @@ public class Window extends EventTarget {
   @Nonnull
   public native Promise<Response> fetch(@Nonnull String input);
 
+  /**
+   * The window.cancelAnimationFrame() method cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame">Window.cancelAnimationFrame - MDN</a>
+   */
   public native void cancelAnimationFrame(int handle);
 
+  /**
+   * The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame">Window.requestAnimationFrame - MDN</a>
+   */
   public native int requestAnimationFrame(@Nonnull FrameRequestCallback callback);
 }

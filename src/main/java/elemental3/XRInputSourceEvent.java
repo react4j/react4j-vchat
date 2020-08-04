@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The WebXR Device API's XRInputSourceEvent interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent">XRInputSourceEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -18,12 +23,22 @@ public class XRInputSourceEvent extends Event {
     super( null );
   }
 
+  /**
+   * The read-only XRInputSourceEvent property frame specifies an XRFrame object representing the event frame during which a WebXR user input occurred.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/frame">XRInputSourceEvent.frame - MDN</a>
+   */
   @JsProperty(
       name = "frame"
   )
   @Nonnull
   public native XRFrame frame();
 
+  /**
+   * The XRInputSourceEvent interface's read-only inputSource property specifies the XRInputSource which generated the input event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource">XRInputSourceEvent.inputSource - MDN</a>
+   */
   @JsProperty(
       name = "inputSource"
   )

@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SpeechGrammarList interface of the Web Speech API represents a list of SpeechGrammar objects containing words or patterns of words that we want the recognition service to recognize.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList">SpeechGrammarList - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -16,16 +21,41 @@ public class SpeechGrammarList {
   public SpeechGrammarList() {
   }
 
+  /**
+   * The length read-only property of the SpeechGrammarList interface returns the number of SpeechGrammar objects contained in the SpeechGrammarList.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/length">SpeechGrammarList.length - MDN</a>
+   */
   @JsProperty(
       name = "length"
   )
   public native int length();
 
+  /**
+   * The addFromString() method of the SpeechGrammarList interface takes a grammar present in a specific DOMString within the code base (e.g. stored in a variable) and adds it to the SpeechGrammarList as a new SpeechGrammar object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString">SpeechGrammarList.addFromString - MDN</a>
+   */
   public native void addFromString(@Nonnull String string, float weight);
 
+  /**
+   * The addFromString() method of the SpeechGrammarList interface takes a grammar present in a specific DOMString within the code base (e.g. stored in a variable) and adds it to the SpeechGrammarList as a new SpeechGrammar object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString">SpeechGrammarList.addFromString - MDN</a>
+   */
   public native void addFromString(@Nonnull String string);
 
+  /**
+   * The addFromURI() method of the SpeechGrammarList interface takes a grammar present at a specific URI and adds it to the SpeechGrammarList as a new SpeechGrammar object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromURI">SpeechGrammarList.addFromURI - MDN</a>
+   */
   public native void addFromURI(@Nonnull String src, float weight);
 
+  /**
+   * The addFromURI() method of the SpeechGrammarList interface takes a grammar present at a specific URI and adds it to the SpeechGrammarList as a new SpeechGrammar object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromURI">SpeechGrammarList.addFromURI - MDN</a>
+   */
   public native void addFromURI(@Nonnull String src);
 }

@@ -8,6 +8,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.intellij.lang.annotations.MagicConstant;
 
+/**
+ * The WebXR Device API interface XRSystem provides methods which let you get access to an XRSession object representing a WebXR session. With that XRSession in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR">XR - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -21,15 +26,30 @@ public class XR extends EventTarget {
   XR() {
   }
 
+  /**
+   * The XRSystem method isSessionSupported() returns a promise which resolves to true if the specified WebXR session mode is supported by the user's WebXR device. Otherwise, the promise resolves with false.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported">XR.isSessionSupported - MDN</a>
+   */
   @Nonnull
   public native Promise<Boolean> isSessionSupported(
       @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode);
 
+  /**
+   * The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession">XR.requestSession - MDN</a>
+   */
   @Nonnull
   public native Promise<XRSession> requestSession(
       @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode,
       @Nonnull XRSessionInit options);
 
+  /**
+   * The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession">XR.requestSession - MDN</a>
+   */
   @Nonnull
   public native Promise<XRSession> requestSession(
       @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode);

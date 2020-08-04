@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The WebXR Device API interface XRReferenceSpaceEvent represents an event sent to an XRReferenceSpace. Currently, the only event  that uses this type is the reset event.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent">XRReferenceSpaceEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -19,12 +24,22 @@ public class XRReferenceSpaceEvent extends Event {
     super( null );
   }
 
+  /**
+   * The read-only XRReferenceSpaceEvent property referenceSpace specifies the reference space which is the originator of the event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/referenceSpace">XRReferenceSpaceEvent.referenceSpace - MDN</a>
+   */
   @JsProperty(
       name = "referenceSpace"
   )
   @Nonnull
   public native XRReferenceSpace referenceSpace();
 
+  /**
+   * The read-only XRReferenceSpaceEvent property transform indicates the position and orientation of the affected referenceSpace's native origin after the changes the event represents are applied.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/transform">XRReferenceSpaceEvent.transform - MDN</a>
+   */
   @JsProperty(
       name = "transform"
   )

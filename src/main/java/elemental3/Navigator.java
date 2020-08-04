@@ -19,6 +19,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">Navigator - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -35,6 +40,11 @@ public class Navigator {
   @Nonnull
   public native Clipboard clipboard();
 
+  /**
+   * The credentials property of the Navigator interface returns the CredentialsContainer interface, which exposes methods to request credentials. The CredentialsContainer interface also notifies the user agent when an interesting event occurs, such as a successful sign-in or sign-out. This interface can be used for feature detection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials">Navigator.credentials - MDN</a>
+   */
   @JsProperty(
       name = "credentials"
   )
@@ -47,6 +57,11 @@ public class Navigator {
   @Nonnull
   public native Geolocation geolocation();
 
+  /**
+   * The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices">Navigator.mediaDevices - MDN</a>
+   */
   @JsProperty(
       name = "mediaDevices"
   )
@@ -145,6 +160,11 @@ public class Navigator {
   @Nonnull
   public native String product();
 
+  /**
+   * The Navigator.productSub read-only property returns the build number of the current browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/productSub">Navigator.productSub - MDN</a>
+   */
   @JsProperty(
       name = "productSub"
   )
@@ -157,18 +177,33 @@ public class Navigator {
   @Nonnull
   public native String userAgent();
 
+  /**
+   * The value of the Navigator vendor property is always either "Google Inc.", "Apple Computer, Inc.", or (in Firefox) the empty string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor">Navigator.vendor - MDN</a>
+   */
   @JsProperty(
       name = "vendor"
   )
   @Nonnull
   public native String vendor();
 
+  /**
+   * The value of the Navigator.vendorSub property is always the empty string, in any browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendorSub">Navigator.vendorSub - MDN</a>
+   */
   @JsProperty(
       name = "vendorSub"
   )
   @Nonnull
   public native String vendorSub();
 
+  /**
+   * The Navigator.oscpu property returns a string that identifies the current operating system.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu">Navigator.oscpu - MDN</a>
+   */
   @JsProperty(
       name = "oscpu"
   )

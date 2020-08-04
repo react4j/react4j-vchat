@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The WebXR Device API's XRSessionEvent interface describes an event which indicates the change of the state of an XRSession.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent">XRSessionEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -18,6 +23,11 @@ public class XRSessionEvent extends Event {
     super( null );
   }
 
+  /**
+   * The read-only XRSessionEvent interface's session property indicates which XRSession the event is about.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session">XRSessionEvent.session - MDN</a>
+   */
   @JsProperty(
       name = "session"
   )
