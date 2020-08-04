@@ -20,12 +20,27 @@ import jsinterop.annotations.JsType;
     name = "RTCIceTransport"
 )
 public class RTCIceTransport extends EventTarget {
+  /**
+   * The ongatheringstatechange event handler for the RTCIceTransport interface specifies an event handler that is to be called when the gatheringstatechange event occurs on the transport.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/ongatheringstatechange">RTCIceTransport.ongatheringstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler ongatheringstatechange;
 
+  /**
+   * The RTCIceTransport interface's onselectedcandidatepairchange event handler specifies a function to be called to handle the selectedcandidatepairchange event, which is fired when the ICE agent selects a new candidate pair to be used for the connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange">RTCIceTransport.onselectedcandidatepairchange - MDN</a>
+   */
   @Nullable
   public EventHandler onselectedcandidatepairchange;
 
+  /**
+   * The onstatechange event handler for the RTCIceTransport interface is a property which specifies a function to serve as the EventHandler for the statechange event that is fired whenever the transport's state changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onstatechange">RTCIceTransport.onstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler onstatechange;
 

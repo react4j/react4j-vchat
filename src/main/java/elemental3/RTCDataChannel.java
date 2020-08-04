@@ -45,21 +45,46 @@ public class RTCDataChannel extends EventTarget {
    */
   public int bufferedAmountLowThreshold;
 
+  /**
+   * The RTCDataChannel.onbufferedamountlow property is an EventHandler which specifies a function the browser calls when the bufferedamountlow event is sent to the RTCDataChannel. This event, which is represented by a simple Event object, is sent when the amount of data buffered to be sent falls to or below the threshold specified by the channel's bufferedAmountLowThreshold.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onbufferedamountlow">RTCDataChannel.onbufferedamountlow - MDN</a>
+   */
   @Nullable
   public EventHandler onbufferedamountlow;
 
+  /**
+   * The RTCDataChannel.onclose property is an EventHandler which specifies a function to be called by the browser when the close event is received by the RTCDataChannel. This is a simple Event which indicates that the data channel has closed down.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclose">RTCDataChannel.onclose - MDN</a>
+   */
   @Nullable
   public EventHandler onclose;
 
   @Nullable
   public EventHandler onclosing;
 
+  /**
+   * The RTCDataChannel.onerror property is an EventHandler which specifies a function to be called when the error event is received. When an error occurs on the data channel, the function receives as input an ErrorEvent object describing the error which occurred.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onerror">RTCDataChannel.onerror - MDN</a>
+   */
   @Nullable
   public EventHandler onerror;
 
+  /**
+   * The RTCDataChannel.onmessage property stores an EventHandler which specifies a function to be called when the message event is fired on the channel. This event is represented by the MessageEvent interface. This event is sent to the channel when a message is received from the other peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onmessage">RTCDataChannel.onmessage - MDN</a>
+   */
   @Nullable
   public EventHandler onmessage;
 
+  /**
+   * The RTCDataChannel.onopen property is an EventHandler which specifies a function to be called when the open event is fired; this is a simple Event which is sent when the data channel's underlying data transport—the link over which the RTCDataChannel's messages flow—is established or re-established.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onopen">RTCDataChannel.onopen - MDN</a>
+   */
   @Nullable
   public EventHandler onopen;
 

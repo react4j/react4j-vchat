@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The MediaStreamTrackEvent interface represents events which indicate that a MediaStream has had tracks added to or removed from the stream through calls to Media Stream API methods. These events are sent to the stream when these changes occur.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackEvent">MediaStreamTrackEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The BlobEvent interface represents events associated with a Blob. These blobs are typically, but not necessarily,  associated with media content.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent">BlobEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -17,12 +22,22 @@ public class BlobEvent extends Event {
     super( null );
   }
 
+  /**
+   * The BlobEvent.data read-only property represents a Blob associated with the event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent/data">BlobEvent.data - MDN</a>
+   */
   @JsProperty(
       name = "data"
   )
   @Nonnull
   public native Blob data();
 
+  /**
+   * The timecode readonlyinline property of the BlobEvent interface a DOMHighResTimeStamp indicating the difference between the timestamp of the first chunk in data, and the timestamp of the first chunk in the first BlobEvent produced by this recorder.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent/timecode">BlobEvent.timecode - MDN</a>
+   */
   @JsProperty(
       name = "timecode"
   )

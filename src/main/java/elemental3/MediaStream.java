@@ -9,6 +9,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The MediaStream interface represents a stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream">MediaStream - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -16,9 +21,19 @@ import jsinterop.annotations.JsType;
     name = "MediaStream"
 )
 public class MediaStream extends EventTarget {
+  /**
+   * The MediaStream.onaddtrack property is an EventHandler which specifies a function to be called when the addtrack event occurs on a MediaStream instance. This happens when a new track of any kind is added to the media stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/onaddtrack">MediaStream.onaddtrack - MDN</a>
+   */
   @Nullable
   public EventHandler onaddtrack;
 
+  /**
+   * The MediaStream.onremovetrack property is an EventHandler which specifies a function to be called when the removetrack event occurs on a MediaStream instance. This happens when a track of any kind is removed from the media stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/onremovetrack">MediaStream.onremovetrack - MDN</a>
+   */
   @Nullable
   public EventHandler onremovetrack;
 
@@ -34,6 +49,11 @@ public class MediaStream extends EventTarget {
   public MediaStream(@Nonnull final MediaStreamTrack[] tracks) {
   }
 
+  /**
+   * The active read-only property of the MediaStream interface returns a Boolean value which is true if the stream is currently active; otherwise, it returns false. A stream is considered active if at least one of its MediaStreamTracks is not in the MediaStreamTrack.ended state. Once every track has ended, the stream's active property becomes false.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/active">MediaStream.active - MDN</a>
+   */
   @JsProperty(
       name = "active"
   )
@@ -45,6 +65,11 @@ public class MediaStream extends EventTarget {
   @Nonnull
   public native String id();
 
+  /**
+   * The addtrack event is fired when a new MediaStreamTrack object has been added to a MediaStream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addtrack_event">MediaStream.addtrack - MDN</a>
+   */
   public native void addTrack(@Nonnull MediaStreamTrack track);
 
   @JsMethod(

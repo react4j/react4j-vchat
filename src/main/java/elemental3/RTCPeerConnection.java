@@ -21,30 +21,75 @@ import jsinterop.annotations.JsType;
     name = "RTCPeerConnection"
 )
 public class RTCPeerConnection extends EventTarget {
+  /**
+   * The RTCPeerConnection.onconnectionstatechange property specifies an EventHandler which is called to handle the connectionstatechange event when it occurs on an instance of RTCPeerConnection. This happens whenever the aggregate state of the connection changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onconnectionstatechange">RTCPeerConnection.onconnectionstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler onconnectionstatechange;
 
+  /**
+   * The RTCPeerConnection property onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate">RTCPeerConnection.onicecandidate - MDN</a>
+   */
   @Nullable
   public EventHandler onicecandidate;
 
+  /**
+   * The RTCPeerConnection.onicecandidateerror property is an EventHandler which specifies a function which is called to handle the icecandidateerror event when it occurs on an RTCPeerConnection instance. This event is fired when an error occurs during the ICE candidate gathering process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidateerror">RTCPeerConnection.onicecandidateerror - MDN</a>
+   */
   @Nullable
   public EventHandler onicecandidateerror;
 
+  /**
+   * The RTCPeerConnection.oniceconnectionstatechange property is an event handler which specifies a function to be called when the iceconnectionstatechange event is fired on an RTCPeerConnection instance. This happens when the state of the connection's ICE agent, as represented by the iceConnectionState property, changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange">RTCPeerConnection.oniceconnectionstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler oniceconnectionstatechange;
 
+  /**
+   * The RTCPeerConnection.onicegatheringstatechange property is an EventHandler which specifies a function to be called when the icegatheringstatechange event is sent to an RTCPeerConnection instance. This happens when the ICE gathering state—that is, whether or not the ICE agent is actively gathering candidates—changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicegatheringstatechange">RTCPeerConnection.onicegatheringstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler onicegatheringstatechange;
 
+  /**
+   * The RTCPeerConnection interface's onnegotiationneeded property is an EventListener which specifies a function which is called to handle the negotiationneeded event when it occurs on an RTCPeerConnection instance. This event is fired when a change has occurred which requires session negotiation. This negotiation should be carried out as the offerer, because some session changes cannot be negotiated as the answerer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onnegotiationneeded">RTCPeerConnection.onnegotiationneeded - MDN</a>
+   */
   @Nullable
   public EventHandler onnegotiationneeded;
 
+  /**
+   * The onsignalingstatechange event handler property of the RTCPeerConnection interface specifies a function to be called when the signalingstatechange event occurs on an RTCPeerConnection interface.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onsignalingstatechange">RTCPeerConnection.onsignalingstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler onsignalingstatechange;
 
+  /**
+   * The RTCPeerConnection property ontrack is an EventHandler which specifies a function to be called when the track event occurs, indicating that a track has been added to the RTCPeerConnection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack">RTCPeerConnection.ontrack - MDN</a>
+   */
   @Nullable
   public EventHandler ontrack;
 
+  /**
+   * The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel">RTCPeerConnection.ondatachannel - MDN</a>
+   */
   @Nullable
   public EventHandler ondatachannel;
 

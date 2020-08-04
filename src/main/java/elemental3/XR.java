@@ -20,6 +20,11 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "XR"
 )
 public class XR extends EventTarget {
+  /**
+   * The ondevicechange property of the XRSystem interface is passed a devicechange event whenever availability of an immersive device changes. The event that is fired is a "simple event" that implements the Event interface.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XR/ondevicechange">XR.ondevicechange - MDN</a>
+   */
   @Nullable
   public EventHandler ondevicechange;
 
