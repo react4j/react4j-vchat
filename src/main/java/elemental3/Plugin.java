@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The Plugin interface provides information about a browser plugin.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Plugin">Plugin - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

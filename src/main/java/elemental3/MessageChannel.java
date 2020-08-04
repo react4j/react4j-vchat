@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The MessageChannel interface of the Channel Messaging API allows us to create a new message channel and send data through it via its two MessagePort properties.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel">MessageChannel - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -16,12 +21,22 @@ public class MessageChannel {
   public MessageChannel() {
   }
 
+  /**
+   * The port1 read-only property of the MessageChannel interface returns the first port of the message channel — the port attached to the context that originated the channel.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port1">MessageChannel.port1 - MDN</a>
+   */
   @JsProperty(
       name = "port1"
   )
   @Nonnull
   public native MessagePort port1();
 
+  /**
+   * The port2 read-only property of the MessageChannel interface returns the second port of the message channel — the port attached to the context at the other end of the channel, which the message is initially sent to.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port2">MessageChannel.port2 - MDN</a>
+   */
   @JsProperty(
       name = "port2"
   )

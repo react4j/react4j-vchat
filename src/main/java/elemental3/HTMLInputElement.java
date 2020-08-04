@@ -8,6 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import org.intellij.lang.annotations.MagicConstant;
 
+/**
+ * The HTMLInputElement interface provides special properties and methods for manipulating the options, layout, and presentation of input elements.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

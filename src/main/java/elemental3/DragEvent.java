@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The DragEvent interface is a DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent">DragEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -20,6 +25,11 @@ public class DragEvent extends MouseEvent {
   public DragEvent(@Nonnull final String type) {
   }
 
+  /**
+   * The DragEvent.dataTransfer property holds the drag operation's data (as a DataTransfer object).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/dataTransfer">DragEvent.dataTransfer - MDN</a>
+   */
   @JsProperty(
       name = "dataTransfer"
   )

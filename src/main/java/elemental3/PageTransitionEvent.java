@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The PageTransitionEvent event object is available inside handler functions for the pageshow and pagehide events, fired when a document is being loaded or unloaded.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PageTransitionEvent">PageTransitionEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -22,6 +27,11 @@ public class PageTransitionEvent extends Event {
     super( null );
   }
 
+  /**
+   * The persisted read-only property indicates if a webpage is loading from a cache.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PageTransitionEvent/persisted">PageTransitionEvent.persisted - MDN</a>
+   */
   @JsProperty(
       name = "persisted"
   )

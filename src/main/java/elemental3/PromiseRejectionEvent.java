@@ -9,6 +9,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent">PromiseRejectionEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -21,12 +26,22 @@ public class PromiseRejectionEvent extends Event {
     super( null );
   }
 
+  /**
+   * The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/promise">PromiseRejectionEvent.promise - MDN</a>
+   */
   @JsProperty(
       name = "promise"
   )
   @Nonnull
   public native Promise<Any> promise();
 
+  /**
+   * The PromiseRejectionEvent reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/reason">PromiseRejectionEvent.reason - MDN</a>
+   */
   @JsProperty(
       name = "reason"
   )

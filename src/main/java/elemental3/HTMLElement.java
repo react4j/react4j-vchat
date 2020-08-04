@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -20,26 +25,56 @@ public class HTMLElement extends Element {
   @Nonnull
   public String autocapitalize;
 
+  /**
+   * The HTMLElement.dir property gets or sets the text writing directionality of the content of the current element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir">HTMLElement.dir - MDN</a>
+   */
   @Nonnull
   public String dir;
 
   public boolean draggable;
 
+  /**
+   * The HTMLElement property hidden is a Boolean which is true if the element is hidden; otherwise the value is false. This is quite different from using the CSS property display to control the visibility of an element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden">HTMLElement.hidden - MDN</a>
+   */
   public boolean hidden;
 
+  /**
+   * The innerText property of the HTMLElement interface represents the "rendered" text content of a node and its descendants.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText">HTMLElement.innerText - MDN</a>
+   */
   @Nonnull
   public String innerText;
 
+  /**
+   * The HTMLElement.lang property gets or sets the base language of an element's attribute values and text content.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/lang">HTMLElement.lang - MDN</a>
+   */
   @Nonnull
   public String lang;
 
   public boolean spellcheck;
 
+  /**
+   * The HTMLElement.title property represents the title of the element: the text usually displayed in a 'tooltip' popup when the mouse is over the node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title">HTMLElement.title - MDN</a>
+   */
   @Nonnull
   public String title;
 
   public boolean translate;
 
+  /**
+   * The contentEditable property of the HTMLElement interface specifies whether or not the element is editable.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable">HTMLElement.contentEditable - MDN</a>
+   */
   @Nonnull
   public String contentEditable;
 
@@ -341,43 +376,83 @@ public class HTMLElement extends Element {
   public HTMLElement() {
   }
 
+  /**
+   * The HTMLElement.accessKeyLabel read-only property returns a String that represents the element's assigned access key (if any); otherwise it returns an empty string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel">HTMLElement.accessKeyLabel - MDN</a>
+   */
   @JsProperty(
       name = "accessKeyLabel"
   )
   @Nonnull
   public native String accessKeyLabel();
 
+  /**
+   * The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight">HTMLElement.offsetHeight - MDN</a>
+   */
   @JsProperty(
       name = "offsetHeight"
   )
   public native int offsetHeight();
 
+  /**
+   * The HTMLElement.offsetLeft read-only property returns the number of pixels that the upper left corner of the current element is offset to the left within the HTMLElement.offsetParent node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft">HTMLElement.offsetLeft - MDN</a>
+   */
   @JsProperty(
       name = "offsetLeft"
   )
   public native int offsetLeft();
 
+  /**
+   * The HTMLElement.offsetParent read-only property returns a reference to the element which is the closest (nearest in the containment hierarchy) positioned ancestor element. If there is no positioned ancestor element, the nearest ancestor td, th, table will be returned, or the body if there are no ancestor table elements either.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent">HTMLElement.offsetParent - MDN</a>
+   */
   @JsProperty(
       name = "offsetParent"
   )
   @Nullable
   public native Element offsetParent();
 
+  /**
+   * The HTMLElement.offsetTop read-only property returns the distance of the current element relative to the top of the offsetParent node.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop">HTMLElement.offsetTop - MDN</a>
+   */
   @JsProperty(
       name = "offsetTop"
   )
   public native int offsetTop();
 
+  /**
+   * The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth">HTMLElement.offsetWidth - MDN</a>
+   */
   @JsProperty(
       name = "offsetWidth"
   )
   public native int offsetWidth();
 
+  /**
+   * The HTMLElement.isContentEditable read-only property returns a Boolean that is true if the contents of the element are editable; otherwise it returns false.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/isContentEditable">HTMLElement.isContentEditable - MDN</a>
+   */
   @JsProperty(
       name = "isContentEditable"
   )
   public native boolean isContentEditable();
 
+  /**
+   * The style property is used to get as well as set the inline style of an element. When getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">HTMLElement.style - MDN</a>
+   */
   @JsProperty(
       name = "style"
   )
@@ -393,6 +468,11 @@ public class HTMLElement extends Element {
   @Nonnull
   public native ElementInternals attachInternals();
 
+  /**
+   * The HTMLElement.click() method simulates a mouse click on an element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click">HTMLElement.click - MDN</a>
+   */
   public native void click();
 
   public native void blur();

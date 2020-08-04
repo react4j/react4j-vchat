@@ -8,6 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * PopStateEvent is an event handler for the popstate event on the window.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent">PopStateEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

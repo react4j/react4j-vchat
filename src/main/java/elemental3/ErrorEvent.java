@@ -8,6 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The ErrorEvent interface represents events providing information related to errors in scripts or in files.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ErrorEvent">ErrorEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

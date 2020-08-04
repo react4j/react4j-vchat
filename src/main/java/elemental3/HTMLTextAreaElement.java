@@ -8,6 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import org.intellij.lang.annotations.MagicConstant;
 
+/**
+ * The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of textarea elements.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

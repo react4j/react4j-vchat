@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The HTMLIFrameElement interface provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -19,6 +24,11 @@ public class HTMLIFrameElement extends HTMLElement {
 
   public boolean allowFullscreen;
 
+  /**
+   * The allowPaymentRequest property of the HTMLIFrameElement interface returns a Boolean indicating whether the Payment Request API may be invoked on a cross-origin iframe.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowPaymentRequest">HTMLIFrameElement.allowPaymentRequest - MDN</a>
+   */
   public boolean allowPaymentRequest;
 
   @Nonnull
@@ -30,12 +40,27 @@ public class HTMLIFrameElement extends HTMLElement {
   @Nonnull
   public String name;
 
+  /**
+   * The HTMLIFrameElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy">HTMLIFrameElement.referrerPolicy - MDN</a>
+   */
   @Nonnull
   public String referrerPolicy;
 
+  /**
+   * The HTMLIFrameElement.src property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/src">HTMLIFrameElement.src - MDN</a>
+   */
   @Nonnull
   public String src;
 
+  /**
+   * The srcdoc property of the HTMLIFrameElement specifies the content of the page.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc">HTMLIFrameElement.srcdoc - MDN</a>
+   */
   @Nonnull
   public String srcdoc;
 
@@ -63,12 +88,22 @@ public class HTMLIFrameElement extends HTMLElement {
   public HTMLIFrameElement() {
   }
 
+  /**
+   * If the iframe and the iframe's parent document are Same Origin, returns a Document (that is, the active document in the inline frame's nested browsing context), else returns null.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument">HTMLIFrameElement.contentDocument - MDN</a>
+   */
   @JsProperty(
       name = "contentDocument"
   )
   @Nullable
   public native Document contentDocument();
 
+  /**
+   * The contentWindow property returns the Window object of an HTMLIFrameElement. You can use this Window object to access the iframe's document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global Window object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow">HTMLIFrameElement.contentWindow - MDN</a>
+   */
   @JsProperty(
       name = "contentWindow"
   )

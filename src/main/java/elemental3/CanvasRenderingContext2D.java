@@ -9,6 +9,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import org.intellij.lang.annotations.MagicConstant;
 
+/**
+ * The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a canvas element. It is used for drawing shapes, text, images, and other objects.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

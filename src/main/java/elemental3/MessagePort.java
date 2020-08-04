@@ -8,6 +8,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort">MessagePort - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -15,24 +20,64 @@ import jsinterop.base.Any;
     name = "MessagePort"
 )
 public class MessagePort extends EventTarget {
+  /**
+   * The onmessage event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type message is fired on the port — that is, when the port receives a message.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage">MessagePort.onmessage - MDN</a>
+   */
   @Nullable
   public EventHandler onmessage;
 
+  /**
+   * The onmessageerror event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the port—that is, when it receives a message that cannot be deserialized.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessageerror">MessagePort.onmessageerror - MDN</a>
+   */
   @Nullable
   public EventHandler onmessageerror;
 
   MessagePort() {
   }
 
+  /**
+   * The close() method of the MessagePort interface disconnects the port, so it is no longer active. This stops the flow of messages to that port.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/close">MessagePort.close - MDN</a>
+   */
   public native void close();
 
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull JsArray<Object> transfer);
 
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull Object[] transfer);
 
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull PostMessageOptions options);
 
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message);
 
+  /**
+   * The start() method of the MessagePort interface starts the sending of messages queued on the port. This method is only needed when using EventTarget.addEventListener; it is implied when using MessageChannel.onmessage.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start">MessagePort.start - MDN</a>
+   */
   public native void start();
 }

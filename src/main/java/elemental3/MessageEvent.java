@@ -9,6 +9,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The MessageEvent interface represents a message received by a target object.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent">MessageEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -24,30 +29,55 @@ public class MessageEvent extends Event {
     super( null );
   }
 
+  /**
+   * The data read-only property of the MessageEvent interface represents the data sent by the message emitter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/data">MessageEvent.data - MDN</a>
+   */
   @JsProperty(
       name = "data"
   )
   @Nullable
   public native Any data();
 
+  /**
+   * The lastEventId read-only property of the MessageEvent interface is a DOMString representing a unique ID for the event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/lastEventId">MessageEvent.lastEventId - MDN</a>
+   */
   @JsProperty(
       name = "lastEventId"
   )
   @Nonnull
   public native String lastEventId();
 
+  /**
+   * The origin read-only property of the MessageEvent interface is a USVString representing the origin of the message emitter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/origin">MessageEvent.origin - MDN</a>
+   */
   @JsProperty(
       name = "origin"
   )
   @Nonnull
   public native String origin();
 
+  /**
+   * The ports read-only property of the MessageEvent interface is an array of MessagePort objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/ports">MessageEvent.ports - MDN</a>
+   */
   @JsProperty(
       name = "ports"
   )
   @Nonnull
   public native JsArray<MessagePort> ports();
 
+  /**
+   * The source read-only property of the MessageEvent interface is a MessageEventSource (which can be a WindowProxy, MessagePort, or ServiceWorker object) representing the message emitter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/source">MessageEvent.source - MDN</a>
+   */
   @JsProperty(
       name = "source"
   )

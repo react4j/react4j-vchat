@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The HashChangeEvent interface represents events that fire when the fragment identifier of the URL has changed.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent">HashChangeEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -22,12 +27,22 @@ public class HashChangeEvent extends Event {
     super( null );
   }
 
+  /**
+   * The newURL read-only property of the HashChangeEvent interface returns the new URL to which the window is navigating.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent/newURL">HashChangeEvent.newURL - MDN</a>
+   */
   @JsProperty(
       name = "newURL"
   )
   @Nonnull
   public native String newURL();
 
+  /**
+   * The oldURL read-only property of the HashChangeEvent interface returns the previous URL from which the window was navigated.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent/oldURL">HashChangeEvent.oldURL - MDN</a>
+   */
   @JsProperty(
       name = "oldURL"
   )

@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The HTMLStyleElement interface represents a style element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement">HTMLStyleElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -14,9 +19,19 @@ import jsinterop.annotations.JsType;
     name = "HTMLStyleElement"
 )
 public class HTMLStyleElement extends HTMLElement {
+  /**
+   * The HTMLStyleElement.media property specifies the intended destination medium for style information.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/media">HTMLStyleElement.media - MDN</a>
+   */
   @Nonnull
   public String media;
 
+  /**
+   * The HTMLStyleElement.type read-only property returns the type of the current style.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/type">HTMLStyleElement.type - MDN</a>
+   */
   @Nonnull
   public String type;
 

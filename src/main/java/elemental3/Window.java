@@ -31,6 +31,11 @@ public class Window extends EventTarget {
   @Nonnull
   public String status;
 
+  /**
+   * An event handler for the deviceorientation event, which contains information about a relative device orientation change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation">Window.ondeviceorientation - MDN</a>
+   */
   @Nullable
   public EventHandler ondeviceorientation;
 
@@ -40,6 +45,11 @@ public class Window extends EventTarget {
   @Nullable
   public EventHandler oncompassneedscalibration;
 
+  /**
+   * An event handler for the devicemotion events sent to the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion">Window.ondevicemotion - MDN</a>
+   */
   @Nullable
   public EventHandler ondevicemotion;
 

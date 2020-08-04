@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker">SharedWorker - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -26,6 +31,11 @@ public class SharedWorker extends EventTarget {
   public SharedWorker(@Nonnull final String scriptURL) {
   }
 
+  /**
+   * The port property of the SharedWorker interface returns a MessagePort object used to communicate and control the shared worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/port">SharedWorker.port - MDN</a>
+   */
   @JsProperty(
       name = "port"
   )

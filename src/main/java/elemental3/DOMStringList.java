@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * A type returned by some APIs which contains a list of DOMString (strings).
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList">DOMStringList - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

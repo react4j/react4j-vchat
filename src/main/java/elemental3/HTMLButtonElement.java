@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating button elements.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -14,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "HTMLButtonElement"
 )
 public class HTMLButtonElement extends HTMLElement {
+  /**
+   * Is a Boolean indicating whether or not the control is disabled, meaning that it does not accept any clicks.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/disabled">HTMLButtonElement.disabled - MDN</a>
+   */
   public boolean disabled;
 
   @Nonnull
@@ -48,6 +58,11 @@ public class HTMLButtonElement extends HTMLElement {
   @Nullable
   public native HTMLFormElement form();
 
+  /**
+   * The HTMLButtonElement.labels read-only property returns a NodeList of the label elements associated with the button element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/labels">HTMLButtonElement.labels - MDN</a>
+   */
   @JsProperty(
       name = "labels"
   )

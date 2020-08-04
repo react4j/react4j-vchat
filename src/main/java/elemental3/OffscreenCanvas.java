@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import org.intellij.lang.annotations.MagicConstant;
 
+/**
+ * The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas">OffscreenCanvas - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -16,8 +21,18 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "OffscreenCanvas"
 )
 public class OffscreenCanvas extends EventTarget {
+  /**
+   * The height property returns and sets the height of an OffscreenCanvas object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/height">OffscreenCanvas.height - MDN</a>
+   */
   public int height;
 
+  /**
+   * The width property returns and sets the width of an OffscreenCanvas object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/width">OffscreenCanvas.width - MDN</a>
+   */
   public int width;
 
   public OffscreenCanvas(final int width, final int height) {
@@ -29,11 +44,21 @@ public class OffscreenCanvas extends EventTarget {
   @Nonnull
   public native Promise<Blob> convertToBlob();
 
+  /**
+   * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext">OffscreenCanvas.getContext - MDN</a>
+   */
   @Nullable
   public native OffscreenRenderingContext getContext(
       @MagicConstant(stringValues = {"2d", "bitmaprenderer", "webgl", "webgl2"}) @Nonnull String contextId,
       @Nullable Any options);
 
+  /**
+   * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext">OffscreenCanvas.getContext - MDN</a>
+   */
   @Nullable
   public native OffscreenRenderingContext getContext(
       @MagicConstant(stringValues = {"2d", "bitmaprenderer", "webgl", "webgl2"}) @Nonnull String contextId);

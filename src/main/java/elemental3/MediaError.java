@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The MediaError interface represents an error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as audio or video.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError">MediaError - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -29,11 +34,21 @@ public class MediaError {
   MediaError() {
   }
 
+  /**
+   * The read-only property MediaError.code returns a numeric value which represents the kind of error that occurred on a media element. To get a text string with specific diagnostic information, see MediaError.message.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/code">MediaError.code - MDN</a>
+   */
   @JsProperty(
       name = "code"
   )
   public native int code();
 
+  /**
+   * The read-only property MediaError.message returns a DOMString which contains a human-readable string offering specific diagnostic details related to the error described by the MediaError object, or an empty string ("") if no diagnostic information can be determined or provided.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/message">MediaError.message - MDN</a>
+   */
   @JsProperty(
       name = "message"
   )

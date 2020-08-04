@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The FormDataEvent interface represents a formdata event — such an event is fired on an HTMLFormElement object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent">FormDataEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -17,6 +22,11 @@ public class FormDataEvent extends Event {
     super( null );
   }
 
+  /**
+   * The formData read only property of the FormDataEvent interface contains the FormData object representing the data contained in the form when the event was fired.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/formData">FormDataEvent.formData - MDN</a>
+   */
   @JsProperty(
       name = "formData"
   )

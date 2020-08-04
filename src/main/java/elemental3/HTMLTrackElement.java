@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The HTMLTrackElement interface represents an HTML track element within the DOM. This element can be used as a child of either audio or video to specify a text track containing information such as closed captions or subtitles.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement">HTMLTrackElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -37,6 +42,11 @@ public class HTMLTrackElement extends HTMLElement {
   @Nonnull
   public String label;
 
+  /**
+   * The HTMLTrackElement.src property reflects the value of the track element's src attribute, which indicates the URL of the text track's data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/src">HTMLTrackElement.src - MDN</a>
+   */
   @Nonnull
   public String src;
 
