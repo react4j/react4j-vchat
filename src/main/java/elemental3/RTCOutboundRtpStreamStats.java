@@ -28,14 +28,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return Js.<RTCOutboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
+  /**
+   * The averageRtcpInterval property of the RTCOutboundRtpStreamStats dictionary is a floating-point value indicating the average time that should pass between transmissions of RTCP packets on this stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval">RTCOutboundRtpStreamStats.averageRtcpInterval - MDN</a>
+   */
   @JsProperty(
       name = "averageRtcpInterval"
   )
   double averageRtcpInterval();
 
+  /**
+   * The averageRtcpInterval property of the RTCOutboundRtpStreamStats dictionary is a floating-point value indicating the average time that should pass between transmissions of RTCP packets on this stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval">RTCOutboundRtpStreamStats.averageRtcpInterval - MDN</a>
+   */
   @JsProperty
   void setAverageRtcpInterval(double averageRtcpInterval);
 
+  /**
+   * The averageRtcpInterval property of the RTCOutboundRtpStreamStats dictionary is a floating-point value indicating the average time that should pass between transmissions of RTCP packets on this stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval">RTCOutboundRtpStreamStats.averageRtcpInterval - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats averageRtcpInterval(final double averageRtcpInterval) {
@@ -89,14 +104,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The firCount property of the RTCOutboundRtpStreamStats dictionary indicates the number of Full Intra Request (FIR) that the remote RTCRtpReceiver has sent to this RTCRtpSender.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/firCount">RTCOutboundRtpStreamStats.firCount - MDN</a>
+   */
   @JsProperty(
       name = "firCount"
   )
   int firCount();
 
+  /**
+   * The firCount property of the RTCOutboundRtpStreamStats dictionary indicates the number of Full Intra Request (FIR) that the remote RTCRtpReceiver has sent to this RTCRtpSender.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/firCount">RTCOutboundRtpStreamStats.firCount - MDN</a>
+   */
   @JsProperty
   void setFirCount(int firCount);
 
+  /**
+   * The firCount property of the RTCOutboundRtpStreamStats dictionary indicates the number of Full Intra Request (FIR) that the remote RTCRtpReceiver has sent to this RTCRtpSender.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/firCount">RTCOutboundRtpStreamStats.firCount - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats firCount(final int firCount) {
@@ -164,14 +194,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The framesEncoded property of the RTCOutboundRtpStreamStats dictionary indicates the total number of frames that have been encoded by this RTCRtpSender for this media source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/framesEncoded">RTCOutboundRtpStreamStats.framesEncoded - MDN</a>
+   */
   @JsProperty(
       name = "framesEncoded"
   )
   int framesEncoded();
 
+  /**
+   * The framesEncoded property of the RTCOutboundRtpStreamStats dictionary indicates the total number of frames that have been encoded by this RTCRtpSender for this media source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/framesEncoded">RTCOutboundRtpStreamStats.framesEncoded - MDN</a>
+   */
   @JsProperty
   void setFramesEncoded(int framesEncoded);
 
+  /**
+   * The framesEncoded property of the RTCOutboundRtpStreamStats dictionary indicates the total number of frames that have been encoded by this RTCRtpSender for this media source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/framesEncoded">RTCOutboundRtpStreamStats.framesEncoded - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats framesEncoded(final int framesEncoded) {
@@ -254,14 +299,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The lastPacketSentTimestamp property of the RTCOutboundRtpStreamStats dictionary indicates the time at which the RTCRtpSender described by this RTCOutboundRtpStreamStats object last transmitted a packet to the remote receiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp">RTCOutboundRtpStreamStats.lastPacketSentTimestamp - MDN</a>
+   */
   @JsProperty(
       name = "lastPacketSentTimestamp"
   )
   double lastPacketSentTimestamp();
 
+  /**
+   * The lastPacketSentTimestamp property of the RTCOutboundRtpStreamStats dictionary indicates the time at which the RTCRtpSender described by this RTCOutboundRtpStreamStats object last transmitted a packet to the remote receiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp">RTCOutboundRtpStreamStats.lastPacketSentTimestamp - MDN</a>
+   */
   @JsProperty
   void setLastPacketSentTimestamp(double lastPacketSentTimestamp);
 
+  /**
+   * The lastPacketSentTimestamp property of the RTCOutboundRtpStreamStats dictionary indicates the time at which the RTCRtpSender described by this RTCOutboundRtpStreamStats object last transmitted a packet to the remote receiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp">RTCOutboundRtpStreamStats.lastPacketSentTimestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats lastPacketSentTimestamp(final double lastPacketSentTimestamp) {
@@ -284,14 +344,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The nackCount property of the RTCOutboundRtpStreamStats dictionary is a numeric value indicating the number of times the RTCRtpSender described by this object received a NACK packet from the remote receiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/nackCount">RTCOutboundRtpStreamStats.nackCount - MDN</a>
+   */
   @JsProperty(
       name = "nackCount"
   )
   int nackCount();
 
+  /**
+   * The nackCount property of the RTCOutboundRtpStreamStats dictionary is a numeric value indicating the number of times the RTCRtpSender described by this object received a NACK packet from the remote receiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/nackCount">RTCOutboundRtpStreamStats.nackCount - MDN</a>
+   */
   @JsProperty
   void setNackCount(int nackCount);
 
+  /**
+   * The nackCount property of the RTCOutboundRtpStreamStats dictionary is a numeric value indicating the number of times the RTCRtpSender described by this object received a NACK packet from the remote receiver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/nackCount">RTCOutboundRtpStreamStats.nackCount - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats nackCount(final int nackCount) {
@@ -314,14 +389,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The perDscpPacketsSent property of the RTCOutboundRtpStreamStats dictionary is a record comprised of key/value pairs in which each key is a string representation of a Differentiated Services Code Point and the value is the number of packets sent for that DCSP.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent">RTCOutboundRtpStreamStats.perDscpPacketsSent - MDN</a>
+   */
   @JsProperty(
       name = "perDscpPacketsSent"
   )
   JsPropertyMap<Double> perDscpPacketsSent();
 
+  /**
+   * The perDscpPacketsSent property of the RTCOutboundRtpStreamStats dictionary is a record comprised of key/value pairs in which each key is a string representation of a Differentiated Services Code Point and the value is the number of packets sent for that DCSP.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent">RTCOutboundRtpStreamStats.perDscpPacketsSent - MDN</a>
+   */
   @JsProperty
   void setPerDscpPacketsSent(@Nonnull JsPropertyMap<Double> perDscpPacketsSent);
 
+  /**
+   * The perDscpPacketsSent property of the RTCOutboundRtpStreamStats dictionary is a record comprised of key/value pairs in which each key is a string representation of a Differentiated Services Code Point and the value is the number of packets sent for that DCSP.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent">RTCOutboundRtpStreamStats.perDscpPacketsSent - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats perDscpPacketsSent(
@@ -330,14 +420,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The pliCount property of the RTCOutboundRtpStreamStats dictionary states the number of times the remote peer's RTCRtpReceiver sent a Picture Loss Indication (PLI) packet to the RTCRtpSender for which this object provides statistics.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/pliCount">RTCOutboundRtpStreamStats.pliCount - MDN</a>
+   */
   @JsProperty(
       name = "pliCount"
   )
   int pliCount();
 
+  /**
+   * The pliCount property of the RTCOutboundRtpStreamStats dictionary states the number of times the remote peer's RTCRtpReceiver sent a Picture Loss Indication (PLI) packet to the RTCRtpSender for which this object provides statistics.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/pliCount">RTCOutboundRtpStreamStats.pliCount - MDN</a>
+   */
   @JsProperty
   void setPliCount(int pliCount);
 
+  /**
+   * The pliCount property of the RTCOutboundRtpStreamStats dictionary states the number of times the remote peer's RTCRtpReceiver sent a Picture Loss Indication (PLI) packet to the RTCRtpSender for which this object provides statistics.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/pliCount">RTCOutboundRtpStreamStats.pliCount - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats pliCount(final int pliCount) {
@@ -345,14 +450,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The qpSum property of the RTCOutboundRtpStreamStats dictionary is a value generated by adding the Quantization Parameter (QP) values for every frame this sender has produced to date on the video track corresponding to this RTCOutboundRtpStreamStats object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qpSum">RTCOutboundRtpStreamStats.qpSum - MDN</a>
+   */
   @JsProperty(
       name = "qpSum"
   )
   int qpSum();
 
+  /**
+   * The qpSum property of the RTCOutboundRtpStreamStats dictionary is a value generated by adding the Quantization Parameter (QP) values for every frame this sender has produced to date on the video track corresponding to this RTCOutboundRtpStreamStats object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qpSum">RTCOutboundRtpStreamStats.qpSum - MDN</a>
+   */
   @JsProperty
   void setQpSum(int qpSum);
 
+  /**
+   * The qpSum property of the RTCOutboundRtpStreamStats dictionary is a value generated by adding the Quantization Parameter (QP) values for every frame this sender has produced to date on the video track corresponding to this RTCOutboundRtpStreamStats object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qpSum">RTCOutboundRtpStreamStats.qpSum - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats qpSum(final int qpSum) {
@@ -376,14 +496,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The qualityLimitationReason property of the RTCOutboundRtpStreamStats dictionary is a string indicating the reason why the media quality in the stream is currently being reduced by the codec during encoding, or none if no quality reduction is being performed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason">RTCOutboundRtpStreamStats.qualityLimitationReason - MDN</a>
+   */
   @JsProperty(
       name = "qualityLimitationReason"
   )
   String qualityLimitationReason();
 
+  /**
+   * The qualityLimitationReason property of the RTCOutboundRtpStreamStats dictionary is a string indicating the reason why the media quality in the stream is currently being reduced by the codec during encoding, or none if no quality reduction is being performed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason">RTCOutboundRtpStreamStats.qualityLimitationReason - MDN</a>
+   */
   @JsProperty
   void setQualityLimitationReason(@Nonnull String qualityLimitationReason);
 
+  /**
+   * The qualityLimitationReason property of the RTCOutboundRtpStreamStats dictionary is a string indicating the reason why the media quality in the stream is currently being reduced by the codec during encoding, or none if no quality reduction is being performed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason">RTCOutboundRtpStreamStats.qualityLimitationReason - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats qualityLimitationReason(
@@ -408,14 +543,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The remoteId property of the RTCOutboundRtpStreamStats dictionary specifies the id of the RTCRemoteInboundRtpStreamStats object representing the remote peer's RTCRtpReceiver which is sending the media to the local peer for this SSRC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/remoteId">RTCOutboundRtpStreamStats.remoteId - MDN</a>
+   */
   @JsProperty(
       name = "remoteId"
   )
   String remoteId();
 
+  /**
+   * The remoteId property of the RTCOutboundRtpStreamStats dictionary specifies the id of the RTCRemoteInboundRtpStreamStats object representing the remote peer's RTCRtpReceiver which is sending the media to the local peer for this SSRC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/remoteId">RTCOutboundRtpStreamStats.remoteId - MDN</a>
+   */
   @JsProperty
   void setRemoteId(@Nonnull String remoteId);
 
+  /**
+   * The remoteId property of the RTCOutboundRtpStreamStats dictionary specifies the id of the RTCRemoteInboundRtpStreamStats object representing the remote peer's RTCRtpReceiver which is sending the media to the local peer for this SSRC.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/remoteId">RTCOutboundRtpStreamStats.remoteId - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats remoteId(@Nonnull final String remoteId) {
@@ -528,14 +678,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The sliCount property of the RTCOutboundRtpStreamStats dictionary indicates how many Slice Loss Indication (SLI) packets the RTCRtpSender received from the remote RTCRtpReceiver for the RTP stream described by this object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/sliCount">RTCOutboundRtpStreamStats.sliCount - MDN</a>
+   */
   @JsProperty(
       name = "sliCount"
   )
   int sliCount();
 
+  /**
+   * The sliCount property of the RTCOutboundRtpStreamStats dictionary indicates how many Slice Loss Indication (SLI) packets the RTCRtpSender received from the remote RTCRtpReceiver for the RTP stream described by this object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/sliCount">RTCOutboundRtpStreamStats.sliCount - MDN</a>
+   */
   @JsProperty
   void setSliCount(int sliCount);
 
+  /**
+   * The sliCount property of the RTCOutboundRtpStreamStats dictionary indicates how many Slice Loss Indication (SLI) packets the RTCRtpSender received from the remote RTCRtpReceiver for the RTP stream described by this object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/sliCount">RTCOutboundRtpStreamStats.sliCount - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats sliCount(final int sliCount) {
@@ -633,14 +798,29 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The trackId property of the RTCOutboundRtpStreamStats dictionary indicates the id of the RTCSenderAudioTrackAttachmentStats or RTCSenderVideoTrackAttachmentStats object representing the MediaStreamTrack which is being sent on this stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/trackId">RTCOutboundRtpStreamStats.trackId - MDN</a>
+   */
   @JsProperty(
       name = "trackId"
   )
   String trackId();
 
+  /**
+   * The trackId property of the RTCOutboundRtpStreamStats dictionary indicates the id of the RTCSenderAudioTrackAttachmentStats or RTCSenderVideoTrackAttachmentStats object representing the MediaStreamTrack which is being sent on this stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/trackId">RTCOutboundRtpStreamStats.trackId - MDN</a>
+   */
   @JsProperty
   void setTrackId(@Nonnull String trackId);
 
+  /**
+   * The trackId property of the RTCOutboundRtpStreamStats dictionary indicates the id of the RTCSenderAudioTrackAttachmentStats or RTCSenderVideoTrackAttachmentStats object representing the MediaStreamTrack which is being sent on this stream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/trackId">RTCOutboundRtpStreamStats.trackId - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats trackId(@Nonnull final String trackId) {
@@ -712,6 +892,11 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -720,6 +905,11 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -728,6 +918,11 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
     return this;
   }
 
+  /**
+   * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override

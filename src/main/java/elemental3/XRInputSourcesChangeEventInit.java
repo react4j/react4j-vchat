@@ -29,15 +29,30 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
     return Js.<XRInputSourcesChangeEventInit>uncheckedCast( JsPropertyMap.of() ).added( added ).removed( removed ).session( session );
   }
 
+  /**
+   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
+   */
   @JsProperty(
       name = "added"
   )
   @Nonnull
   JsArray<XRInputSource> added();
 
+  /**
+   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
+   */
   @JsProperty
   void setAdded(@Nonnull JsArray<XRInputSource> added);
 
+  /**
+   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default XRInputSourcesChangeEventInit added(@Nonnull final JsArray<XRInputSource> added) {
@@ -45,15 +60,30 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
     return this;
   }
 
+  /**
+   * The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed">XRInputSourcesChangeEventInit.removed - MDN</a>
+   */
   @JsProperty(
       name = "removed"
   )
   @Nonnull
   JsArray<XRInputSource> removed();
 
+  /**
+   * The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed">XRInputSourcesChangeEventInit.removed - MDN</a>
+   */
   @JsProperty
   void setRemoved(@Nonnull JsArray<XRInputSource> removed);
 
+  /**
+   * The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed">XRInputSourcesChangeEventInit.removed - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default XRInputSourcesChangeEventInit removed(@Nonnull final JsArray<XRInputSource> removed) {
@@ -61,15 +91,30 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
     return this;
   }
 
+  /**
+   * The XRInputSourcesChangeEventInit property session specifies the XRSession to which the input source list change event applies.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session">XRInputSourcesChangeEventInit.session - MDN</a>
+   */
   @JsProperty(
       name = "session"
   )
   @Nonnull
   XRSession session();
 
+  /**
+   * The XRInputSourcesChangeEventInit property session specifies the XRSession to which the input source list change event applies.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session">XRInputSourcesChangeEventInit.session - MDN</a>
+   */
   @JsProperty
   void setSession(@Nonnull XRSession session);
 
+  /**
+   * The XRInputSourcesChangeEventInit property session specifies the XRSession to which the input source list change event applies.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session">XRInputSourcesChangeEventInit.session - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default XRInputSourcesChangeEventInit session(@Nonnull final XRSession session) {

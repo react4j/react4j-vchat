@@ -28,14 +28,29 @@ public interface RTCIceCandidateInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
+  /**
+   * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
+   */
   @JsProperty(
       name = "candidate"
   )
   String candidate();
 
+  /**
+   * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
+   */
   @JsProperty
   void setCandidate(@Nonnull String candidate);
 
+  /**
+   * The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate">RTCIceCandidateInit.candidate - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateInit candidate(@Nonnull final String candidate) {
@@ -43,15 +58,30 @@ public interface RTCIceCandidateInit {
     return this;
   }
 
+  /**
+   * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
+   */
   @JsProperty(
       name = "sdpMLineIndex"
   )
   @Nullable
   Double sdpMLineIndex();
 
+  /**
+   * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
+   */
   @JsProperty
   void setSdpMLineIndex(@Nullable Double sdpMLineIndex);
 
+  /**
+   * The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex">RTCIceCandidateInit.sdpMLineIndex - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateInit sdpMLineIndex(@Nullable final Double sdpMLineIndex) {
@@ -59,15 +89,30 @@ public interface RTCIceCandidateInit {
     return this;
   }
 
+  /**
+   * The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid">RTCIceCandidateInit.sdpMid - MDN</a>
+   */
   @JsProperty(
       name = "sdpMid"
   )
   @Nullable
   String sdpMid();
 
+  /**
+   * The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid">RTCIceCandidateInit.sdpMid - MDN</a>
+   */
   @JsProperty
   void setSdpMid(@Nullable String sdpMid);
 
+  /**
+   * The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid">RTCIceCandidateInit.sdpMid - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateInit sdpMid(@Nullable final String sdpMid) {
@@ -75,15 +120,30 @@ public interface RTCIceCandidateInit {
     return this;
   }
 
+  /**
+   * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
+   */
   @JsProperty(
       name = "usernameFragment"
   )
   @Nullable
   String usernameFragment();
 
+  /**
+   * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
+   */
   @JsProperty
   void setUsernameFragment(@Nullable String usernameFragment);
 
+  /**
+   * The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment">RTCIceCandidateInit.usernameFragment - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateInit usernameFragment(@Nullable final String usernameFragment) {

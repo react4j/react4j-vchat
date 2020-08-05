@@ -280,6 +280,11 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -288,6 +293,11 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -296,6 +306,11 @@ public interface RTCTransportStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override

@@ -28,14 +28,29 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
     return Js.<RTCRtpSynchronizationSource>uncheckedCast( JsPropertyMap.of() ).rtpTimestamp( rtpTimestamp ).source( source ).timestamp( timestamp );
   }
 
+  /**
+   * The read-only voiceActivityFlag property of the RTCRtpSynchronizationSource interface indicates whether or not the most recent RTP packet on the source includes voice activity.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag">RTCRtpSynchronizationSource.voiceActivityFlag - MDN</a>
+   */
   @JsProperty(
       name = "voiceActivityFlag"
   )
   boolean voiceActivityFlag();
 
+  /**
+   * The read-only voiceActivityFlag property of the RTCRtpSynchronizationSource interface indicates whether or not the most recent RTP packet on the source includes voice activity.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag">RTCRtpSynchronizationSource.voiceActivityFlag - MDN</a>
+   */
   @JsProperty
   void setVoiceActivityFlag(boolean voiceActivityFlag);
 
+  /**
+   * The read-only voiceActivityFlag property of the RTCRtpSynchronizationSource interface indicates whether or not the most recent RTP packet on the source includes voice activity.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag">RTCRtpSynchronizationSource.voiceActivityFlag - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCRtpSynchronizationSource voiceActivityFlag(final boolean voiceActivityFlag) {
@@ -43,6 +58,11 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
     return this;
   }
 
+  /**
+   * The read-only audioLevel property of the RTCRtpContributingSource interface indicates the audio level contained in the last RTP packet played from the described source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel">RTCRtpContributingSource.audioLevel - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -51,6 +71,11 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
     return this;
   }
 
+  /**
+   * The read-only rtpTimestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the source-generated time at which the media contained int he packet was first sampled or obtained.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp">RTCRtpContributingSource.rtpTimestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -59,6 +84,11 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
     return this;
   }
 
+  /**
+   * The read-only source property of the RTCRtpContributingSource interface returns the source identifier of a particular stream of RTP packets.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/source">RTCRtpContributingSource.source - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -67,6 +97,11 @@ public interface RTCRtpSynchronizationSource extends RTCRtpContributingSource {
     return this;
   }
 
+  /**
+   * The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp">RTCRtpContributingSource.timestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override

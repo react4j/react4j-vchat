@@ -42,14 +42,29 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
     return this;
   }
 
+  /**
+   * The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate">RTCRtpEncodingParameters.maxBitrate - MDN</a>
+   */
   @JsProperty(
       name = "maxBitrate"
   )
   int maxBitrate();
 
+  /**
+   * The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate">RTCRtpEncodingParameters.maxBitrate - MDN</a>
+   */
   @JsProperty
   void setMaxBitrate(int maxBitrate);
 
+  /**
+   * The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate">RTCRtpEncodingParameters.maxBitrate - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCRtpEncodingParameters maxBitrate(final int maxBitrate) {
@@ -57,14 +72,29 @@ public interface RTCRtpEncodingParameters extends RTCRtpCodingParameters {
     return this;
   }
 
+  /**
+   * The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy">RTCRtpEncodingParameters.scaleResolutionDownBy - MDN</a>
+   */
   @JsProperty(
       name = "scaleResolutionDownBy"
   )
   double scaleResolutionDownBy();
 
+  /**
+   * The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy">RTCRtpEncodingParameters.scaleResolutionDownBy - MDN</a>
+   */
   @JsProperty
   void setScaleResolutionDownBy(double scaleResolutionDownBy);
 
+  /**
+   * The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy">RTCRtpEncodingParameters.scaleResolutionDownBy - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCRtpEncodingParameters scaleResolutionDownBy(final double scaleResolutionDownBy) {

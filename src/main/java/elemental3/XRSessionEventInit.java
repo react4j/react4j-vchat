@@ -27,15 +27,30 @@ public interface XRSessionEventInit extends EventInit {
     return Js.<XRSessionEventInit>uncheckedCast( JsPropertyMap.of() ).session( session );
   }
 
+  /**
+   * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
+   */
   @JsProperty(
       name = "session"
   )
   @Nonnull
   XRSession session();
 
+  /**
+   * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
+   */
   @JsProperty
   void setSession(@Nonnull XRSession session);
 
+  /**
+   * The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session">XRSessionEventInit.session - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default XRSessionEventInit session(@Nonnull final XRSession session) {

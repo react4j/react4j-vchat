@@ -27,14 +27,29 @@ public interface RTCIceCandidatePair {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
+  /**
+   * The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local">RTCIceCandidatePair.local - MDN</a>
+   */
   @JsProperty(
       name = "local"
   )
   RTCIceCandidate local();
 
+  /**
+   * The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local">RTCIceCandidatePair.local - MDN</a>
+   */
   @JsProperty
   void setLocal(@Nonnull RTCIceCandidate local);
 
+  /**
+   * The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local">RTCIceCandidatePair.local - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidatePair local(@Nonnull final RTCIceCandidate local) {
@@ -42,14 +57,29 @@ public interface RTCIceCandidatePair {
     return this;
   }
 
+  /**
+   * The remote property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate describing the configuration of the remote end of a viable WebRTC connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote">RTCIceCandidatePair.remote - MDN</a>
+   */
   @JsProperty(
       name = "remote"
   )
   RTCIceCandidate remote();
 
+  /**
+   * The remote property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate describing the configuration of the remote end of a viable WebRTC connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote">RTCIceCandidatePair.remote - MDN</a>
+   */
   @JsProperty
   void setRemote(@Nonnull RTCIceCandidate remote);
 
+  /**
+   * The remote property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate describing the configuration of the remote end of a viable WebRTC connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/remote">RTCIceCandidatePair.remote - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidatePair remote(@Nonnull final RTCIceCandidate remote) {

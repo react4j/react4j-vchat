@@ -30,15 +30,30 @@ public interface RTCIceCandidateStats extends RTCStats {
     return Js.<RTCIceCandidateStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).candidateType( candidateType ).transportId( transportId );
   }
 
+  /**
+   * The address property of the RTCIceCandidateStats dictionary indicates the address of the ICE candidate. While it's preferred that the address be specified as an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as well.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/address">RTCIceCandidateStats.address - MDN</a>
+   */
   @JsProperty(
       name = "address"
   )
   @Nullable
   String address();
 
+  /**
+   * The address property of the RTCIceCandidateStats dictionary indicates the address of the ICE candidate. While it's preferred that the address be specified as an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as well.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/address">RTCIceCandidateStats.address - MDN</a>
+   */
   @JsProperty
   void setAddress(@Nullable String address);
 
+  /**
+   * The address property of the RTCIceCandidateStats dictionary indicates the address of the ICE candidate. While it's preferred that the address be specified as an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as well.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/address">RTCIceCandidateStats.address - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats address(@Nullable final String address) {
@@ -46,15 +61,30 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType">RTCIceCandidateStats.candidateType - MDN</a>
+   */
   @JsProperty(
       name = "candidateType"
   )
   @Nonnull
   String candidateType();
 
+  /**
+   * The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType">RTCIceCandidateStats.candidateType - MDN</a>
+   */
   @JsProperty
   void setCandidateType(@Nonnull String candidateType);
 
+  /**
+   * The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType">RTCIceCandidateStats.candidateType - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats candidateType(@Nonnull final String candidateType) {
@@ -62,14 +92,29 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats dictionary's port property specifies the network port used by the candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/port">RTCIceCandidateStats.port - MDN</a>
+   */
   @JsProperty(
       name = "port"
   )
   int port();
 
+  /**
+   * The RTCIceCandidateStats dictionary's port property specifies the network port used by the candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/port">RTCIceCandidateStats.port - MDN</a>
+   */
   @JsProperty
   void setPort(int port);
 
+  /**
+   * The RTCIceCandidateStats dictionary's port property specifies the network port used by the candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/port">RTCIceCandidateStats.port - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats port(final int port) {
@@ -77,14 +122,29 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats dictionary's priority property is a positive integer value indicating the priority (or desirability) of the described candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority">RTCIceCandidateStats.priority - MDN</a>
+   */
   @JsProperty(
       name = "priority"
   )
   int priority();
 
+  /**
+   * The RTCIceCandidateStats dictionary's priority property is a positive integer value indicating the priority (or desirability) of the described candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority">RTCIceCandidateStats.priority - MDN</a>
+   */
   @JsProperty
   void setPriority(int priority);
 
+  /**
+   * The RTCIceCandidateStats dictionary's priority property is a positive integer value indicating the priority (or desirability) of the described candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority">RTCIceCandidateStats.priority - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats priority(final int priority) {
@@ -92,14 +152,29 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol">RTCIceCandidateStats.protocol - MDN</a>
+   */
   @JsProperty(
       name = "protocol"
   )
   String protocol();
 
+  /**
+   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol">RTCIceCandidateStats.protocol - MDN</a>
+   */
   @JsProperty
   void setProtocol(@Nonnull String protocol);
 
+  /**
+   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol">RTCIceCandidateStats.protocol - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats protocol(@Nonnull final String protocol) {
@@ -107,14 +182,29 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats dictionary's relayProtocol property specifies the protocol being used by a local ICE candidate to communicate with the TURN server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol">RTCIceCandidateStats.relayProtocol - MDN</a>
+   */
   @JsProperty(
       name = "relayProtocol"
   )
   String relayProtocol();
 
+  /**
+   * The RTCIceCandidateStats dictionary's relayProtocol property specifies the protocol being used by a local ICE candidate to communicate with the TURN server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol">RTCIceCandidateStats.relayProtocol - MDN</a>
+   */
   @JsProperty
   void setRelayProtocol(@Nonnull String relayProtocol);
 
+  /**
+   * The RTCIceCandidateStats dictionary's relayProtocol property specifies the protocol being used by a local ICE candidate to communicate with the TURN server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol">RTCIceCandidateStats.relayProtocol - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats relayProtocol(@Nonnull final String relayProtocol) {
@@ -122,15 +212,30 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats dictionary's transportId property is a string that uniquely identifies the transport that produced the RTCTransportStats from which information about this candidate was taken.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId">RTCIceCandidateStats.transportId - MDN</a>
+   */
   @JsProperty(
       name = "transportId"
   )
   @Nonnull
   String transportId();
 
+  /**
+   * The RTCIceCandidateStats dictionary's transportId property is a string that uniquely identifies the transport that produced the RTCTransportStats from which information about this candidate was taken.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId">RTCIceCandidateStats.transportId - MDN</a>
+   */
   @JsProperty
   void setTransportId(@Nonnull String transportId);
 
+  /**
+   * The RTCIceCandidateStats dictionary's transportId property is a string that uniquely identifies the transport that produced the RTCTransportStats from which information about this candidate was taken.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId">RTCIceCandidateStats.transportId - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats transportId(@Nonnull final String transportId) {
@@ -138,14 +243,29 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats dictionary's url property specifies the URL of the ICE server from which the described candidate was obtained. This property is only available for local candidates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/url">RTCIceCandidateStats.url - MDN</a>
+   */
   @JsProperty(
       name = "url"
   )
   String url();
 
+  /**
+   * The RTCIceCandidateStats dictionary's url property specifies the URL of the ICE server from which the described candidate was obtained. This property is only available for local candidates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/url">RTCIceCandidateStats.url - MDN</a>
+   */
   @JsProperty
   void setUrl(@Nonnull String url);
 
+  /**
+   * The RTCIceCandidateStats dictionary's url property specifies the URL of the ICE server from which the described candidate was obtained. This property is only available for local candidates.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/url">RTCIceCandidateStats.url - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats url(@Nonnull final String url) {
@@ -153,14 +273,29 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCIceCandidateStats dictionary's deleted property indicates whether or not the candidate has been deleted or released.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted">RTCIceCandidateStats.deleted - MDN</a>
+   */
   @JsProperty(
       name = "deleted"
   )
   boolean deleted();
 
+  /**
+   * The RTCIceCandidateStats dictionary's deleted property indicates whether or not the candidate has been deleted or released.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted">RTCIceCandidateStats.deleted - MDN</a>
+   */
   @JsProperty
   void setDeleted(boolean deleted);
 
+  /**
+   * The RTCIceCandidateStats dictionary's deleted property indicates whether or not the candidate has been deleted or released.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted">RTCIceCandidateStats.deleted - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCIceCandidateStats deleted(final boolean deleted) {
@@ -183,6 +318,11 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id">RTCStats.id - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -191,6 +331,11 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp">RTCStats.timestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override
@@ -199,6 +344,11 @@ public interface RTCIceCandidateStats extends RTCStats {
     return this;
   }
 
+  /**
+   * The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type">RTCStats.type - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   @Override

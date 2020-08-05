@@ -27,14 +27,29 @@ public interface RTCOfferOptions extends RTCOfferAnswerOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
+  /**
+   * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
+   */
   @JsProperty(
       name = "iceRestart"
   )
   boolean iceRestart();
 
+  /**
+   * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
+   */
   @JsProperty
   void setIceRestart(boolean iceRestart);
 
+  /**
+   * The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart">RTCOfferOptions.iceRestart - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCOfferOptions iceRestart(final boolean iceRestart) {

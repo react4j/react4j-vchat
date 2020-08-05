@@ -28,14 +28,29 @@ public interface RTCRtpContributingSource {
     return Js.<RTCRtpContributingSource>uncheckedCast( JsPropertyMap.of() ).rtpTimestamp( rtpTimestamp ).source( source ).timestamp( timestamp );
   }
 
+  /**
+   * The read-only audioLevel property of the RTCRtpContributingSource interface indicates the audio level contained in the last RTP packet played from the described source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel">RTCRtpContributingSource.audioLevel - MDN</a>
+   */
   @JsProperty(
       name = "audioLevel"
   )
   double audioLevel();
 
+  /**
+   * The read-only audioLevel property of the RTCRtpContributingSource interface indicates the audio level contained in the last RTP packet played from the described source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel">RTCRtpContributingSource.audioLevel - MDN</a>
+   */
   @JsProperty
   void setAudioLevel(double audioLevel);
 
+  /**
+   * The read-only audioLevel property of the RTCRtpContributingSource interface indicates the audio level contained in the last RTP packet played from the described source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel">RTCRtpContributingSource.audioLevel - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCRtpContributingSource audioLevel(final double audioLevel) {
@@ -43,14 +58,29 @@ public interface RTCRtpContributingSource {
     return this;
   }
 
+  /**
+   * The read-only rtpTimestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the source-generated time at which the media contained int he packet was first sampled or obtained.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp">RTCRtpContributingSource.rtpTimestamp - MDN</a>
+   */
   @JsProperty(
       name = "rtpTimestamp"
   )
   int rtpTimestamp();
 
+  /**
+   * The read-only rtpTimestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the source-generated time at which the media contained int he packet was first sampled or obtained.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp">RTCRtpContributingSource.rtpTimestamp - MDN</a>
+   */
   @JsProperty
   void setRtpTimestamp(int rtpTimestamp);
 
+  /**
+   * The read-only rtpTimestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the source-generated time at which the media contained int he packet was first sampled or obtained.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/rtpTimestamp">RTCRtpContributingSource.rtpTimestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCRtpContributingSource rtpTimestamp(final int rtpTimestamp) {
@@ -58,14 +88,29 @@ public interface RTCRtpContributingSource {
     return this;
   }
 
+  /**
+   * The read-only source property of the RTCRtpContributingSource interface returns the source identifier of a particular stream of RTP packets.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/source">RTCRtpContributingSource.source - MDN</a>
+   */
   @JsProperty(
       name = "source"
   )
   int source();
 
+  /**
+   * The read-only source property of the RTCRtpContributingSource interface returns the source identifier of a particular stream of RTP packets.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/source">RTCRtpContributingSource.source - MDN</a>
+   */
   @JsProperty
   void setSource(int source);
 
+  /**
+   * The read-only source property of the RTCRtpContributingSource interface returns the source identifier of a particular stream of RTP packets.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/source">RTCRtpContributingSource.source - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCRtpContributingSource source(final int source) {
@@ -73,14 +118,29 @@ public interface RTCRtpContributingSource {
     return this;
   }
 
+  /**
+   * The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp">RTCRtpContributingSource.timestamp - MDN</a>
+   */
   @JsProperty(
       name = "timestamp"
   )
   double timestamp();
 
+  /**
+   * The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp">RTCRtpContributingSource.timestamp - MDN</a>
+   */
   @JsProperty
   void setTimestamp(double timestamp);
 
+  /**
+   * The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp">RTCRtpContributingSource.timestamp - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCRtpContributingSource timestamp(final double timestamp) {
