@@ -161,11 +161,7 @@ abstract class MediaStreamConnection
     setConnecting( false );
     setStream( stream );
     stream.getTracks().forEach( ( track, index, tracks ) -> {
-      track.onended = e -> {
-        streamDisconnected();
-        // TODO: Should not have to return null here
-        return null;
-      };
+      track.onended = e -> streamDisconnected();
       // TODO: Should not have to return null here
       return null;
     } );
