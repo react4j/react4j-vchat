@@ -536,7 +536,7 @@ public class Document extends Node {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onwheel">GlobalEventHandlers.onwheel - MDN</a>
    */
   @Nullable
-  public EventHandler onwheel;
+  public WheelEventHandler onwheel;
 
   /**
    * The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.

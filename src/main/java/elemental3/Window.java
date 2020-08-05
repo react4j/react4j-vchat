@@ -37,7 +37,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation">Window.ondeviceorientation - MDN</a>
    */
   @Nullable
-  public EventHandler ondeviceorientation;
+  public DeviceOrientationEventHandler ondeviceorientation;
 
   @Nullable
   public EventHandler ondeviceorientationabsolute;
@@ -51,7 +51,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion">Window.ondevicemotion - MDN</a>
    */
   @Nullable
-  public EventHandler ondevicemotion;
+  public DeviceMotionEventHandler ondevicemotion;
 
   @Nullable
   public EventHandler onorientationchange;

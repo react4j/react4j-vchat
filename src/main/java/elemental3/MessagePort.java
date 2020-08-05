@@ -26,7 +26,7 @@ public class MessagePort extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage">MessagePort.onmessage - MDN</a>
    */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
   /**
    * The onmessageerror event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the port—that is, when it receives a message that cannot be deserialized.
@@ -34,7 +34,7 @@ public class MessagePort extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessageerror">MessagePort.onmessageerror - MDN</a>
    */
   @Nullable
-  public EventHandler onmessageerror;
+  public MessageEventHandler onmessageerror;
 
   MessagePort() {
   }

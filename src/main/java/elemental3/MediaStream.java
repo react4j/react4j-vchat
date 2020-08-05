@@ -27,7 +27,7 @@ public class MediaStream extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/onaddtrack">MediaStream.onaddtrack - MDN</a>
    */
   @Nullable
-  public EventHandler onaddtrack;
+  public MediaStreamTrackEventHandler onaddtrack;
 
   /**
    * The MediaStream.onremovetrack property is an EventHandler which specifies a function to be called when the removetrack event occurs on a MediaStream instance. This happens when a track of any kind is removed from the media stream.
@@ -35,7 +35,7 @@ public class MediaStream extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/onremovetrack">MediaStream.onremovetrack - MDN</a>
    */
   @Nullable
-  public EventHandler onremovetrack;
+  public MediaStreamTrackEventHandler onremovetrack;
 
   public MediaStream() {
   }

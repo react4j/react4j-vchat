@@ -35,7 +35,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate">RTCPeerConnection.onicecandidate - MDN</a>
    */
   @Nullable
-  public EventHandler onicecandidate;
+  public RTCPeerConnectionIceEventHandler onicecandidate;
 
   /**
    * The RTCPeerConnection.onicecandidateerror property is an EventHandler which specifies a function which is called to handle the icecandidateerror event when it occurs on an RTCPeerConnection instance. This event is fired when an error occurs during the ICE candidate gathering process.
@@ -83,7 +83,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack">RTCPeerConnection.ontrack - MDN</a>
    */
   @Nullable
-  public EventHandler ontrack;
+  public RTCTrackEventHandler ontrack;
 
   /**
    * The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel().
@@ -91,7 +91,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel">RTCPeerConnection.ondatachannel - MDN</a>
    */
   @Nullable
-  public EventHandler ondatachannel;
+  public RTCDataChannelEventHandler ondatachannel;
 
   public RTCPeerConnection(@Nonnull final RTCConfiguration configuration) {
   }

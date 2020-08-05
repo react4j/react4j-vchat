@@ -43,7 +43,7 @@ public class EventSource extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onmessage">EventSource.onmessage - MDN</a>
    */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
   /**
    * The onopen property of the EventSource interface is an EventHandler called when an open event is received, that is when the connection was just opened.

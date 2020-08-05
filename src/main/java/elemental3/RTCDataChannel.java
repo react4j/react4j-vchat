@@ -70,7 +70,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onerror">RTCDataChannel.onerror - MDN</a>
    */
   @Nullable
-  public EventHandler onerror;
+  public RTCErrorEventHandler onerror;
 
   /**
    * The RTCDataChannel.onmessage property stores an EventHandler which specifies a function to be called when the message event is fired on the channel. This event is represented by the MessageEvent interface. This event is sent to the channel when a message is received from the other peer.
@@ -78,7 +78,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onmessage">RTCDataChannel.onmessage - MDN</a>
    */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
   /**
    * The RTCDataChannel.onopen property is an EventHandler which specifies a function to be called when the open event is fired; this is a simple Event which is sent when the data channel's underlying data transport—the link over which the RTCDataChannel's messages flow—is established or re-established.
@@ -86,7 +86,7 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onopen">RTCDataChannel.onopen - MDN</a>
    */
   @Nullable
-  public EventHandler onopen;
+  public RTCDataChannelEventHandler onopen;
 
   RTCDataChannel() {
   }

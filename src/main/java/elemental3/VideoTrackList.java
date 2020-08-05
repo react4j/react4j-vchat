@@ -25,7 +25,7 @@ public class VideoTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onaddtrack">VideoTrackList.onaddtrack - MDN</a>
    */
   @Nullable
-  public EventHandler onaddtrack;
+  public TrackEventHandler onaddtrack;
 
   /**
    * The VideoTrackList property onchange is an event handler which is called when the change event occurs, indicating that a VideoTrack in the VideoTrackList has been made active.
@@ -41,7 +41,7 @@ public class VideoTrackList extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onremovetrack">VideoTrackList.onremovetrack - MDN</a>
    */
   @Nullable
-  public EventHandler onremovetrack;
+  public TrackEventHandler onremovetrack;
 
   VideoTrackList() {
   }

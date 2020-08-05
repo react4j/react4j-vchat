@@ -74,7 +74,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onmessage">WebSocket.onmessage - MDN</a>
    */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
   /**
    * The WebSocket.onopen property is an EventHandler that is called when the WebSocket connection's readyState changes to OPEN; this indicates that the connection is ready to send and receive data. It is called with an Event.
