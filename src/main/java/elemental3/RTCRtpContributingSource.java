@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The RTCRtpContributingSource dictionary of the the WebRTC API is used by getContributingSources() to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource">RTCRtpContributingSource - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

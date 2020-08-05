@@ -10,6 +10,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The RTCIceServer dictionary defines how to connect to a single ICE server (such as a STUN or TURN server). It includes both the URL and the necessary credentials, if any, to connect to the server.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer">RTCIceServer - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

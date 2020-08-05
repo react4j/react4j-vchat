@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions">RTCOfferOptions - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

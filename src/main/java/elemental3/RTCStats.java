@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The RTCStats dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCStats">RTCStats - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The RTCRtpCodecParameters dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media codec.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters">RTCRtpCodecParameters - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

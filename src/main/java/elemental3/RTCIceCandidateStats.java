@@ -10,6 +10,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats">RTCIceCandidateStats - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

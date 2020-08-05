@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The WebXR Device API's XRWebGLLayerInit dictionary is used to provide configuration options when creating a new XRWebGLLayer object with the XRWebGLLayer() constructor.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit">XRWebGLLayerInit - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

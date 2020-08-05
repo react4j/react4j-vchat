@@ -8,6 +8,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The WebRTC API's RTCOfferAnswerOptions dictionary is used to specify options that configure and control the process of creating WebRTC offers or answers.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferAnswerOptions">RTCOfferAnswerOptions - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

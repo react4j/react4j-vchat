@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit">XRSessionEventInit - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

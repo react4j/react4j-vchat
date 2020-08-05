@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The RTCRtpSynchronizationSource dictionary of the the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC).
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource">RTCRtpSynchronizationSource - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

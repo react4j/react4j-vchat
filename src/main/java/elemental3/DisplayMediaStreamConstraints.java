@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The DisplayMediaStreamConstraints dictionary is used to specify whether or not to include video and/or audio tracks in the MediaStream to be returned by getDisplayMedia(), as well as what type of processing must be applied to the tracks.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints">DisplayMediaStreamConstraints - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

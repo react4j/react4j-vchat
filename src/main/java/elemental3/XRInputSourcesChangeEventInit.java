@@ -10,6 +10,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The XRInputSourcesChangeEventInit dictionary is used to provide options to the XRInputSourcesChangeEvent() constructor in order to set the initial state of the new XRInputSourcesChangeEvent object.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit">XRInputSourcesChangeEventInit - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

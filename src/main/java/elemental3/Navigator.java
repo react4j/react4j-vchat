@@ -97,18 +97,33 @@ public class Navigator {
   @Nonnull
   public native XR xr();
 
+  /**
+   * The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language">NavigatorLanguage.language - MDN</a>
+   */
   @JsProperty(
       name = "language"
   )
   @Nonnull
   public native String language();
 
+  /**
+   * The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/languages">NavigatorLanguage.languages - MDN</a>
+   */
   @JsProperty(
       name = "languages"
   )
   @Nonnull
   public native JsArray<String> languages();
 
+  /**
+   * Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/onLine">NavigatorOnLine.onLine - MDN</a>
+   */
   @JsProperty(
       name = "onLine"
   )
@@ -125,35 +140,65 @@ public class Navigator {
   @Nonnull
   public native StorageManager storage();
 
+  /**
+   * The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency">NavigatorConcurrentHardware.hardwareConcurrency - MDN</a>
+   */
   @JsProperty(
       name = "hardwareConcurrency"
   )
   public native int hardwareConcurrency();
 
+  /**
+   * The value of the NavigatorID.appCodeName property is always "Mozilla", in any browser. This property is kept only for compatibility purposes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appCodeName">NavigatorID.appCodeName - MDN</a>
+   */
   @JsProperty(
       name = "appCodeName"
   )
   @Nonnull
   public native String appCodeName();
 
+  /**
+   * The value of the NavigatorID.appName property is always "Netscape", in any browser. This property is kept only for compatibility purposes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appName">NavigatorID.appName - MDN</a>
+   */
   @JsProperty(
       name = "appName"
   )
   @Nonnull
   public native String appName();
 
+  /**
+   * Returns either "4.0" or a string representing version information about the browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appVersion">NavigatorID.appVersion - MDN</a>
+   */
   @JsProperty(
       name = "appVersion"
   )
   @Nonnull
   public native String appVersion();
 
+  /**
+   * Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/platform">NavigatorID.platform - MDN</a>
+   */
   @JsProperty(
       name = "platform"
   )
   @Nonnull
   public native String platform();
 
+  /**
+   * The value of the NavigatorID.product property is always "Gecko", in any browser. This property is kept only for compatibility purposes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/product">NavigatorID.product - MDN</a>
+   */
   @JsProperty(
       name = "product"
   )
@@ -171,6 +216,11 @@ public class Navigator {
   @Nonnull
   public native String productSub();
 
+  /**
+   * The NavigatorID.userAgent read-only property returns the user agent string for the current browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent">NavigatorID.userAgent - MDN</a>
+   */
   @JsProperty(
       name = "userAgent"
   )
@@ -215,12 +265,22 @@ public class Navigator {
   )
   public native boolean webdriver();
 
+  /**
+   * Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/mimeTypes">NavigatorPlugins.mimeTypes - MDN</a>
+   */
   @JsProperty(
       name = "mimeTypes"
   )
   @Nonnull
   public native MimeTypeArray mimeTypes();
 
+  /**
+   * Returns a PluginArray object, listing the Plugin objects describing the plugins installed in the application.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/plugins">NavigatorPlugins.plugins - MDN</a>
+   */
   @JsProperty(
       name = "plugins"
   )
@@ -292,7 +352,17 @@ public class Navigator {
 
   public native void unregisterProtocolHandler(@Nonnull String scheme, @Nonnull String url);
 
+  /**
+   * The NavigatorID.taintEnabled() method always returns false.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/taintEnabled">NavigatorID.taintEnabled - MDN</a>
+   */
   public native boolean taintEnabled();
 
+  /**
+   * This method indicates whether the current browser is Java-enabled or not.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/javaEnabled">NavigatorPlugins.javaEnabled - MDN</a>
+   */
   public native boolean javaEnabled();
 }
