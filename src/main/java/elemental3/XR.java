@@ -4,8 +4,10 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 import org.intellij.lang.annotations.MagicConstant;
 
 /**
@@ -58,4 +60,38 @@ public class XR extends EventTarget {
   @Nonnull
   public native Promise<XRSession> requestSession(
       @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode);
+
+  @JsOverlay
+  public void addDevicechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "devicechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDevicechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "devicechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDevicechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "devicechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeDevicechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "devicechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDevicechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "devicechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDevicechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "devicechange", Js.cast( callback ) );
+  }
 }

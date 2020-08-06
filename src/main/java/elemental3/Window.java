@@ -5,10 +5,12 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 
 /**
  * The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.
@@ -1961,4 +1963,142 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame">Window.requestAnimationFrame - MDN</a>
    */
   public native int requestAnimationFrame(@Nonnull FrameRequestCallback callback);
+
+  @JsOverlay
+  public void addDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "devicemotion", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      final boolean options) {
+    addEventListener( "devicemotion", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDevicemotionListener(@Nonnull final DeviceMotionEventListener callback) {
+    addEventListener( "devicemotion", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "devicemotion", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDevicemotionListener(@Nonnull final DeviceMotionEventListener callback,
+      final boolean options) {
+    removeEventListener( "devicemotion", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDevicemotionListener(@Nonnull final DeviceMotionEventListener callback) {
+    removeEventListener( "devicemotion", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addDeviceorientationListener(@Nonnull final DeviceOrientationEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "deviceorientation", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDeviceorientationListener(@Nonnull final DeviceOrientationEventListener callback,
+      final boolean options) {
+    addEventListener( "deviceorientation", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDeviceorientationListener(@Nonnull final DeviceOrientationEventListener callback) {
+    addEventListener( "deviceorientation", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "deviceorientation", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback, final boolean options) {
+    removeEventListener( "deviceorientation", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDeviceorientationListener(
+      @Nonnull final DeviceOrientationEventListener callback) {
+    removeEventListener( "deviceorientation", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addLanguagechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "languagechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLanguagechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "languagechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLanguagechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "languagechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeLanguagechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "languagechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLanguagechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "languagechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLanguagechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "languagechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addOrientationchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "orientationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addOrientationchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "orientationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addOrientationchangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "orientationchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeOrientationchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "orientationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeOrientationchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "orientationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeOrientationchangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "orientationchange", Js.cast( callback ) );
+  }
 }

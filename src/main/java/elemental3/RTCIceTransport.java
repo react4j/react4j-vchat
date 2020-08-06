@@ -4,9 +4,11 @@ import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received.
@@ -130,4 +132,105 @@ public class RTCIceTransport extends EventTarget {
    */
   @Nullable
   public native RTCIceCandidatePair getSelectedCandidatePair();
+
+  @JsOverlay
+  public void addGatheringstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "gatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addGatheringstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "gatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addGatheringstatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "gatheringstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeGatheringstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "gatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeGatheringstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "gatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeGatheringstatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "gatheringstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addSelectedcandidatepairchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "selectedcandidatepairchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSelectedcandidatepairchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "selectedcandidatepairchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSelectedcandidatepairchangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "selectedcandidatepairchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeSelectedcandidatepairchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "selectedcandidatepairchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSelectedcandidatepairchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "selectedcandidatepairchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSelectedcandidatepairchangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "selectedcandidatepairchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addStatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "statechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addStatechangeListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "statechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addStatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "statechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeStatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "statechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeStatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "statechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeStatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "statechange", Js.cast( callback ) );
+  }
 }

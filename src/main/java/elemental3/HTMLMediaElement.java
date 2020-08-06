@@ -8,6 +8,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 import org.intellij.lang.annotations.MagicConstant;
 
 /**
@@ -353,4 +354,560 @@ public class HTMLMediaElement extends HTMLElement {
    */
   @Nonnull
   public native Promise<Void> setMediaKeys(@Nullable MediaKeys mediaKeys);
+
+  @JsOverlay
+  public void addAbortListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addAbortListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addAbortListener(@Nonnull final EventListener callback) {
+    addEventListener( "abort", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeAbortListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeAbortListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeAbortListener(@Nonnull final EventListener callback) {
+    removeEventListener( "abort", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addCanplayListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "canplay", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCanplayListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "canplay", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCanplayListener(@Nonnull final EventListener callback) {
+    addEventListener( "canplay", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeCanplayListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "canplay", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCanplayListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "canplay", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCanplayListener(@Nonnull final EventListener callback) {
+    removeEventListener( "canplay", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addCanplaythroughListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "canplaythrough", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCanplaythroughListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "canplaythrough", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCanplaythroughListener(@Nonnull final EventListener callback) {
+    addEventListener( "canplaythrough", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeCanplaythroughListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "canplaythrough", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCanplaythroughListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "canplaythrough", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCanplaythroughListener(@Nonnull final EventListener callback) {
+    removeEventListener( "canplaythrough", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addDurationchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "durationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDurationchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "durationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addDurationchangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "durationchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeDurationchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "durationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDurationchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "durationchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeDurationchangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "durationchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addEmptiedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "emptied", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addEmptiedListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "emptied", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addEmptiedListener(@Nonnull final EventListener callback) {
+    addEventListener( "emptied", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeEmptiedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "emptied", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeEmptiedListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "emptied", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeEmptiedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "emptied", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addLoadeddataListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "loadeddata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLoadeddataListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "loadeddata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLoadeddataListener(@Nonnull final EventListener callback) {
+    addEventListener( "loadeddata", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeLoadeddataListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "loadeddata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLoadeddataListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "loadeddata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLoadeddataListener(@Nonnull final EventListener callback) {
+    removeEventListener( "loadeddata", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addLoadedmetadataListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "loadedmetadata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLoadedmetadataListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "loadedmetadata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLoadedmetadataListener(@Nonnull final EventListener callback) {
+    addEventListener( "loadedmetadata", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeLoadedmetadataListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "loadedmetadata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLoadedmetadataListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "loadedmetadata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLoadedmetadataListener(@Nonnull final EventListener callback) {
+    removeEventListener( "loadedmetadata", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addLoadstartListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLoadstartListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addLoadstartListener(@Nonnull final EventListener callback) {
+    addEventListener( "loadstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeLoadstartListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLoadstartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeLoadstartListener(@Nonnull final EventListener callback) {
+    removeEventListener( "loadstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addPlayingListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "playing", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addPlayingListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "playing", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addPlayingListener(@Nonnull final EventListener callback) {
+    addEventListener( "playing", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removePlayingListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "playing", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removePlayingListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "playing", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removePlayingListener(@Nonnull final EventListener callback) {
+    removeEventListener( "playing", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addProgressListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addProgressListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addProgressListener(@Nonnull final EventListener callback) {
+    addEventListener( "progress", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeProgressListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeProgressListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeProgressListener(@Nonnull final EventListener callback) {
+    removeEventListener( "progress", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addRatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "ratechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addRatechangeListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "ratechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addRatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "ratechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeRatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "ratechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeRatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "ratechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeRatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "ratechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addSeekedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "seeked", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSeekedListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "seeked", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSeekedListener(@Nonnull final EventListener callback) {
+    addEventListener( "seeked", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeSeekedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "seeked", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSeekedListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "seeked", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSeekedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "seeked", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addStalledListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "stalled", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addStalledListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "stalled", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addStalledListener(@Nonnull final EventListener callback) {
+    addEventListener( "stalled", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeStalledListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "stalled", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeStalledListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "stalled", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeStalledListener(@Nonnull final EventListener callback) {
+    removeEventListener( "stalled", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addSuspendListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "suspend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSuspendListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "suspend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSuspendListener(@Nonnull final EventListener callback) {
+    addEventListener( "suspend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeSuspendListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "suspend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSuspendListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "suspend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSuspendListener(@Nonnull final EventListener callback) {
+    removeEventListener( "suspend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addTimeupdateListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "timeupdate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addTimeupdateListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "timeupdate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addTimeupdateListener(@Nonnull final EventListener callback) {
+    addEventListener( "timeupdate", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeTimeupdateListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "timeupdate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeTimeupdateListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "timeupdate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeTimeupdateListener(@Nonnull final EventListener callback) {
+    removeEventListener( "timeupdate", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addVolumechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "volumechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addVolumechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "volumechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addVolumechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "volumechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeVolumechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "volumechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeVolumechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "volumechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeVolumechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "volumechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addWaitingListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "waiting", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addWaitingListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "waiting", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addWaitingListener(@Nonnull final EventListener callback) {
+    addEventListener( "waiting", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeWaitingListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "waiting", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeWaitingListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "waiting", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeWaitingListener(@Nonnull final EventListener callback) {
+    removeEventListener( "waiting", Js.cast( callback ) );
+  }
 }

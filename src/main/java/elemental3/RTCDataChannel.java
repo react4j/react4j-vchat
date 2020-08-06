@@ -14,9 +14,11 @@ import elemental2.core.Uint8ClampedArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
@@ -297,4 +299,140 @@ public class RTCDataChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send">RTCDataChannel.send - MDN</a>
    */
   public native void send(@Nonnull DataView data);
+
+  @JsOverlay
+  public void addBufferedamountlowListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "bufferedamountlow", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addBufferedamountlowListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "bufferedamountlow", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addBufferedamountlowListener(@Nonnull final EventListener callback) {
+    addEventListener( "bufferedamountlow", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeBufferedamountlowListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "bufferedamountlow", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeBufferedamountlowListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "bufferedamountlow", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeBufferedamountlowListener(@Nonnull final EventListener callback) {
+    removeEventListener( "bufferedamountlow", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addErrorListener(@Nonnull final RTCErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addErrorListener(@Nonnull final RTCErrorEventListener callback,
+      final boolean options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addErrorListener(@Nonnull final RTCErrorEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeErrorListener(@Nonnull final RTCErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeErrorListener(@Nonnull final RTCErrorEventListener callback,
+      final boolean options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeErrorListener(@Nonnull final RTCErrorEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addOpenListener(@Nonnull final RTCDataChannelEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addOpenListener(@Nonnull final RTCDataChannelEventListener callback,
+      final boolean options) {
+    addEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addOpenListener(@Nonnull final RTCDataChannelEventListener callback) {
+    addEventListener( "open", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeOpenListener(@Nonnull final RTCDataChannelEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeOpenListener(@Nonnull final RTCDataChannelEventListener callback,
+      final boolean options) {
+    removeEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeOpenListener(@Nonnull final RTCDataChannelEventListener callback) {
+    removeEventListener( "open", Js.cast( callback ) );
+  }
 }

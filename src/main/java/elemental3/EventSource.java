@@ -7,6 +7,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The EventSource interface is web content's interface to server-sent events. An EventSource instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format.
@@ -97,4 +98,70 @@ public class EventSource extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/close">EventSource.close - MDN</a>
    */
   public native void close();
+
+  @JsOverlay
+  public void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addOpenListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addOpenListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addOpenListener(@Nonnull final EventListener callback) {
+    addEventListener( "open", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeOpenListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeOpenListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "open", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeOpenListener(@Nonnull final EventListener callback) {
+    removeEventListener( "open", Js.cast( callback ) );
+  }
 }

@@ -3,9 +3,11 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The HTMLFormElement interface represents a form element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.
@@ -149,4 +151,38 @@ public class HTMLFormElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit">HTMLFormElement.submit - MDN</a>
    */
   public native void submit();
+
+  @JsOverlay
+  public void addFormdataListener(@Nonnull final FormDataEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "formdata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addFormdataListener(@Nonnull final FormDataEventListener callback,
+      final boolean options) {
+    addEventListener( "formdata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addFormdataListener(@Nonnull final FormDataEventListener callback) {
+    addEventListener( "formdata", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeFormdataListener(@Nonnull final FormDataEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "formdata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeFormdataListener(@Nonnull final FormDataEventListener callback,
+      final boolean options) {
+    removeEventListener( "formdata", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeFormdataListener(@Nonnull final FormDataEventListener callback) {
+    removeEventListener( "formdata", Js.cast( callback ) );
+  }
 }
