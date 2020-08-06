@@ -55,9 +55,19 @@ public class SpeechRecognition extends EventTarget {
    */
   public int maxAlternatives;
 
+  /**
+   * The onaudioend property of the SpeechRecognition interface represents an event handler that will run when the user agent has finished capturing audio (when the audioend event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudioend">SpeechRecognition.onaudioend - MDN</a>
+   */
   @Nullable
   public EventHandler onaudioend;
 
+  /**
+   * The onaudiostart property of the SpeechRecognition interface represents an event handler that will run when the user agent has started to capture audio (when the audiostart event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudiostart">SpeechRecognition.onaudiostart - MDN</a>
+   */
   @Nullable
   public EventHandler onaudiostart;
 

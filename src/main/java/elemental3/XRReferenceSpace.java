@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "XRReferenceSpace"
 )
 public class XRReferenceSpace extends XRSpace {
+  /**
+   * The XRReferenceSpace interface's onreset event handler property can be set to a function which is called when the XRReferenceSpace receives a reset event, signaling that the  XR device has experienced a discontinuity large enough to require that the position and/or orientation of the origin be significantly altered to compensate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/onreset">XRReferenceSpace.onreset - MDN</a>
+   */
   @Nullable
   public EventHandler onreset;
 

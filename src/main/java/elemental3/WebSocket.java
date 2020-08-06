@@ -77,7 +77,7 @@ public class WebSocket extends EventTarget {
   public MessageEventHandler onmessage;
 
   /**
-   * The WebSocket.onopen property is an EventHandler that is called when the WebSocket connection's readyState changes to OPEN; this indicates that the connection is ready to send and receive data. It is called with an Event.
+   * The WebSocket.onopen property is an EventHandler that is called when the WebSocket connection's readyState changes to 1; this indicates that the connection is ready to send and receive data. It is called with an Event.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onopen">WebSocket.onopen - MDN</a>
    */

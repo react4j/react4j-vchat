@@ -1017,16 +1017,31 @@ public class Window extends EventTarget {
   @Nonnull
   public native External external();
 
+  /**
+   * The crossOriginIsolated read-only property of the WindowOrWorkerGlobalScope interface returns a boolean value that indicates whether a SharedArrayBuffer can be sent via a Window.postMessage() call.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated">WindowOrWorkerGlobalScope.crossOriginIsolated - MDN</a>
+   */
   @JsProperty(
       name = "crossOriginIsolated"
   )
   public native boolean crossOriginIsolated();
 
+  /**
+   * The isSecureContext read-only property of the WindowOrWorkerGlobalScope interface returns a boolean indicating whether the current context is secure (true) or not (false).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext">WindowOrWorkerGlobalScope.isSecureContext - MDN</a>
+   */
   @JsProperty(
       name = "isSecureContext"
   )
   public native boolean isSecureContext();
 
+  /**
+   * The origin read-only property of the WindowOrWorkerGlobalScope interface returns the origin of the global scope, serialized as a string.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin">WindowOrWorkerGlobalScope.origin - MDN</a>
+   */
   @JsProperty(
       name = "origin"
   )
@@ -1039,12 +1054,22 @@ public class Window extends EventTarget {
   @Nonnull
   public native Performance performance();
 
+  /**
+   * The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB">WindowOrWorkerGlobalScope.indexedDB - MDN</a>
+   */
   @JsProperty(
       name = "indexedDB"
   )
   @Nonnull
   public native IDBFactory indexedDB();
 
+  /**
+   * The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches">WindowOrWorkerGlobalScope.caches - MDN</a>
+   */
   @JsProperty(
       name = "caches"
   )
@@ -1354,7 +1379,7 @@ public class Window extends EventTarget {
   public native void releaseEvents();
 
   /**
-   * The WindowOrWorkerGlobalScope.atob() function decodes a string of data which has been encoded using base-64 encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31.
+   * The WindowOrWorkerGlobalScope.atob() function decodes a string of data which has been encoded using Base64 encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob">WindowOrWorkerGlobalScope.atob - MDN</a>
    */
