@@ -2,8 +2,10 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The HTMLDialogElement interface provides methods to manipulate dialog elements. It inherits properties and methods from the HTMLElement interface.
@@ -62,4 +64,36 @@ public class HTMLDialogElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal">HTMLDialogElement.showModal - MDN</a>
    */
   public native void showModal();
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final EventListener callback) {
+    addEventListener( "close", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final EventListener callback) {
+    removeEventListener( "close", Js.cast( callback ) );
+  }
 }

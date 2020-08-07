@@ -68,9 +68,9 @@ public class MediaStream extends EventTarget {
   public native String id();
 
   /**
-   * The addtrack event is fired when a new MediaStreamTrack object has been added to a MediaStream.
+   * The MediaStream.addTrack() method adds a new track to the stream. The track is specified as a parameter of type MediaStreamTrack.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addtrack_event">MediaStream.addtrack - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addTrack">MediaStream.addTrack - MDN</a>
    */
   public native void addTrack(@Nonnull MediaStreamTrack track);
 

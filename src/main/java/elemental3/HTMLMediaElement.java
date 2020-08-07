@@ -520,6 +520,70 @@ public class HTMLMediaElement extends HTMLElement {
   }
 
   @JsOverlay
+  public void addEndedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addEndedListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addEndedListener(@Nonnull final EventListener callback) {
+    addEventListener( "ended", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeEndedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeEndedListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeEndedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "ended", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addErrorListener(@Nonnull final EventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeErrorListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeErrorListener(@Nonnull final EventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
   public void addLoadeddataListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "loadeddata", Js.cast( callback ), options );
@@ -617,6 +681,70 @@ public class HTMLMediaElement extends HTMLElement {
   @JsOverlay
   public void removeLoadstartListener(@Nonnull final EventListener callback) {
     removeEventListener( "loadstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addPauseListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "pause", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addPauseListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "pause", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addPauseListener(@Nonnull final EventListener callback) {
+    addEventListener( "pause", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removePauseListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "pause", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removePauseListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "pause", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removePauseListener(@Nonnull final EventListener callback) {
+    removeEventListener( "pause", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addPlayListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "play", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addPlayListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "play", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addPlayListener(@Nonnull final EventListener callback) {
+    addEventListener( "play", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removePlayListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "play", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removePlayListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "play", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removePlayListener(@Nonnull final EventListener callback) {
+    removeEventListener( "play", Js.cast( callback ) );
   }
 
   @JsOverlay
@@ -746,6 +874,38 @@ public class HTMLMediaElement extends HTMLElement {
   @JsOverlay
   public void removeSeekedListener(@Nonnull final EventListener callback) {
     removeEventListener( "seeked", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void addSeekingListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "seeking", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSeekingListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "seeking", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addSeekingListener(@Nonnull final EventListener callback) {
+    addEventListener( "seeking", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeSeekingListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "seeking", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSeekingListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "seeking", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeSeekingListener(@Nonnull final EventListener callback) {
+    removeEventListener( "seeking", Js.cast( callback ) );
   }
 
   @JsOverlay

@@ -59,7 +59,7 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onclose">WebSocket.onclose - MDN</a>
    */
   @Nullable
-  public EventHandler onclose;
+  public CloseEventHandler onclose;
 
   /**
    * The WebSocket interface's onerror event handler property is a function which gets called when an error occurs on the WebSocket.
@@ -268,6 +268,39 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send">WebSocket.send - MDN</a>
    */
   public native void send(@Nonnull DataView data);
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final CloseEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final CloseEventListener callback, final boolean options) {
+    addEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final CloseEventListener callback) {
+    addEventListener( "close", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final CloseEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final CloseEventListener callback,
+      final boolean options) {
+    removeEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final CloseEventListener callback) {
+    removeEventListener( "close", Js.cast( callback ) );
+  }
 
   @JsOverlay
   public void addErrorListener(@Nonnull final EventListener callback,

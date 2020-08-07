@@ -3,8 +3,10 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The WebXR Device API's XRReferenceSpace interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior.
@@ -24,7 +26,7 @@ public class XRReferenceSpace extends XRSpace {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/onreset">XRReferenceSpace.onreset - MDN</a>
    */
   @Nullable
-  public EventHandler onreset;
+  public XRReferenceSpaceEventHandler onreset;
 
   XRReferenceSpace() {
   }
@@ -36,4 +38,38 @@ public class XRReferenceSpace extends XRSpace {
    */
   @Nonnull
   public native XRReferenceSpace getOffsetReferenceSpace(@Nonnull XRRigidTransform originOffset);
+
+  @JsOverlay
+  public void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+      final boolean options) {
+    addEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback) {
+    addEventListener( "reset", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+      final boolean options) {
+    removeEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback) {
+    removeEventListener( "reset", Js.cast( callback ) );
+  }
 }

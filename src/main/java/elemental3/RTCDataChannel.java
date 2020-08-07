@@ -335,6 +335,38 @@ public class RTCDataChannel extends EventTarget {
   }
 
   @JsOverlay
+  public void addCloseListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void addCloseListener(@Nonnull final EventListener callback) {
+    addEventListener( "close", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final EventListener callback, final boolean options) {
+    removeEventListener( "close", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public void removeCloseListener(@Nonnull final EventListener callback) {
+    removeEventListener( "close", Js.cast( callback ) );
+  }
+
+  @JsOverlay
   public void addErrorListener(@Nonnull final RTCErrorEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "error", Js.cast( callback ), options );
