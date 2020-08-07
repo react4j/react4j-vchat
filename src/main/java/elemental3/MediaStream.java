@@ -95,70 +95,71 @@ public class MediaStream extends EventTarget {
   public native void removeTrack(@Nonnull MediaStreamTrack track);
 
   @JsOverlay
-  public void addAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void addAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void addAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       final boolean options) {
     addEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback) {
+  public final void addAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback) {
     addEventListener( "addtrack", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void removeAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void removeAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       final boolean options) {
     removeEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback) {
+  public final void removeAddtrackListener(@Nonnull final MediaStreamTrackEventListener callback) {
     removeEventListener( "addtrack", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void addRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void addRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       final boolean options) {
     addEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback) {
+  public final void addRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback) {
     addEventListener( "removetrack", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void removeRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
+  public final void removeRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback,
       final boolean options) {
     removeEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeRemovetrackListener(@Nonnull final MediaStreamTrackEventListener callback) {
+  public final void removeRemovetrackListener(
+      @Nonnull final MediaStreamTrackEventListener callback) {
     removeEventListener( "removetrack", Js.cast( callback ) );
   }
 }

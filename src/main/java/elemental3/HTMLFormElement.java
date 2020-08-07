@@ -153,102 +153,103 @@ public class HTMLFormElement extends HTMLElement {
   public native void submit();
 
   @JsOverlay
-  public void addFormdataListener(@Nonnull final FormDataEventListener callback,
+  public final void addFormdataListener(@Nonnull final FormDataEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "formdata", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addFormdataListener(@Nonnull final FormDataEventListener callback,
+  public final void addFormdataListener(@Nonnull final FormDataEventListener callback,
       final boolean options) {
     addEventListener( "formdata", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addFormdataListener(@Nonnull final FormDataEventListener callback) {
+  public final void addFormdataListener(@Nonnull final FormDataEventListener callback) {
     addEventListener( "formdata", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeFormdataListener(@Nonnull final FormDataEventListener callback,
+  public final void removeFormdataListener(@Nonnull final FormDataEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "formdata", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeFormdataListener(@Nonnull final FormDataEventListener callback,
+  public final void removeFormdataListener(@Nonnull final FormDataEventListener callback,
       final boolean options) {
     removeEventListener( "formdata", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeFormdataListener(@Nonnull final FormDataEventListener callback) {
+  public final void removeFormdataListener(@Nonnull final FormDataEventListener callback) {
     removeEventListener( "formdata", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addResetListener(@Nonnull final EventListener callback,
+  public final void addResetListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addResetListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addResetListener(@Nonnull final EventListener callback, final boolean options) {
     addEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addResetListener(@Nonnull final EventListener callback) {
+  public final void addResetListener(@Nonnull final EventListener callback) {
     addEventListener( "reset", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeResetListener(@Nonnull final EventListener callback,
+  public final void removeResetListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeResetListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void removeResetListener(@Nonnull final EventListener callback,
+      final boolean options) {
     removeEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeResetListener(@Nonnull final EventListener callback) {
+  public final void removeResetListener(@Nonnull final EventListener callback) {
     removeEventListener( "reset", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addSubmitListener(@Nonnull final SubmitEventListener callback,
+  public final void addSubmitListener(@Nonnull final SubmitEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "submit", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addSubmitListener(@Nonnull final SubmitEventListener callback,
+  public final void addSubmitListener(@Nonnull final SubmitEventListener callback,
       final boolean options) {
     addEventListener( "submit", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addSubmitListener(@Nonnull final SubmitEventListener callback) {
+  public final void addSubmitListener(@Nonnull final SubmitEventListener callback) {
     addEventListener( "submit", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeSubmitListener(@Nonnull final SubmitEventListener callback,
+  public final void removeSubmitListener(@Nonnull final SubmitEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "submit", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeSubmitListener(@Nonnull final SubmitEventListener callback,
+  public final void removeSubmitListener(@Nonnull final SubmitEventListener callback,
       final boolean options) {
     removeEventListener( "submit", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeSubmitListener(@Nonnull final SubmitEventListener callback) {
+  public final void removeSubmitListener(@Nonnull final SubmitEventListener callback) {
     removeEventListener( "submit", Js.cast( callback ) );
   }
 }

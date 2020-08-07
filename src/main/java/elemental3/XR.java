@@ -62,36 +62,36 @@ public class XR extends EventTarget {
       @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode);
 
   @JsOverlay
-  public void addDevicechangeListener(@Nonnull final EventListener callback,
+  public final void addDevicechangeListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "devicechange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addDevicechangeListener(@Nonnull final EventListener callback,
+  public final void addDevicechangeListener(@Nonnull final EventListener callback,
       final boolean options) {
     addEventListener( "devicechange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addDevicechangeListener(@Nonnull final EventListener callback) {
+  public final void addDevicechangeListener(@Nonnull final EventListener callback) {
     addEventListener( "devicechange", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeDevicechangeListener(@Nonnull final EventListener callback,
+  public final void removeDevicechangeListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "devicechange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeDevicechangeListener(@Nonnull final EventListener callback,
+  public final void removeDevicechangeListener(@Nonnull final EventListener callback,
       final boolean options) {
     removeEventListener( "devicechange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeDevicechangeListener(@Nonnull final EventListener callback) {
+  public final void removeDevicechangeListener(@Nonnull final EventListener callback) {
     removeEventListener( "devicechange", Js.cast( callback ) );
   }
 }

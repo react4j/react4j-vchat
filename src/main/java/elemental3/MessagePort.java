@@ -84,70 +84,70 @@ public class MessagePort extends EventTarget {
   public native void start();
 
   @JsOverlay
-  public void addMessageListener(@Nonnull final MessageEventListener callback,
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addMessageListener(@Nonnull final MessageEventListener callback,
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
       final boolean options) {
     addEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addMessageListener(@Nonnull final MessageEventListener callback) {
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
     addEventListener( "message", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
       final boolean options) {
     removeEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeMessageListener(@Nonnull final MessageEventListener callback) {
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
     removeEventListener( "message", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "messageerror", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
       final boolean options) {
     addEventListener( "messageerror", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
     addEventListener( "messageerror", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "messageerror", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
       final boolean options) {
     removeEventListener( "messageerror", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
     removeEventListener( "messageerror", Js.cast( callback ) );
   }
 }

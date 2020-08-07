@@ -64,35 +64,36 @@ public class HTMLSlotElement extends HTMLElement {
   public native JsArray<Node> assignedNodes();
 
   @JsOverlay
-  public void addSlotchangeListener(@Nonnull final EventListener callback,
+  public final void addSlotchangeListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "slotchange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addSlotchangeListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addSlotchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
     addEventListener( "slotchange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addSlotchangeListener(@Nonnull final EventListener callback) {
+  public final void addSlotchangeListener(@Nonnull final EventListener callback) {
     addEventListener( "slotchange", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeSlotchangeListener(@Nonnull final EventListener callback,
+  public final void removeSlotchangeListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "slotchange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeSlotchangeListener(@Nonnull final EventListener callback,
+  public final void removeSlotchangeListener(@Nonnull final EventListener callback,
       final boolean options) {
     removeEventListener( "slotchange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeSlotchangeListener(@Nonnull final EventListener callback) {
+  public final void removeSlotchangeListener(@Nonnull final EventListener callback) {
     removeEventListener( "slotchange", Js.cast( callback ) );
   }
 }

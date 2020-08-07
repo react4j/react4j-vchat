@@ -270,133 +270,136 @@ public class WebSocket extends EventTarget {
   public native void send(@Nonnull DataView data);
 
   @JsOverlay
-  public void addCloseListener(@Nonnull final CloseEventListener callback,
+  public final void addCloseListener(@Nonnull final CloseEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "close", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addCloseListener(@Nonnull final CloseEventListener callback, final boolean options) {
+  public final void addCloseListener(@Nonnull final CloseEventListener callback,
+      final boolean options) {
     addEventListener( "close", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addCloseListener(@Nonnull final CloseEventListener callback) {
+  public final void addCloseListener(@Nonnull final CloseEventListener callback) {
     addEventListener( "close", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeCloseListener(@Nonnull final CloseEventListener callback,
+  public final void removeCloseListener(@Nonnull final CloseEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "close", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeCloseListener(@Nonnull final CloseEventListener callback,
+  public final void removeCloseListener(@Nonnull final CloseEventListener callback,
       final boolean options) {
     removeEventListener( "close", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeCloseListener(@Nonnull final CloseEventListener callback) {
+  public final void removeCloseListener(@Nonnull final CloseEventListener callback) {
     removeEventListener( "close", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addErrorListener(@Nonnull final EventListener callback,
+  public final void addErrorListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "error", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
     addEventListener( "error", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addErrorListener(@Nonnull final EventListener callback) {
+  public final void addErrorListener(@Nonnull final EventListener callback) {
     addEventListener( "error", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeErrorListener(@Nonnull final EventListener callback,
+  public final void removeErrorListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "error", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeErrorListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      final boolean options) {
     removeEventListener( "error", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeErrorListener(@Nonnull final EventListener callback) {
+  public final void removeErrorListener(@Nonnull final EventListener callback) {
     removeEventListener( "error", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addMessageListener(@Nonnull final MessageEventListener callback,
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addMessageListener(@Nonnull final MessageEventListener callback,
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
       final boolean options) {
     addEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addMessageListener(@Nonnull final MessageEventListener callback) {
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
     addEventListener( "message", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeMessageListener(@Nonnull final MessageEventListener callback,
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
       final boolean options) {
     removeEventListener( "message", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeMessageListener(@Nonnull final MessageEventListener callback) {
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
     removeEventListener( "message", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addOpenListener(@Nonnull final EventListener callback,
+  public final void addOpenListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "open", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addOpenListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addOpenListener(@Nonnull final EventListener callback, final boolean options) {
     addEventListener( "open", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addOpenListener(@Nonnull final EventListener callback) {
+  public final void addOpenListener(@Nonnull final EventListener callback) {
     addEventListener( "open", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeOpenListener(@Nonnull final EventListener callback,
+  public final void removeOpenListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "open", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeOpenListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void removeOpenListener(@Nonnull final EventListener callback,
+      final boolean options) {
     removeEventListener( "open", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeOpenListener(@Nonnull final EventListener callback) {
+  public final void removeOpenListener(@Nonnull final EventListener callback) {
     removeEventListener( "open", Js.cast( callback ) );
   }
 }

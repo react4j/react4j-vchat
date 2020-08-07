@@ -849,34 +849,36 @@ public class HTMLElement extends Element {
   public native void focus();
 
   @JsOverlay
-  public void addInvalidListener(@Nonnull final EventListener callback,
+  public final void addInvalidListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "invalid", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addInvalidListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addInvalidListener(@Nonnull final EventListener callback,
+      final boolean options) {
     addEventListener( "invalid", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addInvalidListener(@Nonnull final EventListener callback) {
+  public final void addInvalidListener(@Nonnull final EventListener callback) {
     addEventListener( "invalid", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeInvalidListener(@Nonnull final EventListener callback,
+  public final void removeInvalidListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "invalid", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeInvalidListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void removeInvalidListener(@Nonnull final EventListener callback,
+      final boolean options) {
     removeEventListener( "invalid", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeInvalidListener(@Nonnull final EventListener callback) {
+  public final void removeInvalidListener(@Nonnull final EventListener callback) {
     removeEventListener( "invalid", Js.cast( callback ) );
   }
 }

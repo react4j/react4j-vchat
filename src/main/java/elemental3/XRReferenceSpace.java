@@ -40,36 +40,36 @@ public class XRReferenceSpace extends XRSpace {
   public native XRReferenceSpace getOffsetReferenceSpace(@Nonnull XRRigidTransform originOffset);
 
   @JsOverlay
-  public void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+  public final void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+  public final void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
       final boolean options) {
     addEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback) {
+  public final void addResetListener(@Nonnull final XRReferenceSpaceEventListener callback) {
     addEventListener( "reset", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+  public final void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
+  public final void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback,
       final boolean options) {
     removeEventListener( "reset", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback) {
+  public final void removeResetListener(@Nonnull final XRReferenceSpaceEventListener callback) {
     removeEventListener( "reset", Js.cast( callback ) );
   }
 }

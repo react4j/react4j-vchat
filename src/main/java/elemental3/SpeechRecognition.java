@@ -125,67 +125,70 @@ public class SpeechRecognition extends EventTarget {
   public native void stop();
 
   @JsOverlay
-  public void addAudioendListener(@Nonnull final EventListener callback,
+  public final void addAudioendListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "audioend", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAudioendListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addAudioendListener(@Nonnull final EventListener callback,
+      final boolean options) {
     addEventListener( "audioend", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAudioendListener(@Nonnull final EventListener callback) {
+  public final void addAudioendListener(@Nonnull final EventListener callback) {
     addEventListener( "audioend", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeAudioendListener(@Nonnull final EventListener callback,
+  public final void removeAudioendListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "audioend", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAudioendListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void removeAudioendListener(@Nonnull final EventListener callback,
+      final boolean options) {
     removeEventListener( "audioend", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAudioendListener(@Nonnull final EventListener callback) {
+  public final void removeAudioendListener(@Nonnull final EventListener callback) {
     removeEventListener( "audioend", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addAudiostartListener(@Nonnull final EventListener callback,
+  public final void addAudiostartListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "audiostart", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAudiostartListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addAudiostartListener(@Nonnull final EventListener callback,
+      final boolean options) {
     addEventListener( "audiostart", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAudiostartListener(@Nonnull final EventListener callback) {
+  public final void addAudiostartListener(@Nonnull final EventListener callback) {
     addEventListener( "audiostart", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeAudiostartListener(@Nonnull final EventListener callback,
+  public final void removeAudiostartListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "audiostart", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAudiostartListener(@Nonnull final EventListener callback,
+  public final void removeAudiostartListener(@Nonnull final EventListener callback,
       final boolean options) {
     removeEventListener( "audiostart", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAudiostartListener(@Nonnull final EventListener callback) {
+  public final void removeAudiostartListener(@Nonnull final EventListener callback) {
     removeEventListener( "audiostart", Js.cast( callback ) );
   }
 }

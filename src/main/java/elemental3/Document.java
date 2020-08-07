@@ -1433,101 +1433,104 @@ public class Document extends Node {
   public native Element getElementById(@Nonnull String elementId);
 
   @JsOverlay
-  public void addScrollListener(@Nonnull final EventListener callback,
+  public final void addScrollListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "scroll", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addScrollListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addScrollListener(@Nonnull final EventListener callback,
+      final boolean options) {
     addEventListener( "scroll", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addScrollListener(@Nonnull final EventListener callback) {
+  public final void addScrollListener(@Nonnull final EventListener callback) {
     addEventListener( "scroll", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeScrollListener(@Nonnull final EventListener callback,
+  public final void removeScrollListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "scroll", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeScrollListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void removeScrollListener(@Nonnull final EventListener callback,
+      final boolean options) {
     removeEventListener( "scroll", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeScrollListener(@Nonnull final EventListener callback) {
+  public final void removeScrollListener(@Nonnull final EventListener callback) {
     removeEventListener( "scroll", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addVisibilitychangeListener(@Nonnull final EventListener callback,
+  public final void addVisibilitychangeListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "visibilitychange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addVisibilitychangeListener(@Nonnull final EventListener callback,
+  public final void addVisibilitychangeListener(@Nonnull final EventListener callback,
       final boolean options) {
     addEventListener( "visibilitychange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addVisibilitychangeListener(@Nonnull final EventListener callback) {
+  public final void addVisibilitychangeListener(@Nonnull final EventListener callback) {
     addEventListener( "visibilitychange", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeVisibilitychangeListener(@Nonnull final EventListener callback,
+  public final void removeVisibilitychangeListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "visibilitychange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeVisibilitychangeListener(@Nonnull final EventListener callback,
+  public final void removeVisibilitychangeListener(@Nonnull final EventListener callback,
       final boolean options) {
     removeEventListener( "visibilitychange", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeVisibilitychangeListener(@Nonnull final EventListener callback) {
+  public final void removeVisibilitychangeListener(@Nonnull final EventListener callback) {
     removeEventListener( "visibilitychange", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addWheelListener(@Nonnull final WheelEventListener callback,
+  public final void addWheelListener(@Nonnull final WheelEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "wheel", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addWheelListener(@Nonnull final WheelEventListener callback, final boolean options) {
+  public final void addWheelListener(@Nonnull final WheelEventListener callback,
+      final boolean options) {
     addEventListener( "wheel", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addWheelListener(@Nonnull final WheelEventListener callback) {
+  public final void addWheelListener(@Nonnull final WheelEventListener callback) {
     addEventListener( "wheel", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeWheelListener(@Nonnull final WheelEventListener callback,
+  public final void removeWheelListener(@Nonnull final WheelEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "wheel", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeWheelListener(@Nonnull final WheelEventListener callback,
+  public final void removeWheelListener(@Nonnull final WheelEventListener callback,
       final boolean options) {
     removeEventListener( "wheel", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeWheelListener(@Nonnull final WheelEventListener callback) {
+  public final void removeWheelListener(@Nonnull final WheelEventListener callback) {
     removeEventListener( "wheel", Js.cast( callback ) );
   }
 }

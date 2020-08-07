@@ -77,102 +77,104 @@ public class VideoTrackList extends EventTarget {
   public native VideoTrack getTrackById(@Nonnull String id);
 
   @JsOverlay
-  public void addAddtrackListener(@Nonnull final TrackEventListener callback,
+  public final void addAddtrackListener(@Nonnull final TrackEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAddtrackListener(@Nonnull final TrackEventListener callback,
+  public final void addAddtrackListener(@Nonnull final TrackEventListener callback,
       final boolean options) {
     addEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addAddtrackListener(@Nonnull final TrackEventListener callback) {
+  public final void addAddtrackListener(@Nonnull final TrackEventListener callback) {
     addEventListener( "addtrack", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeAddtrackListener(@Nonnull final TrackEventListener callback,
+  public final void removeAddtrackListener(@Nonnull final TrackEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAddtrackListener(@Nonnull final TrackEventListener callback,
+  public final void removeAddtrackListener(@Nonnull final TrackEventListener callback,
       final boolean options) {
     removeEventListener( "addtrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeAddtrackListener(@Nonnull final TrackEventListener callback) {
+  public final void removeAddtrackListener(@Nonnull final TrackEventListener callback) {
     removeEventListener( "addtrack", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addChangeListener(@Nonnull final EventListener callback,
+  public final void addChangeListener(@Nonnull final EventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "change", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addChangeListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void addChangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
     addEventListener( "change", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addChangeListener(@Nonnull final EventListener callback) {
+  public final void addChangeListener(@Nonnull final EventListener callback) {
     addEventListener( "change", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeChangeListener(@Nonnull final EventListener callback,
+  public final void removeChangeListener(@Nonnull final EventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "change", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeChangeListener(@Nonnull final EventListener callback, final boolean options) {
+  public final void removeChangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
     removeEventListener( "change", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeChangeListener(@Nonnull final EventListener callback) {
+  public final void removeChangeListener(@Nonnull final EventListener callback) {
     removeEventListener( "change", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void addRemovetrackListener(@Nonnull final TrackEventListener callback,
+  public final void addRemovetrackListener(@Nonnull final TrackEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addRemovetrackListener(@Nonnull final TrackEventListener callback,
+  public final void addRemovetrackListener(@Nonnull final TrackEventListener callback,
       final boolean options) {
     addEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void addRemovetrackListener(@Nonnull final TrackEventListener callback) {
+  public final void addRemovetrackListener(@Nonnull final TrackEventListener callback) {
     addEventListener( "removetrack", Js.cast( callback ) );
   }
 
   @JsOverlay
-  public void removeRemovetrackListener(@Nonnull final TrackEventListener callback,
+  public final void removeRemovetrackListener(@Nonnull final TrackEventListener callback,
       @Nonnull final EventListenerOptions options) {
     removeEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeRemovetrackListener(@Nonnull final TrackEventListener callback,
+  public final void removeRemovetrackListener(@Nonnull final TrackEventListener callback,
       final boolean options) {
     removeEventListener( "removetrack", Js.cast( callback ), options );
   }
 
   @JsOverlay
-  public void removeRemovetrackListener(@Nonnull final TrackEventListener callback) {
+  public final void removeRemovetrackListener(@Nonnull final TrackEventListener callback) {
     removeEventListener( "removetrack", Js.cast( callback ) );
   }
 }
