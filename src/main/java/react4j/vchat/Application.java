@@ -3,6 +3,7 @@ package react4j.vchat;
 import arez.annotations.CascadeDispose;
 import elemental2.promise.Promise;
 import elemental3.ConstrainULongRange;
+import elemental3.Global;
 import elemental3.MediaStream;
 import elemental3.MediaStreamConstraints;
 import elemental3.MediaTrackConstraints;

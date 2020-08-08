@@ -2,27 +2,25 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "WebAssembly.Global"
+    name = "goog.global"
 )
-public class Global {
-  @Nullable
-  public Any value;
+public final class Global {
+  private static Window globalThis;
 
-  public Global(@Nonnull final GlobalDescriptor descriptor, @Nullable final Any v) {
+  private Global() {
   }
 
-  public Global(@Nonnull final GlobalDescriptor descriptor) {
+  @JsOverlay
+  @Nonnull
+  public static Window globalThis() {
+    return globalThis;
   }
-
-  @Nullable
-  public native Any valueOf();
 }

@@ -8,6 +8,7 @@ import arez.annotations.DepType;
 import arez.annotations.Memoize;
 import arez.annotations.OnActivate;
 import arez.annotations.OnDeactivate;
+import elemental3.Global;
 import elemental3.HashChangeEvent;
 import elemental3.HashChangeEventListener;
 import javax.annotation.Nonnull;
