@@ -65,7 +65,7 @@ abstract class SelectRoomView
     final String roomId = getRoomId();
     if ( null != roomId )
     {
-      Global.window().location().hash = roomId;
+      Global.globalThis().window().location().hash = roomId;
     }
   }
 

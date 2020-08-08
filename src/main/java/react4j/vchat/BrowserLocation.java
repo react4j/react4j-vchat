@@ -36,20 +36,20 @@ abstract class BrowserLocation
   @Nonnull
   String getLocation()
   {
-    final String hash = Global.window().location().hash;
+    final String hash = Global.globalThis().window().location().hash;
     return hash.isEmpty() ? hash : hash.substring( 1 );
   }
 
   @OnActivate
   void onLocationActivate()
   {
-    Global.window().addHashchangeListener( _listener, false );
+    Global.globalThis().window().addHashchangeListener( _listener, false );
   }
 
   @OnDeactivate
   void onLocationDeactivate()
   {
-    Global.window().removeHashchangeListener( _listener, false );
+    Global.globalThis().window().removeHashchangeListener( _listener, false );
   }
 
   @ComputableValueRef

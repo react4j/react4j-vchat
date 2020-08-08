@@ -42,7 +42,7 @@ abstract class Application
   private Promise<MediaStream> requestWebCam()
   {
     return Global
-      .window()
+      .globalThis()
       .navigator()
       .mediaDevices()
       .getUserMedia( MediaStreamConstraints
@@ -57,6 +57,6 @@ abstract class Application
   @Nonnull
   private Promise<MediaStream> requestScreenShare()
   {
-    return Global.window().navigator().mediaDevices().getDisplayMedia();
+    return Global.globalThis().navigator().mediaDevices().getDisplayMedia();
   }
 }

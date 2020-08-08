@@ -1,22 +1,24 @@
 package react4j.vchat;
 
-import elemental2.dom.DomGlobal;
 import elemental3.Window;
 import javax.annotation.Nonnull;
-import jsinterop.base.Js;
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
 
-public final class Global
+@JsType( isNative = true, name = "goog.global", namespace = JsPackage.GLOBAL )
+public class Global
 {
   private Global()
   {
   }
 
+  private static Window globalThis;
+
+  @JsOverlay
   @Nonnull
-  public static Window window()
+  public static Window globalThis()
   {
-    final Window window = Js.uncheckedCast( DomGlobal.window );
-    //noinspection ConstantConditions
-    assert null != window;
-    return window;
+    return globalThis;
   }
 }

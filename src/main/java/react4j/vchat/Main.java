@@ -11,7 +11,7 @@ public final class Main
   @Override
   public void onModuleLoad()
   {
-    final Element root = Global.window().document().getElementById( "app" );
+    final Element root = Global.globalThis().document().getElementById( "app" );
     assert null != root;
     // TODO: Remove Js.cast once react4j is moved to elemental3
     ReactDOM.render( ApplicationBuilder.build(), Js.cast( root ) );
