@@ -1,6 +1,7 @@
 package react4j.vchat;
 
 import elemental2.dom.DomGlobal;
+import elemental3.Document;
 import elemental3.Navigator;
 import elemental3.Window;
 import javax.annotation.Nonnull;
@@ -10,6 +11,15 @@ public final class Elemental3Util
 {
   private Elemental3Util()
   {
+  }
+
+  @Nonnull
+  public static Document document()
+  {
+    final Document document = Js.uncheckedCast( DomGlobal.document );
+    //noinspection ConstantConditions
+    assert null != document;
+    return document;
   }
 
   @Nonnull

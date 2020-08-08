@@ -1,7 +1,8 @@
 package react4j.vchat;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental2.dom.DomGlobal;
+import elemental3.Element;
+import jsinterop.base.Js;
 import react4j.dom.ReactDOM;
 
 public final class Main
@@ -10,6 +11,9 @@ public final class Main
   @Override
   public void onModuleLoad()
   {
-    ReactDOM.render( ApplicationBuilder.build(), DomGlobal.document.getElementById( "app" ) );
+    final Element root = Elemental3Util.document().getElementById( "app" );
+    assert null != root;
+    // TODO: Remove Js.cast once react4j is moved to elemental3
+    ReactDOM.render( ApplicationBuilder.build(), Js.cast( root ) );
   }
 }
