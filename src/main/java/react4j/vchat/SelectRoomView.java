@@ -65,7 +65,7 @@ abstract class SelectRoomView
     final String roomId = getRoomId();
     if ( null != roomId )
     {
-      Elemental3Util.window().location().hash = roomId;
+      Global.window().location().hash = roomId;
     }
   }
 

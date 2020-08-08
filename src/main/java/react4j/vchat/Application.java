@@ -41,7 +41,7 @@ abstract class Application
   @Nonnull
   private Promise<MediaStream> requestWebCam()
   {
-    return Elemental3Util
+    return Global
       .window()
       .navigator()
       .mediaDevices()
@@ -57,6 +57,6 @@ abstract class Application
   @Nonnull
   private Promise<MediaStream> requestScreenShare()
   {
-    return Elemental3Util.window().navigator().mediaDevices().getDisplayMedia();
+    return Global.window().navigator().mediaDevices().getDisplayMedia();
   }
 }

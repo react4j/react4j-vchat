@@ -36,20 +36,20 @@ abstract class BrowserLocation
   @Nonnull
   String getLocation()
   {
-    final String hash = Elemental3Util.window().location().hash;
+    final String hash = Global.window().location().hash;
     return hash.isEmpty() ? hash : hash.substring( 1 );
   }
 
   @OnActivate
   void onLocationActivate()
   {
-    Elemental3Util.window().addHashchangeListener( _listener, false );
+    Global.window().addHashchangeListener( _listener, false );
   }
 
   @OnDeactivate
   void onLocationDeactivate()
   {
-    Elemental3Util.window().removeHashchangeListener( _listener, false );
+    Global.window().removeHashchangeListener( _listener, false );
   }
 
   @ComputableValueRef

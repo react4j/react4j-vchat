@@ -5,9 +5,9 @@ import elemental3.Window;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
 
-public final class Elemental3Util
+public final class Global
 {
-  private Elemental3Util()
+  private Global()
   {
   }
 
