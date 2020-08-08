@@ -16,10 +16,7 @@ public final class Elemental3Util
   @Nonnull
   public static Document document()
   {
-    final Document document = Js.uncheckedCast( DomGlobal.document );
-    //noinspection ConstantConditions
-    assert null != document;
-    return document;
+    return window().document();
   }
 
   @Nonnull
@@ -34,9 +31,6 @@ public final class Elemental3Util
   @Nonnull
   public static Navigator getNavigator()
   {
-    final Navigator navigator = Js.cast( DomGlobal.navigator );
-    //noinspection ConstantConditions
-    assert null != navigator;
-    return navigator;
+    return window().navigator();
   }
 }
