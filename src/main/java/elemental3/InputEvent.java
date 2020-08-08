@@ -14,7 +14,12 @@ import jsinterop.annotations.JsType;
     name = "InputEvent"
 )
 public class InputEvent extends UIEvent {
-  InputEvent() {
+  public InputEvent(@Nonnull final String type, @Nonnull final InputEventInit eventInitDict) {
+    super( null );
+  }
+
+  public InputEvent(@Nonnull final String type) {
+    super( null );
   }
 
   @JsProperty(

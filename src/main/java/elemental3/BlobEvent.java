@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     name = "BlobEvent"
 )
 public class BlobEvent extends Event {
-  BlobEvent() {
+  public BlobEvent(@Nonnull final String type, @Nonnull final BlobEventInit eventInitDict) {
     super( null );
   }
 

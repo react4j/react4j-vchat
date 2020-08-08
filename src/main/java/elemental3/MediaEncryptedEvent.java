@@ -15,7 +15,12 @@ import jsinterop.annotations.JsType;
     name = "MediaEncryptedEvent"
 )
 public class MediaEncryptedEvent extends Event {
-  MediaEncryptedEvent() {
+  public MediaEncryptedEvent(@Nonnull final String type,
+      @Nonnull final MediaEncryptedEventInit eventInitDict) {
+    super( null );
+  }
+
+  public MediaEncryptedEvent(@Nonnull final String type) {
     super( null );
   }
 

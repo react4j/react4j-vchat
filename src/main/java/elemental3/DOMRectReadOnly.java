@@ -13,7 +13,19 @@ import jsinterop.annotations.JsType;
     name = "DOMRectReadOnly"
 )
 public class DOMRectReadOnly {
-  DOMRectReadOnly() {
+  public DOMRectReadOnly(final double x, final double y, final double width, final double height) {
+  }
+
+  public DOMRectReadOnly(final double x, final double y, final double width) {
+  }
+
+  public DOMRectReadOnly(final double x, final double y) {
+  }
+
+  public DOMRectReadOnly(final double x) {
+  }
+
+  public DOMRectReadOnly() {
   }
 
   @JsProperty(

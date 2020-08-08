@@ -20,7 +20,19 @@ public class DOMRect extends DOMRectReadOnly {
 
   public double y;
 
-  DOMRect() {
+  public DOMRect(final double x, final double y, final double width, final double height) {
+  }
+
+  public DOMRect(final double x, final double y, final double width) {
+  }
+
+  public DOMRect(final double x, final double y) {
+  }
+
+  public DOMRect(final double x) {
+  }
+
+  public DOMRect() {
   }
 
   @Nonnull

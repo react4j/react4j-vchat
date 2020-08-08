@@ -2,6 +2,7 @@ package elemental3;
 
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
+import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -58,7 +59,16 @@ public class DOMMatrix extends DOMMatrixReadOnly {
 
   public double m44;
 
-  DOMMatrix() {
+  public DOMMatrix(@Nonnull final String init) {
+  }
+
+  public DOMMatrix(@Nonnull final JsArray<Double> init) {
+  }
+
+  public DOMMatrix(@Nonnull final Double[] init) {
+  }
+
+  public DOMMatrix() {
   }
 
   @Nonnull

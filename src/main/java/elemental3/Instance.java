@@ -13,7 +13,10 @@ import jsinterop.annotations.JsType;
     name = "WebAssembly.Instance"
 )
 public class Instance {
-  Instance() {
+  public Instance(@Nonnull final Module module, @Nonnull final Object importObject) {
+  }
+
+  public Instance(@Nonnull final Module module) {
   }
 
   @JsProperty(

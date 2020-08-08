@@ -37,7 +37,11 @@ public class MediaRecorder extends EventTarget {
   @Nullable
   public EventHandler onstop;
 
-  MediaRecorder() {
+  public MediaRecorder(@Nonnull final MediaStream stream,
+      @Nonnull final MediaRecorderOptions options) {
+  }
+
+  public MediaRecorder(@Nonnull final MediaStream stream) {
   }
 
   @JsProperty(

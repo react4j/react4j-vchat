@@ -14,7 +14,12 @@ import jsinterop.annotations.JsType;
     name = "MouseEvent"
 )
 public class MouseEvent extends UIEvent {
-  MouseEvent() {
+  public MouseEvent(@Nonnull final String type, @Nonnull final MouseEventInit eventInitDict) {
+    super( null );
+  }
+
+  public MouseEvent(@Nonnull final String type) {
+    super( null );
   }
 
   @JsProperty(

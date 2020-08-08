@@ -2,6 +2,7 @@ package elemental3;
 
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
+import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -15,7 +16,16 @@ import jsinterop.annotations.JsType;
     name = "DOMMatrixReadOnly"
 )
 public class DOMMatrixReadOnly {
-  DOMMatrixReadOnly() {
+  public DOMMatrixReadOnly(@Nonnull final String init) {
+  }
+
+  public DOMMatrixReadOnly(@Nonnull final JsArray<Double> init) {
+  }
+
+  public DOMMatrixReadOnly(@Nonnull final Double[] init) {
+  }
+
+  public DOMMatrixReadOnly() {
   }
 
   @JsProperty(

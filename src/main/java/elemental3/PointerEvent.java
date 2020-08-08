@@ -13,7 +13,12 @@ import jsinterop.annotations.JsType;
     name = "PointerEvent"
 )
 public class PointerEvent extends MouseEvent {
-  PointerEvent() {
+  public PointerEvent(@Nonnull final String type, @Nonnull final PointerEventInit eventInitDict) {
+    super( null );
+  }
+
+  public PointerEvent(@Nonnull final String type) {
+    super( null );
   }
 
   @JsProperty(

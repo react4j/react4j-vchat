@@ -13,7 +13,11 @@ import jsinterop.annotations.JsType;
     name = "ShadowAnimation"
 )
 public class ShadowAnimation extends Animation {
-  ShadowAnimation() {
+  public ShadowAnimation(@Nonnull final Animation source,
+      @Nonnull final CSSPseudoElement newTarget) {
+  }
+
+  public ShadowAnimation(@Nonnull final Animation source, @Nonnull final Element newTarget) {
   }
 
   @JsProperty(

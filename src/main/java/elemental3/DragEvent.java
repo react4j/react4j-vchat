@@ -20,9 +20,11 @@ import jsinterop.annotations.JsType;
 )
 public class DragEvent extends MouseEvent {
   public DragEvent(@Nonnull final String type, @Nonnull final DragEventInit eventInitDict) {
+    super( null );
   }
 
   public DragEvent(@Nonnull final String type) {
+    super( null );
   }
 
   /**

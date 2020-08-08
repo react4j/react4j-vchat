@@ -13,7 +13,21 @@ import jsinterop.annotations.JsType;
     name = "DOMQuad"
 )
 public class DOMQuad {
-  DOMQuad() {
+  public DOMQuad(@Nonnull final DOMPointInit p1, @Nonnull final DOMPointInit p2,
+      @Nonnull final DOMPointInit p3, @Nonnull final DOMPointInit p4) {
+  }
+
+  public DOMQuad(@Nonnull final DOMPointInit p1, @Nonnull final DOMPointInit p2,
+      @Nonnull final DOMPointInit p3) {
+  }
+
+  public DOMQuad(@Nonnull final DOMPointInit p1, @Nonnull final DOMPointInit p2) {
+  }
+
+  public DOMQuad(@Nonnull final DOMPointInit p1) {
+  }
+
+  public DOMQuad() {
   }
 
   @JsProperty(

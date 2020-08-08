@@ -38,7 +38,14 @@ public class Animation extends EventTarget {
   @Nullable
   public AnimationTimeline timeline;
 
-  Animation() {
+  public Animation(@Nullable final AnimationEffect effect,
+      @Nullable final AnimationTimeline timeline) {
+  }
+
+  public Animation(@Nullable final AnimationEffect effect) {
+  }
+
+  public Animation() {
   }
 
   @JsProperty(

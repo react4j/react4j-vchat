@@ -23,7 +23,29 @@ public class KeyframeEffect extends AnimationEffect {
   @Nullable
   public ElementOrCSSPseudoElementUnion target;
 
-  KeyframeEffect() {
+  public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes,
+      final double options) {
+  }
+
+  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes,
+      final double options) {
+  }
+
+  public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes,
+      @Nonnull final KeyframeEffectOptions options) {
+  }
+
+  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes,
+      @Nonnull final KeyframeEffectOptions options) {
+  }
+
+  public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes) {
+  }
+
+  public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes) {
+  }
+
+  public KeyframeEffect(@Nonnull final KeyframeEffect source) {
   }
 
   @Nonnull

@@ -13,7 +13,10 @@ import jsinterop.annotations.JsType;
     name = "PasswordCredential"
 )
 public class PasswordCredential extends Credential {
-  PasswordCredential() {
+  public PasswordCredential(@Nonnull final HTMLFormElement form) {
+  }
+
+  public PasswordCredential(@Nonnull final PasswordCredentialData data) {
   }
 
   @JsProperty(

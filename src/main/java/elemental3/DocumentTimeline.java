@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -11,6 +12,9 @@ import jsinterop.annotations.JsType;
     name = "DocumentTimeline"
 )
 public class DocumentTimeline extends AnimationTimeline {
-  DocumentTimeline() {
+  public DocumentTimeline(@Nonnull final DocumentTimelineOptions options) {
+  }
+
+  public DocumentTimeline() {
   }
 }

@@ -13,7 +13,12 @@ import jsinterop.annotations.JsType;
     name = "AnimationEvent"
 )
 public class AnimationEvent extends Event {
-  AnimationEvent() {
+  public AnimationEvent(@Nonnull final String type,
+      @Nonnull final AnimationEventInit animationEventInitDict) {
+    super( null );
+  }
+
+  public AnimationEvent(@Nonnull final String type) {
     super( null );
   }
 

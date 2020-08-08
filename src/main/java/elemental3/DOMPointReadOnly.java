@@ -13,7 +13,19 @@ import jsinterop.annotations.JsType;
     name = "DOMPointReadOnly"
 )
 public class DOMPointReadOnly {
-  DOMPointReadOnly() {
+  public DOMPointReadOnly(final double x, final double y, final double z, final double w) {
+  }
+
+  public DOMPointReadOnly(final double x, final double y, final double z) {
+  }
+
+  public DOMPointReadOnly(final double x, final double y) {
+  }
+
+  public DOMPointReadOnly(final double x) {
+  }
+
+  public DOMPointReadOnly() {
   }
 
   @JsProperty(

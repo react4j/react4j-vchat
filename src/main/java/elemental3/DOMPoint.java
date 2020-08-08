@@ -20,7 +20,19 @@ public class DOMPoint extends DOMPointReadOnly {
 
   public double z;
 
-  DOMPoint() {
+  public DOMPoint(final double x, final double y, final double z, final double w) {
+  }
+
+  public DOMPoint(final double x, final double y, final double z) {
+  }
+
+  public DOMPoint(final double x, final double y) {
+  }
+
+  public DOMPoint(final double x) {
+  }
+
+  public DOMPoint() {
   }
 
   @Nonnull

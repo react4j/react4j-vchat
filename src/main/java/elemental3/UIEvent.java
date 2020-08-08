@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,7 +14,11 @@ import jsinterop.annotations.JsType;
     name = "UIEvent"
 )
 public class UIEvent extends Event {
-  UIEvent() {
+  public UIEvent(@Nonnull final String type, @Nonnull final UIEventInit eventInitDict) {
+    super( null );
+  }
+
+  public UIEvent(@Nonnull final String type) {
     super( null );
   }
 

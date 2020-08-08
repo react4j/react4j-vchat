@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -22,7 +23,12 @@ public class WheelEvent extends MouseEvent {
   @JsOverlay
   public static final int DOM_DELTA_PIXEL = 0x00;
 
-  WheelEvent() {
+  public WheelEvent(@Nonnull final String type, @Nonnull final WheelEventInit eventInitDict) {
+    super( null );
+  }
+
+  public WheelEvent(@Nonnull final String type) {
+    super( null );
   }
 
   @JsProperty(

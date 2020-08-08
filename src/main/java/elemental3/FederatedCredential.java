@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "FederatedCredential"
 )
 public class FederatedCredential extends Credential {
-  FederatedCredential() {
+  public FederatedCredential(@Nonnull final FederatedCredentialInit data) {
   }
 
   @JsProperty(

@@ -15,7 +15,11 @@ import jsinterop.annotations.JsType;
     name = "IntersectionObserver"
 )
 public class IntersectionObserver {
-  IntersectionObserver() {
+  public IntersectionObserver(@Nonnull final IntersectionObserverCallback callback,
+      @Nonnull final IntersectionObserverInit options) {
+  }
+
+  public IntersectionObserver(@Nonnull final IntersectionObserverCallback callback) {
   }
 
   @JsProperty(

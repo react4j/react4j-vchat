@@ -13,7 +13,12 @@ import jsinterop.annotations.JsType;
     name = "WebGLContextEvent"
 )
 public class WebGLContextEvent extends Event {
-  WebGLContextEvent() {
+  public WebGLContextEvent(@Nonnull final String type,
+      @Nonnull final WebGLContextEventInit eventInit) {
+    super( null );
+  }
+
+  public WebGLContextEvent(@Nonnull final String type) {
     super( null );
   }
 

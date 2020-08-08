@@ -13,7 +13,13 @@ import jsinterop.annotations.JsType;
     name = "CompositionEvent"
 )
 public class CompositionEvent extends UIEvent {
-  CompositionEvent() {
+  public CompositionEvent(@Nonnull final String type,
+      @Nonnull final CompositionEventInit eventInitDict) {
+    super( null );
+  }
+
+  public CompositionEvent(@Nonnull final String type) {
+    super( null );
   }
 
   @JsProperty(

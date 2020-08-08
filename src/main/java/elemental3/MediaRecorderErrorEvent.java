@@ -18,7 +18,8 @@ import jsinterop.annotations.JsType;
     name = "MediaRecorderErrorEvent"
 )
 public class MediaRecorderErrorEvent extends Event {
-  MediaRecorderErrorEvent() {
+  public MediaRecorderErrorEvent(@Nonnull final String type,
+      @Nonnull final MediaRecorderErrorEventInit eventInitDict) {
     super( null );
   }
 

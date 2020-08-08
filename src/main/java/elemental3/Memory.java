@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "WebAssembly.Memory"
 )
 public class Memory {
-  Memory() {
+  public Memory(@Nonnull final MemoryDescriptor descriptor) {
   }
 
   @JsProperty(

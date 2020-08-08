@@ -26,7 +26,12 @@ public class KeyboardEvent extends UIEvent {
   @JsOverlay
   public static final int DOM_KEY_LOCATION_STANDARD = 0x00;
 
-  KeyboardEvent() {
+  public KeyboardEvent(@Nonnull final String type, @Nonnull final KeyboardEventInit eventInitDict) {
+    super( null );
+  }
+
+  public KeyboardEvent(@Nonnull final String type) {
+    super( null );
   }
 
   @JsProperty(

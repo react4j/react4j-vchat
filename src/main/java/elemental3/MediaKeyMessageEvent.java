@@ -14,7 +14,8 @@ import jsinterop.annotations.JsType;
     name = "MediaKeyMessageEvent"
 )
 public class MediaKeyMessageEvent extends Event {
-  MediaKeyMessageEvent() {
+  public MediaKeyMessageEvent(@Nonnull final String type,
+      @Nonnull final MediaKeyMessageEventInit eventInitDict) {
     super( null );
   }
 

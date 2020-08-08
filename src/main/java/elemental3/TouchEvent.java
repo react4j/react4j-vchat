@@ -14,9 +14,11 @@ import jsinterop.annotations.JsType;
 )
 public class TouchEvent extends UIEvent {
   public TouchEvent(@Nonnull final String type, @Nonnull final TouchEventInit eventInitDict) {
+    super( null );
   }
 
   public TouchEvent(@Nonnull final String type) {
+    super( null );
   }
 
   @JsProperty(

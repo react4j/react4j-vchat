@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -13,7 +14,12 @@ import jsinterop.annotations.JsType;
     name = "AnimationPlaybackEvent"
 )
 public class AnimationPlaybackEvent extends Event {
-  AnimationPlaybackEvent() {
+  public AnimationPlaybackEvent(@Nonnull final String type,
+      @Nonnull final AnimationPlaybackEventInit eventInitDict) {
+    super( null );
+  }
+
+  public AnimationPlaybackEvent(@Nonnull final String type) {
     super( null );
   }
 
