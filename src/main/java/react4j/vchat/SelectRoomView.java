@@ -3,10 +3,10 @@ package react4j.vchat;
 import arez.annotations.Action;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
-import elemental2.dom.DomGlobal;
-import elemental2.dom.HTMLInputElement;
+import elemental3.HTMLInputElement;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.base.Js;
 import react4j.ReactNode;
 import react4j.annotations.Render;
 import react4j.annotations.View;
@@ -39,9 +39,18 @@ abstract class SelectRoomView
                                .type( InputType.text )
                                .placeHolder( "Room id" )
                                .value( null == roomId ? "" : roomId )
-                               .onChange( e1 -> updateRoomId( ( (HTMLInputElement) e1.getTarget() ).value.trim() ) ) ),
+                               .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) ) ),
                       button( new BtnProps().type( ButtonType.submit ).disabled( null == roomId ), "Enter" )
                 ) );
+  }
+
+  @Nonnull
+  private HTMLInputElement asInputElement( @Nonnull final FormEvent event )
+  {
+    final HTMLInputElement element = Js.cast( event.getTarget() );
+    //noinspection ConstantConditions
+    assert null != element;
+    return element;
   }
 
   private void onSubmit( @Nonnull final FormEvent e )
@@ -56,7 +65,7 @@ abstract class SelectRoomView
     final String roomId = getRoomId();
     if ( null != roomId )
     {
-      DomGlobal.window.location.hash = roomId;
+      Elemental3Util.window().location().hash = roomId;
     }
   }
 
