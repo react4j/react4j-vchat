@@ -8,9 +8,8 @@ import arez.annotations.DepType;
 import arez.annotations.Memoize;
 import arez.annotations.OnActivate;
 import arez.annotations.OnDeactivate;
-import elemental2.dom.DomGlobal;
-import elemental2.dom.Event;
-import elemental2.dom.EventListener;
+import elemental3.HashChangeEvent;
+import elemental3.HashChangeEventListener;
 import javax.annotation.Nonnull;
 
 /**
@@ -20,7 +19,7 @@ import javax.annotation.Nonnull;
 abstract class BrowserLocation
 {
   @Nonnull
-  private final EventListener _listener = this::onHashChangeEvent;
+  private final HashChangeEventListener _listener = this::onHashChangeEvent;
 
   /**
    * Create the model object.
@@ -37,27 +36,27 @@ abstract class BrowserLocation
   @Nonnull
   String getLocation()
   {
-    final String hash = DomGlobal.window.location.hash;
-    return null == hash ? "" : hash.substring( 1 );
+    final String hash = Elemental3Util.window().location().hash;
+    return hash.isEmpty() ? hash : hash.substring( 1 );
   }
 
   @OnActivate
   void onLocationActivate()
   {
-    DomGlobal.window.addEventListener( "hashchange", _listener, false );
+    Elemental3Util.window().addHashchangeListener( _listener, false );
   }
 
   @OnDeactivate
   void onLocationDeactivate()
   {
-    DomGlobal.window.removeEventListener( "hashchange", _listener, false );
+    Elemental3Util.window().removeHashchangeListener( _listener, false );
   }
 
   @ComputableValueRef
   abstract ComputableValue<?> getLocationComputableValue();
 
   @Action
-  void onHashChangeEvent( @Nonnull final Event e )
+  void onHashChangeEvent( @Nonnull final HashChangeEvent e )
   {
     getLocationComputableValue().reportPossiblyChanged();
   }
