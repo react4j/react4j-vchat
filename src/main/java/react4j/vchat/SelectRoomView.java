@@ -38,7 +38,7 @@ abstract class SelectRoomView
                       input( new InputProps()
                                .type( InputType.text )
                                .placeHolder( "Room id" )
-                               .value( roomId )
+                               .value( null == roomId ? "" : roomId )
                                .onChange( e1 -> updateRoomId( ( (HTMLInputElement) e1.getTarget() ).value.trim() ) ) ),
                       button( new BtnProps().type( ButtonType.submit ).disabled( null == roomId ), "Enter" )
                 ) );
