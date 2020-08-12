@@ -10,6 +10,7 @@ Code to investigate/imitate/be inspired by
 * https://github.com/dondido/webrtc-video-room
 * https://github.com/diegogurgel/react-webrtc
 * https://github.com/nguymin4/react-videocall
+* https://github.com/oslabs-beta/ReactRTC
 
 # Samples
 
