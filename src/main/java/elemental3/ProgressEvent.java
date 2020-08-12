@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The ProgressEvent interface represents events measuring progress of an underlying process, like an HTTP request (for an XMLHttpRequest, or the loading of the underlying resource of an img, audio, video, style or link).
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent">ProgressEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -21,16 +26,31 @@ public class ProgressEvent extends Event {
     super( null );
   }
 
+  /**
+   * The ProgressEvent.lengthComputable read-only property is a Boolean flag indicating if the resource concerned by the ProgressEvent has a length that can be calculated. If not, the ProgressEvent.total property has no significant value.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/lengthComputable">ProgressEvent.lengthComputable - MDN</a>
+   */
   @JsProperty(
       name = "lengthComputable"
   )
   public native boolean lengthComputable();
 
+  /**
+   * The ProgressEvent.loaded read-only property is an integer representing the amount of work already performed by the underlying process. The ratio of work done can be calculated with the property and ProgressEvent.total. When downloading a resource using HTTP, this only represent the part of the content itself, not headers and other overhead.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/loaded">ProgressEvent.loaded - MDN</a>
+   */
   @JsProperty(
       name = "loaded"
   )
   public native int loaded();
 
+  /**
+   * The ProgressEvent.total read-only property is an integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this only represent the content itself, not headers and other overhead.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/total">ProgressEvent.total - MDN</a>
+   */
   @JsProperty(
       name = "total"
   )

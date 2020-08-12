@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The FederatedCredential interface of the the Credential Management API provides information about credentials from a federated identity provider. A federated identity provider is an entity that a website trusts to correctly authenticate a user, and that provides an API for that purpose. OpenID Connect is an example of a federated identity provider framework.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential">FederatedCredential - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -17,12 +22,22 @@ public class FederatedCredential extends Credential {
   public FederatedCredential(@Nonnull final FederatedCredentialInit data) {
   }
 
+  /**
+   * The protocol property of the FederatedCredential interface returns a read-only DOMString containing a credential's federated identity protocol. If this property is null, the protocol may be inferred from the FederatedCredential.provider property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential/protocol">FederatedCredential.protocol - MDN</a>
+   */
   @JsProperty(
       name = "protocol"
   )
   @Nullable
   public native String protocol();
 
+  /**
+   * The provider property of the FederatedCredential interface returns a USVString containing a credential's federated identity provider.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential/provider">FederatedCredential.provider - MDN</a>
+   */
   @JsProperty(
       name = "provider"
   )

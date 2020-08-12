@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The AnimationTimeline interface of the Web Animations API represents the timeline of an animation. This interface exists to define timeline features (inherited by DocumentTimeline and future timeline types) and is not itself directly used by developers. Anywhere you see AnimationTimeline, you should use DocumentTimeline or any other timeline type instead.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline">AnimationTimeline - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -16,6 +21,11 @@ public class AnimationTimeline {
   AnimationTimeline() {
   }
 
+  /**
+   * The currentTime read-only property of the Web Animations API's AnimationTimeline interface returns the timeline's current time in milliseconds, or null if the timeline is inactive.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline/currentTime">AnimationTimeline.currentTime - MDN</a>
+   */
   @JsProperty(
       name = "currentTime"
   )

@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot">ShadowRoot - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -17,18 +22,33 @@ public class ShadowRoot extends DocumentFragment {
   @Nullable
   public EventHandler onslotchange;
 
+  /**
+   * The innerHTML property of the ShadowRoot interface sets or returns a reference to the DOM tree inside the ShadowRoot.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML">ShadowRoot.innerHTML - MDN</a>
+   */
   @Nonnull
   public String innerHTML;
 
   ShadowRoot() {
   }
 
+  /**
+   * The host read-only property of the ShadowRoot returns a reference to the DOM element the ShadowRoot is attached to.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/host">ShadowRoot.host - MDN</a>
+   */
   @JsProperty(
       name = "host"
   )
   @Nonnull
   public native Element host();
 
+  /**
+   * The mode property of the ShadowRoot specifies its mode — either open or closed. This defines whether or not the shadow root's internal features are accessible from JavaScript.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/mode">ShadowRoot.mode - MDN</a>
+   */
   @JsProperty(
       name = "mode"
   )

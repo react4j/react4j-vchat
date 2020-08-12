@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The ConstantSourceNode interface—part of the Web Audio API—represents an audio source (based upon AudioScheduledSourceNode) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible AudioParam by automating the value of its offset or by connecting another node to it; see Controlling multiple parameters with ConstantSourceNode.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode">ConstantSourceNode - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -20,6 +25,11 @@ public class ConstantSourceNode extends AudioScheduledSourceNode {
   public ConstantSourceNode(@Nonnull final BaseAudioContext context) {
   }
 
+  /**
+   * The read-only offset property of the ConstantSourceNode interface returns a AudioParam object indicating the numeric a-rate value which is always returned by the source when asked for the next sample.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/offset">ConstantSourceNode.offset - MDN</a>
+   */
   @JsProperty(
       name = "offset"
   )

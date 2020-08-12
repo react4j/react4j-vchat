@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement">SVGElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -701,12 +706,22 @@ public class SVGElement extends Element {
   @Nullable
   public native SVGUseElement correspondingUseElement();
 
+  /**
+   * The style property is used to get as well as set the inline style of an element. When getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style">ElementCSSInlineStyle.style - MDN</a>
+   */
   @JsProperty(
       name = "style"
   )
   @Nonnull
   public native CSSStyleDeclaration style();
 
+  /**
+   * The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to all the custom data attributes (data-*) set on the element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/dataset">SVGElement.dataset - MDN</a>
+   */
   @JsProperty(
       name = "dataset"
   )

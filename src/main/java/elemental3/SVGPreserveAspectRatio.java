@@ -5,6 +5,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGPreserveAspectRatio interface corresponds to the preserveAspectRatio attribute, which is available for some of SVG's elements.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPreserveAspectRatio">SVGPreserveAspectRatio - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

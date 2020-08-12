@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The ClipboardEvent interface represents events providing information related to modification of the clipboard, that is cut, copy, and paste events.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent">ClipboardEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -23,6 +28,11 @@ public class ClipboardEvent extends Event {
     super( null );
   }
 
+  /**
+   * The ClipboardEvent.clipboardData property holds a DataTransfer object, which can be used:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData">ClipboardEvent.clipboardData - MDN</a>
+   */
   @JsProperty(
       name = "clipboardData"
   )

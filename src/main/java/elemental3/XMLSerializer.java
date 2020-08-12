@@ -5,6 +5,11 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
+/**
+ * The XMLSerializer interface provides the serializeToString() method to construct an XML string representing a DOM tree.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer">XMLSerializer - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -15,6 +20,11 @@ public class XMLSerializer {
   public XMLSerializer() {
   }
 
+  /**
+   * The XMLSerializer method serializeToString() constructs a string representing the specified DOM tree in XML form.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer/serializeToString">XMLSerializer.serializeToString - MDN</a>
+   */
   @Nonnull
   public native String serializeToString(@Nonnull Node root);
 }

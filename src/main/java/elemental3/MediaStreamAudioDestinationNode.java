@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * Inherits properties from its parent, AudioNode.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode">MediaStreamAudioDestinationNode - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -20,6 +25,11 @@ public class MediaStreamAudioDestinationNode extends AudioNode {
   public MediaStreamAudioDestinationNode(@Nonnull final AudioContext context) {
   }
 
+  /**
+   * A MediaStream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream">MediaStreamAudioDestinationNode.stream - MDN</a>
+   */
   @JsProperty(
       name = "stream"
   )

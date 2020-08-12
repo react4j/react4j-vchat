@@ -8,6 +8,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The OfflineAudioContext interface is an AudioContext interface representing an audio-processing graph built from linked together AudioNodes. In contrast with a standard AudioContext, an OfflineAudioContext doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an AudioBuffer.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext">OfflineAudioContext - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -24,6 +29,11 @@ public class OfflineAudioContext extends BaseAudioContext {
   public OfflineAudioContext(final int numberOfChannels, final int length, final float sampleRate) {
   }
 
+  /**
+   * The length property of the OfflineAudioContext interface returns an integer representing the size of the buffer in sample-frames.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/length">OfflineAudioContext.length - MDN</a>
+   */
   @JsProperty(
       name = "length"
   )
@@ -32,9 +42,19 @@ public class OfflineAudioContext extends BaseAudioContext {
   @Nonnull
   public native Promise<Void> resume();
 
+  /**
+   * The startRendering() method of the OfflineAudioContext Interface starts rendering the audio graph, taking into account the current connections and the current scheduled changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/startRendering">OfflineAudioContext.startRendering - MDN</a>
+   */
   @Nonnull
   public native Promise<AudioBuffer> startRendering();
 
+  /**
+   * The suspend() method of the OfflineAudioContext interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/suspend">OfflineAudioContext.suspend - MDN</a>
+   */
   @Nonnull
   public native Promise<Void> suspend(double suspendTime);
 }

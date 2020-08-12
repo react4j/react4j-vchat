@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver">PerformanceObserver - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -23,12 +28,32 @@ public class PerformanceObserver {
   @Nonnull
   public native JsArray<String> supportedEntryTypes();
 
+  /**
+   * The disconnect() method of the PerformanceObserver interface is used to stop the performance observer from receiving any performance entry events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/disconnect">PerformanceObserver.disconnect - MDN</a>
+   */
   public native void disconnect();
 
+  /**
+   * The observe() method of the PerformanceObserver interface is used to specify the set of performance entry types to observe.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe">PerformanceObserver.observe - MDN</a>
+   */
   public native void observe(@Nonnull PerformanceObserverInit options);
 
+  /**
+   * The observe() method of the PerformanceObserver interface is used to specify the set of performance entry types to observe.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe">PerformanceObserver.observe - MDN</a>
+   */
   public native void observe();
 
+  /**
+   * The takeRecords() method of the PerformanceObserver interface returns the current list of performance entries stored in the performance observer, emptying it out.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/takeRecords">PerformanceObserver.takeRecords - MDN</a>
+   */
   @Nonnull
   public native JsArray<PerformanceEntry> takeRecords();
 }

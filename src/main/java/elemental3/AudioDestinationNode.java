@@ -5,6 +5,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The AudioDestinationNode interface represents the end destination of an audio graph in a given context — usually the speakers of your device. It can also be the node that will "record" the audio data when used with an OfflineAudioContext.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode">AudioDestinationNode - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -15,6 +20,11 @@ public class AudioDestinationNode extends AudioNode {
   AudioDestinationNode() {
   }
 
+  /**
+   * An unsigned long.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount">AudioDestinationNode.maxChannelCount - MDN</a>
+   */
   @JsProperty(
       name = "maxChannelCount"
   )

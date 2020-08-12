@@ -3,11 +3,9 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 /**
  * The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
@@ -847,38 +845,4 @@ public class HTMLElement extends Element {
   public native void focus(@Nonnull FocusOptions options);
 
   public native void focus();
-
-  @JsOverlay
-  public final void addInvalidListener(@Nonnull final EventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "invalid", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addInvalidListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    addEventListener( "invalid", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addInvalidListener(@Nonnull final EventListener callback) {
-    addEventListener( "invalid", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeInvalidListener(@Nonnull final EventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "invalid", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeInvalidListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "invalid", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeInvalidListener(@Nonnull final EventListener callback) {
-    removeEventListener( "invalid", Js.cast( callback ) );
-  }
 }

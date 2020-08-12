@@ -10,6 +10,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The ServiceWorkerContainer interface of the Service Worker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer">ServiceWorkerContainer - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -29,6 +34,11 @@ public class ServiceWorkerContainer extends EventTarget {
   ServiceWorkerContainer() {
   }
 
+  /**
+   * The controller read-only property of the ServiceWorkerContainer interface returns a ServiceWorker object if its state is activated (the same object returned by ServiceWorkerRegistration.active). This property returns null if the request is a force refresh (Shift + refresh) or if there is no active worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller">ServiceWorkerContainer.controller - MDN</a>
+   */
   @JsProperty(
       name = "controller"
   )
@@ -41,21 +51,51 @@ public class ServiceWorkerContainer extends EventTarget {
   @Nonnull
   public native Promise<ServiceWorkerRegistration> ready();
 
+  /**
+   * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
+   */
   @Nonnull
   public native Promise<Any> getRegistration(@Nonnull String clientURL);
 
+  /**
+   * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
+   */
   @Nonnull
   public native Promise<Any> getRegistration();
 
+  /**
+   * The getRegistrations() method of the ServiceWorkerContainer interface gets all ServiceWorkerRegistrations associated with a ServiceWorkerContainer, in an array. The method returns a Promise that resolves to an array of ServiceWorkerRegistration.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistrations">ServiceWorkerContainer.getRegistrations - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<ServiceWorkerRegistration>> getRegistrations();
 
+  /**
+   * The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register">ServiceWorkerContainer.register - MDN</a>
+   */
   @Nonnull
   public native Promise<ServiceWorkerRegistration> register(@Nonnull String scriptURL,
       @Nonnull RegistrationOptions options);
 
+  /**
+   * The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register">ServiceWorkerContainer.register - MDN</a>
+   */
   @Nonnull
   public native Promise<ServiceWorkerRegistration> register(@Nonnull String scriptURL);
 
+  /**
+   * The startMessages() method of the ServiceWorkerContainer interface explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g. sent via Client.postMessage()). This can be used to react to sent messages earlier, even before that page's content has finished loading.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/startMessages">ServiceWorkerContainer.startMessages - MDN</a>
+   */
   public native void startMessages();
 }

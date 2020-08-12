@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGRadialGradientElement interface corresponds to the RadialGradient element.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRadialGradientElement">SVGRadialGradientElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

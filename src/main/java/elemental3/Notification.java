@@ -10,6 +10,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The Notification interface of the Notifications API is used to configure and display desktop notifications to the user.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification">Notification - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -132,10 +137,20 @@ public class Notification extends EventTarget {
   @Nonnull
   public native JsArray<Double> vibrate();
 
+  /**
+   * The requestPermission() method of the Notification interface requests permission from the user for the current origin to display notifications.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission">Notification.requestPermission - MDN</a>
+   */
   @Nonnull
   public static native Promise<String> requestPermission(
       @Nonnull NotificationPermissionCallback deprecatedCallback);
 
+  /**
+   * The requestPermission() method of the Notification interface requests permission from the user for the current origin to display notifications.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission">Notification.requestPermission - MDN</a>
+   */
   @Nonnull
   public static native Promise<String> requestPermission();
 

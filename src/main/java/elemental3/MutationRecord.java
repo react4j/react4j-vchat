@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord">MutationRecord - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

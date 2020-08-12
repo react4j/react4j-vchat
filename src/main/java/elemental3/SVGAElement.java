@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGAElement interface provides access to the properties of a element, as well as methods to manipulate them.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement">SVGAElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -73,6 +78,11 @@ public class SVGAElement extends SVGGraphicsElement {
   @Nonnull
   public native DOMTokenList relList();
 
+  /**
+   * The SVGAElement.target read-only property of SVGAElement returns an SVGAnimatedString object that specifies the portion of a target window, frame, pane into which a document is to be opened when a link is activated.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement/target">SVGAElement.target - MDN</a>
+   */
   @JsProperty(
       name = "target"
   )

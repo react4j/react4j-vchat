@@ -10,6 +10,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration">MediaKeySystemConfiguration - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -23,14 +28,29 @@ public interface MediaKeySystemConfiguration {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
+  /**
+   * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
+   */
   @JsProperty(
       name = "audioCapabilities"
   )
   JsArray<MediaKeySystemMediaCapability> audioCapabilities();
 
+  /**
+   * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
+   */
   @JsProperty
   void setAudioCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> audioCapabilities);
 
+  /**
+   * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration audioCapabilities(
@@ -39,12 +59,22 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
+  /**
+   * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
+   */
   @JsOverlay
   default void setAudioCapabilities(
       @Nonnull final MediaKeySystemMediaCapability... audioCapabilities) {
     setAudioCapabilities( JsArray.asJsArray( audioCapabilities ) );
   }
 
+  /**
+   * The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities">MediaKeySystemConfiguration.audioCapabilities - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration audioCapabilities(
@@ -53,14 +83,29 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
+  /**
+   * The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier">MediaKeySystemConfiguration.distinctiveIdentifier - MDN</a>
+   */
   @JsProperty(
       name = "distinctiveIdentifier"
   )
   String distinctiveIdentifier();
 
+  /**
+   * The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier">MediaKeySystemConfiguration.distinctiveIdentifier - MDN</a>
+   */
   @JsProperty
   void setDistinctiveIdentifier(@Nonnull String distinctiveIdentifier);
 
+  /**
+   * The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier">MediaKeySystemConfiguration.distinctiveIdentifier - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration distinctiveIdentifier(
@@ -69,14 +114,29 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
+  /**
+   * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
+   */
   @JsProperty(
       name = "initDataTypes"
   )
   JsArray<String> initDataTypes();
 
+  /**
+   * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
+   */
   @JsProperty
   void setInitDataTypes(@Nonnull JsArray<String> initDataTypes);
 
+  /**
+   * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration initDataTypes(@Nonnull final JsArray<String> initDataTypes) {
@@ -84,11 +144,21 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
+  /**
+   * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
+   */
   @JsOverlay
   default void setInitDataTypes(@Nonnull final String... initDataTypes) {
     setInitDataTypes( JsArray.asJsArray( initDataTypes ) );
   }
 
+  /**
+   * The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes">MediaKeySystemConfiguration.initDataTypes - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration initDataTypes(@Nonnull final String... initDataTypes) {
@@ -111,14 +181,29 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
+  /**
+   * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState">MediaKeySystemConfiguration.persistentState - MDN</a>
+   */
   @JsProperty(
       name = "persistentState"
   )
   String persistentState();
 
+  /**
+   * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState">MediaKeySystemConfiguration.persistentState - MDN</a>
+   */
   @JsProperty
   void setPersistentState(@Nonnull String persistentState);
 
+  /**
+   * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState">MediaKeySystemConfiguration.persistentState - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration persistentState(@Nonnull final String persistentState) {
@@ -153,14 +238,29 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
+  /**
+   * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
+   */
   @JsProperty(
       name = "videoCapabilities"
   )
   JsArray<MediaKeySystemMediaCapability> videoCapabilities();
 
+  /**
+   * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
+   */
   @JsProperty
   void setVideoCapabilities(@Nonnull JsArray<MediaKeySystemMediaCapability> videoCapabilities);
 
+  /**
+   * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration videoCapabilities(
@@ -169,12 +269,22 @@ public interface MediaKeySystemConfiguration {
     return this;
   }
 
+  /**
+   * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
+   */
   @JsOverlay
   default void setVideoCapabilities(
       @Nonnull final MediaKeySystemMediaCapability... videoCapabilities) {
     setVideoCapabilities( JsArray.asJsArray( videoCapabilities ) );
   }
 
+  /**
+   * The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities">MediaKeySystemConfiguration.videoCapabilities - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration videoCapabilities(

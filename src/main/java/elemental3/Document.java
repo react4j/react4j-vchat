@@ -37,6 +37,11 @@ public class Document extends Node {
   @Nullable
   public EventHandler onpointerlockerror;
 
+  /**
+   * The Document interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired immediately before a document transitions into or out of full-screen mode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onfullscreenchange">Document.onfullscreenchange - MDN</a>
+   */
   @Nullable
   public EventHandler onfullscreenchange;
 
@@ -677,7 +682,7 @@ public class Document extends Node {
   /**
    * The onselectionchange property of the GlobalEventHandlers mixin is an EventHandler that processes selectionchange events.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectionchange">GlobalEventHandlers.onselectionchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/onselectionchange">Document.onselectionchange - MDN</a>
    */
   @Nullable
   public EventHandler onselectionchange;
@@ -1024,23 +1029,43 @@ public class Document extends Node {
   @Nonnull
   public native HTMLCollection applets();
 
+  /**
+   * The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/childElementCount">ParentNode.childElementCount - MDN</a>
+   */
   @JsProperty(
       name = "childElementCount"
   )
   public native int childElementCount();
 
+  /**
+   * The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children">ParentNode.children - MDN</a>
+   */
   @JsProperty(
       name = "children"
   )
   @Nonnull
   public native HTMLCollection children();
 
+  /**
+   * The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild">ParentNode.firstElementChild - MDN</a>
+   */
   @JsProperty(
       name = "firstElementChild"
   )
   @Nullable
   public native Element firstElementChild();
 
+  /**
+   * The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild">ParentNode.lastElementChild - MDN</a>
+   */
   @JsProperty(
       name = "lastElementChild"
   )
@@ -1386,22 +1411,62 @@ public class Document extends Node {
 
   public native void releaseEvents();
 
+  /**
+   * The ParentNode.append() method inserts a set of Node objects or DOMString objects after the last child of the ParentNode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append - MDN</a>
+   */
   public native void append(@Nonnull Node... nodes);
 
+  /**
+   * The ParentNode.append() method inserts a set of Node objects or DOMString objects after the last child of the ParentNode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">ParentNode.append - MDN</a>
+   */
   public native void append(@Nonnull String... nodes);
 
+  /**
+   * The ParentNode.prepend() method inserts a set of Node objects or DOMString objects before the first child of the ParentNode. DOMString objects are inserted as equivalent Text nodes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend">ParentNode.prepend - MDN</a>
+   */
   public native void prepend(@Nonnull Node... nodes);
 
+  /**
+   * The ParentNode.prepend() method inserts a set of Node objects or DOMString objects before the first child of the ParentNode. DOMString objects are inserted as equivalent Text nodes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend">ParentNode.prepend - MDN</a>
+   */
   public native void prepend(@Nonnull String... nodes);
 
+  /**
+   * The ParentNode mixin defines the querySelector() method as returning an Element representing the first element matching the specified group of selectors which are descendants of the object on which the method was called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/querySelector">ParentNode.querySelector - MDN</a>
+   */
   @Nullable
   public native Element querySelector(@Nonnull String selectors);
 
+  /**
+   * The ParentNode mixin defines the querySelectorAll() method as returning a NodeList representing a list of elements matching the specified group of selectors which are descendants of the object on which the method was called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/querySelectorAll">ParentNode.querySelectorAll - MDN</a>
+   */
   @Nonnull
   public native NodeList querySelectorAll(@Nonnull String selectors);
 
+  /**
+   * The ParentNode.replaceChildren() method replaces the existing children of a Node with a specified new set of children. These can be DOMString or Node objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/replaceChildren">ParentNode.replaceChildren - MDN</a>
+   */
   public native void replaceChildren(@Nonnull Node... nodes);
 
+  /**
+   * The ParentNode.replaceChildren() method replaces the existing children of a Node with a specified new set of children. These can be DOMString or Node objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/replaceChildren">ParentNode.replaceChildren - MDN</a>
+   */
   public native void replaceChildren(@Nonnull String... nodes);
 
   @Nonnull

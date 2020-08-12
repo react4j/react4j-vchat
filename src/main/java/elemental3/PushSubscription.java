@@ -10,6 +10,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import org.intellij.lang.annotations.MagicConstant;
 
+/**
+ * The PushSubscription interface of the Push API provides a subcription's URL endpoint and allows unsubscription from a push service.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription">PushSubscription - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -20,31 +25,61 @@ public class PushSubscription {
   PushSubscription() {
   }
 
+  /**
+   * The endpoint read-only property of the PushSubscription interface returns a USVString containing the endpoint associated with the push subscription.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/endpoint">PushSubscription.endpoint - MDN</a>
+   */
   @JsProperty(
       name = "endpoint"
   )
   @Nonnull
   public native String endpoint();
 
+  /**
+   * The expirationTime read-only property of the PushSubscription interface returns a DOMHighResTimeStamp of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/expirationTime">PushSubscription.expirationTime - MDN</a>
+   */
   @JsProperty(
       name = "expirationTime"
   )
   @Nullable
   public native int expirationTime();
 
+  /**
+   * The options read-only property of the PushSubscription interface is an object containing containing the options used to create the subscription.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/options">PushSubscription.options - MDN</a>
+   */
   @JsProperty(
       name = "options"
   )
   @Nonnull
   public native PushSubscriptionOptions options();
 
+  /**
+   * The getKey() method of the PushSubscription interface returns an ArrayBuffer representing a client public key, which can then be sent to a server and used in encrypting push message data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/getKey">PushSubscription.getKey - MDN</a>
+   */
   @Nullable
   public native ArrayBuffer getKey(
       @MagicConstant(stringValues = {"auth", "p256dh"}) @Nonnull String name);
 
+  /**
+   * The toJSON() method of the PushSubscription interface is a standard serializer: it returns a JSON representation of the subscription properties, providing a useful shortcut.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/toJSON">PushSubscription.toJSON - MDN</a>
+   */
   @Nonnull
   public native PushSubscriptionJSON toJSON();
 
+  /**
+   * The unsubscribe() method of the PushSubscription interface returns a Promise that resolves to a Boolean when the current subscription is successfully unsubscribed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/unsubscribe">PushSubscription.unsubscribe - MDN</a>
+   */
   @Nonnull
   public native Promise<Boolean> unsubscribe();
 }

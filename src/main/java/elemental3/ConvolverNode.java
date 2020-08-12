@@ -6,6 +6,11 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
+/**
+ * The ConvolverNode interface is an AudioNode that performs a Linear Convolution on a given AudioBuffer, often used to achieve a reverb effect. A ConvolverNode always has exactly one input and one output.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode">ConvolverNode - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -13,9 +18,19 @@ import jsinterop.annotations.JsType;
     name = "ConvolverNode"
 )
 public class ConvolverNode extends AudioNode {
+  /**
+   * An AudioBuffer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/buffer">ConvolverNode.buffer - MDN</a>
+   */
   @Nullable
   public AudioBuffer buffer;
 
+  /**
+   * The normalize property of the ConvolverNode interface is a boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the buffer attribute is set, or not.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/normalize">ConvolverNode.normalize - MDN</a>
+   */
   public boolean normalize;
 
   public ConvolverNode(@Nonnull final BaseAudioContext context,

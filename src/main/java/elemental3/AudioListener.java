@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The AudioListener interface represents the position and orientation of the unique person listening to the audio scene, and is used in audio spatialization. All PannerNodes spatialize in relation to the AudioListener stored in the BaseAudioContext.listener attribute.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener">AudioListener - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -70,7 +75,17 @@ public class AudioListener {
   @Nonnull
   public native AudioParam upZ();
 
+  /**
+   * Void.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setOrientation">AudioListener.setOrientation - MDN</a>
+   */
   public native void setOrientation(float x, float y, float z, float xUp, float yUp, float zUp);
 
+  /**
+   * Void.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setPosition">AudioListener.setPosition - MDN</a>
+   */
   public native void setPosition(float x, float y, float z);
 }

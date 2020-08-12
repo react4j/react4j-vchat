@@ -8,6 +8,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation">Animation - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -15,6 +20,11 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class Animation extends EventTarget {
+  /**
+   * The Animation.currentTime property of the Web Animations API returns and sets the current time value of the animation in milliseconds, whether running or paused.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/currentTime">Animation.currentTime - MDN</a>
+   */
   @Nullable
   public Double currentTime;
 
@@ -71,6 +81,11 @@ public class Animation extends EventTarget {
   @Nonnull
   public native Promise<Animation> ready();
 
+  /**
+   * The Web Animations API's cancel() method of the Animation interface clears all KeyframeEffects caused by this animation and aborts its playback.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel">Animation.cancel - MDN</a>
+   */
   public native void cancel();
 
   public native void finish();

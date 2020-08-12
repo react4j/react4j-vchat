@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGRectElement interface provides access to the properties of rect elements, as well as methods to manipulate them.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement">SVGRectElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

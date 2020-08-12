@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent">GamepadEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -17,6 +22,11 @@ public class GamepadEvent extends Event {
     super( null );
   }
 
+  /**
+   * The GamepadEvent.gamepad property of the GamepadEvent interface returns a Gamepad object, providing access to the associated gamepad data for fired gamepadconnected and gamepaddisconnected events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent/gamepad">GamepadEvent.gamepad - MDN</a>
+   */
   @JsProperty(
       name = "gamepad"
   )

@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The MediaList interface represents the media queries of a stylesheet, e.g. those set using a link element's media attribute.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList">MediaList - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -13,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "MediaList"
 )
 public class MediaList {
+  /**
+   * The mediaText property of the MediaList interface is a stringifier that returns a DOMString representing the MediaList as text, and also allows you to set a new MediaList.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaList/mediaText">MediaList.mediaText - MDN</a>
+   */
   @Nonnull
   public String mediaText;
 

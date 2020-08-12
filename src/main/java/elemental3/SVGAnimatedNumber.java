@@ -5,6 +5,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGAnimatedNumber interface is used for attributes of basic type Number which can be animated.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedNumber">SVGAnimatedNumber - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

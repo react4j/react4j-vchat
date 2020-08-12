@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The FocusEvent interface represents focus-related events, including focus, blur, focusin, and focusout.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent">FocusEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -22,6 +27,11 @@ public class FocusEvent extends UIEvent {
     super( null );
   }
 
+  /**
+   * The FocusEvent.relatedTarget read-only property is the secondary target, depending on the type of event:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent/relatedTarget">FocusEvent.relatedTarget - MDN</a>
+   */
   @JsProperty(
       name = "relatedTarget"
   )

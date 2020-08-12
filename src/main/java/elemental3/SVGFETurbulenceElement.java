@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGFETurbulenceElement interface corresponds to the feTurbulence element.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement">SVGFETurbulenceElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

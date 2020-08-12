@@ -5,6 +5,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
+/**
+ * The EXT_sRGB extension is part of the WebGL API and adds sRGB support to textures and framebuffer objects.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_sRGB">EXT_sRGB - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGNumberList defines a list of SVGNumber objects.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGNumberList">SVGNumberList - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

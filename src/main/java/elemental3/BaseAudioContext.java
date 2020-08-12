@@ -10,6 +10,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The BaseAudioContext interface of the Web Audio API acts as a base definition for online and offline audio-processing graphs, as represented by AudioContext and OfflineAudioContext respectively.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext">BaseAudioContext - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -23,43 +28,83 @@ public class BaseAudioContext extends EventTarget {
   BaseAudioContext() {
   }
 
+  /**
+   * The audioWorklet read-only property of the BaseAudioContext interface returns an instance of AudioWorklet that can be used for adding AudioWorkletProcessor-derived classes which implement custom audio processing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/audioWorklet">BaseAudioContext.audioWorklet - MDN</a>
+   */
   @JsProperty(
       name = "audioWorklet"
   )
   @Nonnull
   public native AudioWorklet audioWorklet();
 
+  /**
+   * The currentTime read-only property of the BaseAudioContext interface returns a double representing an ever-increasing hardware timestamp in seconds that can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/currentTime">BaseAudioContext.currentTime - MDN</a>
+   */
   @JsProperty(
       name = "currentTime"
   )
   public native double currentTime();
 
+  /**
+   * An AudioDestinationNode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/destination">BaseAudioContext.destination - MDN</a>
+   */
   @JsProperty(
       name = "destination"
   )
   @Nonnull
   public native AudioDestinationNode destination();
 
+  /**
+   * An AudioListener object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/listener">BaseAudioContext.listener - MDN</a>
+   */
   @JsProperty(
       name = "listener"
   )
   @Nonnull
   public native AudioListener listener();
 
+  /**
+   * The sampleRate property of the BaseAudioContext interface returns a floating point number representing the sample rate, in samples per second, used by all nodes in this audio context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/sampleRate">BaseAudioContext.sampleRate - MDN</a>
+   */
   @JsProperty(
       name = "sampleRate"
   )
   public native float sampleRate();
 
+  /**
+   * A DOMString. Possible values are:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/state">BaseAudioContext.state - MDN</a>
+   */
   @JsProperty(
       name = "state"
   )
   @Nonnull
   public native String state();
 
+  /**
+   * The createAnalyser() method of the BaseAudioContext interface creates an AnalyserNode, which can be used to expose audio time and frequency data and create data visualisations.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createAnalyser">BaseAudioContext.createAnalyser - MDN</a>
+   */
   @Nonnull
   public native AnalyserNode createAnalyser();
 
+  /**
+   * A BiquadFilterNode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter">BaseAudioContext.createBiquadFilter - MDN</a>
+   */
   @Nonnull
   public native BiquadFilterNode createBiquadFilter();
 

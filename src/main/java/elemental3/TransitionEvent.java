@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The TransitionEvent interface represents events providing information related to transitions.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent">TransitionEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -22,6 +27,11 @@ public class TransitionEvent extends Event {
     super( null );
   }
 
+  /**
+   * The TransitionEvent.elapsedTime read-only property is a float giving the amount of time the animation has been running, in seconds, when this event fired. This value is not affected by the transition-delay property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/elapsedTime">TransitionEvent.elapsedTime - MDN</a>
+   */
   @JsProperty(
       name = "elapsedTime"
   )
@@ -33,6 +43,11 @@ public class TransitionEvent extends Event {
   @Nonnull
   public native String propertyName();
 
+  /**
+   * The TransitionEvent.pseudoElement read-only property is a DOMString, starting with '::', containing the name of the pseudo-element the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: ''.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/pseudoElement">TransitionEvent.pseudoElement - MDN</a>
+   */
   @JsProperty(
       name = "pseudoElement"
   )

@@ -9,6 +9,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The IDBCursor interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor">IDBCursor - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -49,6 +54,11 @@ public class IDBCursor {
   @Nonnull
   public native IDBObjectStoreOrIDBIndexUnion source();
 
+  /**
+   * The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/advance">IDBCursor.advance - MDN</a>
+   */
   public native void advance(int count);
 
   @JsMethod(
@@ -61,6 +71,11 @@ public class IDBCursor {
   )
   public native void continue_();
 
+  /**
+   * The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey">IDBCursor.continuePrimaryKey - MDN</a>
+   */
   public native void continuePrimaryKey(@Nullable Any key, @Nullable Any primaryKey);
 
   @Nonnull

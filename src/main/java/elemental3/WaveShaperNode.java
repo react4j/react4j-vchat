@@ -7,6 +7,11 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
+/**
+ * A WaveShaperNode always has exactly one input and one output.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode">WaveShaperNode - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -14,9 +19,19 @@ import jsinterop.annotations.JsType;
     name = "WaveShaperNode"
 )
 public class WaveShaperNode extends AudioNode {
+  /**
+   * The curve property of the WaveShaperNode interface is a Float32Array of numbers describing the distortion to apply.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/curve">WaveShaperNode.curve - MDN</a>
+   */
   @Nullable
   public Float32Array curve;
 
+  /**
+   * The oversample property of the WaveShaperNode interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/oversample">WaveShaperNode.oversample - MDN</a>
+   */
   @Nonnull
   public String oversample;
 

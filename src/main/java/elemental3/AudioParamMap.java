@@ -11,6 +11,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
+/**
+ * The Web Audio API interface AudioParamMap represents a set of multiple audio parameters, each described as a mapping of a DOMString identifying the parameter to the AudioParam object representing its value.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParamMap">AudioParamMap - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

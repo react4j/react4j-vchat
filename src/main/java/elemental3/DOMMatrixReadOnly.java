@@ -9,6 +9,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The DOMMatrixReadOnly interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The DOMMatrix interrface—which is based upon DOMMatrixReadOnly—adds mutability, allowing you to alter the matrix after creating it.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly">DOMMatrixReadOnly - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -160,6 +165,11 @@ public class DOMMatrixReadOnly {
   @Nonnull
   public static native DOMMatrixReadOnly fromMatrix();
 
+  /**
+   * The flipX() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix flipped about the x-axis.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/flipX">DOMMatrixReadOnly.flipX - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix flipX();
 
@@ -211,26 +221,61 @@ public class DOMMatrixReadOnly {
   @Nonnull
   public native DOMMatrix rotateFromVector();
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX,
       double originY, double originZ);
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX,
       double originY);
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ, double originX);
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY, double scaleZ);
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix scale(double scaleX, double scaleY);
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix scale(double scaleX);
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/scale">DOMMatrixReadOnly.scale - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix scale();
 
@@ -285,15 +330,35 @@ public class DOMMatrixReadOnly {
   @Nonnull
   public native DOMPoint transformPoint();
 
+  /**
+   * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix translate(double tx, double ty, double tz);
 
+  /**
+   * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix translate(double tx, double ty);
 
+  /**
+   * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix translate(double tx);
 
+  /**
+   * The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate">DOMMatrixReadOnly.translate - MDN</a>
+   */
   @Nonnull
   public native DOMMatrix translate();
 }

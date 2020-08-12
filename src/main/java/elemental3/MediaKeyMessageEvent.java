@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The MediaKeyMessageEvent interface of the EncryptedMediaExtensions API contains the content and related data when the content decryption module generates a message for the session.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent">MediaKeyMessageEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -19,12 +24,22 @@ public class MediaKeyMessageEvent extends Event {
     super( null );
   }
 
+  /**
+   * The MediaKeyMessageEvent.message read-only property returns an ArrayBuffer with a message from the content decryption module. Messages vary by key system.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/message">MediaKeyMessageEvent.message - MDN</a>
+   */
   @JsProperty(
       name = "message"
   )
   @Nonnull
   public native ArrayBuffer message();
 
+  /**
+   * The MediaKeyMessageEvent.messageType read-only property indicates the type of message. It may be one of license-request, license-renewal, license-release, or individualization-request.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/messageType">MediaKeyMessageEvent.messageType - MDN</a>
+   */
   @JsProperty(
       name = "messageType"
   )

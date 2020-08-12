@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SourceBufferList interface represents a simple container list for multiple SourceBuffer objects.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList">SourceBufferList - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -22,6 +27,11 @@ public class SourceBufferList extends EventTarget {
   SourceBufferList() {
   }
 
+  /**
+   * The length read-only property of the SourceBufferList interface returns the number of SourceBuffer objects in the list.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList/length">SourceBufferList.length - MDN</a>
+   */
   @JsProperty(
       name = "length"
   )

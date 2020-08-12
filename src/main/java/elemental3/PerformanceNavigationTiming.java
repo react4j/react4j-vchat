@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The PerformanceNavigationTiming interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming">PerformanceNavigationTiming - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -67,6 +72,11 @@ public class PerformanceNavigationTiming extends PerformanceResourceTiming {
   )
   public native double unloadEventStart();
 
+  /**
+   * The toJSON() method is a serializer - it returns a JSON representation of the PerformanceNavigationTiming object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/toJSON">PerformanceNavigationTiming.toJSON - MDN</a>
+   */
   @Nonnull
   public native Object toJSON();
 }

@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The GeolocationPositionError interface represents the reason of an error occurring when using the geolocating device.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError">PositionError - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -26,11 +31,21 @@ public class PositionError {
   PositionError() {
   }
 
+  /**
+   * The GeolocationPositionError.code read-only property is an unsigned short representing the error code.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError/code">PositionError.code - MDN</a>
+   */
   @JsProperty(
       name = "code"
   )
   public native int code();
 
+  /**
+   * The GeolocationPositionError.message read-only property returns a human-readable DOMString describing the details of the error.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError/message">PositionError.message - MDN</a>
+   */
   @JsProperty(
       name = "message"
   )

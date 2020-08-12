@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGPatternElement interface corresponds to the pattern element.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGPatternElement">SVGPatternElement - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

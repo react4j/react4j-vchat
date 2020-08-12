@@ -8,6 +8,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The CustomEvent interface represents events initialized by an application for any purpose.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent">CustomEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -23,18 +28,43 @@ public class CustomEvent extends Event {
     super( null );
   }
 
+  /**
+   * The detail readonly property of the CustomEvent interface returns any data passed when initializing the event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail">CustomEvent.detail - MDN</a>
+   */
   @JsProperty(
       name = "detail"
   )
   @Nullable
   public native Any detail();
 
+  /**
+   * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any detail);
 
+  /**
+   * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles, boolean cancelable);
 
+  /**
+   * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles);
 
+  /**
+   * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   */
   public native void initCustomEvent(@Nonnull String type);
 }

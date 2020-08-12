@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The WheelEvent interface represents events that occur due to the user moving a mouse wheel or similar input device.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent">WheelEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -31,21 +36,41 @@ public class WheelEvent extends MouseEvent {
     super( null );
   }
 
+  /**
+   * The WheelEvent.deltaMode read-only property returns an unsigned long representing the unit of the delta values scroll amount. Permitted values are:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode">WheelEvent.deltaMode - MDN</a>
+   */
   @JsProperty(
       name = "deltaMode"
   )
   public native int deltaMode();
 
+  /**
+   * The WheelEvent.deltaX read-only property is a double representing the horizontal scroll amount in the WheelEvent.deltaMode unit.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX">WheelEvent.deltaX - MDN</a>
+   */
   @JsProperty(
       name = "deltaX"
   )
   public native double deltaX();
 
+  /**
+   * The WheelEvent.deltaY read-only property is a double representing the vertical scroll amount in the WheelEvent.deltaMode unit.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY">WheelEvent.deltaY - MDN</a>
+   */
   @JsProperty(
       name = "deltaY"
   )
   public native double deltaY();
 
+  /**
+   * The WheelEvent.deltaZ read-only property is a double representing the scroll amount along the z-axis, in the WheelEvent.deltaMode unit.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ">WheelEvent.deltaZ - MDN</a>
+   */
   @JsProperty(
       name = "deltaZ"
   )

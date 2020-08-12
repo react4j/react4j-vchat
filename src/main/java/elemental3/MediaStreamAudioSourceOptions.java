@@ -9,6 +9,11 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
+/**
+ * The MediaStreamAudioSourceOptions dictionary provides configuration options used when creating a MediaStreamAudioSourceNode using its constructor.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions">MediaStreamAudioSourceOptions - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -22,15 +27,30 @@ public interface MediaStreamAudioSourceOptions {
     return Js.<MediaStreamAudioSourceOptions>uncheckedCast( JsPropertyMap.of() ).mediaStream( mediaStream );
   }
 
+  /**
+   * The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream">MediaStreamAudioSourceOptions.mediaStream - MDN</a>
+   */
   @JsProperty(
       name = "mediaStream"
   )
   @Nonnull
   MediaStream mediaStream();
 
+  /**
+   * The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream">MediaStreamAudioSourceOptions.mediaStream - MDN</a>
+   */
   @JsProperty
   void setMediaStream(@Nonnull MediaStream mediaStream);
 
+  /**
+   * The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream">MediaStreamAudioSourceOptions.mediaStream - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default MediaStreamAudioSourceOptions mediaStream(@Nonnull final MediaStream mediaStream) {

@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The DOMException interface represents an abnormal event (called an exception) that occurs as a result of calling a method or accessing a property of a web API.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException">DOMException - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -98,17 +103,32 @@ public class DOMException {
   public DOMException() {
   }
 
+  /**
+   * The code read-only property of the DOMException interface returns a short that contains one of the error code constants, or 0 if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the DOMException.name attribute.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/code">DOMException.code - MDN</a>
+   */
   @JsProperty(
       name = "code"
   )
   public native int code();
 
+  /**
+   * The message read-only property of the DOMException interface returns a DOMString representing a message or description associated with the given error name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/message">DOMException.message - MDN</a>
+   */
   @JsProperty(
       name = "message"
   )
   @Nonnull
   public native String message();
 
+  /**
+   * The name read-only property of the DOMException interface returns a DOMString that contains one of the strings associated with an error name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/name">DOMException.name - MDN</a>
+   */
   @JsProperty(
       name = "name"
   )

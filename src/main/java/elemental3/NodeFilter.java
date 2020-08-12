@@ -6,6 +6,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
+/**
+ * A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter">NodeFilter - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -62,5 +67,10 @@ public interface NodeFilter {
   @JsOverlay
   int SHOW_TEXT = 0x4;
 
+  /**
+   * The NodeFilter.acceptNode() method returns an unsigned short that will be used to tell if a given Node must be accepted or not by the NodeIterator or TreeWalker iteration algorithm. This method is expected to be written by the user of a NodeFilter. Possible return values are:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter/acceptNode">NodeFilter.acceptNode - MDN</a>
+   */
   int acceptNode(@Nonnull Node node);
 }

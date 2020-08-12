@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The WebContextEvent interface is part of the WebGL API and is an interface for an event that is generated in response to a status change to the WebGL rendering context.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent">WebGLContextEvent - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -22,6 +27,11 @@ public class WebGLContextEvent extends Event {
     super( null );
   }
 
+  /**
+   * The read-only WebGLContextEvent.statusMessage property contains additional event status information, or is an empty string if no additional information is available.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent/statusMessage">WebGLContextEvent.statusMessage - MDN</a>
+   */
   @JsProperty(
       name = "statusMessage"
   )

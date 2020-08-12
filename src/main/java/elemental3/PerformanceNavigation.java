@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation">PerformanceNavigation - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -29,11 +34,21 @@ public class PerformanceNavigation {
   PerformanceNavigation() {
   }
 
+  /**
+   * The legacy PerformanceNavigation.redirectCount read-only property returns an unsigned short representing the number of REDIRECTs done before reaching the page.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/redirectCount">PerformanceNavigation.redirectCount - MDN</a>
+   */
   @JsProperty(
       name = "redirectCount"
   )
   public native int redirectCount();
 
+  /**
+   * The legacy PerformanceNavigation.type read-only property returns an unsigned short containing a constant describing how the navigation to this page was done. Possible values are:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/type">PerformanceNavigation.type - MDN</a>
+   */
   @JsProperty(
       name = "type"
   )

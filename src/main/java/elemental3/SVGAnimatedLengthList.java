@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The SVGAnimatedLengthList interface is used for attributes of type SVGLengthList which can be animated.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLengthList">SVGAnimatedLengthList - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,

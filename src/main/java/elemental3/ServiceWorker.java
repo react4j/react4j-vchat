@@ -9,6 +9,11 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
+/**
+ * The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker">ServiceWorker - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -25,12 +30,22 @@ public class ServiceWorker extends EventTarget {
   ServiceWorker() {
   }
 
+  /**
+   * Returns the ServiceWorker serialized script URL defined as part of ServiceWorkerRegistration. Must be on the same origin as the document that registers the ServiceWorker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/scriptURL">ServiceWorker.scriptURL - MDN</a>
+   */
   @JsProperty(
       name = "scriptURL"
   )
   @Nonnull
   public native String scriptURL();
 
+  /**
+   * The state read-only property of the ServiceWorker interface returns a string representing the current state of the service worker. It can be one of the following values: installing, installed, activating, activated, or redundant.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/state">ServiceWorker.state - MDN</a>
+   */
   @JsProperty(
       name = "state"
   )

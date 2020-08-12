@@ -64,11 +64,21 @@ public class XRWebGLLayer {
   @Nonnull
   public native WebGLFramebuffer framebuffer();
 
+  /**
+   * The read-only XRWebGLLayer property framebufferHeight indicates the height of the framebuffer, in pixels.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferHeight">XRWebGLLayer.framebufferHeight - MDN</a>
+   */
   @JsProperty(
       name = "framebufferHeight"
   )
   public native int framebufferHeight();
 
+  /**
+   * The read-only XRWebGLLayer property framebufferWidth specifies the width of the framebuffer, in pixels.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferWidth">XRWebGLLayer.framebufferWidth - MDN</a>
+   */
   @JsProperty(
       name = "framebufferWidth"
   )

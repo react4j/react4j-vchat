@@ -6,6 +6,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle whose properties are immutable.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly">DOMRectReadOnly - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -68,9 +73,19 @@ public class DOMRectReadOnly {
   )
   public native double y();
 
+  /**
+   * The fromRect() property of the DOMRectReadOnly interface creates a new DOMRectReadOnly object with a given location and dimensions.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect">DOMRectReadOnly.fromRect - MDN</a>
+   */
   @Nonnull
   public static native DOMRectReadOnly fromRect(@Nonnull DOMRectInit other);
 
+  /**
+   * The fromRect() property of the DOMRectReadOnly interface creates a new DOMRectReadOnly object with a given location and dimensions.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect">DOMRectReadOnly.fromRect - MDN</a>
+   */
   @Nonnull
   public static native DOMRectReadOnly fromRect();
 

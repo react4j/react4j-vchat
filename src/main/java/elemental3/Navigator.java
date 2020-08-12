@@ -134,6 +134,11 @@ public class Navigator {
   )
   public native boolean cookieEnabled();
 
+  /**
+   * The NavigatorStorage.storage read-only property returns the singleton StorageManager object used to access the overall storage capabilities of the browser for the current site or app.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage/storage">NavigatorStorage.storage - MDN</a>
+   */
   @JsProperty(
       name = "storage"
   )
