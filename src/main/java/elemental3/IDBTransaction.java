@@ -3,9 +3,11 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The IDBTransaction interface of the IndexedDB API provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use IDBDatabase to start transactions, IDBTransaction to set the mode of the transaction (e.g. is it readonly or readwrite), and you access an IDBObjectStore to make a request. You can also use an IDBTransaction object to abort transactions.
@@ -117,4 +119,104 @@ public class IDBTransaction extends EventTarget {
    */
   @Nonnull
   public native IDBObjectStore objectStore(@Nonnull String name);
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final EventListener callback) {
+    addEventListener( "abort", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final EventListener callback) {
+    removeEventListener( "abort", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addCompleteListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCompleteListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCompleteListener(@Nonnull final EventListener callback) {
+    addEventListener( "complete", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeCompleteListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCompleteListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCompleteListener(@Nonnull final EventListener callback) {
+    removeEventListener( "complete", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
 }

@@ -3,9 +3,11 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 import org.intellij.lang.annotations.MagicConstant;
 
 /**
@@ -187,4 +189,38 @@ public class HTMLInputElement extends HTMLElement {
   public native void stepUp(int n);
 
   public native void stepUp();
+
+  @JsOverlay
+  public final void addSearchListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "search", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSearchListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "search", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSearchListener(@Nonnull final EventListener callback) {
+    addEventListener( "search", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSearchListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "search", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSearchListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "search", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSearchListener(@Nonnull final EventListener callback) {
+    removeEventListener( "search", Js.cast( callback ) );
+  }
 }

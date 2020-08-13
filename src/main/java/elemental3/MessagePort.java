@@ -4,9 +4,11 @@ import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 
 /**
  * The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other.
@@ -26,7 +28,7 @@ public class MessagePort extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage">MessagePort.onmessage - MDN</a>
    */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
   /**
    * The onmessageerror event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the port—that is, when it receives a message that cannot be deserialized.
@@ -34,7 +36,7 @@ public class MessagePort extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessageerror">MessagePort.onmessageerror - MDN</a>
    */
   @Nullable
-  public EventHandler onmessageerror;
+  public MessageEventHandler onmessageerror;
 
   MessagePort() {
   }
@@ -80,4 +82,72 @@ public class MessagePort extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start">MessagePort.start - MDN</a>
    */
   public native void start();
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "messageerror", Js.cast( callback ) );
+  }
 }

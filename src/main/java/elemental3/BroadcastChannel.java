@@ -3,10 +3,12 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 
 /**
  * The BroadcastChannel interface represents a named channel that any browsing context of a given origin can subscribe to. It allows communication between different documents (in different windows, tabs, frames or iframes) of the same origin. Messages are broadcasted via a message event fired at all BroadcastChannel objects listening to the channel.
@@ -26,7 +28,7 @@ public class BroadcastChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/onmessage">BroadcastChannel.onmessage - MDN</a>
    */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
   /**
    * The onmessageerror event handler of the BroadcastChannel interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the BroadcastChannel instance — that is, when it receives a message that cannot be deserialized.
@@ -34,7 +36,7 @@ public class BroadcastChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/onmessageerror">BroadcastChannel.onmessageerror - MDN</a>
    */
   @Nullable
-  public EventHandler onmessageerror;
+  public MessageEventHandler onmessageerror;
 
   public BroadcastChannel(@Nonnull final String name) {
   }
@@ -63,4 +65,72 @@ public class BroadcastChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage">BroadcastChannel.postMessage - MDN</a>
    */
   public native void postMessage(@Nullable Any message);
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "messageerror", Js.cast( callback ) );
+  }
 }

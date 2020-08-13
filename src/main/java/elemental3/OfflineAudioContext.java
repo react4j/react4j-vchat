@@ -4,9 +4,11 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The OfflineAudioContext interface is an AudioContext interface representing an audio-processing graph built from linked together AudioNodes. In contrast with a standard AudioContext, an OfflineAudioContext doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an AudioBuffer.
@@ -20,8 +22,13 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class OfflineAudioContext extends BaseAudioContext {
+  /**
+   * When processing is complete, you might want to use the oncomplete handler the prompt the user that the audio can now be played, and enable the play button.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/oncomplete">OfflineAudioContext.oncomplete - MDN</a>
+   */
   @Nullable
-  public EventHandler oncomplete;
+  public OfflineAudioCompletionEventHandler oncomplete;
 
   public OfflineAudioContext(@Nonnull final OfflineAudioContextOptions contextOptions) {
   }
@@ -57,4 +64,41 @@ public class OfflineAudioContext extends BaseAudioContext {
    */
   @Nonnull
   public native Promise<Void> suspend(double suspendTime);
+
+  @JsOverlay
+  public final void addCompleteListener(@Nonnull final OfflineAudioCompletionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCompleteListener(@Nonnull final OfflineAudioCompletionEventListener callback,
+      final boolean options) {
+    addEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCompleteListener(
+      @Nonnull final OfflineAudioCompletionEventListener callback) {
+    addEventListener( "complete", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeCompleteListener(
+      @Nonnull final OfflineAudioCompletionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCompleteListener(
+      @Nonnull final OfflineAudioCompletionEventListener callback, final boolean options) {
+    removeEventListener( "complete", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCompleteListener(
+      @Nonnull final OfflineAudioCompletionEventListener callback) {
+    removeEventListener( "complete", Js.cast( callback ) );
+  }
 }

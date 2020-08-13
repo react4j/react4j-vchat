@@ -3,8 +3,10 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.
@@ -71,30 +73,75 @@ public class SpeechRecognition extends EventTarget {
   @Nullable
   public EventHandler onaudiostart;
 
+  /**
+   * The onend property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service has disconnected (when the end event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onend">SpeechRecognition.onend - MDN</a>
+   */
   @Nullable
   public EventHandler onend;
 
+  /**
+   * The onerror property of the SpeechRecognition interface represents an event handler that will run when a speech recognition error occurs (when the error event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onerror">SpeechRecognition.onerror - MDN</a>
+   */
   @Nullable
-  public EventHandler onerror;
+  public SpeechRecognitionErrorEventHandler onerror;
 
+  /**
+   * The onnomatch property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service returns a final result with no significant recognition (when the nomatch event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch">SpeechRecognition.onnomatch - MDN</a>
+   */
   @Nullable
-  public EventHandler onnomatch;
+  public SpeechRecognitionEventHandler onnomatch;
 
+  /**
+   * The onresult property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app (when the result event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult">SpeechRecognition.onresult - MDN</a>
+   */
   @Nullable
-  public EventHandler onresult;
+  public SpeechRecognitionEventHandler onresult;
 
+  /**
+   * The onsoundend property of the SpeechRecognition interface represents an event handler that will run when any sound — recognisable speech or not — has stopped being detected (when the soundend event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundend">SpeechRecognition.onsoundend - MDN</a>
+   */
   @Nullable
   public EventHandler onsoundend;
 
+  /**
+   * The onsoundstart property of the SpeechRecognition interface represents an event handler that will run when any sound — recognisable speech or not — has been detected (when the soundstart event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundstart">SpeechRecognition.onsoundstart - MDN</a>
+   */
   @Nullable
   public EventHandler onsoundstart;
 
+  /**
+   * The onspeechend property of the SpeechRecognition interface represents an event handler that will run when speech recognised by the speech recognition service has stopped being detected (when the speechend event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend">SpeechRecognition.onspeechend - MDN</a>
+   */
   @Nullable
   public EventHandler onspeechend;
 
+  /**
+   * The onspeechstart property of the SpeechRecognition interface represents an event handler that will run when sound recognised by the speech recognition service as speech has been detected (when the speechstart event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechstart">SpeechRecognition.onspeechstart - MDN</a>
+   */
   @Nullable
   public EventHandler onspeechstart;
 
+  /**
+   * The onstart property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition (when the start event fires.)
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onstart">SpeechRecognition.onstart - MDN</a>
+   */
   @Nullable
   public EventHandler onstart;
 
@@ -121,4 +168,377 @@ public class SpeechRecognition extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop">SpeechRecognition.stop - MDN</a>
    */
   public native void stop();
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final SpeechRecognitionErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final SpeechRecognitionErrorEventListener callback,
+      final boolean options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final SpeechRecognitionErrorEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final SpeechRecognitionErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final SpeechRecognitionErrorEventListener callback,
+      final boolean options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(
+      @Nonnull final SpeechRecognitionErrorEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addNomatchListener(@Nonnull final SpeechRecognitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "nomatch", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addNomatchListener(@Nonnull final SpeechRecognitionEventListener callback,
+      final boolean options) {
+    addEventListener( "nomatch", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addNomatchListener(@Nonnull final SpeechRecognitionEventListener callback) {
+    addEventListener( "nomatch", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeNomatchListener(@Nonnull final SpeechRecognitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "nomatch", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeNomatchListener(@Nonnull final SpeechRecognitionEventListener callback,
+      final boolean options) {
+    removeEventListener( "nomatch", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeNomatchListener(@Nonnull final SpeechRecognitionEventListener callback) {
+    removeEventListener( "nomatch", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addResultListener(@Nonnull final SpeechRecognitionEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "result", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addResultListener(@Nonnull final SpeechRecognitionEventListener callback,
+      final boolean options) {
+    addEventListener( "result", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addResultListener(@Nonnull final SpeechRecognitionEventListener callback) {
+    addEventListener( "result", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeResultListener(@Nonnull final SpeechRecognitionEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "result", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeResultListener(@Nonnull final SpeechRecognitionEventListener callback,
+      final boolean options) {
+    removeEventListener( "result", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeResultListener(@Nonnull final SpeechRecognitionEventListener callback) {
+    removeEventListener( "result", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addAudioendListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "audioend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAudioendListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "audioend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAudioendListener(@Nonnull final EventListener callback) {
+    addEventListener( "audioend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAudioendListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "audioend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAudioendListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "audioend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAudioendListener(@Nonnull final EventListener callback) {
+    removeEventListener( "audioend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addAudiostartListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "audiostart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAudiostartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "audiostart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAudiostartListener(@Nonnull final EventListener callback) {
+    addEventListener( "audiostart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAudiostartListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "audiostart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAudiostartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "audiostart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAudiostartListener(@Nonnull final EventListener callback) {
+    removeEventListener( "audiostart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addEndListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "end", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addEndListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "end", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addEndListener(@Nonnull final EventListener callback) {
+    addEventListener( "end", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeEndListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "end", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeEndListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "end", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeEndListener(@Nonnull final EventListener callback) {
+    removeEventListener( "end", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addSoundendListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "soundend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSoundendListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "soundend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSoundendListener(@Nonnull final EventListener callback) {
+    addEventListener( "soundend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSoundendListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "soundend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSoundendListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "soundend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSoundendListener(@Nonnull final EventListener callback) {
+    removeEventListener( "soundend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addSoundstartListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "soundstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSoundstartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "soundstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSoundstartListener(@Nonnull final EventListener callback) {
+    addEventListener( "soundstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSoundstartListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "soundstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSoundstartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "soundstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSoundstartListener(@Nonnull final EventListener callback) {
+    removeEventListener( "soundstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addSpeechendListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "speechend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSpeechendListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "speechend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSpeechendListener(@Nonnull final EventListener callback) {
+    addEventListener( "speechend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSpeechendListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "speechend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSpeechendListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "speechend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSpeechendListener(@Nonnull final EventListener callback) {
+    removeEventListener( "speechend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addSpeechstartListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "speechstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSpeechstartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "speechstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSpeechstartListener(@Nonnull final EventListener callback) {
+    addEventListener( "speechstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSpeechstartListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "speechstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSpeechstartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "speechstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSpeechstartListener(@Nonnull final EventListener callback) {
+    removeEventListener( "speechstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addStartListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "start", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addStartListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "start", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addStartListener(@Nonnull final EventListener callback) {
+    addEventListener( "start", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeStartListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "start", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeStartListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "start", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeStartListener(@Nonnull final EventListener callback) {
+    removeEventListener( "start", Js.cast( callback ) );
+  }
 }

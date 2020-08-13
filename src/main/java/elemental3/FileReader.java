@@ -7,6 +7,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read.
@@ -35,7 +36,7 @@ public class FileReader extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onabort">FileReader.onabort - MDN</a>
    */
   @Nullable
-  public EventHandler onabort;
+  public ProgressEventHandler onabort;
 
   /**
    * The FileReader onerror handler receives an Event object, not an Error object, as a parameter, but an error can be accessed from the FileReader object, as instanceOfFileReader.error
@@ -43,7 +44,7 @@ public class FileReader extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onerror">FileReader.onerror - MDN</a>
    */
   @Nullable
-  public EventHandler onerror;
+  public ProgressEventHandler onerror;
 
   /**
    * The FileReader.onload property contains an event handler executed when the load event is fired, when content read with readAsArrayBuffer, readAsBinaryString, readAsDataURL or readAsText is available.
@@ -51,16 +52,16 @@ public class FileReader extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onload">FileReader.onload - MDN</a>
    */
   @Nullable
-  public EventHandler onload;
+  public ProgressEventHandler onload;
 
   @Nullable
-  public EventHandler onloadend;
+  public ProgressEventHandler onloadend;
 
   @Nullable
-  public EventHandler onloadstart;
+  public ProgressEventHandler onloadstart;
 
   @Nullable
-  public EventHandler onprogress;
+  public ProgressEventHandler onprogress;
 
   public FileReader() {
   }
@@ -138,4 +139,208 @@ public class FileReader extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText">FileReader.readAsText - MDN</a>
    */
   public native void readAsText(@Nonnull Blob blob);
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    addEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAbortListener(@Nonnull final ProgressEventListener callback) {
+    addEventListener( "abort", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    removeEventListener( "abort", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAbortListener(@Nonnull final ProgressEventListener callback) {
+    removeEventListener( "abort", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final ProgressEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final ProgressEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addLoadListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "load", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addLoadListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    addEventListener( "load", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addLoadListener(@Nonnull final ProgressEventListener callback) {
+    addEventListener( "load", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeLoadListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "load", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeLoadListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    removeEventListener( "load", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeLoadListener(@Nonnull final ProgressEventListener callback) {
+    removeEventListener( "load", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addLoadendListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "loadend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addLoadendListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    addEventListener( "loadend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addLoadendListener(@Nonnull final ProgressEventListener callback) {
+    addEventListener( "loadend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeLoadendListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "loadend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeLoadendListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    removeEventListener( "loadend", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeLoadendListener(@Nonnull final ProgressEventListener callback) {
+    removeEventListener( "loadend", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addLoadstartListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addLoadstartListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    addEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addLoadstartListener(@Nonnull final ProgressEventListener callback) {
+    addEventListener( "loadstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeLoadstartListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeLoadstartListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    removeEventListener( "loadstart", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeLoadstartListener(@Nonnull final ProgressEventListener callback) {
+    removeEventListener( "loadstart", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addProgressListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addProgressListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    addEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addProgressListener(@Nonnull final ProgressEventListener callback) {
+    addEventListener( "progress", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeProgressListener(@Nonnull final ProgressEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeProgressListener(@Nonnull final ProgressEventListener callback,
+      final boolean options) {
+    removeEventListener( "progress", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeProgressListener(@Nonnull final ProgressEventListener callback) {
+    removeEventListener( "progress", Js.cast( callback ) );
+  }
 }

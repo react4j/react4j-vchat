@@ -304,39 +304,6 @@ public class WebSocket extends EventTarget {
   }
 
   @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addErrorListener(@Nonnull final EventListener callback) {
-    addEventListener( "error", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final EventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "error", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeErrorListener(@Nonnull final EventListener callback) {
-    removeEventListener( "error", Js.cast( callback ) );
-  }
-
-  @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "message", Js.cast( callback ), options );
@@ -368,6 +335,39 @@ public class WebSocket extends EventTarget {
   @JsOverlay
   public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
     removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final EventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final EventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
   }
 
   @JsOverlay

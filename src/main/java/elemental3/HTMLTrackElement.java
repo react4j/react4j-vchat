@@ -6,6 +6,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The HTMLTrackElement interface represents an HTML track element within the DOM. This element can be used as a child of either audio or video to specify a text track containing information such as closed captions or subtitles.
@@ -66,4 +67,38 @@ public class HTMLTrackElement extends HTMLElement {
   )
   @Nonnull
   public native TextTrack track();
+
+  @JsOverlay
+  public final void addCuechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCuechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCuechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "cuechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeCuechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCuechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCuechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "cuechange", Js.cast( callback ) );
+  }
 }

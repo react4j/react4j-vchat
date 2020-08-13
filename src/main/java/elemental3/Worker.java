@@ -4,9 +4,11 @@ import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 
 /**
  * The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator.
@@ -20,11 +22,21 @@ import jsinterop.base.Any;
     name = "Worker"
 )
 public class Worker extends EventTarget {
+  /**
+   * The onmessage property of the Worker interface represents an EventHandler, that is a function to be called when the message event occurs. These events are of type MessageEvent and will be called when the worker's parent receives a message (i.e. from the DedicatedWorkerGlobalScope.postMessage method).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessage">Worker.onmessage - MDN</a>
+   */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
+  /**
+   * The onmessageerror event handler of the Worker interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the Worker instance — that is, when it receives a message that cannot be deserialized.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessageerror">Worker.onmessageerror - MDN</a>
+   */
   @Nullable
-  public EventHandler onmessageerror;
+  public MessageEventHandler onmessageerror;
 
   @Nullable
   public EventHandler onerror;
@@ -69,4 +81,72 @@ public class Worker extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate">Worker.terminate - MDN</a>
    */
   public native void terminate();
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "messageerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "messageerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageerrorListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "messageerror", Js.cast( callback ) );
+  }
 }

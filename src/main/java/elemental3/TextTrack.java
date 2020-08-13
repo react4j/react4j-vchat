@@ -3,9 +3,11 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * This interface also inherits properties from EventTarget.
@@ -84,4 +86,38 @@ public class TextTrack extends EventTarget {
   public native void addCue(@Nonnull TextTrackCue cue);
 
   public native void removeCue(@Nonnull TextTrackCue cue);
+
+  @JsOverlay
+  public final void addCuechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCuechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCuechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "cuechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeCuechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCuechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "cuechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCuechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "cuechange", Js.cast( callback ) );
+  }
 }

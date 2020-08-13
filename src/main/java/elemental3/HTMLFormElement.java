@@ -187,39 +187,6 @@ public class HTMLFormElement extends HTMLElement {
   }
 
   @JsOverlay
-  public final void addResetListener(@Nonnull final EventListener callback,
-      @Nonnull final AddEventListenerOptions options) {
-    addEventListener( "reset", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addResetListener(@Nonnull final EventListener callback, final boolean options) {
-    addEventListener( "reset", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void addResetListener(@Nonnull final EventListener callback) {
-    addEventListener( "reset", Js.cast( callback ) );
-  }
-
-  @JsOverlay
-  public final void removeResetListener(@Nonnull final EventListener callback,
-      @Nonnull final EventListenerOptions options) {
-    removeEventListener( "reset", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeResetListener(@Nonnull final EventListener callback,
-      final boolean options) {
-    removeEventListener( "reset", Js.cast( callback ), options );
-  }
-
-  @JsOverlay
-  public final void removeResetListener(@Nonnull final EventListener callback) {
-    removeEventListener( "reset", Js.cast( callback ) );
-  }
-
-  @JsOverlay
   public final void addSubmitListener(@Nonnull final SubmitEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "submit", Js.cast( callback ), options );
@@ -251,5 +218,38 @@ public class HTMLFormElement extends HTMLElement {
   @JsOverlay
   public final void removeSubmitListener(@Nonnull final SubmitEventListener callback) {
     removeEventListener( "submit", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addResetListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addResetListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addResetListener(@Nonnull final EventListener callback) {
+    addEventListener( "reset", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeResetListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeResetListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "reset", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeResetListener(@Nonnull final EventListener callback) {
+    removeEventListener( "reset", Js.cast( callback ) );
   }
 }

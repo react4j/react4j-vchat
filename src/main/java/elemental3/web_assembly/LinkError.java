@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.web_assembly;
 
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;

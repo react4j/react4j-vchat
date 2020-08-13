@@ -3,8 +3,10 @@ package elemental3;
 import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * Fired on an HTMLSlotElement instance (slot element) when the node(s) contained in that slot change.
@@ -60,4 +62,38 @@ public class HTMLSlotElement extends HTMLElement {
    */
   @Nonnull
   public native JsArray<Node> assignedNodes();
+
+  @JsOverlay
+  public final void addSlotchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "slotchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSlotchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "slotchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSlotchangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "slotchange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSlotchangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "slotchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSlotchangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "slotchange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSlotchangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "slotchange", Js.cast( callback ) );
+  }
 }

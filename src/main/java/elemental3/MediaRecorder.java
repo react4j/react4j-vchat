@@ -3,9 +3,11 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The MediaRecorder interface of the MediaStream Recording API provides functionality to easily record media. It is created using the MediaRecorder() constructor.
@@ -22,8 +24,13 @@ public class MediaRecorder extends EventTarget {
   @Nullable
   public EventHandler ondataavailable;
 
+  /**
+   * The MediaRecorder interface's onerror event handler is called by the MediaStream Recording API when an error occurs. You can provide an event handler to deal with errors that occur while creating or using a media recorder
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onerror">MediaRecorder.onerror - MDN</a>
+   */
   @Nullable
-  public EventHandler onerror;
+  public MediaRecorderErrorEventHandler onerror;
 
   @Nullable
   public EventHandler onpause;
@@ -151,4 +158,38 @@ public class MediaRecorder extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stop">MediaRecorder.stop - MDN</a>
    */
   public native void stop();
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final MediaRecorderErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final MediaRecorderErrorEventListener callback,
+      final boolean options) {
+    addEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addErrorListener(@Nonnull final MediaRecorderErrorEventListener callback) {
+    addEventListener( "error", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final MediaRecorderErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final MediaRecorderErrorEventListener callback,
+      final boolean options) {
+    removeEventListener( "error", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeErrorListener(@Nonnull final MediaRecorderErrorEventListener callback) {
+    removeEventListener( "error", Js.cast( callback ) );
+  }
 }

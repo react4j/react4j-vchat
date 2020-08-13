@@ -5,9 +5,11 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
@@ -166,4 +168,104 @@ public class MediaStreamTrack extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/stop">MediaStreamTrack.stop - MDN</a>
    */
   public native void stop();
+
+  @JsOverlay
+  public final void addEndedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addEndedListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addEndedListener(@Nonnull final EventListener callback) {
+    addEventListener( "ended", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeEndedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeEndedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "ended", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeEndedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "ended", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addMuteListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "mute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMuteListener(@Nonnull final EventListener callback, final boolean options) {
+    addEventListener( "mute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMuteListener(@Nonnull final EventListener callback) {
+    addEventListener( "mute", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMuteListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "mute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMuteListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "mute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMuteListener(@Nonnull final EventListener callback) {
+    removeEventListener( "mute", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addUnmuteListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "unmute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUnmuteListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "unmute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addUnmuteListener(@Nonnull final EventListener callback) {
+    addEventListener( "unmute", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeUnmuteListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "unmute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUnmuteListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "unmute", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeUnmuteListener(@Nonnull final EventListener callback) {
+    removeEventListener( "unmute", Js.cast( callback ) );
+  }
 }

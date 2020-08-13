@@ -5,9 +5,11 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.
@@ -35,7 +37,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate">RTCPeerConnection.onicecandidate - MDN</a>
    */
   @Nullable
-  public EventHandler onicecandidate;
+  public RTCPeerConnectionIceEventHandler onicecandidate;
 
   /**
    * The RTCPeerConnection.onicecandidateerror property is an EventHandler which specifies a function which is called to handle the icecandidateerror event when it occurs on an RTCPeerConnection instance. This event is fired when an error occurs during the ICE candidate gathering process.
@@ -83,7 +85,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack">RTCPeerConnection.ontrack - MDN</a>
    */
   @Nullable
-  public EventHandler ontrack;
+  public RTCTrackEventHandler ontrack;
 
   /**
    * The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel().
@@ -91,7 +93,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel">RTCPeerConnection.ondatachannel - MDN</a>
    */
   @Nullable
-  public EventHandler ondatachannel;
+  public RTCDataChannelEventHandler ondatachannel;
 
   public RTCPeerConnection(@Nonnull final RTCConfiguration configuration) {
   }
@@ -519,4 +521,314 @@ public class RTCPeerConnection extends EventTarget {
    */
   @Nonnull
   public native Promise<RTCStatsReport> getStats();
+
+  @JsOverlay
+  public final void addDatachannelListener(@Nonnull final RTCDataChannelEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "datachannel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDatachannelListener(@Nonnull final RTCDataChannelEventListener callback,
+      final boolean options) {
+    addEventListener( "datachannel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDatachannelListener(@Nonnull final RTCDataChannelEventListener callback) {
+    addEventListener( "datachannel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDatachannelListener(@Nonnull final RTCDataChannelEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "datachannel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDatachannelListener(@Nonnull final RTCDataChannelEventListener callback,
+      final boolean options) {
+    removeEventListener( "datachannel", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDatachannelListener(@Nonnull final RTCDataChannelEventListener callback) {
+    removeEventListener( "datachannel", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addIcecandidateListener(
+      @Nonnull final RTCPeerConnectionIceEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "icecandidate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIcecandidateListener(
+      @Nonnull final RTCPeerConnectionIceEventListener callback, final boolean options) {
+    addEventListener( "icecandidate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIcecandidateListener(
+      @Nonnull final RTCPeerConnectionIceEventListener callback) {
+    addEventListener( "icecandidate", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeIcecandidateListener(
+      @Nonnull final RTCPeerConnectionIceEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "icecandidate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIcecandidateListener(
+      @Nonnull final RTCPeerConnectionIceEventListener callback, final boolean options) {
+    removeEventListener( "icecandidate", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIcecandidateListener(
+      @Nonnull final RTCPeerConnectionIceEventListener callback) {
+    removeEventListener( "icecandidate", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addTrackListener(@Nonnull final RTCTrackEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "track", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTrackListener(@Nonnull final RTCTrackEventListener callback,
+      final boolean options) {
+    addEventListener( "track", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addTrackListener(@Nonnull final RTCTrackEventListener callback) {
+    addEventListener( "track", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeTrackListener(@Nonnull final RTCTrackEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "track", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTrackListener(@Nonnull final RTCTrackEventListener callback,
+      final boolean options) {
+    removeEventListener( "track", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeTrackListener(@Nonnull final RTCTrackEventListener callback) {
+    removeEventListener( "track", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addConnectionstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "connectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addConnectionstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "connectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addConnectionstatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "connectionstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeConnectionstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "connectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeConnectionstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "connectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeConnectionstatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "connectionstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addIceconnectionstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "iceconnectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIceconnectionstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "iceconnectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIceconnectionstatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "iceconnectionstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeIceconnectionstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "iceconnectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIceconnectionstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "iceconnectionstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIceconnectionstatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "iceconnectionstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addIcegatheringstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "icegatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIcegatheringstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "icegatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIcegatheringstatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "icegatheringstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeIcegatheringstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "icegatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIcegatheringstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "icegatheringstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIcegatheringstatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "icegatheringstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addNegotiationneededListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "negotiationneeded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addNegotiationneededListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "negotiationneeded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addNegotiationneededListener(@Nonnull final EventListener callback) {
+    addEventListener( "negotiationneeded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeNegotiationneededListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "negotiationneeded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeNegotiationneededListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "negotiationneeded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeNegotiationneededListener(@Nonnull final EventListener callback) {
+    removeEventListener( "negotiationneeded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addPeeridentityListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "peeridentity", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPeeridentityListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "peeridentity", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addPeeridentityListener(@Nonnull final EventListener callback) {
+    addEventListener( "peeridentity", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removePeeridentityListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "peeridentity", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePeeridentityListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "peeridentity", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removePeeridentityListener(@Nonnull final EventListener callback) {
+    removeEventListener( "peeridentity", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addSignalingstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "signalingstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSignalingstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "signalingstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addSignalingstatechangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "signalingstatechange", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeSignalingstatechangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "signalingstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSignalingstatechangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "signalingstatechange", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeSignalingstatechangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "signalingstatechange", Js.cast( callback ) );
+  }
 }

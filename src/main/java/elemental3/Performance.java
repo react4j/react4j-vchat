@@ -4,9 +4,11 @@ import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.
@@ -181,4 +183,38 @@ public class Performance extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure">Performance.measure - MDN</a>
    */
   public native void measure(@Nonnull String measureName);
+
+  @JsOverlay
+  public final void addResourcetimingbufferfullListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "resourcetimingbufferfull", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addResourcetimingbufferfullListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "resourcetimingbufferfull", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addResourcetimingbufferfullListener(@Nonnull final EventListener callback) {
+    addEventListener( "resourcetimingbufferfull", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeResourcetimingbufferfullListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "resourcetimingbufferfull", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeResourcetimingbufferfullListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "resourcetimingbufferfull", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeResourcetimingbufferfullListener(@Nonnull final EventListener callback) {
+    removeEventListener( "resourcetimingbufferfull", Js.cast( callback ) );
+  }
 }

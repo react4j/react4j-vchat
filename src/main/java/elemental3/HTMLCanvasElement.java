@@ -3,9 +3,11 @@ package elemental3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 
 /**
  * The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface.
@@ -105,4 +107,116 @@ public class HTMLCanvasElement extends HTMLElement {
    */
   @Nonnull
   public native OffscreenCanvas transferControlToOffscreen();
+
+  @JsOverlay
+  public final void addWebglcontextcreationerrorListener(
+      @Nonnull final WebGLContextEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "webglcontextcreationerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextcreationerrorListener(
+      @Nonnull final WebGLContextEventListener callback, final boolean options) {
+    addEventListener( "webglcontextcreationerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextcreationerrorListener(
+      @Nonnull final WebGLContextEventListener callback) {
+    addEventListener( "webglcontextcreationerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextcreationerrorListener(
+      @Nonnull final WebGLContextEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "webglcontextcreationerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextcreationerrorListener(
+      @Nonnull final WebGLContextEventListener callback, final boolean options) {
+    removeEventListener( "webglcontextcreationerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextcreationerrorListener(
+      @Nonnull final WebGLContextEventListener callback) {
+    removeEventListener( "webglcontextcreationerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextlostListener(@Nonnull final WebGLContextEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "webglcontextlost", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextlostListener(@Nonnull final WebGLContextEventListener callback,
+      final boolean options) {
+    addEventListener( "webglcontextlost", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextlostListener(@Nonnull final WebGLContextEventListener callback) {
+    addEventListener( "webglcontextlost", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextlostListener(
+      @Nonnull final WebGLContextEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "webglcontextlost", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextlostListener(
+      @Nonnull final WebGLContextEventListener callback, final boolean options) {
+    removeEventListener( "webglcontextlost", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextlostListener(
+      @Nonnull final WebGLContextEventListener callback) {
+    removeEventListener( "webglcontextlost", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextrestoredListener(
+      @Nonnull final WebGLContextEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "webglcontextrestored", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextrestoredListener(
+      @Nonnull final WebGLContextEventListener callback, final boolean options) {
+    addEventListener( "webglcontextrestored", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addWebglcontextrestoredListener(
+      @Nonnull final WebGLContextEventListener callback) {
+    addEventListener( "webglcontextrestored", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextrestoredListener(
+      @Nonnull final WebGLContextEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "webglcontextrestored", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextrestoredListener(
+      @Nonnull final WebGLContextEventListener callback, final boolean options) {
+    removeEventListener( "webglcontextrestored", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeWebglcontextrestoredListener(
+      @Nonnull final WebGLContextEventListener callback) {
+    removeEventListener( "webglcontextrestored", Js.cast( callback ) );
+  }
 }

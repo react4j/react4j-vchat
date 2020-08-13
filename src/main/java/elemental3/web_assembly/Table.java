@@ -1,5 +1,7 @@
-package elemental3;
+package elemental3.web_assembly;
 
+import elemental3.Function;
+import elemental3.TableDescriptor;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

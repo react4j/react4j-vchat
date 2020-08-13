@@ -1,6 +1,7 @@
-package elemental3;
+package elemental3.web_assembly;
 
 import elemental2.core.ArrayBuffer;
+import elemental3.MemoryDescriptor;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.web_assembly;
 
 import elemental2.core.ArrayBuffer;
 import elemental2.core.DataView;
@@ -12,6 +12,10 @@ import elemental2.core.Uint16Array;
 import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
+import elemental3.ArrayBufferView;
+import elemental3.BufferSource;
+import elemental3.ModuleExportDescriptor;
+import elemental3.ModuleImportDescriptor;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

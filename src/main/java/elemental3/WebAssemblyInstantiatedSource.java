@@ -1,5 +1,7 @@
 package elemental3;
 
+import elemental3.web_assembly.Instance;
+import elemental3.web_assembly.Module;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

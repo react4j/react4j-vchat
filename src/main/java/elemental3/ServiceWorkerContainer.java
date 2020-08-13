@@ -5,10 +5,12 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 
 /**
  * The ServiceWorkerContainer interface of the Service Worker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
@@ -25,8 +27,13 @@ public class ServiceWorkerContainer extends EventTarget {
   @Nullable
   public EventHandler oncontrollerchange;
 
+  /**
+   * The onmessage property of the ServiceWorkerContainer interface is an event handler fired whenever a message event occurs — when incoming messages are received to the ServiceWorkerContainer object (e.g., via a Client.postMessage() call).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/onmessage">ServiceWorkerContainer.onmessage - MDN</a>
+   */
   @Nullable
-  public EventHandler onmessage;
+  public MessageEventHandler onmessage;
 
   @Nullable
   public EventHandler onmessageerror;
@@ -98,4 +105,38 @@ public class ServiceWorkerContainer extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/startMessages">ServiceWorkerContainer.startMessages - MDN</a>
    */
   public native void startMessages();
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    addEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addMessageListener(@Nonnull final MessageEventListener callback) {
+    addEventListener( "message", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback,
+      final boolean options) {
+    removeEventListener( "message", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeMessageListener(@Nonnull final MessageEventListener callback) {
+    removeEventListener( "message", Js.cast( callback ) );
+  }
 }
