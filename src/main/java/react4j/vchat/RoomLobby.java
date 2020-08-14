@@ -1,5 +1,6 @@
 package react4j.vchat;
 
+import arez.annotations.Action;
 import elemental3.HTMLVideoElement;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -28,9 +29,16 @@ abstract class RoomLobby
   @Nonnull
   abstract MediaStreamConnection camStream();
 
+  @Input( immutable = true )
+  abstract RoomsHistory roomHistory();
+
+  @Action
   @PostMount
   void postMount()
   {
+    final String roomId = connection().getRoomId();
+    assert null != roomId;
+    roomHistory().recordRoomId( roomId );
     camStream().setEnabled( true );
   }
 

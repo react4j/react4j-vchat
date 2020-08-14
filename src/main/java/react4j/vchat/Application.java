@@ -27,6 +27,9 @@ abstract class Application
   @CascadeDispose
   @Nonnull
   final RoomConnection _connection = RoomConnection.create( _location );
+  @CascadeDispose
+  @Nonnull
+  final RoomsHistory _roomsHistory = RoomsHistory.create();
 
   @Nonnull
   @Render
@@ -35,7 +38,7 @@ abstract class Application
     final String location = _location.getLocation();
     return location.isEmpty() ?
            SelectRoomViewBuilder.build() :
-           RoomLobbyBuilder.connection( _connection ).camStream( _camStream );
+           RoomLobbyBuilder.connection( _connection ).camStream( _camStream ).roomHistory( _roomsHistory );
            //RoomViewBuilder.connection( _connection ).camStream( _camStream ).screenShareStream( _screenShareStream );
   }
 
