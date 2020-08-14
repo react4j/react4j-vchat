@@ -47,7 +47,11 @@ abstract class SelectRoomView
                                .id( "roomId" )
                                .name( "roomId" )
                                .value( null == roomId ? "" : roomId )
-                               .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) ) ),
+                               .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) )
+                               .pattern( "^\\w+$" )
+                               .maxLength( 10 )
+                               .required()
+                               .title( "Room name should only contain letters or numbers." ) ),
                       button( new BtnProps().type( ButtonType.submit ).disabled( null == roomId ), "Enter" )
                 ) );
   }
