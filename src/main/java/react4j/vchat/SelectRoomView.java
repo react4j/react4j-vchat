@@ -23,6 +23,9 @@ import static react4j.dom.DOM.*;
 @View( type = View.Type.TRACKING )
 abstract class SelectRoomView
 {
+  @Input( immutable = true )
+  abstract RoomsHistory roomHistory();
+
   @Observable( writeOutsideTransaction = Feature.ENABLE )
   @Nullable
   abstract String getRoomId();
