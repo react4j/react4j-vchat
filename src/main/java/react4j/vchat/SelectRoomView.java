@@ -16,6 +16,7 @@ import react4j.dom.proptypes.html.BtnProps;
 import react4j.dom.proptypes.html.FormProps;
 import react4j.dom.proptypes.html.HtmlProps;
 import react4j.dom.proptypes.html.InputProps;
+import react4j.dom.proptypes.html.LabelProps;
 import react4j.dom.proptypes.html.attributeTypes.ButtonType;
 import react4j.dom.proptypes.html.attributeTypes.InputType;
 import static react4j.dom.DOM.*;
