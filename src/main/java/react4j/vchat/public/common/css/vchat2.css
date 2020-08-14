@@ -14,10 +14,11 @@ button {
   }
 }
 
-input:focus,
-button:focus {
-  outline: 0;
-}
+/** Need to add this back for video controls */
+/*input:focus,*/
+/*button:focus {*/
+/*  outline: 0;*/
+/*}*/
 
 input[type=text] {
   border: none;
