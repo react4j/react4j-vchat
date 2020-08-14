@@ -1,6 +1,5 @@
 package react4j.vchat;
 
-import arez.annotations.Action;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
 import elemental3.Global;
