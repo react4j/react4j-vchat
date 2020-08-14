@@ -1020,6 +1020,40 @@ public class HTMLElement extends Element {
   }
 
   @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addChangeListener(@Nonnull final EventListener callback) {
+    addEventListener( "change", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "change", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeChangeListener(@Nonnull final EventListener callback) {
+    removeEventListener( "change", Js.cast( callback ) );
+  }
+
+  @JsOverlay
   public final void addGotpointercaptureListener(@Nonnull final PointerEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
     addEventListener( "gotpointercapture", Js.cast( callback ), options );
