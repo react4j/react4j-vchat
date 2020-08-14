@@ -26,7 +26,7 @@ abstract class SelectRoomView
   @Input( immutable = true )
   abstract RoomsHistory roomHistory();
 
-  @Observable( writeOutsideTransaction = Feature.ENABLE )
+  @Observable( readOutsideTransaction = Feature.ENABLE, writeOutsideTransaction = Feature.ENABLE )
   @Nullable
   abstract String getRoomId();
 
@@ -60,12 +60,6 @@ abstract class SelectRoomView
   private void onSubmit( @Nonnull final FormEvent e )
   {
     e.preventDefault();
-    submit();
-  }
-
-  @Action
-  void submit()
-  {
     final String roomId = getRoomId();
     if ( null != roomId )
     {
