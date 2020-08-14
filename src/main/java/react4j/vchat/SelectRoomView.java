@@ -12,6 +12,7 @@ import react4j.annotations.Input;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 import react4j.dom.events.FormEvent;
+import react4j.dom.proptypes.html.AnchorProps;
 import react4j.dom.proptypes.html.BtnProps;
 import react4j.dom.proptypes.html.FormProps;
 import react4j.dom.proptypes.html.HtmlProps;
@@ -54,7 +55,9 @@ abstract class SelectRoomView
                                .required()
                                .autoFocus()
                                .title( "Room name should only contain letters or numbers." ) ),
-                ) );
+                      button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
+                      a( new AnchorProps().className( "primary-button" ).href( "#" + roomHistory().randomRoomId() ),
+                         "Random" ),
                       roomHistory().getLatestRoomsIds().isEmpty() ?
                       null :
                       fragment( div( "Recently used rooms:" ),
