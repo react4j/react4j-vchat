@@ -51,6 +51,7 @@ abstract class SelectRoomView
                                .pattern( "^\\w+$" )
                                .maxLength( 10 )
                                .required()
+                               .autoFocus()
                                .title( "Room name should only contain letters or numbers." ) ),
                       button( new BtnProps().type( ButtonType.submit ).disabled( null == roomId ), "Enter" )
                 ) );
