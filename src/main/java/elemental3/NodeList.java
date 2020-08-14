@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,4 +30,12 @@ public class NodeList {
       name = "length"
   )
   public native int length();
+
+  /**
+   * Returns a node from a NodeList by index. This method doesn't throw exceptions as long as you provide arguments. A value of null is returned if the index is out of range, and a TypeError is thrown if no argument is provided.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList/item">NodeList.item - MDN</a>
+   */
+  @Nullable
+  public native Node item(int index);
 }

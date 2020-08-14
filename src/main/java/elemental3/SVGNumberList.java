@@ -47,4 +47,7 @@ public class SVGNumberList {
 
   @Nonnull
   public native SVGNumber replaceItem(@Nonnull SVGNumber newItem, int index);
+
+  @Nonnull
+  public native SVGNumber getItem(int index);
 }

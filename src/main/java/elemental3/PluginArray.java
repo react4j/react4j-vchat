@@ -1,6 +1,8 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -28,4 +30,10 @@ public class PluginArray {
   public native void refresh(boolean reload);
 
   public native void refresh();
+
+  @Nullable
+  public native Plugin item(int index);
+
+  @Nullable
+  public native Plugin namedItem(@Nonnull String name);
 }

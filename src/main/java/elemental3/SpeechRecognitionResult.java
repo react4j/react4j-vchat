@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -39,4 +40,12 @@ public class SpeechRecognitionResult {
       name = "length"
   )
   public native int length();
+
+  /**
+   * The item getter of the SpeechRecognitionResult interface is a standard getter that allows SpeechRecognitionAlternative objects within the result to be accessed via array syntax.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/item">SpeechRecognitionResult.item - MDN</a>
+   */
+  @Nonnull
+  public native SpeechRecognitionAlternative item(int index);
 }

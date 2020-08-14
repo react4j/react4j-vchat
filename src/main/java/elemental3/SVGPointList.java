@@ -42,4 +42,7 @@ public class SVGPointList {
 
   @Nonnull
   public native DOMPoint replaceItem(@Nonnull DOMPoint newItem, int index);
+
+  @Nonnull
+  public native DOMPoint getItem(int index);
 }

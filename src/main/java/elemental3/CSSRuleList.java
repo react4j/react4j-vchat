@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,4 +25,7 @@ public class CSSRuleList {
       name = "length"
   )
   public native int length();
+
+  @Nullable
+  public native CSSRule item(int index);
 }

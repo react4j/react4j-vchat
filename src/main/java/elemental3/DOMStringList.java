@@ -2,6 +2,7 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -27,4 +28,7 @@ public class DOMStringList {
   public native int length();
 
   public native boolean contains(@Nonnull String string);
+
+  @Nullable
+  public native String item(int index);
 }

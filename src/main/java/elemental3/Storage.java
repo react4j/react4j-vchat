@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -40,4 +41,11 @@ public class Storage {
    */
   @Nullable
   public native String key(int index);
+
+  @Nullable
+  public native String getItem(@Nonnull String key);
+
+  public native void setItem(@Nonnull String key, @Nonnull String value);
+
+  public native void removeItem(@Nonnull String key);
 }

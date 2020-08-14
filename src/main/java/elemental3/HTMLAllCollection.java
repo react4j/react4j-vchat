@@ -27,4 +27,7 @@ public class HTMLAllCollection {
 
   @Nullable
   public native HTMLCollectionOrElementUnion item();
+
+  @Nullable
+  public native HTMLCollectionOrElementUnion namedItem(@Nonnull String name);
 }

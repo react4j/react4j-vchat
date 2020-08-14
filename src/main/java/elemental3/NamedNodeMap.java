@@ -41,4 +41,15 @@ public class NamedNodeMap {
 
   @Nullable
   public native Attr setNamedItemNS(@Nonnull Attr attr);
+
+  /**
+   * The getNamedItem() method of the NamedNodeMap interface returns the Attr corresponding to the given name, or null if there is no corresponding attribute.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/getNamedItem">NamedNodeMap.getNamedItem - MDN</a>
+   */
+  @Nullable
+  public native Attr getNamedItem(@Nonnull String qualifiedName);
+
+  @Nullable
+  public native Attr item(int index);
 }

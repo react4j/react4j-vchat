@@ -54,4 +54,7 @@ public class SVGTransformList {
 
   @Nonnull
   public native SVGTransform replaceItem(@Nonnull SVGTransform newItem, int index);
+
+  @Nonnull
+  public native SVGTransform getItem(int index);
 }

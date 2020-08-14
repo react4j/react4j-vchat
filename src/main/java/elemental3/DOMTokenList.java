@@ -2,6 +2,7 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -87,4 +88,12 @@ public class DOMTokenList {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle">DOMTokenList.toggle - MDN</a>
    */
   public native boolean toggle(@Nonnull String token);
+
+  /**
+   * The item() method of the DOMTokenList interface returns an item in the list by its index.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/item">DOMTokenList.item - MDN</a>
+   */
+  @Nullable
+  public native String item(int index);
 }

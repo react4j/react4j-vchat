@@ -2,6 +2,7 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -37,4 +38,7 @@ public class MediaList {
   public native void appendMedium(@Nonnull String medium);
 
   public native void deleteMedium(@Nonnull String medium);
+
+  @Nullable
+  public native String item(int index);
 }

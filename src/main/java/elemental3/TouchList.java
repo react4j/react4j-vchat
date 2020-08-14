@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -29,4 +30,12 @@ public class TouchList {
       name = "length"
   )
   public native int length();
+
+  /**
+   * The item() method returns the Touch object at the specified index in the TouchList.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchList/item">TouchList.item - MDN</a>
+   */
+  @Nullable
+  public native Touch item(int index);
 }

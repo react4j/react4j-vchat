@@ -47,4 +47,7 @@ public class SVGLengthList {
 
   @Nonnull
   public native SVGLength replaceItem(@Nonnull SVGLength newItem, int index);
+
+  @Nonnull
+  public native SVGLength getItem(int index);
 }

@@ -1,6 +1,8 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,4 +26,10 @@ public class MimeTypeArray {
       name = "length"
   )
   public native int length();
+
+  @Nullable
+  public native MimeType item(int index);
+
+  @Nullable
+  public native MimeType namedItem(@Nonnull String name);
 }

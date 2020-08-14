@@ -47,4 +47,7 @@ public class SVGStringList {
 
   @Nonnull
   public native String replaceItem(@Nonnull String newItem, int index);
+
+  @Nonnull
+  public native String getItem(int index);
 }

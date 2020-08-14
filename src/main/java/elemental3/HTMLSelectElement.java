@@ -204,4 +204,12 @@ public class HTMLSelectElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/setCustomValidity">HTMLSelectElement.setCustomValidity - MDN</a>
    */
   public native void setCustomValidity(@Nonnull String error);
+
+  /**
+   * The HTMLSelectElement.item() method returns the Element corresponding to the HTMLOptionElement whose position in the options list corresponds to the index given in the parameter, or null if there are none.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/item">HTMLSelectElement.item - MDN</a>
+   */
+  @Nullable
+  public native Element item(int index);
 }

@@ -77,4 +77,12 @@ public class CSSStyleDeclaration {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty">CSSStyleDeclaration.setProperty - MDN</a>
    */
   public native void setProperty(@Nonnull String property, @Nonnull String value);
+
+  /**
+   * The CSSStyleDeclaration.item() method interface returns a CSS property name from a CSSStyleDeclaration by index
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/item">CSSStyleDeclaration.item - MDN</a>
+   */
+  @Nonnull
+  public native String item(int index);
 }

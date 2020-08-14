@@ -1,6 +1,8 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -24,4 +26,15 @@ public class HTMLCollection {
       name = "length"
   )
   public native int length();
+
+  /**
+   * The HTMLCollection method item() returns the node located at the specified offset into the collection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item">HTMLCollection.item - MDN</a>
+   */
+  @Nullable
+  public native Element item(int index);
+
+  @Nullable
+  public native Element namedItem(@Nonnull String name);
 }
