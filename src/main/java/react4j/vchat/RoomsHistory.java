@@ -26,10 +26,10 @@ abstract class RoomsHistory
     return new Arez_RoomsHistory();
   }
 
-   RoomsHistory()
+  RoomsHistory()
   {
     final String ids = Global.globalThis().localStorage().getItem( STORAGE_KEY );
-    if( null != ids )
+    if ( null != ids )
     {
       for ( final String id : ids.split( "\\|" ) )
       {
