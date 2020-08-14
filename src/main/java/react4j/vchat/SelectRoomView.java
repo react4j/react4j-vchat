@@ -41,7 +41,7 @@ abstract class SelectRoomView
                 form( new FormProps().onSubmit( this::onSubmit ),
                       input( new InputProps()
                                .type( InputType.text )
-                               .placeHolder( "Room id" )
+                               .placeHolder( "Room code" )
                                .value( null == roomId ? "" : roomId )
                                .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) ) ),
                       button( new BtnProps().type( ButtonType.submit ).disabled( null == roomId ), "Enter" )
