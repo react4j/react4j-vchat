@@ -54,8 +54,19 @@ abstract class SelectRoomView
                                .required()
                                .autoFocus()
                                .title( "Room name should only contain letters or numbers." ) ),
-                      button( new BtnProps().type( ButtonType.submit ).disabled( null == roomId ), "Enter" )
                 ) );
+                      roomHistory().getLatestRoomsIds().isEmpty() ?
+                      null :
+                      fragment( div( "Recently used rooms:" ),
+                                fragment( roomHistory().getLatestRoomsIds().stream().map( this::roomLink ) ) )
+                )
+    );
+  }
+
+  @Nonnull
+  private ReactNode roomLink( @Nonnull final String roomId )
+  {
+    return a( new AnchorProps().key( roomId ).className( "recent-room" ).href( "#" + roomId ), roomId );
   }
 
   @Nonnull
