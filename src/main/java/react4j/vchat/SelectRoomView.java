@@ -39,8 +39,8 @@ abstract class SelectRoomView
     final String roomId = getRoomId();
     return div( new HtmlProps().className( "enter-room-container" ),
                 form( new FormProps().onSubmit( this::onSubmit ),
-                      label( new LabelProps().htmlFor( "roomId" ), "Please enter a room name." ),
                       h1( "React4j Video Chat" ),
+                      label( new LabelProps().htmlFor( "roomId" ), "Please enter a room code." ),
                       input( new InputProps()
                                .type( InputType.text )
                                .placeHolder( "Room code" )
