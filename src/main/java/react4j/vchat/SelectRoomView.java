@@ -39,9 +39,12 @@ abstract class SelectRoomView
     final String roomId = getRoomId();
     return div( new HtmlProps().className( "enter-room-container" ),
                 form( new FormProps().onSubmit( this::onSubmit ),
+                      label( new LabelProps().htmlFor( "roomId" ), "Please enter a room name." ),
                       input( new InputProps()
                                .type( InputType.text )
                                .placeHolder( "Room code" )
+                               .id( "roomId" )
+                               .name( "roomId" )
                                .value( null == roomId ? "" : roomId )
                                .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) ) ),
                       button( new BtnProps().type( ButtonType.submit ).disabled( null == roomId ), "Enter" )
