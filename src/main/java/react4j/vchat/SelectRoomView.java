@@ -2,7 +2,6 @@ package react4j.vchat;
 
 import arez.annotations.Feature;
 import arez.annotations.Observable;
-import elemental3.Global;
 import elemental3.HTMLInputElement;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -25,6 +24,9 @@ import static react4j.dom.DOM.*;
 @View( type = View.Type.TRACKING )
 abstract class SelectRoomView
 {
+  @Input( immutable = true )
+  abstract BrowserLocation browserLocation();
+
   @Input( immutable = true )
   abstract RoomsHistory roomHistory();
 
@@ -87,7 +89,7 @@ abstract class SelectRoomView
     final String roomId = getRoomId();
     if ( null != roomId )
     {
-      Global.globalThis().window().location().hash = roomId;
+      browserLocation().gotoLocation( roomId );
     }
   }
 

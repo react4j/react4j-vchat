@@ -11,6 +11,7 @@ import arez.annotations.OnDeactivate;
 import elemental3.Global;
 import elemental3.HashChangeEvent;
 import elemental3.HashChangeEventListener;
+import elemental3.Location;
 import javax.annotation.Nonnull;
 
 /**
@@ -39,6 +40,16 @@ abstract class BrowserLocation
   {
     final String hash = Global.globalThis().window().location().hash;
     return hash.isEmpty() ? hash : hash.substring( 1 );
+  }
+
+  void gotoLocation( @Nonnull final String hash )
+  {
+    final Location location = Global.globalThis().window().location();
+    final String target = hash.isEmpty() ? hash : "#" + hash;
+    if ( !location.hash.equals( target ) )
+    {
+      location.hash = target;
+    }
   }
 
   @OnActivate
