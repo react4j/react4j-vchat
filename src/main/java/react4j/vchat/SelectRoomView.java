@@ -5,7 +5,6 @@ import arez.annotations.Observable;
 import elemental3.HTMLInputElement;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import jsinterop.base.Js;
 import react4j.ReactNode;
 import react4j.annotations.Input;
 import react4j.annotations.Render;
@@ -50,7 +49,7 @@ abstract class SelectRoomView
                           .placeHolder( "Room code" )
                           .id( "roomCode" )
                           .value( null == roomCode ? "" : roomCode )
-                          .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) )
+                          .onChange( event -> updateRoomId( React4jUtil.<HTMLInputElement>getTarget( event ).value.trim() ) )
                           .pattern( "^\\w+$" )
                           .maxLength( 10 )
                           .required()
@@ -74,15 +73,6 @@ abstract class SelectRoomView
   private ReactNode roomLink( @Nonnull final String roomCode )
   {
     return a( new AnchorProps().key( roomCode ).className( "recent-room" ).href( "#" + roomCode ), roomCode );
-  }
-
-  @Nonnull
-  private HTMLInputElement asInputElement( @Nonnull final FormEvent event )
-  {
-    final HTMLInputElement element = Js.cast( event.getTarget() );
-    //noinspection ConstantConditions
-    assert null != element;
-    return element;
   }
 
   private void onSubmit( @Nonnull final FormEvent e )
