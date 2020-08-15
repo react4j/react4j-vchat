@@ -20,6 +20,11 @@ button {
 /*  outline: 0;*/
 /*}*/
 
+.roomCodeInput:focus {
+  outline: 0;
+  border-bottom-color: hsl(240, 2%, 80%);
+}
+
 .roomCodeInput {
   border: none;
   border-bottom: solid 2px hsl(240, 2%, 30%);
