@@ -1,6 +1,7 @@
 package react4j.vchat;
 
 import arez.annotations.CascadeDispose;
+import arez.annotations.PostConstruct;
 import elemental2.promise.Promise;
 import elemental3.ConstrainULongRange;
 import elemental3.Global;
@@ -10,6 +11,7 @@ import elemental3.MediaTrackConstraints;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import react4j.ReactNode;
+import react4j.annotations.Input;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 
@@ -22,6 +24,18 @@ abstract class RoomView
   @CascadeDispose
   final MediaStreamConnection _screenShareStream =
     MediaStreamConnection.create( this::requestScreenShare, false, true, true );
+  @CascadeDispose
+  RoomModel _room;
+
+  @PostConstruct
+  void postConstruct()
+  {
+    _room = RoomModel.create( roomCode() );
+  }
+
+  @Input( immutable = true )
+  @Nonnull
+  abstract String roomCode();
 
   @Render
   @Nullable
