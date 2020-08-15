@@ -49,7 +49,6 @@ abstract class SelectRoomView
                                .type( InputType.text )
                                .placeHolder( "Room code" )
                                .id( "roomId" )
-                               .name( "roomId" )
                                .value( null == roomId ? "" : roomId )
                                .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) )
                                .pattern( "^\\w+$" )
