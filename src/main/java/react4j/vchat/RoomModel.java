@@ -1,6 +1,7 @@
 package react4j.vchat;
 
 import arez.annotations.ArezComponent;
+import arez.annotations.Feature;
 import arez.annotations.Observable;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -60,7 +61,7 @@ abstract class RoomModel
 
   abstract void setState( @Nonnull State state );
 
-  @Observable
+  @Observable( writeOutsideTransaction = Feature.ENABLE )
   @Nonnull
   abstract String requestAccessMessage();
 
