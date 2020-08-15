@@ -58,7 +58,7 @@ abstract class SelectRoomView
                                .title( "Room code should only contain letters or numbers." ) ),
                       button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
                       a( new AnchorProps().className( "primary-button" ).href( "#" + roomHistory().randomRoomId() ),
-                         "Random" ),
+                              "Join Random" )
                       roomHistory().getLatestRoomsIds().isEmpty() ?
                       null :
                       fragment( div( "Recently used rooms:" ),
