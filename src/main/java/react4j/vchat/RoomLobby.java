@@ -30,7 +30,7 @@ abstract class RoomLobby
   abstract MediaStreamConnection camStream();
 
   @Input( immutable = true )
-  abstract RoomsHistory roomHistory();
+  abstract ApplicationState roomHistory();
 
   @Action
   @PostMount
@@ -38,7 +38,7 @@ abstract class RoomLobby
   {
     final String roomId = connection().getRoomId();
     assert null != roomId;
-    roomHistory().recordRoomId( roomId );
+    roomHistory().recordRoomCode( roomId );
     camStream().setEnabled( true );
   }
 
