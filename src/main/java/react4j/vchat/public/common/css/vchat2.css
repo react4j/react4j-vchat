@@ -22,7 +22,7 @@ button {
 
 .roomCodeInput {
   border: none;
-  border-bottom: solid 2px #4c4c4f;
+  border-bottom: solid 2px hsl(240, 2%, 30%);
   font-size: 1em;
   background-color: transparent;
   color: #fff;
