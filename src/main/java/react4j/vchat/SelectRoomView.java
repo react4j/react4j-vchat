@@ -55,7 +55,7 @@ abstract class SelectRoomView
                                .maxLength( 10 )
                                .required()
                                .autoFocus()
-                               .title( "Room name should only contain letters or numbers." ) ),
+                               .title( "Room code should only contain letters or numbers." ) ),
                       button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
                       a( new AnchorProps().className( "primary-button" ).href( "#" + roomHistory().randomRoomId() ),
                          "Random" ),
