@@ -28,7 +28,7 @@ abstract class SelectRoomView
   abstract BrowserLocation browserLocation();
 
   @Input( immutable = true )
-  abstract RoomsHistory roomHistory();
+  abstract ApplicationState applicationState();
 
   @Observable( readOutsideTransaction = Feature.ENABLE, writeOutsideTransaction = Feature.ENABLE )
   @Nullable
@@ -60,13 +60,13 @@ abstract class SelectRoomView
                       button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
                       a( new AnchorProps()
                            .className( "primary-button" )
-                           .href( "#" + roomHistory().randomRoomId() ),
+                           .href( "#" + applicationState().randomRoomId() ),
                          "Join Random" )
                  ),
-                 roomHistory().getLatestRoomsIds().isEmpty() ?
+                 applicationState().getLatestRoomsIds().isEmpty() ?
                  null :
                  fragment( div( "Recently used rooms:" ),
-                           fragment( roomHistory().getLatestRoomsIds().stream().map( this::roomLink ) ) )
+                           fragment( applicationState().getLatestRoomsIds().stream().map( this::roomLink ) ) )
     );
   }
 
