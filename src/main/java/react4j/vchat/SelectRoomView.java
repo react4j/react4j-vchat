@@ -44,7 +44,7 @@ abstract class SelectRoomView
     return div( new HtmlProps().className( "home" ),
                 form( new FormProps().onSubmit( this::onSubmit ),
                       h1( "vChat" ),
-                      label( new LabelProps().htmlFor( "roomId" ), "Please enter a room code." ),
+                      label( new LabelProps().htmlFor( "roomId" ), "Enter a room code." ),
                       input( new InputProps()
                                .type( InputType.text )
                                .placeHolder( "Room code" )
