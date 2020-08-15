@@ -17,11 +17,11 @@ abstract class ApplicationState
   @Nonnull
   private static final String ALPHA_NUMERIC = "abcdefghijklmnopqrstuvwxyz1234567890";
   /// Maximum number of rooms to record in trace
-  private static final int MAX_ROOM_IDS = 3;
+  private static final int MAX_LATEST_ROOMS = 3;
   @Nonnull
   private static final String STORAGE_KEY = "vchat.rooms";
   @Nonnull
-  private final LinkedList<String> _latestRoomIds = new LinkedList<>();
+  private final LinkedList<String> _latestRoomCodes = new LinkedList<>();
 
   @Nonnull
   static ApplicationState create()
@@ -31,45 +31,45 @@ abstract class ApplicationState
 
   ApplicationState()
   {
-    final String ids = Global.globalThis().localStorage().getItem( STORAGE_KEY );
-    if ( null != ids )
+    final String codes = Global.globalThis().localStorage().getItem( STORAGE_KEY );
+    if ( null != codes )
     {
-      for ( final String id : ids.split( "\\|" ) )
+      for ( final String code : codes.split( "\\|" ) )
       {
-        _latestRoomIds.addLast( id );
+        _latestRoomCodes.addLast( code );
       }
     }
   }
 
   @Observable( expectSetter = false )
-  List<String> getLatestRoomsIds()
+  List<String> getLatestRoomCodes()
   {
-    return _latestRoomIds;
+    return _latestRoomCodes;
   }
 
   @ObservableValueRef
-  abstract ObservableValue<?> getLatestRoomsIdsObservableValue();
+  abstract ObservableValue<?> getLatestRoomCodesObservableValue();
 
   @Action
-  void recordRoomId( @Nonnull final String roomId )
+  void recordRoomCode( @Nonnull final String roomCode )
   {
-    _latestRoomIds.remove( roomId );
-    if ( MAX_ROOM_IDS == _latestRoomIds.size() )
+    _latestRoomCodes.remove( roomCode );
+    if ( MAX_LATEST_ROOMS == _latestRoomCodes.size() )
     {
-      _latestRoomIds.removeLast();
+      _latestRoomCodes.removeLast();
     }
-    _latestRoomIds.addFirst( roomId );
-    getLatestRoomsIdsObservableValue().reportChanged();
-    Global.globalThis().localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomIds ) );
+    _latestRoomCodes.addFirst( roomCode );
+    getLatestRoomCodesObservableValue().reportChanged();
+    Global.globalThis().localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomCodes ) );
   }
 
   /**
-   * Generate a random room id.
+   * Generate a random room code.
    *
-   * @return a random room id.
+   * @return a random room code.
    */
   @Nonnull
-  String randomRoomId()
+  String randomRoomCode()
   {
     final Random random = new Random();
     final StringBuilder sb = new StringBuilder( 10 );
