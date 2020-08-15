@@ -39,7 +39,6 @@ abstract class Application
     return location.isEmpty() ?
            SelectRoomViewBuilder.browserLocation( _location ).roomHistory( _roomsHistory ) :
            RoomLobbyBuilder.connection( _connection ).camStream( _camStream ).roomHistory( _roomsHistory );
-    //RoomViewBuilder.connection( _connection ).camStream( _camStream ).screenShareStream( _screenShareStream );
   }
 
   @Nonnull
