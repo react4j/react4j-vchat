@@ -43,7 +43,7 @@ abstract class SelectRoomView
     final String roomId = getRoomId();
     return div( new HtmlProps().className( "home" ),
                 form( new FormProps().onSubmit( this::onSubmit ),
-                      h1( "React4j Video Chat" ),
+                      h1( "vChat" ),
                       label( new LabelProps().htmlFor( "roomId" ), "Please enter a room code." ),
                       input( new InputProps()
                                .type( InputType.text )
