@@ -12,7 +12,7 @@ import java.util.Random;
 import javax.annotation.Nonnull;
 
 @ArezComponent
-abstract class RoomsHistory
+abstract class ApplicationState
 {
   @Nonnull
   private static final String ALPHA_NUMERIC = "abcdefghijklmnopqrstuvwxyz1234567890";
@@ -24,12 +24,12 @@ abstract class RoomsHistory
   private final LinkedList<String> _latestRoomIds = new LinkedList<>();
 
   @Nonnull
-  static RoomsHistory create()
+  static ApplicationState create()
   {
-    return new Arez_RoomsHistory();
+    return new Arez_ApplicationState();
   }
 
-  RoomsHistory()
+  ApplicationState()
   {
     final String ids = Global.globalThis().localStorage().getItem( STORAGE_KEY );
     if ( null != ids )
