@@ -33,6 +33,12 @@ input[type=text] {
   display: block;
 }
 
+.roomSelectButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home {
   display: flex;
   justify-content: center;
