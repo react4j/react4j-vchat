@@ -40,7 +40,7 @@ abstract class RoomModel
   @Nonnull
   static RoomModel create( @Nonnull final String code )
   {
-    return new Arez_RoomModel( code, State.NOT_ASKED );
+    return new Arez_RoomModel( code, State.NOT_ASKED, "" );
   }
 
   RoomModel( @Nonnull final String code )
@@ -59,4 +59,10 @@ abstract class RoomModel
   abstract State state();
 
   abstract void setState( @Nonnull State state );
+
+  @Observable
+  @Nonnull
+  abstract String requestAccessMessage();
+
+  abstract void setRequestAccessMessage( @Nonnull String message );
 }
