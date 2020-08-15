@@ -32,24 +32,24 @@ abstract class SelectRoomView
 
   @Observable( readOutsideTransaction = Feature.ENABLE, writeOutsideTransaction = Feature.ENABLE )
   @Nullable
-  abstract String getRoomId();
+  abstract String getRoomCode();
 
-  abstract void setRoomId( @Nullable String roomId );
+  abstract void setRoomCode( @Nullable String roomCode );
 
   @Nonnull
   @Render
   ReactNode render()
   {
-    final String roomId = getRoomId();
+    final String roomCode = getRoomCode();
     return form( new FormProps().className( "home" ).onSubmit( this::onSubmit ),
                  h1( "vChat" ),
-                 label( new LabelProps().htmlFor( "roomId" ), "Enter a room code." ),
+                 label( new LabelProps().htmlFor( "roomCode" ), "Enter a room code." ),
                  input( new InputProps()
                           .type( InputType.text )
                           .className( "roomCodeInput" )
                           .placeHolder( "Room code" )
-                          .id( "roomId" )
-                          .value( null == roomId ? "" : roomId )
+                          .id( "roomCode" )
+                          .value( null == roomCode ? "" : roomCode )
                           .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) )
                           .pattern( "^\\w+$" )
                           .maxLength( 10 )
@@ -60,13 +60,13 @@ abstract class SelectRoomView
                       button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
                       a( new AnchorProps()
                            .className( "primary-button" )
-                           .href( "#" + applicationState().randomRoomId() ),
+                           .href( "#" + applicationState().randomRoomCode() ),
                          "Join Random" )
                  ),
-                 applicationState().getLatestRoomsIds().isEmpty() ?
+                 applicationState().getLatestRoomCodes().isEmpty() ?
                  null :
                  fragment( div( "Recently used rooms:" ),
-                           fragment( applicationState().getLatestRoomsIds().stream().map( this::roomLink ) ) )
+                           fragment( applicationState().getLatestRoomCodes().stream().map( this::roomLink ) ) )
     );
   }
 
@@ -88,7 +88,7 @@ abstract class SelectRoomView
   private void onSubmit( @Nonnull final FormEvent e )
   {
     e.preventDefault();
-    final String roomId = getRoomId();
+    final String roomId = getRoomCode();
     if ( null != roomId )
     {
       browserLocation().gotoLocation( roomId );
@@ -97,6 +97,6 @@ abstract class SelectRoomView
 
   private void updateRoomId( @Nonnull final String value )
   {
-    setRoomId( value.isEmpty() ? null : value );
+    setRoomCode( value.isEmpty() ? null : value );
   }
 }
