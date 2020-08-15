@@ -71,7 +71,6 @@ input[type=text] {
   background: rgba(64, 124, 247, 1)
 }
 
-.you-left,
 .remote-left,
 .hangup-button,
 .audio-button-true .on,
@@ -118,10 +117,6 @@ input[type=text] {
 :-webkit-full-screen video {
   width: 100%;
   height: 100%;
-}
-
-.guest-hangup + .auth .you-left {
-  display: inline;
 }
 
 .full .room-occupied,
