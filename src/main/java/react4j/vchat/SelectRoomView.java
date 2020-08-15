@@ -71,9 +71,9 @@ abstract class SelectRoomView
   }
 
   @Nonnull
-  private ReactNode roomLink( @Nonnull final String roomId )
+  private ReactNode roomLink( @Nonnull final String roomCode )
   {
-    return a( new AnchorProps().key( roomId ).className( "recent-room" ).href( "#" + roomId ), roomId );
+    return a( new AnchorProps().key( roomCode ).className( "recent-room" ).href( "#" + roomCode ), roomCode );
   }
 
   @Nonnull
