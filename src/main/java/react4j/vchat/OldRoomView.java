@@ -17,7 +17,7 @@ import react4j.dom.proptypes.html.RefConsumer;
 import static react4j.dom.DOM.*;
 
 @View( type = View.Type.TRACKING )
-abstract class RoomView
+abstract class OldRoomView
 {
   @Input( immutable = true )
   @Nonnull
