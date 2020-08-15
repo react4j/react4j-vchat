@@ -47,6 +47,7 @@ abstract class SelectRoomView
                       label( new LabelProps().htmlFor( "roomId" ), "Enter a room code." ),
                       input( new InputProps()
                                .type( InputType.text )
+                               .className( "roomCodeInput" )
                                .placeHolder( "Room code" )
                                .id( "roomId" )
                                .value( null == roomId ? "" : roomId )

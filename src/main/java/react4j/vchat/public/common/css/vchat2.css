@@ -20,7 +20,7 @@ button {
 /*  outline: 0;*/
 /*}*/
 
-input[type=text] {
+.roomCodeInput {
   border: none;
   border-bottom: solid 2px #4c4c4f;
   font-size: 1em;
