@@ -41,34 +41,32 @@ abstract class SelectRoomView
   ReactNode render()
   {
     final String roomId = getRoomId();
-    return div( new HtmlProps().className( "home" ),
-                form( new FormProps().onSubmit( this::onSubmit ),
-                      h1( "vChat" ),
-                      label( new LabelProps().htmlFor( "roomId" ), "Enter a room code." ),
-                      input( new InputProps()
-                               .type( InputType.text )
-                               .className( "roomCodeInput" )
-                               .placeHolder( "Room code" )
-                               .id( "roomId" )
-                               .value( null == roomId ? "" : roomId )
-                               .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) )
-                               .pattern( "^\\w+$" )
-                               .maxLength( 10 )
-                               .required()
-                               .autoFocus()
-                               .title( "Room code should only contain letters or numbers." ) ),
-                      div( new HtmlProps().className( "roomSelectButtons" ),
-                           button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
-                           a( new AnchorProps()
-                                .className( "primary-button" )
-                                .href( "#" + roomHistory().randomRoomId() ),
-                              "Join Random" )
-                      ),
-                      roomHistory().getLatestRoomsIds().isEmpty() ?
-                      null :
-                      fragment( div( "Recently used rooms:" ),
-                                fragment( roomHistory().getLatestRoomsIds().stream().map( this::roomLink ) ) )
-                )
+    return form( new FormProps().className( "home" ).onSubmit( this::onSubmit ),
+                 h1( "vChat" ),
+                 label( new LabelProps().htmlFor( "roomId" ), "Enter a room code." ),
+                 input( new InputProps()
+                          .type( InputType.text )
+                          .className( "roomCodeInput" )
+                          .placeHolder( "Room code" )
+                          .id( "roomId" )
+                          .value( null == roomId ? "" : roomId )
+                          .onChange( event -> updateRoomId( asInputElement( event ).value.trim() ) )
+                          .pattern( "^\\w+$" )
+                          .maxLength( 10 )
+                          .required()
+                          .autoFocus()
+                          .title( "Room code should only contain letters or numbers." ) ),
+                 div( new HtmlProps().className( "roomSelectButtons" ),
+                      button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
+                      a( new AnchorProps()
+                           .className( "primary-button" )
+                           .href( "#" + roomHistory().randomRoomId() ),
+                         "Join Random" )
+                 ),
+                 roomHistory().getLatestRoomsIds().isEmpty() ?
+                 null :
+                 fragment( div( "Recently used rooms:" ),
+                           fragment( roomHistory().getLatestRoomsIds().stream().map( this::roomLink ) ) )
     );
   }
 
