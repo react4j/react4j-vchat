@@ -213,19 +213,12 @@ button {
   width: 1.4em;
 }
 
-.room-occupied,
-.request-access,
-.waiting,
-.request-access,
-.grant-access,
-.waiting {
+.message-area {
   overflow: hidden;
   padding: 0 1em;
   box-sizing: border-box;
   width: 100%;
   background: rgba(0, 0, 0, .8);
-  /* Initially we don't want any height, and we want the contents to be hidden */
-  max-height: 0;
   transition: max-height .3s ease;
 }
 
