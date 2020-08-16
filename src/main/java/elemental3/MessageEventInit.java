@@ -109,7 +109,7 @@ public interface MessageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default MessageEventInit source(@Nonnull final MessageEventSource source) {
+  default MessageEventInit source(@Nullable final MessageEventSource source) {
     setSource( source );
     return this;
   }

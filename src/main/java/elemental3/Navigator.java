@@ -15,6 +15,7 @@ import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -292,7 +293,7 @@ public class Navigator {
   @Nonnull
   public native PluginArray plugins();
 
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull BodyInit data);
+  public native boolean sendBeacon(@Nonnull String url, @Nullable BodyInit data);
 
   public native boolean sendBeacon(@Nonnull String url, @Nonnull ReadableStream data);
 

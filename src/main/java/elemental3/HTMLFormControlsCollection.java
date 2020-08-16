@@ -27,11 +27,6 @@ public class HTMLFormControlsCollection {
   )
   public native int length();
 
-  /**
-   * The HTMLCollection method item() returns the node located at the specified offset into the collection.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item">HTMLCollection.item - MDN</a>
-   */
   @Nullable
   public native RadioNodeListOrElementUnion item(int index);
 

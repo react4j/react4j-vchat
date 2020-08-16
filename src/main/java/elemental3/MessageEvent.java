@@ -86,7 +86,7 @@ public class MessageEvent extends Event {
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull MessageEventSource source, @Nonnull JsArray<MessagePort> ports);
+      @Nullable MessageEventSource source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin, @Nonnull String lastEventId,
@@ -102,7 +102,7 @@ public class MessageEvent extends Event {
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull MessageEventSource source, @Nonnull MessagePort[] ports);
+      @Nullable MessageEventSource source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin, @Nonnull String lastEventId,
@@ -118,7 +118,7 @@ public class MessageEvent extends Event {
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin, @Nonnull String lastEventId,
-      @Nonnull MessageEventSource source);
+      @Nullable MessageEventSource source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin, @Nonnull String lastEventId,

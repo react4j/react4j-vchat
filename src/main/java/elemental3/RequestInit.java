@@ -47,7 +47,7 @@ public interface RequestInit {
 
   @JsOverlay
   @Nonnull
-  default RequestInit body(@Nonnull final BodyInit body) {
+  default RequestInit body(@Nullable final BodyInit body) {
     setBody( body );
     return this;
   }

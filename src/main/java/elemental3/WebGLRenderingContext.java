@@ -937,7 +937,7 @@ public class WebGLRenderingContext {
 
   public native void bufferData(int target, int size, int usage);
 
-  public native void bufferData(int target, @Nonnull BufferSource data, int usage);
+  public native void bufferData(int target, @Nullable BufferSource data, int usage);
 
   public native void bufferData(int target, @Nonnull ArrayBufferView data, int usage);
 
@@ -1056,7 +1056,7 @@ public class WebGLRenderingContext {
       int width, int height, int format, @Nonnull DataView data);
 
   public native void readPixels(int x, int y, int width, int height, int format, int type,
-      @Nonnull ArrayBufferView pixels);
+      @Nullable ArrayBufferView pixels);
 
   public native void readPixels(int x, int y, int width, int height, int format, int type,
       @Nonnull Int8Array pixels);
@@ -1089,7 +1089,7 @@ public class WebGLRenderingContext {
       @Nonnull DataView pixels);
 
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull ArrayBufferView pixels);
+      int border, int format, int type, @Nullable ArrayBufferView pixels);
 
   public native void texImage2D(int target, int level, int internalformat, int width, int height,
       int border, int format, int type, @Nonnull Int8Array pixels);
@@ -1143,7 +1143,7 @@ public class WebGLRenderingContext {
       @Nonnull OffscreenCanvas source);
 
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull ArrayBufferView pixels);
+      int height, int format, int type, @Nullable ArrayBufferView pixels);
 
   public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
       int height, int format, int type, @Nonnull Int8Array pixels);

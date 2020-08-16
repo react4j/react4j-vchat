@@ -33,7 +33,7 @@ import jsinterop.base.Any;
     name = "Response"
 )
 public class Response {
-  public Response(@Nonnull final BodyInit body, @Nonnull final ResponseInit init) {
+  public Response(@Nullable final BodyInit body, @Nonnull final ResponseInit init) {
   }
 
   public Response(@Nonnull final ReadableStream body, @Nonnull final ResponseInit init) {
@@ -93,7 +93,7 @@ public class Response {
   public Response(@Nonnull final String body, @Nonnull final ResponseInit init) {
   }
 
-  public Response(@Nonnull final BodyInit body) {
+  public Response(@Nullable final BodyInit body) {
   }
 
   public Response(@Nonnull final ReadableStream body) {
