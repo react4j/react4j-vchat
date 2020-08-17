@@ -20,6 +20,7 @@ Code to investigate/imitate/be inspired by
 
 # Tutorials/Learning
 
+* https://webrtc.org/getting-started/remote-streams
 * https://www.sitepoint.com/webrtc-video-chat-application-simplewebrtc/
 * https://www.scaledrone.com/blog/webrtc-tutorial-simple-video-chat/
 * https://codelabs.developers.google.com/codelabs/webrtc-web/#3
