@@ -22,10 +22,20 @@ public class AudioWorkletNode extends AudioNode {
   @Nullable
   public EventHandler onprocessorerror;
 
+  /**
+   * The AudioWorkletNode() constructor creates a new AudioWorkletNode object, which represents an AudioNode that uses a JavaScript function to perform custom audio processing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode">AudioWorkletNode.AudioWorkletNode - MDN</a>
+   */
   public AudioWorkletNode(@Nonnull final BaseAudioContext context, @Nonnull final String name,
       @Nonnull final AudioWorkletNodeOptions options) {
   }
 
+  /**
+   * The AudioWorkletNode() constructor creates a new AudioWorkletNode object, which represents an AudioNode that uses a JavaScript function to perform custom audio processing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode">AudioWorkletNode.AudioWorkletNode - MDN</a>
+   */
   public AudioWorkletNode(@Nonnull final BaseAudioContext context, @Nonnull final String name) {
   }
 

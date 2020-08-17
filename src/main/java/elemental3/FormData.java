@@ -19,9 +19,19 @@ import jsinterop.annotations.JsType;
     name = "FormData"
 )
 public class FormData {
+  /**
+   * The FormData() constructor creates a new FormData object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData">FormData.FormData - MDN</a>
+   */
   public FormData(@Nonnull final HTMLFormElement form) {
   }
 
+  /**
+   * The FormData() constructor creates a new FormData object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData">FormData.FormData - MDN</a>
+   */
   public FormData() {
   }
 

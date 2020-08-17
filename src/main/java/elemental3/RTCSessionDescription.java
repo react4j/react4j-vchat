@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "RTCSessionDescription"
 )
 public class RTCSessionDescription {
+  /**
+   * The RTCSessionDescription() constructor creates a new RTCSessionDescription with its properties initialized as described in the specified object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription">RTCSessionDescription.RTCSessionDescription - MDN</a>
+   */
   public RTCSessionDescription(@Nonnull final RTCSessionDescriptionInit descriptionInitDict) {
   }
 

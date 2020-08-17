@@ -41,9 +41,19 @@ public class Worker extends EventTarget {
   @Nullable
   public EventHandler onerror;
 
+  /**
+   * The Worker() constructor creates a Worker object that executes the script at the specified URL. This script must obey the same-origin policy.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker">Worker.Worker - MDN</a>
+   */
   public Worker(@Nonnull final String scriptURL, @Nonnull final WorkerOptions options) {
   }
 
+  /**
+   * The Worker() constructor creates a Worker object that executes the script at the specified URL. This script must obey the same-origin policy.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker">Worker.Worker - MDN</a>
+   */
   public Worker(@Nonnull final String scriptURL) {
   }
 

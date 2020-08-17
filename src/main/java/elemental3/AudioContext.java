@@ -19,9 +19,19 @@ import jsinterop.annotations.JsType;
     name = "Object"
 )
 public class AudioContext extends BaseAudioContext {
+  /**
+   * The AudioContext() constructor creates a new AudioContext object which represents an audio-processing graph, built from audio modules linked together, each represented by an AudioNode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/AudioContext">AudioContext.AudioContext - MDN</a>
+   */
   public AudioContext(@Nonnull final AudioContextOptions contextOptions) {
   }
 
+  /**
+   * The AudioContext() constructor creates a new AudioContext object which represents an audio-processing graph, built from audio modules linked together, each represented by an AudioNode.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/AudioContext">AudioContext.AudioContext - MDN</a>
+   */
   public AudioContext() {
   }
 

@@ -25,18 +25,43 @@ public class DOMRect extends DOMRectReadOnly {
 
   public double y;
 
+  /**
+   * The DOMRect() constructor creates a new DOMRect object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect/DOMRect">DOMRect.DOMRect - MDN</a>
+   */
   public DOMRect(final double x, final double y, final double width, final double height) {
   }
 
+  /**
+   * The DOMRect() constructor creates a new DOMRect object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect/DOMRect">DOMRect.DOMRect - MDN</a>
+   */
   public DOMRect(final double x, final double y, final double width) {
   }
 
+  /**
+   * The DOMRect() constructor creates a new DOMRect object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect/DOMRect">DOMRect.DOMRect - MDN</a>
+   */
   public DOMRect(final double x, final double y) {
   }
 
+  /**
+   * The DOMRect() constructor creates a new DOMRect object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect/DOMRect">DOMRect.DOMRect - MDN</a>
+   */
   public DOMRect(final double x) {
   }
 
+  /**
+   * The DOMRect() constructor creates a new DOMRect object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect/DOMRect">DOMRect.DOMRect - MDN</a>
+   */
   public DOMRect() {
   }
 

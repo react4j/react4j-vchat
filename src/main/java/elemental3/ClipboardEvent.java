@@ -19,11 +19,21 @@ import jsinterop.annotations.JsType;
     name = "ClipboardEvent"
 )
 public class ClipboardEvent extends Event {
+  /**
+   * The ClipboardEvent() constructor returns a newly created ClipboardEvent, representing an event providing information related to modification of the clipboard, that is cut, copy, and paste events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/ClipboardEvent">ClipboardEvent.ClipboardEvent - MDN</a>
+   */
   public ClipboardEvent(@Nonnull final String type,
       @Nonnull final ClipboardEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The ClipboardEvent() constructor returns a newly created ClipboardEvent, representing an event providing information related to modification of the clipboard, that is cut, copy, and paste events.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/ClipboardEvent">ClipboardEvent.ClipboardEvent - MDN</a>
+   */
   public ClipboardEvent(@Nonnull final String type) {
     super( null );
   }

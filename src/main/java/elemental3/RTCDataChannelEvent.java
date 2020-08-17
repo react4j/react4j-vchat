@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "RTCDataChannelEvent"
 )
 public class RTCDataChannelEvent extends Event {
+  /**
+   * The RTCDataChannelEvent() constructor creates a new RTCDataChannelEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/RTCDataChannelEvent">RTCDataChannelEvent.RTCDataChannelEvent - MDN</a>
+   */
   public RTCDataChannelEvent(@Nonnull final String type,
       @Nonnull final RTCDataChannelEventInit eventInitDict) {
     super( null );

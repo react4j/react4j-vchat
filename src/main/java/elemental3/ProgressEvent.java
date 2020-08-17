@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "ProgressEvent"
 )
 public class ProgressEvent extends Event {
+  /**
+   * The ProgressEvent() constructor returns a newly created ProgressEvent, representing the current completion of a long process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/ProgressEvent">ProgressEvent.ProgressEvent - MDN</a>
+   */
   public ProgressEvent(@Nonnull final String type, @Nonnull final ProgressEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The ProgressEvent() constructor returns a newly created ProgressEvent, representing the current completion of a long process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/ProgressEvent">ProgressEvent.ProgressEvent - MDN</a>
+   */
   public ProgressEvent(@Nonnull final String type) {
     super( null );
   }

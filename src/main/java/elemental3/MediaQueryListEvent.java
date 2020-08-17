@@ -18,11 +18,21 @@ import jsinterop.annotations.JsType;
     name = "MediaQueryListEvent"
 )
 public class MediaQueryListEvent extends Event {
+  /**
+   * The MediaQueryListEvent constructor creates a new MediaQueryListEvent instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent/MediaQueryListEvent">MediaQueryListEvent.MediaQueryListEvent - MDN</a>
+   */
   public MediaQueryListEvent(@Nonnull final String type,
       @Nonnull final MediaQueryListEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The MediaQueryListEvent constructor creates a new MediaQueryListEvent instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent/MediaQueryListEvent">MediaQueryListEvent.MediaQueryListEvent - MDN</a>
+   */
   public MediaQueryListEvent(@Nonnull final String type) {
     super( null );
   }

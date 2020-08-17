@@ -20,10 +20,20 @@ import jsinterop.base.Any;
     name = "CustomEvent"
 )
 public class CustomEvent extends Event {
+  /**
+   * The CustomEvent() constructor creates a new CustomEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent">CustomEvent.CustomEvent - MDN</a>
+   */
   public CustomEvent(@Nonnull final String type, @Nonnull final CustomEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The CustomEvent() constructor creates a new CustomEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent">CustomEvent.CustomEvent - MDN</a>
+   */
   public CustomEvent(@Nonnull final String type) {
     super( null );
   }

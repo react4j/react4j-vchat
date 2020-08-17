@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "MediaKeyMessageEvent"
 )
 public class MediaKeyMessageEvent extends Event {
+  /**
+   * The MediaKeyMessageEvent constructor creates a new MediaKeyMessageEvent object which creates a new instance of MediaKeyMessageEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent">MediaKeyMessageEvent.MediaKeyMessageEvent - MDN</a>
+   */
   public MediaKeyMessageEvent(@Nonnull final String type,
       @Nonnull final MediaKeyMessageEventInit eventInitDict) {
     super( null );

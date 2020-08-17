@@ -21,10 +21,20 @@ import jsinterop.base.Any;
     name = "MessageEvent"
 )
 public class MessageEvent extends Event {
+  /**
+   * The MessageEvent() constructor creates a new MessageEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/MessageEvent">MessageEvent.MessageEvent - MDN</a>
+   */
   public MessageEvent(@Nonnull final String type, @Nonnull final MessageEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The MessageEvent() constructor creates a new MessageEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/MessageEvent">MessageEvent.MessageEvent - MDN</a>
+   */
   public MessageEvent(@Nonnull final String type) {
     super( null );
   }

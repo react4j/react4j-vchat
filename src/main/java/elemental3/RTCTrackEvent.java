@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "RTCTrackEvent"
 )
 public class RTCTrackEvent extends Event {
+  /**
+   * The RTCTrackEvent() constructor creates and returns a new RTCTrackEvent object, configured to describe the track which has been added to the RTCPeerConnection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent">RTCTrackEvent.RTCTrackEvent - MDN</a>
+   */
   public RTCTrackEvent(@Nonnull final String type, @Nonnull final RTCTrackEventInit eventInitDict) {
     super( null );
   }

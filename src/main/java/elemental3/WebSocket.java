@@ -85,15 +85,35 @@ public class WebSocket extends EventTarget {
   @Nullable
   public EventHandler onopen;
 
+  /**
+   * The WebSocket() constructor returns a new WebSocket object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket">WebSocket.WebSocket - MDN</a>
+   */
   public WebSocket(@Nonnull final String url, @Nonnull final String protocols) {
   }
 
+  /**
+   * The WebSocket() constructor returns a new WebSocket object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket">WebSocket.WebSocket - MDN</a>
+   */
   public WebSocket(@Nonnull final String url, @Nonnull final JsArray<String> protocols) {
   }
 
+  /**
+   * The WebSocket() constructor returns a new WebSocket object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket">WebSocket.WebSocket - MDN</a>
+   */
   public WebSocket(@Nonnull final String url, @Nonnull final String[] protocols) {
   }
 
+  /**
+   * The WebSocket() constructor returns a new WebSocket object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket">WebSocket.WebSocket - MDN</a>
+   */
   public WebSocket(@Nonnull final String url) {
   }
 

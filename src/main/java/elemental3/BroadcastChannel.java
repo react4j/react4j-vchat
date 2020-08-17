@@ -38,6 +38,11 @@ public class BroadcastChannel extends EventTarget {
   @Nullable
   public MessageEventHandler onmessageerror;
 
+  /**
+   * The BroadcastChannel() constructor creates a new BroadcastChannel and connects it to the underlying channel.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel">BroadcastChannel.BroadcastChannel - MDN</a>
+   */
   public BroadcastChannel(@Nonnull final String name) {
   }
 

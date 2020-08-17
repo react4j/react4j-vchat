@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "Touch"
 )
 public class Touch {
+  /**
+   * The Touch() constructor creates a new Touch object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Touch/Touch">Touch.Touch - MDN</a>
+   */
   public Touch(@Nonnull final TouchInit touchInitDict) {
   }
 

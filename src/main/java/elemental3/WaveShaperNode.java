@@ -35,10 +35,20 @@ public class WaveShaperNode extends AudioNode {
   @Nonnull
   public String oversample;
 
+  /**
+   * The WaveShaperNode() constructor of the Web Audio API creates a new WaveShaperNode object which is an AudioNode that represents a non-linear distorter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/WaveShaperNode">WaveShaperNode.WaveShaperNode - MDN</a>
+   */
   public WaveShaperNode(@Nonnull final BaseAudioContext context,
       @Nonnull final WaveShaperOptions options) {
   }
 
+  /**
+   * The WaveShaperNode() constructor of the Web Audio API creates a new WaveShaperNode object which is an AudioNode that represents a non-linear distorter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/WaveShaperNode">WaveShaperNode.WaveShaperNode - MDN</a>
+   */
   public WaveShaperNode(@Nonnull final BaseAudioContext context) {
   }
 }

@@ -19,9 +19,19 @@ import jsinterop.annotations.JsType;
     name = "RTCIceCandidate"
 )
 public class RTCIceCandidate {
+  /**
+   * The RTCIceCandidate() constructor creates and returns a new RTCIceCandidate object, which can be configured to represent a single ICE candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate">RTCIceCandidate.RTCIceCandidate - MDN</a>
+   */
   public RTCIceCandidate(@Nonnull final RTCIceCandidateInit candidateInitDict) {
   }
 
+  /**
+   * The RTCIceCandidate() constructor creates and returns a new RTCIceCandidate object, which can be configured to represent a single ICE candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate">RTCIceCandidate.RTCIceCandidate - MDN</a>
+   */
   public RTCIceCandidate() {
   }
 

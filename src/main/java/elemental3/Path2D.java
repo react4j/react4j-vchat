@@ -17,12 +17,27 @@ import jsinterop.annotations.JsType;
     name = "Path2D"
 )
 public class Path2D {
+  /**
+   * The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D">Path2D.Path2D - MDN</a>
+   */
   public Path2D(@Nonnull final Path2D path) {
   }
 
+  /**
+   * The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D">Path2D.Path2D - MDN</a>
+   */
   public Path2D(@Nonnull final String path) {
   }
 
+  /**
+   * The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D">Path2D.Path2D - MDN</a>
+   */
   public Path2D() {
   }
 

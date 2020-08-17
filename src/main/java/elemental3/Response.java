@@ -33,126 +33,331 @@ import jsinterop.base.Any;
     name = "Response"
 )
 public class Response {
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nullable final BodyInit body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final ReadableStream body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final XMLHttpRequestBodyInit body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Blob body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final BufferSource body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final ArrayBufferView body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Int8Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Int16Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Int32Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint8Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint16Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint32Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint8ClampedArray body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Float32Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Float64Array body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final DataView body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final ArrayBuffer body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final FormData body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final URLSearchParams body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final String body, @Nonnull final ResponseInit init) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nullable final BodyInit body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final ReadableStream body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final XMLHttpRequestBodyInit body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Blob body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final BufferSource body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final ArrayBufferView body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Int8Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Int16Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Int32Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint8Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint16Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint32Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Uint8ClampedArray body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Float32Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final Float64Array body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final DataView body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final ArrayBuffer body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final FormData body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final URLSearchParams body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response(@Nonnull final String body) {
   }
 
+  /**
+   * The Response() constructor creates a new Response object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/Response">Response.Response - MDN</a>
+   */
   public Response() {
   }
 

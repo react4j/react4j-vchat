@@ -19,10 +19,20 @@ import jsinterop.annotations.JsType;
     name = "FocusEvent"
 )
 public class FocusEvent extends UIEvent {
+  /**
+   * The FocusEvent() constructor returns a newly created FocusEvent object with an optional EventTarget. When the event has both a source and a destination, the relatedTarget value must be set to the other target.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent/FocusEvent">FocusEvent.FocusEvent - MDN</a>
+   */
   public FocusEvent(@Nonnull final String type, @Nonnull final FocusEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The FocusEvent() constructor returns a newly created FocusEvent object with an optional EventTarget. When the event has both a source and a destination, the relatedTarget value must be set to the other target.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent/FocusEvent">FocusEvent.FocusEvent - MDN</a>
+   */
   public FocusEvent(@Nonnull final String type) {
     super( null );
   }

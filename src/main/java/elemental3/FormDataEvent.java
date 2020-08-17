@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "FormDataEvent"
 )
 public class FormDataEvent extends Event {
+  /**
+   * The FormDataEvent() constructor creates a new FormDataEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent">FormDataEvent.FormDataEvent - MDN</a>
+   */
   public FormDataEvent(@Nonnull final String type, @Nonnull final FormDataEventInit eventInitDict) {
     super( null );
   }

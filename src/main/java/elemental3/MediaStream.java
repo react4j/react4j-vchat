@@ -39,15 +39,35 @@ public class MediaStream extends EventTarget {
   @Nullable
   public MediaStreamTrackEventHandler onremovetrack;
 
+  /**
+   * The MediaStream() constructor returns a newly-created MediaStream, which serves as a collection of media tracks, each represented by a MediaStreamTrack object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/MediaStream">MediaStream.MediaStream - MDN</a>
+   */
   public MediaStream() {
   }
 
+  /**
+   * The MediaStream() constructor returns a newly-created MediaStream, which serves as a collection of media tracks, each represented by a MediaStreamTrack object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/MediaStream">MediaStream.MediaStream - MDN</a>
+   */
   public MediaStream(@Nonnull final MediaStream stream) {
   }
 
+  /**
+   * The MediaStream() constructor returns a newly-created MediaStream, which serves as a collection of media tracks, each represented by a MediaStreamTrack object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/MediaStream">MediaStream.MediaStream - MDN</a>
+   */
   public MediaStream(@Nonnull final JsArray<MediaStreamTrack> tracks) {
   }
 
+  /**
+   * The MediaStream() constructor returns a newly-created MediaStream, which serves as a collection of media tracks, each represented by a MediaStreamTrack object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/MediaStream">MediaStream.MediaStream - MDN</a>
+   */
   public MediaStream(@Nonnull final MediaStreamTrack[] tracks) {
   }
 

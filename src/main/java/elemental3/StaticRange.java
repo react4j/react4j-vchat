@@ -17,6 +17,11 @@ import jsinterop.annotations.JsType;
     name = "StaticRange"
 )
 public class StaticRange extends AbstractRange {
+  /**
+   * The StaticRange() constructor creates a new StaticRange object representing a span of content within the DOM.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/StaticRange">StaticRange.StaticRange - MDN</a>
+   */
   public StaticRange(@Nonnull final StaticRangeInit init) {
   }
 }

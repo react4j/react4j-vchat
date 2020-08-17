@@ -18,18 +18,43 @@ import jsinterop.annotations.JsType;
     name = "DOMRectReadOnly"
 )
 public class DOMRectReadOnly {
+  /**
+   * The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly">DOMRectReadOnly.DOMRectReadOnly - MDN</a>
+   */
   public DOMRectReadOnly(final double x, final double y, final double width, final double height) {
   }
 
+  /**
+   * The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly">DOMRectReadOnly.DOMRectReadOnly - MDN</a>
+   */
   public DOMRectReadOnly(final double x, final double y, final double width) {
   }
 
+  /**
+   * The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly">DOMRectReadOnly.DOMRectReadOnly - MDN</a>
+   */
   public DOMRectReadOnly(final double x, final double y) {
   }
 
+  /**
+   * The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly">DOMRectReadOnly.DOMRectReadOnly - MDN</a>
+   */
   public DOMRectReadOnly(final double x) {
   }
 
+  /**
+   * The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly">DOMRectReadOnly.DOMRectReadOnly - MDN</a>
+   */
   public DOMRectReadOnly() {
   }
 

@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "GamepadEvent"
 )
 public class GamepadEvent extends Event {
+  /**
+   * The GamepadEvent() constructor creates a new GamepadEvent object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent/GamepadEvent">GamepadEvent.GamepadEvent - MDN</a>
+   */
   public GamepadEvent(@Nonnull final String type, @Nonnull final GamepadEventInit eventInitDict) {
     super( null );
   }

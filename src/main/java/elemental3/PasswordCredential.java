@@ -18,9 +18,19 @@ import jsinterop.annotations.JsType;
     name = "PasswordCredential"
 )
 public class PasswordCredential extends Credential {
+  /**
+   * The PasswordCredential constructor creates a new PasswordCredential object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/PasswordCredential">PasswordCredential.PasswordCredential - MDN</a>
+   */
   public PasswordCredential(@Nonnull final HTMLFormElement form) {
   }
 
+  /**
+   * The PasswordCredential constructor creates a new PasswordCredential object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/PasswordCredential">PasswordCredential.PasswordCredential - MDN</a>
+   */
   public PasswordCredential(@Nonnull final PasswordCredentialData data) {
   }
 

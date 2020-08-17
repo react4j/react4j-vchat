@@ -95,9 +95,19 @@ public class RTCPeerConnection extends EventTarget {
   @Nullable
   public RTCDataChannelEventHandler ondatachannel;
 
+  /**
+   * The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection">RTCPeerConnection.RTCPeerConnection - MDN</a>
+   */
   public RTCPeerConnection(@Nonnull final RTCConfiguration configuration) {
   }
 
+  /**
+   * The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection">RTCPeerConnection.RTCPeerConnection - MDN</a>
+   */
   public RTCPeerConnection() {
   }
 

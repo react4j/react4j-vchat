@@ -19,10 +19,20 @@ import jsinterop.annotations.JsType;
     name = "DragEvent"
 )
 public class DragEvent extends MouseEvent {
+  /**
+   * This constructor is used to create a synthetic DragEvent object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/DragEvent">DragEvent.DragEvent - MDN</a>
+   */
   public DragEvent(@Nonnull final String type, @Nonnull final DragEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * This constructor is used to create a synthetic DragEvent object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/DragEvent">DragEvent.DragEvent - MDN</a>
+   */
   public DragEvent(@Nonnull final String type) {
     super( null );
   }

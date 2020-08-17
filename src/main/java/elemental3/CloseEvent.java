@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "CloseEvent"
 )
 public class CloseEvent extends Event {
+  /**
+   * The CloseEvent() constructor creates a new CloseEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/CloseEvent">CloseEvent.CloseEvent - MDN</a>
+   */
   public CloseEvent(@Nonnull final String type, @Nonnull final CloseEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The CloseEvent() constructor creates a new CloseEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/CloseEvent">CloseEvent.CloseEvent - MDN</a>
+   */
   public CloseEvent(@Nonnull final String type) {
     super( null );
   }

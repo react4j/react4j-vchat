@@ -22,12 +22,27 @@ public class SharedWorker extends EventTarget {
   @Nullable
   public EventHandler onerror;
 
+  /**
+   * The SharedWorker() constructor creates a SharedWorker object that executes the script at the specified URL. This script must obey the same-origin policy.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker">SharedWorker.SharedWorker - MDN</a>
+   */
   public SharedWorker(@Nonnull final String scriptURL, @Nonnull final String options) {
   }
 
+  /**
+   * The SharedWorker() constructor creates a SharedWorker object that executes the script at the specified URL. This script must obey the same-origin policy.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker">SharedWorker.SharedWorker - MDN</a>
+   */
   public SharedWorker(@Nonnull final String scriptURL, @Nonnull final WorkerOptions options) {
   }
 
+  /**
+   * The SharedWorker() constructor creates a SharedWorker object that executes the script at the specified URL. This script must obey the same-origin policy.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker">SharedWorker.SharedWorker - MDN</a>
+   */
   public SharedWorker(@Nonnull final String scriptURL) {
   }
 

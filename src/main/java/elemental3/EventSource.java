@@ -54,10 +54,20 @@ public class EventSource extends EventTarget {
   @Nullable
   public EventHandler onopen;
 
+  /**
+   * The EventSource() constructor returns a newly-created EventSource, which represents a remote resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/EventSource">EventSource.EventSource - MDN</a>
+   */
   public EventSource(@Nonnull final String url,
       @Nonnull final EventSourceInit eventSourceInitDict) {
   }
 
+  /**
+   * The EventSource() constructor returns a newly-created EventSource, which represents a remote resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/EventSource">EventSource.EventSource - MDN</a>
+   */
   public EventSource(@Nonnull final String url) {
   }
 

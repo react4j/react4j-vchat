@@ -94,12 +94,27 @@ public class DOMException {
   @JsOverlay
   public static final int WRONG_DOCUMENT_ERR = 4;
 
+  /**
+   * The DOMException() constructor returns a DOMException object with a specified message and name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException">DOMException.DOMException - MDN</a>
+   */
   public DOMException(@Nonnull final String message, @Nonnull final String name) {
   }
 
+  /**
+   * The DOMException() constructor returns a DOMException object with a specified message and name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException">DOMException.DOMException - MDN</a>
+   */
   public DOMException(@Nonnull final String message) {
   }
 
+  /**
+   * The DOMException() constructor returns a DOMException object with a specified message and name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException">DOMException.DOMException - MDN</a>
+   */
   public DOMException() {
   }
 

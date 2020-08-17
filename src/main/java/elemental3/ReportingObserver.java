@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "ReportingObserver"
 )
 public class ReportingObserver {
+  /**
+   * The ReportingObserver() constructor of the Reporting API creates a new ReportingObserver object instance, which can be used to collect and access reports.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver.ReportingObserver - MDN</a>
+   */
   public ReportingObserver(@Nonnull final ReportingObserverCallback callback,
       @Nonnull final ReportingObserverOptions options) {
   }
 
+  /**
+   * The ReportingObserver() constructor of the Reporting API creates a new ReportingObserver object instance, which can be used to collect and access reports.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver.ReportingObserver - MDN</a>
+   */
   public ReportingObserver(@Nonnull final ReportingObserverCallback callback) {
   }
 

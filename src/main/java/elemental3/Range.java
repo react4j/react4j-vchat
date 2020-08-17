@@ -31,6 +31,11 @@ public class Range extends AbstractRange {
   @JsOverlay
   public static final int START_TO_START = 0;
 
+  /**
+   * The Range() constructor returns a newly created Range object whose start and end is the global Document object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/Range">Range.Range - MDN</a>
+   */
   public Range() {
   }
 

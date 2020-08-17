@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "TextEncoder"
 )
 public class TextEncoder {
+  /**
+   * The TextEncoder() constructor returns a newly created utf-8 TextEncoder object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder">TextEncoder.TextEncoder - MDN</a>
+   */
   public TextEncoder() {
   }
 

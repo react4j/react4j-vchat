@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "XRReferenceSpaceEvent"
 )
 public class XRReferenceSpaceEvent extends Event {
+  /**
+   * The XRReferenceSpaceEvent() constructor is used to create a new XRReferenceSpaceEvent object, which represents an event regarding the state of a WebXR reference space object, XRReferenceSpace.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent">XRReferenceSpaceEvent.XRReferenceSpaceEvent - MDN</a>
+   */
   public XRReferenceSpaceEvent(@Nonnull final String type,
       @Nonnull final XRReferenceSpaceEventInit eventInitDict) {
     super( null );

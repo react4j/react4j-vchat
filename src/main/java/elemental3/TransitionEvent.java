@@ -18,11 +18,21 @@ import jsinterop.annotations.JsType;
     name = "TransitionEvent"
 )
 public class TransitionEvent extends Event {
+  /**
+   * The TransitionEvent() constructor returns a newly created TransitionEvent, representing an event in relation with an transition.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/TransitionEvent">TransitionEvent.TransitionEvent - MDN</a>
+   */
   public TransitionEvent(@Nonnull final String type,
       @Nonnull final TransitionEventInit transitionEventInitDict) {
     super( null );
   }
 
+  /**
+   * The TransitionEvent() constructor returns a newly created TransitionEvent, representing an event in relation with an transition.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/TransitionEvent">TransitionEvent.TransitionEvent - MDN</a>
+   */
   public TransitionEvent(@Nonnull final String type) {
     super( null );
   }

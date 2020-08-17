@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "DynamicsCompressorNode"
 )
 public class DynamicsCompressorNode extends AudioNode {
+  /**
+   * The DynamicsCompressorNode() constructor creates a new DynamicsCompressorNode object which provides a compression effect, which lowers the volume of the loudest parts of the signal
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/DynamicsCompressorNode">DynamicsCompressorNode.DynamicsCompressorNode - MDN</a>
+   */
   public DynamicsCompressorNode(@Nonnull final BaseAudioContext context,
       @Nonnull final DynamicsCompressorOptions options) {
   }
 
+  /**
+   * The DynamicsCompressorNode() constructor creates a new DynamicsCompressorNode object which provides a compression effect, which lowers the volume of the loudest parts of the signal
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/DynamicsCompressorNode">DynamicsCompressorNode.DynamicsCompressorNode - MDN</a>
+   */
   public DynamicsCompressorNode(@Nonnull final BaseAudioContext context) {
   }
 

@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "AudioBuffer"
 )
 public class AudioBuffer {
+  /**
+   * The AudioBuffer constructor of the Web Audio API creates a new AudioBuffer object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/AudioBuffer">AudioBuffer.AudioBuffer - MDN</a>
+   */
   public AudioBuffer(@Nonnull final AudioBufferOptions options) {
   }
 

@@ -44,10 +44,20 @@ public class MediaRecorder extends EventTarget {
   @Nullable
   public EventHandler onstop;
 
+  /**
+   * The MediaRecorder() constructor creates a new MediaRecorder object that will record a specified MediaStream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder">MediaRecorder.MediaRecorder - MDN</a>
+   */
   public MediaRecorder(@Nonnull final MediaStream stream,
       @Nonnull final MediaRecorderOptions options) {
   }
 
+  /**
+   * The MediaRecorder() constructor creates a new MediaRecorder object that will record a specified MediaStream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder">MediaRecorder.MediaRecorder - MDN</a>
+   */
   public MediaRecorder(@Nonnull final MediaStream stream) {
   }
 

@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "IIRFilterNode"
 )
 public class IIRFilterNode extends AudioNode {
+  /**
+   * The IIRFilterNode() constructor of the Web Audio API creates a new IIRFilterNode object which an AudioNode processor which implements a general infinite impulse response filter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IIRFilterNode/IIRFilterNode">IIRFilterNode.IIRFilterNode - MDN</a>
+   */
   public IIRFilterNode(@Nonnull final BaseAudioContext context,
       @Nonnull final IIRFilterOptions options) {
   }

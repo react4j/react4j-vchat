@@ -33,10 +33,20 @@ public class ConvolverNode extends AudioNode {
    */
   public boolean normalize;
 
+  /**
+   * The ConvolverNode() constructor of the Web Audio API creates a new ConvolverNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/ConvolverNode">ConvolverNode.ConvolverNode - MDN</a>
+   */
   public ConvolverNode(@Nonnull final BaseAudioContext context,
       @Nonnull final ConvolverOptions options) {
   }
 
+  /**
+   * The ConvolverNode() constructor of the Web Audio API creates a new ConvolverNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/ConvolverNode">ConvolverNode.ConvolverNode - MDN</a>
+   */
   public ConvolverNode(@Nonnull final BaseAudioContext context) {
   }
 }

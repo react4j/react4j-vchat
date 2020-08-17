@@ -31,10 +31,20 @@ public class KeyboardEvent extends UIEvent {
   @JsOverlay
   public static final int DOM_KEY_LOCATION_STANDARD = 0x00;
 
+  /**
+   * The KeyboardEvent() constructor creates a new KeyboardEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent">KeyboardEvent.KeyboardEvent - MDN</a>
+   */
   public KeyboardEvent(@Nonnull final String type, @Nonnull final KeyboardEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The KeyboardEvent() constructor creates a new KeyboardEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent">KeyboardEvent.KeyboardEvent - MDN</a>
+   */
   public KeyboardEvent(@Nonnull final String type) {
     super( null );
   }

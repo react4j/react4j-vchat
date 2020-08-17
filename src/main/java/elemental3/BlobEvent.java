@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "BlobEvent"
 )
 public class BlobEvent extends Event {
+  /**
+   * The BlobEvent() constructor returns a newly created BlobEvent object with an associated Blob.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent/BlobEvent">BlobEvent.BlobEvent - MDN</a>
+   */
   public BlobEvent(@Nonnull final String type, @Nonnull final BlobEventInit eventInitDict) {
     super( null );
   }

@@ -19,17 +19,37 @@ import jsinterop.annotations.JsType;
     name = "File"
 )
 public class File extends Blob {
+  /**
+   * The File() constructor creates a new File object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   */
   public File(@Nonnull final JsArray<BlobPart> fileBits, @Nonnull final String fileName,
       @Nonnull final FilePropertyBag options) {
   }
 
+  /**
+   * The File() constructor creates a new File object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   */
   public File(@Nonnull final BlobPart[] fileBits, @Nonnull final String fileName,
       @Nonnull final FilePropertyBag options) {
   }
 
+  /**
+   * The File() constructor creates a new File object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   */
   public File(@Nonnull final JsArray<BlobPart> fileBits, @Nonnull final String fileName) {
   }
 
+  /**
+   * The File() constructor creates a new File object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/File">File.File - MDN</a>
+   */
   public File(@Nonnull final BlobPart[] fileBits, @Nonnull final String fileName) {
   }
 

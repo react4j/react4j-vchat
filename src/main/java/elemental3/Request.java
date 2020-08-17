@@ -23,21 +23,51 @@ import jsinterop.base.Any;
     name = "Request"
 )
 public class Request {
+  /**
+   * The Request() constructor creates a new Request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request">Request.Request - MDN</a>
+   */
   public Request(@Nonnull final RequestInfo input, @Nonnull final RequestInit init) {
   }
 
+  /**
+   * The Request() constructor creates a new Request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request">Request.Request - MDN</a>
+   */
   public Request(@Nonnull final Request input, @Nonnull final RequestInit init) {
   }
 
+  /**
+   * The Request() constructor creates a new Request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request">Request.Request - MDN</a>
+   */
   public Request(@Nonnull final String input, @Nonnull final RequestInit init) {
   }
 
+  /**
+   * The Request() constructor creates a new Request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request">Request.Request - MDN</a>
+   */
   public Request(@Nonnull final RequestInfo input) {
   }
 
+  /**
+   * The Request() constructor creates a new Request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request">Request.Request - MDN</a>
+   */
   public Request(@Nonnull final Request input) {
   }
 
+  /**
+   * The Request() constructor creates a new Request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/Request">Request.Request - MDN</a>
+   */
   public Request(@Nonnull final String input) {
   }
 

@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "MediaElementAudioSourceNode"
 )
 public class MediaElementAudioSourceNode extends AudioNode {
+  /**
+   * The MediaElementAudioSourceNode() constructor creates a new MediaElementAudioSourceNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode">MediaElementAudioSourceNode.MediaElementAudioSourceNode - MDN</a>
+   */
   public MediaElementAudioSourceNode(@Nonnull final AudioContext context,
       @Nonnull final MediaElementAudioSourceOptions options) {
   }

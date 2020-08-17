@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "TouchEvent"
 )
 public class TouchEvent extends UIEvent {
+  /**
+   * The TouchEvent() constructor creates a new TouchEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/TouchEvent">TouchEvent.TouchEvent - MDN</a>
+   */
   public TouchEvent(@Nonnull final String type, @Nonnull final TouchEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The TouchEvent() constructor creates a new TouchEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/TouchEvent">TouchEvent.TouchEvent - MDN</a>
+   */
   public TouchEvent(@Nonnull final String type) {
     super( null );
   }

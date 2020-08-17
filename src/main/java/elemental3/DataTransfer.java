@@ -25,6 +25,11 @@ public class DataTransfer {
   @Nonnull
   public String effectAllowed;
 
+  /**
+   * The DataTransfer constructor creates a new DataTransfer object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer">DataTransfer.DataTransfer - MDN</a>
+   */
   public DataTransfer() {
   }
 

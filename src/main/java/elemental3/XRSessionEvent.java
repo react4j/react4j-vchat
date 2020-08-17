@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "XRSessionEvent"
 )
 public class XRSessionEvent extends Event {
+  /**
+   * The WebXR Device API's XRSessionEvent() constructor creates and returns a new XRSessionEvent object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent">XRSessionEvent.XRSessionEvent - MDN</a>
+   */
   public XRSessionEvent(@Nonnull final String type,
       @Nonnull final XRSessionEventInit eventInitDict) {
     super( null );

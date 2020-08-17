@@ -18,11 +18,21 @@ import jsinterop.annotations.JsType;
     name = "CompositionEvent"
 )
 public class CompositionEvent extends UIEvent {
+  /**
+   * The CompositionEvent() constructor creates a new CompositionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/CompositionEvent">CompositionEvent.CompositionEvent - MDN</a>
+   */
   public CompositionEvent(@Nonnull final String type,
       @Nonnull final CompositionEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The CompositionEvent() constructor creates a new CompositionEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/CompositionEvent">CompositionEvent.CompositionEvent - MDN</a>
+   */
   public CompositionEvent(@Nonnull final String type) {
     super( null );
   }

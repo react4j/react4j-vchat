@@ -63,6 +63,11 @@ public class FileReader extends EventTarget {
   @Nullable
   public ProgressEventHandler onprogress;
 
+  /**
+   * The FileReader() constructor creates a new FileReader.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/FileReader">FileReader.FileReader - MDN</a>
+   */
   public FileReader() {
   }
 

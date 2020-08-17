@@ -18,11 +18,21 @@ import jsinterop.annotations.JsType;
     name = "RTCDTMFToneChangeEvent"
 )
 public class RTCDTMFToneChangeEvent extends Event {
+  /**
+   * The RTCDTMFToneChangeEvent() constructor creates a new RTCDTMFToneChangeEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent">RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent - MDN</a>
+   */
   public RTCDTMFToneChangeEvent(@Nonnull final String type,
       @Nonnull final RTCDTMFToneChangeEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The RTCDTMFToneChangeEvent() constructor creates a new RTCDTMFToneChangeEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent">RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent - MDN</a>
+   */
   public RTCDTMFToneChangeEvent(@Nonnull final String type) {
     super( null );
   }

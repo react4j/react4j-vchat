@@ -48,10 +48,20 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode {
    */
   public double loopStart;
 
+  /**
+   * The AudioBufferSourceNode() constructor creates a new AudioBufferSourceNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/AudioBufferSourceNode">AudioBufferSourceNode.AudioBufferSourceNode - MDN</a>
+   */
   public AudioBufferSourceNode(@Nonnull final BaseAudioContext context,
       @Nonnull final AudioBufferSourceOptions options) {
   }
 
+  /**
+   * The AudioBufferSourceNode() constructor creates a new AudioBufferSourceNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/AudioBufferSourceNode">AudioBufferSourceNode.AudioBufferSourceNode - MDN</a>
+   */
   public AudioBufferSourceNode(@Nonnull final BaseAudioContext context) {
   }
 

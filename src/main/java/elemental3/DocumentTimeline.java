@@ -17,9 +17,19 @@ import jsinterop.annotations.JsType;
     name = "DocumentTimeline"
 )
 public class DocumentTimeline extends AnimationTimeline {
+  /**
+   * The DocumentTimeline() constructor of the Web Animations API creates a new instance of the DocumentTimeline object associated with the active document of the current browsing context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentTimeline/DocumentTimeline">DocumentTimeline.DocumentTimeline - MDN</a>
+   */
   public DocumentTimeline(@Nonnull final DocumentTimelineOptions options) {
   }
 
+  /**
+   * The DocumentTimeline() constructor of the Web Animations API creates a new instance of the DocumentTimeline object associated with the active document of the current browsing context.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentTimeline/DocumentTimeline">DocumentTimeline.DocumentTimeline - MDN</a>
+   */
   public DocumentTimeline() {
   }
 }

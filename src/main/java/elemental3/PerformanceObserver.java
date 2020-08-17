@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "PerformanceObserver"
 )
 public class PerformanceObserver {
+  /**
+   * The PerformanceObserver() constructor creates a new PerformanceObserver object with the given observer callback. The observer callback is invoked when performance entry events are recorded for the entry types that have been registered, via the observe() method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/PerformanceObserver">PerformanceObserver.PerformanceObserver - MDN</a>
+   */
   public PerformanceObserver(@Nonnull final PerformanceObserverCallback callback) {
   }
 

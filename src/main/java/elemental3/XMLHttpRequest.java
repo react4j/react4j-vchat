@@ -78,6 +78,11 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    */
   public boolean withCredentials;
 
+  /**
+   * The XMLHttpRequest() constructor creates a new XMLHttpRequest.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest">XMLHttpRequest.XMLHttpRequest - MDN</a>
+   */
   public XMLHttpRequest() {
   }
 

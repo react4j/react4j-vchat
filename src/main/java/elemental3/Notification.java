@@ -34,9 +34,19 @@ public class Notification extends EventTarget {
   @Nullable
   public EventHandler onshow;
 
+  /**
+   * The Notification() constructor creates a new Notification object instance, which represents a user notification.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification">Notification.Notification - MDN</a>
+   */
   public Notification(@Nonnull final String title, @Nonnull final NotificationOptions options) {
   }
 
+  /**
+   * The Notification() constructor creates a new Notification object instance, which represents a user notification.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification">Notification.Notification - MDN</a>
+   */
   public Notification(@Nonnull final String title) {
   }
 

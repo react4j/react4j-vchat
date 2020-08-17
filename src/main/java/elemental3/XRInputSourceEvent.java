@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "XRInputSourceEvent"
 )
 public class XRInputSourceEvent extends Event {
+  /**
+   * The XRInputSourceEvent() constructor creates and returns a new XRInputSourceEvent object describing an event (state change) which has occurred on a WebXR user input device represented by an XRInputSource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/XRInputSourceEvent">XRInputSourceEvent.XRInputSourceEvent - MDN</a>
+   */
   public XRInputSourceEvent(@Nonnull final String type,
       @Nonnull final XRInputSourceEventInit eventInitDict) {
     super( null );

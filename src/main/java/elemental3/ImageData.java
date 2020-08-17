@@ -19,12 +19,27 @@ import jsinterop.annotations.JsType;
     name = "ImageData"
 )
 public class ImageData {
+  /**
+   * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   */
   public ImageData(final int sw, final int sh) {
   }
 
+  /**
+   * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   */
   public ImageData(@Nonnull final Uint8ClampedArray data, final int sw, final int sh) {
   }
 
+  /**
+   * The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData">ImageData.ImageData - MDN</a>
+   */
   public ImageData(@Nonnull final Uint8ClampedArray data, final int sw) {
   }
 

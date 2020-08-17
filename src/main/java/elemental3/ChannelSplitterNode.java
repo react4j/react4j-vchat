@@ -17,10 +17,20 @@ import jsinterop.annotations.JsType;
     name = "ChannelSplitterNode"
 )
 public class ChannelSplitterNode extends AudioNode {
+  /**
+   * The ChannelSplitterNode() constructor of the Web Audio API creates a new ChannelSplitterNode object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChannelSplitterNode/ChannelSplitterNode">ChannelSplitterNode.ChannelSplitterNode - MDN</a>
+   */
   public ChannelSplitterNode(@Nonnull final BaseAudioContext context,
       @Nonnull final ChannelSplitterOptions options) {
   }
 
+  /**
+   * The ChannelSplitterNode() constructor of the Web Audio API creates a new ChannelSplitterNode object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChannelSplitterNode/ChannelSplitterNode">ChannelSplitterNode.ChannelSplitterNode - MDN</a>
+   */
   public ChannelSplitterNode(@Nonnull final BaseAudioContext context) {
   }
 }

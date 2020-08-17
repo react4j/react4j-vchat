@@ -22,10 +22,20 @@ public class BiquadFilterNode extends AudioNode {
   @Nonnull
   public String type;
 
+  /**
+   * The BiquadFilterNode() constructor of the Web Audio API creates a new BiquadFilterNode object, which represents a simple low-order filter, and is created using the AudioContext.createBiquadFilter() method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/BiquadFilterNode">BiquadFilterNode.BiquadFilterNode - MDN</a>
+   */
   public BiquadFilterNode(@Nonnull final BaseAudioContext context,
       @Nonnull final BiquadFilterOptions options) {
   }
 
+  /**
+   * The BiquadFilterNode() constructor of the Web Audio API creates a new BiquadFilterNode object, which represents a simple low-order filter, and is created using the AudioContext.createBiquadFilter() method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/BiquadFilterNode">BiquadFilterNode.BiquadFilterNode - MDN</a>
+   */
   public BiquadFilterNode(@Nonnull final BaseAudioContext context) {
   }
 

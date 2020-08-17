@@ -19,10 +19,20 @@ import jsinterop.annotations.JsType;
     name = "TrackEvent"
 )
 public class TrackEvent extends Event {
+  /**
+   * The TrackEvent() constructor creates and returns a new TrackEvent object describing an event which occurred on a list of tracks (AudioTrackList, VideoTrackList, or TextTrackList).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/TrackEvent">TrackEvent.TrackEvent - MDN</a>
+   */
   public TrackEvent(@Nonnull final String type, @Nonnull final TrackEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The TrackEvent() constructor creates and returns a new TrackEvent object describing an event which occurred on a list of tracks (AudioTrackList, VideoTrackList, or TextTrackList).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/TrackEvent">TrackEvent.TrackEvent - MDN</a>
+   */
   public TrackEvent(@Nonnull final String type) {
     super( null );
   }

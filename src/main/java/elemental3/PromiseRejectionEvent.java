@@ -21,6 +21,11 @@ import jsinterop.base.Any;
     name = "PromiseRejectionEvent"
 )
 public class PromiseRejectionEvent extends Event {
+  /**
+   * The PromiseRejectionEvent() constructor returns a newly created PromiseRejectionEvent, which represents events fired when a JavaScript Promise is rejected.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/PromiseRejectionEvent">PromiseRejectionEvent.PromiseRejectionEvent - MDN</a>
+   */
   public PromiseRejectionEvent(@Nonnull final String type,
       @Nonnull final PromiseRejectionEventInit eventInitDict) {
     super( null );

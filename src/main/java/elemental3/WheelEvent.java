@@ -28,10 +28,20 @@ public class WheelEvent extends MouseEvent {
   @JsOverlay
   public static final int DOM_DELTA_PIXEL = 0x00;
 
+  /**
+   * The WheelEvent() constructor returns a newly created WheelEvent object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent">WheelEvent.WheelEvent - MDN</a>
+   */
   public WheelEvent(@Nonnull final String type, @Nonnull final WheelEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The WheelEvent() constructor returns a newly created WheelEvent object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent">WheelEvent.WheelEvent - MDN</a>
+   */
   public WheelEvent(@Nonnull final String type) {
     super( null );
   }

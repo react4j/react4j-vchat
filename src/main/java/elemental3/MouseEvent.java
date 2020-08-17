@@ -19,10 +19,20 @@ import jsinterop.annotations.JsType;
     name = "MouseEvent"
 )
 public class MouseEvent extends UIEvent {
+  /**
+   * The MouseEvent() constructor creates a new MouseEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent">MouseEvent.MouseEvent - MDN</a>
+   */
   public MouseEvent(@Nonnull final String type, @Nonnull final MouseEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The MouseEvent() constructor creates a new MouseEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent">MouseEvent.MouseEvent - MDN</a>
+   */
   public MouseEvent(@Nonnull final String type) {
     super( null );
   }

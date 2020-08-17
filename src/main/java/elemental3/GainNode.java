@@ -18,9 +18,19 @@ import jsinterop.annotations.JsType;
     name = "GainNode"
 )
 public class GainNode extends AudioNode {
+  /**
+   * The GainNode() constructor of the Web Audio API creates a new GainNode object which an AudioNode that represents a change in volume.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GainNode/GainNode">GainNode.GainNode - MDN</a>
+   */
   public GainNode(@Nonnull final BaseAudioContext context, @Nonnull final GainOptions options) {
   }
 
+  /**
+   * The GainNode() constructor of the Web Audio API creates a new GainNode object which an AudioNode that represents a change in volume.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GainNode/GainNode">GainNode.GainNode - MDN</a>
+   */
   public GainNode(@Nonnull final BaseAudioContext context) {
   }
 

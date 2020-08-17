@@ -21,18 +21,43 @@ import jsinterop.annotations.JsType;
     name = "Blob"
 )
 public class Blob {
+  /**
+   * The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob">Blob.Blob - MDN</a>
+   */
   public Blob(@Nonnull final JsArray<BlobPart> blobParts, @Nonnull final BlobPropertyBag options) {
   }
 
+  /**
+   * The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob">Blob.Blob - MDN</a>
+   */
   public Blob(@Nonnull final BlobPart[] blobParts, @Nonnull final BlobPropertyBag options) {
   }
 
+  /**
+   * The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob">Blob.Blob - MDN</a>
+   */
   public Blob(@Nonnull final JsArray<BlobPart> blobParts) {
   }
 
+  /**
+   * The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob">Blob.Blob - MDN</a>
+   */
   public Blob(@Nonnull final BlobPart[] blobParts) {
   }
 
+  /**
+   * The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob">Blob.Blob - MDN</a>
+   */
   public Blob() {
   }
 

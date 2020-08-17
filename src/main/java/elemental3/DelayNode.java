@@ -18,9 +18,19 @@ import jsinterop.annotations.JsType;
     name = "DelayNode"
 )
 public class DelayNode extends AudioNode {
+  /**
+   * The DelayNode() constructor of the Web Audio API creates a new DelayNode object with a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data, and its propagation to the output.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/DelayNode">DelayNode.DelayNode - MDN</a>
+   */
   public DelayNode(@Nonnull final BaseAudioContext context, @Nonnull final DelayOptions options) {
   }
 
+  /**
+   * The DelayNode() constructor of the Web Audio API creates a new DelayNode object with a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data, and its propagation to the output.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/DelayNode">DelayNode.DelayNode - MDN</a>
+   */
   public DelayNode(@Nonnull final BaseAudioContext context) {
   }
 

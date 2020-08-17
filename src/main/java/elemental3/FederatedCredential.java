@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "FederatedCredential"
 )
 public class FederatedCredential extends Credential {
+  /**
+   * The FederatedCredential constructor creates a new FederatedCredential object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential/FederatedCredential">FederatedCredential.FederatedCredential - MDN</a>
+   */
   public FederatedCredential(@Nonnull final FederatedCredentialInit data) {
   }
 

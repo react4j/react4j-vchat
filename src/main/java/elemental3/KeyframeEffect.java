@@ -43,28 +43,63 @@ public class KeyframeEffect extends AnimationEffect {
   @Nullable
   public ElementOrCSSPseudoElementUnion target;
 
+  /**
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect">KeyframeEffect.KeyframeEffect - MDN</a>
+   */
   public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes,
       final double options) {
   }
 
+  /**
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect">KeyframeEffect.KeyframeEffect - MDN</a>
+   */
   public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes,
       final double options) {
   }
 
+  /**
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect">KeyframeEffect.KeyframeEffect - MDN</a>
+   */
   public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes,
       @Nonnull final KeyframeEffectOptions options) {
   }
 
+  /**
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect">KeyframeEffect.KeyframeEffect - MDN</a>
+   */
   public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes,
       @Nonnull final KeyframeEffectOptions options) {
   }
 
+  /**
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect">KeyframeEffect.KeyframeEffect - MDN</a>
+   */
   public KeyframeEffect(@Nonnull final Element target, @Nullable final Object keyframes) {
   }
 
+  /**
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect">KeyframeEffect.KeyframeEffect - MDN</a>
+   */
   public KeyframeEffect(@Nonnull final CSSPseudoElement target, @Nullable final Object keyframes) {
   }
 
+  /**
+   * The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect">KeyframeEffect.KeyframeEffect - MDN</a>
+   */
   public KeyframeEffect(@Nonnull final KeyframeEffect source) {
   }
 

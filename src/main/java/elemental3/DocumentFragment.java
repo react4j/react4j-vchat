@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "DocumentFragment"
 )
 public class DocumentFragment extends Node {
+  /**
+   * The DocumentFragment() constructor returns a new, empty DocumentFragment object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/DocumentFragment">DocumentFragment.DocumentFragment - MDN</a>
+   */
   public DocumentFragment() {
   }
 

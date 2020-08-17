@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "StereoPannerNode"
 )
 public class StereoPannerNode extends AudioNode {
+  /**
+   * The StereoPannerNode() constructor of the Web Audio API creates a new StereoPannerNode object which is an AudioNode that represents a simple stereo panner node that can be used to pan an audio stream left or right.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode/StereoPannerNode">StereoPannerNode.StereoPannerNode - MDN</a>
+   */
   public StereoPannerNode(@Nonnull final BaseAudioContext context,
       @Nonnull final StereoPannerOptions options) {
   }
 
+  /**
+   * The StereoPannerNode() constructor of the Web Audio API creates a new StereoPannerNode object which is an AudioNode that represents a simple stereo panner node that can be used to pan an audio stream left or right.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode/StereoPannerNode">StereoPannerNode.StereoPannerNode - MDN</a>
+   */
   public StereoPannerNode(@Nonnull final BaseAudioContext context) {
   }
 

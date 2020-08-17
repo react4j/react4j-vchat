@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "MediaStreamTrackEvent"
 )
 public class MediaStreamTrackEvent extends Event {
+  /**
+   * The MediaStreamTrackEvent() constructor returns a newly created MediaStreamTrackEvent object, which represents an event announcing that a MediaStreamTrack has been added to or removed from a MediaStream.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent">MediaStreamTrackEvent.MediaStreamTrackEvent - MDN</a>
+   */
   public MediaStreamTrackEvent(@Nonnull final String type,
       @Nonnull final MediaStreamTrackEventInit eventInitDict) {
     super( null );

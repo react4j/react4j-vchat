@@ -19,9 +19,19 @@ import jsinterop.annotations.JsType;
     name = "Text"
 )
 public class Text extends CharacterData {
+  /**
+   * The Text() constructor returns a newly created Text object with the optional DOMString given in parameter as its textual content.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/Text">Text.Text - MDN</a>
+   */
   public Text(@Nonnull final String data) {
   }
 
+  /**
+   * The Text() constructor returns a newly created Text object with the optional DOMString given in parameter as its textual content.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Text/Text">Text.Text - MDN</a>
+   */
   public Text() {
   }
 

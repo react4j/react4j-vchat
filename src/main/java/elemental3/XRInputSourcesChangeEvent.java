@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "XRInputSourcesChangeEvent"
 )
 public class XRInputSourcesChangeEvent extends Event {
+  /**
+   * The XRInputSourcesChangeEvent() constructor creates and returns a new XRInputSourcesChangeEvent object, representing an update to the list of available WebXR input devices.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent">XRInputSourcesChangeEvent.XRInputSourcesChangeEvent - MDN</a>
+   */
   public XRInputSourcesChangeEvent(@Nonnull final String type,
       @Nonnull final XRInputSourcesChangeEventInit eventInitDict) {
     super( null );

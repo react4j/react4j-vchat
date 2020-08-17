@@ -18,11 +18,21 @@ import jsinterop.annotations.JsType;
     name = "AnimationEvent"
 )
 public class AnimationEvent extends Event {
+  /**
+   * The AnimationEvent() constructor returns a newly created AnimationEvent, representing an event in relation with an animation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent/AnimationEvent">AnimationEvent.AnimationEvent - MDN</a>
+   */
   public AnimationEvent(@Nonnull final String type,
       @Nonnull final AnimationEventInit animationEventInitDict) {
     super( null );
   }
 
+  /**
+   * The AnimationEvent() constructor returns a newly created AnimationEvent, representing an event in relation with an animation.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent/AnimationEvent">AnimationEvent.AnimationEvent - MDN</a>
+   */
   public AnimationEvent(@Nonnull final String type) {
     super( null );
   }

@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "AbortController"
 )
 public class AbortController {
+  /**
+   * The AbortController() constructor creates a new AbortController object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController/AbortController">AbortController.AbortController - MDN</a>
+   */
   public AbortController() {
   }
 

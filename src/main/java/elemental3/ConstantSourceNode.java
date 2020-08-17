@@ -18,10 +18,20 @@ import jsinterop.annotations.JsType;
     name = "ConstantSourceNode"
 )
 public class ConstantSourceNode extends AudioScheduledSourceNode {
+  /**
+   * The ConstantSourceNode() constructor creates a new ConstantSourceNode object instance, representing an audio source which constantly outputs samples whose values are always the same.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/ConstantSourceNode">ConstantSourceNode.ConstantSourceNode - MDN</a>
+   */
   public ConstantSourceNode(@Nonnull final BaseAudioContext context,
       @Nonnull final ConstantSourceOptions options) {
   }
 
+  /**
+   * The ConstantSourceNode() constructor creates a new ConstantSourceNode object instance, representing an audio source which constantly outputs samples whose values are always the same.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/ConstantSourceNode">ConstantSourceNode.ConstantSourceNode - MDN</a>
+   */
   public ConstantSourceNode(@Nonnull final BaseAudioContext context) {
   }
 

@@ -18,18 +18,43 @@ import jsinterop.annotations.JsType;
     name = "DOMPointReadOnly"
 )
 public class DOMPointReadOnly {
+  /**
+   * The DOMPointReadOnly() constructor returns a new DOMPointReadOnly object representing a point in 2D or 3D space, optionally with perspective, whose values cannot be altered by script code.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly">DOMPointReadOnly.DOMPointReadOnly - MDN</a>
+   */
   public DOMPointReadOnly(final double x, final double y, final double z, final double w) {
   }
 
+  /**
+   * The DOMPointReadOnly() constructor returns a new DOMPointReadOnly object representing a point in 2D or 3D space, optionally with perspective, whose values cannot be altered by script code.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly">DOMPointReadOnly.DOMPointReadOnly - MDN</a>
+   */
   public DOMPointReadOnly(final double x, final double y, final double z) {
   }
 
+  /**
+   * The DOMPointReadOnly() constructor returns a new DOMPointReadOnly object representing a point in 2D or 3D space, optionally with perspective, whose values cannot be altered by script code.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly">DOMPointReadOnly.DOMPointReadOnly - MDN</a>
+   */
   public DOMPointReadOnly(final double x, final double y) {
   }
 
+  /**
+   * The DOMPointReadOnly() constructor returns a new DOMPointReadOnly object representing a point in 2D or 3D space, optionally with perspective, whose values cannot be altered by script code.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly">DOMPointReadOnly.DOMPointReadOnly - MDN</a>
+   */
   public DOMPointReadOnly(final double x) {
   }
 
+  /**
+   * The DOMPointReadOnly() constructor returns a new DOMPointReadOnly object representing a point in 2D or 3D space, optionally with perspective, whose values cannot be altered by script code.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly">DOMPointReadOnly.DOMPointReadOnly - MDN</a>
+   */
   public DOMPointReadOnly() {
   }
 

@@ -48,10 +48,20 @@ public class AnalyserNode extends AudioNode {
    */
   public double smoothingTimeConstant;
 
+  /**
+   * The AnalyserNode constructor of the Web Audio API creates a new AnalyserNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/AnalyserNode">AnalyserNode.AnalyserNode - MDN</a>
+   */
   public AnalyserNode(@Nonnull final BaseAudioContext context,
       @Nonnull final AnalyserOptions options) {
   }
 
+  /**
+   * The AnalyserNode constructor of the Web Audio API creates a new AnalyserNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/AnalyserNode">AnalyserNode.AnalyserNode - MDN</a>
+   */
   public AnalyserNode(@Nonnull final BaseAudioContext context) {
   }
 

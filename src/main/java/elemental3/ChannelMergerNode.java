@@ -17,10 +17,20 @@ import jsinterop.annotations.JsType;
     name = "ChannelMergerNode"
 )
 public class ChannelMergerNode extends AudioNode {
+  /**
+   * The ChannelMergerNode() constructor creates a new ChannelMergerNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChannelMergerNode/ChannelMergerNode">ChannelMergerNode.ChannelMergerNode - MDN</a>
+   */
   public ChannelMergerNode(@Nonnull final BaseAudioContext context,
       @Nonnull final ChannelMergerOptions options) {
   }
 
+  /**
+   * The ChannelMergerNode() constructor creates a new ChannelMergerNode object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ChannelMergerNode/ChannelMergerNode">ChannelMergerNode.ChannelMergerNode - MDN</a>
+   */
   public ChannelMergerNode(@Nonnull final BaseAudioContext context) {
   }
 }

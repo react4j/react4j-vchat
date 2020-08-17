@@ -19,10 +19,20 @@ import jsinterop.annotations.JsType;
     name = "SubmitEvent"
 )
 public class SubmitEvent extends Event {
+  /**
+   * The SubmitEvent() constructor creates and returns a new SubmitEvent object, which is used to represent a submit event fired at an HTML form.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent/SubmitEvent">SubmitEvent.SubmitEvent - MDN</a>
+   */
   public SubmitEvent(@Nonnull final String type, @Nonnull final SubmitEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The SubmitEvent() constructor creates and returns a new SubmitEvent object, which is used to represent a submit event fired at an HTML form.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent/SubmitEvent">SubmitEvent.SubmitEvent - MDN</a>
+   */
   public SubmitEvent(@Nonnull final String type) {
     super( null );
   }

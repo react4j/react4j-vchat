@@ -48,13 +48,28 @@ public class Animation extends EventTarget {
   @Nullable
   public AnimationTimeline timeline;
 
+  /**
+   * The Animation() constructor of the Web Animations API returns a new Animation object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation">Animation.Animation - MDN</a>
+   */
   public Animation(@Nullable final AnimationEffect effect,
       @Nullable final AnimationTimeline timeline) {
   }
 
+  /**
+   * The Animation() constructor of the Web Animations API returns a new Animation object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation">Animation.Animation - MDN</a>
+   */
   public Animation(@Nullable final AnimationEffect effect) {
   }
 
+  /**
+   * The Animation() constructor of the Web Animations API returns a new Animation object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation">Animation.Animation - MDN</a>
+   */
   public Animation() {
   }
 

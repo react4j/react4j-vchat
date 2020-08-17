@@ -35,6 +35,11 @@ public class OffscreenCanvas extends EventTarget {
    */
   public int width;
 
+  /**
+   * The OffscreenCanvas() constructor returns a newly instantiated OffscreenCanvas object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas">OffscreenCanvas.OffscreenCanvas - MDN</a>
+   */
   public OffscreenCanvas(final int width, final int height) {
   }
 

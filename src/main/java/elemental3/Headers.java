@@ -20,18 +20,43 @@ import jsinterop.base.JsPropertyMap;
     name = "Headers"
 )
 public class Headers {
+  /**
+   * The Headers() constructor creates a new Headers object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers">Headers.Headers - MDN</a>
+   */
   public Headers(@Nonnull final HeadersInit init) {
   }
 
+  /**
+   * The Headers() constructor creates a new Headers object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers">Headers.Headers - MDN</a>
+   */
   public Headers(@Nonnull final JsArray<JsArray<String>> init) {
   }
 
+  /**
+   * The Headers() constructor creates a new Headers object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers">Headers.Headers - MDN</a>
+   */
   public Headers(@Nonnull final JsArray<String>[] init) {
   }
 
+  /**
+   * The Headers() constructor creates a new Headers object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers">Headers.Headers - MDN</a>
+   */
   public Headers(@Nonnull final JsPropertyMap<String> init) {
   }
 
+  /**
+   * The Headers() constructor creates a new Headers object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers">Headers.Headers - MDN</a>
+   */
   public Headers() {
   }
 

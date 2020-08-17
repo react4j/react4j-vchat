@@ -736,6 +736,11 @@ public class Document extends Node {
   @Nullable
   public ClipboardEventHandler onpaste;
 
+  /**
+   * The Document constructor creates a new Document object that is a web page loaded in the browser and serving as an entry point into the page's content.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/Document">Document.Document - MDN</a>
+   */
   public Document() {
   }
 

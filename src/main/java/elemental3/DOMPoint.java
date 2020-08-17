@@ -45,18 +45,43 @@ public class DOMPoint extends DOMPointReadOnly {
    */
   public double z;
 
+  /**
+   * The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/DOMPoint">DOMPoint.DOMPoint - MDN</a>
+   */
   public DOMPoint(final double x, final double y, final double z, final double w) {
   }
 
+  /**
+   * The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/DOMPoint">DOMPoint.DOMPoint - MDN</a>
+   */
   public DOMPoint(final double x, final double y, final double z) {
   }
 
+  /**
+   * The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/DOMPoint">DOMPoint.DOMPoint - MDN</a>
+   */
   public DOMPoint(final double x, final double y) {
   }
 
+  /**
+   * The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/DOMPoint">DOMPoint.DOMPoint - MDN</a>
+   */
   public DOMPoint(final double x) {
   }
 
+  /**
+   * The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/DOMPoint">DOMPoint.DOMPoint - MDN</a>
+   */
   public DOMPoint() {
   }
 

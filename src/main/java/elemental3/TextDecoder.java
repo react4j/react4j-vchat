@@ -29,12 +29,27 @@ import jsinterop.annotations.JsType;
     name = "TextDecoder"
 )
 public class TextDecoder {
+  /**
+   * The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder">TextDecoder.TextDecoder - MDN</a>
+   */
   public TextDecoder(@Nonnull final String label, @Nonnull final TextDecoderOptions options) {
   }
 
+  /**
+   * The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder">TextDecoder.TextDecoder - MDN</a>
+   */
   public TextDecoder(@Nonnull final String label) {
   }
 
+  /**
+   * The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder">TextDecoder.TextDecoder - MDN</a>
+   */
   public TextDecoder() {
   }
 

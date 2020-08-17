@@ -18,11 +18,21 @@ import jsinterop.annotations.JsType;
     name = "SecurityPolicyViolationEvent"
 )
 public class SecurityPolicyViolationEvent extends Event {
+  /**
+   * The SecurityPolicyViolationEvent constructor creates a new SecurityPolicyViolationEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent">SecurityPolicyViolationEvent.SecurityPolicyViolationEvent - MDN</a>
+   */
   public SecurityPolicyViolationEvent(@Nonnull final String type,
       @Nonnull final SecurityPolicyViolationEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The SecurityPolicyViolationEvent constructor creates a new SecurityPolicyViolationEvent object instance.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent">SecurityPolicyViolationEvent.SecurityPolicyViolationEvent - MDN</a>
+   */
   public SecurityPolicyViolationEvent(@Nonnull final String type) {
     super( null );
   }

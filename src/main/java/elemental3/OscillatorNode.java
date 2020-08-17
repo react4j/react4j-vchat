@@ -21,10 +21,20 @@ public class OscillatorNode extends AudioScheduledSourceNode {
   @Nonnull
   public String type;
 
+  /**
+   * The OscillatorNode() constructor of the Web Audio API creates a new OscillatorNode object which is an AudioNode that represents a periodic waveform, like a sine wave, optionally setting the node's properties' values to match values in a specified object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/OscillatorNode">OscillatorNode.OscillatorNode - MDN</a>
+   */
   public OscillatorNode(@Nonnull final BaseAudioContext context,
       @Nonnull final OscillatorOptions options) {
   }
 
+  /**
+   * The OscillatorNode() constructor of the Web Audio API creates a new OscillatorNode object which is an AudioNode that represents a periodic waveform, like a sine wave, optionally setting the node's properties' values to match values in a specified object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/OscillatorNode">OscillatorNode.OscillatorNode - MDN</a>
+   */
   public OscillatorNode(@Nonnull final BaseAudioContext context) {
   }
 

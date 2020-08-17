@@ -9,7 +9,9 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 /**
- * The JSON object contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON.
+ * The JSON object contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON. It can't be called or constructed, and aside from its two method properties, it has no interesting functionality of its own.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON - MDN</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -24,9 +26,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value, @Nonnull StringifyReplacerFn replacer,
@@ -35,9 +35,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -46,9 +44,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -57,9 +53,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value, @Nonnull StringifyReplacerFn replacer,
@@ -68,9 +62,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -79,9 +71,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -90,9 +80,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value, @Nonnull StringifyReplacerFn replacer,
@@ -101,9 +89,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -112,9 +98,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -123,9 +107,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value, @Nonnull StringifyReplacerFn replacer);
@@ -133,9 +115,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -144,9 +124,7 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value,
@@ -155,29 +133,23 @@ public class JSON {
   /**
    * The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
    *
-   * @return A JSON string representing the given value.
-   * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
   public static native String stringify(@Nullable Any value);
 
   /**
-   * The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string.
+   * The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned.
    *
-   * @return The Object, Array, string, number, boolean, or null value corresponding to the given JSON text.
-   * @throw SyntaxError if the string to parse is not valid JSON.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse - MDN</a>
    */
   @Nullable
   public static native Any parse(@Nonnull String text, @Nullable ParseReviverFn reviver);
 
   /**
-   * The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string.
+   * The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned.
    *
-   * @return The Object, Array, string, number, boolean, or null value corresponding to the given JSON text.
-   * @throw SyntaxError if the string to parse is not valid JSON.
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse() - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse - MDN</a>
    */
   @Nullable
   public static native Any parse(@Nonnull String text);

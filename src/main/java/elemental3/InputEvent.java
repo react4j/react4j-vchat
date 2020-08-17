@@ -19,10 +19,20 @@ import jsinterop.annotations.JsType;
     name = "InputEvent"
 )
 public class InputEvent extends UIEvent {
+  /**
+   * The InputEvent() constructor creates a new InputEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/InputEvent">InputEvent.InputEvent - MDN</a>
+   */
   public InputEvent(@Nonnull final String type, @Nonnull final InputEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The InputEvent() constructor creates a new InputEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/InputEvent">InputEvent.InputEvent - MDN</a>
+   */
   public InputEvent(@Nonnull final String type) {
     super( null );
   }

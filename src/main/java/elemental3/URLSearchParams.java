@@ -20,18 +20,43 @@ import jsinterop.base.JsPropertyMap;
     name = "URLSearchParams"
 )
 public class URLSearchParams {
+  /**
+   * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
+   */
   public URLSearchParams(@Nonnull final JsArray<JsArray<String>> init) {
   }
 
+  /**
+   * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
+   */
   public URLSearchParams(@Nonnull final JsArray<String>[] init) {
   }
 
+  /**
+   * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
+   */
   public URLSearchParams(@Nonnull final JsPropertyMap<String> init) {
   }
 
+  /**
+   * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
+   */
   public URLSearchParams(@Nonnull final String init) {
   }
 
+  /**
+   * The URLSearchParams() constructor creates and returns a new URLSearchParams object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams">URLSearchParams.URLSearchParams - MDN</a>
+   */
   public URLSearchParams() {
   }
 

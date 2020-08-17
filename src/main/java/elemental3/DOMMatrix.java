@@ -64,15 +64,35 @@ public class DOMMatrix extends DOMMatrixReadOnly {
 
   public double m44;
 
+  /**
+   * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
+   */
   public DOMMatrix(@Nonnull final String init) {
   }
 
+  /**
+   * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
+   */
   public DOMMatrix(@Nonnull final JsArray<Double> init) {
   }
 
+  /**
+   * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
+   */
   public DOMMatrix(@Nonnull final Double[] init) {
   }
 
+  /**
+   * The DOMMatrix constructor creates a new DOMMatrix object which represents 4x4 matrices, suitable for 2D and 3D operations..
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix/DOMMatrix">DOMMatrix.DOMMatrix - MDN</a>
+   */
   public DOMMatrix() {
   }
 

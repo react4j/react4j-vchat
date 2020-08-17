@@ -18,6 +18,11 @@ import jsinterop.annotations.JsType;
     name = "MessageChannel"
 )
 public class MessageChannel {
+  /**
+   * The MessageChannel() constructor of the MessageChannel interface returns a new MessageChannel object with two new MessagePort objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/MessageChannel">MessageChannel.MessageChannel - MDN</a>
+   */
   public MessageChannel() {
   }
 

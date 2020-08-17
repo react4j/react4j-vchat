@@ -19,11 +19,21 @@ import jsinterop.annotations.JsType;
     name = "RTCPeerConnectionIceEvent"
 )
 public class RTCPeerConnectionIceEvent extends Event {
+  /**
+   * The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent">RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent - MDN</a>
+   */
   public RTCPeerConnectionIceEvent(@Nonnull final String type,
       @Nonnull final RTCPeerConnectionIceEventInit eventInitDict) {
     super( null );
   }
 
+  /**
+   * The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent">RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent - MDN</a>
+   */
   public RTCPeerConnectionIceEvent(@Nonnull final String type) {
     super( null );
   }
