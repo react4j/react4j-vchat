@@ -41,6 +41,11 @@ abstract class RoomModel
     UNKNOWN, HOST, GUEST
   }
 
+  enum ConnectionState
+  {
+    CONNECTING, OPEN, CLOSING, CLOSED, NOT_REQUESTED
+  }
+
   @Nonnull
   private final String _code;
   @Nullable
@@ -62,6 +67,16 @@ abstract class RoomModel
   {
     return _code;
   }
+
+  @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
+  @Nonnull
+  ConnectionState connectionState()
+  {
+    return null == _webSocket ? ConnectionState.NOT_REQUESTED : ConnectionState.values()[ _webSocket.readyState() ];
+  }
+
+  @ComputableValueRef
+  abstract ComputableValue<?> getConnectionStateComputableValue();
 
   @Observable
   @Nonnull
@@ -114,6 +129,7 @@ abstract class RoomModel
   {
     if ( _webSocket == event.currentTarget() )
     {
+      getConnectionStateComputableValue().reportPossiblyChanged();
       _webSocket = null;
     }
   }
@@ -123,6 +139,7 @@ abstract class RoomModel
   {
     if ( _webSocket == event.currentTarget() )
     {
+      getConnectionStateComputableValue().reportPossiblyChanged();
     }
   }
 
@@ -132,6 +149,7 @@ abstract class RoomModel
     if ( _webSocket == closeEvent.currentTarget() )
     {
       _webSocket = null;
+      getConnectionStateComputableValue().reportPossiblyChanged();
     }
   }
 
@@ -146,6 +164,7 @@ abstract class RoomModel
 
     if ( _webSocket == event.currentTarget() )
     {
+      getConnectionStateComputableValue().reportPossiblyChanged();
       final String command = message.getAsAny( "command" ).asString();
       if ( "create".equals( command ) )
       {
