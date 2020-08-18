@@ -68,7 +68,6 @@ abstract class RoomView
       return fragment( h2( "Service Offline" ),
                        p( "The chat service is offline at the moment. Try again later." ) );
     }
-    //h2( "Joining room..." )
     else if ( RoomModel.State.GUEST_CONNECTED == state )
     {
       return fragment( h2( "Ready to join?" ), p( "Request access to join the room." ), renderRequestAccessForm() );
