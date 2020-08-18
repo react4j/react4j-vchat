@@ -88,11 +88,11 @@ wss.on('connection', (ws, request) => {
           ws.send(JSON.stringify({ command: 'close' }));
           room.guests.forEach(other => {
             other.send(JSON.stringify({ command: 'close' }));
-            other.close(1005, 'Room closed');
+            other.close(1000, 'Room closed');
           });
           room.clients.forEach(other => {
             other.send(JSON.stringify({ command: 'close' }));
-            other.close(1005, 'Room closed');
+            other.close(1000, 'Room closed');
           });
           rooms[ws.roomCode] = undefined;
         } else {
