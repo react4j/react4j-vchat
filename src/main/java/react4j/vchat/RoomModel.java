@@ -200,6 +200,10 @@ abstract class RoomModel
   {
     if ( null != _webSocket )
     {
+      final JsPropertyMap<Object> message =
+        JsPropertyMap.of( "command", "request_access", "message", requestAccessMessage() );
+      //TODO: Remove Any
+      _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
     }
   }
 }
