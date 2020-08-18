@@ -1,6 +1,8 @@
 package react4j.vchat;
 
 import arez.ComputableValue;
+import arez.ObservableValue;
+import arez.SafeProcedure;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
 import arez.annotations.ComputableValueRef;
@@ -8,6 +10,7 @@ import arez.annotations.DepType;
 import arez.annotations.Feature;
 import arez.annotations.Memoize;
 import arez.annotations.Observable;
+import arez.annotations.ObservableValueRef;
 import elemental3.CloseEvent;
 import elemental3.Event;
 import elemental3.Global;
@@ -15,6 +18,8 @@ import elemental3.JSON;
 import elemental3.Location;
 import elemental3.MessageEvent;
 import elemental3.WebSocket;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -58,6 +63,8 @@ abstract class RoomModel
 
   @Nonnull
   private final String _code;
+  @Nonnull
+  private final List<AccessRequest> _pendingAccessRequest = new ArrayList<>();
   @Nullable
   private WebSocket _webSocket;
 
@@ -106,6 +113,16 @@ abstract class RoomModel
 
   abstract void setRequestAccessMessage( @Nonnull String message );
 
+  @Observable( expectSetter = false )
+  @Nonnull
+  List<AccessRequest> getPendingAccessRequests()
+  {
+    return _pendingAccessRequest;
+  }
+
+  @ObservableValueRef
+  abstract ObservableValue<?> getPendingAccessRequestsObservableValue();
+
   @Action
   void open()
   {
@@ -125,6 +142,7 @@ abstract class RoomModel
   {
     if ( null != _webSocket )
     {
+      _pendingAccessRequest.clear();
       //TODO: Send close? or do that on server
       _webSocket.close();
       _webSocket = null;
@@ -207,6 +225,15 @@ abstract class RoomModel
         setState( State.CONNECTED );
         Global.globalThis().console().log( Js.asAny( "setState CONNECTED as GUEST" ) );
       }
+      else if ( "request_access".equals( command ) )
+      {
+        final String id = message.getAsAny( "id" ).asString();
+        final String requestMessage = message.getAsAny( "message" ).asString();
+        _pendingAccessRequest.add( new AccessRequest( id, requestMessage ) );
+        getPendingAccessRequestsObservableValue().reportChanged();
+        Global.globalThis().console().log( Js.asAny( "request_access received for guest '" + id +
+                                                     "' with message '" + requestMessage + "'" ) );
+      }
     }
   }
 
@@ -219,6 +246,41 @@ abstract class RoomModel
         JsPropertyMap.of( "command", "request_access", "message", requestAccessMessage() );
       //TODO: Remove Any
       _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+    }
+  }
+
+  @Action
+  void acceptAccessRequest( @Nonnull final AccessRequest accessRequest )
+  {
+    processAccessRequest( accessRequest, () -> {
+      final JsPropertyMap<Object> message =
+        JsPropertyMap.of( "command", "approve_access", "id", accessRequest.getId() );
+      assert null != _webSocket;
+      //TODO: Remove Any
+      _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+    } );
+  }
+
+  @Action
+  void rejectAccessRequest( @Nonnull final AccessRequest accessRequest )
+  {
+    processAccessRequest( accessRequest, () -> {
+      final JsPropertyMap<Object> message =
+        JsPropertyMap.of( "command", "reject_access", "id", accessRequest.getId() );
+      assert null != _webSocket;
+      //TODO: Remove Any
+      _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+    } );
+  }
+
+  private void processAccessRequest( @Nonnull final AccessRequest accessRequest,
+                                     @Nonnull final SafeProcedure action )
+  {
+    if ( null != _webSocket && _pendingAccessRequest.remove( accessRequest ) )
+    {
+      _pendingAccessRequest.removeIf( a -> a.getId().equals( accessRequest.getId() ) );
+      getPendingAccessRequestsObservableValue().reportChanged();
+      action.call();
     }
   }
 }

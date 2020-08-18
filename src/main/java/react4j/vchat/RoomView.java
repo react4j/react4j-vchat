@@ -3,6 +3,7 @@ package react4j.vchat;
 import arez.annotations.CascadeDispose;
 import arez.annotations.PostConstruct;
 import elemental2.promise.Promise;
+import elemental3.Console;
 import elemental3.ConstrainULongRange;
 import elemental3.Global;
 import elemental3.HTMLInputElement;
@@ -11,11 +12,13 @@ import elemental3.MediaStreamConstraints;
 import elemental3.MediaTrackConstraints;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.base.Js;
 import react4j.ReactNode;
 import react4j.annotations.Input;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 import react4j.dom.events.FormEvent;
+import react4j.dom.events.MouseEvent;
 import react4j.dom.proptypes.html.AnchorProps;
 import react4j.dom.proptypes.html.BtnProps;
 import react4j.dom.proptypes.html.FormProps;
@@ -78,6 +81,22 @@ abstract class RoomView
       return fragment( h2( "Joining room" ),
                        p( "Waiting for host to allow access to the room." ) );
     }
+    else if ( RoomModel.State.JOINED == state &&
+              RoomModel.Role.HOST == _room.role() &&
+              !_room.getPendingAccessRequests().isEmpty() )
+    {
+      final AccessRequest accessRequest = _room.getPendingAccessRequests().get( 0 );
+      return fragment( h2( "Guest requests access" ),
+                       p( "A guest has sent you a message to join the room:" ),
+                       div( new HtmlProps().className( "request-message" ), accessRequest.getMessage() ),
+                       form( new FormProps().onSubmit( FormEvent::preventDefault ),
+                             button( new BtnProps().className( "primary-button" )
+                                       .onClick( e -> acceptRequest( e, accessRequest ) ), "Accept" ),
+                             button( new BtnProps().className( "primary-button" )
+                                       .onClick( e -> rejectRequest( e, accessRequest ) ), "Reject" )
+                       )
+      );
+    }
     else if ( RoomModel.State.JOINED == state )
     {
       return fragment( h2( "Joined room" ),
@@ -105,6 +124,18 @@ abstract class RoomView
     {
       return null;
     }
+  }
+
+  private void acceptRequest( @Nonnull final MouseEvent event, @Nonnull final AccessRequest accessRequest )
+  {
+    event.preventDefault();
+    _room.acceptAccessRequest( accessRequest );
+  }
+
+  private void rejectRequest( @Nonnull final MouseEvent event, @Nonnull final AccessRequest accessRequest )
+  {
+    event.preventDefault();
+    _room.rejectAccessRequest( accessRequest );
   }
 
   @Nonnull
