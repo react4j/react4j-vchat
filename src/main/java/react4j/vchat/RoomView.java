@@ -41,6 +41,7 @@ abstract class RoomView
   void postConstruct()
   {
     _room = RoomModel.create( roomCode() );
+    _room.open();
   }
 
   @Input( immutable = true )
@@ -58,44 +59,43 @@ abstract class RoomView
   private ReactNode renderMessageAreaContent()
   {
     final RoomModel.State state = _room.state();
-    if ( RoomModel.State.NOT_ASKED == state || RoomModel.State.CONNECTING == state )
+    if ( RoomModel.State.NOT_READY == state )
     {
       return fragment( h2( "Getting ready..." ),
                        p( "You'll be able to join in just a moment." ) );
     }
-    else if ( RoomModel.State.CONNECT_FAILED == state )
+    else if ( RoomModel.State.ERROR == state )
     {
       return fragment( h2( "Service Offline" ),
                        p( "The chat service is offline at the moment. Try again later." ) );
     }
-    else if ( RoomModel.State.GUEST_CONNECTED == state )
+    else if ( RoomModel.State.CONNECTED == state )
     {
       return fragment( h2( "Ready to join?" ), p( "Request access to join the room." ), renderRequestAccessForm() );
     }
-    else if ( RoomModel.State.GUEST_JOIN_REQUESTED == state )
+    else if ( RoomModel.State.JOIN_REQUESTED == state )
     {
       return fragment( h2( "Joining room" ),
                        p( "Waiting for host to allow access to the room." ) );
     }
-    else if ( RoomModel.State.GUEST_REJECTED == state )
+    else if ( RoomModel.State.JOINED == state )
+    {
+      return fragment( h2( "Joined room" ),
+                       p( "Joined room. Feel free to chat." ) );
+    }
+    else if ( RoomModel.State.JOIN_REJECTED == state )
     {
       return fragment( h2( "Access denied" ),
                        p( "The host denied access to the room. You can attempt to re-request access to join the room." ),
                        renderRequestAccessForm() );
     }
-    else if ( RoomModel.State.ROOM_CLOSED == state )
+    else if ( RoomModel.State.CLOSED == state )
     {
       return fragment( h2( "Room closed" ),
-                       p( "The room was closed." ),
+                       p( RoomModel.Role.HOST == _room.role() ? "You closed the room." : "The host closed the room." ),
                        a( new AnchorProps().className( "primary-button" ).href( "#" ), "Return to Home" ) );
     }
-    else if ( RoomModel.State.HOST_LEFT == state )
-    {
-      return fragment( h2( "Room closed" ),
-                       p( "The closed the room." ),
-                       renderRequestAccessForm() );
-    }
-    else if ( RoomModel.State.GUEST_LEFT == state )
+    else if ( RoomModel.State.LEFT == state )
     {
       return fragment( h2( "Left the room" ),
                        p( "You left the room. Request access to re-join the room." ),

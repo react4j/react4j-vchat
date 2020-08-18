@@ -11,28 +11,22 @@ abstract class RoomModel
 {
   enum State
   {
-    // Have not yet attempted to connect to the room server
-    NOT_ASKED,
-    // Started connection attempt to the server
-    CONNECTING,
-    // Failed to connect to the server
-    CONNECT_FAILED,
-    // Connected to the server and first one in so designated host
-    HOST_CONNECTED,
-    // Connected to the server as a guest but not yet attempted to join the chat
-    GUEST_CONNECTED,
+    // Have not established a connection to the signalling server
+    NOT_READY,
+    // Connected to the signalling server as a guest but not yet attempted to join the chat
+    CONNECTED,
     // Guest requested to join the the room, waiting for host acceptance or rejection
-    GUEST_JOIN_REQUESTED,
-    // Host has accepted guest and guest has joined the room
-    GUEST_JOINED,
-    // Host has rejected guest attempt to join the room
-    GUEST_REJECTED,
-    // Host has shutdown the room and thus the chat has been cancelled
-    ROOM_CLOSED,
-    // left the room as the host and thus other connections were disconnected
-    HOST_LEFT,
-    // left the room as a guest
-    GUEST_LEFT
+    JOIN_REQUESTED,
+    // Host has rejected guests attempt to join the room
+    JOIN_REJECTED,
+    // Joined the room as either a host or after being accepted by the host
+    JOINED,
+    // Host has closed the room and the chat has been terminated
+    CLOSED,
+    // Left the room
+    LEFT,
+    // An error occurred and the connection was closed
+    ERROR
   }
 
   // The role of the current user
@@ -130,6 +124,7 @@ abstract class RoomModel
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
+      setState( State.ERROR );
       _webSocket = null;
     }
   }
@@ -149,6 +144,11 @@ abstract class RoomModel
     if ( _webSocket == closeEvent.currentTarget() )
     {
       _webSocket = null;
+      final State state = state();
+      if ( State.LEFT != state && State.CLOSED != state && State.ERROR != state )
+      {
+        setState( State.CLOSED );
+      }
       getConnectionStateComputableValue().reportPossiblyChanged();
     }
   }
@@ -169,10 +169,12 @@ abstract class RoomModel
       if ( "create".equals( command ) )
       {
         setRole( Role.HOST );
+        setState( State.JOINED );
       }
       else if ( "connect".equals( command ) )
       {
         setRole( Role.GUEST );
+        setState( State.CONNECTED );
       }
     }
   }
