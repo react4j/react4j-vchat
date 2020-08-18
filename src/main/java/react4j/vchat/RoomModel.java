@@ -37,6 +37,8 @@ abstract class RoomModel
 
   @Nonnull
   private final String _code;
+  @Nullable
+  private WebSocket _webSocket;
 
   @Nonnull
   static RoomModel create( @Nonnull final String code )
@@ -68,7 +70,78 @@ abstract class RoomModel
   abstract void setRequestAccessMessage( @Nonnull String message );
 
   @Action
+  void open()
+  {
+    if ( null != _webSocket )
+    {
+      _webSocket.close();
+      _webSocket = null;
+    }
+    _webSocket = new WebSocket( deriveRoomUrl() );
+    getConnectionStateComputableValue().reportPossiblyChanged();
+    setRole( Role.UNKNOWN );
+    setState( State.NOT_READY );
+    _webSocket.onopen = this::onOpen;
+    _webSocket.onmessage = this::onMessage;
+    _webSocket.onclose = this::onClose;
+    _webSocket.onerror = this::onError;
+  }
+
+  @Nonnull
+  private String deriveRoomUrl()
+  {
+    final Location location = Global.globalThis().location();
+    final String protocol = "https".equals( location.protocol ) ? "wss" : "ws";
+    // For local development hardcode the port. In the future we should fix this
+    final int port = 3737;
+    return protocol + "://" + location.hostname + ":" + port + "/r/" + getRoomCode();
+  }
+
+  @Action
+  void onError( @Nonnull final Event event )
+  {
+    if ( _webSocket == event.currentTarget() )
+    {
+      _webSocket = null;
+    }
+  }
+
+  @Action
+  void onOpen( @Nonnull final Event event )
+  {
+    if ( _webSocket == event.currentTarget() )
+    {
+    }
+  }
+
+  @Action
+  void onClose( @Nonnull final CloseEvent closeEvent )
+  {
+    if ( _webSocket == closeEvent.currentTarget() )
+    {
+      _webSocket = null;
+    }
+  }
+
+  @Action
+  void onMessage( @Nonnull final MessageEvent event )
+  {
+    final Any data = event.data();
+    assert null != data;
+    final Any object = JSON.parse( data.cast() );
+    assert null != object;
+    final JsPropertyMap<Object> message = object.cast();
+
+    if ( _webSocket == event.currentTarget() )
+    {
+    }
+  }
+
+  @Action
   void requestAccess()
   {
+    if ( null != _webSocket )
+    {
+    }
   }
 }
