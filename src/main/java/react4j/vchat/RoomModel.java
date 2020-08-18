@@ -137,6 +137,7 @@ abstract class RoomModel
   @Action
   void onError( @Nonnull final Event event )
   {
+    Global.globalThis().console().log( Js.asAny( "Websocket.error" ), Js.asAny( event ) );
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
@@ -148,6 +149,7 @@ abstract class RoomModel
   @Action
   void onOpen( @Nonnull final Event event )
   {
+    Global.globalThis().console().log( Js.asAny( "Websocket.open" ), Js.asAny( event ) );
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
@@ -157,6 +159,7 @@ abstract class RoomModel
   @Action
   void onClose( @Nonnull final CloseEvent closeEvent )
   {
+    Global.globalThis().console().log( Js.asAny( "Websocket.close" ), Js.asAny( closeEvent ) );
     if ( _webSocket == closeEvent.currentTarget() )
     {
       _webSocket = null;
@@ -177,20 +180,24 @@ abstract class RoomModel
     final Any object = JSON.parse( data.cast() );
     assert null != object;
     final JsPropertyMap<Object> message = object.cast();
+    Global.globalThis().console().log( Js.asAny( "Websocket.message" ), Js.asAny( message ) );
 
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
       final String command = message.getAsAny( "command" ).asString();
+      Global.globalThis().console().log( Js.asAny( "Command: " + command ) );
       if ( "create".equals( command ) )
       {
         setRole( Role.HOST );
         setState( State.JOINED );
+        Global.globalThis().console().log( Js.asAny( "setState JOINED as HOST" ) );
       }
       else if ( "connect".equals( command ) )
       {
         setRole( Role.GUEST );
         setState( State.CONNECTED );
+        Global.globalThis().console().log( Js.asAny( "setState CONNECTED as GUEST" ) );
       }
     }
   }
