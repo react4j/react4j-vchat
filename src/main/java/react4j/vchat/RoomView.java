@@ -122,9 +122,8 @@ abstract class RoomView
                           .onChange( e -> _room.setRequestAccessMessage( getTargetValue( e ) ) )
                           .value( _room.requestAccessMessage() )
                           .maxLength( 30 )
-                          .required(),
-                        button( new BtnProps().className( "primary-button" ), "Request Access" )
-                 )
+                          .required() ),
+                 button( new BtnProps().className( "primary-button" ), "Request Access" )
     );
   }
 
