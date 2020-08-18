@@ -50,6 +50,9 @@ public class CSSRule {
   @JsOverlay
   public static final int KEYFRAME_RULE = 8;
 
+  @JsOverlay
+  public static final int SUPPORTS_RULE = 12;
+
   @Nonnull
   public String cssText;
 

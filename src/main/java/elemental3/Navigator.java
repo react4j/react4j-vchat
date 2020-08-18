@@ -354,6 +354,12 @@ public class Navigator {
 
   public native boolean vibrate(@Nonnull Double[] pattern);
 
+  @Nonnull
+  public native Promise<Void> share(@Nonnull ShareData data);
+
+  @Nonnull
+  public native Promise<Void> share();
+
   public native void registerProtocolHandler(@Nonnull String scheme, @Nonnull String url);
 
   public native void unregisterProtocolHandler(@Nonnull String scheme, @Nonnull String url);

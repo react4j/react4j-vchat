@@ -7,6 +7,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The RTCError interface describes an error which has occurred while handling WebRTC operations. It's based upon the standard DOMException interface that describes general DOM errors.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCError">RTCError - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -49,4 +54,10 @@ public class RTCError extends DOMException {
   )
   @Nullable
   public native Double sentAlert();
+
+  @JsProperty(
+      name = "httpRequestStatusCode"
+  )
+  @Nullable
+  public native Double httpRequestStatusCode();
 }

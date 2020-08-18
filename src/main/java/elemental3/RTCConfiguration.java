@@ -141,4 +141,19 @@ public interface RTCConfiguration {
     setRtcpMuxPolicy( rtcpMuxPolicy );
     return this;
   }
+
+  @JsProperty(
+      name = "peerIdentity"
+  )
+  String peerIdentity();
+
+  @JsProperty
+  void setPeerIdentity(@Nonnull String peerIdentity);
+
+  @JsOverlay
+  @Nonnull
+  default RTCConfiguration peerIdentity(@Nonnull final String peerIdentity) {
+    setPeerIdentity( peerIdentity );
+    return this;
+  }
 }

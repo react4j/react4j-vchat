@@ -97,4 +97,19 @@ public interface RTCErrorInit {
     setSentAlert( sentAlert );
     return this;
   }
+
+  @JsProperty(
+      name = "httpRequestStatusCode"
+  )
+  int httpRequestStatusCode();
+
+  @JsProperty
+  void setHttpRequestStatusCode(int httpRequestStatusCode);
+
+  @JsOverlay
+  @Nonnull
+  default RTCErrorInit httpRequestStatusCode(final int httpRequestStatusCode) {
+    setHttpRequestStatusCode( httpRequestStatusCode );
+    return this;
+  }
 }

@@ -90,4 +90,19 @@ public interface MediaStreamConstraints {
     setVideo( video );
     return this;
   }
+
+  @JsProperty(
+      name = "peerIdentity"
+  )
+  String peerIdentity();
+
+  @JsProperty
+  void setPeerIdentity(@Nonnull String peerIdentity);
+
+  @JsOverlay
+  @Nonnull
+  default MediaStreamConstraints peerIdentity(@Nonnull final String peerIdentity) {
+    setPeerIdentity( peerIdentity );
+    return this;
+  }
 }

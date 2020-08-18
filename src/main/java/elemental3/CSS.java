@@ -17,4 +17,8 @@ public final class CSS {
 
   @Nonnull
   public native String escape(@Nonnull String ident);
+
+  public native boolean supports(@Nonnull String property, @Nonnull String value);
+
+  public native boolean supports(@Nonnull String conditionText);
 }

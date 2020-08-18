@@ -45,7 +45,7 @@ public class RTCPeerConnection extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidateerror">RTCPeerConnection.onicecandidateerror - MDN</a>
    */
   @Nullable
-  public EventHandler onicecandidateerror;
+  public RTCPeerConnectionIceErrorEventHandler onicecandidateerror;
 
   /**
    * The RTCPeerConnection.oniceconnectionstatechange property is an event handler which specifies a function to be called when the iceconnectionstatechange event is fired on an RTCPeerConnection instance. This happens when the state of the connection's ICE agent, as represented by the iceConnectionState property, changes.
@@ -244,6 +244,29 @@ public class RTCPeerConnection extends EventTarget {
   )
   @Nullable
   public native RTCSctpTransport sctp();
+
+  @JsProperty(
+      name = "idpErrorInfo"
+  )
+  @Nullable
+  public native String idpErrorInfo();
+
+  @JsProperty(
+      name = "idpLoginUrl"
+  )
+  @Nullable
+  public native String idpLoginUrl();
+
+  /**
+   * The read-only RTCPeerConnection property peerIdentity returns a JavaScript Promise that resolves to an RTCIdentityAssertion which contains a DOMString identifying the remote peer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity">RTCPeerConnection.peerIdentity - MDN</a>
+   */
+  @JsProperty(
+      name = "peerIdentity"
+  )
+  @Nonnull
+  public native Promise<RTCIdentityAssertion> peerIdentity();
 
   /**
    * When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate().
@@ -532,6 +555,29 @@ public class RTCPeerConnection extends EventTarget {
   @Nonnull
   public native Promise<RTCStatsReport> getStats();
 
+  /**
+   * The RTCPeerConnection.getIdentityAssertion() method initiates the gathering of an identity assertion. This has an effect only if the signalingState is not "closed".
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion">RTCPeerConnection.getIdentityAssertion - MDN</a>
+   */
+  @Nonnull
+  public native Promise<String> getIdentityAssertion();
+
+  /**
+   * The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider">RTCPeerConnection.setIdentityProvider - MDN</a>
+   */
+  public native void setIdentityProvider(@Nonnull String provider,
+      @Nonnull RTCIdentityProviderOptions options);
+
+  /**
+   * The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider">RTCPeerConnection.setIdentityProvider - MDN</a>
+   */
+  public native void setIdentityProvider(@Nonnull String provider);
+
   @JsOverlay
   public final void addDatachannelListener(@Nonnull final RTCDataChannelEventListener callback,
       @Nonnull final AddEventListenerOptions options) {
@@ -602,6 +648,44 @@ public class RTCPeerConnection extends EventTarget {
   public final void removeIcecandidateListener(
       @Nonnull final RTCPeerConnectionIceEventListener callback) {
     removeEventListener( "icecandidate", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addIcecandidateerrorListener(
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "icecandidateerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIcecandidateerrorListener(
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback, final boolean options) {
+    addEventListener( "icecandidateerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addIcecandidateerrorListener(
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback) {
+    addEventListener( "icecandidateerror", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeIcecandidateerrorListener(
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "icecandidateerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIcecandidateerrorListener(
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback, final boolean options) {
+    removeEventListener( "icecandidateerror", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeIcecandidateerrorListener(
+      @Nonnull final RTCPeerConnectionIceErrorEventListener callback) {
+    removeEventListener( "icecandidateerror", Js.cast( callback ) );
   }
 
   @JsOverlay

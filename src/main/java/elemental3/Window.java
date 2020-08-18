@@ -1003,6 +1003,12 @@ public class Window extends EventTarget {
   public native SpeechSynthesis speechSynthesis();
 
   @JsProperty(
+      name = "visualViewport"
+  )
+  @Nonnull
+  public native VisualViewport visualViewport();
+
+  @JsProperty(
       name = "orientation"
   )
   public native short orientation();

@@ -54,6 +54,9 @@ public class MediaStreamTrack extends EventTarget {
   @Nullable
   public EventHandler onunmute;
 
+  @Nullable
+  public EventHandler onisolationchange;
+
   MediaStreamTrack() {
   }
 
@@ -110,6 +113,11 @@ public class MediaStreamTrack extends EventTarget {
   )
   @Nonnull
   public native String readyState();
+
+  @JsProperty(
+      name = "isolated"
+  )
+  public native boolean isolated();
 
   /**
    * The applyConstraints() method of the MediaStreamTrack interface applies a set of constraints to the track; these constraints let the Web site or app establish ideal values and acceptable ranges of values for the constrainable properties of the track, such as frame rate, dimensions, echo cancelation, and so forth.
