@@ -1,10 +1,26 @@
 package react4j.vchat;
 
+import arez.ComputableValue;
+import arez.annotations.Action;
 import arez.annotations.ArezComponent;
+import arez.annotations.ComputableValueRef;
+import arez.annotations.DepType;
 import arez.annotations.Feature;
+import arez.annotations.Memoize;
 import arez.annotations.Observable;
+import elemental3.CloseEvent;
+import elemental3.Event;
+import elemental3.Global;
+import elemental3.JSON;
+import elemental3.Location;
+import elemental3.MessageEvent;
+import elemental3.WebSocket;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import jsinterop.base.Any;
+import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
 
 @ArezComponent
 abstract class RoomModel
