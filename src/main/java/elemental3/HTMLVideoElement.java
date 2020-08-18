@@ -49,4 +49,12 @@ public class HTMLVideoElement extends HTMLMediaElement {
       name = "videoWidth"
   )
   public native int videoWidth();
+
+  /**
+   * The HTMLVideoElement method getVideoPlaybackQuality() creates and returns a VideoPlaybackQuality object containing metrics including how many frames have been lost.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality">HTMLVideoElement.getVideoPlaybackQuality - MDN</a>
+   */
+  @Nonnull
+  public native VideoPlaybackQuality getVideoPlaybackQuality();
 }
