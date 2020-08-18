@@ -109,11 +109,7 @@ abstract class RoomModel
   @Action
   void open()
   {
-    if ( null != _webSocket )
-    {
-      _webSocket.close();
-      _webSocket = null;
-    }
+    leave();
     _webSocket = new WebSocket( deriveRoomUrl() );
     getConnectionStateComputableValue().reportPossiblyChanged();
     setRole( Role.UNKNOWN );
@@ -122,6 +118,18 @@ abstract class RoomModel
     _webSocket.onmessage = this::onMessage;
     _webSocket.onclose = this::onClose;
     _webSocket.onerror = this::onError;
+  }
+
+  @Action( verifyRequired = false )
+  void leave()
+  {
+    if ( null != _webSocket )
+    {
+      //TODO: Send close? or do that on server
+      _webSocket.close();
+      _webSocket = null;
+      setState( State.LEFT );
+    }
   }
 
   @Nonnull
