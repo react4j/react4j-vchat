@@ -66,4 +66,9 @@ abstract class RoomModel
   abstract String requestAccessMessage();
 
   abstract void setRequestAccessMessage( @Nonnull String message );
+
+  @Action
+  void requestAccess()
+  {
+  }
 }
