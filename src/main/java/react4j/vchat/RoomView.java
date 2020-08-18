@@ -61,6 +61,10 @@ abstract class RoomView
   @Nullable
   private ReactNode renderMessageAreaContent()
   {
+    final Console console = Global.globalThis().console();
+    console.log( Js.asAny( "Role: " + _room.role() ) );
+    console.log( Js.asAny( "State: " + _room.state() ) );
+
     final RoomModel.State state = _room.state();
     if ( RoomModel.State.NOT_READY == state )
     {
