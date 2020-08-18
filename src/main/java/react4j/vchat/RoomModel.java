@@ -35,6 +35,12 @@ abstract class RoomModel
     GUEST_LEFT
   }
 
+  // The role of the current user
+  enum Role
+  {
+    UNKNOWN, HOST, GUEST
+  }
+
   @Nonnull
   private final String _code;
   @Nullable
@@ -43,7 +49,7 @@ abstract class RoomModel
   @Nonnull
   static RoomModel create( @Nonnull final String code )
   {
-    return new Arez_RoomModel( code, State.NOT_ASKED, "" );
+    return new Arez_RoomModel( code, State.NOT_READY, Role.UNKNOWN, "" );
   }
 
   RoomModel( @Nonnull final String code )
@@ -62,6 +68,12 @@ abstract class RoomModel
   abstract State state();
 
   abstract void setState( @Nonnull State state );
+
+  @Observable
+  @Nonnull
+  abstract Role role();
+
+  abstract void setRole( @Nonnull Role role );
 
   @Observable( writeOutsideTransaction = Feature.ENABLE )
   @Nonnull
@@ -134,6 +146,15 @@ abstract class RoomModel
 
     if ( _webSocket == event.currentTarget() )
     {
+      final String command = message.getAsAny( "command" ).asString();
+      if ( "create".equals( command ) )
+      {
+        setRole( Role.HOST );
+      }
+      else if ( "connect".equals( command ) )
+      {
+        setRole( Role.GUEST );
+      }
     }
   }
 
