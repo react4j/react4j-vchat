@@ -142,7 +142,7 @@ abstract class RoomModel
     return protocol + "://" + location.hostname + ":" + port + "/r/" + getRoomCode();
   }
 
-  @Action
+  @Action( verifyRequired = false )
   void onError( @Nonnull final Event event )
   {
     Global.globalThis().console().log( Js.asAny( "Websocket.error" ), Js.asAny( event ) );
@@ -154,7 +154,7 @@ abstract class RoomModel
     }
   }
 
-  @Action
+  @Action( verifyRequired = false )
   void onOpen( @Nonnull final Event event )
   {
     Global.globalThis().console().log( Js.asAny( "Websocket.open" ), Js.asAny( event ) );
@@ -164,7 +164,7 @@ abstract class RoomModel
     }
   }
 
-  @Action
+  @Action( verifyRequired = false )
   void onClose( @Nonnull final CloseEvent closeEvent )
   {
     Global.globalThis().console().log( Js.asAny( "Websocket.close" ), Js.asAny( closeEvent ) );
@@ -180,7 +180,7 @@ abstract class RoomModel
     }
   }
 
-  @Action
+  @Action( verifyRequired = false )
   void onMessage( @Nonnull final MessageEvent event )
   {
     final Any data = event.data();
