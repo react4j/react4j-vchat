@@ -26,7 +26,7 @@ wss.on('connection', (ws, request) => {
       ws.send(JSON.stringify({ command: 'create' }));
     } else if (rooms[ws.roomCode].clients.length !== 0) {
       ws.send(JSON.stringify({ command: 'full' }));
-      ws.close(1005, 'Room full');
+      ws.close(1000, 'Room full');
       return;
     } else {
       rooms[ws.roomCode].clients.push(ws);
@@ -40,7 +40,7 @@ wss.on('connection', (ws, request) => {
       let room = rooms[ws.roomCode];
       if (undefined === room) {
         ws.send(JSON.stringify({ command: 'close' }));
-        ws.close(1005, 'Room closed');
+        ws.close(1000, 'Room closed');
         return;
       }
       console.log('Message from ' + ws.id + ' data = ', room);
