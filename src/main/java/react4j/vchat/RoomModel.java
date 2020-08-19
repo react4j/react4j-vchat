@@ -12,6 +12,7 @@ import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import arez.annotations.ObservableValueRef;
 import elemental3.CloseEvent;
+import elemental3.Console;
 import elemental3.Event;
 import elemental3.Global;
 import elemental3.JSON;
