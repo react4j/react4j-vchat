@@ -23,6 +23,6 @@ abstract class Application
     final String roomCode = _location.getLocation();
     return roomCode.isEmpty() ?
            SelectRoomViewBuilder.browserLocation( _location ).applicationState( _applicationState ) :
-           RoomViewBuilder.roomCode( roomCode );
+           RoomViewBuilder.applicationState( _applicationState ).roomCode( roomCode );
   }
 }

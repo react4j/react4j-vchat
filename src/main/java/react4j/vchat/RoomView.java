@@ -43,7 +43,12 @@ abstract class RoomView
   {
     _room = RoomModel.create( roomCode() );
     _room.open();
+    applicationState().recordRoomCode( roomCode() );
   }
+
+  @Input( immutable = true )
+  @Nonnull
+  abstract ApplicationState applicationState();
 
   @Input( immutable = true )
   @Nonnull
