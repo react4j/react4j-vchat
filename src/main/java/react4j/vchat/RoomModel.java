@@ -253,8 +253,9 @@ abstract class RoomModel
   void acceptAccessRequest( @Nonnull final AccessRequest accessRequest )
   {
     processAccessRequest( accessRequest, () -> {
+      final String id = accessRequest.getId();
       final JsPropertyMap<Object> message =
-        JsPropertyMap.of( "command", "approve_access", "id", accessRequest.getId() );
+        JsPropertyMap.of( "command", "approve_access", "id", id );
       assert null != _webSocket;
       //TODO: Remove Any
       _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
