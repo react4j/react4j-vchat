@@ -23,10 +23,6 @@ abstract class RoomLobby
 {
   @Input( immutable = true )
   @Nonnull
-  abstract RoomConnection connection();
-
-  @Input( immutable = true )
-  @Nonnull
   abstract MediaStreamConnection camStream();
 
   @Input( immutable = true )
@@ -36,8 +32,7 @@ abstract class RoomLobby
   @PostMount
   void postMount()
   {
-    final String roomId = connection().getRoomId();
-    assert null != roomId;
+    final String roomId = "";
     roomHistory().recordRoomCode( roomId );
     camStream().setEnabled( true );
   }
@@ -77,40 +72,7 @@ abstract class RoomLobby
                           )
                      ) :
                      null
-                ),
-                renderStatus()
+                )
     );
-  }
-
-  @Nullable
-  private ReactNode renderStatus()
-  {
-    if ( camStream().isConnecting() )
-    {
-      return div(
-        h2( "Getting ready..." ),
-        p( "You'll be able to join in just a moment." )
-        // TODO: Add progress spinner here
-      );
-    }
-    else if ( !connection().isJoined() )
-    {
-      return div(
-        h2( "Ready to join?" ),
-        button( "Join" )
-      );
-    }
-    else if ( connection().isConnecting() )
-    {
-      return div(
-        h2( "Joining room..." )
-        // TODO: Add progress spinner here
-      );
-    }
-    else
-    {
-      // Connected here should be moving to room view
-      return null;
-    }
   }
 }
