@@ -12,7 +12,6 @@ import elemental3.MediaStreamConstraints;
 import elemental3.MediaTrackConstraints;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import jsinterop.base.Js;
 import react4j.ReactNode;
 import react4j.annotations.Input;
 import react4j.annotations.Render;
@@ -62,8 +61,8 @@ abstract class RoomView
   private ReactNode renderMessageAreaContent()
   {
     final Console console = Global.globalThis().console();
-    console.log( Js.asAny( "Role: " + _room.role() ) );
-    console.log( Js.asAny( "State: " + _room.state() ) );
+    console.log( "Role: " + _room.role() );
+    console.log( "State: " + _room.state() );
 
     final RoomModel.State state = _room.state();
     if ( RoomModel.State.NOT_READY == state )

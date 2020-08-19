@@ -26,7 +26,6 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 @ArezComponent
@@ -179,7 +178,7 @@ abstract class RoomModel
   @Action( verifyRequired = false )
   void onError( @Nonnull final Event event )
   {
-    Global.globalThis().console().log( Js.asAny( "Websocket.error" ), Js.asAny( event ) );
+    Global.globalThis().console().log( "Websocket.error", event );
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
@@ -191,7 +190,7 @@ abstract class RoomModel
   @Action( verifyRequired = false )
   void onOpen( @Nonnull final Event event )
   {
-    Global.globalThis().console().log( Js.asAny( "Websocket.open" ), Js.asAny( event ) );
+    Global.globalThis().console().log( "Websocket.open", event );
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
@@ -201,7 +200,7 @@ abstract class RoomModel
   @Action( verifyRequired = false )
   void onClose( @Nonnull final CloseEvent closeEvent )
   {
-    Global.globalThis().console().log( Js.asAny( "Websocket.close" ), Js.asAny( closeEvent ) );
+    Global.globalThis().console().log( "Websocket.close", closeEvent );
     if ( _webSocket == closeEvent.currentTarget() )
     {
       _webSocket = null;
@@ -222,24 +221,24 @@ abstract class RoomModel
     final Any object = JSON.parse( data.cast() );
     assert null != object;
     final JsPropertyMap<Object> message = object.cast();
-    Global.globalThis().console().log( Js.asAny( "Websocket.message" ), Js.asAny( message ) );
+    Global.globalThis().console().log( "Websocket.message", message );
 
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
       final String command = message.getAsAny( "command" ).asString();
-      Global.globalThis().console().log( Js.asAny( "Command: " + command ) );
+      Global.globalThis().console().log( "Command: " + command );
       if ( "create".equals( command ) )
       {
         setRole( Role.HOST );
         setState( State.JOINED );
-        Global.globalThis().console().log( Js.asAny( "setState JOINED as HOST" ) );
+        Global.globalThis().console().log( "setState JOINED as HOST" );
       }
       else if ( "connect".equals( command ) )
       {
         setRole( Role.GUEST );
         setState( State.CONNECTED );
-        Global.globalThis().console().log( Js.asAny( "setState CONNECTED as GUEST" ) );
+        Global.globalThis().console().log( "setState CONNECTED as GUEST" );
       }
       else if ( "request_access".equals( command ) )
       {
@@ -247,25 +246,26 @@ abstract class RoomModel
         final String requestMessage = message.getAsAny( "message" ).asString();
         _pendingAccessRequest.add( new AccessRequest( id, requestMessage ) );
         getPendingAccessRequestsObservableValue().reportChanged();
-        Global.globalThis().console().log( Js.asAny( "request_access received for guest '" + id +
-                                                     "' with message '" + requestMessage + "'" ) );
+        Global.globalThis()
+          .console()
+          .log( "request_access received for guest '" + id + "' with message '" + requestMessage + "'" );
       }
       else if ( "accept".equals( command ) )
       {
         setState( State.JOINED );
-        Global.globalThis().console().log( Js.asAny( "host accepted us" ) );
+        Global.globalThis().console().log( "host accepted us" );
       }
       else if ( "reject".equals( command ) )
       {
         setState( State.JOIN_REJECTED );
-        Global.globalThis().console().log( Js.asAny( "host accepted us" ) );
+        Global.globalThis().console().log( "host accepted us" );
       }
       else if ( "accepted".equals( command ) )
       {
         final String id = message.getAsAny( "id" ).asString();
         _participants.add( id );
         getParticipantsObservableValue().reportChanged();
-        Global.globalThis().console().log( Js.asAny( "guest joined '" + id + "'" ) );
+        Global.globalThis().console().log( "guest joined '" + id + "'" );
       }
     }
   }
@@ -277,8 +277,7 @@ abstract class RoomModel
     {
       final JsPropertyMap<Object> message =
         JsPropertyMap.of( "command", "request_access", "message", requestAccessMessage() );
-      //TODO: Remove Any
-      _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+      _webSocket.send( JSON.stringify( message ) );
       setState( State.JOIN_REQUESTED );
     }
   }
@@ -291,8 +290,7 @@ abstract class RoomModel
       final JsPropertyMap<Object> message =
         JsPropertyMap.of( "command", "approve_access", "id", id );
       assert null != _webSocket;
-      //TODO: Remove Any
-      _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+      _webSocket.send( JSON.stringify( message ) );
       _participants.add( id );
       getParticipantsObservableValue().reportChanged();
     } );
@@ -305,8 +303,7 @@ abstract class RoomModel
       final JsPropertyMap<Object> message =
         JsPropertyMap.of( "command", "reject_access", "id", accessRequest.getId() );
       assert null != _webSocket;
-      //TODO: Remove Any
-      _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+      _webSocket.send( JSON.stringify( message ) );
     } );
   }
 
