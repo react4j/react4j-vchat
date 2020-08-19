@@ -24,6 +24,10 @@ wss.on('connection', (ws, request) => {
     if (rooms[ws.roomCode] === undefined) {
       rooms[ws.roomCode] = { host: ws, guests: [], clients: [] };
       ws.send(JSON.stringify({ command: 'create' }));
+    } else if (rooms[ws.roomCode].clients.length !== 0) {
+      ws.send(JSON.stringify({ command: 'full' }));
+      ws.close(1005, 'Room full');
+      return;
     } else {
       rooms[ws.roomCode].clients.push(ws);
       ws.send(JSON.stringify({ command: 'connect' }));
