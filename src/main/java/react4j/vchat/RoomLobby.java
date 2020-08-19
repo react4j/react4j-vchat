@@ -3,7 +3,6 @@ package react4j.vchat;
 import arez.annotations.Action;
 import elemental3.HTMLVideoElement;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.base.JsPropertyMap;
 import react4j.ReactElement;
 import react4j.ReactNode;
