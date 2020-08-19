@@ -120,6 +120,12 @@ abstract class RoomView
                        p( RoomModel.Role.HOST == _room.role() ? "You closed the room." : "The host closed the room." ),
                        a( new AnchorProps().className( "primary-button" ).href( "#" ), "Return to Home" ) );
     }
+    else if ( RoomModel.State.FULL == state )
+    {
+      return fragment( h2( "Room full" ),
+                       p( "The room is full and no other guests can connect at this time." ),
+                       a( new AnchorProps().className( "primary-button" ).href( "#" ), "Return to Home" ) );
+    }
     else if ( RoomModel.State.LEFT == state )
     {
       return fragment( h2( "Left the room" ),

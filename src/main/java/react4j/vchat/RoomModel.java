@@ -47,6 +47,8 @@ abstract class RoomModel
     CLOSED,
     // Left the room
     LEFT,
+    // The room already has a guest and a host so can accept no more participants
+    FULL,
     // An error occurred and the connection was closed
     ERROR
   }
@@ -244,6 +246,12 @@ abstract class RoomModel
         console.log( "Connected to room as guest" );
         setRole( Role.GUEST );
         setState( State.CONNECTED );
+      }
+      else if ( "full".equals( command ) )
+      {
+        console.log( "Room full. Leaving room." );
+        setRole( Role.UNKNOWN );
+        leaveWithState( State.FULL );
       }
       else if ( "request_access".equals( command ) )
       {
