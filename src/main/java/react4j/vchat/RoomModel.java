@@ -155,13 +155,18 @@ abstract class RoomModel
   @Action( verifyRequired = false )
   void leave()
   {
+    leaveWithState( State.LEFT );
+  }
+
+  void leaveWithState( @Nonnull final State state )
+  {
     if ( null != _webSocket )
     {
       _pendingAccessRequest.clear();
       //TODO: Send close? or do that on server
       _webSocket.close();
       _webSocket = null;
-      setState( State.LEFT );
+      setState( state );
     }
   }
 
