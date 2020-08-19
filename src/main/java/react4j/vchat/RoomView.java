@@ -3,7 +3,6 @@ package react4j.vchat;
 import arez.annotations.CascadeDispose;
 import arez.annotations.PostConstruct;
 import elemental2.promise.Promise;
-import elemental3.Console;
 import elemental3.ConstrainULongRange;
 import elemental3.Global;
 import elemental3.HTMLInputElement;
@@ -60,10 +59,6 @@ abstract class RoomView
   @Nullable
   private ReactNode renderMessageAreaContent()
   {
-    final Console console = Global.globalThis().console();
-    console.log( "Role: " + _room.role() );
-    console.log( "State: " + _room.state() );
-
     final RoomModel.State state = _room.state();
     if ( RoomModel.State.NOT_READY == state )
     {
