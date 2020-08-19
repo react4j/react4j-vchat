@@ -38,13 +38,13 @@ abstract class BrowserLocation
   @Nonnull
   String getLocation()
   {
-    final String hash = Global.globalThis().window().location().hash;
+    final String hash = Global.globalThis().location().hash;
     return hash.isEmpty() ? hash : hash.substring( 1 );
   }
 
   void gotoLocation( @Nonnull final String hash )
   {
-    final Location location = Global.globalThis().window().location();
+    final Location location = Global.globalThis().location();
     final String target = hash.isEmpty() ? hash : "#" + hash;
     if ( !location.hash.equals( target ) )
     {
@@ -55,13 +55,13 @@ abstract class BrowserLocation
   @OnActivate
   void onLocationActivate()
   {
-    Global.globalThis().window().addHashchangeListener( _listener, false );
+    Global.globalThis().addHashchangeListener( _listener, false );
   }
 
   @OnDeactivate
   void onLocationDeactivate()
   {
-    Global.globalThis().window().removeHashchangeListener( _listener, false );
+    Global.globalThis().removeHashchangeListener( _listener, false );
   }
 
   @ComputableValueRef
