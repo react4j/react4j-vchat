@@ -21,10 +21,6 @@ abstract class OldRoomView
 {
   @Input( immutable = true )
   @Nonnull
-  abstract RoomConnection connection();
-
-  @Input( immutable = true )
-  @Nonnull
   abstract MediaStreamConnection camStream();
 
   @Input( immutable = true )
@@ -48,7 +44,6 @@ abstract class OldRoomView
   @Render
   ReactNode render()
   {
-    final RoomConnection connection = connection();
     final MediaStreamConnection camStream = camStream();
     final MediaStreamConnection screenShareStream = screenShareStream();
     final RefConsumer localRef = e -> camStream.setVideoElement( (HTMLVideoElement) e );
@@ -81,9 +76,6 @@ abstract class OldRoomView
                                                 null,
                                                 JsPropertyMap.of( "autoPlay",
                                                                   true,
-                                                                  "className",
-                                                                  connection.isConnecting() ||
-                                                                  connection.isWaiting() ? "hide" : "",
                                                                   "id",
                                                                   "remoteVideo" ) ),
                 div( new HtmlProps().className( "controls" ),
@@ -111,13 +103,7 @@ abstract class OldRoomView
                                     .width( 32 )
                                     .height( 32 ) )
                      )
-                ),
-                connection.isConnecting() ?
-                div( new HtmlProps().className( "status" ), p( "Establishing connection..." ) ) :
-                null,
-                connection.isWaiting() ?
-                div( new HtmlProps().className( "status" ), p( "Waiting for someone..." ) ) :
-                null
+                )
     );
   }
 }
