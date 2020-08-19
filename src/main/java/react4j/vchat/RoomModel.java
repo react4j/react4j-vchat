@@ -117,6 +117,7 @@ abstract class RoomModel
   @Nonnull
   List<AccessRequest> getPendingAccessRequests()
   {
+    //TODO: Replace this with an observable list...
     return _pendingAccessRequest;
   }
 
