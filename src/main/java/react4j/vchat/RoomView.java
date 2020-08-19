@@ -145,7 +145,7 @@ abstract class RoomView
   @Nonnull
   private ReactNode renderRequestAccessForm()
   {
-    return form( new FormProps().onSubmit( e -> _room.requestAccess() ),
+    return form( new FormProps().onSubmit( this::requestAccess ),
                  label( new LabelProps().htmlFor( "requestAccessMessage" ),
                         "Enter a message to send to the host to request access." ),
                  input( new InputProps()
@@ -159,6 +159,12 @@ abstract class RoomView
                           .required() ),
                  button( new BtnProps().className( "primary-button" ), "Request Access" )
     );
+  }
+
+  private void requestAccess( final FormEvent e )
+  {
+    e.preventDefault();
+    _room.requestAccess();
   }
 
   @Nonnull
