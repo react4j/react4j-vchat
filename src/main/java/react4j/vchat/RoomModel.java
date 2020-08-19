@@ -221,51 +221,49 @@ abstract class RoomModel
     final Any object = JSON.parse( data.cast() );
     assert null != object;
     final JsPropertyMap<Object> message = object.cast();
-    Global.globalThis().console().log( "Websocket.message", message );
+    final Console console = Global.globalThis().console();
+    console.log( "Websocket.message", message );
 
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
       final String command = message.getAsAny( "command" ).asString();
-      Global.globalThis().console().log( "Command: " + command );
       if ( "create".equals( command ) )
       {
+        console.log( "Connected to room as host" );
         setRole( Role.HOST );
         setState( State.JOINED );
-        Global.globalThis().console().log( "setState JOINED as HOST" );
       }
       else if ( "connect".equals( command ) )
       {
+        console.log( "Connected to room as guest" );
         setRole( Role.GUEST );
         setState( State.CONNECTED );
-        Global.globalThis().console().log( "setState CONNECTED as GUEST" );
       }
       else if ( "request_access".equals( command ) )
       {
         final String id = message.getAsAny( "id" ).asString();
         final String requestMessage = message.getAsAny( "message" ).asString();
+        console.log( "Guest '" + id + "' requested access to room with message '" + requestMessage + "'" );
         _pendingAccessRequest.add( new AccessRequest( id, requestMessage ) );
         getPendingAccessRequestsObservableValue().reportChanged();
-        Global.globalThis()
-          .console()
-          .log( "request_access received for guest '" + id + "' with message '" + requestMessage + "'" );
       }
       else if ( "accept".equals( command ) )
       {
+        console.log( "Host allowed guest to join room." );
         setState( State.JOINED );
-        Global.globalThis().console().log( "host accepted us" );
       }
       else if ( "reject".equals( command ) )
       {
+        console.log( "Host rejected guest from room." );
         setState( State.JOIN_REJECTED );
-        Global.globalThis().console().log( "host accepted us" );
       }
       else if ( "accepted".equals( command ) )
       {
         final String id = message.getAsAny( "id" ).asString();
+        console.log( "Host accepted guest '" + id + "' into room." );
         _participants.add( id );
         getParticipantsObservableValue().reportChanged();
-        Global.globalThis().console().log( "guest joined '" + id + "'" );
       }
     }
   }
