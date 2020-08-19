@@ -12,6 +12,7 @@ import elemental2.core.Uint16Array;
 import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -496,6 +497,18 @@ public interface RequestInit {
   @JsOverlay
   @Nonnull
   default RequestInit window(@Nullable final Any window) {
+    setWindow( window );
+    return this;
+  }
+
+  @JsOverlay
+  default void setWindow(@Nullable @DoNotAutobox final Object window) {
+    setWindow( Js.asAny( window ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default RequestInit window(@Nullable @DoNotAutobox final Object window) {
     setWindow( window );
     return this;
   }

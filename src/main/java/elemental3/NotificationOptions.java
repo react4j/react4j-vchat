@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -94,6 +95,18 @@ public interface NotificationOptions {
   @JsOverlay
   @Nonnull
   default NotificationOptions data(@Nullable final Any data) {
+    setData( data );
+    return this;
+  }
+
+  @JsOverlay
+  default void setData(@Nullable @DoNotAutobox final Object data) {
+    setData( Js.asAny( data ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default NotificationOptions data(@Nullable @DoNotAutobox final Object data) {
     setData( data );
     return this;
   }

@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -56,6 +57,14 @@ public class CustomEvent extends Event {
    */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any detail);
+
+  /**
+   * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
+   */
+  public native void initCustomEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
+      @Nullable @DoNotAutobox Object detail);
 
   /**
    * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.

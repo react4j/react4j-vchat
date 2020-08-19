@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -11,5 +12,5 @@ import jsinterop.base.Any;
 @FunctionalInterface
 public interface ParseReviverFn {
   @Nullable
-  Any onInvoke(@Nonnull String key, @Nullable Any value);
+  Any onInvoke(@Nonnull String key, @Nullable @DoNotAutobox Object value);
 }

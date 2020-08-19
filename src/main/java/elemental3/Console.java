@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -28,6 +29,11 @@ public final class Console {
       name = "assert"
   )
   public native void assert_(boolean condition, @Nullable Any... data);
+
+  @JsMethod(
+      name = "assert"
+  )
+  public native void assert_(boolean condition, @Nullable @DoNotAutobox Object... data);
 
   @JsMethod(
       name = "assert"
@@ -77,6 +83,13 @@ public final class Console {
   public native void debug(@Nullable Any... data);
 
   /**
+   * The console method debug() outputs a message to the web console at the "debug" log level. The message is only displayed to the user if the console is configured to display debug output.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/debug">console.debug - MDN</a>
+   */
+  public native void debug(@Nullable @DoNotAutobox Object... data);
+
+  /**
    * The Console method dir() displays an interactive list of the properties of the specified JavaScript object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dir">console.dir - MDN</a>
@@ -88,7 +101,21 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dir">console.dir - MDN</a>
    */
+  public native void dir(@Nullable @DoNotAutobox Object item, @Nullable Object options);
+
+  /**
+   * The Console method dir() displays an interactive list of the properties of the specified JavaScript object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dir">console.dir - MDN</a>
+   */
   public native void dir(@Nullable Any item);
+
+  /**
+   * The Console method dir() displays an interactive list of the properties of the specified JavaScript object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dir">console.dir - MDN</a>
+   */
+  public native void dir(@Nullable @DoNotAutobox Object item);
 
   /**
    * The Console method dir() displays an interactive list of the properties of the specified JavaScript object.
@@ -105,11 +132,25 @@ public final class Console {
   public native void dirxml(@Nullable Any... data);
 
   /**
+   * Displays an interactive tree of the descendant elements of the specified XML/HTML element. If it is not possible to display as an element the JavaScript Object view is shown instead. The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dirxml">console.dirxml - MDN</a>
+   */
+  public native void dirxml(@Nullable @DoNotAutobox Object... data);
+
+  /**
    * Outputs an error message to the Web Console.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/error">console.error - MDN</a>
    */
   public native void error(@Nullable Any... data);
+
+  /**
+   * Outputs an error message to the Web Console.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/error">console.error - MDN</a>
+   */
+  public native void error(@Nullable @DoNotAutobox Object... data);
 
   /**
    * Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called.
@@ -119,11 +160,25 @@ public final class Console {
   public native void group(@Nullable Any... data);
 
   /**
+   * Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/group">console.group - MDN</a>
+   */
+  public native void group(@Nullable @DoNotAutobox Object... data);
+
+  /**
    * Creates a new inline group in the Web Console. Unlike console.group(), however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/groupCollapsed">console.groupCollapsed - MDN</a>
    */
   public native void groupCollapsed(@Nullable Any... data);
+
+  /**
+   * Creates a new inline group in the Web Console. Unlike console.group(), however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/groupCollapsed">console.groupCollapsed - MDN</a>
+   */
+  public native void groupCollapsed(@Nullable @DoNotAutobox Object... data);
 
   /**
    * Exits the current inline group in the Web Console. See Using groups in the console in the console documentation for details and examples.
@@ -140,11 +195,25 @@ public final class Console {
   public native void info(@Nullable Any... data);
 
   /**
+   * The console.info() method outputs an informational message to the Web Console. In Firefox, a small "i" icon is displayed next to these items in the Web Console's log.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/info">console.info - MDN</a>
+   */
+  public native void info(@Nullable @DoNotAutobox Object... data);
+
+  /**
    * The Console method log() outputs a message to the web console.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/log">console.log - MDN</a>
    */
   public native void log(@Nullable Any... data);
+
+  /**
+   * The Console method log() outputs a message to the web console.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/log">console.log - MDN</a>
+   */
+  public native void log(@Nullable @DoNotAutobox Object... data);
 
   /**
    * Displays tabular data as a table.
@@ -158,6 +227,14 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
    */
+  public native void table(@Nullable @DoNotAutobox Object tabularData,
+      @Nonnull JsArray<String> properties);
+
+  /**
+   * Displays tabular data as a table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
+   */
   public native void table(@Nullable Any tabularData, @Nonnull String[] properties);
 
   /**
@@ -165,7 +242,22 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
    */
+  public native void table(@Nullable @DoNotAutobox Object tabularData,
+      @Nonnull String[] properties);
+
+  /**
+   * Displays tabular data as a table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
+   */
   public native void table(@Nullable Any tabularData);
+
+  /**
+   * Displays tabular data as a table.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
+   */
+  public native void table(@Nullable @DoNotAutobox Object tabularData);
 
   /**
    * Displays tabular data as a table.
@@ -214,6 +306,13 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/timeLog">console.timeLog - MDN</a>
    */
+  public native void timeLog(@Nonnull String label, @Nullable @DoNotAutobox Object... data);
+
+  /**
+   * Logs the current value of a timer that was previously started by calling console.time() to the console.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/timeLog">console.timeLog - MDN</a>
+   */
   public native void timeLog(@Nonnull String label);
 
   /**
@@ -224,9 +323,23 @@ public final class Console {
   public native void trace(@Nullable Any... data);
 
   /**
+   * The console interface's trace() method outputs a stack trace to the Web Console.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/trace">console.trace - MDN</a>
+   */
+  public native void trace(@Nullable @DoNotAutobox Object... data);
+
+  /**
    * Outputs a warning message to the Web Console.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
    */
   public native void warn(@Nullable Any... data);
+
+  /**
+   * Outputs a warning message to the Web Console.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
+   */
+  public native void warn(@Nullable @DoNotAutobox Object... data);
 }

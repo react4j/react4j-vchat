@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -69,7 +70,23 @@ public class Worker extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
    */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull JsArray<Object> transfer);
+
+  /**
+   * The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull Object[] transfer);
+
+  /**
+   * The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
+   */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull Object[] transfer);
 
   /**
    * The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.
@@ -83,7 +100,22 @@ public class Worker extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
    */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull PostMessageOptions options);
+
+  /**
+   * The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message);
+
+  /**
+   * The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
+   */
+  public native void postMessage(@Nullable @DoNotAutobox Object message);
 
   /**
    * The terminate() method of the Worker interface immediately terminates the Worker. This does not offer the worker an opportunity to finish its operations; it is simply stopped at once.

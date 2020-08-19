@@ -2,6 +2,7 @@ package elemental3;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -1196,8 +1197,24 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull String targetOrigin, @Nonnull JsArray<Object> transfer);
+
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin,
       @Nonnull Object[] transfer);
+
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull String targetOrigin, @Nonnull Object[] transfer);
 
   /**
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
@@ -1211,6 +1228,14 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull String targetOrigin);
+
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull WindowPostMessageOptions options);
 
   /**
@@ -1218,7 +1243,22 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull WindowPostMessageOptions options);
+
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message);
+
+  /**
+   * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
+   */
+  public native void postMessage(@Nullable @DoNotAutobox Object message);
 
   /**
    * Opens the Print Dialog to print the current document.
@@ -1849,6 +1889,30 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
    */
+  public native int setInterval(@Nonnull TimerHandler handler, int timeout,
+      @Nullable @DoNotAutobox Object... arguments);
+
+  /**
+   * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   */
+  public native int setInterval(@Nonnull String handler, int timeout,
+      @Nullable @DoNotAutobox Object... arguments);
+
+  /**
+   * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   */
+  public native int setInterval(@Nonnull Function handler, int timeout,
+      @Nullable @DoNotAutobox Object... arguments);
+
+  /**
+   * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
+   */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout);
 
   /**
@@ -1886,6 +1950,30 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull Function handler, int timeout, @Nullable Any... arguments);
+
+  /**
+   * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   */
+  public native int setTimeout(@Nonnull TimerHandler handler, int timeout,
+      @Nullable @DoNotAutobox Object... arguments);
+
+  /**
+   * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   */
+  public native int setTimeout(@Nonnull String handler, int timeout,
+      @Nullable @DoNotAutobox Object... arguments);
+
+  /**
+   * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
+   */
+  public native int setTimeout(@Nonnull Function handler, int timeout,
+      @Nullable @DoNotAutobox Object... arguments);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.

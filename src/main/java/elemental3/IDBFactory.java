@@ -2,6 +2,7 @@ package elemental3;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -30,6 +31,28 @@ public class IDBFactory {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
    */
   public native short cmp(@Nullable Any first, @Nullable Any second);
+
+  /**
+   * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
+   */
+  public native short cmp(@Nullable @DoNotAutobox Object first, @Nullable Any second);
+
+  /**
+   * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
+   */
+  public native short cmp(@Nullable Any first, @Nullable @DoNotAutobox Object second);
+
+  /**
+   * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
+   */
+  public native short cmp(@Nullable @DoNotAutobox Object first,
+      @Nullable @DoNotAutobox Object second);
 
   /**
    * The databases method of the IDBFactory interface returns a list represening all the available databases, including their names and versions.

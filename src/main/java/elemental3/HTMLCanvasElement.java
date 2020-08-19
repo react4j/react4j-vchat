@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -52,6 +53,15 @@ public class HTMLCanvasElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
   @Nullable
+  public native RenderingContext getContext(@Nonnull String contextId,
+      @Nullable @DoNotAutobox Object options);
+
+  /**
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
+   */
+  @Nullable
   public native RenderingContext getContext(@Nonnull String contextId);
 
   /**
@@ -61,6 +71,14 @@ public class HTMLCanvasElement extends HTMLElement {
    */
   public native void toBlob(@Nonnull BlobCallback _callback, @Nonnull String type,
       @Nullable Any quality);
+
+  /**
+   * The HTMLCanvasElement.toBlob() method creates a Blob object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent. If type is not specified, the image type is image/png. The created image is in a resolution of 96dpi.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob">HTMLCanvasElement.toBlob - MDN</a>
+   */
+  public native void toBlob(@Nonnull BlobCallback _callback, @Nonnull String type,
+      @Nullable @DoNotAutobox Object quality);
 
   /**
    * The HTMLCanvasElement.toBlob() method creates a Blob object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent. If type is not specified, the image type is image/png. The created image is in a resolution of 96dpi.
@@ -83,6 +101,14 @@ public class HTMLCanvasElement extends HTMLElement {
    */
   @Nonnull
   public native String toDataURL(@Nonnull String type, @Nullable Any quality);
+
+  /**
+   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL - MDN</a>
+   */
+  @Nonnull
+  public native String toDataURL(@Nonnull String type, @Nullable @DoNotAutobox Object quality);
 
   /**
    * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.

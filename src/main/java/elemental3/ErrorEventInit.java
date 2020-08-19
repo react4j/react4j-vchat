@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -51,6 +52,18 @@ public interface ErrorEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   default ErrorEventInit error(@Nullable final Any error) {
+    setError( error );
+    return this;
+  }
+
+  @JsOverlay
+  default void setError(@Nullable @DoNotAutobox final Object error) {
+    setError( Js.asAny( error ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default ErrorEventInit error(@Nullable @DoNotAutobox final Object error) {
     setError( error );
     return this;
   }

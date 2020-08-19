@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -90,7 +91,40 @@ public class IDBObjectStore {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add">IDBObjectStore.add - MDN</a>
    */
   @Nonnull
+  public native IDBRequest add(@Nullable @DoNotAutobox Object value, @Nullable Any key);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the transaction’s complete event in addition to the IDBObjectStore.add request’s success event, because the transaction may still fail after the success event fires. In other words, the success event is only triggered when the transaction has been successfully queued.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add">IDBObjectStore.add - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest add(@Nullable Any value, @Nullable @DoNotAutobox Object key);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the transaction’s complete event in addition to the IDBObjectStore.add request’s success event, because the transaction may still fail after the success event fires. In other words, the success event is only triggered when the transaction has been successfully queued.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add">IDBObjectStore.add - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest add(@Nullable @DoNotAutobox Object value,
+      @Nullable @DoNotAutobox Object key);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the transaction’s complete event in addition to the IDBObjectStore.add request’s success event, because the transaction may still fail after the success event fires. In other words, the success event is only triggered when the transaction has been successfully queued.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add">IDBObjectStore.add - MDN</a>
+   */
+  @Nonnull
   public native IDBRequest add(@Nullable Any value);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the transaction’s complete event in addition to the IDBObjectStore.add request’s success event, because the transaction may still fail after the success event fires. In other words, the success event is only triggered when the transaction has been successfully queued.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add">IDBObjectStore.add - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest add(@Nullable @DoNotAutobox Object value);
 
   /**
    * Clearing an object store consists of removing all records from the object store and removing all records in indexes that reference the object store. To remove only some of the records in a store, use IDBObjectStore.delete passing a key or IDBKeyRange.
@@ -107,6 +141,14 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest count(@Nullable Any query);
+
+  /**
+   * An IDBRequest object on which subsequent events related to this operation are fired.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/count">IDBObjectStore.count - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest count(@Nullable @DoNotAutobox Object query);
 
   /**
    * An IDBRequest object on which subsequent events related to this operation are fired.
@@ -176,6 +218,14 @@ public class IDBObjectStore {
   public native IDBRequest delete(@Nullable Any query);
 
   /**
+   * An IDBRequest object on which subsequent events related to this operation are fired. The request.result attribute is set to undefined.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/delete">IDBObjectStore.delete - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest delete(@Nullable @DoNotAutobox Object query);
+
+  /**
    * Note that this method must be called only from a VersionChange transaction mode callback. Note that this method synchronously modifies the IDBObjectStore.indexNames property.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/deleteIndex">IDBObjectStore.deleteIndex - MDN</a>
@@ -193,6 +243,14 @@ public class IDBObjectStore {
   /**
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
    *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/get">IDBObjectStore.get - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest get(@Nullable @DoNotAutobox Object query);
+
+  /**
+   * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
+   *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
    */
   @Nonnull
@@ -204,7 +262,23 @@ public class IDBObjectStore {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
    */
   @Nonnull
+  public native IDBRequest getAll(@Nullable @DoNotAutobox Object query, int count);
+
+  /**
+   * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
+   */
+  @Nonnull
   public native IDBRequest getAll(@Nullable Any query);
+
+  /**
+   * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll">IDBObjectStore.getAll - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest getAll(@Nullable @DoNotAutobox Object query);
 
   /**
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
@@ -228,7 +302,23 @@ public class IDBObjectStore {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
    */
   @Nonnull
+  public native IDBRequest getAllKeys(@Nullable @DoNotAutobox Object query, int count);
+
+  /**
+   * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
+   */
+  @Nonnull
   public native IDBRequest getAllKeys(@Nullable Any query);
+
+  /**
+   * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAllKeys">IDBObjectStore.getAllKeys - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest getAllKeys(@Nullable @DoNotAutobox Object query);
 
   /**
    * If a value is successfully found, then a structured clone of it is created and set as the result of the request object.
@@ -245,6 +335,14 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest getKey(@Nullable Any query);
+
+  /**
+   * If a key is successfully found, then a structured clone of it is created and set as the result of the request object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getKey">IDBObjectStore.getKey - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest getKey(@Nullable @DoNotAutobox Object query);
 
   /**
    * An IDBIndex object for accessing the index.
@@ -269,7 +367,24 @@ public class IDBObjectStore {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openCursor">IDBObjectStore.openCursor - MDN</a>
    */
   @Nonnull
+  public native IDBRequest openCursor(@Nullable @DoNotAutobox Object query,
+      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the results’s success event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openCursor">IDBObjectStore.openCursor - MDN</a>
+   */
+  @Nonnull
   public native IDBRequest openCursor(@Nullable Any query);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the results’s success event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openCursor">IDBObjectStore.openCursor - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest openCursor(@Nullable @DoNotAutobox Object query);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results’s success event.
@@ -294,7 +409,24 @@ public class IDBObjectStore {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor">IDBObjectStore.openKeyCursor - MDN</a>
    */
   @Nonnull
+  public native IDBRequest openKeyCursor(@Nullable @DoNotAutobox Object query,
+      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the results’s success event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor">IDBObjectStore.openKeyCursor - MDN</a>
+   */
+  @Nonnull
   public native IDBRequest openKeyCursor(@Nullable Any query);
+
+  /**
+   * To determine if the add operation has completed successfully, listen for the results’s success event.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor">IDBObjectStore.openKeyCursor - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest openKeyCursor(@Nullable @DoNotAutobox Object query);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results’s success event.
@@ -318,5 +450,38 @@ public class IDBObjectStore {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">IDBObjectStore.put - MDN</a>
    */
   @Nonnull
+  public native IDBRequest put(@Nullable @DoNotAutobox Object value, @Nullable Any key);
+
+  /**
+   * The put method is an update or insert method. See the IDBObjectStore.add method for an insert only method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">IDBObjectStore.put - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest put(@Nullable Any value, @Nullable @DoNotAutobox Object key);
+
+  /**
+   * The put method is an update or insert method. See the IDBObjectStore.add method for an insert only method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">IDBObjectStore.put - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest put(@Nullable @DoNotAutobox Object value,
+      @Nullable @DoNotAutobox Object key);
+
+  /**
+   * The put method is an update or insert method. See the IDBObjectStore.add method for an insert only method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">IDBObjectStore.put - MDN</a>
+   */
+  @Nonnull
   public native IDBRequest put(@Nullable Any value);
+
+  /**
+   * The put method is an update or insert method. See the IDBObjectStore.add method for an insert only method.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put">IDBObjectStore.put - MDN</a>
+   */
+  @Nonnull
+  public native IDBRequest put(@Nullable @DoNotAutobox Object value);
 }

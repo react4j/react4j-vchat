@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -36,6 +37,18 @@ public interface CustomEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   default CustomEventInit detail(@Nullable final Any detail) {
+    setDetail( detail );
+    return this;
+  }
+
+  @JsOverlay
+  default void setDetail(@Nullable @DoNotAutobox final Object detail) {
+    setDetail( Js.asAny( detail ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default CustomEventInit detail(@Nullable @DoNotAutobox final Object detail) {
     setDetail( detail );
     return this;
   }

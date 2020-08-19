@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -54,9 +55,20 @@ public class ServiceWorker extends EventTarget {
 
   public native void postMessage(@Nullable Any message, @Nonnull JsArray<Object> transfer);
 
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull JsArray<Object> transfer);
+
   public native void postMessage(@Nullable Any message, @Nonnull Object[] transfer);
+
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull Object[] transfer);
 
   public native void postMessage(@Nullable Any message, @Nonnull PostMessageOptions options);
 
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull PostMessageOptions options);
+
   public native void postMessage(@Nullable Any message);
+
+  public native void postMessage(@Nullable @DoNotAutobox Object message);
 }

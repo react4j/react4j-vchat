@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -60,7 +61,23 @@ public class MessagePort extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull JsArray<Object> transfer);
+
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message, @Nonnull Object[] transfer);
+
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull Object[] transfer);
 
   /**
    * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
@@ -74,7 +91,22 @@ public class MessagePort extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
+  public native void postMessage(@Nullable @DoNotAutobox Object message,
+      @Nonnull PostMessageOptions options);
+
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
   public native void postMessage(@Nullable Any message);
+
+  /**
+   * The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
+   */
+  public native void postMessage(@Nullable @DoNotAutobox Object message);
 
   /**
    * The start() method of the MessagePort interface starts the sending of messages queued on the port. This method is only needed when using EventTarget.addEventListener; it is implied when using MessageChannel.onmessage.

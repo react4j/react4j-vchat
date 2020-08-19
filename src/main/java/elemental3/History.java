@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -92,7 +93,22 @@ public class History {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState">History.pushState - MDN</a>
    */
+  public native void pushState(@Nullable @DoNotAutobox Object data, @Nonnull String title,
+      @Nullable String url);
+
+  /**
+   * In an HTML document, the history.pushState() method adds a state to the browser's session history stack.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState">History.pushState - MDN</a>
+   */
   public native void pushState(@Nullable Any data, @Nonnull String title);
+
+  /**
+   * In an HTML document, the history.pushState() method adds a state to the browser's session history stack.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History/pushState">History.pushState - MDN</a>
+   */
+  public native void pushState(@Nullable @DoNotAutobox Object data, @Nonnull String title);
 
   /**
    * The History.replaceState() method modifies the current history entry, replacing it with the stateObj, title, and URL passed in the method parameters. This method is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.
@@ -106,5 +122,20 @@ public class History {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState">History.replaceState - MDN</a>
    */
+  public native void replaceState(@Nullable @DoNotAutobox Object data, @Nonnull String title,
+      @Nullable String url);
+
+  /**
+   * The History.replaceState() method modifies the current history entry, replacing it with the stateObj, title, and URL passed in the method parameters. This method is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState">History.replaceState - MDN</a>
+   */
   public native void replaceState(@Nullable Any data, @Nonnull String title);
+
+  /**
+   * The History.replaceState() method modifies the current history entry, replacing it with the stateObj, title, and URL passed in the method parameters. This method is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState">History.replaceState - MDN</a>
+   */
+  public native void replaceState(@Nullable @DoNotAutobox Object data, @Nonnull String title);
 }

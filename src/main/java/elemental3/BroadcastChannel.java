@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -70,6 +71,13 @@ public class BroadcastChannel extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage">BroadcastChannel.postMessage - MDN</a>
    */
   public native void postMessage(@Nullable Any message);
+
+  /**
+   * The BroadcastChannel.postMessage() sends a message, which can be of any kind of Object, to each listener in any browsing context with the same origin. The message is transmitted as a message event targeted at each BroadcastChannel bound to the channel.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage">BroadcastChannel.postMessage - MDN</a>
+   */
+  public native void postMessage(@Nullable @DoNotAutobox Object message);
 
   @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,

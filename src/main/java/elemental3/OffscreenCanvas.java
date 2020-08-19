@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -58,6 +59,16 @@ public class OffscreenCanvas extends EventTarget {
   public native OffscreenRenderingContext getContext(
       @MagicConstant(stringValues = {"2d", "bitmaprenderer", "webgl", "webgl2"}) @Nonnull String contextId,
       @Nullable Any options);
+
+  /**
+   * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext">OffscreenCanvas.getContext - MDN</a>
+   */
+  @Nullable
+  public native OffscreenRenderingContext getContext(
+      @MagicConstant(stringValues = {"2d", "bitmaprenderer", "webgl", "webgl2"}) @Nonnull String contextId,
+      @Nullable @DoNotAutobox Object options);
 
   /**
    * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.

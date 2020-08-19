@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -36,6 +37,18 @@ public interface PopStateEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   default PopStateEventInit state(@Nullable final Any state) {
+    setState( state );
+    return this;
+  }
+
+  @JsOverlay
+  default void setState(@Nullable @DoNotAutobox final Object state) {
+    setState( Js.asAny( state ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default PopStateEventInit state(@Nullable @DoNotAutobox final Object state) {
     setState( state );
     return this;
   }

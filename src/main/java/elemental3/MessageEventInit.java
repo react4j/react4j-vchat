@@ -1,6 +1,7 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -37,6 +38,18 @@ public interface MessageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   default MessageEventInit data(@Nullable final Any data) {
+    setData( data );
+    return this;
+  }
+
+  @JsOverlay
+  default void setData(@Nullable @DoNotAutobox final Object data) {
+    setData( Js.asAny( data ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MessageEventInit data(@Nullable @DoNotAutobox final Object data) {
     setData( data );
     return this;
   }
