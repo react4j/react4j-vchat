@@ -58,7 +58,13 @@ wss.on('connection', (ws, request) => {
             // Remove from client array
             room.clients.splice(room.clients.indexOf(client), 1);
             client.send(JSON.stringify({ command: 'accept' }));
-            room.guests.forEach(other => other.send(JSON.stringify({ command: 'accepted', id: ws.id })));
+            room.guests.forEach(other => {
+                if (data.id !== other.id) {
+                  other.send(JSON.stringify({ command: 'accepted', id: ws.id }));
+                }
+              }
+            )
+            ;
             room.guests.push(client);
             return;
           } else if (undefined !== room.guests.find(other => other.id === data.id)) {
