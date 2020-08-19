@@ -237,7 +237,7 @@ abstract class RoomModel
     }
   }
 
-  @Action
+  @Action( verifyRequired = false )
   void requestAccess()
   {
     if ( null != _webSocket )
@@ -249,7 +249,7 @@ abstract class RoomModel
     }
   }
 
-  @Action
+  @Action( verifyRequired = false )
   void acceptAccessRequest( @Nonnull final AccessRequest accessRequest )
   {
     processAccessRequest( accessRequest, () -> {
@@ -261,7 +261,7 @@ abstract class RoomModel
     } );
   }
 
-  @Action
+  @Action( verifyRequired = false )
   void rejectAccessRequest( @Nonnull final AccessRequest accessRequest )
   {
     processAccessRequest( accessRequest, () -> {
