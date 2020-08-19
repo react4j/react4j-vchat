@@ -19,8 +19,10 @@ import elemental3.Location;
 import elemental3.MessageEvent;
 import elemental3.WebSocket;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.Any;
@@ -67,6 +69,8 @@ abstract class RoomModel
   private final List<AccessRequest> _pendingAccessRequest = new ArrayList<>();
   @Nullable
   private WebSocket _webSocket;
+  @Nonnull
+  private final Set<String> _participants = new HashSet<>();
 
   @Nonnull
   static RoomModel create( @Nonnull final String code )
@@ -123,6 +127,17 @@ abstract class RoomModel
 
   @ObservableValueRef
   abstract ObservableValue<?> getPendingAccessRequestsObservableValue();
+
+  @Observable( expectSetter = false )
+  @Nonnull
+  Set<String> getParticipants()
+  {
+    //TODO: Replace this with an observable list...
+    return _participants;
+  }
+
+  @ObservableValueRef
+  abstract ObservableValue<?> getParticipantsObservableValue();
 
   @Action
   void open()
@@ -235,6 +250,23 @@ abstract class RoomModel
         Global.globalThis().console().log( Js.asAny( "request_access received for guest '" + id +
                                                      "' with message '" + requestMessage + "'" ) );
       }
+      else if ( "accept".equals( command ) )
+      {
+        setState( State.JOINED );
+        Global.globalThis().console().log( Js.asAny( "host accepted us" ) );
+      }
+      else if ( "reject".equals( command ) )
+      {
+        setState( State.JOIN_REJECTED );
+        Global.globalThis().console().log( Js.asAny( "host accepted us" ) );
+      }
+      else if ( "accepted".equals( command ) )
+      {
+        final String id = message.getAsAny( "id" ).asString();
+        _participants.add( id );
+        getParticipantsObservableValue().reportChanged();
+        Global.globalThis().console().log( Js.asAny( "guest joined '" + id + "'" ) );
+      }
     }
   }
 
@@ -247,6 +279,7 @@ abstract class RoomModel
         JsPropertyMap.of( "command", "request_access", "message", requestAccessMessage() );
       //TODO: Remove Any
       _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+      setState( State.JOIN_REQUESTED );
     }
   }
 
@@ -260,6 +293,8 @@ abstract class RoomModel
       assert null != _webSocket;
       //TODO: Remove Any
       _webSocket.send( JSON.stringify( Js.asAny( message ) ) );
+      _participants.add( id );
+      getParticipantsObservableValue().reportChanged();
     } );
   }
 
