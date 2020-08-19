@@ -101,6 +101,14 @@ abstract class RoomView
                        )
       );
     }
+    else if ( RoomModel.State.JOINED == state &&
+              RoomModel.Role.HOST == _room.role() &&
+              _room.getParticipants().isEmpty() )
+    {
+      return fragment( h2( "Waiting for guests to join" ),
+                       p( "Waiting for someone to join this room" ),
+                       a( new AnchorProps().href( "#" + _room.getRoomCode() ), _room.getRoomCode() ) );
+    }
     else if ( RoomModel.State.JOINED == state )
     {
       return fragment( h2( "Joined room" ),
