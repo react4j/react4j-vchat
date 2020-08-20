@@ -278,6 +278,20 @@ abstract class RoomModel
         _participants.add( id );
         getParticipantsObservableValue().reportChanged();
       }
+      else if ( "remove".equals( command ) )
+      {
+        final String id = message.getAsAny( "id" ).asString();
+        if ( _participants.remove( id ) )
+        {
+          console.log( "Guest '" + id + "' left the room." );
+          getParticipantsObservableValue().reportChanged();
+        }
+        else if ( _pendingAccessRequest.removeIf( r -> r.getId().equals( id ) ) )
+        {
+          console.log( "Client '" + id + "' left the room." );
+          getPendingAccessRequestsObservableValue().reportChanged();
+        }
+      }
     }
   }
 
