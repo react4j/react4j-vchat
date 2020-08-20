@@ -110,7 +110,6 @@ wss.on('connection', (ws, request) => {
             room.guests.splice(index, 1);
             room.host.send(JSON.stringify({ command: 'remove', id: ws.id }));
             room.guests.forEach(other => other.send(JSON.stringify({ command: 'remove', id: ws.id })));
-            room.clients.forEach(other => other.send(JSON.stringify({ command: 'remove', id: ws.id })));
           }
         }
       }
