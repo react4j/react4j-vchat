@@ -105,11 +105,16 @@ wss.on('connection', (ws, request) => {
           });
           rooms[ws.roomCode] = undefined;
         } else {
-          const index = room.guests.indexOf(ws);
-          if (index > -1) {
-            room.guests.splice(index, 1);
+          const guestIndex = room.guests.indexOf(ws);
+          if (guestIndex > -1) {
+            room.guests.splice(guestIndex, 1);
             room.host.send(JSON.stringify({ command: 'remove', id: ws.id }));
             room.guests.forEach(other => other.send(JSON.stringify({ command: 'remove', id: ws.id })));
+          }
+          const clientIndex = room.clients.indexOf(ws);
+          if (clientIndex > -1) {
+            room.clients.splice(clientIndex, 1);
+            room.host.send(JSON.stringify({ command: 'remove', id: ws.id }));
           }
         }
       }
