@@ -166,7 +166,6 @@ abstract class RoomModel
     if ( null != _webSocket )
     {
       _pendingAccessRequest.clear();
-      //TODO: Send close? or do that on server
       _webSocket.close();
       _webSocket = null;
       setState( state );
