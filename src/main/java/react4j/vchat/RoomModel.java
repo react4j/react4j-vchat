@@ -11,13 +11,25 @@ import arez.annotations.Feature;
 import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import arez.annotations.ObservableValueRef;
+import elemental2.core.JsArray;
 import elemental3.CloseEvent;
 import elemental3.Console;
 import elemental3.Event;
 import elemental3.Global;
 import elemental3.JSON;
 import elemental3.Location;
+import elemental3.MediaStream;
 import elemental3.MessageEvent;
+import elemental3.RTCConfiguration;
+import elemental3.RTCDataChannel;
+import elemental3.RTCDataChannelEvent;
+import elemental3.RTCIceCandidate;
+import elemental3.RTCIceCandidateInit;
+import elemental3.RTCIceServer;
+import elemental3.RTCLocalSessionDescriptionInit;
+import elemental3.RTCPeerConnection;
+import elemental3.RTCPeerConnectionIceEvent;
+import elemental3.RTCTrackEvent;
 import elemental3.WebSocket;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -27,6 +39,7 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 @ArezComponent
@@ -71,6 +84,12 @@ abstract class RoomModel
   private final List<AccessRequest> _pendingAccessRequest = new ArrayList<>();
   @Nullable
   private WebSocket _webSocket;
+  // Both Host and Guest create their own connections
+  @Nullable
+  private RTCPeerConnection _connection;
+  //TODO: If we don't have chat can we remove the data channel?
+  @Nullable
+  private RTCDataChannel _dataChannel;
   @Nonnull
   private final Set<String> _participants = new HashSet<>();
 
@@ -153,6 +172,46 @@ abstract class RoomModel
     _webSocket.onmessage = this::onMessage;
     _webSocket.onclose = this::onClose;
     _webSocket.onerror = this::onError;
+
+    // Use one of Google's public STUN servers
+    // The host should perform the offer rolw and the guest the answer role
+    _connection = new RTCPeerConnection( RTCConfiguration
+                                           .create()
+                                           .iceServers( RTCIceServer.create( "stun:stun.l.google.com:19302" ) ) );
+
+    _connection.onicecandidate = this::onIceCandidate;
+    _connection.ontrack = this::onTrack;
+    _connection.ondatachannel = this::onDataChannel;
+    // TODO: attach local media to the peer connection
+    //   _localStream.getTracks().forEach(track => this.pc.addTrack(track, this.localStream));
+  }
+
+  @Action( verifyRequired = false )
+  void connectPeerConnection( @Nonnull final String participant )
+  {
+    assert Role.HOST == role();
+    final Console console = Global.globalThis().console();
+    console.log( "Attempting to send rtc session description" );
+    assert null != _connection;
+    _dataChannel = _connection.createDataChannel( "chat" );
+    _dataChannel.onmessage = this::onDataChannelMessage;
+    _dataChannel.onclose = this::onDataChannelClose;
+    _connection.createOffer()
+      .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
+                                                         .create()
+                                                         .sdp( offer.sdp() )
+                                                         .type( offer.type() ) ) )
+      .then( e -> {
+        sendMessage( JsPropertyMap.of( "command", "offer", "session", _connection.localDescription() ) );
+        return null;
+      } )
+      .catch_( e -> {
+        // TODO: An error occurred, so handle the failure to connect
+        Global.globalThis().console().log( "Offer error: ", e );
+        return null;
+      } );
+  }
+
   private void sendMessage( @Nonnull final JsPropertyMap<Object> message )
   {
     if ( null != _webSocket )
@@ -163,6 +222,66 @@ abstract class RoomModel
     }
   }
 
+  @Action( verifyRequired = false )
+  void onDataChannel( @Nonnull final RTCDataChannelEvent event )
+  {
+    if ( _connection == event.currentTarget() )
+    {
+      assert Role.GUEST == role();
+      final Console console = Global.globalThis().console();
+      console.log( "onDataChannel", event );
+
+      _dataChannel = event.channel();
+      _dataChannel.onmessage = this::onDataChannelMessage;
+      _dataChannel.onclose = this::onDataChannelClose;
+    }
+  }
+
+  private void onDataChannelClose( @Nonnull final Event event )
+  {
+    if ( event.currentTarget() == _dataChannel )
+    {
+      final Console console = Global.globalThis().console();
+      console.log( "The Data Channel is Closed" );
+    }
+  }
+
+  private void onDataChannelMessage( @Nonnull final MessageEvent event )
+  {
+    if ( event.currentTarget() == _dataChannel )
+    {
+      final Console console = Global.globalThis().console();
+      final Any data = event.data();
+      assert null != data;
+      final JsPropertyMap<Object> message = Js.asPropertyMap( JSON.parse( data.asString() ) );
+      console.log( "onDataChannelMessage", message );
+    }
+  }
+
+  private void onTrack( @Nonnull final RTCTrackEvent event )
+  {
+    if ( _connection == event.currentTarget() )
+    {
+      Global.globalThis().console().log( "onTrack", event );
+
+      // when the other side added one or more media streams, show it on screen
+      final JsArray<MediaStream> streams = event.streams();
+    }
+  }
+
+  private void onIceCandidate( @Nonnull final RTCPeerConnectionIceEvent event )
+  {
+    if ( _connection == event.currentTarget() )
+    {
+      Global.globalThis().console().log( "onIceCandidate", event );
+      final RTCIceCandidate candidate = event.candidate();
+      if ( null != candidate && null != _webSocket )
+      {
+        sendMessage( JsPropertyMap.of( "command", "candidate",
+                                       "mlineindex", candidate.sdpMLineIndex(),
+                                       "candidate", candidate.candidate() ) );
+      }
+    }
   }
 
   @Action( verifyRequired = false )
@@ -235,11 +354,11 @@ abstract class RoomModel
   {
     final Any data = event.data();
     assert null != data;
+    final Console console = Global.globalThis().console();
+    console.log( "Websocket.message", data );
     final Any object = JSON.parse( data.cast() );
     assert null != object;
     final JsPropertyMap<Object> message = object.cast();
-    final Console console = Global.globalThis().console();
-    console.log( "Websocket.message", message );
 
     if ( _webSocket == event.currentTarget() )
     {
@@ -301,6 +420,37 @@ abstract class RoomModel
           console.log( "Client '" + id + "' left the room." );
           getPendingAccessRequestsObservableValue().reportChanged();
         }
+      }
+      else if ( "offer".equals( command ) )
+      {
+        assert null != _connection;
+        _connection.setRemoteDescription( message.getAsAny( "session" ).cast() );
+        _connection
+          .createAnswer()
+          .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit.create()
+                                                             .type( offer.type() )
+                                                             .sdp( offer.sdp() ) ) )
+          .then( e -> {
+            sendMessage( JsPropertyMap.of( "command", "answer", "session", _connection.localDescription() ) );
+            return null;
+          } )
+          .catch_( e -> {
+            // TODO: An error occurred, so handle the failure to connect
+            Global.globalThis().console().log( "Answer error: ", e );
+            return null;
+          } );
+      }
+      else if ( "answer".equals( command ) )
+      {
+        assert null != _connection;
+        _connection.setRemoteDescription( message.getAsAny( "session" ).cast() );
+      }
+      else if ( "candidate".equals( command ) )
+      {
+        assert null != _connection;
+        _connection.addIceCandidate( RTCIceCandidateInit.create()
+                                       .sdpMLineIndex( message.getAsAny( "mlineindex" ).asDouble() )
+                                       .candidate( message.getAsAny( "candidate" ).asString() ) );
       }
     }
   }
