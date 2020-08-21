@@ -23,7 +23,8 @@ abstract class VideoView
   abstract MediaStreamConnection mediaStreamConnection();
 
   @Input
-  abstract boolean muted();
+  @Nonnull
+  abstract String className();
 
   @Render
   @Nonnull
@@ -32,7 +33,7 @@ abstract class VideoView
     return ReactElement.createHostElement( "video",
                                            null,
                                            _videoRefCallback,
-                                           JsPropertyMap.of( "autoPlay", true, "muted", muted() ) );
+                                           JsPropertyMap.of( "autoPlay", true, "className", className() ) );
   }
 
   private void activeVideoRef( @Nullable final HTMLVideoElement element )

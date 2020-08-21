@@ -36,8 +36,7 @@ button {
   height: 100%;
 }
 
-/* We don't have a class on video as it was painful to do without a factory for element */
-.active-video video {
+.active-video-element {
   height: 100%;
 
   /* Flip it horizontally so it feels right when looking at yourself */
