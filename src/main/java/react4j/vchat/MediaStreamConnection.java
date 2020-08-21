@@ -23,6 +23,7 @@ abstract class MediaStreamConnection
   private final Supplier<Promise<MediaStream>> _connect;
   private int _requestId;
 
+  @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   static MediaStreamConnection create( @Nonnull final Supplier<Promise<MediaStream>> connect,
                                        final boolean enabled,
