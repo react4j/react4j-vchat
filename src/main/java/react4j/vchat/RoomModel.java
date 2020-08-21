@@ -153,6 +153,16 @@ abstract class RoomModel
     _webSocket.onmessage = this::onMessage;
     _webSocket.onclose = this::onClose;
     _webSocket.onerror = this::onError;
+  private void sendMessage( @Nonnull final JsPropertyMap<Object> message )
+  {
+    if ( null != _webSocket )
+    {
+      final Console console = Global.globalThis().console();
+      console.log( "Sending message", JSON.parse( JSON.stringify( message ) ) );
+      _webSocket.send( JSON.stringify( message ) );
+    }
+  }
+
   }
 
   @Action( verifyRequired = false )
@@ -300,9 +310,7 @@ abstract class RoomModel
   {
     if ( null != _webSocket )
     {
-      final JsPropertyMap<Object> message =
-        JsPropertyMap.of( "command", "request_access", "message", requestAccessMessage() );
-      _webSocket.send( JSON.stringify( message ) );
+      sendMessage( JsPropertyMap.of( "command", "request_access", "message", requestAccessMessage() ) );
       setState( State.JOIN_REQUESTED );
     }
   }
@@ -312,24 +320,19 @@ abstract class RoomModel
   {
     processAccessRequest( accessRequest, () -> {
       final String id = accessRequest.getId();
-      final JsPropertyMap<Object> message =
-        JsPropertyMap.of( "command", "approve_access", "id", id );
-      assert null != _webSocket;
-      _webSocket.send( JSON.stringify( message ) );
+      sendMessage( JsPropertyMap.of( "command", "approve_access", "id", id ) );
       _participants.add( id );
       getParticipantsObservableValue().reportChanged();
+      connectPeerConnection( id );
     } );
   }
 
   @Action( verifyRequired = false )
   void rejectAccessRequest( @Nonnull final AccessRequest accessRequest )
   {
-    processAccessRequest( accessRequest, () -> {
-      final JsPropertyMap<Object> message =
-        JsPropertyMap.of( "command", "reject_access", "id", accessRequest.getId() );
-      assert null != _webSocket;
-      _webSocket.send( JSON.stringify( message ) );
-    } );
+    processAccessRequest( accessRequest,
+                          () -> sendMessage( JsPropertyMap.of( "command", "reject_access",
+                                                               "id", accessRequest.getId() ) ) );
   }
 
   private void processAccessRequest( @Nonnull final AccessRequest accessRequest,
