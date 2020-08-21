@@ -6,6 +6,8 @@ complete as there is too much un-said.
 
 * Asses `RTCStatsReport` maplike interface to ensure we are generating it correctly.
 
+Good WebRTC overview: https://medium.com/@anto.christo.20/understanding-web-real-time-communication-webrtc-d4cec5a43f2f
+
 Code to investigate/imitate/be inspired by
 * https://github.com/dondido/webrtc-video-room
 * https://github.com/diegogurgel/react-webrtc
