@@ -43,7 +43,7 @@ wss.on('connection', (ws, request) => {
         ws.close(1000, 'Room closed');
         return;
       }
-      console.log('Message from ' + ws.id + ' data = ', room);
+      console.log('Message from ' + ws.id + ' data = ', data);
       if ('request_access' === data.command) {
         if (ws !== room.host) {
           // If we are an unauthorized client then request access from host
