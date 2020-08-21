@@ -87,7 +87,8 @@ wss.on('connection', (ws, request) => {
           }
         }
       }
-      ws.send(`[${ws.id}]: ${message}`);
+      ws.send(JSON.stringify({ command: 'error', data: data }));
+      ws.close(1000, 'Unexpected message');
     });
 
     ws.on('close', () => {
