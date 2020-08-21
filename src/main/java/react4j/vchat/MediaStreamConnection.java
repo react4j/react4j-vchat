@@ -12,6 +12,7 @@ import elemental3.MediaProvider;
 import elemental3.MediaStream;
 import elemental3.MediaStreamTrackState;
 import java.util.Objects;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -21,21 +22,26 @@ abstract class MediaStreamConnection
 {
   @Nonnull
   private final Supplier<Promise<MediaStream>> _connect;
+  @Nonnull
+  private final Consumer<MediaStream> _onStreamConnected;
   private int _requestId;
 
   @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   static MediaStreamConnection create( @Nonnull final Supplier<Promise<MediaStream>> connect,
+                                       @Nonnull final Consumer<MediaStream> onStreamConnected,
                                        final boolean enabled,
                                        final boolean audioEnabled,
                                        final boolean videoEnabled )
   {
-    return new Arez_MediaStreamConnection( connect, enabled, audioEnabled, videoEnabled );
+    return new Arez_MediaStreamConnection( connect, onStreamConnected, enabled, audioEnabled, videoEnabled );
   }
 
-  MediaStreamConnection( @Nonnull final Supplier<Promise<MediaStream>> connect )
+  MediaStreamConnection( @Nonnull final Supplier<Promise<MediaStream>> connect,
+                         @Nonnull final Consumer<MediaStream> onStreamConnected )
   {
     _connect = Objects.requireNonNull( connect );
+    _onStreamConnected = Objects.requireNonNull( onStreamConnected );
   }
 
   @Observable
@@ -166,6 +172,7 @@ abstract class MediaStreamConnection
       // TODO: Should not have to return null here
       return null;
     } );
+    _onStreamConnected.accept( stream );
   }
 
   @Action

@@ -100,10 +100,10 @@ abstract class RoomModel
   private final Set<String> _participants = new HashSet<>();
   @CascadeDispose
   final MediaStreamConnection _camStream =
-    MediaStreamConnection.create( this::requestWebCam, false, true, true );
+    MediaStreamConnection.create( this::requestWebCam, this::addTracks, false, true, true );
   @CascadeDispose
   final MediaStreamConnection _screenShareStream =
-    MediaStreamConnection.create( this::requestScreenShare, false, false, true );
+    MediaStreamConnection.create( this::requestScreenShare, this::addTracks, false, false, true );
 
   @Nonnull
   static RoomModel create( @Nonnull final String code )
@@ -200,8 +200,22 @@ abstract class RoomModel
     _connection.onicecandidate = this::onIceCandidate;
     _connection.ontrack = this::onTrack;
     _connection.ondatachannel = this::onDataChannel;
-    // TODO: attach local media to the peer connection
-    //   _localStream.getTracks().forEach(track => this.pc.addTrack(track, this.localStream));
+
+    final MediaStream stream = _camStream.getStream();
+    if ( null != stream )
+    {
+      addTracks( stream );
+    }
+  }
+
+  void addTracks( @Nonnull final MediaStream stream )
+  {
+    // attach local media to the peer connection
+    stream.getTracks().forEach( ( track, index, tracks ) -> {
+      assert null != _connection;
+      _connection.addTrack( track, stream );
+      return null;
+    } );
   }
 
   @Action( verifyRequired = false )
