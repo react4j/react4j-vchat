@@ -46,6 +46,12 @@ abstract class RoomView
     applicationState().recordRoomCode( roomCode() );
   }
 
+  @PostMount
+  void postMount()
+  {
+    _camStream.setEnabled( true );
+  }
+
   @Input( immutable = true )
   @Nonnull
   abstract ApplicationState applicationState();
