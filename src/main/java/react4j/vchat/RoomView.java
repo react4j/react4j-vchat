@@ -3,21 +3,14 @@ package react4j.vchat;
 import arez.Disposable;
 import arez.annotations.CascadeDispose;
 import arez.annotations.PostConstruct;
-import elemental2.promise.Promise;
-import elemental3.ConstrainULongRange;
-import elemental3.Global;
 import elemental3.HTMLInputElement;
 import elemental3.HTMLVideoElement;
-import elemental3.MediaStream;
-import elemental3.MediaStreamConstraints;
-import elemental3.MediaTrackConstraints;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.JsPropertyMap;
 import react4j.ReactElement;
 import react4j.ReactNode;
 import react4j.annotations.Input;
-import react4j.annotations.PostMount;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 import react4j.dom.events.FormEvent;
@@ -36,12 +29,6 @@ import static react4j.dom.DOM.*;
 abstract class RoomView
 {
   @CascadeDispose
-  final MediaStreamConnection _camStream =
-    MediaStreamConnection.create( this::requestWebCam, false, true, true );
-  @CascadeDispose
-  final MediaStreamConnection _screenShareStream =
-    MediaStreamConnection.create( this::requestScreenShare, false, false, true );
-  @CascadeDispose
   RoomModel _room;
   private final RefConsumer _activeVideoRefCallback = e -> activeVideoRef( (HTMLVideoElement) e );
 
@@ -51,12 +38,6 @@ abstract class RoomView
     _room = RoomModel.create( roomCode() );
     _room.open();
     applicationState().recordRoomCode( roomCode() );
-  }
-
-  @PostMount
-  void postMount()
-  {
-    _camStream.setEnabled( true );
   }
 
   @Input( immutable = true )
@@ -89,9 +70,9 @@ abstract class RoomView
 
   private void activeVideoRef( @Nullable final HTMLVideoElement element )
   {
-    if ( Disposable.isNotDisposed( _camStream ) )
+    if ( Disposable.isNotDisposed( _room ) )
     {
-      _camStream.setVideoElement( element );
+      _room.setActiveVideoElement( element );
     }
   }
 
@@ -218,27 +199,5 @@ abstract class RoomView
   private String getTargetValue( @Nonnull final FormEvent e )
   {
     return React4jUtil.<HTMLInputElement>getTarget( e ).value.trim();
-  }
-
-  @Nonnull
-  private Promise<MediaStream> requestWebCam()
-  {
-    return Global
-      .globalThis()
-      .navigator()
-      .mediaDevices()
-      .getUserMedia( MediaStreamConstraints
-                       .create()
-                       .audio( true )
-                       .video( MediaTrackConstraints
-                                 .create()
-                                 .width( ConstrainULongRange.create().min( 160 ).ideal( 640 ).max( 1280 ) )
-                                 .height( ConstrainULongRange.create().min( 120 ).ideal( 360 ).max( 720 ) ) ) );
-  }
-
-  @Nonnull
-  private Promise<MediaStream> requestScreenShare()
-  {
-    return Global.globalThis().navigator().mediaDevices().getDisplayMedia();
   }
 }

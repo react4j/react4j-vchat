@@ -5,6 +5,7 @@ import arez.ObservableValue;
 import arez.SafeProcedure;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
+import arez.annotations.CascadeDispose;
 import arez.annotations.ComputableValueRef;
 import arez.annotations.DepType;
 import arez.annotations.Feature;
@@ -12,13 +13,18 @@ import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import arez.annotations.ObservableValueRef;
 import elemental2.core.JsArray;
+import elemental2.promise.Promise;
 import elemental3.CloseEvent;
 import elemental3.Console;
+import elemental3.ConstrainULongRange;
 import elemental3.Event;
 import elemental3.Global;
+import elemental3.HTMLVideoElement;
 import elemental3.JSON;
 import elemental3.Location;
 import elemental3.MediaStream;
+import elemental3.MediaStreamConstraints;
+import elemental3.MediaTrackConstraints;
 import elemental3.MessageEvent;
 import elemental3.RTCConfiguration;
 import elemental3.RTCDataChannel;
@@ -92,6 +98,12 @@ abstract class RoomModel
   private RTCDataChannel _dataChannel;
   @Nonnull
   private final Set<String> _participants = new HashSet<>();
+  @CascadeDispose
+  final MediaStreamConnection _camStream =
+    MediaStreamConnection.create( this::requestWebCam, false, true, true );
+  @CascadeDispose
+  final MediaStreamConnection _screenShareStream =
+    MediaStreamConnection.create( this::requestScreenShare, false, false, true );
 
   @Nonnull
   static RoomModel create( @Nonnull final String code )
@@ -160,10 +172,16 @@ abstract class RoomModel
   @ObservableValueRef
   abstract ObservableValue<?> getParticipantsObservableValue();
 
+  void setActiveVideoElement( @Nullable final HTMLVideoElement element )
+  {
+    _camStream.setVideoElement( element );
+  }
+
   @Action
   void open()
   {
     leave();
+    _camStream.setEnabled( true );
     _webSocket = new WebSocket( deriveRoomUrl() );
     getConnectionStateComputableValue().reportPossiblyChanged();
     setRole( Role.UNKNOWN );
@@ -494,5 +512,27 @@ abstract class RoomModel
       getPendingAccessRequestsObservableValue().reportChanged();
       action.call();
     }
+  }
+
+  @Nonnull
+  private Promise<MediaStream> requestWebCam()
+  {
+    return Global
+      .globalThis()
+      .navigator()
+      .mediaDevices()
+      .getUserMedia( MediaStreamConstraints
+                       .create()
+                       .audio( true )
+                       .video( MediaTrackConstraints
+                                 .create()
+                                 .width( ConstrainULongRange.create().min( 160 ).ideal( 640 ).max( 1280 ) )
+                                 .height( ConstrainULongRange.create().min( 120 ).ideal( 360 ).max( 720 ) ) ) );
+  }
+
+  @Nonnull
+  private Promise<MediaStream> requestScreenShare()
+  {
+    return Global.globalThis().navigator().mediaDevices().getDisplayMedia();
   }
 }
