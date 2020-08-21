@@ -1,6 +1,7 @@
 package react4j.vchat;
 
 import arez.ComputableValue;
+import arez.Disposable;
 import arez.ObservableValue;
 import arez.SafeProcedure;
 import arez.annotations.Action;
@@ -19,7 +20,6 @@ import elemental3.Console;
 import elemental3.ConstrainULongRange;
 import elemental3.Event;
 import elemental3.Global;
-import elemental3.HTMLVideoElement;
 import elemental3.JSON;
 import elemental3.Location;
 import elemental3.MediaStream;
@@ -99,11 +99,15 @@ abstract class RoomModel
   @Nonnull
   private final Set<String> _participants = new HashSet<>();
   @CascadeDispose
+  @Nonnull
   final MediaStreamConnection _camStream =
     MediaStreamConnection.create( this::requestWebCam, this::addTracks, false, true, true );
   @CascadeDispose
+  @Nonnull
   final MediaStreamConnection _screenShareStream =
     MediaStreamConnection.create( this::requestScreenShare, this::addTracks, false, false, true );
+  @Nonnull
+  private List<MediaStreamConnection> _remoteStreams = new ArrayList<>();
 
   @Nonnull
   static RoomModel create( @Nonnull final String code )
@@ -172,10 +176,29 @@ abstract class RoomModel
   @ObservableValueRef
   abstract ObservableValue<?> getParticipantsObservableValue();
 
-  void setActiveVideoElement( @Nullable final HTMLVideoElement element )
+  //TODO: Make this observable
+  @Nonnull
+  MediaStreamConnection getActiveMediaStream()
   {
-    _camStream.setVideoElement( element );
+    //TODO: Ensure that different streams can be made observable
+    return _camStream;
   }
+
+  @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
+  @Nonnull
+  List<MediaStreamConnection> getListMediaStreams()
+  {
+    final List<MediaStreamConnection> streams = new ArrayList<>();
+    if ( _screenShareStream.isEnabled() )
+    {
+      streams.add( _screenShareStream );
+    }
+    streams.addAll( _remoteStreams );
+    return streams;
+  }
+
+  @ComputableValueRef
+  abstract ComputableValue<?> getListMediaStreamsComputableValue();
 
   @Action
   void open()
@@ -290,7 +313,8 @@ abstract class RoomModel
     }
   }
 
-  private void onTrack( @Nonnull final RTCTrackEvent event )
+  @Action( verifyRequired = false )
+  void onTrack( @Nonnull final RTCTrackEvent event )
   {
     if ( _connection == event.currentTarget() )
     {
@@ -298,6 +322,21 @@ abstract class RoomModel
 
       // when the other side added one or more media streams, show it on screen
       final JsArray<MediaStream> streams = event.streams();
+      _remoteStreams.forEach( Disposable::dispose );
+
+      // TODO: This is an ugly hack so that @Memoize method will return a
+      //  different value and thus be marked as changed
+      _remoteStreams = new ArrayList<>();
+      streams.forEach( ( stream, index, collection ) -> {
+        final MediaStreamConnection streamConnection =
+          MediaStreamConnection.create( () -> Promise.resolve( stream ), s -> {
+          }, true, true, true );
+        _remoteStreams.add( streamConnection );
+        streamConnection.setStream( stream );
+        //streamConnection.setEnabled( true );
+        return null;
+      } );
+      getListMediaStreamsComputableValue().reportPossiblyChanged();
     }
   }
 

@@ -30,6 +30,10 @@ button {
   align-self: stretch;
 }
 
+.video-list-item {
+  width: 100%;
+}
+
 .active-video {
   align-self: stretch;
   flex-grow: 1;

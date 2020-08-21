@@ -49,7 +49,9 @@ abstract class RoomView
     return div( new HtmlProps().className( "room-view" ),
                 div( new HtmlProps().className( "video-section" ),
                      div( new HtmlProps().className( "video-list" ),
-                          " "
+                          _room.getListMediaStreams()
+                            .stream()
+                            .map( c -> VideoViewBuilder.mediaStreamConnection( c ).className( "video-list-item" ) )
                      ),
                      div( new HtmlProps().className( "active-video" ),
                           VideoViewBuilder
