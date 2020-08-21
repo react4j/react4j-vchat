@@ -14,6 +14,36 @@ button {
   }
 }
 
+.room-view {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.video-section {
+  display: flex;
+  flex-grow: 1;
+}
+
+.video-list {
+  width: 240px;
+  align-self: stretch;
+}
+
+.active-video {
+  align-self: stretch;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* We don't have a class on video as it was painful to do without a factory for element */
+.active-video video {
+  height: 100%;
+
+  /* Flip it horizontally so it feels right when looking at yourself */
+  transform: scale(-1, 1);
+}
+
 /** Need to add this back for video controls */
 /*input:focus,*/
 /*button:focus {*/

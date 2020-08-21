@@ -1,18 +1,23 @@
 package react4j.vchat;
 
+import arez.Disposable;
 import arez.annotations.CascadeDispose;
 import arez.annotations.PostConstruct;
 import elemental2.promise.Promise;
 import elemental3.ConstrainULongRange;
 import elemental3.Global;
 import elemental3.HTMLInputElement;
+import elemental3.HTMLVideoElement;
 import elemental3.MediaStream;
 import elemental3.MediaStreamConstraints;
 import elemental3.MediaTrackConstraints;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.base.JsPropertyMap;
+import react4j.ReactElement;
 import react4j.ReactNode;
 import react4j.annotations.Input;
+import react4j.annotations.PostMount;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 import react4j.dom.events.FormEvent;
@@ -23,6 +28,7 @@ import react4j.dom.proptypes.html.FormProps;
 import react4j.dom.proptypes.html.HtmlProps;
 import react4j.dom.proptypes.html.InputProps;
 import react4j.dom.proptypes.html.LabelProps;
+import react4j.dom.proptypes.html.RefConsumer;
 import react4j.dom.proptypes.html.attributeTypes.InputType;
 import static react4j.dom.DOM.*;
 
@@ -34,9 +40,10 @@ abstract class RoomView
     MediaStreamConnection.create( this::requestWebCam, false, true, true );
   @CascadeDispose
   final MediaStreamConnection _screenShareStream =
-    MediaStreamConnection.create( this::requestScreenShare, false, true, true );
+    MediaStreamConnection.create( this::requestScreenShare, false, false, true );
   @CascadeDispose
   RoomModel _room;
+  private final RefConsumer _activeVideoRefCallback = e -> activeVideoRef( (HTMLVideoElement) e );
 
   @PostConstruct
   void postConstruct()
@@ -64,7 +71,28 @@ abstract class RoomView
   @Nullable
   ReactNode render()
   {
-    return div( new HtmlProps().className( "message-area" ), renderMessageAreaContent() );
+    return div( new HtmlProps().className( "room-view" ),
+                div( new HtmlProps().className( "video-section" ),
+                     div( new HtmlProps().className( "video-list" ),
+                          " "
+                     ),
+                     div( new HtmlProps().className( "active-video" ),
+                          ReactElement.createHostElement( "video",
+                                                          null,
+                                                          _activeVideoRefCallback,
+                                                          JsPropertyMap.of( "autoPlay", true ) )
+                     )
+                ),
+                div( new HtmlProps().className( "message-area" ), renderMessageAreaContent() )
+    );
+  }
+
+  private void activeVideoRef( @Nullable final HTMLVideoElement element )
+  {
+    if ( Disposable.isNotDisposed( _camStream ) )
+    {
+      _camStream.setVideoElement( element );
+    }
   }
 
   @Nullable
