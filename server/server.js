@@ -86,6 +86,17 @@ wss.on('connection', (ws, request) => {
             return;
           }
         }
+      } else if ('offer' === data.command || 'candidate' === data.command) {
+        for (const other of room.guests) {
+          if (ws.id !== other.id) {
+            other.send(message);
+            return;
+          }
+        }
+        if (ws.id !== room.host.id) {
+          room.host.send(message);
+          return;
+        }
       }
       ws.send(JSON.stringify({ command: 'error', data: data }));
       ws.close(1000, 'Unexpected message');
