@@ -3,6 +3,7 @@ package react4j.vchat.model;
 import arez.ObservableValue;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
+import arez.annotations.CascadeDispose;
 import arez.annotations.Observable;
 import arez.annotations.ObservableValueRef;
 import elemental3.Global;
@@ -10,6 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 @ArezComponent
 public abstract class ApplicationState
@@ -22,6 +24,9 @@ public abstract class ApplicationState
   private static final String STORAGE_KEY = "vchat.rooms";
   @Nonnull
   private final LinkedList<String> _latestRoomCodes = new LinkedList<>();
+  @CascadeDispose
+  @Nonnull
+  final BrowserLocation _location = BrowserLocation.create();
 
   @Nonnull
   public static ApplicationState create()
@@ -39,6 +44,18 @@ public abstract class ApplicationState
         _latestRoomCodes.addLast( code );
       }
     }
+  }
+
+  @Nullable
+  public String currentRoom()
+  {
+    final String location = _location.getLocation();
+    return location.isEmpty() ? null : location;
+  }
+
+  public void gotoRoom( @Nonnull final String roomCode )
+  {
+    _location.gotoLocation( roomCode );
   }
 
   @Observable( expectSetter = false )

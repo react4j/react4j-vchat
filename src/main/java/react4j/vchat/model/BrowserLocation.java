@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.model;
 
 import arez.ComputableValue;
 import arez.annotations.Action;

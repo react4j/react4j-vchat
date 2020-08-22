@@ -26,9 +26,6 @@ import static react4j.dom.DOM.*;
 abstract class SelectRoomView
 {
   @Input( immutable = true )
-  abstract BrowserLocation browserLocation();
-
-  @Input( immutable = true )
   abstract ApplicationState applicationState();
 
   @Observable( readOutsideTransaction = Feature.ENABLE, writeOutsideTransaction = Feature.ENABLE )
@@ -82,10 +79,10 @@ abstract class SelectRoomView
   private void onSubmit( @Nonnull final FormEvent e )
   {
     e.preventDefault();
-    final String roomId = getRoomCode();
-    if ( null != roomId )
+    final String roomCode = getRoomCode();
+    if ( null != roomCode )
     {
-      browserLocation().gotoLocation( roomId );
+      applicationState().gotoRoom( roomCode );
     }
   }
 

@@ -12,18 +12,15 @@ abstract class Application
 {
   @CascadeDispose
   @Nonnull
-  final BrowserLocation _location = BrowserLocation.create();
-  @CascadeDispose
-  @Nonnull
   final ApplicationState _applicationState = ApplicationState.create();
 
   @Render
   @Nonnull
   ReactNode render()
   {
-    final String roomCode = _location.getLocation();
-    return roomCode.isEmpty() ?
-           SelectRoomViewBuilder.browserLocation( _location ).applicationState( _applicationState ) :
+    final String roomCode = _applicationState.currentRoom();
+    return null == roomCode ?
+           SelectRoomViewBuilder.applicationState( _applicationState ) :
            RoomViewBuilder.applicationState( _applicationState ).roomCode( roomCode );
   }
 }
