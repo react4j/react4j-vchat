@@ -19,6 +19,7 @@ import react4j.dom.proptypes.html.ImgProps;
 import react4j.dom.proptypes.html.InputProps;
 import react4j.dom.proptypes.html.LabelProps;
 import react4j.dom.proptypes.html.attributeTypes.InputType;
+import react4j.vchat.model.ApplicationState;
 import static react4j.dom.DOM.*;
 
 @View( type = View.Type.TRACKING )

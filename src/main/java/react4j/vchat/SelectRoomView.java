@@ -3,6 +3,7 @@ package react4j.vchat;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
 import elemental3.HTMLInputElement;
+import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import react4j.ReactNode;
@@ -18,6 +19,7 @@ import react4j.dom.proptypes.html.InputProps;
 import react4j.dom.proptypes.html.LabelProps;
 import react4j.dom.proptypes.html.attributeTypes.ButtonType;
 import react4j.dom.proptypes.html.attributeTypes.InputType;
+import react4j.vchat.model.ApplicationState;
 import static react4j.dom.DOM.*;
 
 @View( type = View.Type.TRACKING )
@@ -40,6 +42,8 @@ abstract class SelectRoomView
   ReactNode render()
   {
     final String roomCode = getRoomCode();
+    final ApplicationState applicationState = applicationState();
+    final List<String> latestRoomCodes = applicationState.getLatestRoomCodes();
     return form( new FormProps().className( "home" ).onSubmit( this::onSubmit ),
                  h1( "vChat" ),
                  label( new LabelProps().htmlFor( "roomCode" ), "Enter a room code." ),
@@ -59,13 +63,13 @@ abstract class SelectRoomView
                       button( new BtnProps().className( "primary-button" ).type( ButtonType.submit ), "Join" ),
                       a( new AnchorProps()
                            .className( "primary-button" )
-                           .href( "#" + applicationState().randomRoomCode() ),
+                           .href( "#" + applicationState.randomRoomCode() ),
                          "Join Random" )
                  ),
-                 applicationState().getLatestRoomCodes().isEmpty() ?
+                 latestRoomCodes.isEmpty() ?
                  null :
                  fragment( div( "Recently used rooms:" ),
-                           fragment( applicationState().getLatestRoomCodes().stream().map( this::roomLink ) ) )
+                           fragment( latestRoomCodes.stream().map( this::roomLink ) ) )
     );
   }
 

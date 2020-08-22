@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import react4j.ReactNode;
 import react4j.annotations.Render;
 import react4j.annotations.View;
+import react4j.vchat.model.ApplicationState;
 
 @View( type = View.Type.TRACKING )
 abstract class Application

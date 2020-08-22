@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.model;
 
 import arez.ObservableValue;
 import arez.annotations.Action;
@@ -12,7 +12,7 @@ import java.util.Random;
 import javax.annotation.Nonnull;
 
 @ArezComponent
-abstract class ApplicationState
+public abstract class ApplicationState
 {
   @Nonnull
   private static final String ALPHA_NUMERIC = "abcdefghijklmnopqrstuvwxyz1234567890";
@@ -24,7 +24,7 @@ abstract class ApplicationState
   private final LinkedList<String> _latestRoomCodes = new LinkedList<>();
 
   @Nonnull
-  static ApplicationState create()
+  public static ApplicationState create()
   {
     return new Arez_ApplicationState();
   }
@@ -42,7 +42,7 @@ abstract class ApplicationState
   }
 
   @Observable( expectSetter = false )
-  List<String> getLatestRoomCodes()
+  public List<String> getLatestRoomCodes()
   {
     return _latestRoomCodes;
   }
@@ -51,7 +51,7 @@ abstract class ApplicationState
   abstract ObservableValue<?> getLatestRoomCodesObservableValue();
 
   @Action
-  void recordRoomCode( @Nonnull final String roomCode )
+  public void recordRoomCode( @Nonnull final String roomCode )
   {
     _latestRoomCodes.remove( roomCode );
     if ( MAX_LATEST_ROOMS == _latestRoomCodes.size() )
@@ -69,7 +69,7 @@ abstract class ApplicationState
    * @return a random room code.
    */
   @Nonnull
-  String randomRoomCode()
+  public String randomRoomCode()
   {
     final Random random = new Random();
     final StringBuilder sb = new StringBuilder( 10 );
