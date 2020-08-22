@@ -154,6 +154,18 @@ abstract class RoomModel
 
   abstract void setRequestAccessMessage( @Nonnull String message );
 
+  @Nonnull
+  MediaStreamConnection getCamStream()
+  {
+    return _camStream;
+  }
+
+  @Nonnull
+  MediaStreamConnection getScreenShareStream()
+  {
+    return _screenShareStream;
+  }
+
   @Observable( expectSetter = false )
   @Nonnull
   List<AccessRequest> getPendingAccessRequests()
