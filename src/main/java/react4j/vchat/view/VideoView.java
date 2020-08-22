@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.view;
 
 import arez.Disposable;
 import elemental3.HTMLVideoElement;

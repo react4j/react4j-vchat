@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.view;
 
 import elemental2.dom.Event;
 import javax.annotation.Nonnull;

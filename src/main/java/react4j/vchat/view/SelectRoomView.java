@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.view;
 
 import arez.annotations.Feature;
 import arez.annotations.Observable;

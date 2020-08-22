@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.view;
 
 import arez.annotations.CascadeDispose;
 import javax.annotation.Nonnull;
@@ -8,7 +8,7 @@ import react4j.annotations.View;
 import react4j.vchat.model.ApplicationState;
 
 @View( type = View.Type.TRACKING )
-abstract class Application
+public abstract class Application
 {
   @CascadeDispose
   @Nonnull
