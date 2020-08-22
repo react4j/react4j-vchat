@@ -363,6 +363,7 @@ public abstract class RoomModel
   void onRemoveTrack( @Nonnull final MediaStreamTrackEvent e )
   {
     final MediaStreamTrack track = e.track();
+    Global.globalThis().console().log( "onRemoveTrack " + track.id() );
     _remoteStreams = _remoteStreams.stream()
       .filter( c -> !Objects.requireNonNull( c.getStream() ).id().equals( track.id() ) )
       .collect( Collectors.toList() );
