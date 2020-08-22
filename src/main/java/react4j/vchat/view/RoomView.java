@@ -52,7 +52,6 @@ abstract class RoomView
   ReactNode render()
   {
     final MediaStreamConnection camStream = _room.getCamStream();
-    final MediaStreamConnection screenShareStream = _room.getScreenShareStream();
     return div( new HtmlProps().className( "room-view" ),
                 div( new HtmlProps().className( "video-section" ),
                      div( new HtmlProps().className( "video-list" ),
@@ -68,10 +67,10 @@ abstract class RoomView
                           ),
                           div( new HtmlProps().className( "controls" ),
                                button( new BtnProps().className( "control-btn" )
-                                         .onClick( e -> screenShareStream.toggleEnabled() ),
+                                         .onClick( e -> _room.toggleScreenShare() ),
                                        // TODO: Should generate svg factory methods and props so don't have to ref as img
                                        img( new ImgProps()
-                                              .src( screenShareStream.isEnabled() ?
+                                              .src( _room.isScreenShareEnabled() ?
                                                     "img/screen_share_on.svg" :
                                                     "img/screen_share_off.svg" )
                                               .width( 32 )

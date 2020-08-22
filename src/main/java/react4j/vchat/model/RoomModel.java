@@ -1,7 +1,6 @@
 package react4j.vchat.model;
 
 import arez.ComputableValue;
-import arez.Disposable;
 import arez.ObservableValue;
 import arez.SafeProcedure;
 import arez.annotations.Action;
@@ -24,6 +23,8 @@ import elemental3.JSON;
 import elemental3.Location;
 import elemental3.MediaStream;
 import elemental3.MediaStreamConstraints;
+import elemental3.MediaStreamTrack;
+import elemental3.MediaStreamTrackEvent;
 import elemental3.MediaTrackConstraints;
 import elemental3.MessageEvent;
 import elemental3.RTCConfiguration;
@@ -35,6 +36,7 @@ import elemental3.RTCIceServer;
 import elemental3.RTCLocalSessionDescriptionInit;
 import elemental3.RTCPeerConnection;
 import elemental3.RTCPeerConnectionIceEvent;
+import elemental3.RTCRtpSender;
 import elemental3.RTCTrackEvent;
 import elemental3.WebSocket;
 import java.util.ArrayList;
@@ -42,6 +44,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.Any;
@@ -160,10 +163,30 @@ public abstract class RoomModel
     return _camStream;
   }
 
-  @Nonnull
-  public MediaStreamConnection getScreenShareStream()
+  public boolean isScreenShareEnabled()
   {
-    return _screenShareStream;
+    return _screenShareStream.isEnabled();
+  }
+
+  @Action
+  public void toggleScreenShare()
+  {
+    _screenShareStream.toggleEnabled();
+    if ( null != _connection )
+    {
+      final MediaStream stream = _screenShareStream.getStream();
+      if ( null != stream )
+      {
+        if ( _screenShareStream.isEnabled() )
+        {
+          addTracks( stream );
+        }
+        else
+        {
+          removeTracks( stream );
+        }
+      }
+    }
   }
 
   @Observable( expectSetter = false )
@@ -249,6 +272,21 @@ public abstract class RoomModel
     stream.getTracks().forEach( ( track, index, tracks ) -> {
       assert null != _connection;
       _connection.addTrack( track, stream );
+      return null;
+    } );
+  }
+
+  void removeTracks( @Nonnull final MediaStream stream )
+  {
+    assert null != _connection;
+    stream.getTracks().forEach( ( track, index, tracks ) -> {
+      assert null != _connection;
+      final RTCRtpSender rtpSender =
+        _connection.getSenders().find( ( sender, senderIndex, severs ) -> sender.track() == track );
+      if ( null != rtpSender )
+      {
+        _connection.removeTrack( rtpSender );
+      }
       return null;
     } );
   }
@@ -344,11 +382,21 @@ public abstract class RoomModel
           }, true, true, true );
         _remoteStreams.add( streamConnection );
         streamConnection.setStream( stream );
-        //streamConnection.setEnabled( true );
+        stream.onremovetrack = this::onRemoveTrack;
         return null;
       } );
       getListMediaStreamsComputableValue().reportPossiblyChanged();
     }
+  }
+
+  @Action
+  void onRemoveTrack( @Nonnull final MediaStreamTrackEvent e )
+  {
+    final MediaStreamTrack track = e.track();
+    _remoteStreams = _remoteStreams.stream()
+      .filter( c -> !Objects.requireNonNull( c.getStream() ).id().equals( track.id() ) )
+      .collect( Collectors.toList() );
+    getListMediaStreamsComputableValue().reportPossiblyChanged();
   }
 
   private void onIceCandidate( @Nonnull final RTCPeerConnectionIceEvent event )
