@@ -250,11 +250,30 @@ public abstract class RoomModel
 
     _connection.onicecandidate = this::onIceCandidate;
     _connection.ontrack = this::onTrack;
+    _connection.onconnectionstatechange = this::onConnectionStateChange;
 
     final MediaStream stream = _camStream.getStream();
     if ( null != stream )
     {
       addTracks( stream );
+    }
+  }
+
+  @Action( verifyRequired = false )
+  void onConnectionStateChange( @Nonnull final Event event )
+  {
+    if ( _connection == event.currentTarget() )
+    {
+      assert null != _connection;
+      final String state = _connection.iceConnectionState();
+      if ( RTCIceConnectionState.disconnected.equals( state ) ||
+           RTCIceConnectionState.failed.equals( state ) ||
+           RTCIceConnectionState.closed.equals( state ) )
+      {
+        _remoteStreams.forEach( Disposable::dispose );
+        _remoteStreams = new ArrayList<>();
+        getListMediaStreamsComputableValue().reportPossiblyChanged();
+      }
     }
   }
 
