@@ -90,7 +90,6 @@ public abstract class RoomModel
   private final List<AccessRequest> _pendingAccessRequest = new ArrayList<>();
   @Nullable
   private WebSocket _webSocket;
-  // Both Host and Guest create their own connections
   @Nullable
   private RTCPeerConnection _connection;
   @Nonnull
