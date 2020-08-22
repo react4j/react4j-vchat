@@ -28,8 +28,6 @@ import elemental3.MediaStreamTrackEvent;
 import elemental3.MediaTrackConstraints;
 import elemental3.MessageEvent;
 import elemental3.RTCConfiguration;
-import elemental3.RTCDataChannel;
-import elemental3.RTCDataChannelEvent;
 import elemental3.RTCIceCandidate;
 import elemental3.RTCIceCandidateInit;
 import elemental3.RTCIceServer;
@@ -48,7 +46,6 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 @ArezComponent
@@ -96,9 +93,6 @@ public abstract class RoomModel
   // Both Host and Guest create their own connections
   @Nullable
   private RTCPeerConnection _connection;
-  //TODO: If we don't have chat can we remove the data channel?
-  @Nullable
-  private RTCDataChannel _dataChannel;
   @Nonnull
   private final Set<String> _participants = new HashSet<>();
   @CascadeDispose
@@ -257,7 +251,6 @@ public abstract class RoomModel
 
     _connection.onicecandidate = this::onIceCandidate;
     _connection.ontrack = this::onTrack;
-    _connection.ondatachannel = this::onDataChannel;
 
     final MediaStream stream = _camStream.getStream();
     if ( null != stream )
@@ -298,9 +291,6 @@ public abstract class RoomModel
     final Console console = Global.globalThis().console();
     console.log( "Attempting to send rtc session description" );
     assert null != _connection;
-    _dataChannel = _connection.createDataChannel( "chat" );
-    _dataChannel.onmessage = this::onDataChannelMessage;
-    _dataChannel.onclose = this::onDataChannelClose;
     _connection.createOffer()
       .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
                                                          .create()
@@ -324,42 +314,6 @@ public abstract class RoomModel
       final Console console = Global.globalThis().console();
       console.log( "Sending message", JSON.parse( JSON.stringify( message ) ) );
       _webSocket.send( JSON.stringify( message ) );
-    }
-  }
-
-  @Action( verifyRequired = false )
-  void onDataChannel( @Nonnull final RTCDataChannelEvent event )
-  {
-    if ( _connection == event.currentTarget() )
-    {
-      assert Role.GUEST == role();
-      final Console console = Global.globalThis().console();
-      console.log( "onDataChannel", event );
-
-      _dataChannel = event.channel();
-      _dataChannel.onmessage = this::onDataChannelMessage;
-      _dataChannel.onclose = this::onDataChannelClose;
-    }
-  }
-
-  private void onDataChannelClose( @Nonnull final Event event )
-  {
-    if ( event.currentTarget() == _dataChannel )
-    {
-      final Console console = Global.globalThis().console();
-      console.log( "The Data Channel is Closed" );
-    }
-  }
-
-  private void onDataChannelMessage( @Nonnull final MessageEvent event )
-  {
-    if ( event.currentTarget() == _dataChannel )
-    {
-      final Console console = Global.globalThis().console();
-      final Any data = event.data();
-      assert null != data;
-      final JsPropertyMap<Object> message = Js.asPropertyMap( JSON.parse( data.asString() ) );
-      console.log( "onDataChannelMessage", message );
     }
   }
 
