@@ -11,6 +11,7 @@ import react4j.annotations.Input;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 import react4j.dom.proptypes.html.RefConsumer;
+import react4j.vchat.model.MediaStreamConnection;
 
 @View
 abstract class VideoView

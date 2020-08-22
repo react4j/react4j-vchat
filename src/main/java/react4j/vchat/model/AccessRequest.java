@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.model;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
 /**
  * Representation of a request received from a guest for access.
  */
-final class AccessRequest
+public final class AccessRequest
 {
   @Nonnull
   private final String _id;
@@ -20,13 +20,13 @@ final class AccessRequest
   }
 
   @Nonnull
-  String getId()
+  public String getId()
   {
     return _id;
   }
 
   @Nonnull
-  String getMessage()
+  public String getMessage()
   {
     return _message;
   }

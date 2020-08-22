@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.model;
 
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 @ArezComponent
-abstract class MediaStreamConnection
+public abstract class MediaStreamConnection
 {
   @Nonnull
   private final Supplier<Promise<MediaStream>> _connect;
@@ -68,7 +68,7 @@ abstract class MediaStreamConnection
   abstract void setErrorMessage( @Nullable String message );
 
   @Observable( initializer = Feature.ENABLE )
-  abstract boolean isEnabled();
+  public abstract boolean isEnabled();
 
   @Action
   public void setEnabled( final boolean enabled )
@@ -96,18 +96,18 @@ abstract class MediaStreamConnection
   abstract void _setEnabled( boolean enabled );
 
   @Action
-  void toggleEnabled()
+  public void toggleEnabled()
   {
     setEnabled( !isEnabled() );
   }
 
   @Observable( initializer = Feature.ENABLE )
-  abstract boolean isAudioEnabled();
+  public abstract boolean isAudioEnabled();
 
   abstract void setAudioEnabled( boolean audioEnabled );
 
   @Action
-  void toggleAudio()
+  public void toggleAudio()
   {
     setAudioEnabled( !isAudioEnabled() );
     final MediaStream stream = getStream();
@@ -118,12 +118,12 @@ abstract class MediaStreamConnection
   }
 
   @Observable( initializer = Feature.ENABLE )
-  abstract boolean isVideoEnabled();
+  public abstract boolean isVideoEnabled();
 
   abstract void setVideoEnabled( boolean videoEnabled );
 
   @Action
-  void toggleVideo()
+  public void toggleVideo()
   {
     setVideoEnabled( !isVideoEnabled() );
     final MediaStream stream = getStream();
@@ -214,7 +214,7 @@ abstract class MediaStreamConnection
   @Nullable
   abstract HTMLVideoElement getVideoElement();
 
-  abstract void setVideoElement( @Nullable HTMLVideoElement videoElement );
+  public abstract void setVideoElement( @Nullable HTMLVideoElement videoElement );
 
   @Observe
   void maintainVideo()

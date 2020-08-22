@@ -19,7 +19,10 @@ import react4j.dom.proptypes.html.ImgProps;
 import react4j.dom.proptypes.html.InputProps;
 import react4j.dom.proptypes.html.LabelProps;
 import react4j.dom.proptypes.html.attributeTypes.InputType;
+import react4j.vchat.model.AccessRequest;
 import react4j.vchat.model.ApplicationState;
+import react4j.vchat.model.MediaStreamConnection;
+import react4j.vchat.model.RoomModel;
 import static react4j.dom.DOM.*;
 
 @View( type = View.Type.TRACKING )

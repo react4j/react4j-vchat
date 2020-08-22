@@ -1,4 +1,4 @@
-package react4j.vchat;
+package react4j.vchat.model;
 
 import arez.ComputableValue;
 import arez.Disposable;
@@ -49,9 +49,9 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 @ArezComponent
-abstract class RoomModel
+public abstract class RoomModel
 {
-  enum State
+  public enum State
   {
     // Have not established a connection to the signalling server
     NOT_READY,
@@ -74,7 +74,7 @@ abstract class RoomModel
   }
 
   // The role of the current user
-  enum Role
+  public enum Role
   {
     UNKNOWN, HOST, GUEST
   }
@@ -110,7 +110,7 @@ abstract class RoomModel
   private List<MediaStreamConnection> _remoteStreams = new ArrayList<>();
 
   @Nonnull
-  static RoomModel create( @Nonnull final String code )
+  public static RoomModel create( @Nonnull final String code )
   {
     return new Arez_RoomModel( code, State.NOT_READY, Role.UNKNOWN, "" );
   }
@@ -121,7 +121,7 @@ abstract class RoomModel
   }
 
   @Nonnull
-  String getRoomCode()
+  public String getRoomCode()
   {
     return _code;
   }
@@ -138,37 +138,37 @@ abstract class RoomModel
 
   @Observable
   @Nonnull
-  abstract State state();
+  public abstract State state();
 
   abstract void setState( @Nonnull State state );
 
   @Observable
   @Nonnull
-  abstract Role role();
+  public abstract Role role();
 
   abstract void setRole( @Nonnull Role role );
 
   @Observable( writeOutsideTransaction = Feature.ENABLE )
   @Nonnull
-  abstract String requestAccessMessage();
+  public abstract String requestAccessMessage();
 
-  abstract void setRequestAccessMessage( @Nonnull String message );
+  public abstract void setRequestAccessMessage( @Nonnull String message );
 
   @Nonnull
-  MediaStreamConnection getCamStream()
+  public MediaStreamConnection getCamStream()
   {
     return _camStream;
   }
 
   @Nonnull
-  MediaStreamConnection getScreenShareStream()
+  public MediaStreamConnection getScreenShareStream()
   {
     return _screenShareStream;
   }
 
   @Observable( expectSetter = false )
   @Nonnull
-  List<AccessRequest> getPendingAccessRequests()
+  public List<AccessRequest> getPendingAccessRequests()
   {
     //TODO: Replace this with an observable list...
     return _pendingAccessRequest;
@@ -179,7 +179,7 @@ abstract class RoomModel
 
   @Observable( expectSetter = false )
   @Nonnull
-  Set<String> getParticipants()
+  public Set<String> getParticipants()
   {
     //TODO: Replace this with an observable list...
     return _participants;
@@ -190,7 +190,7 @@ abstract class RoomModel
 
   //TODO: Make this observable
   @Nonnull
-  MediaStreamConnection getActiveMediaStream()
+  public MediaStreamConnection getActiveMediaStream()
   {
     //TODO: Ensure that different streams can be made observable
     return _camStream;
@@ -198,7 +198,7 @@ abstract class RoomModel
 
   @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
   @Nonnull
-  List<MediaStreamConnection> getListMediaStreams()
+  public List<MediaStreamConnection> getListMediaStreams()
   {
     final List<MediaStreamConnection> streams = new ArrayList<>();
     if ( _screenShareStream.isEnabled() )
@@ -213,7 +213,7 @@ abstract class RoomModel
   abstract ComputableValue<?> getListMediaStreamsComputableValue();
 
   @Action
-  void open()
+  public void open()
   {
     leave();
     _camStream.setEnabled( true );
@@ -539,7 +539,7 @@ abstract class RoomModel
   }
 
   @Action( verifyRequired = false )
-  void requestAccess()
+  public void requestAccess()
   {
     if ( null != _webSocket )
     {
@@ -549,7 +549,7 @@ abstract class RoomModel
   }
 
   @Action( verifyRequired = false )
-  void acceptAccessRequest( @Nonnull final AccessRequest accessRequest )
+  public void acceptAccessRequest( @Nonnull final AccessRequest accessRequest )
   {
     processAccessRequest( accessRequest, () -> {
       final String id = accessRequest.getId();
@@ -561,7 +561,7 @@ abstract class RoomModel
   }
 
   @Action( verifyRequired = false )
-  void rejectAccessRequest( @Nonnull final AccessRequest accessRequest )
+  public void rejectAccessRequest( @Nonnull final AccessRequest accessRequest )
   {
     processAccessRequest( accessRequest,
                           () -> sendMessage( JsPropertyMap.of( "command", "reject_access",
