@@ -334,11 +334,10 @@ public abstract class RoomModel
 
       // when the other side added one or more media streams, show it on screen
       final JsArray<MediaStream> streams = event.streams();
-      _remoteStreams.forEach( Disposable::dispose );
 
       // TODO: This is an ugly hack so that @Memoize method will return a
       //  different value and thus be marked as changed
-      _remoteStreams = new ArrayList<>();
+      _remoteStreams = new ArrayList<>( _remoteStreams );
       streams.forEach( ( stream, index, collection ) -> {
         final MediaStreamConnection streamConnection =
           MediaStreamConnection.create( () -> Promise.resolve( stream ), s -> {
