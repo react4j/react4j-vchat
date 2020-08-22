@@ -5,6 +5,7 @@ import elemental3.Element;
 import elemental3.Global;
 import jsinterop.base.Js;
 import react4j.dom.ReactDOM;
+import react4j.vchat.view.ApplicationBuilder;
 
 public final class Main
   implements EntryPoint
