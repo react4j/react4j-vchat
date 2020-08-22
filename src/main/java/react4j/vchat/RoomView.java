@@ -15,6 +15,7 @@ import react4j.dom.proptypes.html.AnchorProps;
 import react4j.dom.proptypes.html.BtnProps;
 import react4j.dom.proptypes.html.FormProps;
 import react4j.dom.proptypes.html.HtmlProps;
+import react4j.dom.proptypes.html.ImgProps;
 import react4j.dom.proptypes.html.InputProps;
 import react4j.dom.proptypes.html.LabelProps;
 import react4j.dom.proptypes.html.attributeTypes.InputType;
@@ -46,6 +47,8 @@ abstract class RoomView
   @Nullable
   ReactNode render()
   {
+    final MediaStreamConnection camStream = _room.getCamStream();
+    final MediaStreamConnection screenShareStream = _room.getScreenShareStream();
     return div( new HtmlProps().className( "room-view" ),
                 div( new HtmlProps().className( "video-section" ),
                      div( new HtmlProps().className( "video-list" ),
@@ -54,9 +57,39 @@ abstract class RoomView
                             .map( c -> VideoViewBuilder.mediaStreamConnection( c ).className( "video-list-item" ) )
                      ),
                      div( new HtmlProps().className( "active-video" ),
-                          VideoViewBuilder
-                            .mediaStreamConnection( _room.getActiveMediaStream() )
-                            .className( "active-video-element" )
+                          div( new HtmlProps().className( "active-video-wrapper" ),
+                               VideoViewBuilder
+                                 .mediaStreamConnection( _room.getActiveMediaStream() )
+                                 .className( "active-video-element" )
+                          ),
+                          div( new HtmlProps().className( "controls" ),
+                               button( new BtnProps().className( "control-btn" )
+                                         .onClick( e -> screenShareStream.toggleEnabled() ),
+                                       // TODO: Should generate svg factory methods and props so don't have to ref as img
+                                       img( new ImgProps()
+                                              .src( screenShareStream.isEnabled() ?
+                                                    "img/screen_share_on.svg" :
+                                                    "img/screen_share_off.svg" )
+                                              .width( 32 )
+                                              .height( 32 ) )
+                               ),
+                               button( new BtnProps().className( "control-btn" )
+                                         .onClick( e -> camStream.toggleAudio() ),
+                                       // TODO: Should generate svg factory methods and props so don't have to ref as img
+                                       img( new ImgProps()
+                                              .src( camStream.isAudioEnabled() ? "img/mic_on.svg" : "img/mic_off.svg" )
+                                              .width( 32 )
+                                              .height( 32 ) )
+                               ),
+                               button( new BtnProps().className( "control-btn" )
+                                         .onClick( e -> camStream.toggleVideo() ),
+                                       // TODO: Should generate svg factory methods and props so don't have to ref as img
+                                       img( new ImgProps()
+                                              .src( camStream.isVideoEnabled() ? "img/cam_on.svg" : "img/cam_off.svg" )
+                                              .width( 32 )
+                                              .height( 32 ) )
+                               )
+                          )
                      )
                 ),
                 div( new HtmlProps().className( "message-area" ), renderMessageAreaContent() )

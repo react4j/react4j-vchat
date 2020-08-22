@@ -34,7 +34,12 @@ button {
   width: 100%;
 }
 
+.active-video-wrapper {
+  height: 100%;
+}
+
 .active-video {
+  position: relative;
   align-self: stretch;
   flex-grow: 1;
   height: 100%;
@@ -46,6 +51,35 @@ button {
   /* Flip it horizontally so it feels right when looking at yourself */
   transform: scale(-1, 1);
 }
+
+.controls {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-left: -120px;
+}
+
+.control-btn {
+  position: relative;
+  outline: none;
+  border-style: solid;
+  border-color: rgb(118, 118, 118);
+  box-shadow: 1px 1px 8px black;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  margin-bottom: 6px;
+  opacity: 0.5;
+}
+
+.control-btn:hover {
+  opacity: 0.8;
+}
+
+.control-btn:not(:last-child) {
+  margin-right: 24px;
+}
+
 
 /** Need to add this back for video controls */
 /*input:focus,*/
