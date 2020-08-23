@@ -174,10 +174,10 @@ public abstract class RoomModel
       removeTracks( stream );
     }
     _screenShareStream.toggleEnabled();
-    if ( null != _connection && null != stream && _screenShareStream.isEnabled() )
+    if ( null != _connection && _screenShareStream.isEnabled() )
     {
       // add tracks if we toggled on
-      addTracks( stream );
+      maybeAddTracks( stream );
     }
   }
 
@@ -278,14 +278,24 @@ public abstract class RoomModel
     }
   }
 
-  void addTracks( @Nonnull final MediaStream stream )
+  private void maybeAddTracks( @Nullable final MediaStream stream )
+  {
+    if ( null != stream )
+    {
+      addTracks( stream );
+    }
+  }
+
+  private void addTracks( @Nonnull final MediaStream stream )
   {
     // attach local media to the peer connection
-    stream.getTracks().forEach( ( track, index, tracks ) -> {
-      assert null != _connection;
-      _connection.addTrack( track, stream );
-      return null;
-    } );
+    if ( null != _connection )
+    {
+      stream.getTracks().forEach( ( track, index, tracks ) -> {
+        _connection.addTrack( track, stream );
+        return null;
+      } );
+    }
   }
 
   void removeTracks( @Nonnull final MediaStream stream )
