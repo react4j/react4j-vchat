@@ -141,7 +141,7 @@ public abstract class RoomModel
 
   abstract void setState( @Nonnull State state );
 
-  @Observable
+  @Observable( readOutsideTransaction = Feature.ENABLE )
   @Nonnull
   public abstract Role role();
 
