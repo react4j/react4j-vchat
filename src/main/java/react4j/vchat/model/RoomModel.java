@@ -357,7 +357,7 @@ public abstract class RoomModel
     final MediaStreamTrack track = e.track();
     Global.globalThis().console().log( "onRemoveTrack " + track.id() );
     _remoteStreams = _remoteStreams.stream()
-      .filter( c -> doesConnectionContainTrack( c, track ) )
+      .filter( c -> !doesConnectionContainTrack( c, track ) )
       .collect( Collectors.toList() );
     getListMediaStreamsComputableValue().reportPossiblyChanged();
   }
@@ -366,7 +366,7 @@ public abstract class RoomModel
                                               @Nonnull final MediaStreamTrack track )
   {
     final MediaStream stream = connection.getStream();
-    return null == stream || !stream.id().equals( track.id() );
+    return null != stream && !stream.id().equals( track.id() );
   }
 
   private void onIceCandidate( @Nonnull final RTCPeerConnectionIceEvent event )
