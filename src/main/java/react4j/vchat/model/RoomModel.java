@@ -303,17 +303,18 @@ public abstract class RoomModel
 
   void removeTracks( @Nonnull final MediaStream stream )
   {
-    assert null != _connection;
-    stream.getTracks().forEach( ( track, index, tracks ) -> {
-      assert null != _connection;
-      final RTCRtpSender rtpSender =
-        _connection.getSenders().find( ( sender, senderIndex, severs ) -> sender.track() == track );
-      if ( null != rtpSender )
-      {
-        _connection.removeTrack( rtpSender );
-      }
-      return null;
-    } );
+    if ( null != _connection )
+    {
+      stream.getTracks().forEach( ( track, index, tracks ) -> {
+        final RTCRtpSender rtpSender =
+          _connection.getSenders().find( ( sender, senderIndex, severs ) -> sender.track() == track );
+        if ( null != rtpSender )
+        {
+          _connection.removeTrack( rtpSender );
+        }
+        return null;
+      } );
+    }
   }
 
   @Action( verifyRequired = false )
