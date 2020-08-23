@@ -247,12 +247,6 @@ public abstract class RoomModel
     _connection.onicecandidate = this::onIceCandidate;
     _connection.ontrack = this::onTrack;
     _connection.onconnectionstatechange = this::onConnectionStateChange;
-
-    final MediaStream stream = _camStream.getStream();
-    if ( null != stream )
-    {
-      addTracks( stream );
-    }
   }
 
   @Action( verifyRequired = false )
