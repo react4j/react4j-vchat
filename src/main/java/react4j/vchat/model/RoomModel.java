@@ -232,15 +232,23 @@ public abstract class RoomModel
   {
     leave();
     _camStream.setEnabled( true );
-    _webSocket = new WebSocket( deriveRoomUrl() );
     getConnectionStateComputableValue().reportPossiblyChanged();
     setRole( Role.UNKNOWN );
     setState( State.NOT_READY );
+    setupWebSocket();
+  }
+
+  private void setupWebSocket()
+  {
+    _webSocket = new WebSocket( deriveRoomUrl() );
     _webSocket.onopen = this::onOpen;
     _webSocket.onmessage = this::onMessage;
     _webSocket.onclose = this::onClose;
     _webSocket.onerror = this::onError;
+  }
 
+  private void setupPeerConnection()
+  {
     // Use one of Google's public STUN servers
     // The host should perform the offer role and the guest the answer role
     _connection = new RTCPeerConnection( RTCConfiguration
