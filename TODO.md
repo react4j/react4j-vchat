@@ -11,7 +11,6 @@ complete as there is too much un-said.
 * Add an icon to small video lists to indicate which ones have no audio component
 * Make sure the enable/disable of video/audio re-negotiates the session
 * Fix styling on lower panels
-* Make sure little videos flipped
 * Fix all the TODOs
 
 ---
