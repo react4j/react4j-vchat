@@ -12,6 +12,8 @@ complete as there is too much un-said.
 * Make sure the enable/disable of video/audio re-negotiates the session
 * Fix styling on lower panels
 * Fix all the TODOs
+* Add hangup button
+* Add fullscreen toggle button
 
 ---
 
