@@ -293,7 +293,7 @@ public abstract class RoomModel
   }
 
   @Action( verifyRequired = false )
-  void connectPeerConnection( @Nonnull final String participant )
+  void connectPeerConnection()
   {
     assert Role.HOST == role();
     //Global.globalThis().console().log( "Attempting to send rtc session description" );
@@ -564,7 +564,7 @@ public abstract class RoomModel
       sendMessage( JsPropertyMap.of( "command", "approve_access", "id", id ) );
       _participants.add( id );
       getParticipantsObservableValue().reportChanged();
-      connectPeerConnection( id );
+      connectPeerConnection();
     } );
   }
 
