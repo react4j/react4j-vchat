@@ -2,7 +2,10 @@
 * -text
 *.css text
 *.html text
+*.ico binary
 *.java text
+*.js text
+*.json text
 *.md text
 *.rake text
 *.xml text
