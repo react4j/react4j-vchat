@@ -73,6 +73,8 @@ CONTENT
     end
   end
 
+  project.iml.excluded_directories << project._(:generated, :gwt)
+
   project.package(:jar).tap do |j|
     extra_deps.each do |dep|
       j.enhance([dep]) do |j2|
