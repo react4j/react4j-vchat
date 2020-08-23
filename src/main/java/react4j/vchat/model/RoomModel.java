@@ -242,7 +242,7 @@ public abstract class RoomModel
     _webSocket.onerror = this::onError;
 
     // Use one of Google's public STUN servers
-    // The host should perform the offer rolw and the guest the answer role
+    // The host should perform the offer role and the guest the answer role
     _connection = new RTCPeerConnection( RTCConfiguration
                                            .create()
                                            .iceServers( RTCIceServer.create( "stun:stun.l.google.com:19302" ) ) );
