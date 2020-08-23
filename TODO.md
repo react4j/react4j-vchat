@@ -4,6 +4,17 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+## Shortlist Actions
+
+* Add the ability to manually select active stream or else follow audio activity.
+  Follow audio activity - https://stackoverflow.com/questions/16724414/microphone-activity-level-of-webrtc-mediastream
+* Add an icon to small video lists to indicate which ones have no audio component
+* Fix styling on lower panels
+* Make sure little videos flipped
+* Fix all the TODOs
+
+---
+
 * Asses `RTCStatsReport` maplike interface to ensure we are generating it correctly.
 
 Good WebRTC overview: https://medium.com/@anto.christo.20/understanding-web-real-time-communication-webrtc-d4cec5a43f2f
