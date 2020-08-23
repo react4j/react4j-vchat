@@ -141,7 +141,8 @@ public abstract class MediaStreamConnection
     final int requestId = _requestId;
     clearState();
     setConnecting( true );
-    _connect.get()
+    _connect
+      .get()
       .then( stream -> {
         if ( _requestId == requestId )
         {
