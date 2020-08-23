@@ -524,6 +524,7 @@ public abstract class RoomModel
       {
         console.log( "Host allowed guest to join room." );
         setState( State.JOINED );
+        setupPeerConnection();
       }
       else if ( "reject".equals( command ) )
       {
@@ -603,7 +604,7 @@ public abstract class RoomModel
       sendMessage( JsPropertyMap.of( "command", "approve_access", "id", id ) );
       _participants.add( id );
       getParticipantsObservableValue().reportChanged();
-      connectPeerConnection();
+      setupPeerConnection();
     } );
   }
 
