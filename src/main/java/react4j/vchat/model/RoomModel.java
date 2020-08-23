@@ -44,6 +44,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -339,16 +340,27 @@ public abstract class RoomModel
       //  different value and thus be marked as changed
       _remoteStreams = new ArrayList<>( _remoteStreams );
       streams.forEach( ( stream, index, collection ) -> {
-        final MediaStreamConnection streamConnection =
-          MediaStreamConnection.create( () -> Promise.resolve( stream ), s -> {
-          }, true, true, true );
-        _remoteStreams.add( streamConnection );
-        stream.onremovetrack = this::onRemoveTrack;
+        if ( _remoteStreams.stream().noneMatch( connection -> doesConnectionMatchStream( connection, stream ) ) )
+        {
+          final Consumer<MediaStream> noop = s -> {
+          };
+          final MediaStreamConnection streamConnection =
+            MediaStreamConnection.create( () -> Promise.resolve( stream ), noop, true, true, true );
           streamConnection.requestConnect();
+          _remoteStreams.add( streamConnection );
+          stream.onremovetrack = this::onRemoveTrack;
+        }
         return null;
       } );
       getListMediaStreamsComputableValue().reportPossiblyChanged();
     }
+  }
+
+  private boolean doesConnectionMatchStream( @Nonnull final MediaStreamConnection connection,
+                                             @Nonnull final MediaStream stream )
+  {
+    final MediaStream connectionStream = connection.getStream();
+    return null != connectionStream && connectionStream.id().equals( stream.id() );
   }
 
   @Action
