@@ -1,6 +1,7 @@
 package react4j.vchat.model;
 
 import arez.ComputableValue;
+import arez.Disposable;
 import arez.ObservableValue;
 import arez.SafeProcedure;
 import arez.annotations.Action;
@@ -30,6 +31,7 @@ import elemental3.MessageEvent;
 import elemental3.RTCConfiguration;
 import elemental3.RTCIceCandidate;
 import elemental3.RTCIceCandidateInit;
+import elemental3.RTCIceConnectionState;
 import elemental3.RTCIceServer;
 import elemental3.RTCLocalSessionDescriptionInit;
 import elemental3.RTCPeerConnection;
