@@ -164,21 +164,17 @@ public abstract class RoomModel
   @Action
   public void toggleScreenShare()
   {
-    _screenShareStream.toggleEnabled();
-    if ( null != _connection )
+    final MediaStream stream = _screenShareStream.getStream();
+    if ( null != _connection && null != stream && _screenShareStream.isEnabled() )
     {
-      final MediaStream stream = _screenShareStream.getStream();
-      if ( null != stream )
-      {
-        if ( _screenShareStream.isEnabled() )
-        {
-          addTracks( stream );
-        }
-        else
-        {
-          removeTracks( stream );
-        }
-      }
+      // Remove existing tracks if we are currently enabled and we are toggling to off
+      removeTracks( stream );
+    }
+    _screenShareStream.toggleEnabled();
+    if ( null != _connection && null != stream && _screenShareStream.isEnabled() )
+    {
+      // add tracks if we toggled on
+      addTracks( stream );
     }
   }
 
