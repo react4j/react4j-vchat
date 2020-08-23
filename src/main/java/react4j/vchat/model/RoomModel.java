@@ -343,8 +343,8 @@ public abstract class RoomModel
           MediaStreamConnection.create( () -> Promise.resolve( stream ), s -> {
           }, true, true, true );
         _remoteStreams.add( streamConnection );
-        streamConnection.setStream( stream );
         stream.onremovetrack = this::onRemoveTrack;
+          streamConnection.requestConnect();
         return null;
       } );
       getListMediaStreamsComputableValue().reportPossiblyChanged();
