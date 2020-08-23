@@ -86,7 +86,10 @@ wss.on('connection', (ws, request) => {
             return;
           }
         }
-      } else if ('offer' === data.command || 'answer' === data.command || 'candidate' === data.command) {
+      } else if ('offer' === data.command ||
+                 'answer' === data.command ||
+                 'candidate' === data.command ||
+                 'renegotiate' === data.command) {
         for (const other of room.guests) {
           if (ws.id !== other.id) {
             other.send(message);

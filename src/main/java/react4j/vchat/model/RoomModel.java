@@ -258,6 +258,7 @@ public abstract class RoomModel
     _connection.onicecandidate = this::onIceCandidate;
     _connection.ontrack = this::onTrack;
     _connection.onconnectionstatechange = this::onConnectionStateChange;
+    _connection.onnegotiationneeded = e -> negotiateConnectionSession();
 
     maybeAddTracks( _camStream.getStream() );
     maybeAddTracks( _screenShareStream.getStream() );
@@ -317,26 +318,39 @@ public abstract class RoomModel
     }
   }
 
-  @Action( verifyRequired = false )
-  void connectPeerConnection()
+  private void negotiateConnectionSession()
   {
-    assert Role.HOST == role();
-    //Global.globalThis().console().log( "Attempting to send rtc session description" );
-    assert null != _connection;
-    _connection.createOffer()
-      .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
-                                                         .create()
-                                                         .sdp( offer.sdp() )
-                                                         .type( offer.type() ) ) )
-      .then( e -> {
-        sendMessage( JsPropertyMap.of( "command", "offer", "session", _connection.localDescription() ) );
-        return null;
-      } )
-      .catch_( e -> {
-        // TODO: An error occurred, so handle the failure to connect
-        Global.globalThis().console().log( "Offer error: ", e );
-        return null;
-      } );
+    // Handle renegotiation of the session which is needed when you add/remove tracks
+    // This technique makes means that is acceptable to just call addTrack or removeTrack
+    // to get the tracks transported to the peer and session regengotiated.
+    // The technique was inspired by the discussion in the "negotiationneeded tames local changes"
+    // section at https://blog.mozilla.org/webrtc/perfect-negotiation-in-webrtc/
+    final Role role = role();
+    if ( Role.HOST == role )
+    {
+      assert null != _connection;
+      _connection
+        .createOffer()
+        .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
+                                                           .create()
+                                                           .sdp( offer.sdp() )
+                                                           .type( offer.type() ) ) )
+        .then( e -> {
+          sendMessage( JsPropertyMap.of( "command", "offer", "session", _connection.localDescription() ) );
+          return null;
+        } )
+        .catch_( e -> {
+          // TODO: An error occurred, so handle the failure to connect
+          Global.globalThis().console().log( "Offer error: ", e );
+          return null;
+        } );
+    }
+    else
+    {
+      assert Role.GUEST == role;
+      // We send the renegotiate message to force the host to initiate renegotiation
+      sendMessage( JsPropertyMap.of( "command", "renegotiate" ) );
+    }
   }
 
   private void sendMessage( @Nonnull final JsPropertyMap<Object> message )
@@ -586,6 +600,11 @@ public abstract class RoomModel
         _connection.addIceCandidate( RTCIceCandidateInit.create()
                                        .sdpMLineIndex( message.getAsAny( "mlineindex" ).asDouble() )
                                        .candidate( message.getAsAny( "candidate" ).asString() ) );
+      }
+      else if ( "renegotiate".equals( command ) )
+      {
+        assert Role.HOST == role();
+        negotiateConnectionSession();
       }
     }
   }
