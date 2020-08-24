@@ -1,8 +1,16 @@
 package react4j.vchat.view;
 
+import arez.ComputableValue;
+import arez.annotations.Action;
 import arez.annotations.CascadeDispose;
+import arez.annotations.ComputableValueRef;
+import arez.annotations.DepType;
+import arez.annotations.Memoize;
+import arez.annotations.OnActivate;
+import arez.annotations.OnDeactivate;
 import arez.annotations.PostConstruct;
 import elemental3.Document;
+import elemental3.EventListener;
 import elemental3.Global;
 import elemental3.HTMLDivElement;
 import elemental3.HTMLInputElement;
@@ -31,6 +39,8 @@ import static react4j.dom.DOM.*;
 @View( type = View.Type.TRACKING )
 abstract class RoomView
 {
+  @Nonnull
+  private final EventListener _onFullScreenChange = e -> triggerFullscreenUpdate();
   @CascadeDispose
   RoomModel _room;
   @Nullable
@@ -101,7 +111,7 @@ abstract class RoomView
                                          .onClick( e -> toggleFullscreen() ),
                                        // TODO: Should generate svg factory methods and props so don't have to ref as img
                                        img( new ImgProps()
-                                              .src( Global.globalThis().document().fullscreen() ?
+                                              .src( isFullscreen() ?
                                                     "img/fullscreen_on.svg" :
                                                     "img/fullscreen_off.svg" )
                                               .width( 32 )
@@ -251,5 +261,33 @@ abstract class RoomView
   private String getTargetValue( @Nonnull final FormEvent e )
   {
     return React4jUtil.<HTMLInputElement>getTarget( e ).value.trim();
+  }
+
+  @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
+  boolean isFullscreen()
+  {
+    return Global.globalThis().document().fullscreen();
+  }
+
+  @ComputableValueRef
+  abstract ComputableValue<?> getFullscreenComputableValue();
+
+  @OnActivate
+  void onFullscreenActivate()
+  {
+    Global.globalThis().document().addFullscreenchangeListener( _onFullScreenChange );
+  }
+
+  @OnDeactivate
+  void onFullscreenDeactivate()
+  {
+    Global.globalThis().document().removeFullscreenchangeListener( _onFullScreenChange );
+  }
+
+  @Action
+  void triggerFullscreenUpdate()
+  {
+    // TODO: Should be able to mark @Memoize as writeOutsideTransaction so don't need to wrap in action
+    getFullscreenComputableValue().reportPossiblyChanged();
   }
 }
