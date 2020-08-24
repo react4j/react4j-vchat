@@ -366,8 +366,6 @@ public abstract class RoomModel
   {
     if ( _connection == event.currentTarget() )
     {
-      Global.globalThis().console().log( "onTrack", event );
-
       // when the other side added one or more media streams, show it on screen
       final JsArray<MediaStream> streams = event.streams();
 
@@ -402,7 +400,6 @@ public abstract class RoomModel
   void onRemoveTrack( @Nonnull final MediaStreamTrackEvent e )
   {
     final MediaStreamTrack track = e.track();
-    Global.globalThis().console().log( "onRemoveTrack " + track.id() );
     _remoteStreams = _remoteStreams.stream()
       .filter( c -> !doesConnectionContainTrack( c, track ) )
       .collect( Collectors.toList() );
@@ -470,7 +467,6 @@ public abstract class RoomModel
   @Action( verifyRequired = false )
   void onError( @Nonnull final Event event )
   {
-    Global.globalThis().console().log( "Websocket.error", event );
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
