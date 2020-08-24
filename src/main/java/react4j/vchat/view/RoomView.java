@@ -223,8 +223,8 @@ abstract class RoomView
     else if ( RoomModel.State.LEFT == state )
     {
       return fragment( h2( "Left the room" ),
-                       p( "You left the room. Request access to re-join the room." ),
-                       renderRequestAccessForm() );
+                       p( "You left the room." ),
+                       a( new AnchorProps().className( "primary-button" ).href( "#" ), "Return to Home" ) );
     }
     else
     {
