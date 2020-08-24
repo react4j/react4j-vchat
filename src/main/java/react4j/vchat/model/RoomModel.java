@@ -447,6 +447,16 @@ public abstract class RoomModel
       _webSocket = null;
       setState( state );
     }
+    if ( null != _connection )
+    {
+      _remoteStreams.forEach( Disposable::dispose );
+      _remoteStreams.clear();
+      _participants.clear();
+      _connection.close();
+      _connection = null;
+      getParticipantsObservableValue().reportChanged();
+      getListMediaStreamsComputableValue().reportPossiblyChanged();
+    }
   }
 
   @Nonnull
