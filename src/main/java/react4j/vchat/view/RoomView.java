@@ -67,6 +67,7 @@ abstract class RoomView
   ReactNode render()
   {
     final MediaStreamConnection camStream = _room.getCamStream();
+    final RoomModel.ConnectionState connectionState = _room.connectionState();
     return div( new HtmlProps().className( "room-view" ).ref( e -> _view = (HTMLDivElement) e ),
                 div( new HtmlProps().className( "video-section" ),
                      div( new HtmlProps().className( "video-list" ),
@@ -114,6 +115,17 @@ abstract class RoomView
                                               .src( isFullscreen() ?
                                                     "img/fullscreen_on.svg" :
                                                     "img/fullscreen_off.svg" )
+                                              .width( 32 )
+                                              .height( 32 ) )
+                               ),
+                               button( new BtnProps()
+                                         .disabled( RoomModel.ConnectionState.CONNECTING != connectionState &&
+                                                    RoomModel.ConnectionState.OPEN != connectionState )
+                                         .className( "control-btn" )
+                                         .onClick( e -> _room.leave() ),
+                                       // TODO: Should generate svg factory methods and props so don't have to ref as img
+                                       img( new ImgProps()
+                                              .src( "img/hangup.svg" )
                                               .width( 32 )
                                               .height( 32 ) )
                                )

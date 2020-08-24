@@ -11,7 +11,6 @@ complete as there is too much un-said.
 * Add an icon to small video lists to indicate which ones have no audio component
 * Fix styling on lower panels
 * Fix all the TODOs
-* Add hangup button
 
 ---
 

@@ -82,7 +82,7 @@ public abstract class RoomModel
     UNKNOWN, HOST, GUEST
   }
 
-  enum ConnectionState
+  public enum ConnectionState
   {
     CONNECTING, OPEN, CLOSING, CLOSED, NOT_REQUESTED
   }
@@ -127,7 +127,7 @@ public abstract class RoomModel
 
   @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
   @Nonnull
-  ConnectionState connectionState()
+  public ConnectionState connectionState()
   {
     return null == _webSocket ? ConnectionState.NOT_REQUESTED : ConnectionState.values()[ _webSocket.readyState() ];
   }
@@ -433,7 +433,7 @@ public abstract class RoomModel
   }
 
   @Action( verifyRequired = false )
-  void leave()
+  public void leave()
   {
     leaveWithState( State.LEFT );
   }
