@@ -187,6 +187,7 @@ public abstract class MediaStreamConnection
       stream.getTracks().forEach( ( track, index, tracks ) -> {
         if ( MediaStreamTrackState.live.equals( track.readyState() ) )
         {
+          track.onended = null;
           track.stop();
         }
         return null;
