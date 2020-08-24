@@ -102,8 +102,8 @@ abstract class RoomView
                                        // TODO: Should generate svg factory methods and props so don't have to ref as img
                                        img( new ImgProps()
                                               .src( Global.globalThis().document().fullscreen() ?
-                                                    "img/fullscreen_off.svg" :
-                                                    "img/fullscreen_on.svg" )
+                                                    "img/fullscreen_on.svg" :
+                                                    "img/fullscreen_off.svg" )
                                               .width( 32 )
                                               .height( 32 ) )
                                )
