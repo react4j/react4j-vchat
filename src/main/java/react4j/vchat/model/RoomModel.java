@@ -586,7 +586,7 @@ public abstract class RoomModel
           } )
           .catch_( e -> {
             // TODO: An error occurred, so handle the failure to connect
-            Global.globalThis().console().log( "Answer error: ", e );
+            console.log( "Answer error: ", e );
             return null;
           } );
       }
