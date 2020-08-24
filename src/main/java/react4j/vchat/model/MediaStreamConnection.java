@@ -107,6 +107,24 @@ public abstract class MediaStreamConnection
 
   abstract void setAudioEnabled( boolean audioEnabled );
 
+  public boolean hasTracks()
+  {
+    final MediaStream stream = getStream();
+    return null != stream && stream.getTracks().length > 0;
+  }
+
+  public boolean hasVideo()
+  {
+    final MediaStream stream = getStream();
+    return null != stream && stream.getAudioTracks().length > 0;
+  }
+
+  public boolean hasAudio()
+  {
+    final MediaStream stream = getStream();
+    return null != stream && stream.getAudioTracks().length > 0;
+  }
+
   @Action
   public void toggleAudio()
   {
