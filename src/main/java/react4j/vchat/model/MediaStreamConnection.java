@@ -1,5 +1,6 @@
 package react4j.vchat.model;
 
+import arez.Disposable;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
 import arez.annotations.Feature;
@@ -169,11 +170,19 @@ public abstract class MediaStreamConnection
     setConnecting( false );
     setStream( stream );
     stream.getTracks().forEach( ( track, index, tracks ) -> {
-      track.onended = e -> streamDisconnected();
+      track.onended = e -> onTrackEnded();
       // TODO: Should not have to return null here
       return null;
     } );
     _onStreamConnected.accept( stream );
+  }
+
+  private void onTrackEnded()
+  {
+    if ( Disposable.isNotDisposed( this ) )
+    {
+      streamDisconnected();
+    }
   }
 
   @Action
