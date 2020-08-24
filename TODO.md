@@ -13,7 +13,6 @@ complete as there is too much un-said.
 * Fix styling on lower panels
 * Fix all the TODOs
 * Add hangup button
-* Add fullscreen toggle button
 
 ---
 

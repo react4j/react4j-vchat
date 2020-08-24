@@ -2,6 +2,9 @@ package react4j.vchat.view;
 
 import arez.annotations.CascadeDispose;
 import arez.annotations.PostConstruct;
+import elemental3.Document;
+import elemental3.Global;
+import elemental3.HTMLDivElement;
 import elemental3.HTMLInputElement;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -30,6 +33,8 @@ abstract class RoomView
 {
   @CascadeDispose
   RoomModel _room;
+  @Nullable
+  private HTMLDivElement _view;
 
   @PostConstruct
   void postConstruct()
@@ -52,7 +57,7 @@ abstract class RoomView
   ReactNode render()
   {
     final MediaStreamConnection camStream = _room.getCamStream();
-    return div( new HtmlProps().className( "room-view" ),
+    return div( new HtmlProps().className( "room-view" ).ref( e -> _view = (HTMLDivElement) e ),
                 div( new HtmlProps().className( "video-section" ),
                      div( new HtmlProps().className( "video-list" ),
                           _room.getListMediaStreams()
@@ -91,12 +96,36 @@ abstract class RoomView
                                               .src( camStream.isVideoEnabled() ? "img/cam_on.svg" : "img/cam_off.svg" )
                                               .width( 32 )
                                               .height( 32 ) )
+                               ),
+                               button( new BtnProps().className( "control-btn" )
+                                         .onClick( e -> toggleFullscreen() ),
+                                       // TODO: Should generate svg factory methods and props so don't have to ref as img
+                                       img( new ImgProps()
+                                              .src( Global.globalThis().document().fullscreen() ?
+                                                    "img/fullscreen_off.svg" :
+                                                    "img/fullscreen_on.svg" )
+                                              .width( 32 )
+                                              .height( 32 ) )
                                )
                           )
                      )
                 ),
                 div( new HtmlProps().className( "message-area" ), renderMessageAreaContent() )
     );
+  }
+
+  private void toggleFullscreen()
+  {
+    assert null != _view;
+    final Document document = Global.globalThis().document();
+    if ( document.fullscreen() )
+    {
+      document.exitFullscreen();
+    }
+    else
+    {
+      _view.requestFullscreen();
+    }
   }
 
   @Nullable
