@@ -66,6 +66,12 @@ button {
   opacity: 0.5;
 }
 
+
+.control-btn img {
+  width: 80%;
+  height: 100%;
+}
+
 .control-btn:hover {
   opacity: 0.8;
 }
