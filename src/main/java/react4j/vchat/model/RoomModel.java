@@ -357,7 +357,6 @@ public abstract class RoomModel
   {
     if ( null != _webSocket )
     {
-      //Global.globalThis().console().log( "Sending message", JSON.parse( JSON.stringify( message ) ) );
       _webSocket.send( JSON.stringify( message ) );
     }
   }
@@ -421,7 +420,6 @@ public abstract class RoomModel
   {
     if ( _connection == event.currentTarget() )
     {
-      //Global.globalThis().console().log( "onIceCandidate", event );
       final RTCIceCandidate candidate = event.candidate();
       if ( null != candidate && null != _webSocket )
       {
@@ -484,7 +482,6 @@ public abstract class RoomModel
   @Action( verifyRequired = false )
   void onOpen( @Nonnull final Event event )
   {
-    //Global.globalThis().console().log( "Websocket.open", event );
     if ( _webSocket == event.currentTarget() )
     {
       getConnectionStateComputableValue().reportPossiblyChanged();
@@ -494,7 +491,6 @@ public abstract class RoomModel
   @Action( verifyRequired = false )
   void onClose( @Nonnull final CloseEvent closeEvent )
   {
-    //Global.globalThis().console().log( "Websocket.close", closeEvent );
     if ( _webSocket == closeEvent.currentTarget() )
     {
       _webSocket = null;
@@ -513,7 +509,6 @@ public abstract class RoomModel
     final Any data = event.data();
     assert null != data;
     final Console console = Global.globalThis().console();
-    //console.log( "Websocket.message", data );
     final Any object = JSON.parse( data.cast() );
     assert null != object;
     final JsPropertyMap<Object> message = object.cast();
