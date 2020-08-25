@@ -78,6 +78,7 @@ abstract class RoomView
                                VideoViewBuilder
                                  .mediaStreamConnection( _room.getActiveMediaStream() )
                                  .className( "active-video-element" )
+                                 .muted( true )
                           ),
                           div( new HtmlProps().className( "controls" ),
                                button( new BtnProps().className( "control-btn" )
@@ -139,7 +140,9 @@ abstract class RoomView
   {
     return div( new HtmlProps().className( "video-list-item" ),
                 div( new HtmlProps().className( "video-list-item-wrapper" ),
-                     VideoViewBuilder.mediaStreamConnection( connection ).className( "video-list-item-element" )
+                     VideoViewBuilder.mediaStreamConnection( connection )
+                       .className( "video-list-item-element" )
+                       .muted( false )
                 ),
                 connection.hasAudio() ?
                 div( new HtmlProps().className( "video-list-item-controls" ),

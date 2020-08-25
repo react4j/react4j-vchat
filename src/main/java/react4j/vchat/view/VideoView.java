@@ -27,6 +27,9 @@ abstract class VideoView
   @Nonnull
   abstract String className();
 
+  @Input
+  abstract boolean muted();
+
   @Render
   @Nonnull
   ReactNode render()
@@ -35,7 +38,7 @@ abstract class VideoView
     return ReactElement.createHostElement( "video",
                                            null,
                                            _videoRefCallback,
-                                           JsPropertyMap.of( "autoPlay", true, "className", className() ) );
+                                           JsPropertyMap.of( "autoPlay", true, "className", className(), "muted", muted() ) );
   }
 
   private void activeVideoRef( @Nullable final HTMLVideoElement element )
