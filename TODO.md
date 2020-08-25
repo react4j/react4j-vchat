@@ -16,5 +16,4 @@ complete as there is too much un-said.
 # Tutorials/Learning
 
 * Good overview: https://medium.com/@anto.christo.20/understanding-web-real-time-communication-webrtc-d4cec5a43f2f
-* https://codelabs.developers.google.com/codelabs/webrtc-web/#3
 * https://www.html5rocks.com/en/tutorials/webrtc/basics/
