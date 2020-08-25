@@ -13,16 +13,8 @@ complete as there is too much un-said.
 * Consider rewriting a peer abstraction to ensure renegotiation works as expected.
   See https://github.com/feross/simple-peer/blob/master/index.js for a possible solution.
 
----
-
-Good WebRTC overview: https://medium.com/@anto.christo.20/understanding-web-real-time-communication-webrtc-d4cec5a43f2f
-
 # Tutorials/Learning
 
-* https://webrtc.org/getting-started/remote-streams
-* https://www.sitepoint.com/webrtc-video-chat-application-simplewebrtc/
-* https://www.scaledrone.com/blog/webrtc-tutorial-simple-video-chat/
+* Good overview: https://medium.com/@anto.christo.20/understanding-web-real-time-communication-webrtc-d4cec5a43f2f
 * https://codelabs.developers.google.com/codelabs/webrtc-web/#3
-* https://www.html5rocks.com/en/tutorials/webrtc/basics/#simpleRTCPeerConnectionExample
-* https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
 * https://www.html5rocks.com/en/tutorials/webrtc/basics/
