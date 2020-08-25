@@ -17,12 +17,6 @@ complete as there is too much un-said.
 
 Good WebRTC overview: https://medium.com/@anto.christo.20/understanding-web-real-time-communication-webrtc-d4cec5a43f2f
 
-# Samples
-
-* https://webrtc.github.io/samples/src/content/peerconnection/pc1/
-* https://github.com/webrtc/samples/blob/gh-pages/src/content/peerconnection/pc1/js/main.js
-* https://webrtc.github.io/samples/
-
 # Tutorials/Learning
 
 * https://webrtc.org/getting-started/remote-streams
