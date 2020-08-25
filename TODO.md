@@ -10,6 +10,8 @@ complete as there is too much un-said.
   Follow audio activity - https://stackoverflow.com/questions/16724414/microphone-activity-level-of-webrtc-mediastream
 * Fix styling on lower panels
 * Fix all the TODOs
+* Consider rewriting a peer abstraction to ensure renegotiation works as expected.
+  See https://github.com/feross/simple-peer/blob/master/index.js for a possible solution.
 
 ---
 
