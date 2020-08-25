@@ -379,7 +379,7 @@ public abstract class RoomModel
           final Consumer<MediaStream> noop = s -> {
           };
           final MediaStreamConnection streamConnection =
-            MediaStreamConnection.create( () -> Promise.resolve( stream ), noop, true, true, true );
+            MediaStreamConnection.create( () -> Promise.resolve( stream ), noop, true, true );
           streamConnection.requestConnect();
           _remoteStreams.add( streamConnection );
           stream.onremovetrack = this::onRemoveTrack;
