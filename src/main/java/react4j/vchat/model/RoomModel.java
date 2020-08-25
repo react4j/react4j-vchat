@@ -96,6 +96,8 @@ public abstract class RoomModel
   private WebSocket _webSocket;
   @Nullable
   private RTCPeerConnection _connection;
+  private boolean _negotiationInFlight;
+  private boolean _negotiationRequested;
   @Nonnull
   private final Set<String> _participants = new HashSet<>();
   @CascadeDispose
@@ -255,7 +257,8 @@ public abstract class RoomModel
     _connection = new RTCPeerConnection( RTCConfiguration
                                            .create()
                                            .iceServers( RTCIceServer.create( "stun:stun.l.google.com:19302" ) ) );
-
+    _negotiationInFlight = false;
+    _negotiationRequested = false;
     _connection.onicecandidate = this::onIceCandidate;
     _connection.ontrack = this::onTrack;
     _connection.onconnectionstatechange = this::onConnectionStateChange;
@@ -280,6 +283,10 @@ public abstract class RoomModel
         _remoteStreams = new ArrayList<>();
         getListMediaStreamsComputableValue().reportPossiblyChanged();
       }
+      else
+      {
+        negotiateConnectionSession();
+      }
     }
   }
 
@@ -300,6 +307,7 @@ public abstract class RoomModel
         _connection.addTrack( track, stream );
         return null;
       } );
+      requestNegotiation();
     }
   }
 
@@ -313,6 +321,7 @@ public abstract class RoomModel
         if ( null != rtpSender )
         {
           _connection.removeTrack( rtpSender );
+          requestNegotiation();
         }
         return null;
       } );
@@ -326,31 +335,37 @@ public abstract class RoomModel
     // to get the tracks transported to the peer and session regengotiated.
     // The technique was inspired by the discussion in the "negotiationneeded tames local changes"
     // section at https://blog.mozilla.org/webrtc/perfect-negotiation-in-webrtc/
-    final Role role = role();
-    if ( Role.HOST == role )
+    assert null != _connection;
+    if ( !_negotiationInFlight )
     {
-      assert null != _connection;
-      _connection
-        .createOffer()
-        .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
-                                                           .create()
-                                                           .sdp( offer.sdp() )
-                                                           .type( offer.type() ) ) )
-        .then( e -> {
-          sendMessage( JsPropertyMap.of( "command", "offer", "session", _connection.localDescription() ) );
-          return null;
-        } )
-        .catch_( e -> {
-          // TODO: An error occurred, so handle the failure to connect
-          Global.globalThis().console().log( "Offer error: ", e );
-          return null;
-        } );
-    }
-    else
-    {
-      assert Role.GUEST == role;
-      // We send the renegotiate message to force the host to initiate renegotiation
-      sendMessage( JsPropertyMap.of( "command", "renegotiate" ) );
+      final Role role = role();
+      if ( Role.HOST == role )
+      {
+        _negotiationInFlight = true;
+        assert null != _connection;
+        _connection
+          .createOffer()
+          .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
+                                                             .create()
+                                                             .sdp( offer.sdp() )
+                                                             .type( offer.type() ) ) )
+          .then( e -> {
+            sendMessage( JsPropertyMap.of( "command", "offer", "session", _connection.localDescription() ) );
+            return null;
+          } )
+          .catch_( e -> {
+            // TODO: An error occurred, so handle the failure to connect
+            Global.globalThis().console().log( "Offer error: ", e );
+            _negotiationInFlight = false;
+            return null;
+          } );
+      }
+      else
+      {
+        assert Role.GUEST == role;
+        // We send the renegotiate message to force the host to initiate renegotiation
+        sendMessage( JsPropertyMap.of( "command", "renegotiate" ) );
+      }
     }
   }
 
@@ -450,6 +465,8 @@ public abstract class RoomModel
       _participants.clear();
       _connection.close();
       _connection = null;
+      _negotiationInFlight = false;
+      _negotiationRequested = false;
       getParticipantsObservableValue().reportChanged();
       getListMediaStreamsComputableValue().reportPossiblyChanged();
     }
@@ -575,6 +592,7 @@ public abstract class RoomModel
       else if ( "offer".equals( command ) )
       {
         assert null != _connection;
+        _negotiationInFlight = true;
         _connection.setRemoteDescription( message.getAsAny( "session" ).cast() );
         _connection
           .createAnswer()
@@ -583,11 +601,13 @@ public abstract class RoomModel
                                                              .sdp( offer.sdp() ) ) )
           .then( e -> {
             sendMessage( JsPropertyMap.of( "command", "answer", "session", _connection.localDescription() ) );
+            completeNegotiation();
             return null;
           } )
           .catch_( e -> {
             // TODO: An error occurred, so handle the failure to connect
             console.log( "Answer error: ", e );
+            completeNegotiation();
             return null;
           } );
       }
@@ -595,6 +615,7 @@ public abstract class RoomModel
       {
         assert null != _connection;
         _connection.setRemoteDescription( message.getAsAny( "session" ).cast() );
+        completeNegotiation();
       }
       else if ( "candidate".equals( command ) )
       {
@@ -606,8 +627,30 @@ public abstract class RoomModel
       else if ( "renegotiate".equals( command ) )
       {
         assert Role.HOST == role();
-        negotiateConnectionSession();
+        assert null != _connection;
+        requestNegotiation();
       }
+    }
+  }
+
+  private void requestNegotiation()
+  {
+    _negotiationRequested = true;
+    negotiateConnectionSessionIfRequested();
+  }
+
+  private void completeNegotiation()
+  {
+    _negotiationInFlight = false;
+    negotiateConnectionSessionIfRequested();
+  }
+
+  private void negotiateConnectionSessionIfRequested()
+  {
+    if ( !_negotiationInFlight && _negotiationRequested )
+    {
+      _negotiationRequested = false;
+      negotiateConnectionSession();
     }
   }
 
