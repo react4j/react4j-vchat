@@ -141,15 +141,14 @@ abstract class RoomView
                 div( new HtmlProps().className( "video-list-item-wrapper" ),
                      VideoViewBuilder.mediaStreamConnection( connection ).className( "video-list-item-element" )
                 ),
-                connection.hasTracks() ?
+                connection.hasAudio() ?
                 div( new HtmlProps().className( "video-list-item-controls" ),
                      button( new BtnProps()
                                .className( "video-list-item-control-btn" )
-                               .disabled( !connection.hasAudio() )
                                .onClick( e -> connection.toggleAudio() ),
                              // TODO: Should generate svg factory methods and props so don't have to ref as img
                              img( new ImgProps()
-                                    .src( connection.hasAudio() && connection.isAudioEnabled() ? "img/mic_on.svg" : "img/mic_off.svg" )
+                                    .src( connection.isAudioEnabled() ? "img/mic_on.svg" : "img/mic_off.svg" )
                                     .width( 16 )
                                     .height( 16 ) )
                      )
