@@ -17,12 +17,6 @@ complete as there is too much un-said.
 
 Good WebRTC overview: https://medium.com/@anto.christo.20/understanding-web-real-time-communication-webrtc-d4cec5a43f2f
 
-Code to investigate/imitate/be inspired by
-* https://github.com/dondido/webrtc-video-room
-* https://github.com/diegogurgel/react-webrtc
-* https://github.com/nguymin4/react-videocall
-* https://github.com/oslabs-beta/ReactRTC
-
 # Samples
 
 * https://webrtc.github.io/samples/src/content/peerconnection/pc1/
