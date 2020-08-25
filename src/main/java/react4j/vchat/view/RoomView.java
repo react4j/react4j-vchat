@@ -71,9 +71,7 @@ abstract class RoomView
     return div( new HtmlProps().className( "room-view" ).ref( e -> _view = (HTMLDivElement) e ),
                 div( new HtmlProps().className( "video-section" ),
                      div( new HtmlProps().className( "video-list" ),
-                          _room.getListMediaStreams()
-                            .stream()
-                            .map( c -> VideoViewBuilder.mediaStreamConnection( c ).className( "video-list-item" ) )
+                          _room.getListMediaStreams().stream().map( this::renderVideoListItem )
                      ),
                      div( new HtmlProps().className( "active-video" ),
                           div( new HtmlProps().className( "active-video-wrapper" ),
@@ -133,6 +131,30 @@ abstract class RoomView
                      )
                 ),
                 div( new HtmlProps().className( "message-area" ), renderMessageAreaContent() )
+    );
+  }
+
+  @Nonnull
+  private ReactNode renderVideoListItem( @Nonnull final MediaStreamConnection connection )
+  {
+    return div( new HtmlProps().className( "video-list-item" ),
+                div( new HtmlProps().className( "video-list-item-wrapper" ),
+                     VideoViewBuilder.mediaStreamConnection( connection ).className( "video-list-item-element" )
+                ),
+                connection.hasTracks() ?
+                div( new HtmlProps().className( "video-list-item-controls" ),
+                     button( new BtnProps()
+                               .className( "video-list-item-control-btn" )
+                               .disabled( !connection.hasAudio() )
+                               .onClick( e -> connection.toggleAudio() ),
+                             // TODO: Should generate svg factory methods and props so don't have to ref as img
+                             img( new ImgProps()
+                                    .src( connection.hasAudio() && connection.isAudioEnabled() ? "img/mic_on.svg" : "img/mic_off.svg" )
+                                    .width( 16 )
+                                    .height( 16 ) )
+                     )
+                ) :
+                null
     );
   }
 

@@ -23,9 +23,18 @@ button {
 }
 
 .video-list-item {
+  position: relative;
+}
+
+.video-list-item-element {
   width: 100%;
   /* Flip it horizontally so it feels right when looking at yourself */
   transform: scale(-1, 1);
+  position: relative;
+}
+
+.video-list-item-wrapper {
+  height: 100%;
 }
 
 .active-video-wrapper {
@@ -44,6 +53,25 @@ button {
 
   /* Flip it horizontally so it feels right when looking at yourself */
   transform: scale(-1, 1);
+}
+
+.video-list-item-controls {
+  position: absolute;
+  bottom: 12px;
+  left: calc(100% - 40px);
+}
+
+.video-list-item-control-btn {
+  position: relative;
+  outline: none;
+  border-style: solid;
+  border-color: rgb(118, 118, 118);
+  box-shadow: 1px 1px 8px black;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  margin-bottom: 3px;
+  opacity: 0.5;
 }
 
 .controls {
