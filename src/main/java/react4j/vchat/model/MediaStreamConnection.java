@@ -1,9 +1,13 @@
 package react4j.vchat.model;
 
+import arez.ComputableValue;
 import arez.Disposable;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
+import arez.annotations.ComputableValueRef;
+import arez.annotations.DepType;
 import arez.annotations.Feature;
+import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import arez.annotations.Observe;
 import elemental2.promise.Promise;
@@ -32,10 +36,9 @@ public abstract class MediaStreamConnection
   static MediaStreamConnection create( @Nonnull final Supplier<Promise<MediaStream>> connect,
                                        @Nonnull final Consumer<MediaStream> onStreamConnected,
                                        final boolean enabled,
-                                       final boolean audioEnabled,
                                        final boolean videoEnabled )
   {
-    return new Arez_MediaStreamConnection( connect, onStreamConnected, enabled, audioEnabled, videoEnabled );
+    return new Arez_MediaStreamConnection( connect, onStreamConnected, enabled, videoEnabled );
   }
 
   MediaStreamConnection( @Nonnull final Supplier<Promise<MediaStream>> connect,
@@ -102,10 +105,15 @@ public abstract class MediaStreamConnection
     setEnabled( !isEnabled() );
   }
 
-  @Observable( initializer = Feature.ENABLE )
-  public abstract boolean isAudioEnabled();
+  @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
+  public boolean isAudioEnabled()
+  {
+    final MediaStream stream = getStream();
+    return null != stream && stream.getAudioTracks().some( ( track, index, tracks ) -> track.enabled );
+  }
 
-  abstract void setAudioEnabled( boolean audioEnabled );
+  @ComputableValueRef
+  abstract ComputableValue<?> getAudioEnabledComputableValue();
 
   public boolean hasTracks()
   {
@@ -128,12 +136,12 @@ public abstract class MediaStreamConnection
   @Action
   public void toggleAudio()
   {
-    setAudioEnabled( !isAudioEnabled() );
     final MediaStream stream = getStream();
     if ( null != stream )
     {
       stream.getAudioTracks().forEach( ( track, index, array ) -> track.enabled = !track.enabled );
     }
+    getAudioEnabledComputableValue().reportPossiblyChanged();
   }
 
   @Observable( initializer = Feature.ENABLE )

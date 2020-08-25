@@ -100,11 +100,11 @@ public abstract class RoomModel
   @CascadeDispose
   @Nonnull
   final MediaStreamConnection _camStream =
-    MediaStreamConnection.create( this::requestWebCam, this::addTracks, false, true, true );
+    MediaStreamConnection.create( this::requestWebCam, this::addTracks, false, true );
   @CascadeDispose
   @Nonnull
   final MediaStreamConnection _screenShareStream =
-    MediaStreamConnection.create( this::requestScreenShare, this::addTracks, false, false, true );
+    MediaStreamConnection.create( this::requestScreenShare, this::addTracks, false, true );
   @Nonnull
   private List<MediaStreamConnection> _remoteStreams = new ArrayList<>();
 
