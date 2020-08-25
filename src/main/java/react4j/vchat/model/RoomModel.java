@@ -18,6 +18,7 @@ import elemental2.promise.Promise;
 import elemental3.CloseEvent;
 import elemental3.Console;
 import elemental3.ConstrainULongRange;
+import elemental3.DisplayMediaStreamConstraints;
 import elemental3.Event;
 import elemental3.Global;
 import elemental3.JSON;
@@ -670,6 +671,10 @@ public abstract class RoomModel
   @Nonnull
   private Promise<MediaStream> requestScreenShare()
   {
-    return Global.globalThis().navigator().mediaDevices().getDisplayMedia();
+    return Global
+      .globalThis()
+      .navigator()
+      .mediaDevices()
+      .getDisplayMedia( DisplayMediaStreamConstraints.create().audio( false ) );
   }
 }
