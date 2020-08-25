@@ -8,7 +8,6 @@ complete as there is too much un-said.
 
 * Add the ability to manually select active stream or else follow audio activity.
   Follow audio activity - https://stackoverflow.com/questions/16724414/microphone-activity-level-of-webrtc-mediastream
-* Add an icon to small video lists to indicate which ones have no audio component
 * Fix styling on lower panels
 * Fix all the TODOs
 
