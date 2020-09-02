@@ -57,7 +57,7 @@ public class OffscreenCanvas extends EventTarget {
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
-      @MagicConstant(stringValues = {"2d", "bitmaprenderer", "webgl", "webgl2"}) @Nonnull String contextId,
+      @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId,
       @Nullable Any options);
 
   /**
@@ -67,7 +67,7 @@ public class OffscreenCanvas extends EventTarget {
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
-      @MagicConstant(stringValues = {"2d", "bitmaprenderer", "webgl", "webgl2"}) @Nonnull String contextId,
+      @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId,
       @Nullable @DoNotAutobox Object options);
 
   /**
@@ -77,7 +77,7 @@ public class OffscreenCanvas extends EventTarget {
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
-      @MagicConstant(stringValues = {"2d", "bitmaprenderer", "webgl", "webgl2"}) @Nonnull String contextId);
+      @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId);
 
   @Nonnull
   public native ImageBitmap transferToImageBitmap();

@@ -295,17 +295,17 @@ public class HTMLMediaElement extends HTMLElement {
 
   @Nonnull
   public native TextTrack addTextTrack(
-      @MagicConstant(stringValues = {"captions", "chapters", "descriptions", "metadata", "subtitles"}) @Nonnull String kind,
+      @MagicConstant(valuesFromClass = TextTrackKind.class) @Nonnull String kind,
       @Nonnull String label, @Nonnull String language);
 
   @Nonnull
   public native TextTrack addTextTrack(
-      @MagicConstant(stringValues = {"captions", "chapters", "descriptions", "metadata", "subtitles"}) @Nonnull String kind,
+      @MagicConstant(valuesFromClass = TextTrackKind.class) @Nonnull String kind,
       @Nonnull String label);
 
   @Nonnull
   public native TextTrack addTextTrack(
-      @MagicConstant(stringValues = {"captions", "chapters", "descriptions", "metadata", "subtitles"}) @Nonnull String kind);
+      @MagicConstant(valuesFromClass = TextTrackKind.class) @Nonnull String kind);
 
   /**
    * The HTMLMediaElement method canPlayType() reports how likely it is that the current browser will be able to play media of a given MIME type.

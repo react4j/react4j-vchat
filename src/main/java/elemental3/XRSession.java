@@ -104,7 +104,7 @@ public class XRSession extends EventTarget {
    */
   @Nonnull
   public native Promise<XRReferenceSpace> requestReferenceSpace(
-      @MagicConstant(stringValues = {"bounded-floor", "local", "local-floor", "unbounded", "viewer"}) @Nonnull String type);
+      @MagicConstant(valuesFromClass = XRReferenceSpaceType.class) @Nonnull String type);
 
   /**
    * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.

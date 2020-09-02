@@ -23,5 +23,5 @@ public class DOMParser {
 
   @Nonnull
   public native Document parseFromString(@Nonnull String string,
-      @MagicConstant(stringValues = {"application/xhtml+xml", "application/xml", "image/svg+xml", "text/html", "text/xml"}) @Nonnull String type);
+      @MagicConstant(valuesFromClass = DOMParserSupportedType.class) @Nonnull String type);
 }

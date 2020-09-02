@@ -359,7 +359,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openCursor(@Nullable Any query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results’s success event.
@@ -368,7 +368,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openCursor(@Nullable @DoNotAutobox Object query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results’s success event.
@@ -401,7 +401,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@Nullable Any query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results’s success event.
@@ -410,7 +410,7 @@ public class IDBObjectStore {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@Nullable @DoNotAutobox Object query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * To determine if the add operation has completed successfully, listen for the results’s success event.

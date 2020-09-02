@@ -55,7 +55,7 @@ public class ScreenOrientation extends EventTarget {
    */
   @Nonnull
   public native Promise<Void> lock(
-      @MagicConstant(stringValues = {"any", "landscape", "landscape-primary", "landscape-secondary", "natural", "portrait", "portrait-primary", "portrait-secondary"}) @Nonnull String orientation);
+      @MagicConstant(valuesFromClass = OrientationLockType.class) @Nonnull String orientation);
 
   /**
    * The unlock() property of the ScreenOrientation interface unlocks the orientation of the containing document from its default orientation.

@@ -116,7 +116,7 @@ public class HTMLTextAreaElement extends HTMLElement {
   public native void setRangeText(@Nonnull String replacement);
 
   public native void setRangeText(@Nonnull String replacement, int start, int end,
-      @MagicConstant(stringValues = {"end", "preserve", "select", "start"}) @Nonnull String selectionMode);
+      @MagicConstant(valuesFromClass = SelectionMode.class) @Nonnull String selectionMode);
 
   public native void setRangeText(@Nonnull String replacement, int start, int end);
 

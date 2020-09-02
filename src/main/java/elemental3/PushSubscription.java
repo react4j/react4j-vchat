@@ -65,7 +65,7 @@ public class PushSubscription {
    */
   @Nullable
   public native ArrayBuffer getKey(
-      @MagicConstant(stringValues = {"auth", "p256dh"}) @Nonnull String name);
+      @MagicConstant(valuesFromClass = PushEncryptionKeyName.class) @Nonnull String name);
 
   /**
    * The toJSON() method of the PushSubscription interface is a standard serializer: it returns a JSON representation of the subscription properties, providing a useful shortcut.

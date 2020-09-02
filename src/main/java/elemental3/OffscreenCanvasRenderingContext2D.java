@@ -82,32 +82,32 @@ public class OffscreenCanvasRenderingContext2D {
   public native void beginPath();
 
   public native void clip(
-      @MagicConstant(stringValues = {"evenodd", "nonzero"}) @Nonnull String fillRule);
+      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
 
   public native void clip();
 
   public native void clip(@Nonnull Path2D path,
-      @MagicConstant(stringValues = {"evenodd", "nonzero"}) @Nonnull String fillRule);
+      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
 
   public native void clip(@Nonnull Path2D path);
 
   public native void fill(
-      @MagicConstant(stringValues = {"evenodd", "nonzero"}) @Nonnull String fillRule);
+      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
 
   public native void fill();
 
   public native void fill(@Nonnull Path2D path,
-      @MagicConstant(stringValues = {"evenodd", "nonzero"}) @Nonnull String fillRule);
+      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
 
   public native void fill(@Nonnull Path2D path);
 
   public native boolean isPointInPath(double x, double y,
-      @MagicConstant(stringValues = {"evenodd", "nonzero"}) @Nonnull String fillRule);
+      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
 
   public native boolean isPointInPath(double x, double y);
 
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y,
-      @MagicConstant(stringValues = {"evenodd", "nonzero"}) @Nonnull String fillRule);
+      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
 
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y);
 

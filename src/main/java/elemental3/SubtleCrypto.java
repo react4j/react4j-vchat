@@ -1267,7 +1267,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> exportKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull CryptoKey key);
 
   /**
@@ -1331,7 +1331,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1342,7 +1342,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1353,7 +1353,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1364,7 +1364,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1375,7 +1375,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1386,7 +1386,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1397,7 +1397,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1408,7 +1408,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1419,7 +1419,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull AlgorithmIdentifier algorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
 
@@ -1430,7 +1430,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1441,7 +1441,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1452,7 +1452,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1463,7 +1463,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1474,7 +1474,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1485,7 +1485,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1496,7 +1496,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1507,7 +1507,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1518,7 +1518,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1529,7 +1529,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1540,7 +1540,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1551,7 +1551,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1562,7 +1562,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1573,7 +1573,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1584,7 +1584,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1595,7 +1595,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1606,7 +1606,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1617,7 +1617,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1628,7 +1628,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1639,7 +1639,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1650,7 +1650,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1661,7 +1661,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1672,7 +1672,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1683,7 +1683,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1694,7 +1694,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1705,7 +1705,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1716,7 +1716,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1727,7 +1727,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1738,7 +1738,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1749,7 +1749,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1760,7 +1760,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1771,7 +1771,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1782,7 +1782,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
 
@@ -1793,7 +1793,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1804,7 +1804,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1815,7 +1815,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1826,7 +1826,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1837,7 +1837,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1848,7 +1848,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1859,7 +1859,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1870,7 +1870,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1881,7 +1881,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull AlgorithmIdentifier algorithm,
       boolean extractable, @Nonnull String[] keyUsages);
 
@@ -1892,7 +1892,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1903,7 +1903,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1914,7 +1914,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1925,7 +1925,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1936,7 +1936,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull AlgorithmIdentifier algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1947,7 +1947,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1958,7 +1958,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1969,7 +1969,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1980,7 +1980,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -1991,7 +1991,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2002,7 +2002,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2013,7 +2013,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2024,7 +2024,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2035,7 +2035,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2046,7 +2046,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2057,7 +2057,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2068,7 +2068,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2079,7 +2079,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2090,7 +2090,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull Object algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2101,7 +2101,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2112,7 +2112,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2123,7 +2123,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2134,7 +2134,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2145,7 +2145,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2156,7 +2156,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2167,7 +2167,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2178,7 +2178,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2189,7 +2189,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2200,7 +2200,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2211,7 +2211,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2222,7 +2222,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2233,7 +2233,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2244,7 +2244,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> importKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull JsonWebKey keyData, @Nonnull String algorithm, boolean extractable,
       @Nonnull String[] keyUsages);
 
@@ -2606,7 +2606,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2619,7 +2619,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2632,7 +2632,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2645,7 +2645,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2658,7 +2658,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2671,7 +2671,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2684,7 +2684,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2697,7 +2697,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2710,7 +2710,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2723,7 +2723,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2736,7 +2736,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2749,7 +2749,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2762,7 +2762,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -2775,7 +2775,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2787,7 +2787,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2799,7 +2799,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2811,7 +2811,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2823,7 +2823,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2835,7 +2835,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2847,7 +2847,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2859,7 +2859,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2871,7 +2871,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2883,7 +2883,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2895,7 +2895,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2907,7 +2907,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2919,7 +2919,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2931,7 +2931,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2943,7 +2943,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2955,7 +2955,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2967,7 +2967,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2979,7 +2979,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -2991,7 +2991,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3003,7 +3003,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3015,7 +3015,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3027,7 +3027,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3039,7 +3039,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3051,7 +3051,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3063,7 +3063,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3075,7 +3075,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3087,7 +3087,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3099,7 +3099,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3111,7 +3111,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3123,7 +3123,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3135,7 +3135,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3147,7 +3147,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3159,7 +3159,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3171,7 +3171,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3183,7 +3183,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3195,7 +3195,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3207,7 +3207,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3219,7 +3219,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3231,7 +3231,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3243,7 +3243,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3255,7 +3255,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3267,7 +3267,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3279,7 +3279,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3291,7 +3291,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3303,7 +3303,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3315,7 +3315,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3327,7 +3327,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3339,7 +3339,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3351,7 +3351,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3363,7 +3363,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3375,7 +3375,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3387,7 +3387,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3399,7 +3399,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3411,7 +3411,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3423,7 +3423,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3435,7 +3435,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3447,7 +3447,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3459,7 +3459,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3471,7 +3471,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3483,7 +3483,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3495,7 +3495,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3507,7 +3507,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3519,7 +3519,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3531,7 +3531,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3543,7 +3543,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3555,7 +3555,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3567,7 +3567,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3579,7 +3579,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3591,7 +3591,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3603,7 +3603,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3615,7 +3615,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3627,7 +3627,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3639,7 +3639,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3651,7 +3651,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3663,7 +3663,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3675,7 +3675,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3687,7 +3687,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3699,7 +3699,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull JsArray<String> keyUsages);
@@ -3711,7 +3711,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3723,7 +3723,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3735,7 +3735,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3747,7 +3747,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3759,7 +3759,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3771,7 +3771,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3783,7 +3783,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3795,7 +3795,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3807,7 +3807,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3819,7 +3819,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3831,7 +3831,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3843,7 +3843,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3855,7 +3855,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3867,7 +3867,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3879,7 +3879,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3891,7 +3891,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3903,7 +3903,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3915,7 +3915,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3927,7 +3927,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3939,7 +3939,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3951,7 +3951,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3963,7 +3963,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3975,7 +3975,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3987,7 +3987,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -3999,7 +3999,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -4011,7 +4011,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull JsArray<String> keyUsages);
@@ -4023,7 +4023,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4036,7 +4036,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4049,7 +4049,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4062,7 +4062,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4075,7 +4075,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4088,7 +4088,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4101,7 +4101,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4114,7 +4114,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4127,7 +4127,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4140,7 +4140,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4153,7 +4153,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4166,7 +4166,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4179,7 +4179,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm,
       @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm, boolean extractable,
@@ -4192,7 +4192,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4204,7 +4204,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4216,7 +4216,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4228,7 +4228,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4240,7 +4240,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4252,7 +4252,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4264,7 +4264,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4276,7 +4276,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4288,7 +4288,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4300,7 +4300,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4312,7 +4312,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4324,7 +4324,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4336,7 +4336,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4348,7 +4348,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4360,7 +4360,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4372,7 +4372,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4384,7 +4384,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4396,7 +4396,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4408,7 +4408,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4420,7 +4420,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4432,7 +4432,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4444,7 +4444,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4456,7 +4456,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4468,7 +4468,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4480,7 +4480,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4492,7 +4492,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull AlgorithmIdentifier unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4504,7 +4504,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4516,7 +4516,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4528,7 +4528,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4540,7 +4540,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4552,7 +4552,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4564,7 +4564,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4576,7 +4576,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4588,7 +4588,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4600,7 +4600,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4612,7 +4612,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4624,7 +4624,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4636,7 +4636,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4648,7 +4648,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4660,7 +4660,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4672,7 +4672,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4684,7 +4684,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4696,7 +4696,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4708,7 +4708,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4720,7 +4720,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4732,7 +4732,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4744,7 +4744,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4756,7 +4756,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4768,7 +4768,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4780,7 +4780,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4792,7 +4792,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4804,7 +4804,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4816,7 +4816,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4828,7 +4828,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4840,7 +4840,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4852,7 +4852,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4864,7 +4864,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4876,7 +4876,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4888,7 +4888,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4900,7 +4900,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4912,7 +4912,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4924,7 +4924,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4936,7 +4936,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4948,7 +4948,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4960,7 +4960,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull Object unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -4972,7 +4972,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4984,7 +4984,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -4996,7 +4996,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5008,7 +5008,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5020,7 +5020,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5032,7 +5032,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5044,7 +5044,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5056,7 +5056,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5068,7 +5068,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5080,7 +5080,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5092,7 +5092,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5104,7 +5104,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5116,7 +5116,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull AlgorithmIdentifier unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm,
       boolean extractable, @Nonnull String[] keyUsages);
@@ -5128,7 +5128,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5140,7 +5140,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5152,7 +5152,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5164,7 +5164,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5176,7 +5176,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5188,7 +5188,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5200,7 +5200,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5212,7 +5212,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5224,7 +5224,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5236,7 +5236,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5248,7 +5248,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5260,7 +5260,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5272,7 +5272,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull Object unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5284,7 +5284,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull BufferSource wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5296,7 +5296,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBufferView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5308,7 +5308,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5320,7 +5320,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5332,7 +5332,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Int32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5344,7 +5344,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5356,7 +5356,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint16Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5368,7 +5368,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5380,7 +5380,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Uint8ClampedArray wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5392,7 +5392,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float32Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5404,7 +5404,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull Float64Array wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5416,7 +5416,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull DataView wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -5428,7 +5428,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<CryptoKey> unwrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull ArrayBuffer wrappedKey, @Nonnull CryptoKey unwrappingKey,
       @Nonnull String unwrapAlgorithm, @Nonnull String unwrappedKeyAlgorithm, boolean extractable,
       @Nonnull String[] keyUsages);
@@ -10003,7 +10003,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> wrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull CryptoKey key, @Nonnull CryptoKey wrappingKey,
       @Nonnull AlgorithmIdentifier wrapAlgorithm);
 
@@ -10014,7 +10014,7 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> wrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull CryptoKey key, @Nonnull CryptoKey wrappingKey, @Nonnull Object wrapAlgorithm);
 
   /**
@@ -10024,6 +10024,6 @@ public class SubtleCrypto {
    */
   @Nonnull
   public native Promise<Any> wrapKey(
-      @MagicConstant(stringValues = {"jwk", "pkcs8", "raw", "spki"}) @Nonnull String format,
+      @MagicConstant(valuesFromClass = KeyFormat.class) @Nonnull String format,
       @Nonnull CryptoKey key, @Nonnull CryptoKey wrappingKey, @Nonnull String wrapAlgorithm);
 }

@@ -100,7 +100,7 @@ public class MediaSource extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/endOfStream">MediaSource.endOfStream - MDN</a>
    */
   public native void endOfStream(
-      @MagicConstant(stringValues = {"decode", "network"}) @Nonnull String error);
+      @MagicConstant(valuesFromClass = EndOfStreamError.class) @Nonnull String error);
 
   /**
    * The endOfStream() method of the MediaSource interface signals the end of the stream.

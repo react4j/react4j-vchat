@@ -40,7 +40,7 @@ public class XR extends EventTarget {
    */
   @Nonnull
   public native Promise<Boolean> isSessionSupported(
-      @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode);
+      @MagicConstant(valuesFromClass = XRSessionMode.class) @Nonnull String mode);
 
   /**
    * The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.
@@ -49,7 +49,7 @@ public class XR extends EventTarget {
    */
   @Nonnull
   public native Promise<XRSession> requestSession(
-      @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode,
+      @MagicConstant(valuesFromClass = XRSessionMode.class) @Nonnull String mode,
       @Nonnull XRSessionInit options);
 
   /**
@@ -59,7 +59,7 @@ public class XR extends EventTarget {
    */
   @Nonnull
   public native Promise<XRSession> requestSession(
-      @MagicConstant(stringValues = {"immersive-vr", "inline"}) @Nonnull String mode);
+      @MagicConstant(valuesFromClass = XRSessionMode.class) @Nonnull String mode);
 
   @JsOverlay
   public final void addDevicechangeListener(@Nonnull final EventListener callback,

@@ -40,7 +40,7 @@ public class MediaKeys {
    */
   @Nonnull
   public native MediaKeySession createSession(
-      @MagicConstant(stringValues = {"persistent-license", "temporary"}) @Nonnull String sessionType);
+      @MagicConstant(valuesFromClass = MediaKeySessionType.class) @Nonnull String sessionType);
 
   /**
    * The MediaKeys.createSession() method returns a new MediaKeySession object, which represents a context for message exchange with a content decryption module (CDM).

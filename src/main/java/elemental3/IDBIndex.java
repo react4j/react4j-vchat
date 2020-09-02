@@ -218,7 +218,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openCursor(@Nullable Any query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate record, based on the specified direction.
@@ -227,7 +227,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openCursor(@Nullable @DoNotAutobox Object query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate record, based on the specified direction.
@@ -260,7 +260,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@Nullable Any query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate key, based on the specified direction.
@@ -269,7 +269,7 @@ public class IDBIndex {
    */
   @Nonnull
   public native IDBRequest openKeyCursor(@Nullable @DoNotAutobox Object query,
-      @MagicConstant(stringValues = {"next", "nextunique", "prev", "prevunique"}) @Nonnull String direction);
+      @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
    * The method sets the position of the cursor to the appropriate key, based on the specified direction.

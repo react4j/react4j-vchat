@@ -113,7 +113,7 @@ public class IDBDatabase extends EventTarget {
    */
   @Nonnull
   public native IDBTransaction transaction(@Nonnull String storeNames,
-      @MagicConstant(stringValues = {"readonly", "readwrite", "versionchange"}) @Nonnull String mode,
+      @MagicConstant(valuesFromClass = IDBTransactionMode.class) @Nonnull String mode,
       @Nonnull IDBTransactionOptions options);
 
   /**
@@ -123,7 +123,7 @@ public class IDBDatabase extends EventTarget {
    */
   @Nonnull
   public native IDBTransaction transaction(@Nonnull JsArray<String> storeNames,
-      @MagicConstant(stringValues = {"readonly", "readwrite", "versionchange"}) @Nonnull String mode,
+      @MagicConstant(valuesFromClass = IDBTransactionMode.class) @Nonnull String mode,
       @Nonnull IDBTransactionOptions options);
 
   /**
@@ -133,7 +133,7 @@ public class IDBDatabase extends EventTarget {
    */
   @Nonnull
   public native IDBTransaction transaction(@Nonnull String[] storeNames,
-      @MagicConstant(stringValues = {"readonly", "readwrite", "versionchange"}) @Nonnull String mode,
+      @MagicConstant(valuesFromClass = IDBTransactionMode.class) @Nonnull String mode,
       @Nonnull IDBTransactionOptions options);
 
   /**
@@ -143,7 +143,7 @@ public class IDBDatabase extends EventTarget {
    */
   @Nonnull
   public native IDBTransaction transaction(@Nonnull String storeNames,
-      @MagicConstant(stringValues = {"readonly", "readwrite", "versionchange"}) @Nonnull String mode);
+      @MagicConstant(valuesFromClass = IDBTransactionMode.class) @Nonnull String mode);
 
   /**
    * An IDBTransaction object.
@@ -152,7 +152,7 @@ public class IDBDatabase extends EventTarget {
    */
   @Nonnull
   public native IDBTransaction transaction(@Nonnull JsArray<String> storeNames,
-      @MagicConstant(stringValues = {"readonly", "readwrite", "versionchange"}) @Nonnull String mode);
+      @MagicConstant(valuesFromClass = IDBTransactionMode.class) @Nonnull String mode);
 
   /**
    * An IDBTransaction object.
@@ -161,7 +161,7 @@ public class IDBDatabase extends EventTarget {
    */
   @Nonnull
   public native IDBTransaction transaction(@Nonnull String[] storeNames,
-      @MagicConstant(stringValues = {"readonly", "readwrite", "versionchange"}) @Nonnull String mode);
+      @MagicConstant(valuesFromClass = IDBTransactionMode.class) @Nonnull String mode);
 
   /**
    * An IDBTransaction object.

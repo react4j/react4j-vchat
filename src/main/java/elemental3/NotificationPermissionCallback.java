@@ -10,5 +10,5 @@ import org.intellij.lang.annotations.MagicConstant;
 @FunctionalInterface
 public interface NotificationPermissionCallback {
   void onInvoke(
-      @MagicConstant(stringValues = {"default", "denied", "granted"}) @Nonnull String permission);
+      @MagicConstant(valuesFromClass = NotificationPermission.class) @Nonnull String permission);
 }
