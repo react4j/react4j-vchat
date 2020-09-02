@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -63,7 +64,8 @@ public interface DelayOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default DelayOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default DelayOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -71,7 +73,8 @@ public interface DelayOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default DelayOptions channelInterpretation(@Nonnull final String channelInterpretation) {
+  default DelayOptions channelInterpretation(
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.
@@ -91,6 +92,9 @@ public interface MediaKeySystemConfiguration {
   @JsProperty(
       name = "distinctiveIdentifier"
   )
+  @MagicConstant(
+      valuesFromClass = MediaKeysRequirement.class
+  )
   String distinctiveIdentifier();
 
   /**
@@ -99,7 +103,8 @@ public interface MediaKeySystemConfiguration {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier">MediaKeySystemConfiguration.distinctiveIdentifier - MDN</a>
    */
   @JsProperty
-  void setDistinctiveIdentifier(@Nonnull String distinctiveIdentifier);
+  void setDistinctiveIdentifier(
+      @MagicConstant(valuesFromClass = MediaKeysRequirement.class) @Nonnull String distinctiveIdentifier);
 
   /**
    * The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.
@@ -109,7 +114,7 @@ public interface MediaKeySystemConfiguration {
   @JsOverlay
   @Nonnull
   default MediaKeySystemConfiguration distinctiveIdentifier(
-      @Nonnull final String distinctiveIdentifier) {
+      @MagicConstant(valuesFromClass = MediaKeysRequirement.class) @Nonnull final String distinctiveIdentifier) {
     setDistinctiveIdentifier( distinctiveIdentifier );
     return this;
   }
@@ -189,6 +194,9 @@ public interface MediaKeySystemConfiguration {
   @JsProperty(
       name = "persistentState"
   )
+  @MagicConstant(
+      valuesFromClass = MediaKeysRequirement.class
+  )
   String persistentState();
 
   /**
@@ -197,7 +205,8 @@ public interface MediaKeySystemConfiguration {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState">MediaKeySystemConfiguration.persistentState - MDN</a>
    */
   @JsProperty
-  void setPersistentState(@Nonnull String persistentState);
+  void setPersistentState(
+      @MagicConstant(valuesFromClass = MediaKeysRequirement.class) @Nonnull String persistentState);
 
   /**
    * The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.
@@ -206,7 +215,8 @@ public interface MediaKeySystemConfiguration {
    */
   @JsOverlay
   @Nonnull
-  default MediaKeySystemConfiguration persistentState(@Nonnull final String persistentState) {
+  default MediaKeySystemConfiguration persistentState(
+      @MagicConstant(valuesFromClass = MediaKeysRequirement.class) @Nonnull final String persistentState) {
     setPersistentState( persistentState );
     return this;
   }

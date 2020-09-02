@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -18,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static SecurityPolicyViolationEventInit create(@Nonnull final String disposition,
+  static SecurityPolicyViolationEventInit create(
+      @MagicConstant(valuesFromClass = SecurityPolicyViolationEventDisposition.class) @Nonnull final String disposition,
       @Nonnull final String documentURL, @Nonnull final String effectiveDirective,
       @Nonnull final String originalPolicy, final int statusCode) {
     return Js.<SecurityPolicyViolationEventInit>uncheckedCast( JsPropertyMap.of() ).disposition( disposition ).documentURL( documentURL ).effectiveDirective( effectiveDirective ).originalPolicy( originalPolicy ).statusCode( statusCode );
@@ -57,15 +59,20 @@ public interface SecurityPolicyViolationEventInit extends EventInit {
   @JsProperty(
       name = "disposition"
   )
+  @MagicConstant(
+      valuesFromClass = SecurityPolicyViolationEventDisposition.class
+  )
   @Nonnull
   String disposition();
 
   @JsProperty
-  void setDisposition(@Nonnull String disposition);
+  void setDisposition(
+      @MagicConstant(valuesFromClass = SecurityPolicyViolationEventDisposition.class) @Nonnull String disposition);
 
   @JsOverlay
   @Nonnull
-  default SecurityPolicyViolationEventInit disposition(@Nonnull final String disposition) {
+  default SecurityPolicyViolationEventInit disposition(
+      @MagicConstant(valuesFromClass = SecurityPolicyViolationEventDisposition.class) @Nonnull final String disposition) {
     setDisposition( disposition );
     return this;
   }

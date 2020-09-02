@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,15 +26,19 @@ public interface AuthenticatorSelectionCriteria {
   @JsProperty(
       name = "authenticatorAttachment"
   )
+  @MagicConstant(
+      valuesFromClass = AuthenticatorAttachment.class
+  )
   String authenticatorAttachment();
 
   @JsProperty
-  void setAuthenticatorAttachment(@Nonnull String authenticatorAttachment);
+  void setAuthenticatorAttachment(
+      @MagicConstant(valuesFromClass = AuthenticatorAttachment.class) @Nonnull String authenticatorAttachment);
 
   @JsOverlay
   @Nonnull
   default AuthenticatorSelectionCriteria authenticatorAttachment(
-      @Nonnull final String authenticatorAttachment) {
+      @MagicConstant(valuesFromClass = AuthenticatorAttachment.class) @Nonnull final String authenticatorAttachment) {
     setAuthenticatorAttachment( authenticatorAttachment );
     return this;
   }
@@ -56,14 +61,19 @@ public interface AuthenticatorSelectionCriteria {
   @JsProperty(
       name = "userVerification"
   )
+  @MagicConstant(
+      valuesFromClass = UserVerificationRequirement.class
+  )
   String userVerification();
 
   @JsProperty
-  void setUserVerification(@Nonnull String userVerification);
+  void setUserVerification(
+      @MagicConstant(valuesFromClass = UserVerificationRequirement.class) @Nonnull String userVerification);
 
   @JsOverlay
   @Nonnull
-  default AuthenticatorSelectionCriteria userVerification(@Nonnull final String userVerification) {
+  default AuthenticatorSelectionCriteria userVerification(
+      @MagicConstant(valuesFromClass = UserVerificationRequirement.class) @Nonnull final String userVerification) {
     setUserVerification( userVerification );
     return this;
   }

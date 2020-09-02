@@ -12,5 +12,5 @@ import jsinterop.base.Any;
 @FunctionalInterface
 public interface ParseReviverFn {
   @Nullable
-  Any onInvoke(@Nonnull String key, @Nullable @DoNotAutobox Object value);
+  Any onInvoke(@Nonnull String key, @DoNotAutobox @Nullable Object value);
 }

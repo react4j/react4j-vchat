@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCOutboundRtpStreamStats dictionary is the RTCStats-based object which provides metrics and statistics related to an outbound RTP stream being sent by an RTCRtpSender.
@@ -24,7 +25,8 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   @JsOverlay
   @Nonnull
   static RTCOutboundRtpStreamStats create(@Nonnull final String id, final double timestamp,
-      @Nonnull final String type, @Nonnull final String kind, final int ssrc) {
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
+      @Nonnull final String kind, final int ssrc) {
     return Js.<RTCOutboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc );
   }
 
@@ -504,6 +506,9 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   @JsProperty(
       name = "qualityLimitationReason"
   )
+  @MagicConstant(
+      valuesFromClass = RTCQualityLimitationReason.class
+  )
   String qualityLimitationReason();
 
   /**
@@ -512,7 +517,8 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason">RTCOutboundRtpStreamStats.qualityLimitationReason - MDN</a>
    */
   @JsProperty
-  void setQualityLimitationReason(@Nonnull String qualityLimitationReason);
+  void setQualityLimitationReason(
+      @MagicConstant(valuesFromClass = RTCQualityLimitationReason.class) @Nonnull String qualityLimitationReason);
 
   /**
    * The qualityLimitationReason property of the RTCOutboundRtpStreamStats dictionary is a string indicating the reason why the media quality in the stream is currently being reduced by the codec during encoding, or none if no quality reduction is being performed.
@@ -522,7 +528,7 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   @JsOverlay
   @Nonnull
   default RTCOutboundRtpStreamStats qualityLimitationReason(
-      @Nonnull final String qualityLimitationReason) {
+      @MagicConstant(valuesFromClass = RTCQualityLimitationReason.class) @Nonnull final String qualityLimitationReason) {
     setQualityLimitationReason( qualityLimitationReason );
     return this;
   }
@@ -926,7 +932,8 @@ public interface RTCOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCOutboundRtpStreamStats type(@Nonnull final String type) {
+  default RTCOutboundRtpStreamStats type(
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

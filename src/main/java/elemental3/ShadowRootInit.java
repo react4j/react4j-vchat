@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -18,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface ShadowRootInit {
   @JsOverlay
   @Nonnull
-  static ShadowRootInit create(@Nonnull final String mode) {
+  static ShadowRootInit create(
+      @MagicConstant(valuesFromClass = ShadowRootMode.class) @Nonnull final String mode) {
     return Js.<ShadowRootInit>uncheckedCast( JsPropertyMap.of() ).mode( mode );
   }
 
@@ -40,15 +42,19 @@ public interface ShadowRootInit {
   @JsProperty(
       name = "mode"
   )
+  @MagicConstant(
+      valuesFromClass = ShadowRootMode.class
+  )
   @Nonnull
   String mode();
 
   @JsProperty
-  void setMode(@Nonnull String mode);
+  void setMode(@MagicConstant(valuesFromClass = ShadowRootMode.class) @Nonnull String mode);
 
   @JsOverlay
   @Nonnull
-  default ShadowRootInit mode(@Nonnull final String mode) {
+  default ShadowRootInit mode(
+      @MagicConstant(valuesFromClass = ShadowRootMode.class) @Nonnull final String mode) {
     setMode( mode );
     return this;
   }

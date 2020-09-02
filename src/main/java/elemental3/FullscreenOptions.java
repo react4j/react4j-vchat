@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The FullscreenOptions dictionary is used to provide configuration options when calling requestFullscreen() on an element to place that element into full-screen mode.
@@ -35,6 +36,9 @@ public interface FullscreenOptions {
   @JsProperty(
       name = "navigationUI"
   )
+  @MagicConstant(
+      valuesFromClass = FullscreenNavigationUI.class
+  )
   String navigationUI();
 
   /**
@@ -43,7 +47,8 @@ public interface FullscreenOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions/navigationUI">FullscreenOptions.navigationUI - MDN</a>
    */
   @JsProperty
-  void setNavigationUI(@Nonnull String navigationUI);
+  void setNavigationUI(
+      @MagicConstant(valuesFromClass = FullscreenNavigationUI.class) @Nonnull String navigationUI);
 
   /**
    * The FullscreenOptions dictionary's navigationUI property is used when calling requestFullscreen() to specify to what extent the user agent should include its standard user interface while the element is presented in full-screen mode.
@@ -52,7 +57,8 @@ public interface FullscreenOptions {
    */
   @JsOverlay
   @Nonnull
-  default FullscreenOptions navigationUI(@Nonnull final String navigationUI) {
+  default FullscreenOptions navigationUI(
+      @MagicConstant(valuesFromClass = FullscreenNavigationUI.class) @Nonnull final String navigationUI) {
     setNavigationUI( navigationUI );
     return this;
   }

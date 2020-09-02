@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,8 +20,8 @@ public interface RTCCodecStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCCodecStats create(@Nonnull final String id, final double timestamp,
-      @Nonnull final String type, @Nonnull final String mimeType, final int payloadType,
-      @Nonnull final String transportId) {
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
+      @Nonnull final String mimeType, final int payloadType, @Nonnull final String transportId) {
     return Js.<RTCCodecStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).mimeType( mimeType ).payloadType( payloadType ).transportId( transportId );
   }
 
@@ -57,14 +58,18 @@ public interface RTCCodecStats extends RTCStats {
   @JsProperty(
       name = "codecType"
   )
+  @MagicConstant(
+      valuesFromClass = RTCCodecType.class
+  )
   String codecType();
 
   @JsProperty
-  void setCodecType(@Nonnull String codecType);
+  void setCodecType(@MagicConstant(valuesFromClass = RTCCodecType.class) @Nonnull String codecType);
 
   @JsOverlay
   @Nonnull
-  default RTCCodecStats codecType(@Nonnull final String codecType) {
+  default RTCCodecStats codecType(
+      @MagicConstant(valuesFromClass = RTCCodecType.class) @Nonnull final String codecType) {
     setCodecType( codecType );
     return this;
   }
@@ -180,7 +185,8 @@ public interface RTCCodecStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCCodecStats type(@Nonnull final String type) {
+  default RTCCodecStats type(
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

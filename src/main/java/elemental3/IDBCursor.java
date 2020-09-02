@@ -70,7 +70,7 @@ public class IDBCursor {
   @JsMethod(
       name = "continue"
   )
-  public native void continue_(@Nullable @DoNotAutobox Object key);
+  public native void continue_(@DoNotAutobox @Nullable Object key);
 
   @JsMethod(
       name = "continue"
@@ -89,7 +89,7 @@ public class IDBCursor {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey">IDBCursor.continuePrimaryKey - MDN</a>
    */
-  public native void continuePrimaryKey(@Nullable @DoNotAutobox Object key,
+  public native void continuePrimaryKey(@DoNotAutobox @Nullable Object key,
       @Nullable Any primaryKey);
 
   /**
@@ -98,15 +98,15 @@ public class IDBCursor {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey">IDBCursor.continuePrimaryKey - MDN</a>
    */
   public native void continuePrimaryKey(@Nullable Any key,
-      @Nullable @DoNotAutobox Object primaryKey);
+      @DoNotAutobox @Nullable Object primaryKey);
 
   /**
    * The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey">IDBCursor.continuePrimaryKey - MDN</a>
    */
-  public native void continuePrimaryKey(@Nullable @DoNotAutobox Object key,
-      @Nullable @DoNotAutobox Object primaryKey);
+  public native void continuePrimaryKey(@DoNotAutobox @Nullable Object key,
+      @DoNotAutobox @Nullable Object primaryKey);
 
   @Nonnull
   public native IDBRequest delete();
@@ -115,5 +115,5 @@ public class IDBCursor {
   public native IDBRequest update(@Nullable Any value);
 
   @Nonnull
-  public native IDBRequest update(@Nullable @DoNotAutobox Object value);
+  public native IDBRequest update(@DoNotAutobox @Nullable Object value);
 }

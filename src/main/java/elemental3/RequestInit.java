@@ -23,6 +23,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -284,14 +285,18 @@ public interface RequestInit {
   @JsProperty(
       name = "cache"
   )
+  @MagicConstant(
+      valuesFromClass = RequestCache.class
+  )
   String cache();
 
   @JsProperty
-  void setCache(@Nonnull String cache);
+  void setCache(@MagicConstant(valuesFromClass = RequestCache.class) @Nonnull String cache);
 
   @JsOverlay
   @Nonnull
-  default RequestInit cache(@Nonnull final String cache) {
+  default RequestInit cache(
+      @MagicConstant(valuesFromClass = RequestCache.class) @Nonnull final String cache) {
     setCache( cache );
     return this;
   }
@@ -299,14 +304,19 @@ public interface RequestInit {
   @JsProperty(
       name = "credentials"
   )
+  @MagicConstant(
+      valuesFromClass = RequestCredentials.class
+  )
   String credentials();
 
   @JsProperty
-  void setCredentials(@Nonnull String credentials);
+  void setCredentials(
+      @MagicConstant(valuesFromClass = RequestCredentials.class) @Nonnull String credentials);
 
   @JsOverlay
   @Nonnull
-  default RequestInit credentials(@Nonnull final String credentials) {
+  default RequestInit credentials(
+      @MagicConstant(valuesFromClass = RequestCredentials.class) @Nonnull final String credentials) {
     setCredentials( credentials );
     return this;
   }
@@ -412,14 +422,18 @@ public interface RequestInit {
   @JsProperty(
       name = "mode"
   )
+  @MagicConstant(
+      valuesFromClass = RequestMode.class
+  )
   String mode();
 
   @JsProperty
-  void setMode(@Nonnull String mode);
+  void setMode(@MagicConstant(valuesFromClass = RequestMode.class) @Nonnull String mode);
 
   @JsOverlay
   @Nonnull
-  default RequestInit mode(@Nonnull final String mode) {
+  default RequestInit mode(
+      @MagicConstant(valuesFromClass = RequestMode.class) @Nonnull final String mode) {
     setMode( mode );
     return this;
   }
@@ -427,14 +441,19 @@ public interface RequestInit {
   @JsProperty(
       name = "redirect"
   )
+  @MagicConstant(
+      valuesFromClass = RequestRedirect.class
+  )
   String redirect();
 
   @JsProperty
-  void setRedirect(@Nonnull String redirect);
+  void setRedirect(
+      @MagicConstant(valuesFromClass = RequestRedirect.class) @Nonnull String redirect);
 
   @JsOverlay
   @Nonnull
-  default RequestInit redirect(@Nonnull final String redirect) {
+  default RequestInit redirect(
+      @MagicConstant(valuesFromClass = RequestRedirect.class) @Nonnull final String redirect) {
     setRedirect( redirect );
     return this;
   }
@@ -457,14 +476,19 @@ public interface RequestInit {
   @JsProperty(
       name = "referrerPolicy"
   )
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
   String referrerPolicy();
 
   @JsProperty
-  void setReferrerPolicy(@Nonnull String referrerPolicy);
+  void setReferrerPolicy(
+      @MagicConstant(valuesFromClass = ReferrerPolicy.class) @Nonnull String referrerPolicy);
 
   @JsOverlay
   @Nonnull
-  default RequestInit referrerPolicy(@Nonnull final String referrerPolicy) {
+  default RequestInit referrerPolicy(
+      @MagicConstant(valuesFromClass = ReferrerPolicy.class) @Nonnull final String referrerPolicy) {
     setReferrerPolicy( referrerPolicy );
     return this;
   }
@@ -502,13 +526,13 @@ public interface RequestInit {
   }
 
   @JsOverlay
-  default void setWindow(@Nullable @DoNotAutobox final Object window) {
+  default void setWindow(@DoNotAutobox @Nullable final Object window) {
     setWindow( Js.asAny( window ) );
   }
 
   @JsOverlay
   @Nonnull
-  default RequestInit window(@Nullable @DoNotAutobox final Object window) {
+  default RequestInit window(@DoNotAutobox @Nullable final Object window) {
     setWindow( window );
     return this;
   }

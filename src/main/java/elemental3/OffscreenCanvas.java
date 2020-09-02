@@ -68,7 +68,7 @@ public class OffscreenCanvas extends EventTarget {
   @Nullable
   public native OffscreenRenderingContext getContext(
       @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId,
-      @Nullable @DoNotAutobox Object options);
+      @DoNotAutobox @Nullable Object options);
 
   /**
    * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.

@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established.
@@ -31,14 +32,19 @@ public interface RTCConfiguration {
   @JsProperty(
       name = "bundlePolicy"
   )
+  @MagicConstant(
+      valuesFromClass = RTCBundlePolicy.class
+  )
   String bundlePolicy();
 
   @JsProperty
-  void setBundlePolicy(@Nonnull String bundlePolicy);
+  void setBundlePolicy(
+      @MagicConstant(valuesFromClass = RTCBundlePolicy.class) @Nonnull String bundlePolicy);
 
   @JsOverlay
   @Nonnull
-  default RTCConfiguration bundlePolicy(@Nonnull final String bundlePolicy) {
+  default RTCConfiguration bundlePolicy(
+      @MagicConstant(valuesFromClass = RTCBundlePolicy.class) @Nonnull final String bundlePolicy) {
     setBundlePolicy( bundlePolicy );
     return this;
   }
@@ -115,14 +121,19 @@ public interface RTCConfiguration {
   @JsProperty(
       name = "iceTransportPolicy"
   )
+  @MagicConstant(
+      valuesFromClass = RTCIceTransportPolicy.class
+  )
   String iceTransportPolicy();
 
   @JsProperty
-  void setIceTransportPolicy(@Nonnull String iceTransportPolicy);
+  void setIceTransportPolicy(
+      @MagicConstant(valuesFromClass = RTCIceTransportPolicy.class) @Nonnull String iceTransportPolicy);
 
   @JsOverlay
   @Nonnull
-  default RTCConfiguration iceTransportPolicy(@Nonnull final String iceTransportPolicy) {
+  default RTCConfiguration iceTransportPolicy(
+      @MagicConstant(valuesFromClass = RTCIceTransportPolicy.class) @Nonnull final String iceTransportPolicy) {
     setIceTransportPolicy( iceTransportPolicy );
     return this;
   }
@@ -130,14 +141,19 @@ public interface RTCConfiguration {
   @JsProperty(
       name = "rtcpMuxPolicy"
   )
+  @MagicConstant(
+      valuesFromClass = RTCRtcpMuxPolicy.class
+  )
   String rtcpMuxPolicy();
 
   @JsProperty
-  void setRtcpMuxPolicy(@Nonnull String rtcpMuxPolicy);
+  void setRtcpMuxPolicy(
+      @MagicConstant(valuesFromClass = RTCRtcpMuxPolicy.class) @Nonnull String rtcpMuxPolicy);
 
   @JsOverlay
   @Nonnull
-  default RTCConfiguration rtcpMuxPolicy(@Nonnull final String rtcpMuxPolicy) {
+  default RTCConfiguration rtcpMuxPolicy(
+      @MagicConstant(valuesFromClass = RTCRtcpMuxPolicy.class) @Nonnull final String rtcpMuxPolicy) {
     setRtcpMuxPolicy( rtcpMuxPolicy );
     return this;
   }

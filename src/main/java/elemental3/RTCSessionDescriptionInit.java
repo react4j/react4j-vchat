@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -18,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCSessionDescriptionInit {
   @JsOverlay
   @Nonnull
-  static RTCSessionDescriptionInit create(@Nonnull final String type) {
+  static RTCSessionDescriptionInit create(
+      @MagicConstant(valuesFromClass = RTCSdpType.class) @Nonnull final String type) {
     return Js.<RTCSessionDescriptionInit>uncheckedCast( JsPropertyMap.of() ).type( type );
   }
 
@@ -40,15 +42,19 @@ public interface RTCSessionDescriptionInit {
   @JsProperty(
       name = "type"
   )
+  @MagicConstant(
+      valuesFromClass = RTCSdpType.class
+  )
   @Nonnull
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@MagicConstant(valuesFromClass = RTCSdpType.class) @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default RTCSessionDescriptionInit type(@Nonnull final String type) {
+  default RTCSessionDescriptionInit type(
+      @MagicConstant(valuesFromClass = RTCSdpType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

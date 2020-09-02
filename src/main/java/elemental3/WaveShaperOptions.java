@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -53,14 +54,19 @@ public interface WaveShaperOptions extends AudioNodeOptions {
   @JsProperty(
       name = "oversample"
   )
+  @MagicConstant(
+      valuesFromClass = OverSampleType.class
+  )
   String oversample();
 
   @JsProperty
-  void setOversample(@Nonnull String oversample);
+  void setOversample(
+      @MagicConstant(valuesFromClass = OverSampleType.class) @Nonnull String oversample);
 
   @JsOverlay
   @Nonnull
-  default WaveShaperOptions oversample(@Nonnull final String oversample) {
+  default WaveShaperOptions oversample(
+      @MagicConstant(valuesFromClass = OverSampleType.class) @Nonnull final String oversample) {
     setOversample( oversample );
     return this;
   }
@@ -76,7 +82,8 @@ public interface WaveShaperOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default WaveShaperOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default WaveShaperOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -84,7 +91,8 @@ public interface WaveShaperOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default WaveShaperOptions channelInterpretation(@Nonnull final String channelInterpretation) {
+  default WaveShaperOptions channelInterpretation(
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

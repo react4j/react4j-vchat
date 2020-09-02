@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -70,14 +71,18 @@ public interface OscillatorOptions extends AudioNodeOptions {
   @JsProperty(
       name = "type"
   )
+  @MagicConstant(
+      valuesFromClass = OscillatorType.class
+  )
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@MagicConstant(valuesFromClass = OscillatorType.class) @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default OscillatorOptions type(@Nonnull final String type) {
+  default OscillatorOptions type(
+      @MagicConstant(valuesFromClass = OscillatorType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }
@@ -93,7 +98,8 @@ public interface OscillatorOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default OscillatorOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default OscillatorOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -101,7 +107,8 @@ public interface OscillatorOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default OscillatorOptions channelInterpretation(@Nonnull final String channelInterpretation) {
+  default OscillatorOptions channelInterpretation(
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

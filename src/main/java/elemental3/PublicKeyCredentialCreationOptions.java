@@ -20,6 +20,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.
@@ -275,6 +276,9 @@ public interface PublicKeyCredentialCreationOptions {
   @JsProperty(
       name = "attestation"
   )
+  @MagicConstant(
+      valuesFromClass = AttestationConveyancePreference.class
+  )
   String attestation();
 
   /**
@@ -283,7 +287,8 @@ public interface PublicKeyCredentialCreationOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/attestation">PublicKeyCredentialCreationOptions.attestation - MDN</a>
    */
   @JsProperty
-  void setAttestation(@Nonnull String attestation);
+  void setAttestation(
+      @MagicConstant(valuesFromClass = AttestationConveyancePreference.class) @Nonnull String attestation);
 
   /**
    * attestation is an optional property of the PublicKeyCredentialCreationOptions dictionary. This is a string whose value indicates the preference regarding the attestation transport, between the authenticator, the client and the relying party.
@@ -292,7 +297,8 @@ public interface PublicKeyCredentialCreationOptions {
    */
   @JsOverlay
   @Nonnull
-  default PublicKeyCredentialCreationOptions attestation(@Nonnull final String attestation) {
+  default PublicKeyCredentialCreationOptions attestation(
+      @MagicConstant(valuesFromClass = AttestationConveyancePreference.class) @Nonnull final String attestation) {
     setAttestation( attestation );
     return this;
   }

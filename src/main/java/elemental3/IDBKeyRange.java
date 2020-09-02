@@ -81,7 +81,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable @DoNotAutobox Object lower, @Nullable Any upper,
+  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower, @Nullable Any upper,
       boolean lowerOpen, boolean upperOpen);
 
   /**
@@ -90,7 +90,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @Nullable @DoNotAutobox Object upper,
+  public static native IDBKeyRange bound(@Nullable Any lower, @DoNotAutobox @Nullable Object upper,
       boolean lowerOpen, boolean upperOpen);
 
   /**
@@ -99,8 +99,8 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable @DoNotAutobox Object lower,
-      @Nullable @DoNotAutobox Object upper, boolean lowerOpen, boolean upperOpen);
+  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
+      @DoNotAutobox @Nullable Object upper, boolean lowerOpen, boolean upperOpen);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -117,7 +117,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable @DoNotAutobox Object lower, @Nullable Any upper,
+  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower, @Nullable Any upper,
       boolean lowerOpen);
 
   /**
@@ -126,7 +126,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @Nullable @DoNotAutobox Object upper,
+  public static native IDBKeyRange bound(@Nullable Any lower, @DoNotAutobox @Nullable Object upper,
       boolean lowerOpen);
 
   /**
@@ -135,8 +135,8 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable @DoNotAutobox Object lower,
-      @Nullable @DoNotAutobox Object upper, boolean lowerOpen);
+  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
+      @DoNotAutobox @Nullable Object upper, boolean lowerOpen);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -152,7 +152,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable @DoNotAutobox Object lower, @Nullable Any upper);
+  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower, @Nullable Any upper);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -160,7 +160,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable Any lower, @Nullable @DoNotAutobox Object upper);
+  public static native IDBKeyRange bound(@Nullable Any lower, @DoNotAutobox @Nullable Object upper);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -168,8 +168,8 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound">IDBKeyRange.bound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange bound(@Nullable @DoNotAutobox Object lower,
-      @Nullable @DoNotAutobox Object upper);
+  public static native IDBKeyRange bound(@DoNotAutobox @Nullable Object lower,
+      @DoNotAutobox @Nullable Object upper);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -185,7 +185,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound">IDBKeyRange.lowerBound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange lowerBound(@Nullable @DoNotAutobox Object lower, boolean open);
+  public static native IDBKeyRange lowerBound(@DoNotAutobox @Nullable Object lower, boolean open);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -201,7 +201,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lowerBound">IDBKeyRange.lowerBound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange lowerBound(@Nullable @DoNotAutobox Object lower);
+  public static native IDBKeyRange lowerBound(@DoNotAutobox @Nullable Object lower);
 
   /**
    * value is the value for the new key range.
@@ -217,7 +217,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/only">IDBKeyRange.only - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange only(@Nullable @DoNotAutobox Object value);
+  public static native IDBKeyRange only(@DoNotAutobox @Nullable Object value);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -233,7 +233,7 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange upperBound(@Nullable @DoNotAutobox Object upper, boolean open);
+  public static native IDBKeyRange upperBound(@DoNotAutobox @Nullable Object upper, boolean open);
 
   /**
    * IDBKeyRange: The newly created key range.
@@ -249,9 +249,9 @@ public class IDBKeyRange {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound">IDBKeyRange.upperBound - MDN</a>
    */
   @Nonnull
-  public static native IDBKeyRange upperBound(@Nullable @DoNotAutobox Object upper);
+  public static native IDBKeyRange upperBound(@DoNotAutobox @Nullable Object upper);
 
   public native boolean includes(@Nullable Any key);
 
-  public native boolean includes(@Nullable @DoNotAutobox Object key);
+  public native boolean includes(@DoNotAutobox @Nullable Object key);
 }

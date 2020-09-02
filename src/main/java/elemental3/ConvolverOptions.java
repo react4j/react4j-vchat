@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -65,7 +66,8 @@ public interface ConvolverOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default ConvolverOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default ConvolverOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -73,7 +75,8 @@ public interface ConvolverOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default ConvolverOptions channelInterpretation(@Nonnull final String channelInterpretation) {
+  default ConvolverOptions channelInterpretation(
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

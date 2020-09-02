@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,14 +41,18 @@ public interface RegistrationOptions {
   @JsProperty(
       name = "type"
   )
+  @MagicConstant(
+      valuesFromClass = WorkerType.class
+  )
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@MagicConstant(valuesFromClass = WorkerType.class) @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default RegistrationOptions type(@Nonnull final String type) {
+  default RegistrationOptions type(
+      @MagicConstant(valuesFromClass = WorkerType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }
@@ -55,14 +60,19 @@ public interface RegistrationOptions {
   @JsProperty(
       name = "updateViaCache"
   )
+  @MagicConstant(
+      valuesFromClass = ServiceWorkerUpdateViaCache.class
+  )
   String updateViaCache();
 
   @JsProperty
-  void setUpdateViaCache(@Nonnull String updateViaCache);
+  void setUpdateViaCache(
+      @MagicConstant(valuesFromClass = ServiceWorkerUpdateViaCache.class) @Nonnull String updateViaCache);
 
   @JsOverlay
   @Nonnull
-  default RegistrationOptions updateViaCache(@Nonnull final String updateViaCache) {
+  default RegistrationOptions updateViaCache(
+      @MagicConstant(valuesFromClass = ServiceWorkerUpdateViaCache.class) @Nonnull final String updateViaCache) {
     setUpdateViaCache( updateViaCache );
     return this;
   }

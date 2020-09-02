@@ -20,6 +20,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -31,91 +32,91 @@ public interface PublicKeyCredentialDescriptor {
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final BufferSource id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final ArrayBufferView id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Int8Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Int16Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Int32Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Uint8Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Uint16Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Uint32Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Uint8ClampedArray id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Float32Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final Float64Array id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final DataView id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
   @JsOverlay
   @Nonnull
   static PublicKeyCredentialDescriptor create(@Nonnull final ArrayBuffer id,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialDescriptor>uncheckedCast( JsPropertyMap.of() ).id( id ).type( type );
   }
 
@@ -309,15 +310,20 @@ public interface PublicKeyCredentialDescriptor {
   @JsProperty(
       name = "type"
   )
+  @MagicConstant(
+      valuesFromClass = PublicKeyCredentialType.class
+  )
   @Nonnull
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default PublicKeyCredentialDescriptor type(@Nonnull final String type) {
+  default PublicKeyCredentialDescriptor type(
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

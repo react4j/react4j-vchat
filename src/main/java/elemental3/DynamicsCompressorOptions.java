@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -108,7 +109,8 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default DynamicsCompressorOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default DynamicsCompressorOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -117,7 +119,7 @@ public interface DynamicsCompressorOptions extends AudioNodeOptions {
   @Nonnull
   @Override
   default DynamicsCompressorOptions channelInterpretation(
-      @Nonnull final String channelInterpretation) {
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

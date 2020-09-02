@@ -37,22 +37,22 @@ public class IDBFactory {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
    */
-  public native short cmp(@Nullable @DoNotAutobox Object first, @Nullable Any second);
+  public native short cmp(@DoNotAutobox @Nullable Object first, @Nullable Any second);
 
   /**
    * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
    */
-  public native short cmp(@Nullable Any first, @Nullable @DoNotAutobox Object second);
+  public native short cmp(@Nullable Any first, @DoNotAutobox @Nullable Object second);
 
   /**
    * An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp">IDBFactory.cmp - MDN</a>
    */
-  public native short cmp(@Nullable @DoNotAutobox Object first,
-      @Nullable @DoNotAutobox Object second);
+  public native short cmp(@DoNotAutobox @Nullable Object first,
+      @DoNotAutobox @Nullable Object second);
 
   /**
    * The databases method of the IDBFactory interface returns a list represening all the available databases, including their names and versions.

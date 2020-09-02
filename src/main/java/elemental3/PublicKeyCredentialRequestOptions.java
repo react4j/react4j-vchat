@@ -20,6 +20,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential.
@@ -560,6 +561,9 @@ public interface PublicKeyCredentialRequestOptions {
   @JsProperty(
       name = "userVerification"
   )
+  @MagicConstant(
+      valuesFromClass = UserVerificationRequirement.class
+  )
   String userVerification();
 
   /**
@@ -568,7 +572,8 @@ public interface PublicKeyCredentialRequestOptions {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/userVerification">PublicKeyCredentialRequestOptions.userVerification - MDN</a>
    */
   @JsProperty
-  void setUserVerification(@Nonnull String userVerification);
+  void setUserVerification(
+      @MagicConstant(valuesFromClass = UserVerificationRequirement.class) @Nonnull String userVerification);
 
   /**
    * userVerification is an optional property of the PublicKeyCredentialRequestOptions. This is a string which indicates how the user verification should be part of the authentication process.
@@ -578,7 +583,7 @@ public interface PublicKeyCredentialRequestOptions {
   @JsOverlay
   @Nonnull
   default PublicKeyCredentialRequestOptions userVerification(
-      @Nonnull final String userVerification) {
+      @MagicConstant(valuesFromClass = UserVerificationRequirement.class) @Nonnull final String userVerification) {
     setUserVerification( userVerification );
     return this;
   }

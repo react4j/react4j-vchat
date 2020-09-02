@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -85,14 +86,18 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsProperty(
       name = "type"
   )
+  @MagicConstant(
+      valuesFromClass = BiquadFilterType.class
+  )
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@MagicConstant(valuesFromClass = BiquadFilterType.class) @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default BiquadFilterOptions type(@Nonnull final String type) {
+  default BiquadFilterOptions type(
+      @MagicConstant(valuesFromClass = BiquadFilterType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }
@@ -108,7 +113,8 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default BiquadFilterOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default BiquadFilterOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -116,7 +122,8 @@ public interface BiquadFilterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default BiquadFilterOptions channelInterpretation(@Nonnull final String channelInterpretation) {
+  default BiquadFilterOptions channelInterpretation(
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

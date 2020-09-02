@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -115,14 +116,19 @@ public interface RTCDataChannelInit {
   @JsProperty(
       name = "priority"
   )
+  @MagicConstant(
+      valuesFromClass = RTCPriorityType.class
+  )
   String priority();
 
   @JsProperty
-  void setPriority(@Nonnull String priority);
+  void setPriority(
+      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull String priority);
 
   @JsOverlay
   @Nonnull
-  default RTCDataChannelInit priority(@Nonnull final String priority) {
+  default RTCDataChannelInit priority(
+      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull final String priority) {
     setPriority( priority );
     return this;
   }

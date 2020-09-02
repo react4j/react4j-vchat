@@ -33,7 +33,7 @@ public final class Console {
   @JsMethod(
       name = "assert"
   )
-  public native void assert_(boolean condition, @Nullable @DoNotAutobox Object... data);
+  public native void assert_(boolean condition, @DoNotAutobox @Nullable Object... data);
 
   @JsMethod(
       name = "assert"
@@ -87,7 +87,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/debug">console.debug - MDN</a>
    */
-  public native void debug(@Nullable @DoNotAutobox Object... data);
+  public native void debug(@DoNotAutobox @Nullable Object... data);
 
   /**
    * The Console method dir() displays an interactive list of the properties of the specified JavaScript object.
@@ -101,7 +101,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dir">console.dir - MDN</a>
    */
-  public native void dir(@Nullable @DoNotAutobox Object item, @Nullable Object options);
+  public native void dir(@DoNotAutobox @Nullable Object item, @Nullable Object options);
 
   /**
    * The Console method dir() displays an interactive list of the properties of the specified JavaScript object.
@@ -115,7 +115,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dir">console.dir - MDN</a>
    */
-  public native void dir(@Nullable @DoNotAutobox Object item);
+  public native void dir(@DoNotAutobox @Nullable Object item);
 
   /**
    * The Console method dir() displays an interactive list of the properties of the specified JavaScript object.
@@ -136,7 +136,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dirxml">console.dirxml - MDN</a>
    */
-  public native void dirxml(@Nullable @DoNotAutobox Object... data);
+  public native void dirxml(@DoNotAutobox @Nullable Object... data);
 
   /**
    * Outputs an error message to the Web Console.
@@ -150,7 +150,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/error">console.error - MDN</a>
    */
-  public native void error(@Nullable @DoNotAutobox Object... data);
+  public native void error(@DoNotAutobox @Nullable Object... data);
 
   /**
    * Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called.
@@ -164,7 +164,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/group">console.group - MDN</a>
    */
-  public native void group(@Nullable @DoNotAutobox Object... data);
+  public native void group(@DoNotAutobox @Nullable Object... data);
 
   /**
    * Creates a new inline group in the Web Console. Unlike console.group(), however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.
@@ -178,7 +178,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/groupCollapsed">console.groupCollapsed - MDN</a>
    */
-  public native void groupCollapsed(@Nullable @DoNotAutobox Object... data);
+  public native void groupCollapsed(@DoNotAutobox @Nullable Object... data);
 
   /**
    * Exits the current inline group in the Web Console. See Using groups in the console in the console documentation for details and examples.
@@ -199,7 +199,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/info">console.info - MDN</a>
    */
-  public native void info(@Nullable @DoNotAutobox Object... data);
+  public native void info(@DoNotAutobox @Nullable Object... data);
 
   /**
    * The Console method log() outputs a message to the web console.
@@ -213,7 +213,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/log">console.log - MDN</a>
    */
-  public native void log(@Nullable @DoNotAutobox Object... data);
+  public native void log(@DoNotAutobox @Nullable Object... data);
 
   /**
    * Displays tabular data as a table.
@@ -227,7 +227,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
    */
-  public native void table(@Nullable @DoNotAutobox Object tabularData,
+  public native void table(@DoNotAutobox @Nullable Object tabularData,
       @Nonnull JsArray<String> properties);
 
   /**
@@ -242,7 +242,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
    */
-  public native void table(@Nullable @DoNotAutobox Object tabularData,
+  public native void table(@DoNotAutobox @Nullable Object tabularData,
       @Nonnull String[] properties);
 
   /**
@@ -257,7 +257,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/table">console.table - MDN</a>
    */
-  public native void table(@Nullable @DoNotAutobox Object tabularData);
+  public native void table(@DoNotAutobox @Nullable Object tabularData);
 
   /**
    * Displays tabular data as a table.
@@ -306,7 +306,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/timeLog">console.timeLog - MDN</a>
    */
-  public native void timeLog(@Nonnull String label, @Nullable @DoNotAutobox Object... data);
+  public native void timeLog(@Nonnull String label, @DoNotAutobox @Nullable Object... data);
 
   /**
    * Logs the current value of a timer that was previously started by calling console.time() to the console.
@@ -327,7 +327,7 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/trace">console.trace - MDN</a>
    */
-  public native void trace(@Nullable @DoNotAutobox Object... data);
+  public native void trace(@DoNotAutobox @Nullable Object... data);
 
   /**
    * Outputs a warning message to the Web Console.
@@ -341,5 +341,5 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
    */
-  public native void warn(@Nullable @DoNotAutobox Object... data);
+  public native void warn(@DoNotAutobox @Nullable Object... data);
 }

@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.
@@ -45,14 +46,19 @@ public interface AudioNodeOptions {
   @JsProperty(
       name = "channelCountMode"
   )
+  @MagicConstant(
+      valuesFromClass = ChannelCountMode.class
+  )
   String channelCountMode();
 
   @JsProperty
-  void setChannelCountMode(@Nonnull String channelCountMode);
+  void setChannelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull String channelCountMode);
 
   @JsOverlay
   @Nonnull
-  default AudioNodeOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default AudioNodeOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -60,14 +66,19 @@ public interface AudioNodeOptions {
   @JsProperty(
       name = "channelInterpretation"
   )
+  @MagicConstant(
+      valuesFromClass = ChannelInterpretation.class
+  )
   String channelInterpretation();
 
   @JsProperty
-  void setChannelInterpretation(@Nonnull String channelInterpretation);
+  void setChannelInterpretation(
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull String channelInterpretation);
 
   @JsOverlay
   @Nonnull
-  default AudioNodeOptions channelInterpretation(@Nonnull final String channelInterpretation) {
+  default AudioNodeOptions channelInterpretation(
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

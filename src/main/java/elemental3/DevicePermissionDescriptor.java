@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -18,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static DevicePermissionDescriptor create(@Nonnull final String name) {
+  static DevicePermissionDescriptor create(
+      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
     return Js.<DevicePermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
@@ -40,7 +42,8 @@ public interface DevicePermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   @Override
-  default DevicePermissionDescriptor name(@Nonnull final String name) {
+  default DevicePermissionDescriptor name(
+      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
     setName( name );
     return this;
   }

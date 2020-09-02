@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -26,14 +27,19 @@ public interface BaseKeyframe {
   @JsProperty(
       name = "composite"
   )
+  @MagicConstant(
+      valuesFromClass = CompositeOperationOrAuto.class
+  )
   String composite();
 
   @JsProperty
-  void setComposite(@Nonnull String composite);
+  void setComposite(
+      @MagicConstant(valuesFromClass = CompositeOperationOrAuto.class) @Nonnull String composite);
 
   @JsOverlay
   @Nonnull
-  default BaseKeyframe composite(@Nonnull final String composite) {
+  default BaseKeyframe composite(
+      @MagicConstant(valuesFromClass = CompositeOperationOrAuto.class) @Nonnull final String composite) {
     setComposite( composite );
     return this;
   }

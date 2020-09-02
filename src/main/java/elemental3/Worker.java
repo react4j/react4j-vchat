@@ -70,7 +70,7 @@ public class Worker extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull JsArray<Object> transfer);
 
   /**
@@ -85,7 +85,7 @@ public class Worker extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull Object[] transfer);
 
   /**
@@ -100,7 +100,7 @@ public class Worker extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull PostMessageOptions options);
 
   /**
@@ -115,7 +115,7 @@ public class Worker extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message);
+  public native void postMessage(@DoNotAutobox @Nullable Object message);
 
   /**
    * The terminate() method of the Worker interface immediately terminates the Worker. This does not offer the worker an opportunity to finish its operations; it is simply stopped at once.

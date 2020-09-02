@@ -61,7 +61,7 @@ public class MessagePort extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull JsArray<Object> transfer);
 
   /**
@@ -76,7 +76,7 @@ public class MessagePort extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull Object[] transfer);
 
   /**
@@ -91,7 +91,7 @@ public class MessagePort extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull PostMessageOptions options);
 
   /**
@@ -106,7 +106,7 @@ public class MessagePort extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage">MessagePort.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message);
+  public native void postMessage(@DoNotAutobox @Nullable Object message);
 
   /**
    * The start() method of the MessagePort interface starts the sending of messages queued on the port. This method is only needed when using EventTarget.addEventListener; it is implied when using MessageChannel.onmessage.

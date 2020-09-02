@@ -39,7 +39,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, @Nullable StringifySpaceUnionType space);
 
   /**
@@ -57,7 +57,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer, @Nullable StringifySpaceUnionType space);
 
   /**
@@ -75,7 +75,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer, @Nullable StringifySpaceUnionType space);
 
   /**
@@ -93,7 +93,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, @Nonnull String space);
 
   /**
@@ -111,7 +111,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer, @Nonnull String space);
 
   /**
@@ -129,7 +129,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer, @Nonnull String space);
 
   /**
@@ -147,7 +147,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer, int space);
 
   /**
@@ -165,7 +165,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer, int space);
 
   /**
@@ -183,7 +183,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer, int space);
 
   /**
@@ -200,7 +200,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringifyReplacerFn replacer);
 
   /**
@@ -218,7 +218,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull JsArray<StringOrLongLongUnion> replacer);
 
   /**
@@ -236,7 +236,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value,
+  public static native String stringify(@DoNotAutobox @Nullable Object value,
       @Nonnull StringOrLongLongUnion[] replacer);
 
   /**
@@ -253,7 +253,7 @@ public class JSON {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify - MDN</a>
    */
   @Nonnull
-  public static native String stringify(@Nullable @DoNotAutobox Object value);
+  public static native String stringify(@DoNotAutobox @Nullable Object value);
 
   /**
    * The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned.

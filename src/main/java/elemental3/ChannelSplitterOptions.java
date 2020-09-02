@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -48,7 +49,8 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default ChannelSplitterOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default ChannelSplitterOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -57,7 +59,7 @@ public interface ChannelSplitterOptions extends AudioNodeOptions {
   @Nonnull
   @Override
   default ChannelSplitterOptions channelInterpretation(
-      @Nonnull final String channelInterpretation) {
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

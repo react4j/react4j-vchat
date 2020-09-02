@@ -64,7 +64,7 @@ public class CustomEvent extends Event {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">CustomEvent.initCustomEvent - MDN</a>
    */
   public native void initCustomEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object detail);
+      @DoNotAutobox @Nullable Object detail);
 
   /**
    * The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.

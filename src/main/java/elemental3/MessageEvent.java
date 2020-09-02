@@ -100,7 +100,7 @@ public class MessageEvent extends Event {
       @Nullable MessageEventSource source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nullable MessageEventSource source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -108,7 +108,7 @@ public class MessageEvent extends Event {
       @Nonnull Window source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull Window source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -116,7 +116,7 @@ public class MessageEvent extends Event {
       @Nonnull MessagePort source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull MessagePort source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -124,7 +124,7 @@ public class MessageEvent extends Event {
       @Nonnull ServiceWorker source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull ServiceWorker source, @Nonnull JsArray<MessagePort> ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -132,7 +132,7 @@ public class MessageEvent extends Event {
       @Nullable MessageEventSource source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nullable MessageEventSource source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -140,7 +140,7 @@ public class MessageEvent extends Event {
       @Nonnull Window source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull Window source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -148,7 +148,7 @@ public class MessageEvent extends Event {
       @Nonnull MessagePort source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull MessagePort source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -156,7 +156,7 @@ public class MessageEvent extends Event {
       @Nonnull ServiceWorker source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull ServiceWorker source, @Nonnull MessagePort[] ports);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -164,7 +164,7 @@ public class MessageEvent extends Event {
       @Nullable MessageEventSource source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nullable MessageEventSource source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -172,7 +172,7 @@ public class MessageEvent extends Event {
       @Nonnull Window source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull Window source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -180,7 +180,7 @@ public class MessageEvent extends Event {
       @Nonnull MessagePort source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull MessagePort source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
@@ -188,26 +188,26 @@ public class MessageEvent extends Event {
       @Nonnull ServiceWorker source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId,
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId,
       @Nonnull ServiceWorker source);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin, @Nonnull String lastEventId);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin, @Nonnull String lastEventId);
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin, @Nonnull String lastEventId);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data, @Nonnull String origin);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data, @Nonnull String origin);
+      @DoNotAutobox @Nullable Object data, @Nonnull String origin);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
       @Nullable Any data);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable,
-      @Nullable @DoNotAutobox Object data);
+      @DoNotAutobox @Nullable Object data);
 
   public native void initMessageEvent(@Nonnull String type, boolean bubbles, boolean cancelable);
 

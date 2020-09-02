@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The KeyframeEffectOptions dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly() and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
@@ -30,14 +31,19 @@ public interface KeyframeEffectOptions extends EffectTiming {
   @JsProperty(
       name = "composite"
   )
+  @MagicConstant(
+      valuesFromClass = CompositeOperation.class
+  )
   String composite();
 
   @JsProperty
-  void setComposite(@Nonnull String composite);
+  void setComposite(
+      @MagicConstant(valuesFromClass = CompositeOperation.class) @Nonnull String composite);
 
   @JsOverlay
   @Nonnull
-  default KeyframeEffectOptions composite(@Nonnull final String composite) {
+  default KeyframeEffectOptions composite(
+      @MagicConstant(valuesFromClass = CompositeOperation.class) @Nonnull final String composite) {
     setComposite( composite );
     return this;
   }
@@ -45,14 +51,19 @@ public interface KeyframeEffectOptions extends EffectTiming {
   @JsProperty(
       name = "iterationComposite"
   )
+  @MagicConstant(
+      valuesFromClass = IterationCompositeOperation.class
+  )
   String iterationComposite();
 
   @JsProperty
-  void setIterationComposite(@Nonnull String iterationComposite);
+  void setIterationComposite(
+      @MagicConstant(valuesFromClass = IterationCompositeOperation.class) @Nonnull String iterationComposite);
 
   @JsOverlay
   @Nonnull
-  default KeyframeEffectOptions iterationComposite(@Nonnull final String iterationComposite) {
+  default KeyframeEffectOptions iterationComposite(
+      @MagicConstant(valuesFromClass = IterationCompositeOperation.class) @Nonnull final String iterationComposite) {
     setIterationComposite( iterationComposite );
     return this;
   }
@@ -78,7 +89,8 @@ public interface KeyframeEffectOptions extends EffectTiming {
   @JsOverlay
   @Nonnull
   @Override
-  default KeyframeEffectOptions direction(@Nonnull final String direction) {
+  default KeyframeEffectOptions direction(
+      @MagicConstant(valuesFromClass = PlaybackDirection.class) @Nonnull final String direction) {
     setDirection( direction );
     return this;
   }
@@ -143,7 +155,8 @@ public interface KeyframeEffectOptions extends EffectTiming {
   @JsOverlay
   @Nonnull
   @Override
-  default KeyframeEffectOptions fill(@Nonnull final String fill) {
+  default KeyframeEffectOptions fill(
+      @MagicConstant(valuesFromClass = FillMode.class) @Nonnull final String fill) {
     setFill( fill );
     return this;
   }

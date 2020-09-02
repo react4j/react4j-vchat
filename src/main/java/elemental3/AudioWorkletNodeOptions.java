@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The AudioWorkletNodeOptions dictionary of the Web Audio API is used to specify configuration options when constructing a new AudioWorkletNode object for custom audio processing.
@@ -128,7 +129,8 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default AudioWorkletNodeOptions channelCountMode(@Nonnull final String channelCountMode) {
+  default AudioWorkletNodeOptions channelCountMode(
+      @MagicConstant(valuesFromClass = ChannelCountMode.class) @Nonnull final String channelCountMode) {
     setChannelCountMode( channelCountMode );
     return this;
   }
@@ -137,7 +139,7 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   @Nonnull
   @Override
   default AudioWorkletNodeOptions channelInterpretation(
-      @Nonnull final String channelInterpretation) {
+      @MagicConstant(valuesFromClass = ChannelInterpretation.class) @Nonnull final String channelInterpretation) {
     setChannelInterpretation( channelInterpretation );
     return this;
   }

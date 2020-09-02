@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,7 +20,8 @@ public interface RTCMediaHandlerStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCMediaHandlerStats create(@Nonnull final String id, final double timestamp,
-      @Nonnull final String type, @Nonnull final String kind) {
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
+      @Nonnull final String kind) {
     return Js.<RTCMediaHandlerStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind );
   }
 
@@ -72,14 +74,19 @@ public interface RTCMediaHandlerStats extends RTCStats {
   @JsProperty(
       name = "priority"
   )
+  @MagicConstant(
+      valuesFromClass = RTCPriorityType.class
+  )
   String priority();
 
   @JsProperty
-  void setPriority(@Nonnull String priority);
+  void setPriority(
+      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull String priority);
 
   @JsOverlay
   @Nonnull
-  default RTCMediaHandlerStats priority(@Nonnull final String priority) {
+  default RTCMediaHandlerStats priority(
+      @MagicConstant(valuesFromClass = RTCPriorityType.class) @Nonnull final String priority) {
     setPriority( priority );
     return this;
   }
@@ -133,7 +140,8 @@ public interface RTCMediaHandlerStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCMediaHandlerStats type(@Nonnull final String type) {
+  default RTCMediaHandlerStats type(
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

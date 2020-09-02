@@ -57,13 +57,13 @@ public interface ErrorEventInit extends EventInit {
   }
 
   @JsOverlay
-  default void setError(@Nullable @DoNotAutobox final Object error) {
+  default void setError(@DoNotAutobox @Nullable final Object error) {
     setError( Js.asAny( error ) );
   }
 
   @JsOverlay
   @Nonnull
-  default ErrorEventInit error(@Nullable @DoNotAutobox final Object error) {
+  default ErrorEventInit error(@DoNotAutobox @Nullable final Object error) {
     setError( error );
     return this;
   }

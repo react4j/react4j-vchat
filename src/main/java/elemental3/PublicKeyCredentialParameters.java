@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -18,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface PublicKeyCredentialParameters {
   @JsOverlay
   @Nonnull
-  static PublicKeyCredentialParameters create(final int alg, @Nonnull final String type) {
+  static PublicKeyCredentialParameters create(final int alg,
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     return Js.<PublicKeyCredentialParameters>uncheckedCast( JsPropertyMap.of() ).alg( alg ).type( type );
   }
 
@@ -40,15 +42,20 @@ public interface PublicKeyCredentialParameters {
   @JsProperty(
       name = "type"
   )
+  @MagicConstant(
+      valuesFromClass = PublicKeyCredentialType.class
+  )
   @Nonnull
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default PublicKeyCredentialParameters type(@Nonnull final String type) {
+  default PublicKeyCredentialParameters type(
+      @MagicConstant(valuesFromClass = PublicKeyCredentialType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

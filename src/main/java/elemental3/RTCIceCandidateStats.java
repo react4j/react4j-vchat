@@ -9,6 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate.
@@ -25,7 +26,8 @@ public interface RTCIceCandidateStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCIceCandidateStats create(@Nonnull final String id, final double timestamp,
-      @Nonnull final String type, @Nonnull final String candidateType,
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
+      @MagicConstant(valuesFromClass = RTCIceCandidateType.class) @Nonnull final String candidateType,
       @Nonnull final String transportId) {
     return Js.<RTCIceCandidateStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).candidateType( candidateType ).transportId( transportId );
   }
@@ -69,6 +71,9 @@ public interface RTCIceCandidateStats extends RTCStats {
   @JsProperty(
       name = "candidateType"
   )
+  @MagicConstant(
+      valuesFromClass = RTCIceCandidateType.class
+  )
   @Nonnull
   String candidateType();
 
@@ -78,7 +83,8 @@ public interface RTCIceCandidateStats extends RTCStats {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType">RTCIceCandidateStats.candidateType - MDN</a>
    */
   @JsProperty
-  void setCandidateType(@Nonnull String candidateType);
+  void setCandidateType(
+      @MagicConstant(valuesFromClass = RTCIceCandidateType.class) @Nonnull String candidateType);
 
   /**
    * The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents.
@@ -87,7 +93,8 @@ public interface RTCIceCandidateStats extends RTCStats {
    */
   @JsOverlay
   @Nonnull
-  default RTCIceCandidateStats candidateType(@Nonnull final String candidateType) {
+  default RTCIceCandidateStats candidateType(
+      @MagicConstant(valuesFromClass = RTCIceCandidateType.class) @Nonnull final String candidateType) {
     setCandidateType( candidateType );
     return this;
   }
@@ -352,7 +359,8 @@ public interface RTCIceCandidateStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCIceCandidateStats type(@Nonnull final String type) {
+  default RTCIceCandidateStats type(
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

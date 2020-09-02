@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.
@@ -65,6 +66,9 @@ public interface EffectTiming {
   @JsProperty(
       name = "direction"
   )
+  @MagicConstant(
+      valuesFromClass = PlaybackDirection.class
+  )
   String direction();
 
   /**
@@ -73,7 +77,8 @@ public interface EffectTiming {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/direction">EffectTiming.direction - MDN</a>
    */
   @JsProperty
-  void setDirection(@Nonnull String direction);
+  void setDirection(
+      @MagicConstant(valuesFromClass = PlaybackDirection.class) @Nonnull String direction);
 
   /**
    * The direction property of the Web Animations API dictionary EffectTiming indicates an animation's playback direction along its timeline, as well as its behavior when it reaches the end of an iteration
@@ -82,7 +87,8 @@ public interface EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  default EffectTiming direction(@Nonnull final String direction) {
+  default EffectTiming direction(
+      @MagicConstant(valuesFromClass = PlaybackDirection.class) @Nonnull final String direction) {
     setDirection( direction );
     return this;
   }
@@ -217,6 +223,9 @@ public interface EffectTiming {
   @JsProperty(
       name = "fill"
   )
+  @MagicConstant(
+      valuesFromClass = FillMode.class
+  )
   String fill();
 
   /**
@@ -225,7 +234,7 @@ public interface EffectTiming {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/fill">EffectTiming.fill - MDN</a>
    */
   @JsProperty
-  void setFill(@Nonnull String fill);
+  void setFill(@MagicConstant(valuesFromClass = FillMode.class) @Nonnull String fill);
 
   /**
    * The Web Animations API's EffectTiming dictionary's fill property specifies a fill mode, which defines how the element to which the animation is applied should look when the animation sequence is not actively running, such as before the time specified by iterationStart or after animation's end time.
@@ -234,7 +243,8 @@ public interface EffectTiming {
    */
   @JsOverlay
   @Nonnull
-  default EffectTiming fill(@Nonnull final String fill) {
+  default EffectTiming fill(
+      @MagicConstant(valuesFromClass = FillMode.class) @Nonnull final String fill) {
     setFill( fill );
     return this;
   }

@@ -1197,7 +1197,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull JsArray<Object> transfer);
 
   /**
@@ -1213,7 +1213,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin, @Nonnull Object[] transfer);
 
   /**
@@ -1228,7 +1228,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull String targetOrigin);
 
   /**
@@ -1243,7 +1243,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message,
+  public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull WindowPostMessageOptions options);
 
   /**
@@ -1258,7 +1258,7 @@ public class Window extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message);
+  public native void postMessage(@DoNotAutobox @Nullable Object message);
 
   /**
    * Opens the Print Dialog to print the current document.
@@ -1890,7 +1890,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull TimerHandler handler, int timeout,
-      @Nullable @DoNotAutobox Object... arguments);
+      @DoNotAutobox @Nullable Object... arguments);
 
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
@@ -1898,7 +1898,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull String handler, int timeout,
-      @Nullable @DoNotAutobox Object... arguments);
+      @DoNotAutobox @Nullable Object... arguments);
 
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
@@ -1906,7 +1906,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">WindowOrWorkerGlobalScope.setInterval - MDN</a>
    */
   public native int setInterval(@Nonnull Function handler, int timeout,
-      @Nullable @DoNotAutobox Object... arguments);
+      @DoNotAutobox @Nullable Object... arguments);
 
   /**
    * The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
@@ -1957,7 +1957,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull TimerHandler handler, int timeout,
-      @Nullable @DoNotAutobox Object... arguments);
+      @DoNotAutobox @Nullable Object... arguments);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
@@ -1965,7 +1965,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull String handler, int timeout,
-      @Nullable @DoNotAutobox Object... arguments);
+      @DoNotAutobox @Nullable Object... arguments);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.
@@ -1973,7 +1973,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">WindowOrWorkerGlobalScope.setTimeout - MDN</a>
    */
   public native int setTimeout(@Nonnull Function handler, int timeout,
-      @Nullable @DoNotAutobox Object... arguments);
+      @DoNotAutobox @Nullable Object... arguments);
 
   /**
    * The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.

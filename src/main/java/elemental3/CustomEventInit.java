@@ -42,13 +42,13 @@ public interface CustomEventInit extends EventInit {
   }
 
   @JsOverlay
-  default void setDetail(@Nullable @DoNotAutobox final Object detail) {
+  default void setDetail(@DoNotAutobox @Nullable final Object detail) {
     setDetail( Js.asAny( detail ) );
   }
 
   @JsOverlay
   @Nonnull
-  default CustomEventInit detail(@Nullable @DoNotAutobox final Object detail) {
+  default CustomEventInit detail(@DoNotAutobox @Nullable final Object detail) {
     setDetail( detail );
     return this;
   }

@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -18,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface TokenBinding {
   @JsOverlay
   @Nonnull
-  static TokenBinding create(@Nonnull final String status) {
+  static TokenBinding create(
+      @MagicConstant(valuesFromClass = TokenBindingStatus.class) @Nonnull final String status) {
     return Js.<TokenBinding>uncheckedCast( JsPropertyMap.of() ).status( status );
   }
 
@@ -40,15 +42,19 @@ public interface TokenBinding {
   @JsProperty(
       name = "status"
   )
+  @MagicConstant(
+      valuesFromClass = TokenBindingStatus.class
+  )
   @Nonnull
   String status();
 
   @JsProperty
-  void setStatus(@Nonnull String status);
+  void setStatus(@MagicConstant(valuesFromClass = TokenBindingStatus.class) @Nonnull String status);
 
   @JsOverlay
   @Nonnull
-  default TokenBinding status(@Nonnull final String status) {
+  default TokenBinding status(
+      @MagicConstant(valuesFromClass = TokenBindingStatus.class) @Nonnull final String status) {
     setStatus( status );
     return this;
   }

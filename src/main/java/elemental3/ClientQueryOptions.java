@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,14 +41,18 @@ public interface ClientQueryOptions {
   @JsProperty(
       name = "type"
   )
+  @MagicConstant(
+      valuesFromClass = ClientType.class
+  )
   String type();
 
   @JsProperty
-  void setType(@Nonnull String type);
+  void setType(@MagicConstant(valuesFromClass = ClientType.class) @Nonnull String type);
 
   @JsOverlay
   @Nonnull
-  default ClientQueryOptions type(@Nonnull final String type) {
+  default ClientQueryOptions type(
+      @MagicConstant(valuesFromClass = ClientType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

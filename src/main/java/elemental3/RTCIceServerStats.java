@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,7 +20,8 @@ public interface RTCIceServerStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCIceServerStats create(@Nonnull final String id, final double timestamp,
-      @Nonnull final String type, @Nonnull final String url) {
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
+      @Nonnull final String url) {
     return Js.<RTCIceServerStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).url( url );
   }
 
@@ -148,7 +150,8 @@ public interface RTCIceServerStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCIceServerStats type(@Nonnull final String type) {
+  default RTCIceServerStats type(
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

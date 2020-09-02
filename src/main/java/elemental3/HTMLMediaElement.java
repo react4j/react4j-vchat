@@ -312,6 +312,9 @@ public class HTMLMediaElement extends HTMLElement {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType">HTMLMediaElement.canPlayType - MDN</a>
    */
+  @MagicConstant(
+      valuesFromClass = CanPlayTypeResult.class
+  )
   @Nonnull
   public native String canPlayType(@Nonnull String type);
 

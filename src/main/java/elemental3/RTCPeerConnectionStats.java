@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -19,7 +20,7 @@ public interface RTCPeerConnectionStats extends RTCStats {
   @JsOverlay
   @Nonnull
   static RTCPeerConnectionStats create(@Nonnull final String id, final double timestamp,
-      @Nonnull final String type) {
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     return Js.<RTCPeerConnectionStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type );
   }
 
@@ -117,7 +118,8 @@ public interface RTCPeerConnectionStats extends RTCStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCPeerConnectionStats type(@Nonnull final String type) {
+  default RTCPeerConnectionStats type(
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

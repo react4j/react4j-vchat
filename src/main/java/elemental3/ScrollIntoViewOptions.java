@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -25,14 +26,19 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
   @JsProperty(
       name = "block"
   )
+  @MagicConstant(
+      valuesFromClass = ScrollLogicalPosition.class
+  )
   String block();
 
   @JsProperty
-  void setBlock(@Nonnull String block);
+  void setBlock(
+      @MagicConstant(valuesFromClass = ScrollLogicalPosition.class) @Nonnull String block);
 
   @JsOverlay
   @Nonnull
-  default ScrollIntoViewOptions block(@Nonnull final String block) {
+  default ScrollIntoViewOptions block(
+      @MagicConstant(valuesFromClass = ScrollLogicalPosition.class) @Nonnull final String block) {
     setBlock( block );
     return this;
   }
@@ -40,14 +46,19 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
   @JsProperty(
       name = "inline"
   )
+  @MagicConstant(
+      valuesFromClass = ScrollLogicalPosition.class
+  )
   String inline();
 
   @JsProperty
-  void setInline(@Nonnull String inline);
+  void setInline(
+      @MagicConstant(valuesFromClass = ScrollLogicalPosition.class) @Nonnull String inline);
 
   @JsOverlay
   @Nonnull
-  default ScrollIntoViewOptions inline(@Nonnull final String inline) {
+  default ScrollIntoViewOptions inline(
+      @MagicConstant(valuesFromClass = ScrollLogicalPosition.class) @Nonnull final String inline) {
     setInline( inline );
     return this;
   }
@@ -55,7 +66,8 @@ public interface ScrollIntoViewOptions extends ScrollOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default ScrollIntoViewOptions behavior(@Nonnull final String behavior) {
+  default ScrollIntoViewOptions behavior(
+      @MagicConstant(valuesFromClass = ScrollBehavior.class) @Nonnull final String behavior) {
     setBehavior( behavior );
     return this;
   }

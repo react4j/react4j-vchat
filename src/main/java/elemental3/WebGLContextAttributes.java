@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -101,14 +102,19 @@ public interface WebGLContextAttributes {
   @JsProperty(
       name = "powerPreference"
   )
+  @MagicConstant(
+      valuesFromClass = WebGLPowerPreference.class
+  )
   String powerPreference();
 
   @JsProperty
-  void setPowerPreference(@Nonnull String powerPreference);
+  void setPowerPreference(
+      @MagicConstant(valuesFromClass = WebGLPowerPreference.class) @Nonnull String powerPreference);
 
   @JsOverlay
   @Nonnull
-  default WebGLContextAttributes powerPreference(@Nonnull final String powerPreference) {
+  default WebGLContextAttributes powerPreference(
+      @MagicConstant(valuesFromClass = WebGLPowerPreference.class) @Nonnull final String powerPreference) {
     setPowerPreference( powerPreference );
     return this;
   }

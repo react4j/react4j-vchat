@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebRTC API's RTCInboundRtpStreamStats dictionary, based upon RTCReceivedRtpStreamStats and RTCStats, contains statistics related to the receiving end of an RTP stream on the local end of the RTCPeerConnection.
@@ -24,8 +25,8 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   @JsOverlay
   @Nonnull
   static RTCInboundRtpStreamStats create(@Nonnull final String id, final double timestamp,
-      @Nonnull final String type, @Nonnull final String kind, final int ssrc,
-      @Nonnull final String receiverId) {
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type,
+      @Nonnull final String kind, final int ssrc, @Nonnull final String receiverId) {
     return Js.<RTCInboundRtpStreamStats>uncheckedCast( JsPropertyMap.of() ).id( id ).timestamp( timestamp ).type( type ).kind( kind ).ssrc( ssrc ).receiverId( receiverId );
   }
 
@@ -1162,7 +1163,8 @@ public interface RTCInboundRtpStreamStats extends RTCReceivedRtpStreamStats {
   @JsOverlay
   @Nonnull
   @Override
-  default RTCInboundRtpStreamStats type(@Nonnull final String type) {
+  default RTCInboundRtpStreamStats type(
+      @MagicConstant(valuesFromClass = RTCStatsType.class) @Nonnull final String type) {
     setType( type );
     return this;
   }

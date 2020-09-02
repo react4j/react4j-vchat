@@ -77,7 +77,7 @@ public class BroadcastChannel extends EventTarget {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage">BroadcastChannel.postMessage - MDN</a>
    */
-  public native void postMessage(@Nullable @DoNotAutobox Object message);
+  public native void postMessage(@DoNotAutobox @Nullable Object message);
 
   @JsOverlay
   public final void addMessageListener(@Nonnull final MessageEventListener callback,

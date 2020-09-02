@@ -89,7 +89,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/count">IDBIndex.count - MDN</a>
    */
   @Nonnull
-  public native IDBRequest count(@Nullable @DoNotAutobox Object query);
+  public native IDBRequest count(@DoNotAutobox @Nullable Object query);
 
   /**
    * A IDBRequest object on which subsequent events related to this operation are fired.
@@ -113,7 +113,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/get">IDBIndex.get - MDN</a>
    */
   @Nonnull
-  public native IDBRequest get(@Nullable @DoNotAutobox Object query);
+  public native IDBRequest get(@DoNotAutobox @Nullable Object query);
 
   /**
    * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
@@ -129,7 +129,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
   @Nonnull
-  public native IDBRequest getAll(@Nullable @DoNotAutobox Object query, int count);
+  public native IDBRequest getAll(@DoNotAutobox @Nullable Object query, int count);
 
   /**
    * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
@@ -145,7 +145,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
   @Nonnull
-  public native IDBRequest getAll(@Nullable @DoNotAutobox Object query);
+  public native IDBRequest getAll(@DoNotAutobox @Nullable Object query);
 
   /**
    * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
@@ -169,7 +169,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAllKeys">IDBIndex.getAllKeys - MDN</a>
    */
   @Nonnull
-  public native IDBRequest getAllKeys(@Nullable @DoNotAutobox Object query, int count);
+  public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query, int count);
 
   /**
    * An IDBRequest object on which subsequent events related to this operation are fired.
@@ -185,7 +185,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAllKeys">IDBIndex.getAllKeys - MDN</a>
    */
   @Nonnull
-  public native IDBRequest getAllKeys(@Nullable @DoNotAutobox Object query);
+  public native IDBRequest getAllKeys(@DoNotAutobox @Nullable Object query);
 
   /**
    * An IDBRequest object on which subsequent events related to this operation are fired.
@@ -209,7 +209,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getKey">IDBIndex.getKey - MDN</a>
    */
   @Nonnull
-  public native IDBRequest getKey(@Nullable @DoNotAutobox Object query);
+  public native IDBRequest getKey(@DoNotAutobox @Nullable Object query);
 
   /**
    * The method sets the position of the cursor to the appropriate record, based on the specified direction.
@@ -226,7 +226,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openCursor">IDBIndex.openCursor - MDN</a>
    */
   @Nonnull
-  public native IDBRequest openCursor(@Nullable @DoNotAutobox Object query,
+  public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query,
       @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
@@ -243,7 +243,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openCursor">IDBIndex.openCursor - MDN</a>
    */
   @Nonnull
-  public native IDBRequest openCursor(@Nullable @DoNotAutobox Object query);
+  public native IDBRequest openCursor(@DoNotAutobox @Nullable Object query);
 
   /**
    * The method sets the position of the cursor to the appropriate record, based on the specified direction.
@@ -268,7 +268,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openKeyCursor">IDBIndex.openKeyCursor - MDN</a>
    */
   @Nonnull
-  public native IDBRequest openKeyCursor(@Nullable @DoNotAutobox Object query,
+  public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query,
       @MagicConstant(valuesFromClass = IDBCursorDirection.class) @Nonnull String direction);
 
   /**
@@ -285,7 +285,7 @@ public class IDBIndex {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openKeyCursor">IDBIndex.openKeyCursor - MDN</a>
    */
   @Nonnull
-  public native IDBRequest openKeyCursor(@Nullable @DoNotAutobox Object query);
+  public native IDBRequest openKeyCursor(@DoNotAutobox @Nullable Object query);
 
   /**
    * The method sets the position of the cursor to the appropriate key, based on the specified direction.

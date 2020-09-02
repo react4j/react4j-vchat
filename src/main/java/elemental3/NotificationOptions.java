@@ -12,6 +12,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -100,13 +101,13 @@ public interface NotificationOptions {
   }
 
   @JsOverlay
-  default void setData(@Nullable @DoNotAutobox final Object data) {
+  default void setData(@DoNotAutobox @Nullable final Object data) {
     setData( Js.asAny( data ) );
   }
 
   @JsOverlay
   @Nonnull
-  default NotificationOptions data(@Nullable @DoNotAutobox final Object data) {
+  default NotificationOptions data(@DoNotAutobox @Nullable final Object data) {
     setData( data );
     return this;
   }
@@ -114,14 +115,18 @@ public interface NotificationOptions {
   @JsProperty(
       name = "dir"
   )
+  @MagicConstant(
+      valuesFromClass = NotificationDirection.class
+  )
   String dir();
 
   @JsProperty
-  void setDir(@Nonnull String dir);
+  void setDir(@MagicConstant(valuesFromClass = NotificationDirection.class) @Nonnull String dir);
 
   @JsOverlay
   @Nonnull
-  default NotificationOptions dir(@Nonnull final String dir) {
+  default NotificationOptions dir(
+      @MagicConstant(valuesFromClass = NotificationDirection.class) @Nonnull final String dir) {
     setDir( dir );
     return this;
   }
