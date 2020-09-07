@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.
@@ -19,9 +20,6 @@ import jsinterop.annotations.JsType;
     name = "HTMLSelectElement"
 )
 public class HTMLSelectElement extends HTMLElement {
-  @Nonnull
-  public String autocomplete;
-
   /**
    * The HTMLSelectElement.disabled is a Boolean that reflects the disabled HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.
    *
@@ -49,6 +47,12 @@ public class HTMLSelectElement extends HTMLElement {
 
   @Nonnull
   public String value;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutocompleteType.class
+  )
+  public String autocomplete;
 
   public HTMLSelectElement() {
   }

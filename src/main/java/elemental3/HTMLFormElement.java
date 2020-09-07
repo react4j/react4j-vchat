@@ -38,9 +38,6 @@ public class HTMLFormElement extends HTMLElement {
   @Nonnull
   public String action;
 
-  @Nonnull
-  public String autocomplete;
-
   /**
    * The HTMLFormElement.encoding property is an alternative name for the enctype element on the DOM HTMLFormElement object.
    *
@@ -69,6 +66,12 @@ public class HTMLFormElement extends HTMLElement {
    */
   @Nonnull
   public String target;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutocompleteType.class
+  )
+  public String autocomplete;
 
   /**
    * The HTMLFormElement.method property represents the HTTP method used to submit the form.

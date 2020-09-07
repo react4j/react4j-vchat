@@ -28,9 +28,6 @@ public class HTMLInputElement extends HTMLElement {
   @Nonnull
   public String alt;
 
-  @Nonnull
-  public String autocomplete;
-
   public boolean checked;
 
   public boolean defaultChecked;
@@ -118,6 +115,12 @@ public class HTMLInputElement extends HTMLElement {
 
   @Nonnull
   public String useMap;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutocompleteType.class
+  )
+  public String autocomplete;
 
   @Nonnull
   @MagicConstant(

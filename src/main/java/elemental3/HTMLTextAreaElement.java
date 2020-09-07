@@ -20,9 +20,6 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "HTMLTextAreaElement"
 )
 public class HTMLTextAreaElement extends HTMLElement {
-  @Nonnull
-  public String autocomplete;
-
   public int cols;
 
   @Nonnull
@@ -61,6 +58,12 @@ public class HTMLTextAreaElement extends HTMLElement {
 
   @Nonnull
   public String wrap;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutocompleteType.class
+  )
+  public String autocomplete;
 
   public HTMLTextAreaElement() {
   }
