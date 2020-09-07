@@ -6,7 +6,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The AudioDestinationNode interface represents the end destination of an audio graph in a given context — usually the speakers of your device. It can also be the node that will "record" the audio data when used with an OfflineAudioContext.
+ * The AudioDestinationNode interface represents the end destination of an audio graph in a given context &mdash; usually the speakers of your device. It can also be the node that will &quot;record&quot; the audio data when used with an OfflineAudioContext.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode">AudioDestinationNode - MDN</a>
  */

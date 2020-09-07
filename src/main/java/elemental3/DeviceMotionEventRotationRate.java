@@ -22,7 +22,7 @@ public class DeviceMotionEventRotationRate {
   }
 
   /**
-   * This property indicates the rate of rotation around the Z axis -- in degrees per second -- in a DeviceMotionEventRotationRate object.
+   * This property indicates the rate of rotation around the Z axis -- in degrees per second -- in a DeviceMotionEventRotationRate object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha">DeviceMotionEventRotationRate.alpha - MDN</a>
    */

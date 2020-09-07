@@ -22,7 +22,7 @@ public class AnimationTimeline {
   }
 
   /**
-   * The currentTime read-only property of the Web Animations API's AnimationTimeline interface returns the timeline's current time in milliseconds, or null if the timeline is inactive.
+   * The currentTime read-only property of the Web Animations API's AnimationTimeline interface returns the timeline's current time in milliseconds, or null if the timeline is inactive.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline/currentTime">AnimationTimeline.currentTime - MDN</a>
    */

@@ -36,7 +36,7 @@ public class AudioContext extends BaseAudioContext {
   }
 
   /**
-   * The baseLatency read-only property of the AudioContext interface returns a double that represents the number of seconds of processing latency incurred by the AudioContext passing an audio buffer from the AudioDestinationNode — i.e. the end of the audio graph — into the host system's audio subsystem ready for playing.
+   * The baseLatency read-only property of the AudioContext interface returns a double that represents the number of seconds of processing latency incurred by the AudioContext passing an audio buffer from the AudioDestinationNode &mdash; i.e. the end of the audio graph &mdash; into the host system's audio subsystem ready for playing.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/baseLatency">AudioContext.baseLatency - MDN</a>
    */
@@ -73,7 +73,7 @@ public class AudioContext extends BaseAudioContext {
       @Nonnull HTMLMediaElement mediaElement);
 
   /**
-   * The MediaStream is created when the node is created and is accessible via the MediaStreamAudioDestinationNode's stream attribute. This stream can be used in a similar way as a MediaStream obtained via navigator.getUserMedia — it can, for example, be sent to a remote peer using the RTCPeerConnection addStream() method.
+   * The MediaStream is created when the node is created and is accessible via the MediaStreamAudioDestinationNode's stream attribute. This stream can be used in a similar way as a MediaStream obtained via navigator.getUserMedia &mdash; it can, for example, be sent to a remote peer using the RTCPeerConnection addStream() method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamDestination">AudioContext.createMediaStreamDestination - MDN</a>
    */
@@ -115,7 +115,7 @@ public class AudioContext extends BaseAudioContext {
   public native Promise<Void> resume();
 
   /**
-   * The suspend() method of the AudioContext Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process — this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.
+   * The suspend() method of the AudioContext Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process &mdash; this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/suspend">AudioContext.suspend - MDN</a>
    */

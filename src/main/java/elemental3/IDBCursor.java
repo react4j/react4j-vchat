@@ -56,7 +56,7 @@ public class IDBCursor {
   public native IDBObjectStoreOrIDBIndexUnion source();
 
   /**
-   * The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward.
+   * The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/advance">IDBCursor.advance - MDN</a>
    */

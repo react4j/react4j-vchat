@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 /**
- * The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property.
+ * The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry">CustomElementRegistry - MDN</a>
  */

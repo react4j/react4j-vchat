@@ -24,7 +24,7 @@ public class SpeechRecognitionEvent extends Event {
   }
 
   /**
-   * The resultIndex read-only property of the SpeechRecognitionEvent interface returns the lowest index value result in the SpeechRecognitionResultList "array" that has actually changed.
+   * The resultIndex read-only property of the SpeechRecognitionEvent interface returns the lowest index value result in the SpeechRecognitionResultList &quot;array&quot; that has actually changed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex">SpeechRecognitionEvent.resultIndex - MDN</a>
    */

@@ -36,7 +36,7 @@ public class ValidityState {
   public native boolean customError();
 
   /**
-   * If the field supports the pattern attribute -- which means the input is of type text, tel, email, url, password,  or search -- and the pattern value is set to a valid regular expression, if the value don't doesn't conform to the constraints set by the pattern value, the patternMismatch property will be true.
+   * If the field supports the pattern attribute -- which means the input is of type text, tel, email, url, password,  or search -- and the pattern value is set to a valid regular expression, if the value don't doesn't conform to the constraints set by the pattern value, the patternMismatch property will be true.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/patternMismatch">ValidityState.patternMismatch - MDN</a>
    */

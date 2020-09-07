@@ -13,7 +13,7 @@ import jsinterop.base.Any;
 import jsinterop.base.Js;
 
 /**
- * The ServiceWorkerContainer interface of the Service Worker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
+ * The ServiceWorkerContainer interface of the Service Worker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer">ServiceWorkerContainer - MDN</a>
  */
@@ -28,7 +28,7 @@ public class ServiceWorkerContainer extends EventTarget {
   public EventHandler oncontrollerchange;
 
   /**
-   * The onmessage property of the ServiceWorkerContainer interface is an event handler fired whenever a message event occurs — when incoming messages are received to the ServiceWorkerContainer object (e.g., via a Client.postMessage() call).
+   * The onmessage property of the ServiceWorkerContainer interface is an event handler fired whenever a message event occurs &mdash; when incoming messages are received to the ServiceWorkerContainer object (e.g., via a Client.postMessage() call).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/onmessage">ServiceWorkerContainer.onmessage - MDN</a>
    */
@@ -42,7 +42,7 @@ public class ServiceWorkerContainer extends EventTarget {
   }
 
   /**
-   * The controller read-only property of the ServiceWorkerContainer interface returns a ServiceWorker object if its state is activated (the same object returned by ServiceWorkerRegistration.active). This property returns null if the request is a force refresh (Shift + refresh) or if there is no active worker.
+   * The controller read-only property of the ServiceWorkerContainer interface returns a ServiceWorker object if its state is activating or activated (the same object returned by ServiceWorkerRegistration.active). This property returns null if the request is a force refresh (Shift + refresh) or if there is no active worker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller">ServiceWorkerContainer.controller - MDN</a>
    */
@@ -59,7 +59,7 @@ public class ServiceWorkerContainer extends EventTarget {
   public native Promise<ServiceWorkerRegistration> ready();
 
   /**
-   * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
+   * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
    */
@@ -67,7 +67,7 @@ public class ServiceWorkerContainer extends EventTarget {
   public native Promise<Any> getRegistration(@Nonnull String clientURL);
 
   /**
-   * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
+   * The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration">ServiceWorkerContainer.getRegistration - MDN</a>
    */

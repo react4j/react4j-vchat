@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The RTCIceCandidate interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.
+ * The RTCIceCandidate interface&mdash;part of the WebRTC API&mdash;represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate - MDN</a>
  */
@@ -174,7 +174,7 @@ public class RTCIceCandidate {
   public native String type();
 
   /**
-   * The read-only usernameFragment property on the RTCIceCandidate interface is a string indicating the username fragment ("ufrag") that uniquely identifies a single ICE interaction session.
+   * The read-only usernameFragment property on the RTCIceCandidate interface is a string indicating the username fragment (&quot;ufrag&quot;) that uniquely identifies a single ICE interaction session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/usernameFragment">RTCIceCandidate.usernameFragment - MDN</a>
    */

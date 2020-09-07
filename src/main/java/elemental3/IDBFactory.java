@@ -55,7 +55,7 @@ public class IDBFactory {
       @DoNotAutobox @Nullable Object second);
 
   /**
-   * The databases method of the IDBFactory interface returns a list represening all the available databases, including their names and versions.
+   * The databases method of the IDBFactory interface returns a list represening all the available databases, including their names and versions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases">IDBFactory.databases - MDN</a>
    */

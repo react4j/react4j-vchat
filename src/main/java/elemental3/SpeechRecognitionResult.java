@@ -22,7 +22,7 @@ public class SpeechRecognitionResult {
   }
 
   /**
-   * The isFinal read-only property of the SpeechRecognitionResult interface is a Boolean that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.
+   * The isFinal read-only property of the SpeechRecognitionResult interface is a Boolean that states whether this result is final (true) or not (false) &mdash; if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/isFinal">SpeechRecognitionResult.isFinal - MDN</a>
    */
@@ -32,7 +32,7 @@ public class SpeechRecognitionResult {
   public native boolean isFinal();
 
   /**
-   * The length read-only property of the SpeechRecognitionResult interface returns the length of the "array" — the number of SpeechRecognitionAlternative objects contained in the result (also referred to as "n-best alternatives".)
+   * The length read-only property of the SpeechRecognitionResult interface returns the length of the &quot;array&quot; &mdash; the number of SpeechRecognitionAlternative objects contained in the result (also referred to as &quot;n-best alternatives&quot;.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/length">SpeechRecognitionResult.length - MDN</a>
    */

@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The ImageBitmapRenderingContext interface is a canvas rendering context that provides the functionality to replace the canvas's contents with the given ImageBitmap. Its context id (the first argument to HTMLCanvasElement.getContext() or OffscreenCanvas.getContext()) is "bitmaprenderer".
+ * The ImageBitmapRenderingContext interface is a canvas rendering context that provides the functionality to replace the canvas's contents with the given ImageBitmap. Its context id (the first argument to HTMLCanvasElement.getContext() or OffscreenCanvas.getContext()) is &quot;bitmaprenderer&quot;.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext">ImageBitmapRenderingContext - MDN</a>
  */

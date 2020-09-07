@@ -34,6 +34,11 @@ public class RTCRtpSender {
   @Nullable
   public native MediaStreamTrack track();
 
+  /**
+   * The read-only transport property of an RTCRtpSender object provides the RTCDtlsTransport object used to interact with the underlying transport over which the sender is exchanging Real-time Transport Control Protocol (RTCP) packets.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/transport">RTCRtpSender.transport - MDN</a>
+   */
   @JsProperty(
       name = "transport"
   )
@@ -51,6 +56,11 @@ public class RTCRtpSender {
   @Nullable
   public native RTCDTMFSender dtmf();
 
+  /**
+   * The static function RTCRtpSender.getCapabilities() returns an RTCRtpCapabilities object describing the codecs and capabilities supported by the RTCRtpSender.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getCapabilities">RTCRtpSender.getCapabilities - MDN</a>
+   */
   @Nullable
   public static native RTCRtpCapabilities getCapabilities(@Nonnull String kind);
 

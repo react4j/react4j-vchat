@@ -35,7 +35,7 @@ public class PushManager {
   public native JsArray<String> supportedContentEncodings();
 
   /**
-   * The PushManager.getSubscription() method of the PushManager interface retrieves an existing push subscription.
+   * The PushManager.getSubscription() method of the PushManager interface retrieves an existing push subscription.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/getSubscription">PushManager.getSubscription - MDN</a>
    */
@@ -43,7 +43,7 @@ public class PushManager {
   public native Promise<PushSubscription> getSubscription();
 
   /**
-   * The permissionState() method of the PushManager interface returns a Promise that resolves to a DOMString indicating the permission state of the push manager. Possible values are  'prompt', 'denied', or 'granted'.
+   * The permissionState() method of the PushManager interface returns a Promise that resolves to a DOMString indicating the permission state of the push manager. Possible values are  'prompt', 'denied', or 'granted'.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/permissionState">PushManager.permissionState - MDN</a>
    */
@@ -51,7 +51,7 @@ public class PushManager {
   public native Promise<String> permissionState(@Nonnull PushSubscriptionOptionsInit options);
 
   /**
-   * The permissionState() method of the PushManager interface returns a Promise that resolves to a DOMString indicating the permission state of the push manager. Possible values are  'prompt', 'denied', or 'granted'.
+   * The permissionState() method of the PushManager interface returns a Promise that resolves to a DOMString indicating the permission state of the push manager. Possible values are  'prompt', 'denied', or 'granted'.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/permissionState">PushManager.permissionState - MDN</a>
    */

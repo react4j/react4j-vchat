@@ -7,7 +7,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The FormDataEvent interface represents a formdata event — such an event is fired on an HTMLFormElement object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.
+ * The FormDataEvent interface represents a formdata event &mdash; such an event is fired on an HTMLFormElement object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent">FormDataEvent - MDN</a>
  */

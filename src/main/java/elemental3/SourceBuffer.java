@@ -17,9 +17,10 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
- * The SourceBuffer interface represents a chunk of media to be passed into an HTMLMediaElement and played, via a MediaSource object. This can be made up of one or several media segments.
+ * The SourceBuffer interface represents a chunk of media to be passed into an HTMLMediaElement and played, via a MediaSource object. This can be made up of one or several media segments.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer">SourceBuffer - MDN</a>
  */
@@ -45,11 +46,14 @@ public class SourceBuffer extends EventTarget {
   public double appendWindowStart;
 
   /**
-   * The mode property of the SourceBuffer interface controls whether media segments can be appended to the SourceBuffer in any order, or in a strict sequence.
+   * The mode property of the SourceBuffer interface controls whether media segments can be appended to the SourceBuffer in any order, or in a strict sequence.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode">SourceBuffer.mode - MDN</a>
    */
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = AppendMode.class
+  )
   public String mode;
 
   @Nullable
@@ -89,7 +93,7 @@ public class SourceBuffer extends EventTarget {
   public native AudioTrackList audioTracks();
 
   /**
-   * The buffered read-only property of the SourceBuffer interface returns the time ranges that are currently buffered in the SourceBuffer as a normalized TimeRanges object.
+   * The buffered read-only property of the SourceBuffer interface returns the time ranges that are currently buffered in the SourceBuffer as a normalized TimeRanges object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/buffered">SourceBuffer.buffered - MDN</a>
    */
@@ -111,7 +115,7 @@ public class SourceBuffer extends EventTarget {
   public native TextTrackList textTracks();
 
   /**
-   * The updating read-only property of the SourceBuffer interface indicates whether the SourceBuffer is currently being updated — i.e. whether an SourceBuffer.appendBuffer(),  SourceBuffer.appendStream(), or SourceBuffer.remove() operation is currently in progress.
+   * The updating read-only property of the SourceBuffer interface indicates whether the SourceBuffer is currently being updated &mdash; i.e. whether an SourceBuffer.appendBuffer(),  SourceBuffer.appendStream(), or SourceBuffer.remove() operation is currently in progress.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/updating">SourceBuffer.updating - MDN</a>
    */

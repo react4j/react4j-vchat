@@ -32,7 +32,7 @@ public class Worker extends EventTarget {
   public MessageEventHandler onmessage;
 
   /**
-   * The onmessageerror event handler of the Worker interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the Worker instance — that is, when it receives a message that cannot be deserialized.
+   * The onmessageerror event handler of the Worker interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the Worker instance &mdash; that is, when it receives a message that cannot be deserialized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessageerror">Worker.onmessageerror - MDN</a>
    */

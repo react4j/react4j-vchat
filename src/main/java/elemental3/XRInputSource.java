@@ -35,7 +35,7 @@ public class XRInputSource {
   public native XRSpace gripSpace();
 
   /**
-   * The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all.
+   * The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/handedness">XRInputSource.handedness - MDN</a>
    */
@@ -57,7 +57,7 @@ public class XRInputSource {
   public native JsArray<String> profiles();
 
   /**
-   * The read-only XRInputSource property targetRayMode indicates the method by which the target ray for the input source should be generated and how it should be presented to the user.
+   * The read-only XRInputSource property targetRayMode indicates the method by which the target ray for the input source should be generated and how it should be presented to the user.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRayMode">XRInputSource.targetRayMode - MDN</a>
    */

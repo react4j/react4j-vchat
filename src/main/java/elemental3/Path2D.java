@@ -42,14 +42,14 @@ public class Path2D {
   }
 
   /**
-   * The Path2D.addPath() method of the Canvas 2D API adds one Path2D object to another Path2D object.
+   * The Path2D.addPath() method of the Canvas 2D API adds one Path2D object to another Path2D object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/addPath">Path2D.addPath - MDN</a>
    */
   public native void addPath(@Nonnull Path2D path, @Nonnull DOMMatrix2DInit transform);
 
   /**
-   * The Path2D.addPath() method of the Canvas 2D API adds one Path2D object to another Path2D object.
+   * The Path2D.addPath() method of the Canvas 2D API adds one Path2D object to another Path2D object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D/addPath">Path2D.addPath - MDN</a>
    */

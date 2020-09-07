@@ -10,7 +10,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The EcdhKeyDeriveParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(),  when using the ECDH algorithm.
+ * The EcdhKeyDeriveParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(),  when using the ECDH algorithm.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams - MDN</a>
  */

@@ -48,7 +48,7 @@ public class IDBDatabase extends EventTarget {
   public EventHandler onerror;
 
   /**
-   * This example shows an IDBOpenDBRequest.onupgradeneeded block that creates a new object store; it also includes onerror and onabort functions to handle non-success cases, and an onversionchange function to notify when a database structure change has occurred.
+   * This example shows an IDBOpenDBRequest.onupgradeneeded block that creates a new object store; it also includes onerror and onabort functions to handle non-success cases, and an onversionchange function to notify when a database structure change has occurred.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onversionchange">IDBDatabase.onversionchange - MDN</a>
    */

@@ -29,7 +29,7 @@ public class HTMLImageElement extends HTMLElement {
   public String alt;
 
   /**
-   * The HTMLImageElement interface's crossOrigin attribute is a string which specifies the Cross-Origin Resource Sharing (CORS) setting to use when retrieving the image.
+   * The HTMLImageElement interface's crossOrigin attribute is a string which specifies the Cross-Origin Resource Sharing (CORS) setting to use when retrieving the image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin">HTMLImageElement.crossOrigin - MDN</a>
    */
@@ -52,14 +52,14 @@ public class HTMLImageElement extends HTMLElement {
   public int height;
 
   /**
-   * The HTMLImageElement proeprty isMap is a Boolean value which indicates that the image is to be used by a server-side image map. This may only be used on images located within an a element.
+   * The HTMLImageElement proeprty isMap is a Boolean value which indicates that the image is to be used by a server-side image map. This may only be used on images located within an a element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/isMap">HTMLImageElement.isMap - MDN</a>
    */
   public boolean isMap;
 
   /**
-   * The HTMLImageElement property loading is a string whose value provides a hint to the user agent that tells the browser how to handle loading images which are currently outside the window's visual viewport.
+   * The HTMLImageElement property loading is a string whose value provides a hint to the user agent that tells the browser how to handle loading images which are currently outside the window's visual viewport.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">HTMLImageElement.loading - MDN</a>
    */
@@ -75,7 +75,7 @@ public class HTMLImageElement extends HTMLElement {
   public String referrerPolicy;
 
   /**
-   * The HTMLImageElement property sizes allows you to specify the layout width of the image for each of a list of media conditions. This provides the ability to automatically select among different images—even images of different orientations or aspect ratios—as the document state changes to match different media conditions.
+   * The HTMLImageElement property sizes allows you to specify the layout width of the image for each of a list of media conditions. This provides the ability to automatically select among different images&mdash;even images of different orientations or aspect ratios&mdash;as the document state changes to match different media conditions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes">HTMLImageElement.sizes - MDN</a>
    */
@@ -99,7 +99,7 @@ public class HTMLImageElement extends HTMLElement {
   public String srcset;
 
   /**
-   * The useMap property on the HTMLImageElement interface reflects the value of the HTML usemap attribute, which is a string providing the name of the client-side image map to apply to the image.
+   * The useMap property on the HTMLImageElement interface reflects the value of the HTML usemap attribute, which is a string providing the name of the client-side image map to apply to the image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/useMap">HTMLImageElement.useMap - MDN</a>
    */
@@ -107,7 +107,7 @@ public class HTMLImageElement extends HTMLElement {
   public String useMap;
 
   /**
-   * The width property of the HTMLImageElement interface indicates the width at which the image is drawn, in CSS pixels if the image is being drawn or rendered to any visual medium such as the screen or a printer; otherwise, it's the natural, pixel density corrected width of the image.
+   * The width property of the HTMLImageElement interface indicates the width at which an image is drawn in CSS pixels if it's being drawn or rendered to any visual medium such as a screen or printer. Otherwise, it's the natural, pixel density-corrected width of the image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/width">HTMLImageElement.width - MDN</a>
    */
@@ -136,7 +136,7 @@ public class HTMLImageElement extends HTMLElement {
   }
 
   /**
-   * The read-only HTMLImageElement interface's complete attribute is a Boolean value which indicates whether or not the image has completely loaded.
+   * The read-only HTMLImageElement interface's complete attribute is a Boolean value which indicates whether or not the image has completely loaded.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/complete">HTMLImageElement.complete - MDN</a>
    */
@@ -177,7 +177,7 @@ public class HTMLImageElement extends HTMLElement {
   public native int naturalWidth();
 
   /**
-   * The read-only HTMLImageElement property x indicates the x-coordinate of the  img element's left border edge relative to the root element's origin.
+   * The read-only HTMLImageElement property x indicates the x-coordinate of the  img element's left border edge relative to the root element's origin.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/x">HTMLImageElement.x - MDN</a>
    */

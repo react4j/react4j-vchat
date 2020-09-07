@@ -123,7 +123,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   }
 
   /**
-   * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes—that is, bytes which aren't overhead such as headers or padding—that hve been sent so far on the connection described by the candidate pair.
+   * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been sent so far on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent">RTCIceCandidatePairStats.bytesSent - MDN</a>
    */
@@ -133,7 +133,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   int bytesSent();
 
   /**
-   * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes—that is, bytes which aren't overhead such as headers or padding—that hve been sent so far on the connection described by the candidate pair.
+   * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been sent so far on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent">RTCIceCandidatePairStats.bytesSent - MDN</a>
    */
@@ -141,7 +141,7 @@ public interface RTCIceCandidatePairStats extends RTCStats {
   void setBytesSent(int bytesSent);
 
   /**
-   * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes—that is, bytes which aren't overhead such as headers or padding—that hve been sent so far on the connection described by the candidate pair.
+   * The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been sent so far on the connection described by the candidate pair.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent">RTCIceCandidatePairStats.bytesSent - MDN</a>
    */

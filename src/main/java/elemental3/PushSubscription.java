@@ -26,7 +26,7 @@ public class PushSubscription {
   }
 
   /**
-   * The endpoint read-only property of the PushSubscription interface returns a USVString containing the endpoint associated with the push subscription.
+   * The endpoint read-only property of the PushSubscription interface returns a USVString containing the endpoint associated with the push subscription.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/endpoint">PushSubscription.endpoint - MDN</a>
    */

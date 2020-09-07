@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR sccene.
+ * A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR sccene.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame">XRFrame - MDN</a>
  */
@@ -23,7 +23,7 @@ public class XRFrame {
   }
 
   /**
-   * An XRFrame object's read-only session property returns the XRSession object that generated the frame.
+   * An XRFrame object's read-only session property returns the XRSession object that generated the frame.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/session">XRFrame.session - MDN</a>
    */
@@ -34,7 +34,7 @@ public class XRFrame {
   public native XRSession session();
 
   /**
-   * The XRFrame method getPose() returns the relative position and orientation—the pose—of one XRSpace to that of another space.
+   * The XRFrame method getPose() returns the relative position and orientation&mdash;the pose&mdash;of one XRSpace to that of another space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose">XRFrame.getPose - MDN</a>
    */
@@ -42,7 +42,7 @@ public class XRFrame {
   public native XRPose getPose(@Nonnull XRSpace space, @Nonnull XRSpace baseSpace);
 
   /**
-   * The getViewerPose() method, a member of the XRFrame interface, returns a XRViewerPose object which describes the viewer's pose (position and orientation) relative to the specified reference space.
+   * The getViewerPose() method, a member of the XRFrame interface, returns a XRViewerPose object which describes the viewer's pose (position and orientation) relative to the specified reference space.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose">XRFrame.getViewerPose - MDN</a>
    */

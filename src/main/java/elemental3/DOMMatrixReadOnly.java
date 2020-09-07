@@ -10,7 +10,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The DOMMatrixReadOnly interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The DOMMatrix interrface—which is based upon DOMMatrixReadOnly—adds mutability, allowing you to alter the matrix after creating it.
+ * The DOMMatrixReadOnly interface represents a read-only 4&times;4 matrix, suitable for 2D and 3D operations. The DOMMatrix interrface&mdash;which is based upon DOMMatrixReadOnly&mdash;adds mutability, allowing you to alter the matrix after creating it.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly">DOMMatrixReadOnly - MDN</a>
  */

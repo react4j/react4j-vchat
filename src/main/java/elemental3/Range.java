@@ -40,7 +40,7 @@ public class Range extends AbstractRange {
   }
 
   /**
-   * The Range.commonAncestorContainer read-only property returns the deepest — or furthest down the document tree — Node that contains both boundary points of the Range. This means that if Range.startContainer and Range.endContainer both refer to the same node, this node is the common ancestor container.
+   * The Range.commonAncestorContainer read-only property returns the deepest &mdash; or furthest down the document tree &mdash; Node that contains both boundary points of the Range. This means that if Range.startContainer and Range.endContainer both refer to the same node, this node is the common ancestor container.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/commonAncestorContainer">Range.commonAncestorContainer - MDN</a>
    */
@@ -102,7 +102,7 @@ public class Range extends AbstractRange {
   public native void deleteContents();
 
   /**
-   * The Range.detach() method does nothing. It used to disable the Range object and enable the browser to release associated resources. The method has been kept for compatibility.
+   * The Range.detach() method does nothing. It used to disable the Range object and enable the browser to release associated resources. The method has been kept for compatibility.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Range/detach">Range.detach - MDN</a>
    */

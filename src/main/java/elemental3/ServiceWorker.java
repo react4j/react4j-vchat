@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 /**
- * The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
+ * The ServiceWorker interface of the Service Worker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker">ServiceWorker - MDN</a>
  */

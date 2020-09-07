@@ -74,7 +74,7 @@ public class HTMLTableElement extends HTMLElement {
   }
 
   /**
-   * The read-only HTMLTableElement property rows returns a live HTMLCollection of all the rows in the table, including the rows contained within any thead, tfoot, and tbody elements.
+   * The read-only HTMLTableElement property rows returns a live HTMLCollection of all the rows in the table, including the rows contained within any thead, tfoot, and tbody elements.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rows">HTMLTableElement.rows - MDN</a>
    */

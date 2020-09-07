@@ -116,7 +116,7 @@ public class Request {
   public native Headers headers();
 
   /**
-   * The integrity read-only property of the Request interface contains the subresource integrity value of the request.
+   * The integrity read-only property of the Request interface contains the subresource integrity value of the request.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/integrity">Request.integrity - MDN</a>
    */
@@ -278,7 +278,7 @@ public class Request {
   public native Promise<Any> json();
 
   /**
-   * The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8.
+   * The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/text">Body.text - MDN</a>
    */

@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
 )
 public class CSSStyleRule extends CSSRule {
   /**
-   * The CSSRule.selectorText property gets the textual representation of the selector for the rule set. This is readonly in some browsers; to set stylesheet rules dynamically cross-browser, see Using dynamic styling information.
+   * The CSSRule.selectorText property gets the textual representation of the selector for the rule set. This is readonly in some browsers; to set stylesheet rules dynamically cross-browser, see Using dynamic styling information.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/selectorText">CSSStyleRule.selectorText - MDN</a>
    */

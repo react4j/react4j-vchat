@@ -21,7 +21,7 @@ import jsinterop.base.Js;
 )
 public class HTMLSlotElement extends HTMLElement {
   /**
-   * The name property of the HTMLSlotElement interface returns or sets the slot name. A slot is a placeholder inside a web component that users can fill with their own markup.
+   * The name property of the HTMLSlotElement interface returns or sets the slot name. A slot is a placeholder inside a web component that users can fill with their own markup.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/name">HTMLSlotElement.name - MDN</a>
    */

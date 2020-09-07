@@ -59,7 +59,7 @@ public class URL {
   public String pathname;
 
   /**
-   * The port property of the URL interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.
+   * The port property of the URL interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/port">URL.port - MDN</a>
    */
@@ -116,7 +116,7 @@ public class URL {
   public native String origin();
 
   /**
-   * The searchParams readonly property of the URL interface returns a URLSearchParams object allowing access to the GET decoded query arguments contained in the URL.
+   * The searchParams readonly property of the URL interface returns a URLSearchParams object allowing access to the GET decoded query arguments contained in the URL.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams">URL.searchParams - MDN</a>
    */
@@ -127,7 +127,7 @@ public class URL {
   public native URLSearchParams searchParams();
 
   /**
-   * The toJSON() method of the URL interface returns a USVString containing a serialized version of the URL, although in practice it seems to have the same effect as URL.toString().
+   * The toJSON() method of the URL interface returns a USVString containing a serialized version of the URL, although in practice it seems to have the same effect as URL.toString().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/toJSON">URL.toJSON - MDN</a>
    */
@@ -142,7 +142,7 @@ public class URL {
   public static native void revokeObjectURL(@Nonnull String url);
 
   /**
-   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
+   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
    */
@@ -150,7 +150,7 @@ public class URL {
   public static native String createObjectURL(@Nonnull Blob blob);
 
   /**
-   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
+   * The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL - MDN</a>
    */

@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The XPathNSResolver interface permits prefix strings in an XPath expression to be properly bound to namespace URI strings.
+ * The XPathNSResolver interface permits prefix strings in an XPath expression to be properly bound to namespace URI strings.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathNSResolver">XPathNSResolver - MDN</a>
  */

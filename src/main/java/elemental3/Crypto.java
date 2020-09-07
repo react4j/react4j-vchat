@@ -32,7 +32,7 @@ public class Crypto {
   }
 
   /**
-   * The Crypto.subtle read-only property returns a SubtleCrypto which can then be used to perform low-level cryptographic operations.
+   * The Crypto.subtle read-only property returns a SubtleCrypto which can then be used to perform low-level cryptographic operations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle">Crypto.subtle - MDN</a>
    */

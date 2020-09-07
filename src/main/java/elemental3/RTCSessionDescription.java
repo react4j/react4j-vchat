@@ -7,7 +7,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The RTCSessionDescription interface describes one end of a connection—or potential connection—and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session.
+ * The RTCSessionDescription interface describes one end of a connection&mdash;or potential connection&mdash;and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription">RTCSessionDescription - MDN</a>
  */

@@ -53,7 +53,7 @@ public class XMLHttpRequestEventTarget extends EventTarget {
   public EventHandler onloadstart;
 
   /**
-   * The XMLHttpRequestEventTarget.onprogress is the function called periodically with information when an XMLHttpRequest before success completely.
+   * The XMLHttpRequestEventTarget.onprogress is the function called periodically with information when an XMLHttpRequest before success completely.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onprogress">XMLHttpRequestEventTarget.onprogress - MDN</a>
    */

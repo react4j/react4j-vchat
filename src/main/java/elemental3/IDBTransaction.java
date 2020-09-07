@@ -22,7 +22,7 @@ import jsinterop.base.Js;
 )
 public class IDBTransaction extends EventTarget {
   /**
-   * In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. Note the transaction.onabort = function(event) { }; block, reporting when the transaction has been aborted. For a full working example, see our To-do Notifications app (view example live.)
+   * In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. Note the transaction.onabort = function(event) { }; block, reporting when the transaction has been aborted. For a full working example, see our To-do Notifications app (view example live.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/onabort">IDBTransaction.onabort - MDN</a>
    */
@@ -30,7 +30,7 @@ public class IDBTransaction extends EventTarget {
   public EventHandler onabort;
 
   /**
-   * The oncomplete event handler of the IDBTransaction interface handles the complete event, fired when the transaction successfully completes.
+   * The oncomplete event handler of the IDBTransaction interface handles the complete event, fired when the transaction successfully completes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/oncomplete">IDBTransaction.oncomplete - MDN</a>
    */
@@ -66,7 +66,7 @@ public class IDBTransaction extends EventTarget {
   public native String durability();
 
   /**
-   * A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a DOMException because DOMError has been removed from the DOM standard. The exact error is one of serveral possibilities. It can be a reference to the same error as the request object that raised it, or a transaction failure (for example QuotaExceededError or UnknownError).
+   * A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a DOMException because DOMError has been removed from the DOM standard. The exact error is one of serveral possibilities. It can be a reference to the same error as the request object that raised it, or a transaction failure (for example QuotaExceededError or UnknownError).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error">IDBTransaction.error - MDN</a>
    */
@@ -88,7 +88,7 @@ public class IDBTransaction extends EventTarget {
   public native String mode();
 
   /**
-   * The objectStoreNames read-only property of the IDBTransaction interface returns a DOMStringList of names of IDBObjectStore objects.
+   * The objectStoreNames read-only property of the IDBTransaction interface returns a DOMStringList of names of IDBObjectStore objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/objectStoreNames">IDBTransaction.objectStoreNames - MDN</a>
    */
@@ -106,7 +106,7 @@ public class IDBTransaction extends EventTarget {
   public native void abort();
 
   /**
-   * The commit() method of the IDBTransaction interface commits the transaction if it is called on an active transaction.
+   * The commit() method of the IDBTransaction interface commits the transaction if it is called on an active transaction.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/commit">IDBTransaction.commit - MDN</a>
    */

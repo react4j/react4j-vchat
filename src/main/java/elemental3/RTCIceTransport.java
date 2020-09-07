@@ -61,7 +61,7 @@ public class RTCIceTransport extends EventTarget {
   public native String component();
 
   /**
-   * The read-only RTCIceTransport property gatheringState returns a DOMString from the enumerated type RTCIceGathererState that indicates what gathering state the ICE agent is currently in: "new", "gathering", or "complete".
+   * The read-only RTCIceTransport property gatheringState returns a DOMString from the enumerated type RTCIceGathererState that indicates what gathering state the ICE agent is currently in: &quot;new&quot;, &quot;gathering&quot;, or &quot;complete&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringState">RTCIceTransport.gatheringState - MDN</a>
    */

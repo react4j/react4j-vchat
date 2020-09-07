@@ -51,7 +51,7 @@ public class Location {
   public String pathname;
 
   /**
-   * The port property of the Location interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.
+   * The port property of the Location interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/port">Location.port - MDN</a>
    */
@@ -108,7 +108,7 @@ public class Location {
   public native String origin();
 
   /**
-   * The Location.assign() method causes the window to load and display the document at the URL specified. After the navigation occurs, the user can navigate back to the page that called Location.assign() by pressing the "back" button.
+   * The Location.assign() method causes the window to load and display the document at the URL specified. After the navigation occurs, the user can navigate back to the page that called Location.assign() by pressing the &quot;back&quot; button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/assign">Location.assign - MDN</a>
    */

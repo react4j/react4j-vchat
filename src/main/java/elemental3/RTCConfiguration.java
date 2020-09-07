@@ -29,6 +29,11 @@ public interface RTCConfiguration {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
+  /**
+   * The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy">RTCConfiguration.bundlePolicy - MDN</a>
+   */
   @JsProperty(
       name = "bundlePolicy"
   )
@@ -37,10 +42,20 @@ public interface RTCConfiguration {
   )
   String bundlePolicy();
 
+  /**
+   * The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy">RTCConfiguration.bundlePolicy - MDN</a>
+   */
   @JsProperty
   void setBundlePolicy(
       @MagicConstant(valuesFromClass = RTCBundlePolicy.class) @Nonnull String bundlePolicy);
 
+  /**
+   * The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy">RTCConfiguration.bundlePolicy - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCConfiguration bundlePolicy(
@@ -49,14 +64,29 @@ public interface RTCConfiguration {
     return this;
   }
 
+  /**
+   * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
+   */
   @JsProperty(
       name = "certificates"
   )
   JsArray<RTCCertificate> certificates();
 
+  /**
+   * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
+   */
   @JsProperty
   void setCertificates(@Nonnull JsArray<RTCCertificate> certificates);
 
+  /**
+   * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCConfiguration certificates(@Nonnull final JsArray<RTCCertificate> certificates) {
@@ -64,11 +94,21 @@ public interface RTCConfiguration {
     return this;
   }
 
+  /**
+   * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
+   */
   @JsOverlay
   default void setCertificates(@Nonnull final RTCCertificate... certificates) {
     setCertificates( JsArray.asJsArray( certificates ) );
   }
 
+  /**
+   * The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates">RTCConfiguration.certificates - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCConfiguration certificates(@Nonnull final RTCCertificate... certificates) {
@@ -91,14 +131,29 @@ public interface RTCConfiguration {
     return this;
   }
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
+   */
   @JsProperty(
       name = "iceServers"
   )
   JsArray<RTCIceServer> iceServers();
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
+   */
   @JsProperty
   void setIceServers(@Nonnull JsArray<RTCIceServer> iceServers);
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCConfiguration iceServers(@Nonnull final JsArray<RTCIceServer> iceServers) {
@@ -106,11 +161,21 @@ public interface RTCConfiguration {
     return this;
   }
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
+   */
   @JsOverlay
   default void setIceServers(@Nonnull final RTCIceServer... iceServers) {
     setIceServers( JsArray.asJsArray( iceServers ) );
   }
 
+  /**
+   *
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceServers">RTCConfiguration.iceServers - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCConfiguration iceServers(@Nonnull final RTCIceServer... iceServers) {
@@ -118,6 +183,11 @@ public interface RTCConfiguration {
     return this;
   }
 
+  /**
+   * The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy">RTCConfiguration.iceTransportPolicy - MDN</a>
+   */
   @JsProperty(
       name = "iceTransportPolicy"
   )
@@ -126,10 +196,20 @@ public interface RTCConfiguration {
   )
   String iceTransportPolicy();
 
+  /**
+   * The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy">RTCConfiguration.iceTransportPolicy - MDN</a>
+   */
   @JsProperty
   void setIceTransportPolicy(
       @MagicConstant(valuesFromClass = RTCIceTransportPolicy.class) @Nonnull String iceTransportPolicy);
 
+  /**
+   * The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy">RTCConfiguration.iceTransportPolicy - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   default RTCConfiguration iceTransportPolicy(

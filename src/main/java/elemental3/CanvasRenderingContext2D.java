@@ -24,6 +24,9 @@ public class CanvasRenderingContext2D {
   public boolean imageSmoothingEnabled;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ImageSmoothingQuality.class
+  )
   public String imageSmoothingQuality;
 
   public double globalAlpha;
@@ -32,11 +35,17 @@ public class CanvasRenderingContext2D {
   public String globalCompositeOperation;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasLineCap.class
+  )
   public String lineCap;
 
   public double lineDashOffset;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasLineJoin.class
+  )
   public String lineJoin;
 
   public double lineWidth;
@@ -44,15 +53,24 @@ public class CanvasRenderingContext2D {
   public double miterLimit;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasDirection.class
+  )
   public String direction;
 
   @Nonnull
   public String font;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasTextAlign.class
+  )
   public String textAlign;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasTextBaseline.class
+  )
   public String textBaseline;
 
   @Nonnull

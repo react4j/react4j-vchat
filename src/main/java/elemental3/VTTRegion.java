@@ -4,9 +4,10 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
- * The VTTRegion interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a VTTCue onto.
+ * The VTTRegion interface&mdash;part of the API for handling WebVTT (text tracks on media presentations)&mdash;describes a portion of the video to render a VTTCue onto.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VTTRegion">VTTRegion - MDN</a>
  */
@@ -27,6 +28,9 @@ public class VTTRegion {
   public double regionAnchorY;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ScrollSetting.class
+  )
   public String scroll;
 
   public double viewportAnchorX;

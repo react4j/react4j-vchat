@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
 )
 public class HTMLHtmlElement extends HTMLElement {
   /**
-   * Returns version information about the document type definition (DTD) of a document. While this property is recognized by Mozilla, the return value for this property is always an empty string.
+   * Returns version information about the document type definition (DTD) of a document. While this property is recognized by Mozilla, the return value for this property is always an empty string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHtmlElement/version">HTMLHtmlElement.version - MDN</a>
    */

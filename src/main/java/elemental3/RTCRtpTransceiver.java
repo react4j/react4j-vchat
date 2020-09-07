@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebRTC interface RTCRtpTransceiver describes a permanent pairing of an RTCRtpSender and an RTCRtpReceiver, along with some shared state.
@@ -26,6 +27,9 @@ public class RTCRtpTransceiver {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/direction">RTCRtpTransceiver.direction - MDN</a>
    */
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = RTCRtpTransceiverDirection.class
+  )
   public String direction;
 
   RTCRtpTransceiver() {
@@ -54,7 +58,7 @@ public class RTCRtpTransceiver {
   public native String mid();
 
   /**
-   * The read-only  receiver property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpReceiver responsible for receiving and decoding incoming media data for the transceiver's stream.
+   * The read-only  receiver property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpReceiver responsible for receiving and decoding incoming media data for the transceiver's stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/receiver">RTCRtpTransceiver.receiver - MDN</a>
    */
@@ -65,7 +69,7 @@ public class RTCRtpTransceiver {
   public native RTCRtpReceiver receiver();
 
   /**
-   * The read-only  sender property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpSender responsible for encoding and sending outgoing media data for the transceiver's stream.
+   * The read-only  sender property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpSender responsible for encoding and sending outgoing media data for the transceiver's stream.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/sender">RTCRtpTransceiver.sender - MDN</a>
    */

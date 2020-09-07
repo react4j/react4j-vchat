@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
 /**
- * The console object provides access to the browser's debugging console (e.g. the Web Console in Firefox). The specifics of how it works varies from browser to browser, but there is a de facto set of features that are typically provided.
+ * The console object provides access to the browser's debugging console (e.g. the Web Console in Firefox). The specifics of how it works varies from browser to browser, but there is a de facto set of features that are typically provided.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console - MDN</a>
  */
@@ -76,14 +76,14 @@ public final class Console {
   public native void countReset();
 
   /**
-   * The console method debug() outputs a message to the web console at the "debug" log level. The message is only displayed to the user if the console is configured to display debug output.
+   * The console method debug() outputs a message to the web console at the &quot;debug&quot; log level. The message is only displayed to the user if the console is configured to display debug output.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/debug">console.debug - MDN</a>
    */
   public native void debug(@Nullable Any... data);
 
   /**
-   * The console method debug() outputs a message to the web console at the "debug" log level. The message is only displayed to the user if the console is configured to display debug output.
+   * The console method debug() outputs a message to the web console at the &quot;debug&quot; log level. The message is only displayed to the user if the console is configured to display debug output.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/debug">console.debug - MDN</a>
    */
@@ -125,14 +125,14 @@ public final class Console {
   public native void dir();
 
   /**
-   * Displays an interactive tree of the descendant elements of the specified XML/HTML element. If it is not possible to display as an element the JavaScript Object view is shown instead. The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes.
+   * Displays an interactive tree of the descendant elements of the specified XML/HTML element. If it is not possible to display as an element the JavaScript Object view is shown instead. The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dirxml">console.dirxml - MDN</a>
    */
   public native void dirxml(@Nullable Any... data);
 
   /**
-   * Displays an interactive tree of the descendant elements of the specified XML/HTML element. If it is not possible to display as an element the JavaScript Object view is shown instead. The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes.
+   * Displays an interactive tree of the descendant elements of the specified XML/HTML element. If it is not possible to display as an element the JavaScript Object view is shown instead. The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/dirxml">console.dirxml - MDN</a>
    */
@@ -188,14 +188,14 @@ public final class Console {
   public native void groupEnd();
 
   /**
-   * The console.info() method outputs an informational message to the Web Console. In Firefox, a small "i" icon is displayed next to these items in the Web Console's log.
+   * The console.info() method outputs an informational message to the Web Console. In Firefox, a small &quot;i&quot; icon is displayed next to these items in the Web Console's log.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/info">console.info - MDN</a>
    */
   public native void info(@Nullable Any... data);
 
   /**
-   * The console.info() method outputs an informational message to the Web Console. In Firefox, a small "i" icon is displayed next to these items in the Web Console's log.
+   * The console.info() method outputs an informational message to the Web Console. In Firefox, a small &quot;i&quot; icon is displayed next to these items in the Web Console's log.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/info">console.info - MDN</a>
    */

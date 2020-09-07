@@ -157,7 +157,7 @@ public class Navigator {
   public native int hardwareConcurrency();
 
   /**
-   * The value of the NavigatorID.appCodeName property is always "Mozilla", in any browser. This property is kept only for compatibility purposes.
+   * The value of the NavigatorID.appCodeName property is always &quot;Mozilla&quot;, in any browser. This property is kept only for compatibility purposes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appCodeName">NavigatorID.appCodeName - MDN</a>
    */
@@ -168,7 +168,7 @@ public class Navigator {
   public native String appCodeName();
 
   /**
-   * The value of the NavigatorID.appName property is always "Netscape", in any browser. This property is kept only for compatibility purposes.
+   * The value of the NavigatorID.appName property is always &quot;Netscape&quot;, in any browser. This property is kept only for compatibility purposes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appName">NavigatorID.appName - MDN</a>
    */
@@ -179,7 +179,7 @@ public class Navigator {
   public native String appName();
 
   /**
-   * Returns either "4.0" or a string representing version information about the browser.
+   * Returns either &quot;4.0&quot; or a string representing version information about the browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appVersion">NavigatorID.appVersion - MDN</a>
    */
@@ -201,7 +201,7 @@ public class Navigator {
   public native String platform();
 
   /**
-   * The value of the NavigatorID.product property is always "Gecko", in any browser. This property is kept only for compatibility purposes.
+   * The value of the NavigatorID.product property is always &quot;Gecko&quot;, in any browser. This property is kept only for compatibility purposes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/product">NavigatorID.product - MDN</a>
    */
@@ -293,52 +293,167 @@ public class Navigator {
   @Nonnull
   public native PluginArray plugins();
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nullable BodyInit data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull ReadableStream data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull XMLHttpRequestBodyInit data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Blob data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull BufferSource data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBufferView data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Int8Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Int16Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Int32Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint8Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint16Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint32Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint8ClampedArray data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Float32Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull Float64Array data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull DataView data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBuffer data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull FormData data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull URLSearchParams data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull String data);
 
+  /**
+   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
+   */
   public native boolean sendBeacon(@Nonnull String url);
 
+  /**
+   * The Navigator.requestMediaKeySystemAccess() method returns a Promise which delivers a MediaKeySystemAccess object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the Encrypted Media Extensions API, which brings support for encrypted media and DRM-protected video to the web.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess">Navigator.requestMediaKeySystemAccess - MDN</a>
+   */
   @Nonnull
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
       @Nonnull JsArray<MediaKeySystemConfiguration> supportedConfigurations);
 
+  /**
+   * The Navigator.requestMediaKeySystemAccess() method returns a Promise which delivers a MediaKeySystemAccess object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the Encrypted Media Extensions API, which brings support for encrypted media and DRM-protected video to the web.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess">Navigator.requestMediaKeySystemAccess - MDN</a>
+   */
   @Nonnull
   public native Promise<MediaKeySystemAccess> requestMediaKeySystemAccess(@Nonnull String keySystem,
       @Nonnull MediaKeySystemConfiguration[] supportedConfigurations);
@@ -346,20 +461,55 @@ public class Navigator {
   @Nonnull
   public native JsArray<Gamepad> getGamepads();
 
+  /**
+   * The Navigator.vibrate() method pulses the vibration hardware on the device, if such hardware exists. If the device doesn't support vibration, this method has no effect. If a vibration pattern is already in progress when this method is called, the previous pattern is halted and the new one begins instead.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate">Navigator.vibrate - MDN</a>
+   */
   public native boolean vibrate(@Nonnull VibratePattern pattern);
 
+  /**
+   * The Navigator.vibrate() method pulses the vibration hardware on the device, if such hardware exists. If the device doesn't support vibration, this method has no effect. If a vibration pattern is already in progress when this method is called, the previous pattern is halted and the new one begins instead.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate">Navigator.vibrate - MDN</a>
+   */
   public native boolean vibrate(int pattern);
 
+  /**
+   * The Navigator.vibrate() method pulses the vibration hardware on the device, if such hardware exists. If the device doesn't support vibration, this method has no effect. If a vibration pattern is already in progress when this method is called, the previous pattern is halted and the new one begins instead.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate">Navigator.vibrate - MDN</a>
+   */
   public native boolean vibrate(@Nonnull JsArray<Double> pattern);
 
+  /**
+   * The Navigator.vibrate() method pulses the vibration hardware on the device, if such hardware exists. If the device doesn't support vibration, this method has no effect. If a vibration pattern is already in progress when this method is called, the previous pattern is halted and the new one begins instead.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate">Navigator.vibrate - MDN</a>
+   */
   public native boolean vibrate(@Nonnull Double[] pattern);
 
+  /**
+   * The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share - MDN</a>
+   */
   @Nonnull
   public native Promise<Void> share(@Nonnull ShareData data);
 
+  /**
+   * The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">Navigator.share - MDN</a>
+   */
   @Nonnull
   public native Promise<Void> share();
 
+  /**
+   * The Navigator method registerProtocolHandler() lets web sites register their ability to open or handle particular URL schemes (aka protocols).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler">Navigator.registerProtocolHandler - MDN</a>
+   */
   public native void registerProtocolHandler(@Nonnull String scheme, @Nonnull String url);
 
   public native void unregisterProtocolHandler(@Nonnull String scheme, @Nonnull String url);

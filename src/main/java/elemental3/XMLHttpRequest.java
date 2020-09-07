@@ -20,6 +20,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
@@ -62,6 +63,9 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType">XMLHttpRequest.responseType - MDN</a>
    */
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = XMLHttpRequestResponseType.class
+  )
   public String responseType;
 
   /**
@@ -151,7 +155,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
   public native int status();
 
   /**
-   * The read-only XMLHttpRequest.statusText property returns a DOMString containing the response's status message as returned by the HTTP server. Unlike XMLHTTPRequest.status which indicates a numerical status code, this property contains the text of the response status, such as "OK" or "Not Found". If the request's readyState is in UNSENT or OPENED state, the value of statusText will be an empty string.
+   * The read-only XMLHttpRequest.statusText property returns a DOMString containing the response's status message as returned by the HTTP server. Unlike XMLHTTPRequest.status which indicates a numerical status code, this property contains the text of the response status, such as &quot;OK&quot; or &quot;Not Found&quot;. If the request's readyState is in UNSENT or OPENED state, the value of statusText will be an empty string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/statusText">XMLHttpRequest.statusText - MDN</a>
    */

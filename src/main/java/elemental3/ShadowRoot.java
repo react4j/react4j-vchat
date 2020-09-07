@@ -34,7 +34,7 @@ public class ShadowRoot extends DocumentFragment {
   }
 
   /**
-   * The host read-only property of the ShadowRoot returns a reference to the DOM element the ShadowRoot is attached to.
+   * The host read-only property of the ShadowRoot returns a reference to the DOM element the ShadowRoot is attached to.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/host">ShadowRoot.host - MDN</a>
    */
@@ -45,7 +45,7 @@ public class ShadowRoot extends DocumentFragment {
   public native Element host();
 
   /**
-   * The mode property of the ShadowRoot specifies its mode — either open or closed. This defines whether or not the shadow root's internal features are accessible from JavaScript.
+   * The mode property of the ShadowRoot specifies its mode &mdash; either open or closed. This defines whether or not the shadow root's internal features are accessible from JavaScript.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/mode">ShadowRoot.mode - MDN</a>
    */

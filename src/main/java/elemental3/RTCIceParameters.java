@@ -58,7 +58,7 @@ public interface RTCIceParameters {
   }
 
   /**
-   * The RTCIceParameters dictionary's usernameFragment property specifies the username fragment ("ufrag") that uniquely identifies the corresponding ICE session for the duration of the current ICE session.
+   * The RTCIceParameters dictionary's usernameFragment property specifies the username fragment (&quot;ufrag&quot;) that uniquely identifies the corresponding ICE session for the duration of the current ICE session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters/usernameFragment">RTCIceParameters.usernameFragment - MDN</a>
    */
@@ -68,7 +68,7 @@ public interface RTCIceParameters {
   String usernameFragment();
 
   /**
-   * The RTCIceParameters dictionary's usernameFragment property specifies the username fragment ("ufrag") that uniquely identifies the corresponding ICE session for the duration of the current ICE session.
+   * The RTCIceParameters dictionary's usernameFragment property specifies the username fragment (&quot;ufrag&quot;) that uniquely identifies the corresponding ICE session for the duration of the current ICE session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters/usernameFragment">RTCIceParameters.usernameFragment - MDN</a>
    */
@@ -76,7 +76,7 @@ public interface RTCIceParameters {
   void setUsernameFragment(@Nonnull String usernameFragment);
 
   /**
-   * The RTCIceParameters dictionary's usernameFragment property specifies the username fragment ("ufrag") that uniquely identifies the corresponding ICE session for the duration of the current ICE session.
+   * The RTCIceParameters dictionary's usernameFragment property specifies the username fragment (&quot;ufrag&quot;) that uniquely identifies the corresponding ICE session for the duration of the current ICE session.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters/usernameFragment">RTCIceParameters.usernameFragment - MDN</a>
    */

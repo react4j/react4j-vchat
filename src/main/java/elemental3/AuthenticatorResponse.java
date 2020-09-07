@@ -23,7 +23,7 @@ public class AuthenticatorResponse {
   }
 
   /**
-   * The clientDataJSON property of the AuthenticatorResponse interface stores a JSON string in an ArrayBuffer, representing the client data that was passed to CredentialsContainer.create() or CredentialsContainer.get(). This property is only accessed on one of the child objects of AuthenticatorResponse, specifically AuthenticatorAttestationResponse or AuthenticatorAssertionResponse.
+   * The clientDataJSON property of the AuthenticatorResponse interface stores a JSON string in an ArrayBuffer, representing the client data that was passed to CredentialsContainer.create() or CredentialsContainer.get(). This property is only accessed on one of the child objects of AuthenticatorResponse, specifically AuthenticatorAttestationResponse or AuthenticatorAssertionResponse.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse/clientDataJSON">AuthenticatorResponse.clientDataJSON - MDN</a>
    */

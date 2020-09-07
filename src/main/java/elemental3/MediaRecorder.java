@@ -78,7 +78,7 @@ public class MediaRecorder extends EventTarget {
   public native int audioBitsPerSecond();
 
   /**
-   * The mimeType read-only property returns the MIME media type that was specified when creating the MediaRecorder object, or, if none was specified, which was chosen by the browser.
+   * The mimeType read-only property returns the MIME media type that was specified when creating the MediaRecorder object, or, if none was specified, which was chosen by the browser.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/mimeType">MediaRecorder.mimeType - MDN</a>
    */
@@ -89,7 +89,7 @@ public class MediaRecorder extends EventTarget {
   public native String mimeType();
 
   /**
-   * The MediaRecorder.state read-only property returns the current state of the current MediaRecorder object.
+   * The MediaRecorder.state read-only property returns the current state of the current MediaRecorder object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/state">MediaRecorder.state - MDN</a>
    */
@@ -100,7 +100,7 @@ public class MediaRecorder extends EventTarget {
   public native String state();
 
   /**
-   * The MediaRecorder.stream read-only property returns the stream that was passed into the MediaRecorder() constructor when the MediaRecorder was created.
+   * The MediaRecorder.stream read-only property returns the stream that was passed into the MediaRecorder() constructor when the MediaRecorder was created.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stream">MediaRecorder.stream - MDN</a>
    */

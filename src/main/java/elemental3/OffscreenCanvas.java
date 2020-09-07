@@ -11,7 +11,7 @@ import jsinterop.base.Any;
 import org.intellij.lang.annotations.MagicConstant;
 
 /**
- * The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.
+ * The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas">OffscreenCanvas - MDN</a>
  */

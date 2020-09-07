@@ -9,7 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.
+ * The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation">Animation - MDN</a>
  */
@@ -21,7 +21,7 @@ import jsinterop.annotations.JsType;
 )
 public class Animation extends EventTarget {
   /**
-   * The Animation.currentTime property of the Web Animations API returns and sets the current time value of the animation in milliseconds, whether running or paused.
+   * The Animation.currentTime property of the Web Animations API returns and sets the current time value of the animation in milliseconds, whether running or paused.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation/currentTime">Animation.currentTime - MDN</a>
    */

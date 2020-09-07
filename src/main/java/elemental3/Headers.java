@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The Headers interface of the Fetch API allows you to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
+ * The Headers interface of the Fetch API allows you to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers">Headers - MDN</a>
  */

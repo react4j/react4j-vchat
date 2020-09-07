@@ -9,7 +9,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The DOM Node interface is a key base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably.
+ * The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node">Node - MDN</a>
  */
@@ -248,7 +248,7 @@ public class Node extends EventTarget {
   public native Node cloneNode();
 
   /**
-   * The Node.compareDocumentPosition() method reports the position of the given node relative to another node in any document — not just the given node’s document.
+   * The Node.compareDocumentPosition() method reports the position of the given node relative to another node in any document &mdash; not just the given node&rsquo;s document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition">Node.compareDocumentPosition - MDN</a>
    */
@@ -300,7 +300,7 @@ public class Node extends EventTarget {
   public native boolean isDefaultNamespace(@Nullable String namespace);
 
   /**
-   * The Node.isEqualNode() method tests whether two nodes are equal. Two nodes are equal when they have the same type, defining characteristics (for elements, this would be their ID, number of children, and so forth), its attributes match, and so on. The specific set of data points that must match varies depending on the types of the nodes.
+   * The Node.isEqualNode() method tests whether two nodes are equal. Two nodes are equal when they have the same type, defining characteristics (for elements, this would be their ID, number of children, and so forth), its attributes match, and so on. The specific set of data points that must match varies depending on the types of the nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/isEqualNode">Node.isEqualNode - MDN</a>
    */
@@ -330,7 +330,7 @@ public class Node extends EventTarget {
   public native String lookupPrefix(@Nullable String namespace);
 
   /**
-   * The Node.normalize() method puts the specified node and all of its sub-tree into a "normalized" form. In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
+   * The Node.normalize() method puts the specified node and all of its sub-tree into a &quot;normalized&quot; form. In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/normalize">Node.normalize - MDN</a>
    */

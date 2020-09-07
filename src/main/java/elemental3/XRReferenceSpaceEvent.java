@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The WebXR Device API interface XRReferenceSpaceEvent represents an event sent to an XRReferenceSpace. Currently, the only event  that uses this type is the reset event.
+ * The WebXR Device API interface XRReferenceSpaceEvent represents an event sent to an XRReferenceSpace. Currently, the only event  that uses this type is the reset event.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent">XRReferenceSpaceEvent - MDN</a>
  */

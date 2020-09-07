@@ -7,7 +7,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGAnimatedString interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this.
+ * The SVGAnimatedString interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString">SVGAnimatedString - MDN</a>
  */

@@ -109,7 +109,7 @@ public class PerformanceResourceTiming extends PerformanceEntry {
   public native double workerStart();
 
   /**
-   * The toJSON() method is a serializer that returns a JSON representation of the PerformanceResourceTiming object.
+   * The toJSON() method is a serializer that returns a JSON representation of the PerformanceResourceTiming object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/toJSON">PerformanceResourceTiming.toJSON - MDN</a>
    */

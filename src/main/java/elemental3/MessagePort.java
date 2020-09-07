@@ -24,7 +24,7 @@ import jsinterop.base.Js;
 )
 public class MessagePort extends EventTarget {
   /**
-   * The onmessage event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type message is fired on the port — that is, when the port receives a message.
+   * The onmessage event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type message is fired on the port &mdash; that is, when the port receives a message.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage">MessagePort.onmessage - MDN</a>
    */
@@ -32,7 +32,7 @@ public class MessagePort extends EventTarget {
   public MessageEventHandler onmessage;
 
   /**
-   * The onmessageerror event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the port—that is, when it receives a message that cannot be deserialized.
+   * The onmessageerror event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the port&mdash;that is, when it receives a message that cannot be deserialized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessageerror">MessagePort.onmessageerror - MDN</a>
    */

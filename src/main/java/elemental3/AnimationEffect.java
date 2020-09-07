@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The AnimationEffect interface of the Web Animations API defines current and future animation effects like KeyframeEffect, which can be passed to Animation objects for playing, and KeyframeEffectReadOnly (which is used by CSS Animations and Transitions).
+ * The AnimationEffect interface of the Web Animations API defines current and future animation effects like KeyframeEffect, which can be passed to Animation objects for playing, and KeyframeEffectReadOnly (which is used by CSS Animations and Transitions).
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect">AnimationEffect - MDN</a>
  */

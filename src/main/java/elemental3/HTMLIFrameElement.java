@@ -25,7 +25,7 @@ public class HTMLIFrameElement extends HTMLElement {
   public boolean allowFullscreen;
 
   /**
-   * The allowPaymentRequest property of the HTMLIFrameElement interface returns a Boolean indicating whether the Payment Request API may be invoked on a cross-origin iframe.
+   * The allowPaymentRequest property of the HTMLIFrameElement interface returns a Boolean indicating whether the Payment Request API may be invoked on a cross-origin iframe.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowPaymentRequest">HTMLIFrameElement.allowPaymentRequest - MDN</a>
    */
@@ -89,7 +89,7 @@ public class HTMLIFrameElement extends HTMLElement {
   }
 
   /**
-   * If the iframe and the iframe's parent document are Same Origin, returns a Document (that is, the active document in the inline frame's nested browsing context), else returns null.
+   * If the iframe and the iframe's parent document are Same Origin, returns a Document (that is, the active document in the inline frame's nested browsing context), else returns null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument">HTMLIFrameElement.contentDocument - MDN</a>
    */

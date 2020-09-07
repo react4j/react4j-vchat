@@ -6,7 +6,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The TimeRanges interface is used to represent a set of time ranges, primarily for the purpose of tracking which portions of media have been buffered when loading it for use by the audio and video elements.
+ * The TimeRanges interface is used to represent a set of time ranges, primarily for the purpose of tracking which portions of media have been buffered when loading it for use by the audio and video elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges">TimeRanges - MDN</a>
  */

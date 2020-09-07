@@ -72,7 +72,7 @@ public class MediaStream extends EventTarget {
   }
 
   /**
-   * The active read-only property of the MediaStream interface returns a Boolean value which is true if the stream is currently active; otherwise, it returns false. A stream is considered active if at least one of its MediaStreamTracks is not in the MediaStreamTrack.ended state. Once every track has ended, the stream's active property becomes false.
+   * The active read-only property of the MediaStream interface returns a Boolean value which is true if the stream is currently active; otherwise, it returns false. A stream is considered active if at least one of its MediaStreamTracks is not in the MediaStreamTrack.ended state. Once every track has ended, the stream's active property becomes false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/active">MediaStream.active - MDN</a>
    */

@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
 )
 public class DOMTokenList {
   /**
-   * The value property of the DOMTokenList interface is a stringifier that returns the value of the list as a DOMString, or clears and sets the list to the given value.
+   * The value property of the DOMTokenList interface is a stringifier that returns the value of the list as a DOMString, or clears and sets the list to the given value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/value">DOMTokenList.value - MDN</a>
    */
@@ -48,7 +48,7 @@ public class DOMTokenList {
   public native void add(@Nonnull String... tokens);
 
   /**
-   * The contains() method of the DOMTokenList interface returns a Boolean — true if the underlying list contains the given token, otherwise false.
+   * The contains() method of the DOMTokenList interface returns a Boolean &mdash; true if the underlying list contains the given token, otherwise false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains">DOMTokenList.contains - MDN</a>
    */
@@ -62,14 +62,14 @@ public class DOMTokenList {
   public native void remove(@Nonnull String... tokens);
 
   /**
-   * The replace() method of the DOMTokenList interface replaces an existing token with a new token. If the first token doesn't exist, replace() returns false immediately, without adding the new token to the token list.
+   * The replace() method of the DOMTokenList interface replaces an existing token with a new token. If the first token doesn't exist, replace() returns false immediately, without adding the new token to the token list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/replace">DOMTokenList.replace - MDN</a>
    */
   public native boolean replace(@Nonnull String token, @Nonnull String newToken);
 
   /**
-   * The supports() method of the DOMTokenList interface returns true if a given token is in the associated attribute's supported tokens. This method is intended to support feature detection.
+   * The supports() method of the DOMTokenList interface returns true if a given token is in the associated attribute's supported tokens. This method is intended to support feature detection.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/supports">DOMTokenList.supports - MDN</a>
    */

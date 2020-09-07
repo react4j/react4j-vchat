@@ -160,7 +160,7 @@ public interface RTCIceCandidateStats extends RTCStats {
   }
 
   /**
-   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
+   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol">RTCIceCandidateStats.protocol - MDN</a>
    */
@@ -170,7 +170,7 @@ public interface RTCIceCandidateStats extends RTCStats {
   String protocol();
 
   /**
-   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
+   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol">RTCIceCandidateStats.protocol - MDN</a>
    */
@@ -178,7 +178,7 @@ public interface RTCIceCandidateStats extends RTCStats {
   void setProtocol(@Nonnull String protocol);
 
   /**
-   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
+   * The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol">RTCIceCandidateStats.protocol - MDN</a>
    */

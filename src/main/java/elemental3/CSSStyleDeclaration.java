@@ -56,7 +56,7 @@ public class CSSStyleDeclaration {
   public native String getPropertyValue(@Nonnull String property);
 
   /**
-   * The CSSStyleDeclaration.removeProperty() method interface removes a property from a CSS style declaration object.
+   * The CSSStyleDeclaration.removeProperty() method interface removes a property from a CSS style declaration object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/removeProperty">CSSStyleDeclaration.removeProperty - MDN</a>
    */
@@ -64,7 +64,7 @@ public class CSSStyleDeclaration {
   public native String removeProperty(@Nonnull String property);
 
   /**
-   * The CSSStyleDeclaration.setProperty() method interface sets a new value for a property on a CSS style declaration object.
+   * The CSSStyleDeclaration.setProperty() method interface sets a new value for a property on a CSS style declaration object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty">CSSStyleDeclaration.setProperty - MDN</a>
    */
@@ -72,7 +72,7 @@ public class CSSStyleDeclaration {
       @Nonnull String priority);
 
   /**
-   * The CSSStyleDeclaration.setProperty() method interface sets a new value for a property on a CSS style declaration object.
+   * The CSSStyleDeclaration.setProperty() method interface sets a new value for a property on a CSS style declaration object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty">CSSStyleDeclaration.setProperty - MDN</a>
    */

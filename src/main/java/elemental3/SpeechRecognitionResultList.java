@@ -22,7 +22,7 @@ public class SpeechRecognitionResultList {
   }
 
   /**
-   * The length read-only property of the SpeechRecognitionResultList interface returns the length of the "array" — the number of SpeechRecognitionResult objects in the list.
+   * The length read-only property of the SpeechRecognitionResultList interface returns the length of the &quot;array&quot; &mdash; the number of SpeechRecognitionResult objects in the list.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/length">SpeechRecognitionResultList.length - MDN</a>
    */
@@ -32,7 +32,7 @@ public class SpeechRecognitionResultList {
   public native int length();
 
   /**
-   * The item getter of the SpeechRecognitionResultList interface is a standard getter — it allows SpeechRecognitionResult objects in the list to be accessed via array syntax.
+   * The item getter of the SpeechRecognitionResultList interface is a standard getter &mdash; it allows SpeechRecognitionResult objects in the list to be accessed via array syntax.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/item">SpeechRecognitionResultList.item - MDN</a>
    */

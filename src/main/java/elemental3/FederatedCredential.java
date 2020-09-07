@@ -39,7 +39,7 @@ public class FederatedCredential extends Credential {
   public native String protocol();
 
   /**
-   * The provider property of the FederatedCredential interface returns a USVString containing a credential's federated identity provider.
+   * The provider property of the FederatedCredential interface returns a USVString containing a credential's federated identity provider.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential/provider">FederatedCredential.provider - MDN</a>
    */

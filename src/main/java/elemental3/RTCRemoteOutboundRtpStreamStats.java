@@ -11,7 +11,7 @@ import jsinterop.base.JsPropertyMap;
 import org.intellij.lang.annotations.MagicConstant;
 
 /**
- * The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.
+ * The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats">RTCRemoteOutboundRtpStreamStats - MDN</a>
  */
@@ -31,7 +31,7 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   }
 
   /**
-   * The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value.
+   * The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/localId">RTCRemoteOutboundRtpStreamStats.localId - MDN</a>
    */
@@ -41,7 +41,7 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   String localId();
 
   /**
-   * The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value.
+   * The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/localId">RTCRemoteOutboundRtpStreamStats.localId - MDN</a>
    */
@@ -49,7 +49,7 @@ public interface RTCRemoteOutboundRtpStreamStats extends RTCSentRtpStreamStats {
   void setLocalId(@Nonnull String localId);
 
   /**
-   * The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value.
+   * The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/localId">RTCRemoteOutboundRtpStreamStats.localId - MDN</a>
    */

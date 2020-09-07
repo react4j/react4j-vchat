@@ -98,7 +98,7 @@ public class SpeechRecognition extends EventTarget {
   public SpeechRecognitionEventHandler onnomatch;
 
   /**
-   * The onresult property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app (when the result event fires.)
+   * The onresult property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service returns a result &mdash; a word or phrase has been positively recognized and this has been communicated back to the app (when the result event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult">SpeechRecognition.onresult - MDN</a>
    */
@@ -106,7 +106,7 @@ public class SpeechRecognition extends EventTarget {
   public SpeechRecognitionEventHandler onresult;
 
   /**
-   * The onsoundend property of the SpeechRecognition interface represents an event handler that will run when any sound — recognisable speech or not — has stopped being detected (when the soundend event fires.)
+   * The onsoundend property of the SpeechRecognition interface represents an event handler that will run when any sound &mdash; recognisable speech or not &mdash; has stopped being detected (when the soundend event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundend">SpeechRecognition.onsoundend - MDN</a>
    */
@@ -114,7 +114,7 @@ public class SpeechRecognition extends EventTarget {
   public EventHandler onsoundend;
 
   /**
-   * The onsoundstart property of the SpeechRecognition interface represents an event handler that will run when any sound — recognisable speech or not — has been detected (when the soundstart event fires.)
+   * The onsoundstart property of the SpeechRecognition interface represents an event handler that will run when any sound &mdash; recognisable speech or not &mdash; has been detected (when the soundstart event fires.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundstart">SpeechRecognition.onsoundstart - MDN</a>
    */

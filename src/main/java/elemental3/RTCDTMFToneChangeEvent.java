@@ -38,7 +38,7 @@ public class RTCDTMFToneChangeEvent extends Event {
   }
 
   /**
-   * The read-only property RTCDTMFToneChangeEvent.tone returns the DTMF character which has just begun to play, or an empty string (""). if all queued tones have finished playing (that is, RTCDTMFSender.toneBuffer is empty).
+   * The read-only property RTCDTMFToneChangeEvent.tone returns the DTMF character which has just begun to play, or an empty string (&quot;&quot;). if all queued tones have finished playing (that is, RTCDTMFSender.toneBuffer is empty).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/tone">RTCDTMFToneChangeEvent.tone - MDN</a>
    */

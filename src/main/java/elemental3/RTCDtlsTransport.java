@@ -10,7 +10,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport.
+ * The RTCDtlsTransport interface provides access to information about the Datagram Transport Layer Security (DTLS) transport over which a RTCPeerConnection's RTP and RTCP packets are sent and received by its RTCRtpSender and RTCRtpReceiver objects.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport">RTCDtlsTransport - MDN</a>
  */
@@ -31,7 +31,7 @@ public class RTCDtlsTransport extends EventTarget {
   }
 
   /**
-   * The read-only RTCDtlsTransport property iceTransport contains a reference to the underlying RTCIceTransport.
+   * The read-only RTCDtlsTransport property iceTransport contains a reference to the underlying RTCIceTransport.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/iceTransport">RTCDtlsTransport.iceTransport - MDN</a>
    */

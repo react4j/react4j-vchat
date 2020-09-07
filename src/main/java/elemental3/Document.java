@@ -290,7 +290,7 @@ public class Document extends Node {
   public EventHandler onfocus;
 
   /**
-   * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
+   * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
    */
@@ -298,7 +298,7 @@ public class Document extends Node {
   public EventHandler onformdata;
 
   /**
-   * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
+   * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
    */
@@ -840,7 +840,7 @@ public class Document extends Node {
   public native String inputEncoding();
 
   /**
-   * The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document. In standards mode, this is the root element of the document, document.documentElement.
+   * The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document. In standards mode, this is the root element of the document, document.documentElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollingElement">Document.scrollingElement - MDN</a>
    */
@@ -878,7 +878,7 @@ public class Document extends Node {
   public native SVGSVGElement rootElement();
 
   /**
-   * The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of DocumentTimeline that is automatically created on page load.
+   * The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of DocumentTimeline that is automatically created on page load.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/timeline">Document.timeline - MDN</a>
    */
@@ -922,7 +922,7 @@ public class Document extends Node {
   public native HTMLCollection embeds();
 
   /**
-   * The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document.
+   * The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/forms">Document.forms - MDN</a>
    */

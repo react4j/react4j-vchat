@@ -23,7 +23,7 @@ import jsinterop.base.Js;
 )
 public class IDBRequest extends EventTarget {
   /**
-   * The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. Also included at the bottom is an onerror function that reports what the error was if the request fails. For a full working example, see our To-do Notifications app (view example live.)
+   * The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. Also included at the bottom is an onerror function that reports what the error was if the request fails. For a full working example, see our To-do Notifications app (view example live.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/onerror">IDBRequest.onerror - MDN</a>
    */
@@ -31,7 +31,7 @@ public class IDBRequest extends EventTarget {
   public EventHandler onerror;
 
   /**
-   * The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. For a full working example, see our To-do Notifications app (view example live.)
+   * The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. For a full working example, see our To-do Notifications app (view example live.)
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/onsuccess">IDBRequest.onsuccess - MDN</a>
    */
@@ -42,7 +42,7 @@ public class IDBRequest extends EventTarget {
   }
 
   /**
-   * A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a DOMException because DOMError has been removed from the DOM standard. The following error codes are returned under certain conditions:
+   * A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a DOMException because DOMError has been removed from the DOM standard. The following error codes are returned under certain conditions:
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/error">IDBRequest.error - MDN</a>
    */

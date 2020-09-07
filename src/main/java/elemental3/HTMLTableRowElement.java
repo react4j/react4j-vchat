@@ -60,7 +60,7 @@ public class HTMLTableRowElement extends HTMLElement {
   public native void deleteCell(int index);
 
   /**
-   * The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell.
+   * The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/insertCell">HTMLTableRowElement.insertCell - MDN</a>
    */
@@ -68,7 +68,7 @@ public class HTMLTableRowElement extends HTMLElement {
   public native HTMLTableCellElement insertCell(int index);
 
   /**
-   * The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell.
+   * The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/insertCell">HTMLTableRowElement.insertCell - MDN</a>
    */

@@ -20,6 +20,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
@@ -51,10 +52,13 @@ public class WebSocket extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/binaryType">WebSocket.binaryType - MDN</a>
    */
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = BinaryType.class
+  )
   public String binaryType;
 
   /**
-   * The WebSocket.onclose property is an EventHandler that is called when the WebSocket connection's readyState changes to CLOSED. It is called with a CloseEvent.
+   * The WebSocket.onclose property is an EventHandler that is called when the WebSocket connection's readyState changes to CLOSED. It is called with a CloseEvent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onclose">WebSocket.onclose - MDN</a>
    */
@@ -62,7 +66,7 @@ public class WebSocket extends EventTarget {
   public CloseEventHandler onclose;
 
   /**
-   * The WebSocket interface's onerror event handler property is a function which gets called when an error occurs on the WebSocket.
+   * The WebSocket interface's onerror event handler property is a function which gets called when an error occurs on the WebSocket.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onerror">WebSocket.onerror - MDN</a>
    */

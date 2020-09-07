@@ -116,7 +116,7 @@ public class IDBIndex {
   public native IDBRequest get(@DoNotAutobox @Nullable Object query);
 
   /**
-   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
+   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
@@ -124,7 +124,7 @@ public class IDBIndex {
   public native IDBRequest getAll(@Nullable Any query, int count);
 
   /**
-   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
+   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
@@ -132,7 +132,7 @@ public class IDBIndex {
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query, int count);
 
   /**
-   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
+   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
@@ -140,7 +140,7 @@ public class IDBIndex {
   public native IDBRequest getAll(@Nullable Any query);
 
   /**
-   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
+   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
@@ -148,7 +148,7 @@ public class IDBIndex {
   public native IDBRequest getAll(@DoNotAutobox @Nullable Object query);
 
   /**
-   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
+   * There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll">IDBIndex.getAll - MDN</a>
    */
@@ -196,7 +196,7 @@ public class IDBIndex {
   public native IDBRequest getAllKeys();
 
   /**
-   * If a primary key is found, it is set as the result of the request object. Note that this doesn't return the whole record as IDBIndex.get does.
+   * If a primary key is found, it is set as the result of the request object. Note that this doesn't return the whole record as IDBIndex.get does.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getKey">IDBIndex.getKey - MDN</a>
    */
@@ -204,7 +204,7 @@ public class IDBIndex {
   public native IDBRequest getKey(@Nullable Any query);
 
   /**
-   * If a primary key is found, it is set as the result of the request object. Note that this doesn't return the whole record as IDBIndex.get does.
+   * If a primary key is found, it is set as the result of the request object. Note that this doesn't return the whole record as IDBIndex.get does.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getKey">IDBIndex.getKey - MDN</a>
    */

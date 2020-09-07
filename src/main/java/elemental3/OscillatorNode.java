@@ -5,9 +5,10 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
- * The OscillatorNode interface represents a periodic waveform, such as a sine wave. It is an AudioScheduledSourceNode audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.
+ * The OscillatorNode interface represents a periodic waveform, such as a sine wave. It is an AudioScheduledSourceNode audio-processing module that causes a specified frequency of a given wave to be created&mdash;in effect, a constant tone.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode">OscillatorNode - MDN</a>
  */
@@ -19,6 +20,9 @@ import jsinterop.annotations.JsType;
 )
 public class OscillatorNode extends AudioScheduledSourceNode {
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = OscillatorType.class
+  )
   public String type;
 
   /**

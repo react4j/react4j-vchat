@@ -23,7 +23,7 @@ public class HTMLSelectElement extends HTMLElement {
   public String autocomplete;
 
   /**
-   * The HTMLSelectElement.disabled is a Boolean that reflects the disabled HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.
+   * The HTMLSelectElement.disabled is a Boolean that reflects the disabled HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled">HTMLSelectElement.disabled - MDN</a>
    */

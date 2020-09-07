@@ -10,7 +10,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The RTCRtpReceiver interface of the WebRTC API manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection.
+ * The RTCRtpReceiver interface of the WebRTC API manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver">RTCRtpReceiver - MDN</a>
  */
@@ -35,12 +35,22 @@ public class RTCRtpReceiver {
   @Nonnull
   public native MediaStreamTrack track();
 
+  /**
+   * The read-only transport property of an RTCRtpReceiver object provides the RTCDtlsTransport object used to interact with the underlying transport over which the receiver is exchanging Real-time Transport Control Protocol (RTCP) packets.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/transport">RTCRtpReceiver.transport - MDN</a>
+   */
   @JsProperty(
       name = "transport"
   )
   @Nullable
   public native RTCDtlsTransport transport();
 
+  /**
+   * The static function RTCRtpReceiver.getCapabilities() returns an RTCRtpCapabilities object describing the codecs and capabilities supported by RTCRtpReceivers on the current device.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities">RTCRtpReceiver.getCapabilities - MDN</a>
+   */
   @Nullable
   public static native RTCRtpCapabilities getCapabilities(@Nonnull String kind);
 
@@ -52,6 +62,11 @@ public class RTCRtpReceiver {
   @Nonnull
   public native JsArray<RTCRtpContributingSource> getContributingSources();
 
+  /**
+   * The getParameters() method of the RTCRtpReceiver interface returns an RTCRtpReceiveParameters object describing the current configuration for the encoding and transmission of media on the receiver's track.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters">RTCRtpReceiver.getParameters - MDN</a>
+   */
   @Nonnull
   public native RTCRtpReceiveParameters getParameters();
 

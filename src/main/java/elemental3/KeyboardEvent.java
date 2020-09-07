@@ -152,7 +152,7 @@ public class KeyboardEvent extends UIEvent {
   public native int keyCode();
 
   /**
-   * The KeyboardEvent.getModifierState() method returns the current state of the specified modifier key: true if the modifier is active (that is the modifier key is pressed or locked), otherwise, false.
+   * The KeyboardEvent.getModifierState() method returns the current state of the specified modifier key: true if the modifier is active (that is the modifier key is pressed or locked), otherwise, false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/getModifierState">KeyboardEvent.getModifierState - MDN</a>
    */

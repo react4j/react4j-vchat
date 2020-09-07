@@ -9,7 +9,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The AudioScheduledSourceNode interface—part of the Web Audio API—is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the start() and stop() methods, as well as the onended event handler.
+ * The AudioScheduledSourceNode interface&mdash;part of the Web Audio API&mdash;is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the start() and stop() methods, as well as the onended event handler.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode">AudioScheduledSourceNode - MDN</a>
  */

@@ -20,7 +20,7 @@ import jsinterop.base.Js;
 )
 public class HTMLDialogElement extends HTMLElement {
   /**
-   * A Boolean representing the state of the open HTML attribute. true means it is set, and therefore the dialog is shown. false means it not set, and therefore the dialog is not shown.
+   * A Boolean representing the state of the open HTML attribute. true means it is set, and therefore the dialog is shown. false means it not set, and therefore the dialog is not shown.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/open">HTMLDialogElement.open - MDN</a>
    */

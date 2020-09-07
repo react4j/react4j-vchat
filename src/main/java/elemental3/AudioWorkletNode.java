@@ -40,7 +40,7 @@ public class AudioWorkletNode extends AudioNode {
   }
 
   /**
-   * The read-only parameters property of the AudioWorkletNode interface returns the associated AudioParamMap — that is, a Map-like collection of AudioParam objects. They are instantiated during creation of the underlying AudioWorkletProcessor according to its parameterDescriptors static getter.
+   * The read-only parameters property of the AudioWorkletNode interface returns the associated AudioParamMap &mdash; that is, a Map-like collection of AudioParam objects. They are instantiated during creation of the underlying AudioWorkletProcessor according to its parameterDescriptors static getter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/parameters">AudioWorkletNode.parameters - MDN</a>
    */

@@ -28,7 +28,7 @@ public interface StorageEstimate {
   }
 
   /**
-   * The StorageEstimate dictionary's quota property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. This value is an estimate to help prevent its use for fingerprinting—that is, identifying a device using an amalgamation of the values of seemingly innocuous properties.
+   * The StorageEstimate dictionary's quota property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. This value is an estimate to help prevent its use for fingerprinting&mdash;that is, identifying a device using an amalgamation of the values of seemingly innocuous properties.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEstimate/quota">StorageEstimate.quota - MDN</a>
    */
@@ -38,7 +38,7 @@ public interface StorageEstimate {
   int quota();
 
   /**
-   * The StorageEstimate dictionary's quota property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. This value is an estimate to help prevent its use for fingerprinting—that is, identifying a device using an amalgamation of the values of seemingly innocuous properties.
+   * The StorageEstimate dictionary's quota property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. This value is an estimate to help prevent its use for fingerprinting&mdash;that is, identifying a device using an amalgamation of the values of seemingly innocuous properties.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEstimate/quota">StorageEstimate.quota - MDN</a>
    */
@@ -46,7 +46,7 @@ public interface StorageEstimate {
   void setQuota(int quota);
 
   /**
-   * The StorageEstimate dictionary's quota property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. This value is an estimate to help prevent its use for fingerprinting—that is, identifying a device using an amalgamation of the values of seemingly innocuous properties.
+   * The StorageEstimate dictionary's quota property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. This value is an estimate to help prevent its use for fingerprinting&mdash;that is, identifying a device using an amalgamation of the values of seemingly innocuous properties.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/StorageEstimate/quota">StorageEstimate.quota - MDN</a>
    */

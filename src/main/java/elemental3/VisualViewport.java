@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The VisualViewport interface of the Visual Viewport API represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique VisualViewport representing the properties associated with that window.
+ * The VisualViewport interface of the Visual Viewport API represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique VisualViewport representing the properties associated with that window.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport">VisualViewport - MDN</a>
  */
@@ -22,7 +22,7 @@ import jsinterop.base.Js;
 )
 public class VisualViewport extends EventTarget {
   /**
-   * The onresize event handler of the VisualViewport interface is called when a viewport is resized, i.e. when the resize event is fired.
+   * The onresize event handler of the VisualViewport interface is called when a viewport is resized, i.e. when the resize event is fired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onresize">VisualViewport.onresize - MDN</a>
    */
@@ -30,7 +30,7 @@ public class VisualViewport extends EventTarget {
   public EventHandler onresize;
 
   /**
-   * The onscroll event handler of the VisualViewport interface is called when a viewport is scrolled, i.e. when the scroll event is fired.
+   * The onscroll event handler of the VisualViewport interface is called when a viewport is scrolled, i.e. when the scroll event is fired.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onscroll">VisualViewport.onscroll - MDN</a>
    */
@@ -81,7 +81,7 @@ public class VisualViewport extends EventTarget {
   public native double pageLeft();
 
   /**
-   * The pageTop read-only property of the VisualViewport interface returns the y coordinate of the top edge of the visual viewport relative to the initial containing block origin, in CSS pixels.
+   * The pageTop read-only property of the VisualViewport interface returns the y coordinate of the top edge of the visual viewport relative to the initial containing block origin, in CSS pixels.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/pageTop">VisualViewport.pageTop - MDN</a>
    */

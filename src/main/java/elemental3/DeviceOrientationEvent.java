@@ -51,7 +51,7 @@ public class DeviceOrientationEvent extends Event {
   public native Double alpha();
 
   /**
-   * Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,  by which the device is tipped forward or backward. See Orientation and motion data explained for details.
+   * Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,  by which the device is tipped forward or backward. See Orientation and motion data explained for details.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/beta">DeviceOrientationEvent.beta - MDN</a>
    */
@@ -62,7 +62,7 @@ public class DeviceOrientationEvent extends Event {
   public native Double beta();
 
   /**
-   * Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is tilted left or right. See Orientation and motion data explained for details.
+   * Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is tilted left or right. See Orientation and motion data explained for details.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/gamma">DeviceOrientationEvent.gamma - MDN</a>
    */

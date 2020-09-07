@@ -8,9 +8,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
- * The History interface allows manipulation of the browser session history, that is the pages visited in the tab or frame that the current page is loaded in.
+ * The History interface allows manipulation of the browser session history, that is the pages visited in the tab or frame that the current page is loaded in.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History">History - MDN</a>
  */
@@ -27,6 +28,9 @@ public class History {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration">History.scrollRestoration - MDN</a>
    */
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ScrollRestoration.class
+  )
   public String scrollRestoration;
 
   History() {

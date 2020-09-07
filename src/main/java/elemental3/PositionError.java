@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The GeolocationPositionError interface represents the reason of an error occurring when using the geolocating device.
+ * The GeolocationPositionError interface represents the reason of an error occurring when using the geolocating device.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PositionError">PositionError - MDN</a>
  */

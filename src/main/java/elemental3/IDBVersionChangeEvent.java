@@ -40,7 +40,7 @@ public class IDBVersionChangeEvent extends Event {
   public native Double newVersion();
 
   /**
-   * The oldVersion read-only property of the IDBVersionChangeEvent interface returns the old version number of the database.
+   * The oldVersion read-only property of the IDBVersionChangeEvent interface returns the old version number of the database.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/oldVersion">IDBVersionChangeEvent.oldVersion - MDN</a>
    */

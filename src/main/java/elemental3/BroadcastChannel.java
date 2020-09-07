@@ -32,7 +32,7 @@ public class BroadcastChannel extends EventTarget {
   public MessageEventHandler onmessage;
 
   /**
-   * The onmessageerror event handler of the BroadcastChannel interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the BroadcastChannel instance — that is, when it receives a message that cannot be deserialized.
+   * The onmessageerror event handler of the BroadcastChannel interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the BroadcastChannel instance &mdash; that is, when it receives a message that cannot be deserialized.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/onmessageerror">BroadcastChannel.onmessageerror - MDN</a>
    */

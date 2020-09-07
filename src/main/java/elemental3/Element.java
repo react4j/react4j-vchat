@@ -152,7 +152,7 @@ public class Element extends Node {
   public native String prefix();
 
   /**
-   * The Element.shadowRoot read-only property represents the shadow root hosted by the element.
+   * The Element.shadowRoot read-only property represents the shadow root hosted by the element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot">Element.shadowRoot - MDN</a>
    */
@@ -184,7 +184,7 @@ public class Element extends Node {
   public native int clientHeight();
 
   /**
-   * The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right–to–left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only.
+   * The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right&ndash;to&ndash;left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/clientLeft">Element.clientLeft - MDN</a>
    */
@@ -334,7 +334,7 @@ public class Element extends Node {
   public native String getAttribute(@Nonnull String qualifiedName);
 
   /**
-   * The getAttributeNS() method of the Element interface returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or "" (the empty string); see Notes for details.
+   * The getAttributeNS() method of the Element interface returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or &quot;&quot; (the empty string); see Notes for details.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNS">Element.getAttributeNS - MDN</a>
    */
@@ -427,7 +427,7 @@ public class Element extends Node {
   public native void insertAdjacentText(@Nonnull String where, @Nonnull String data);
 
   /**
-   * The matches() method checks to see if the Element would be selected by the provided selectorString -- in other words -- checks if the element "is" the selector.
+   * The matches() method checks to see if the Element would be selected by the provided selectorString -- in other words -- checks if the element &quot;is&quot; the selector.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches">Element.matches - MDN</a>
    */
@@ -789,7 +789,7 @@ public class Element extends Node {
   public native Animation animate(@Nullable Object keyframes);
 
   /**
-   * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
+   * The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations - MDN</a>
    */

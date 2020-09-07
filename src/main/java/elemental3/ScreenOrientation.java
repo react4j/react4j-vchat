@@ -38,7 +38,7 @@ public class ScreenOrientation extends EventTarget {
   public native int angle();
 
   /**
-   * The type read-only property of the ScreenOrientation interface returns the document's current orientation type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or "landscape-secondary".
+   * The type read-only property of the ScreenOrientation interface returns the document's current orientation type, one of &quot;portrait-primary&quot;, &quot;portrait-secondary&quot;, &quot;landscape-primary&quot;, or &quot;landscape-secondary&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/type">ScreenOrientation.type - MDN</a>
    */

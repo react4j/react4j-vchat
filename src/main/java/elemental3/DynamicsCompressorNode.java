@@ -69,7 +69,7 @@ public class DynamicsCompressorNode extends AudioNode {
   public native AudioParam ratio();
 
   /**
-   * The reduction read-only property of the DynamicsCompressorNode interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
+   * The reduction read-only property of the DynamicsCompressorNode interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/reduction">DynamicsCompressorNode.reduction - MDN</a>
    */

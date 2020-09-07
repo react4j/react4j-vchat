@@ -40,7 +40,7 @@ public class MediaSource extends EventTarget {
   }
 
   /**
-   * The activeSourceBuffers read-only property of the MediaSource interface returns a SourceBufferList object containing a subset of the SourceBuffer objects contained within sourceBuffers — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
+   * The activeSourceBuffers read-only property of the MediaSource interface returns a SourceBufferList object containing a subset of the SourceBuffer objects contained within sourceBuffers &mdash; the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/activeSourceBuffers">MediaSource.activeSourceBuffers - MDN</a>
    */

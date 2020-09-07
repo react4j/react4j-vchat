@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
 )
 public class MutationObserver {
   /**
-   * The DOM MutationObserver() constructor — part of the MutationObserver interface — creates and returns a new observer which invokes a specified callback when DOM events occur.
+   * The DOM MutationObserver() constructor &mdash; part of the MutationObserver interface &mdash; creates and returns a new observer which invokes a specified callback when DOM events occur.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/MutationObserver">MutationObserver.MutationObserver - MDN</a>
    */

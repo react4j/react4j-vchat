@@ -64,7 +64,7 @@ public class Cache {
   public native Promise<Void> addAll(@Nonnull RequestInfo[] requests);
 
   /**
-   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
+   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    */
@@ -73,7 +73,7 @@ public class Cache {
       @Nonnull CacheQueryOptions options);
 
   /**
-   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
+   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    */
@@ -82,7 +82,7 @@ public class Cache {
       @Nonnull CacheQueryOptions options);
 
   /**
-   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
+   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    */
@@ -91,7 +91,7 @@ public class Cache {
       @Nonnull CacheQueryOptions options);
 
   /**
-   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
+   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    */
@@ -99,7 +99,7 @@ public class Cache {
   public native Promise<Boolean> delete(@Nonnull RequestInfo request);
 
   /**
-   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
+   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    */
@@ -107,7 +107,7 @@ public class Cache {
   public native Promise<Boolean> delete(@Nonnull Request request);
 
   /**
-   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
+   * The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete">Cache.delete - MDN</a>
    */

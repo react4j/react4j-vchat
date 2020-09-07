@@ -28,7 +28,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   }
 
   /**
-   * The active property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is activated. This property is initially set to null.
+   * The active property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is activating or activated. This property is initially set to null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/active">ServiceWorkerRegistration.active - MDN</a>
    */
@@ -39,7 +39,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   public native ServiceWorker active();
 
   /**
-   * The installing property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is installing. This property is initially set to null.
+   * The installing property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is installing. This property is initially set to null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/installing">ServiceWorkerRegistration.installing - MDN</a>
    */
@@ -61,7 +61,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   public native NavigationPreloadManager navigationPreload();
 
   /**
-   * The scope read-only property of the ServiceWorkerRegistration interface returns a unique identifier for a service worker registration. The service worker must be on the same origin as the document that registers the ServiceWorker.
+   * The scope read-only property of the ServiceWorkerRegistration interface returns a unique identifier for a service worker registration. The service worker must be on the same origin as the document that registers the ServiceWorker.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/scope">ServiceWorkerRegistration.scope - MDN</a>
    */
@@ -78,7 +78,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   public native String updateViaCache();
 
   /**
-   * The waiting property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is installed. This property is initially set to null.
+   * The waiting property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is installed. This property is initially set to null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/waiting">ServiceWorkerRegistration.waiting - MDN</a>
    */
@@ -89,7 +89,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   public native ServiceWorker waiting();
 
   /**
-   * The sync property of the ServiceWorkerRegistration interface returns a reference to the SyncManager interface, which manages background synchronization processes.
+   * The sync property of the ServiceWorkerRegistration interface returns a reference to the SyncManager interface, which manages background synchronization processes.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/sync">ServiceWorkerRegistration.sync - MDN</a>
    */
@@ -100,7 +100,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   public native SyncManager sync();
 
   /**
-   * The pushManager property of the ServiceWorkerRegistration interface returns a reference to the PushManager interface for managing push subscriptions; this includes support for subscribing, getting an active subscription, and accessing push permission status.
+   * The pushManager property of the ServiceWorkerRegistration interface returns a reference to the PushManager interface for managing push subscriptions; this includes support for subscribing, getting an active subscription, and accessing push permission status.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/pushManager">ServiceWorkerRegistration.pushManager - MDN</a>
    */
@@ -119,7 +119,7 @@ public class ServiceWorkerRegistration extends EventTarget {
   public native Promise<Boolean> unregister();
 
   /**
-   * The update() method of the ServiceWorkerRegistration interface attempts to update the service worker. It fetches the worker's script URL, and if the new worker is not byte-by-byte identical to the current worker, it installs the new worker. The fetch of the worker bypasses any browser caches if the previous fetch occurred over 24 hours ago.
+   * The update() method of the ServiceWorkerRegistration interface attempts to update the service worker. It fetches the worker's script URL, and if the new worker is not byte-by-byte identical to the current worker, it installs the new worker. The fetch of the worker bypasses any browser caches if the previous fetch occurred over 24 hours ago.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/update">ServiceWorkerRegistration.update - MDN</a>
    */

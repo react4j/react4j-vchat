@@ -425,7 +425,7 @@ public class Response {
   public native String type();
 
   /**
-   * The url read-only property of the Response interface contains the URL of the response. The value of the url property will be the final URL obtained after any redirects.
+   * The url read-only property of the Response interface contains the URL of the response. The value of the url property will be the final URL obtained after any redirects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/url">Response.url - MDN</a>
    */
@@ -524,7 +524,7 @@ public class Response {
   public native Promise<Any> json();
 
   /**
-   * The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8.
+   * The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/text">Body.text - MDN</a>
    */

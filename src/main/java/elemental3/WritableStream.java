@@ -5,7 +5,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The WritableStream interface of the the Streams API provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.
+ * The WritableStream interface of the the Streams API provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WritableStream">WritableStream - MDN</a>
  */

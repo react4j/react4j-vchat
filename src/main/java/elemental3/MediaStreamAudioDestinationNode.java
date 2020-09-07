@@ -26,7 +26,7 @@ public class MediaStreamAudioDestinationNode extends AudioNode {
   }
 
   /**
-   * A MediaStream.
+   * A MediaStream containing a single audio track. The audio track is a MediaStreamTrack whose kind is audio.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream">MediaStreamAudioDestinationNode.stream - MDN</a>
    */

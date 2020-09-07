@@ -32,7 +32,7 @@ public class PerformanceEntry {
   public native double duration();
 
   /**
-   * The entryType property returns a DOMString representing the type of performance metric such as, for example, "mark". This property is read only.
+   * The entryType property returns a DOMString representing the type of performance metric such as, for example, &quot;mark&quot;. This property is read only.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType">PerformanceEntry.entryType - MDN</a>
    */

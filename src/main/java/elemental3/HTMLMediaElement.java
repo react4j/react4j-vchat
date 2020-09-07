@@ -58,7 +58,7 @@ public class HTMLMediaElement extends HTMLElement {
   public boolean autoplay;
 
   /**
-   * The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls whether user interface controls for playing the media item will be displayed.
+   * The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls whether user interface controls for playing the media item will be displayed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/controls">HTMLMediaElement.controls - MDN</a>
    */
@@ -126,7 +126,7 @@ public class HTMLMediaElement extends HTMLElement {
   public String src;
 
   /**
-   * The srcObject property of the HTMLMediaElement interface sets or returns the object which serves as the source of the media associated with the HTMLMediaElement.
+   * The srcObject property of the HTMLMediaElement interface sets or returns the object which serves as the source of the media associated with the HTMLMediaElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject">HTMLMediaElement.srcObject - MDN</a>
    */
@@ -134,7 +134,7 @@ public class HTMLMediaElement extends HTMLElement {
   public MediaProvider srcObject;
 
   /**
-   * The HTMLMediaElement.volume property sets the volume at which the media will be played.
+   * The HTMLMediaElement.volume property sets the volume at which the media will be played.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume">HTMLMediaElement.volume - MDN</a>
    */
@@ -150,7 +150,7 @@ public class HTMLMediaElement extends HTMLElement {
   }
 
   /**
-   * The read-only audioTracks property on HTMLMediaElement objects returns an AudioTrackList object listing all of the  AudioTrack objects representing the media element's audio tracks.
+   * The read-only audioTracks property on HTMLMediaElement objects returns an AudioTrackList object listing all of the  AudioTrack objects representing the media element's audio tracks.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/audioTracks">HTMLMediaElement.audioTracks - MDN</a>
    */
@@ -161,7 +161,7 @@ public class HTMLMediaElement extends HTMLElement {
   public native AudioTrackList audioTracks();
 
   /**
-   * The HTMLMediaElement.buffered read-only property returns a new TimeRanges object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the buffered property is accessed.
+   * The HTMLMediaElement.buffered read-only property returns a new TimeRanges object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the buffered property is accessed.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/buffered">HTMLMediaElement.buffered - MDN</a>
    */
@@ -172,7 +172,7 @@ public class HTMLMediaElement extends HTMLElement {
   public native TimeRanges buffered();
 
   /**
-   * The HTMLMediaElement.currentSrc property contains the absolute URL of the chosen media resource. This could happen, for example, if the web server selects a media file based on the resolution of the user's display. The value is an empty string if the networkState property is EMPTY.
+   * The HTMLMediaElement.currentSrc property contains the absolute URL of the chosen media resource. This could happen, for example, if the web server selects a media file based on the resolution of the user's display. The value is an empty string if the networkState property is EMPTY.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentSrc">HTMLMediaElement.currentSrc - MDN</a>
    */
@@ -224,7 +224,7 @@ public class HTMLMediaElement extends HTMLElement {
   public native int networkState();
 
   /**
-   * The read-only HTMLMediaElement.paused property tells whether the media element is paused.
+   * The read-only HTMLMediaElement.paused property tells whether the media element is paused.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/paused">HTMLMediaElement.paused - MDN</a>
    */
@@ -250,7 +250,7 @@ public class HTMLMediaElement extends HTMLElement {
   public native int readyState();
 
   /**
-   * The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains the time ranges that the user is able to seek to, if any.
+   * The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains the time ranges that the user is able to seek to, if any.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seekable">HTMLMediaElement.seekable - MDN</a>
    */

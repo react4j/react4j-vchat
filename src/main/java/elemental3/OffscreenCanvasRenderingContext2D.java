@@ -30,17 +30,26 @@ public class OffscreenCanvasRenderingContext2D {
   public boolean imageSmoothingEnabled;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ImageSmoothingQuality.class
+  )
   public String imageSmoothingQuality;
 
   @Nonnull
   public String filter;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasLineCap.class
+  )
   public String lineCap;
 
   public double lineDashOffset;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasLineJoin.class
+  )
   public String lineJoin;
 
   public double lineWidth;
@@ -48,15 +57,24 @@ public class OffscreenCanvasRenderingContext2D {
   public double miterLimit;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasDirection.class
+  )
   public String direction;
 
   @Nonnull
   public String font;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasTextAlign.class
+  )
   public String textAlign;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = CanvasTextBaseline.class
+  )
   public String textBaseline;
 
   public double shadowBlur;

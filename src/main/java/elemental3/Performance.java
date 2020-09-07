@@ -44,7 +44,7 @@ public class Performance extends EventTarget {
   public native double timeOrigin();
 
   /**
-   * The legacy Performance.navigation read-only property returns a PerformanceNavigation object representing the type of navigation that occurs in the given browsing context, such as the number of redirections needed to fetch the resource.
+   * The legacy Performance.navigation read-only property returns a PerformanceNavigation object representing the type of navigation that occurs in the given browsing context, such as the number of redirections needed to fetch the resource.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/navigation">Performance.navigation - MDN</a>
    */
@@ -114,42 +114,42 @@ public class Performance extends EventTarget {
   public native JsArray<PerformanceEntry> getEntriesByType(@Nonnull String type);
 
   /**
-   * The clearResourceTimings() method removes all performance entries with an entryType of "resource" from the browser's performance data buffer and sets the size of the performance data buffer to zero. To set the size of the browser's performance data buffer, use the Performance.setResourceTimingBufferSize() method.
+   * The clearResourceTimings() method removes all performance entries with an entryType of &quot;resource&quot; from the browser's performance data buffer and sets the size of the performance data buffer to zero. To set the size of the browser's performance data buffer, use the Performance.setResourceTimingBufferSize() method.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearResourceTimings">Performance.clearResourceTimings - MDN</a>
    */
   public native void clearResourceTimings();
 
   /**
-   * The setResourceTimingBufferSize() method sets the browser's resource timing buffer size to the specified number of "resource" performance entry type objects.
+   * The setResourceTimingBufferSize() method sets the browser's resource timing buffer size to the specified number of &quot;resource&quot; performance entry type objects.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/setResourceTimingBufferSize">Performance.setResourceTimingBufferSize - MDN</a>
    */
   public native void setResourceTimingBufferSize(int maxSize);
 
   /**
-   * The clearMarks() method removes the named mark from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of "mark" will be removed from the performance entry buffer.
+   * The clearMarks() method removes the named mark from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of &quot;mark&quot; will be removed from the performance entry buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearMarks">Performance.clearMarks - MDN</a>
    */
   public native void clearMarks(@Nonnull String markName);
 
   /**
-   * The clearMarks() method removes the named mark from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of "mark" will be removed from the performance entry buffer.
+   * The clearMarks() method removes the named mark from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of &quot;mark&quot; will be removed from the performance entry buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearMarks">Performance.clearMarks - MDN</a>
    */
   public native void clearMarks();
 
   /**
-   * The clearMeasures() method removes the named measure from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of "measure" will be removed from the performance entry buffer.
+   * The clearMeasures() method removes the named measure from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of &quot;measure&quot; will be removed from the performance entry buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearMeasures">Performance.clearMeasures - MDN</a>
    */
   public native void clearMeasures(@Nonnull String measureName);
 
   /**
-   * The clearMeasures() method removes the named measure from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of "measure" will be removed from the performance entry buffer.
+   * The clearMeasures() method removes the named measure from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of &quot;measure&quot; will be removed from the performance entry buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearMeasures">Performance.clearMeasures - MDN</a>
    */

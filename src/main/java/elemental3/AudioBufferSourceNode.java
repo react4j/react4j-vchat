@@ -66,7 +66,7 @@ public class AudioBufferSourceNode extends AudioScheduledSourceNode {
   }
 
   /**
-   * The detune property of the AudioBufferSourceNode interface is a k-rate AudioParam representing detuning of oscillation in cents.
+   * The detune property of the AudioBufferSourceNode interface is a k-rate AudioParam representing detuning of oscillation in cents.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/detune">AudioBufferSourceNode.detune - MDN</a>
    */

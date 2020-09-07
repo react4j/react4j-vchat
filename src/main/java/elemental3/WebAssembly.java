@@ -469,7 +469,7 @@ public final class WebAssembly {
   public native boolean validate(@Nonnull ArrayBuffer bytes);
 
   /**
-   * The WebAssembly.compileStreaming() function compiles a WebAssembly.Module directly from a streamed underlying source.  This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiateStreaming() function should be used).
+   * The WebAssembly.compileStreaming() function compiles a WebAssembly.Module directly from a streamed underlying source.  This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiateStreaming() function should be used).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming">WebAssembly.compileStreaming - MDN</a>
    */

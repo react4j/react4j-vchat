@@ -65,7 +65,7 @@ public class ClipboardItem {
       @Nonnull JsPropertyMap<ClipboardItemDelayedCallback> items);
 
   /**
-   * The getType() method of the ClipboardItem interface returns a Promise that resolves with a Blob of the requested  MIME type or an error if the MIME type is not found.
+   * The getType() method of the ClipboardItem interface returns a Promise that resolves with a Blob of the requested  MIME type or an error if the MIME type is not found.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/getType">ClipboardItem.getType - MDN</a>
    */

@@ -23,7 +23,7 @@ public class SyncManager {
   }
 
   /**
-   * The SyncManager.getTags method of the SyncManager interface returns a list of developer-defined identifiers for SyncManager registrations.
+   * The SyncManager.getTags method of the SyncManager interface returns a list of developer-defined identifiers for SyncManager registrations.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SyncManager/getTags">SyncManager.getTags - MDN</a>
    */
@@ -31,7 +31,7 @@ public class SyncManager {
   public native Promise<JsArray<String>> getTags();
 
   /**
-   * The SyncManager.register method of the SyncManager interface returns a Promise that resolves to a SyncRegistration instance.
+   * The SyncManager.register method of the SyncManager interface returns a Promise that resolves to a SyncRegistration instance.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SyncManager/register">SyncManager.register - MDN</a>
    */

@@ -494,7 +494,7 @@ public interface PublicKeyCredentialRequestOptions {
   }
 
   /**
-   * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be "example.com" but not "bar.org" or "baz.example.com".
+   * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be &quot;example.com&quot; but not &quot;bar.org&quot; or &quot;baz.example.com&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">PublicKeyCredentialRequestOptions.rpId - MDN</a>
    */
@@ -504,7 +504,7 @@ public interface PublicKeyCredentialRequestOptions {
   String rpId();
 
   /**
-   * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be "example.com" but not "bar.org" or "baz.example.com".
+   * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be &quot;example.com&quot; but not &quot;bar.org&quot; or &quot;baz.example.com&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">PublicKeyCredentialRequestOptions.rpId - MDN</a>
    */
@@ -512,7 +512,7 @@ public interface PublicKeyCredentialRequestOptions {
   void setRpId(@Nonnull String rpId);
 
   /**
-   * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be "example.com" but not "bar.org" or "baz.example.com".
+   * The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be &quot;example.com&quot; but not &quot;bar.org&quot; or &quot;baz.example.com&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">PublicKeyCredentialRequestOptions.rpId - MDN</a>
    */

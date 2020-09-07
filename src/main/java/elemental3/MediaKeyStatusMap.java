@@ -35,7 +35,7 @@ public class MediaKeyStatusMap {
   }
 
   /**
-   * The size read-only property of the MediaKeyStatusMap interface returns the number of key/value paIrs in the status map.
+   * The size read-only property of the MediaKeyStatusMap interface returns the number of key/value paIrs in the status map.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/size">MediaKeyStatusMap.size - MDN</a>
    */

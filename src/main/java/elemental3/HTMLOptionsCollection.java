@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * This interface inherits the methods of its parent, HTMLCollection.
+ * This interface inherits the methods of its parent, HTMLCollection.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionsCollection">HTMLOptionsCollection - MDN</a>
  */

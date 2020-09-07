@@ -9,7 +9,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The RTCAnswerOptions dictionary is used to provide optional settings when creating an SDP answer using RTCPeerConnection.createOffer() after receiving an offer from a remote peer.
+ * The RTCAnswerOptions dictionary is used to provide optional settings when creating an SDP answer using RTCPeerConnection.createOffer() after receiving an offer from a remote peer.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCAnswerOptions">RTCAnswerOptions - MDN</a>
  */

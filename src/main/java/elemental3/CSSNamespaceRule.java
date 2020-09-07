@@ -33,7 +33,7 @@ public class CSSNamespaceRule extends CSSRule {
   public native String namespaceURI();
 
   /**
-   * The CSSNamespaceRule.prefix read-only property returns a DOMString with the name of the prefix associated to this namespace. If there is no such prefix, returns  null.
+   * The CSSNamespaceRule.prefix read-only property returns a DOMString with the name of the prefix associated to this namespace. If there is no such prefix, returns  null.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSNamespaceRule/prefix">CSSNamespaceRule.prefix - MDN</a>
    */

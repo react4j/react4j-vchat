@@ -8,9 +8,10 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
- * The HTMLFormElement interface represents a form element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.
+ * The HTMLFormElement interface represents a form element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement">HTMLFormElement - MDN</a>
  */
@@ -49,22 +50,6 @@ public class HTMLFormElement extends HTMLElement {
   public String encoding;
 
   /**
-   * The HTMLFormElement.enctype property is the MIME type of content that is used to submit the form to the server. Possible values are:
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">HTMLFormElement.enctype - MDN</a>
-   */
-  @Nonnull
-  public String enctype;
-
-  /**
-   * The HTMLFormElement.method property represents the HTTP method used to submit the form.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method">HTMLFormElement.method - MDN</a>
-   */
-  @Nonnull
-  public String method;
-
-  /**
    * The HTMLFormElement.name property represents the name of the current form element as a string.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/name">HTMLFormElement.name - MDN</a>
@@ -84,6 +69,28 @@ public class HTMLFormElement extends HTMLElement {
    */
   @Nonnull
   public String target;
+
+  /**
+   * The HTMLFormElement.method property represents the HTTP method used to submit the form.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method">HTMLFormElement.method - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormMethodType.class
+  )
+  public String method;
+
+  /**
+   * The HTMLFormElement.enctype property is the MIME type of content that is used to submit the form to the server. Possible values are:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">HTMLFormElement.enctype - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormEncodingType.class
+  )
+  public String enctype;
 
   public HTMLFormElement() {
   }
@@ -125,14 +132,14 @@ public class HTMLFormElement extends HTMLElement {
   public native boolean reportValidity();
 
   /**
-   * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
+   * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit">HTMLFormElement.requestSubmit - MDN</a>
    */
   public native void requestSubmit(@Nullable HTMLElement submitter);
 
   /**
-   * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
+   * The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit">HTMLFormElement.requestSubmit - MDN</a>
    */

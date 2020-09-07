@@ -83,7 +83,7 @@ public class NodeIterator {
   public native void detach();
 
   /**
-   * The NodeIterator.nextNode() method returns the next node in the set represented by the NodeIterator and advances the position of the iterator within the set.  The first call to nextNode() returns the first node in the set.
+   * The NodeIterator.nextNode() method returns the next node in the set represented by the NodeIterator and advances the position of the iterator within the set.  The first call to nextNode() returns the first node in the set.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/nextNode">NodeIterator.nextNode - MDN</a>
    */

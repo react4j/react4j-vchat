@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Web Audio API's AudioParam interface represents an audio-related parameter, usually a parameter of an AudioNode (such as GainNode.gain).
@@ -20,6 +21,9 @@ import jsinterop.annotations.JsType;
 )
 public class AudioParam {
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutomationRate.class
+  )
   public String automationRate;
 
   /**
@@ -63,7 +67,7 @@ public class AudioParam {
   public native float minValue();
 
   /**
-   * The cancelAndHoldAtTime() property of the AudioParam interface cancels all scheduled future changes to the AudioParam but holds its value at a given time until further changes are made using other methods.
+   * The cancelAndHoldAtTime() property of the AudioParam interface cancels all scheduled future changes to the AudioParam but holds its value at a given time until further changes are made using other methods.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelAndHoldAtTime">AudioParam.cancelAndHoldAtTime - MDN</a>
    */
@@ -71,7 +75,7 @@ public class AudioParam {
   public native AudioParam cancelAndHoldAtTime(double cancelTime);
 
   /**
-   * A reference to this AudioParam object. In some older implementations this method returns void.
+   * A reference to this AudioParam object. In some older implementations this method returns void.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelScheduledValues">AudioParam.cancelScheduledValues - MDN</a>
    */
@@ -79,7 +83,7 @@ public class AudioParam {
   public native AudioParam cancelScheduledValues(double cancelTime);
 
   /**
-   * A reference to this AudioParam object. In some browsers older implementations of this interface return void.
+   * A reference to this AudioParam object. In some browsers older implementations of this interface return void.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime">AudioParam.exponentialRampToValueAtTime - MDN</a>
    */
@@ -87,7 +91,7 @@ public class AudioParam {
   public native AudioParam exponentialRampToValueAtTime(float value, double endTime);
 
   /**
-   * A reference to this AudioParam object. In some browsers older implementations of this interface return void.
+   * A reference to this AudioParam object. In some browsers older implementations of this interface return void.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/linearRampToValueAtTime">AudioParam.linearRampToValueAtTime - MDN</a>
    */

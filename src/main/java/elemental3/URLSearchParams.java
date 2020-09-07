@@ -61,14 +61,14 @@ public class URLSearchParams {
   }
 
   /**
-   * The append() method of the URLSearchParams interface appends a specified key/value pair as a new search parameter.
+   * The append() method of the URLSearchParams interface appends a specified key/value pair as a new search parameter.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/append">URLSearchParams.append - MDN</a>
    */
   public native void append(@Nonnull String name, @Nonnull String value);
 
   /**
-   * The delete() method of the URLSearchParams interface deletes the given search parameter and all its associated values, from the list of all search parameters.
+   * The delete() method of the URLSearchParams interface deletes the given search parameter and all its associated values, from the list of all search parameters.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/delete">URLSearchParams.delete - MDN</a>
    */
@@ -83,7 +83,7 @@ public class URLSearchParams {
   public native String get(@Nonnull String name);
 
   /**
-   * The getAll() method of the URLSearchParams interface returns all the values associated with a given search parameter as an array.
+   * The getAll() method of the URLSearchParams interface returns all the values associated with a given search parameter as an array.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/getAll">URLSearchParams.getAll - MDN</a>
    */

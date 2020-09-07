@@ -33,7 +33,7 @@ import jsinterop.base.Js;
 )
 public class RTCDataChannel extends EventTarget {
   /**
-   * The property binaryType on the RTCDataChannel interface is a DOMString which specifies the type of JavaScript object which should be used to represent binary data received on the RTCDataChannel. Values allowed by the WebSocket.binaryType property are also permitted here: "blob" if Blob objects are being used or "arraybuffer" if ArrayBuffer objects are being used. The default is "blob".
+   * The property binaryType on the RTCDataChannel interface is a DOMString which specifies the type of JavaScript object which should be used to represent binary data received on the RTCDataChannel. Values allowed by the WebSocket.binaryType property are also permitted here: &quot;blob&quot; if Blob objects are being used or &quot;arraybuffer&quot; if ArrayBuffer objects are being used. The default is &quot;blob&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/binaryType">RTCDataChannel.binaryType - MDN</a>
    */
@@ -41,7 +41,7 @@ public class RTCDataChannel extends EventTarget {
   public String binaryType;
 
   /**
-   * The RTCDataChannel property bufferedAmountLowThreshold is used to specify the number of bytes of buffered outgoing data that is considered "low." The default value is 0.
+   * The RTCDataChannel property bufferedAmountLowThreshold is used to specify the number of bytes of buffered outgoing data that is considered &quot;low.&quot; The default value is 0.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmountLowThreshold">RTCDataChannel.bufferedAmountLowThreshold - MDN</a>
    */
@@ -83,7 +83,7 @@ public class RTCDataChannel extends EventTarget {
   public MessageEventHandler onmessage;
 
   /**
-   * The RTCDataChannel.onopen property is an EventHandler which specifies a function to be called when the open event is fired; this is a simple Event which is sent when the data channel's underlying data transport—the link over which the RTCDataChannel's messages flow—is established or re-established.
+   * The RTCDataChannel.onopen property is an EventHandler which specifies a function to be called when the open event is fired; this is a simple Event which is sent when the data channel's underlying data transport&mdash;the link over which the RTCDataChannel's messages flow&mdash;is established or re-established.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onopen">RTCDataChannel.onopen - MDN</a>
    */
@@ -168,7 +168,7 @@ public class RTCDataChannel extends EventTarget {
   public native boolean ordered();
 
   /**
-   * The read-only RTCDataChannel property protocol returns a DOMString containing the name of the subprotocol in use. If no protocol was specified when the data channel was created, then this property's value is "" (the empty string).
+   * The read-only RTCDataChannel property protocol returns a DOMString containing the name of the subprotocol in use. If no protocol was specified when the data channel was created, then this property's value is &quot;&quot; (the empty string).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/protocol">RTCDataChannel.protocol - MDN</a>
    */

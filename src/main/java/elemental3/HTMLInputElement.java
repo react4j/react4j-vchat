@@ -49,12 +49,6 @@ public class HTMLInputElement extends HTMLElement {
   @Nonnull
   public String formAction;
 
-  @Nonnull
-  public String formEnctype;
-
-  @Nonnull
-  public String formMethod;
-
   public boolean formNoValidate;
 
   @Nonnull
@@ -124,6 +118,18 @@ public class HTMLInputElement extends HTMLElement {
 
   @Nonnull
   public String useMap;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormMethodType.class
+  )
+  public String formMethod;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = FormEncodingType.class
+  )
+  public String formEnctype;
 
   public HTMLInputElement() {
   }

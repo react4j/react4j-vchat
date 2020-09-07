@@ -40,7 +40,7 @@ public class HTMLCanvasElement extends HTMLElement {
   }
 
   /**
-   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported.
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
@@ -48,7 +48,7 @@ public class HTMLCanvasElement extends HTMLElement {
   public native RenderingContext getContext(@Nonnull String contextId, @Nullable Any options);
 
   /**
-   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported.
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
@@ -57,7 +57,7 @@ public class HTMLCanvasElement extends HTMLElement {
       @DoNotAutobox @Nullable Object options);
 
   /**
-   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported.
+   * The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
@@ -95,7 +95,7 @@ public class HTMLCanvasElement extends HTMLElement {
   public native void toBlob(@Nonnull BlobCallback _callback);
 
   /**
-   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
+   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL - MDN</a>
    */
@@ -103,7 +103,7 @@ public class HTMLCanvasElement extends HTMLElement {
   public native String toDataURL(@Nonnull String type, @Nullable Any quality);
 
   /**
-   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
+   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL - MDN</a>
    */
@@ -111,7 +111,7 @@ public class HTMLCanvasElement extends HTMLElement {
   public native String toDataURL(@Nonnull String type, @DoNotAutobox @Nullable Object quality);
 
   /**
-   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
+   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL - MDN</a>
    */
@@ -119,7 +119,7 @@ public class HTMLCanvasElement extends HTMLElement {
   public native String toDataURL(@Nonnull String type);
 
   /**
-   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
+   * The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL - MDN</a>
    */

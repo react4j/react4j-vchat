@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
 )
 public class HTMLLinkElement extends HTMLElement {
   /**
-   * The as property of the HTMLLinkElement interface returns a DOMString representing the type of content being loaded by the HTML link, one of "script", "style", "image", "video", "audio", "track", "font", "fetch".
+   * The as property of the HTMLLinkElement interface returns a DOMString representing the type of content being loaded by the HTML link, one of &quot;script&quot;, &quot;style&quot;, &quot;image&quot;, &quot;video&quot;, &quot;audio&quot;, &quot;track&quot;, &quot;font&quot;, &quot;fetch&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/as">HTMLLinkElement.as - MDN</a>
    */

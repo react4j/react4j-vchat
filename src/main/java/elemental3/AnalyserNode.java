@@ -28,14 +28,14 @@ public class AnalyserNode extends AudioNode {
   public int fftSize;
 
   /**
-   * The maxDecibels property of the AnalyserNode interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values — basically, this specifies the maximum value for the range of results when using getFloatFrequencyData() or getByteFrequencyData().
+   * The maxDecibels property of the AnalyserNode interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values &mdash; basically, this specifies the maximum value for the range of results when using getFloatFrequencyData() or getByteFrequencyData().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/maxDecibels">AnalyserNode.maxDecibels - MDN</a>
    */
   public double maxDecibels;
 
   /**
-   * The minDecibels property of the AnalyserNode interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values — basically, this specifies the minimum value for the range of results when using getFloatFrequencyData() or getByteFrequencyData().
+   * The minDecibels property of the AnalyserNode interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values &mdash; basically, this specifies the minimum value for the range of results when using getFloatFrequencyData() or getByteFrequencyData().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/minDecibels">AnalyserNode.minDecibels - MDN</a>
    */

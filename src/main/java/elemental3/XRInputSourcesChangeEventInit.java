@@ -11,7 +11,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 /**
- * The XRInputSourcesChangeEventInit dictionary is used to provide options to the XRInputSourcesChangeEvent() constructor in order to set the initial state of the new XRInputSourcesChangeEvent object.
+ * The XRInputSourcesChangeEventInit dictionary is used to provide options to the XRInputSourcesChangeEvent() constructor in order to set the initial state of the new XRInputSourcesChangeEvent object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit">XRInputSourcesChangeEventInit - MDN</a>
  */
@@ -30,7 +30,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
   }
 
   /**
-   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
+   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
    */
@@ -41,7 +41,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
   JsArray<XRInputSource> added();
 
   /**
-   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
+   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
    */
@@ -49,7 +49,7 @@ public interface XRInputSourcesChangeEventInit extends EventInit {
   void setAdded(@Nonnull JsArray<XRInputSource> added);
 
   /**
-   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
+   * The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added">XRInputSourcesChangeEventInit.added - MDN</a>
    */

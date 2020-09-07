@@ -7,7 +7,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The MediaQueryListEvent object stores information on the changes that have happened to a MediaQueryList object — instances are available as the event object on a function referenced by a MediaQueryList.onchange property or MediaQueryList.addListener() call.
+ * The MediaQueryListEvent object stores information on the changes that have happened to a MediaQueryList object &mdash; instances are available as the event object on a function referenced by a MediaQueryList.onchange property or MediaQueryList.addListener() call.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent">MediaQueryListEvent - MDN</a>
  */

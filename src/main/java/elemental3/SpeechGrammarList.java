@@ -60,7 +60,7 @@ public class SpeechGrammarList {
   public native void addFromURI(@Nonnull String src);
 
   /**
-   * The item getter of the SpeechGrammarList interface is a standard getter — it allows individual SpeechGrammar objects to be retrieved from the SpeechGrammarList using array syntax.
+   * The item getter of the SpeechGrammarList interface is a standard getter &mdash; it allows individual SpeechGrammar objects to be retrieved from the SpeechGrammarList using array syntax.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/item">SpeechGrammarList.item - MDN</a>
    */

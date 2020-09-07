@@ -88,7 +88,7 @@ public interface XRWebGLLayerInit {
   }
 
   /**
-   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
+   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth">XRWebGLLayerInit.depth - MDN</a>
    */
@@ -98,7 +98,7 @@ public interface XRWebGLLayerInit {
   boolean depth();
 
   /**
-   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
+   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth">XRWebGLLayerInit.depth - MDN</a>
    */
@@ -106,7 +106,7 @@ public interface XRWebGLLayerInit {
   void setDepth(boolean depth);
 
   /**
-   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
+   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth">XRWebGLLayerInit.depth - MDN</a>
    */
@@ -178,7 +178,7 @@ public interface XRWebGLLayerInit {
   }
 
   /**
-   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
+   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil">XRWebGLLayerInit.stencil - MDN</a>
    */
@@ -188,7 +188,7 @@ public interface XRWebGLLayerInit {
   boolean stencil();
 
   /**
-   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
+   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil">XRWebGLLayerInit.stencil - MDN</a>
    */
@@ -196,7 +196,7 @@ public interface XRWebGLLayerInit {
   void setStencil(boolean stencil);
 
   /**
-   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
+   * When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil">XRWebGLLayerInit.stencil - MDN</a>
    */

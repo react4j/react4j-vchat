@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
+ * The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack">MediaStreamTrack - MDN</a>
  */
@@ -72,7 +72,7 @@ public class MediaStreamTrack extends EventTarget {
   public native String id();
 
   /**
-   * The MediaStreamTrack.kind read-only property returns a DOMString set to "audio" if the track is an audio track and to "video", if it is a video track.
+   * The MediaStreamTrack.kind read-only property returns a DOMString set to &quot;audio&quot; if the track is an audio track and to &quot;video&quot;, if it is a video track.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/kind">MediaStreamTrack.kind - MDN</a>
    */
@@ -83,7 +83,7 @@ public class MediaStreamTrack extends EventTarget {
   public native String kind();
 
   /**
-   * The MediaStreamTrack.label read-only property returns a DOMString containing a user agent-assigned label that identifies the track source, as in "internal microphone".
+   * The MediaStreamTrack.label read-only property returns a DOMString containing a user agent-assigned label that identifies the track source, as in &quot;internal microphone&quot;.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/label">MediaStreamTrack.label - MDN</a>
    */
@@ -94,7 +94,7 @@ public class MediaStreamTrack extends EventTarget {
   public native String label();
 
   /**
-   * The muted read-only property of the MediaStreamTrack interface returns a Boolean value indicating whether or not the track is currently unable to provide media output.
+   * The muted read-only property of the MediaStreamTrack interface returns a Boolean value indicating whether or not the track is currently unable to provide media output.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/muted">MediaStreamTrack.muted - MDN</a>
    */
@@ -136,7 +136,7 @@ public class MediaStreamTrack extends EventTarget {
   public native Promise<Void> applyConstraints();
 
   /**
-   * The clone() method of the MediaStreamTrack interface creates a duplicate of the MediaStreamTrack. This new MediaStreamTrack object is identical except for its unique id.
+   * The clone() method of the MediaStreamTrack interface creates a duplicate of the MediaStreamTrack. This new MediaStreamTrack object is identical except for its unique id.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/clone">MediaStreamTrack.clone - MDN</a>
    */
@@ -147,7 +147,7 @@ public class MediaStreamTrack extends EventTarget {
   public native MediaStreamTrack clone_();
 
   /**
-   * The getCapabilities() method of the MediaStreamTrack interface returns a MediaTrackCapabilities object which specifies the values or range of values which each constrainable property, based upon the platform and user agent.
+   * The getCapabilities() method of the MediaStreamTrack interface returns a MediaTrackCapabilities object which specifies the values or range of values which each constrainable property, based upon the platform and user agent.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities">MediaStreamTrack.getCapabilities - MDN</a>
    */
@@ -155,7 +155,7 @@ public class MediaStreamTrack extends EventTarget {
   public native MediaTrackCapabilities getCapabilities();
 
   /**
-   * The getConstraints() method of the MediaStreamTrack interface returns a MediaTrackConstraints object containing the set of constraints most recently established for the track using a prior call to applyConstraints(). These constraints indicate values and ranges of values that the Web site or application has specified are required or acceptable for the included constrainable properties.
+   * The getConstraints() method of the MediaStreamTrack interface returns a MediaTrackConstraints object containing the set of constraints most recently established for the track using a prior call to applyConstraints(). These constraints indicate values and ranges of values that the Web site or application has specified are required or acceptable for the included constrainable properties.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getConstraints">MediaStreamTrack.getConstraints - MDN</a>
    */
@@ -163,7 +163,7 @@ public class MediaStreamTrack extends EventTarget {
   public native MediaTrackConstraints getConstraints();
 
   /**
-   * The getSettings() method of the MediaStreamTrack interface returns a MediaTrackSettings object containing the current values of each of the constrainable properties for the current MediaStreamTrack.
+   * The getSettings() method of the MediaStreamTrack interface returns a MediaTrackSettings object containing the current values of each of the constrainable properties for the current MediaStreamTrack.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getSettings">MediaStreamTrack.getSettings - MDN</a>
    */

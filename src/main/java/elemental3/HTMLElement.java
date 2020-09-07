@@ -45,7 +45,7 @@ public class HTMLElement extends Element {
   public boolean hidden;
 
   /**
-   * The innerText property of the HTMLElement interface represents the "rendered" text content of a node and its descendants.
+   * The innerText property of the HTMLElement interface represents the &quot;rendered&quot; text content of a node and its descendants.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText">HTMLElement.innerText - MDN</a>
    */
@@ -287,7 +287,7 @@ public class HTMLElement extends Element {
   public FocusEventHandler onfocus;
 
   /**
-   * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
+   * The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata">GlobalEventHandlers.onformdata - MDN</a>
    */
@@ -295,7 +295,7 @@ public class HTMLElement extends Element {
   public EventHandler onformdata;
 
   /**
-   * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
+   * The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oninput">GlobalEventHandlers.oninput - MDN</a>
    */
@@ -836,7 +836,7 @@ public class HTMLElement extends Element {
   public native ElementInternals attachInternals();
 
   /**
-   * The HTMLElement.click() method simulates a mouse click on an element.
+   * The HTMLElement.click() method simulates a mouse click on an element.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click">HTMLElement.click - MDN</a>
    */

@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The BiquadFilterNode interface represents a simple low-order filter, and is created using the AudioContext.createBiquadFilter() method. It is an AudioNode that can represent different kinds of filters, tone control devices, and graphic equalizers.
@@ -20,6 +21,9 @@ import jsinterop.annotations.JsType;
 )
 public class BiquadFilterNode extends AudioNode {
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = BiquadFilterType.class
+  )
   public String type;
 
   /**

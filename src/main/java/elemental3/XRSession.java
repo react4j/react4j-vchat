@@ -43,7 +43,7 @@ public class XRSession extends EventTarget {
   }
 
   /**
-   * The read-only inputSources property of the XRSession interface returns an XRInputSourceArray object which lists all controllers and input devices which are expressly associated with the XR device and are currently available.
+   * The read-only inputSources property of the XRSession interface returns an XRInputSourceArray object which lists all controllers and input devices which are expressly associated with the XR device and are currently available.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputSources">XRSession.inputSources - MDN</a>
    */
@@ -54,7 +54,7 @@ public class XRSession extends EventTarget {
   public native XRInputSourceArray inputSources();
 
   /**
-   * The read-only renderState property of an XRSession object indicates the returns a XRRenderState object describing how the user's environment which should be rendered.
+   * The read-only renderState property of an XRSession object indicates the returns a XRRenderState object describing how the user's environment which should be rendered.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/renderState">XRSession.renderState - MDN</a>
    */
@@ -65,7 +65,7 @@ public class XRSession extends EventTarget {
   public native XRRenderState renderState();
 
   /**
-   * The read-only visibilityState property of the XRSession interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus.
+   * The read-only visibilityState property of the XRSession interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState">XRSession.visibilityState - MDN</a>
    */
@@ -76,14 +76,14 @@ public class XRSession extends EventTarget {
   public native String visibilityState();
 
   /**
-   * The cancelAnimationFrame() method of the XRSession interface cancels an animation frame which was previously requested by calling requestAnimationFrame.
+   * The cancelAnimationFrame() method of the XRSession interface cancels an animation frame which was previously requested by calling requestAnimationFrame.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/cancelAnimationFrame">XRSession.cancelAnimationFrame - MDN</a>
    */
   public native void cancelAnimationFrame(int handle);
 
   /**
-   * The end() method shuts down the XRSession on which it's called, returning a promise which resolves once the session has fully shut down.
+   * The end() method shuts down the XRSession on which it's called, returning a promise which resolves once the session has fully shut down.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end">XRSession.end - MDN</a>
    */
@@ -91,14 +91,14 @@ public class XRSession extends EventTarget {
   public native Promise<Void> end();
 
   /**
-   * The XRSession method requestAnimationFrame(), much like the Window method of the same name, schedules a callback to be executed the next time the browser is ready to paint the session's virtual environment to the XR display.
+   * The XRSession method requestAnimationFrame(), much like the Window method of the same name, schedules a callback to be executed the next time the browser is ready to paint the session's virtual environment to the XR display.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestAnimationFrame">XRSession.requestAnimationFrame - MDN</a>
    */
   public native int requestAnimationFrame(@Nonnull XRFrameRequestCallback callback);
 
   /**
-   * The requestReferenceSpace() method of the XRSession interface returns a promise that resolves with an instance of either XRReferenceSpace or XRBoundedReferenceSpace as appropriate given the type of reference space requested.
+   * The requestReferenceSpace() method of the XRSession interface returns a promise that resolves with an instance of either XRReferenceSpace or XRBoundedReferenceSpace as appropriate given the type of reference space requested.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace">XRSession.requestReferenceSpace - MDN</a>
    */
@@ -107,14 +107,14 @@ public class XRSession extends EventTarget {
       @MagicConstant(valuesFromClass = XRReferenceSpaceType.class) @Nonnull String type);
 
   /**
-   * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
+   * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/updateRenderState">XRSession.updateRenderState - MDN</a>
    */
   public native void updateRenderState(@Nonnull XRRenderStateInit state);
 
   /**
-   * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
+   * The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSession/updateRenderState">XRSession.updateRenderState - MDN</a>
    */

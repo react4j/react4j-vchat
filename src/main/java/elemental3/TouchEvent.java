@@ -37,7 +37,7 @@ public class TouchEvent extends UIEvent {
   }
 
   /**
-   * A Boolean value indicating whether or not the alt (Alternate) key is enabled when the touch event is created. If the alt key is enabled, the attribute's value is true. Otherwise, it is false.
+   * A Boolean value indicating whether or not the alt (Alternate) key is enabled when the touch event is created. If the alt key is enabled, the attribute's value is true. Otherwise, it is false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/altKey">TouchEvent.altKey - MDN</a>
    */
@@ -58,7 +58,7 @@ public class TouchEvent extends UIEvent {
   public native TouchList changedTouches();
 
   /**
-   * A Boolean value indicating whether the control (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false.
+   * A Boolean value indicating whether the control (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/ctrlKey">TouchEvent.ctrlKey - MDN</a>
    */
@@ -68,7 +68,7 @@ public class TouchEvent extends UIEvent {
   public native boolean ctrlKey();
 
   /**
-   * A Boolean value indicating whether or not the Meta key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false.
+   * A Boolean value indicating whether or not the Meta key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/metaKey">TouchEvent.metaKey - MDN</a>
    */
@@ -78,7 +78,7 @@ public class TouchEvent extends UIEvent {
   public native boolean metaKey();
 
   /**
-   * A Boolean value indicating whether or not the shift key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false.
+   * A Boolean value indicating whether or not the shift key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/shiftKey">TouchEvent.shiftKey - MDN</a>
    */

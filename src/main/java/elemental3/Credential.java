@@ -7,7 +7,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The Credential interface of the the Credential Management API provides information about an entity as a prerequisite to a trust decision.
+ * The Credential interface of the the Credential Management API provides information about an entity as a prerequisite to a trust decision.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Credential">Credential - MDN</a>
  */
@@ -33,7 +33,7 @@ public class Credential {
   public native String id();
 
   /**
-   * The type property of the Credential interface returns a DOMString containing the credential's type. Valid values are password, federated and public-key.
+   * The type property of the Credential interface returns a DOMString containing the credential's type. Valid values are password, federated and public-key.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Credential/type">Credential.type - MDN</a>
    */

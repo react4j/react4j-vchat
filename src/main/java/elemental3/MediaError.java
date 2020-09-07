@@ -45,7 +45,7 @@ public class MediaError {
   public native int code();
 
   /**
-   * The read-only property MediaError.message returns a DOMString which contains a human-readable string offering specific diagnostic details related to the error described by the MediaError object, or an empty string ("") if no diagnostic information can be determined or provided.
+   * The read-only property MediaError.message returns a DOMString which contains a human-readable string offering specific diagnostic details related to the error described by the MediaError object, or an empty string (&quot;&quot;) if no diagnostic information can be determined or provided.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaError/message">MediaError.message - MDN</a>
    */
