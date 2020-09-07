@@ -8,6 +8,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
@@ -23,9 +24,6 @@ import jsinterop.base.Js;
 public class HTMLElement extends Element {
   @Nonnull
   public String accessKey;
-
-  @Nonnull
-  public String autocapitalize;
 
   /**
    * The HTMLElement.dir property gets or sets the text writing directionality of the content of the current element.
@@ -71,6 +69,12 @@ public class HTMLElement extends Element {
   public String title;
 
   public boolean translate;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = AutocapitalizeType.class
+  )
+  public String autocapitalize;
 
   /**
    * The contentEditable property of the HTMLElement interface specifies whether or not the element is editable.
