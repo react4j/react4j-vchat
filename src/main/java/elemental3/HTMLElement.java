@@ -25,14 +25,6 @@ public class HTMLElement extends Element {
   @Nonnull
   public String accessKey;
 
-  /**
-   * The HTMLElement.dir property gets or sets the text writing directionality of the content of the current element.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir">HTMLElement.dir - MDN</a>
-   */
-  @Nonnull
-  public String dir;
-
   public boolean draggable;
 
   /**
@@ -75,6 +67,17 @@ public class HTMLElement extends Element {
       valuesFromClass = AutocapitalizeType.class
   )
   public String autocapitalize;
+
+  /**
+   * The HTMLElement.dir property gets or sets the text writing directionality of the content of the current element.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir">HTMLElement.dir - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = DirType.class
+  )
+  public String dir;
 
   /**
    * The contentEditable property of the HTMLElement interface specifies whether or not the element is editable.
