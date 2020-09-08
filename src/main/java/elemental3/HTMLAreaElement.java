@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of area elements.
@@ -31,14 +32,6 @@ public class HTMLAreaElement extends HTMLElement {
   public String ping;
 
   /**
-   * The HTMLAreaElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the area element defining which referrer is sent when fetching the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy">HTMLAreaElement.referrerPolicy - MDN</a>
-   */
-  @Nonnull
-  public String referrerPolicy;
-
-  /**
    * The HTMLAreaElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the area element and the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/rel">HTMLAreaElement.rel - MDN</a>
@@ -53,6 +46,17 @@ public class HTMLAreaElement extends HTMLElement {
   public String target;
 
   public boolean noHref;
+
+  /**
+   * The HTMLAreaElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the area element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/referrerPolicy">HTMLAreaElement.referrerPolicy - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
+  public String referrerPolicy;
 
   @Nonnull
   public String hash;

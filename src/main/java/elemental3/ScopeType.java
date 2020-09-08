@@ -4,7 +4,7 @@ import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 
 /**
- * An enumerated value to define the cells that the headerelement relates to.
+ * An enumerated value to define the cells that the header element relates to.
  */
 @Generated("org.realityforge.webtack")
 public final class ScopeType {

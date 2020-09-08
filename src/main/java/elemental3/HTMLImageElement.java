@@ -52,22 +52,6 @@ public class HTMLImageElement extends HTMLElement {
   public boolean isMap;
 
   /**
-   * The HTMLImageElement property loading is a string whose value provides a hint to the user agent that tells the browser how to handle loading images which are currently outside the window's visual viewport.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">HTMLImageElement.loading - MDN</a>
-   */
-  @Nonnull
-  public String loading;
-
-  /**
-   * The HTMLImageElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the img element defining which referrer is sent when fetching the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy">HTMLImageElement.referrerPolicy - MDN</a>
-   */
-  @Nonnull
-  public String referrerPolicy;
-
-  /**
    * The HTMLImageElement property sizes allows you to specify the layout width of the image for each of a list of media conditions. This provides the ability to automatically select among different images&mdash;even images of different orientations or aspect ratios&mdash;as the document state changes to match different media conditions.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes">HTMLImageElement.sizes - MDN</a>
@@ -135,6 +119,28 @@ public class HTMLImageElement extends HTMLElement {
       valuesFromClass = CrossOriginType.class
   )
   public String crossOrigin;
+
+  /**
+   * The HTMLImageElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the img element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy">HTMLImageElement.referrerPolicy - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
+  public String referrerPolicy;
+
+  /**
+   * The HTMLImageElement property loading is a string whose value provides a hint to the user agent that tells the browser how to handle loading images which are currently outside the window's visual viewport.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">HTMLImageElement.loading - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = LoadingType.class
+  )
+  public String loading;
 
   public HTMLImageElement() {
   }

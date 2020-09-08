@@ -49,14 +49,6 @@ public class HTMLLinkElement extends HTMLElement {
   public String media;
 
   /**
-   * The HTMLLinkElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the link element defining which referrer is sent when fetching the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/referrerPolicy">HTMLLinkElement.referrerPolicy - MDN</a>
-   */
-  @Nonnull
-  public String referrerPolicy;
-
-  /**
    * The HTMLLinkElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the link element and the current document.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel">HTMLLinkElement.rel - MDN</a>
@@ -81,6 +73,17 @@ public class HTMLLinkElement extends HTMLElement {
       valuesFromClass = CrossOriginType.class
   )
   public String crossOrigin;
+
+  /**
+   * The HTMLLinkElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the link element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/referrerPolicy">HTMLLinkElement.referrerPolicy - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
+  public String referrerPolicy;
 
   public HTMLLinkElement() {
   }

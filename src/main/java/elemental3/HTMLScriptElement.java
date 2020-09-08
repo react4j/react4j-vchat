@@ -28,14 +28,6 @@ public class HTMLScriptElement extends HTMLElement {
 
   public boolean noModule;
 
-  /**
-   * The referrerPolicy property of the HTMLScriptElement interface reflects the HTML referrerpolicy of the script element and fetches made by that script, defining which referrer is sent when fetching the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy">HTMLScriptElement.referrerPolicy - MDN</a>
-   */
-  @Nonnull
-  public String referrerPolicy;
-
   @Nonnull
   public String src;
 
@@ -59,6 +51,17 @@ public class HTMLScriptElement extends HTMLElement {
       valuesFromClass = CrossOriginType.class
   )
   public String crossOrigin;
+
+  /**
+   * The referrerPolicy property of the HTMLScriptElement interface reflects the HTML referrerpolicy of the script element and fetches made by that script, defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy">HTMLScriptElement.referrerPolicy - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
+  public String referrerPolicy;
 
   public HTMLScriptElement() {
   }

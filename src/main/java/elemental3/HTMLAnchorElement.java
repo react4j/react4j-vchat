@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLAnchorElement interface represents hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to a element; not to be confused with link, which is represented by HTMLLinkElement)
@@ -31,14 +32,6 @@ public class HTMLAnchorElement extends HTMLElement {
 
   @Nonnull
   public String ping;
-
-  /**
-   * The HTMLAnchorElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the a element defining which referrer is sent when fetching the resource.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/referrerPolicy">HTMLAnchorElement.referrerPolicy - MDN</a>
-   */
-  @Nonnull
-  public String referrerPolicy;
 
   /**
    * The HTMLAnchorElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the a element and the current document.
@@ -71,6 +64,17 @@ public class HTMLAnchorElement extends HTMLElement {
 
   @Nonnull
   public String shape;
+
+  /**
+   * The HTMLAnchorElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the a element defining which referrer is sent when fetching the resource.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/referrerPolicy">HTMLAnchorElement.referrerPolicy - MDN</a>
+   */
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ReferrerPolicy.class
+  )
+  public String referrerPolicy;
 
   @Nonnull
   public String hash;
