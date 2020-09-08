@@ -15,7 +15,7 @@ public final class FormEncodingType {
   public static final String application_x_www_form_urlencoded = "application/x-www-form-urlencoded";
 
   /**
-   * Use this if the form contains <input> elements with type=file.
+   * Use this if the form contains <code>&lt;input&gt;</code> elements with type=file.
    */
   @Nonnull
   public static final String multipart_form_data = "multipart/form-data";

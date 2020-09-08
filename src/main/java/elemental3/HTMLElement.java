@@ -91,6 +91,9 @@ public class HTMLElement extends Element {
   public String enterKeyHint;
 
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = InputModeType.class
+  )
   public String inputMode;
 
   /**

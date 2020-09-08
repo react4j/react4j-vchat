@@ -69,7 +69,7 @@ public class HTMLFormElement extends HTMLElement {
 
   @Nonnull
   @MagicConstant(
-      valuesFromClass = AutocompleteType.class
+      valuesFromClass = FormAutocompleteType.class
   )
   public String autocomplete;
 

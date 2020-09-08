@@ -98,9 +98,6 @@ public class HTMLInputElement extends HTMLElement {
   public String step;
 
   @Nonnull
-  public String type;
-
-  @Nonnull
   public String value;
 
   @Nullable
@@ -133,6 +130,12 @@ public class HTMLInputElement extends HTMLElement {
       valuesFromClass = FormEncodingType.class
   )
   public String formEnctype;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = InputType.class
+  )
+  public String type;
 
   public HTMLInputElement() {
   }
