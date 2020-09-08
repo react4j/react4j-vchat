@@ -43,7 +43,7 @@ public class HTMLButtonElement extends HTMLElement {
 
   @Nonnull
   @MagicConstant(
-      valuesFromClass = HTMLButtonElementType.class
+      valuesFromClass = ButtonType.class
   )
   public String type;
 

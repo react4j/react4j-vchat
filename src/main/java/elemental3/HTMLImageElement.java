@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLImageElement interface represents an HTML img element, providing the properties and methods used to manipulate image elements.
@@ -27,14 +28,6 @@ public class HTMLImageElement extends HTMLElement {
    */
   @Nonnull
   public String alt;
-
-  /**
-   * The HTMLImageElement interface's crossOrigin attribute is a string which specifies the Cross-Origin Resource Sharing (CORS) setting to use when retrieving the image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin">HTMLImageElement.crossOrigin - MDN</a>
-   */
-  @Nullable
-  public String crossOrigin;
 
   /**
    * The decoding property of the HTMLImageElement interface represents a hint given to the browser on how it should decode the image.
@@ -131,6 +124,17 @@ public class HTMLImageElement extends HTMLElement {
   public String name;
 
   public int vspace;
+
+  /**
+   * The HTMLImageElement interface's crossOrigin attribute is a string which specifies the Cross-Origin Resource Sharing (CORS) setting to use when retrieving the image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/crossOrigin">HTMLImageElement.crossOrigin - MDN</a>
+   */
+  @Nullable
+  @MagicConstant(
+      valuesFromClass = CrossOriginType.class
+  )
+  public String crossOrigin;
 
   public HTMLImageElement() {
   }

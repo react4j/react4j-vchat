@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLTableCellElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document.
@@ -27,9 +28,6 @@ public class HTMLTableCellElement extends HTMLElement {
   public String headers;
 
   public int rowSpan;
-
-  @Nonnull
-  public String scope;
 
   @Nonnull
   public String align;
@@ -56,6 +54,12 @@ public class HTMLTableCellElement extends HTMLElement {
 
   @Nonnull
   public String width;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = ScopeType.class
+  )
+  public String scope;
 
   public HTMLTableCellElement() {
   }

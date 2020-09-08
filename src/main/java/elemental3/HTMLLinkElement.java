@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLLinkElement interface represents reference information for external resources and the relationship of those resources to a document and vice-versa (corresponds to link element; not to be confused with a, which is represented by HTMLAnchorElement). This object inherits all of the properties and methods of the HTMLElement interface.
@@ -26,9 +27,6 @@ public class HTMLLinkElement extends HTMLElement {
    */
   @Nonnull
   public String as;
-
-  @Nullable
-  public String crossOrigin;
 
   public boolean disabled;
 
@@ -77,6 +75,12 @@ public class HTMLLinkElement extends HTMLElement {
 
   @Nonnull
   public String target;
+
+  @Nullable
+  @MagicConstant(
+      valuesFromClass = CrossOriginType.class
+  )
+  public String crossOrigin;
 
   public HTMLLinkElement() {
   }

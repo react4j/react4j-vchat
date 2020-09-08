@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * HTML script elements expose the HTMLScriptElement interface, which provides special properties and methods for manipulating the behavior and execution of script elements (beyond the inherited HTMLElement interface).
@@ -19,9 +20,6 @@ import jsinterop.annotations.JsType;
 )
 public class HTMLScriptElement extends HTMLElement {
   public boolean async;
-
-  @Nullable
-  public String crossOrigin;
 
   public boolean defer;
 
@@ -55,6 +53,12 @@ public class HTMLScriptElement extends HTMLElement {
 
   @Nonnull
   public String htmlFor;
+
+  @Nullable
+  @MagicConstant(
+      valuesFromClass = CrossOriginType.class
+  )
+  public String crossOrigin;
 
   public HTMLScriptElement() {
   }

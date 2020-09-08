@@ -7,7 +7,7 @@ import javax.annotation.Nonnull;
  * An enumeration describing the behavior of the button.
  */
 @Generated("org.realityforge.webtack")
-public final class HTMLButtonElementType {
+public final class ButtonType {
   /**
    * The button submits the form. This is the default value if the attribute is not specified, or if it is dynamically changed to an empty or invalid value.
    */
@@ -33,6 +33,6 @@ public final class HTMLButtonElementType {
   @Nonnull
   public static final String menu = "menu";
 
-  private HTMLButtonElementType() {
+  private ButtonType() {
   }
 }

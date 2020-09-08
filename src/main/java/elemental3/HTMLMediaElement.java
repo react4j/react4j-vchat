@@ -65,14 +65,6 @@ public class HTMLMediaElement extends HTMLElement {
   public boolean controls;
 
   /**
-   * The HTMLMediaElement.crossOrigin property is the CORS setting for this image element. See CORS settings attributes for details.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/crossOrigin">HTMLMediaElement.crossOrigin - MDN</a>
-   */
-  @Nullable
-  public String crossOrigin;
-
-  /**
    * The HTMLMediaElement interface's currentTime property specifies the current playback time in seconds.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime">HTMLMediaElement.currentTime - MDN</a>
@@ -114,9 +106,6 @@ public class HTMLMediaElement extends HTMLElement {
    */
   public double playbackRate;
 
-  @Nonnull
-  public String preload;
-
   /**
    * The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, which indicates the URL of a media resource to use in the element.
    *
@@ -145,6 +134,23 @@ public class HTMLMediaElement extends HTMLElement {
 
   @Nullable
   public EventHandler onwaitingforkey;
+
+  @Nonnull
+  @MagicConstant(
+      valuesFromClass = MediaPreloadType.class
+  )
+  public String preload;
+
+  /**
+   * The HTMLMediaElement.crossOrigin property is the CORS setting for this image element. See CORS settings attributes for details.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/crossOrigin">HTMLMediaElement.crossOrigin - MDN</a>
+   */
+  @Nullable
+  @MagicConstant(
+      valuesFromClass = CrossOriginType.class
+  )
+  public String crossOrigin;
 
   HTMLMediaElement() {
   }
