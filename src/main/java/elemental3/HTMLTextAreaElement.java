@@ -57,13 +57,13 @@ public class HTMLTextAreaElement extends HTMLElement {
   public String value;
 
   @Nonnull
-  public String wrap;
-
-  @Nonnull
   @MagicConstant(
       valuesFromClass = AutocompleteType.class
   )
   public String autocomplete;
+
+  @Nonnull
+  public String wrap;
 
   public HTMLTextAreaElement() {
   }
