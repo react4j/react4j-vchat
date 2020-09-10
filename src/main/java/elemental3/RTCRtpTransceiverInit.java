@@ -67,7 +67,7 @@ public interface RTCRtpTransceiverInit {
 
   @JsOverlay
   default void setSendEncodings(@Nonnull final RTCRtpEncodingParameters... sendEncodings) {
-    setSendEncodings( JsArray.asJsArray( sendEncodings ) );
+    setSendEncodings( Js.<JsArray<RTCRtpEncodingParameters>>uncheckedCast( sendEncodings ) );
   }
 
   @JsOverlay
@@ -95,7 +95,7 @@ public interface RTCRtpTransceiverInit {
 
   @JsOverlay
   default void setStreams(@Nonnull final MediaStream... streams) {
-    setStreams( JsArray.asJsArray( streams ) );
+    setStreams( Js.<JsArray<MediaStream>>uncheckedCast( streams ) );
   }
 
   @JsOverlay

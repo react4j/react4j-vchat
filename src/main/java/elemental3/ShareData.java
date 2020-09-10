@@ -40,7 +40,7 @@ public interface ShareData {
 
   @JsOverlay
   default void setFiles(@Nonnull final File... files) {
-    setFiles( JsArray.asJsArray( files ) );
+    setFiles( Js.<JsArray<File>>uncheckedCast( files ) );
   }
 
   @JsOverlay

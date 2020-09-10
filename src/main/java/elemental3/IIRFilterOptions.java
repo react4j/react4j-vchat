@@ -64,7 +64,7 @@ public interface IIRFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   default void setFeedback(@Nonnull final Double... feedback) {
-    setFeedback( JsArray.asJsArray( feedback ) );
+    setFeedback( Js.<JsArray<Double>>uncheckedCast( feedback ) );
   }
 
   @JsOverlay
@@ -92,7 +92,7 @@ public interface IIRFilterOptions extends AudioNodeOptions {
 
   @JsOverlay
   default void setFeedforward(@Nonnull final Double... feedforward) {
-    setFeedforward( JsArray.asJsArray( feedforward ) );
+    setFeedforward( Js.<JsArray<Double>>uncheckedCast( feedforward ) );
   }
 
   @JsOverlay

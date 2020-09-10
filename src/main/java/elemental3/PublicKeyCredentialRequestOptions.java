@@ -151,7 +151,7 @@ public interface PublicKeyCredentialRequestOptions {
   @JsOverlay
   default void setAllowCredentials(
       @Nonnull final PublicKeyCredentialDescriptor... allowCredentials) {
-    setAllowCredentials( JsArray.asJsArray( allowCredentials ) );
+    setAllowCredentials( Js.<JsArray<PublicKeyCredentialDescriptor>>uncheckedCast( allowCredentials ) );
   }
 
   /**

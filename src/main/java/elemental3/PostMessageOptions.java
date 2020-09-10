@@ -40,7 +40,7 @@ public interface PostMessageOptions {
 
   @JsOverlay
   default void setTransfer(@Nonnull final Object... transfer) {
-    setTransfer( JsArray.asJsArray( transfer ) );
+    setTransfer( Js.<JsArray<Object>>uncheckedCast( transfer ) );
   }
 
   @JsOverlay

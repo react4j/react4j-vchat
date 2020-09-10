@@ -60,7 +60,7 @@ public interface ReportingObserverOptions {
 
   @JsOverlay
   default void setTypes(@Nonnull final String... types) {
-    setTypes( JsArray.asJsArray( types ) );
+    setTypes( Js.<JsArray<String>>uncheckedCast( types ) );
   }
 
   @JsOverlay

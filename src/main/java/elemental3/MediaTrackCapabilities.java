@@ -55,7 +55,7 @@ public interface MediaTrackCapabilities {
 
   @JsOverlay
   default void setAutoGainControl(@Nonnull final Boolean... autoGainControl) {
-    setAutoGainControl( JsArray.asJsArray( autoGainControl ) );
+    setAutoGainControl( Js.<JsArray<Boolean>>uncheckedCast( autoGainControl ) );
   }
 
   @JsOverlay
@@ -113,7 +113,7 @@ public interface MediaTrackCapabilities {
 
   @JsOverlay
   default void setEchoCancellation(@Nonnull final Boolean... echoCancellation) {
-    setEchoCancellation( JsArray.asJsArray( echoCancellation ) );
+    setEchoCancellation( Js.<JsArray<Boolean>>uncheckedCast( echoCancellation ) );
   }
 
   @JsOverlay
@@ -140,7 +140,7 @@ public interface MediaTrackCapabilities {
 
   @JsOverlay
   default void setFacingMode(@Nonnull final String... facingMode) {
-    setFacingMode( JsArray.asJsArray( facingMode ) );
+    setFacingMode( Js.<JsArray<String>>uncheckedCast( facingMode ) );
   }
 
   @JsOverlay
@@ -228,7 +228,7 @@ public interface MediaTrackCapabilities {
 
   @JsOverlay
   default void setNoiseSuppression(@Nonnull final Boolean... noiseSuppression) {
-    setNoiseSuppression( JsArray.asJsArray( noiseSuppression ) );
+    setNoiseSuppression( Js.<JsArray<Boolean>>uncheckedCast( noiseSuppression ) );
   }
 
   @JsOverlay
@@ -255,7 +255,7 @@ public interface MediaTrackCapabilities {
 
   @JsOverlay
   default void setResizeMode(@Nonnull final String... resizeMode) {
-    setResizeMode( JsArray.asJsArray( resizeMode ) );
+    setResizeMode( Js.<JsArray<String>>uncheckedCast( resizeMode ) );
   }
 
   @JsOverlay

@@ -40,7 +40,7 @@ public interface Constraints extends ConstraintSet {
 
   @JsOverlay
   default void setAdvanced(@Nonnull final ConstraintSet... advanced) {
-    setAdvanced( JsArray.asJsArray( advanced ) );
+    setAdvanced( Js.<JsArray<ConstraintSet>>uncheckedCast( advanced ) );
   }
 
   @JsOverlay

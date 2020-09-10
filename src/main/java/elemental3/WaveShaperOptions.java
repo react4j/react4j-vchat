@@ -41,7 +41,7 @@ public interface WaveShaperOptions extends AudioNodeOptions {
 
   @JsOverlay
   default void setCurve(@Nonnull final Double... curve) {
-    setCurve( JsArray.asJsArray( curve ) );
+    setCurve( Js.<JsArray<Double>>uncheckedCast( curve ) );
   }
 
   @JsOverlay

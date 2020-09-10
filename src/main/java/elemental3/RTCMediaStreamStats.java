@@ -57,7 +57,7 @@ public interface RTCMediaStreamStats extends RTCStats {
 
   @JsOverlay
   default void setTrackIds(@Nonnull final String... trackIds) {
-    setTrackIds( JsArray.asJsArray( trackIds ) );
+    setTrackIds( Js.<JsArray<String>>uncheckedCast( trackIds ) );
   }
 
   @JsOverlay

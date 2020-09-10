@@ -45,7 +45,7 @@ public interface MediaTrackConstraints extends MediaTrackConstraintSet {
 
   @JsOverlay
   default void setAdvanced(@Nonnull final MediaTrackConstraintSet... advanced) {
-    setAdvanced( JsArray.asJsArray( advanced ) );
+    setAdvanced( Js.<JsArray<MediaTrackConstraintSet>>uncheckedCast( advanced ) );
   }
 
   @JsOverlay

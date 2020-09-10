@@ -80,6 +80,17 @@ public class Navigator {
   )
   public native int maxTouchPoints();
 
+  /**
+   * The wakeLock read-only property returns a WakeLock interface which allows a document to acquire a screen wake lock. While a screen wake lock is active, the user agent will try to prevent the device from dimming the screen, turning it off completely, or showing a screensaver.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock">Navigator.wakeLock - MDN</a>
+   */
+  @JsProperty(
+      name = "wakeLock"
+  )
+  @Nonnull
+  public native WakeLock wakeLock();
+
   @JsProperty(
       name = "serviceWorker"
   )

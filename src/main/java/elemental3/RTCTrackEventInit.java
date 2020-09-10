@@ -62,7 +62,7 @@ public interface RTCTrackEventInit extends EventInit {
 
   @JsOverlay
   default void setStreams(@Nonnull final MediaStream... streams) {
-    setStreams( JsArray.asJsArray( streams ) );
+    setStreams( Js.<JsArray<MediaStream>>uncheckedCast( streams ) );
   }
 
   @JsOverlay

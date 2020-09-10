@@ -102,7 +102,7 @@ public interface AuthenticationExtensionsClientOutputs {
 
   @JsOverlay
   default void setExts(@Nonnull final String... exts) {
-    setExts( JsArray.asJsArray( exts ) );
+    setExts( Js.<JsArray<String>>uncheckedCast( exts ) );
   }
 
   @JsOverlay
@@ -160,7 +160,7 @@ public interface AuthenticationExtensionsClientOutputs {
   @JsOverlay
   @SuppressWarnings("unchecked")
   default void setUvm(@Nonnull final JsArray<Double>... uvm) {
-    setUvm( JsArray.asJsArray( uvm ) );
+    setUvm( Js.<JsArray<JsArray<Double>>>uncheckedCast( uvm ) );
   }
 
   @JsOverlay

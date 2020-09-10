@@ -101,7 +101,7 @@ public interface RTCConfiguration {
    */
   @JsOverlay
   default void setCertificates(@Nonnull final RTCCertificate... certificates) {
-    setCertificates( JsArray.asJsArray( certificates ) );
+    setCertificates( Js.<JsArray<RTCCertificate>>uncheckedCast( certificates ) );
   }
 
   /**
@@ -168,7 +168,7 @@ public interface RTCConfiguration {
    */
   @JsOverlay
   default void setIceServers(@Nonnull final RTCIceServer... iceServers) {
-    setIceServers( JsArray.asJsArray( iceServers ) );
+    setIceServers( Js.<JsArray<RTCIceServer>>uncheckedCast( iceServers ) );
   }
 
   /**

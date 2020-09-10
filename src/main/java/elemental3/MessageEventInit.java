@@ -101,7 +101,7 @@ public interface MessageEventInit extends EventInit {
 
   @JsOverlay
   default void setPorts(@Nonnull final MessagePort... ports) {
-    setPorts( JsArray.asJsArray( ports ) );
+    setPorts( Js.<JsArray<MessagePort>>uncheckedCast( ports ) );
   }
 
   @JsOverlay

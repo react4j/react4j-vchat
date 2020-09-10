@@ -41,7 +41,7 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   default void setChangedTouches(@Nonnull final Touch... changedTouches) {
-    setChangedTouches( JsArray.asJsArray( changedTouches ) );
+    setChangedTouches( Js.<JsArray<Touch>>uncheckedCast( changedTouches ) );
   }
 
   @JsOverlay
@@ -68,7 +68,7 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   default void setTargetTouches(@Nonnull final Touch... targetTouches) {
-    setTargetTouches( JsArray.asJsArray( targetTouches ) );
+    setTargetTouches( Js.<JsArray<Touch>>uncheckedCast( targetTouches ) );
   }
 
   @JsOverlay
@@ -95,7 +95,7 @@ public interface TouchEventInit extends EventModifierInit {
 
   @JsOverlay
   default void setTouches(@Nonnull final Touch... touches) {
-    setTouches( JsArray.asJsArray( touches ) );
+    setTouches( Js.<JsArray<Touch>>uncheckedCast( touches ) );
   }
 
   @JsOverlay

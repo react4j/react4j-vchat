@@ -63,7 +63,7 @@ public interface RTCRtpCapabilities {
 
   @JsOverlay
   default void setCodecs(@Nonnull final RTCRtpCodecCapability... codecs) {
-    setCodecs( JsArray.asJsArray( codecs ) );
+    setCodecs( Js.<JsArray<RTCRtpCodecCapability>>uncheckedCast( codecs ) );
   }
 
   @JsOverlay
@@ -93,7 +93,7 @@ public interface RTCRtpCapabilities {
   @JsOverlay
   default void setHeaderExtensions(
       @Nonnull final RTCRtpHeaderExtensionCapability... headerExtensions) {
-    setHeaderExtensions( JsArray.asJsArray( headerExtensions ) );
+    setHeaderExtensions( Js.<JsArray<RTCRtpHeaderExtensionCapability>>uncheckedCast( headerExtensions ) );
   }
 
   @JsOverlay

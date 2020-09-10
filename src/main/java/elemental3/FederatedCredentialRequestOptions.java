@@ -40,7 +40,7 @@ public interface FederatedCredentialRequestOptions {
 
   @JsOverlay
   default void setProtocols(@Nonnull final String... protocols) {
-    setProtocols( JsArray.asJsArray( protocols ) );
+    setProtocols( Js.<JsArray<String>>uncheckedCast( protocols ) );
   }
 
   @JsOverlay
@@ -67,7 +67,7 @@ public interface FederatedCredentialRequestOptions {
 
   @JsOverlay
   default void setProviders(@Nonnull final String... providers) {
-    setProviders( JsArray.asJsArray( providers ) );
+    setProviders( Js.<JsArray<String>>uncheckedCast( providers ) );
   }
 
   @JsOverlay

@@ -65,7 +65,7 @@ public interface MutationObserverInit {
    */
   @JsOverlay
   default void setAttributeFilter(@Nonnull final String... attributeFilter) {
-    setAttributeFilter( JsArray.asJsArray( attributeFilter ) );
+    setAttributeFilter( Js.<JsArray<String>>uncheckedCast( attributeFilter ) );
   }
 
   /**

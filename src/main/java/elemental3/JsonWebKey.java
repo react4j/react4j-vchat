@@ -160,7 +160,7 @@ public interface JsonWebKey {
 
   @JsOverlay
   default void setKey_ops(@Nonnull final String... key_ops) {
-    setKey_ops( JsArray.asJsArray( key_ops ) );
+    setKey_ops( Js.<JsArray<String>>uncheckedCast( key_ops ) );
   }
 
   @JsOverlay
@@ -217,7 +217,7 @@ public interface JsonWebKey {
 
   @JsOverlay
   default void setOth(@Nonnull final RsaOtherPrimesInfo... oth) {
-    setOth( JsArray.asJsArray( oth ) );
+    setOth( Js.<JsArray<RsaOtherPrimesInfo>>uncheckedCast( oth ) );
   }
 
   @JsOverlay

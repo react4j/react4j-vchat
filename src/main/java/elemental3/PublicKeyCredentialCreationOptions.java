@@ -668,7 +668,7 @@ public interface PublicKeyCredentialCreationOptions {
   @JsOverlay
   default void setExcludeCredentials(
       @Nonnull final PublicKeyCredentialDescriptor... excludeCredentials) {
-    setExcludeCredentials( JsArray.asJsArray( excludeCredentials ) );
+    setExcludeCredentials( Js.<JsArray<PublicKeyCredentialDescriptor>>uncheckedCast( excludeCredentials ) );
   }
 
   /**
@@ -755,7 +755,7 @@ public interface PublicKeyCredentialCreationOptions {
   @JsOverlay
   default void setPubKeyCredParams(
       @Nonnull final PublicKeyCredentialParameters... pubKeyCredParams) {
-    setPubKeyCredParams( JsArray.asJsArray( pubKeyCredParams ) );
+    setPubKeyCredParams( Js.<JsArray<PublicKeyCredentialParameters>>uncheckedCast( pubKeyCredParams ) );
   }
 
   /**

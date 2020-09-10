@@ -297,7 +297,7 @@ public interface PublicKeyCredentialDescriptor {
 
   @JsOverlay
   default void setTransports(@Nonnull final String... transports) {
-    setTransports( JsArray.asJsArray( transports ) );
+    setTransports( Js.<JsArray<String>>uncheckedCast( transports ) );
   }
 
   @JsOverlay

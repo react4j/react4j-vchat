@@ -55,7 +55,7 @@ public interface PerformanceObserverInit {
 
   @JsOverlay
   default void setEntryTypes(@Nonnull final String... entryTypes) {
-    setEntryTypes( JsArray.asJsArray( entryTypes ) );
+    setEntryTypes( Js.<JsArray<String>>uncheckedCast( entryTypes ) );
   }
 
   @JsOverlay

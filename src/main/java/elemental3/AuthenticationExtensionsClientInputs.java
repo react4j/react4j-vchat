@@ -87,7 +87,7 @@ public interface AuthenticationExtensionsClientInputs {
 
   @JsOverlay
   default void setAuthnSel(@Nonnull final BufferSource... authnSel) {
-    setAuthnSel( JsArray.asJsArray( authnSel ) );
+    setAuthnSel( Js.<JsArray<BufferSource>>uncheckedCast( authnSel ) );
   }
 
   @JsOverlay

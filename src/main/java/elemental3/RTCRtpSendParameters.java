@@ -117,7 +117,7 @@ public interface RTCRtpSendParameters extends RTCRtpParameters {
 
   @JsOverlay
   default void setEncodings(@Nonnull final RTCRtpEncodingParameters... encodings) {
-    setEncodings( JsArray.asJsArray( encodings ) );
+    setEncodings( Js.<JsArray<RTCRtpEncodingParameters>>uncheckedCast( encodings ) );
   }
 
   @JsOverlay

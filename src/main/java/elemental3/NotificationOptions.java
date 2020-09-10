@@ -44,7 +44,7 @@ public interface NotificationOptions {
 
   @JsOverlay
   default void setActions(@Nonnull final NotificationAction... actions) {
-    setActions( JsArray.asJsArray( actions ) );
+    setActions( Js.<JsArray<NotificationAction>>uncheckedCast( actions ) );
   }
 
   @JsOverlay

@@ -40,7 +40,7 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
 
   @JsOverlay
   default void setImag(@Nonnull final Double... imag) {
-    setImag( JsArray.asJsArray( imag ) );
+    setImag( Js.<JsArray<Double>>uncheckedCast( imag ) );
   }
 
   @JsOverlay
@@ -67,7 +67,7 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
 
   @JsOverlay
   default void setReal(@Nonnull final Double... real) {
-    setReal( JsArray.asJsArray( real ) );
+    setReal( Js.<JsArray<Double>>uncheckedCast( real ) );
   }
 
   @JsOverlay

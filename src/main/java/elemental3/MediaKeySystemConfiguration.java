@@ -68,7 +68,7 @@ public interface MediaKeySystemConfiguration {
   @JsOverlay
   default void setAudioCapabilities(
       @Nonnull final MediaKeySystemMediaCapability... audioCapabilities) {
-    setAudioCapabilities( JsArray.asJsArray( audioCapabilities ) );
+    setAudioCapabilities( Js.<JsArray<MediaKeySystemMediaCapability>>uncheckedCast( audioCapabilities ) );
   }
 
   /**
@@ -156,7 +156,7 @@ public interface MediaKeySystemConfiguration {
    */
   @JsOverlay
   default void setInitDataTypes(@Nonnull final String... initDataTypes) {
-    setInitDataTypes( JsArray.asJsArray( initDataTypes ) );
+    setInitDataTypes( Js.<JsArray<String>>uncheckedCast( initDataTypes ) );
   }
 
   /**
@@ -238,7 +238,7 @@ public interface MediaKeySystemConfiguration {
 
   @JsOverlay
   default void setSessionTypes(@Nonnull final String... sessionTypes) {
-    setSessionTypes( JsArray.asJsArray( sessionTypes ) );
+    setSessionTypes( Js.<JsArray<String>>uncheckedCast( sessionTypes ) );
   }
 
   @JsOverlay
@@ -287,7 +287,7 @@ public interface MediaKeySystemConfiguration {
   @JsOverlay
   default void setVideoCapabilities(
       @Nonnull final MediaKeySystemMediaCapability... videoCapabilities) {
-    setVideoCapabilities( JsArray.asJsArray( videoCapabilities ) );
+    setVideoCapabilities( Js.<JsArray<MediaKeySystemMediaCapability>>uncheckedCast( videoCapabilities ) );
   }
 
   /**
