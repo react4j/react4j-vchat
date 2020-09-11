@@ -6,6 +6,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -16,7 +17,8 @@ import jsinterop.base.Js;
 public interface AudioContextLatencyCategoryOrDoubleUnion {
   @JsOverlay
   @Nonnull
-  static AudioContextLatencyCategoryOrDoubleUnion of(@Nonnull final String value) {
+  static AudioContextLatencyCategoryOrDoubleUnion of(
+      @MagicConstant(valuesFromClass = AudioContextLatencyCategory.class) @Nonnull final String value) {
     return Js.cast( value );
   }
 

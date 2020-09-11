@@ -6,6 +6,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -22,7 +23,8 @@ public interface LineAndPositionSetting {
 
   @JsOverlay
   @Nonnull
-  static LineAndPositionSetting of(@Nonnull final String value) {
+  static LineAndPositionSetting of(
+      @MagicConstant(valuesFromClass = AutoKeyword.class) @Nonnull final String value) {
     return Js.cast( value );
   }
 }
