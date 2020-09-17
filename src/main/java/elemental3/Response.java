@@ -20,6 +20,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Response interface of the Fetch API represents the response to a request.
@@ -443,6 +444,9 @@ public class Response {
       name = "type"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ResponseType.class
+  )
   public native String type();
 
   /**

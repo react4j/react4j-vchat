@@ -51,6 +51,9 @@ public class ScreenOrientation extends EventTarget {
       name = "type"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = OrientationType.class
+  )
   public native String type();
 
   /**

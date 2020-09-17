@@ -10,6 +10,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
@@ -1152,6 +1153,9 @@ public class Document extends Node {
       name = "readyState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = DocumentReadyState.class
+  )
   public native String readyState();
 
   /**
@@ -1224,6 +1228,9 @@ public class Document extends Node {
       name = "visibilityState"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = VisibilityState.class
+  )
   public native String visibilityState();
 
   /**

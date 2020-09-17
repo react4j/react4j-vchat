@@ -9,6 +9,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ServiceWorker interface of the Service Worker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.
@@ -61,6 +62,9 @@ public class ServiceWorker extends EventTarget {
       name = "state"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = ServiceWorkerState.class
+  )
   public native String state();
 
   public native void postMessage(@Nullable Any message, @Nonnull JsArray<Object> transfer);

@@ -9,6 +9,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The IDBCursor interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database.
@@ -34,6 +35,9 @@ public class IDBCursor {
       name = "direction"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = IDBCursorDirection.class
+  )
   public native String direction();
 
   /**

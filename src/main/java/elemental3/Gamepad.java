@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.
@@ -64,6 +65,9 @@ public class Gamepad {
       name = "hand"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = GamepadHand.class
+  )
   public native String hand();
 
   /**
@@ -107,6 +111,9 @@ public class Gamepad {
       name = "mapping"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = GamepadMappingType.class
+  )
   public native String mapping();
 
   /**

@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The Touch interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.
@@ -161,5 +162,8 @@ public class Touch {
       name = "touchType"
   )
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = TouchType.class
+  )
   public native String touchType();
 }
