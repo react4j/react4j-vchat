@@ -35,6 +35,11 @@ public class RTCIceCandidate {
   public RTCIceCandidate() {
   }
 
+  /**
+   * The RTCIceCandidate interface's read-only address property is a string providing the address of the device which is the source of the candidate.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/address">RTCIceCandidate.address - MDN</a>
+   */
   @JsProperty(
       name = "address"
   )

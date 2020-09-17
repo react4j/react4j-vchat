@@ -22,9 +22,19 @@ import jsinterop.base.Any;
     name = "ServiceWorker"
 )
 public class ServiceWorker extends EventTarget {
+  /**
+   * The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onerror">ServiceWorker.onerror - MDN</a>
+   */
   @Nullable
   public EventHandler onerror;
 
+  /**
+   * An EventListener property called whenever an event of type statechange is fired; it is basically fired anytime the ServiceWorker.state changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onstatechange">ServiceWorker.onstatechange - MDN</a>
+   */
   @Nullable
   public EventHandler onstatechange;
 

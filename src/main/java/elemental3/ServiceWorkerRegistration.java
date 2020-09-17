@@ -21,6 +21,11 @@ import jsinterop.annotations.JsType;
     name = "ServiceWorkerRegistration"
 )
 public class ServiceWorkerRegistration extends EventTarget {
+  /**
+   * The onupdatefound property of the ServiceWorkerRegistration interface is an EventListener property called whenever an event of type statechange is fired; it is fired any time the ServiceWorkerRegistration.installing property acquires a new service worker.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound">ServiceWorkerRegistration.onupdatefound - MDN</a>
+   */
   @Nullable
   public EventHandler onupdatefound;
 

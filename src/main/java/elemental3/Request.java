@@ -85,7 +85,7 @@ public class Request {
   /**
    * The bodyUsed read-only property of the Body mixin contains a Boolean that indicates whether the body has been read yet.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/bodyUsed">Body.bodyUsed - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/bodyUsed">Request.bodyUsed - MDN</a>
    */
   @JsProperty(
       name = "bodyUsed"
@@ -248,7 +248,7 @@ public class Request {
   /**
    * The arrayBuffer() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with an ArrayBuffer.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/arrayBuffer">Body.arrayBuffer - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/arrayBuffer">Request.arrayBuffer - MDN</a>
    */
   @Nonnull
   public native Promise<ArrayBuffer> arrayBuffer();
@@ -256,7 +256,7 @@ public class Request {
   /**
    * The blob() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a Blob.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/blob">Body.blob - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/blob">Request.blob - MDN</a>
    */
   @Nonnull
   public native Promise<Blob> blob();
@@ -272,7 +272,7 @@ public class Request {
   /**
    * The json() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/json">Body.json - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/json">Request.json - MDN</a>
    */
   @Nonnull
   public native Promise<Any> json();
@@ -280,7 +280,7 @@ public class Request {
   /**
    * The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body/text">Body.text - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/text">Request.text - MDN</a>
    */
   @Nonnull
   public native Promise<String> text();
