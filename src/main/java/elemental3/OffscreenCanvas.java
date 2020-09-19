@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.
@@ -21,7 +20,7 @@ import org.intellij.lang.annotations.MagicConstant;
     namespace = JsPackage.GLOBAL,
     name = "OffscreenCanvas"
 )
-public class OffscreenCanvas extends EventTarget {
+public class OffscreenCanvas extends EventTarget implements Transferable {
   /**
    * The height property returns and sets the height of an OffscreenCanvas object.
    *
@@ -67,8 +66,7 @@ public class OffscreenCanvas extends EventTarget {
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
-      @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId,
-      @Nullable Any options);
+      @OffscreenRenderingContextId @Nonnull String contextId, @Nullable Any options);
 
   /**
    * The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported.
@@ -77,7 +75,7 @@ public class OffscreenCanvas extends EventTarget {
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
-      @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId,
+      @OffscreenRenderingContextId @Nonnull String contextId,
       @DoNotAutobox @Nullable Object options);
 
   /**
@@ -87,7 +85,7 @@ public class OffscreenCanvas extends EventTarget {
    */
   @Nullable
   public native OffscreenRenderingContext getContext(
-      @MagicConstant(valuesFromClass = OffscreenRenderingContextId.class) @Nonnull String contextId);
+      @OffscreenRenderingContextId @Nonnull String contextId);
 
   /**
    * The OffscreenCanvas.transferToImageBitmap() method creates an ImageBitmap object from the most recently rendered image of the OffscreenCanvas.

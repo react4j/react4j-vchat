@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,7 +14,7 @@ import org.intellij.lang.annotations.MagicConstant;
     name = "CSPViolationReportBody"
 )
 public class CSPViolationReportBody extends ReportBody {
-  CSPViolationReportBody() {
+  protected CSPViolationReportBody() {
   }
 
   @JsProperty(
@@ -34,9 +33,7 @@ public class CSPViolationReportBody extends ReportBody {
       name = "disposition"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = SecurityPolicyViolationEventDisposition.class
-  )
+  @SecurityPolicyViolationEventDisposition
   public native String disposition();
 
   @JsProperty(

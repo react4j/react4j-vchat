@@ -1,5 +1,7 @@
 package elemental3;
 
+import elemental3.gl.WebGLContextAttributes;
+import elemental3.gl.WebGLContextEventListener;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -9,7 +11,6 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface.
@@ -116,8 +117,7 @@ public class HTMLCanvasElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
   @Nullable
-  public native RenderingContext getContext(
-      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
+  public native RenderingContext getContext(@RenderContextType @Nonnull String contextId,
       @Nonnull CanvasRenderingContext2DSettings options);
 
   /**
@@ -126,8 +126,7 @@ public class HTMLCanvasElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
   @Nullable
-  public native RenderingContext getContext(
-      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
+  public native RenderingContext getContext(@RenderContextType @Nonnull String contextId,
       @Nonnull ImageBitmapRenderingContextSettings options);
 
   /**
@@ -136,8 +135,7 @@ public class HTMLCanvasElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
   @Nullable
-  public native RenderingContext getContext(
-      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId,
+  public native RenderingContext getContext(@RenderContextType @Nonnull String contextId,
       @Nonnull WebGLContextAttributes options);
 
   /**
@@ -146,8 +144,7 @@ public class HTMLCanvasElement extends HTMLElement {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext">HTMLCanvasElement.getContext - MDN</a>
    */
   @Nullable
-  public native RenderingContext getContext(
-      @MagicConstant(valuesFromClass = RenderContextType.class) @Nonnull String contextId);
+  public native RenderingContext getContext(@RenderContextType @Nonnull String contextId);
 
   @JsOverlay
   public final void addWebglcontextcreationerrorListener(

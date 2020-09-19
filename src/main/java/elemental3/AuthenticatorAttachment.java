@@ -2,15 +2,16 @@ package elemental3;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class AuthenticatorAttachment {
+@MagicConstant(
+    valuesFromClass = AuthenticatorAttachment.class
+)
+public @interface AuthenticatorAttachment {
   @Nonnull
-  public static final String platform = "platform";
+  String cross_platform = "cross-platform";
 
   @Nonnull
-  public static final String cross_platform = "cross-platform";
-
-  private AuthenticatorAttachment() {
-  }
+  String platform = "platform";
 }

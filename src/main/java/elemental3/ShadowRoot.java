@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
@@ -31,7 +30,7 @@ public class ShadowRoot extends DocumentFragment {
   @Nullable
   public EventHandler onslotchange;
 
-  ShadowRoot() {
+  protected ShadowRoot() {
   }
 
   /**
@@ -76,9 +75,7 @@ public class ShadowRoot extends DocumentFragment {
       name = "mode"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ShadowRootMode.class
-  )
+  @ShadowRootMode
   public native String mode();
 
   /**

@@ -2,6 +2,8 @@ package elemental3;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
+import elemental3.speech.SpeechSynthesis;
+import elemental3.svg.SVGImageElement;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -825,7 +827,7 @@ public class Window extends EventTarget {
   @Nonnull
   public String status;
 
-  Window() {
+  protected Window() {
   }
 
   /**
@@ -1415,7 +1417,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
   public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin,
-      @Nonnull JsArray<Object> transfer);
+      @Nonnull JsArray<Transferable> transfer);
 
   /**
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
@@ -1423,7 +1425,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull String targetOrigin, @Nonnull JsArray<Object> transfer);
+      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
 
   /**
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
@@ -1431,7 +1433,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
   public native void postMessage(@Nullable Any message, @Nonnull String targetOrigin,
-      @Nonnull Object[] transfer);
+      @Nonnull Transferable[] transfer);
 
   /**
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
@@ -1439,7 +1441,7 @@ public class Window extends EventTarget {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">Window.postMessage - MDN</a>
    */
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull String targetOrigin, @Nonnull Object[] transfer);
+      @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
 
   /**
    * The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.

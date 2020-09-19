@@ -1,13 +1,13 @@
 package elemental3;
 
 import elemental2.core.JsArray;
+import elemental3.svg.SVGImageElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -17,9 +17,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public class OffscreenCanvasRenderingContext2D {
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasDirection.class
-  )
+  @CanvasDirection
   public String direction;
 
   @Nonnull
@@ -39,23 +37,17 @@ public class OffscreenCanvasRenderingContext2D {
   public boolean imageSmoothingEnabled;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = ImageSmoothingQuality.class
-  )
+  @ImageSmoothingQuality
   public String imageSmoothingQuality;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasLineCap.class
-  )
+  @CanvasLineCap
   public String lineCap;
 
   public double lineDashOffset;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasLineJoin.class
-  )
+  @CanvasLineJoin
   public String lineJoin;
 
   public double lineWidth;
@@ -75,18 +67,14 @@ public class OffscreenCanvasRenderingContext2D {
   public StringOrCanvasGradientOrCanvasPatternUnion strokeStyle;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasTextAlign.class
-  )
+  @CanvasTextAlign
   public String textAlign;
 
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = CanvasTextBaseline.class
-  )
+  @CanvasTextBaseline
   public String textBaseline;
 
-  OffscreenCanvasRenderingContext2D() {
+  protected OffscreenCanvasRenderingContext2D() {
   }
 
   @JsProperty(
@@ -99,33 +87,28 @@ public class OffscreenCanvasRenderingContext2D {
 
   public native void beginPath();
 
-  public native void clip(
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void clip(@CanvasFillRule @Nonnull String fillRule);
 
   public native void clip();
 
-  public native void clip(@Nonnull Path2D path,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void clip(@Nonnull Path2D path, @CanvasFillRule @Nonnull String fillRule);
 
   public native void clip(@Nonnull Path2D path);
 
-  public native void fill(
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void fill(@CanvasFillRule @Nonnull String fillRule);
 
   public native void fill();
 
-  public native void fill(@Nonnull Path2D path,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native void fill(@Nonnull Path2D path, @CanvasFillRule @Nonnull String fillRule);
 
   public native void fill(@Nonnull Path2D path);
 
-  public native boolean isPointInPath(double x, double y,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+  public native boolean isPointInPath(double x, double y, @CanvasFillRule @Nonnull String fillRule);
 
   public native boolean isPointInPath(double x, double y);
 
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y,
-      @MagicConstant(valuesFromClass = CanvasFillRule.class) @Nonnull String fillRule);
+      @CanvasFillRule @Nonnull String fillRule);
 
   public native boolean isPointInPath(@Nonnull Path2D path, double x, double y);
 

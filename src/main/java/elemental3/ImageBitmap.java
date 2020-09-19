@@ -16,8 +16,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "ImageBitmap"
 )
-public class ImageBitmap {
-  ImageBitmap() {
+public class ImageBitmap implements Transferable {
+  protected ImageBitmap() {
   }
 
   /**
