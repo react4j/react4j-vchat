@@ -1,11 +1,5 @@
-package elemental3;
+package elemental3.svg;
 
-import elemental3.svg.SVGAnimatedEnumeration;
-import elemental3.svg.SVGAnimatedInteger;
-import elemental3.svg.SVGAnimatedLength;
-import elemental3.svg.SVGAnimatedNumber;
-import elemental3.svg.SVGAnimatedString;
-import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

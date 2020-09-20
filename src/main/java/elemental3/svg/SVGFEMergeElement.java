@@ -1,8 +1,5 @@
-package elemental3;
+package elemental3.svg;
 
-import elemental3.svg.SVGAnimatedEnumeration;
-import elemental3.svg.SVGAnimatedLength;
-import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -10,18 +7,18 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGMaskElement interface provides access to the properties of mask elements, as well as methods to manipulate them.
+ * The SVGFEMergeElement interface corresponds to the feMerge element.
  *
- * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement">SVGMaskElement - MDN</a>
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeElement">SVGFEMergeElement - MDN</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "SVGMaskElement"
+    name = "SVGFEMergeElement"
 )
-public class SVGMaskElement extends SVGElement {
-  protected SVGMaskElement() {
+public class SVGFEMergeElement extends SVGElement {
+  protected SVGFEMergeElement() {
   }
 
   @JsProperty(
@@ -31,16 +28,10 @@ public class SVGMaskElement extends SVGElement {
   public native SVGAnimatedLength height();
 
   @JsProperty(
-      name = "maskContentUnits"
+      name = "result"
   )
   @Nonnull
-  public native SVGAnimatedEnumeration maskContentUnits();
-
-  @JsProperty(
-      name = "maskUnits"
-  )
-  @Nonnull
-  public native SVGAnimatedEnumeration maskUnits();
+  public native SVGAnimatedString result();
 
   @JsProperty(
       name = "width"

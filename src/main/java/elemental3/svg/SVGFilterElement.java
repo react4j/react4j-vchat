@@ -1,9 +1,5 @@
-package elemental3;
+package elemental3.svg;
 
-import elemental3.svg.SVGAnimatedLength;
-import elemental3.svg.SVGAnimatedPreserveAspectRatio;
-import elemental3.svg.SVGAnimatedString;
-import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -11,25 +7,25 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGFEImageElement interface corresponds to the feImage element.
+ * The SVGFilterElement interface provides access to the properties of filter elements, as well as methods to manipulate them.
  *
- * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement">SVGFEImageElement - MDN</a>
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement">SVGFilterElement - MDN</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "SVGFEImageElement"
+    name = "SVGFilterElement"
 )
-public class SVGFEImageElement extends SVGElement {
-  protected SVGFEImageElement() {
+public class SVGFilterElement extends SVGElement {
+  protected SVGFilterElement() {
   }
 
   @JsProperty(
-      name = "crossOrigin"
+      name = "filterUnits"
   )
   @Nonnull
-  public native SVGAnimatedString crossOrigin();
+  public native SVGAnimatedEnumeration filterUnits();
 
   @JsProperty(
       name = "height"
@@ -44,16 +40,10 @@ public class SVGFEImageElement extends SVGElement {
   public native SVGAnimatedString href();
 
   @JsProperty(
-      name = "preserveAspectRatio"
+      name = "primitiveUnits"
   )
   @Nonnull
-  public native SVGAnimatedPreserveAspectRatio preserveAspectRatio();
-
-  @JsProperty(
-      name = "result"
-  )
-  @Nonnull
-  public native SVGAnimatedString result();
+  public native SVGAnimatedEnumeration primitiveUnits();
 
   @JsProperty(
       name = "width"

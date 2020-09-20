@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.svg;
 
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;

@@ -1,8 +1,5 @@
-package elemental3;
+package elemental3.svg;
 
-import elemental3.svg.SVGAnimatedLength;
-import elemental3.svg.SVGAnimatedString;
-import elemental3.svg.SVGElement;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -10,18 +7,18 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The SVGFEComponentTransferElement interface corresponds to the feComponentTransfer element.
+ * The SVGFEFloodElement interface corresponds to the feFlood element.
  *
- * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEComponentTransferElement">SVGFEComponentTransferElement - MDN</a>
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement">SVGFEFloodElement - MDN</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "SVGFEComponentTransferElement"
+    name = "SVGFEFloodElement"
 )
-public class SVGFEComponentTransferElement extends SVGElement {
-  protected SVGFEComponentTransferElement() {
+public class SVGFEFloodElement extends SVGElement {
+  protected SVGFEFloodElement() {
   }
 
   @JsProperty(
@@ -29,12 +26,6 @@ public class SVGFEComponentTransferElement extends SVGElement {
   )
   @Nonnull
   public native SVGAnimatedLength height();
-
-  @JsProperty(
-      name = "in1"
-  )
-  @Nonnull
-  public native SVGAnimatedString in1();
 
   @JsProperty(
       name = "result"
