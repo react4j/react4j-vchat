@@ -12,6 +12,7 @@ complete as there is too much un-said.
 * Fix all the TODOs
 * Consider rewriting a peer abstraction to ensure renegotiation works as expected.
   See https://github.com/feross/simple-peer/blob/master/index.js for a possible solution.
+* Consider copying logic from https://github.com/vasanthv/talk/blob/master/www/script.js
 
 # Tutorials/Learning
 
