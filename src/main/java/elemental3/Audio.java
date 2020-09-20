@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -8,11 +9,12 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "HTMLDirectoryElement"
+    name = "Audio"
 )
-public class HTMLDirectoryElement extends HTMLElement {
-  public boolean compact;
+public class Audio extends HTMLAudioElement {
+  public Audio(@Nonnull final String src) {
+  }
 
-  protected HTMLDirectoryElement() {
+  public Audio() {
   }
 }

@@ -8,11 +8,15 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "HTMLDirectoryElement"
+    name = "Image"
 )
-public class HTMLDirectoryElement extends HTMLElement {
-  public boolean compact;
+public class Image extends HTMLImageElement {
+  public Image(final int width, final int height) {
+  }
 
-  protected HTMLDirectoryElement() {
+  public Image(final int width) {
+  }
+
+  public Image() {
   }
 }
