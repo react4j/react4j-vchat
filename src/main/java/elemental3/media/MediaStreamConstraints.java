@@ -1,6 +1,5 @@
 package elemental3.media;
 
-import elemental3.BooleanOrMediaTrackConstraintsUnion;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

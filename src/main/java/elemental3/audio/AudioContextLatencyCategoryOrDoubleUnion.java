@@ -1,6 +1,5 @@
-package elemental3;
+package elemental3.audio;
 
-import elemental3.media.MediaTrackConstraints;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -14,16 +13,17 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface BooleanOrMediaTrackConstraintsUnion {
+public interface AudioContextLatencyCategoryOrDoubleUnion {
   @JsOverlay
   @Nonnull
-  static BooleanOrMediaTrackConstraintsUnion of(final boolean value) {
+  static AudioContextLatencyCategoryOrDoubleUnion of(
+      @AudioContextLatencyCategory @Nonnull final String value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static BooleanOrMediaTrackConstraintsUnion of(@Nonnull final MediaTrackConstraints value) {
+  static AudioContextLatencyCategoryOrDoubleUnion of(final double value) {
     return Js.cast( value );
   }
 }

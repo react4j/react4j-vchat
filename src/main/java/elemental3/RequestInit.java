@@ -497,19 +497,7 @@ public interface RequestInit {
   Any window();
 
   @JsProperty
-  void setWindow(@Nullable Any window);
-
-  @JsOverlay
-  @Nonnull
-  default RequestInit window(@Nullable final Any window) {
-    setWindow( window );
-    return this;
-  }
-
-  @JsOverlay
-  default void setWindow(@DoNotAutobox @Nullable final Object window) {
-    setWindow( Js.asAny( window ) );
-  }
+  void setWindow(@DoNotAutobox @Nullable Object window);
 
   @JsOverlay
   @Nonnull

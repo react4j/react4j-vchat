@@ -47,19 +47,7 @@ public interface ErrorEventInit extends EventInit {
   Any error();
 
   @JsProperty
-  void setError(@Nullable Any error);
-
-  @JsOverlay
-  @Nonnull
-  default ErrorEventInit error(@Nullable final Any error) {
-    setError( error );
-    return this;
-  }
-
-  @JsOverlay
-  default void setError(@DoNotAutobox @Nullable final Object error) {
-    setError( Js.asAny( error ) );
-  }
+  void setError(@DoNotAutobox @Nullable Object error);
 
   @JsOverlay
   @Nonnull

@@ -1,6 +1,7 @@
-package elemental3;
+package elemental3.notifications;
 
 import elemental2.core.JsArray;
+import elemental3.VibratePattern;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -90,19 +91,7 @@ public interface NotificationOptions {
   Any data();
 
   @JsProperty
-  void setData(@Nullable Any data);
-
-  @JsOverlay
-  @Nonnull
-  default NotificationOptions data(@Nullable final Any data) {
-    setData( data );
-    return this;
-  }
-
-  @JsOverlay
-  default void setData(@DoNotAutobox @Nullable final Object data) {
-    setData( Js.asAny( data ) );
-  }
+  void setData(@DoNotAutobox @Nullable Object data);
 
   @JsOverlay
   @Nonnull
