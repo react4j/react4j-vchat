@@ -1769,7 +1769,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer">WebGLRenderingContext.bindBuffer - MDN</a>
    */
-  public native void bindBuffer(int target, @Nullable WebGLBuffer buffer);
+  public native void bindBuffer(@BufferTargetType int target, @Nullable WebGLBuffer buffer);
 
   /**
    * The WebGLRenderingContext.bindFramebuffer() method of the WebGL API binds a given WebGLFramebuffer to a target.
@@ -1790,7 +1790,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindTexture">WebGLRenderingContext.bindTexture - MDN</a>
    */
-  public native void bindTexture(int target, @Nullable WebGLTexture texture);
+  public native void bindTexture(@TextureTargetType int target, @Nullable WebGLTexture texture);
 
   /**
    * The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors.
@@ -1881,16 +1881,16 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D">WebGLRenderingContext.copyTexImage2D - MDN</a>
    */
-  public native void copyTexImage2D(int target, int level, int internalformat, int x, int y,
-      int width, int height, int border);
+  public native void copyTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int x, int y, int width, int height, int border);
 
   /**
    * The WebGLRenderingContext.copyTexSubImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into an existing 2D texture sub-image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexSubImage2D">WebGLRenderingContext.copyTexSubImage2D - MDN</a>
    */
-  public native void copyTexSubImage2D(int target, int level, int xoffset, int yoffset, int x,
-      int y, int width, int height);
+  public native void copyTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int x, int y, int width, int height);
 
   /**
    * The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors.
@@ -1930,7 +1930,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader">WebGLRenderingContext.createShader - MDN</a>
    */
   @Nullable
-  public native WebGLShader createShader(int type);
+  public native WebGLShader createShader(@ShaderType int type);
 
   /**
    * The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object.
@@ -2036,14 +2036,15 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">WebGLRenderingContext.drawArrays - MDN</a>
    */
-  public native void drawArrays(int mode, int first, int count);
+  public native void drawArrays(@DrawPrimitiveType int mode, int first, int count);
 
   /**
    * The WebGLRenderingContext.drawElements() method of the WebGL API renders primitives from array data.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements">WebGLRenderingContext.drawElements - MDN</a>
    */
-  public native void drawElements(int mode, int count, int type, int offset);
+  public native void drawElements(@DrawPrimitiveType int mode, int count,
+      @DrawElementDataType int type, int offset);
 
   /**
    * The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context.
@@ -2101,7 +2102,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/generateMipmap">WebGLRenderingContext.generateMipmap - MDN</a>
    */
-  public native void generateMipmap(int target);
+  public native void generateMipmap(@TextureTargetType int target);
 
   /**
    * The WebGLRenderingContext.getActiveAttrib() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a vertex attribute. It is generally used when querying unknown attributes either for debugging or generic library creation.
@@ -2140,7 +2141,7 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getBufferParameter">WebGLRenderingContext.getBufferParameter - MDN</a>
    */
   @Nullable
-  public native Any getBufferParameter(int target, int pname);
+  public native Any getBufferParameter(@BufferTargetType int target, int pname);
 
   /**
    * The WebGLRenderingContext.getContextAttributes() method returns a WebGLContextAttributes object that contains the actual context parameters. Might return null, if the context is lost.
@@ -2235,6 +2236,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource">WebGLRenderingContext.getShaderSource - MDN</a>
    */
+  @GLSL
   @Nullable
   public native String getShaderSource(@Nonnull WebGLShader shader);
 
@@ -2252,7 +2254,8 @@ public class WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getTexParameter">WebGLRenderingContext.getTexParameter - MDN</a>
    */
   @Nullable
-  public native Any getTexParameter(int target, int pname);
+  public native Any getTexParameter(@TextureTargetType int target,
+      @ReadableTextureParameter int pname);
 
   /**
    * The WebGLRenderingContext.getUniform() method of the WebGL API returns the value of a uniform variable at a given location.
@@ -2369,7 +2372,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei">WebGLRenderingContext.pixelStorei - MDN</a>
    */
-  public native void pixelStorei(int pname, int param);
+  public native void pixelStorei(@PixelStorageParameter int pname, int param);
 
   /**
    * The WebGLRenderingContext.polygonOffset() method of the WebGL API specifies the scale factors and units to calculate depth values.
@@ -2404,7 +2407,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource">WebGLRenderingContext.shaderSource - MDN</a>
    */
-  public native void shaderSource(@Nonnull WebGLShader shader, @Nonnull String source);
+  public native void shaderSource(@Nonnull WebGLShader shader, @GLSL @Nonnull String source);
 
   /**
    * The WebGLRenderingContext.stencilFunc() method of the WebGL API sets the front and back function and reference value for stencil testing.
@@ -2448,9 +2451,11 @@ public class WebGL2RenderingContext {
    */
   public native void stencilOpSeparate(int face, int fail, int zfail, int zpass);
 
-  public native void texParameterf(int target, int pname, float param);
+  public native void texParameterf(@TextureTargetType int target, @TextureParameter int pname,
+      float param);
 
-  public native void texParameteri(int target, int pname, int param);
+  public native void texParameteri(@TextureTargetType int target, @TextureParameter int pname,
+      int param);
 
   public native void uniform1f(@Nullable WebGLUniformLocation location, float x);
 
@@ -2528,8 +2533,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer">WebGLRenderingContext.vertexAttribPointer - MDN</a>
    */
-  public native void vertexAttribPointer(int index, int size, int type, boolean normalized,
-      int stride, int offset);
+  public native void vertexAttribPointer(int index, @VertexDimensions int size, @DataType int type,
+      boolean normalized, int stride, int offset);
 
   /**
    * The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates.
@@ -2546,330 +2551,358 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, int size, int usage);
+  public native void bufferData(@BufferTargetType int target, int size, @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nullable BufferSource srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nullable BufferSource srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull ArrayBufferView srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int8Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int8Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int16Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int16Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int32Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int32Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint8Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint16Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint16Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint32Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint32Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint8ClampedArray srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float32Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Float32Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float64Array srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Float64Array srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull DataView srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull DataView srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBuffer srcData, int usage);
+  public native void bufferData(@BufferTargetType int target, @Nonnull ArrayBuffer srcData,
+      @UsageType int usage);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, int usage,
-      int srcOffset, int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull ArrayBufferView srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int8Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int8Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int16Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int16Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int32Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int32Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint8Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint16Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint16Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint32Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint32Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData, int usage,
-      int srcOffset, int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint8ClampedArray srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float32Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Float32Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float64Array srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Float64Array srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull DataView srcData, int usage, int srcOffset,
-      int length);
+  public native void bufferData(@BufferTargetType int target, @Nonnull DataView srcData,
+      @UsageType int usage, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull ArrayBufferView srcData, int usage,
-      int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull ArrayBufferView srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int8Array srcData, int usage, int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int8Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int16Array srcData, int usage, int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int16Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Int32Array srcData, int usage, int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Int32Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8Array srcData, int usage, int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint8Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint16Array srcData, int usage, int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint16Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint32Array srcData, int usage, int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint32Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Uint8ClampedArray srcData, int usage,
-      int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Uint8ClampedArray srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float32Array srcData, int usage,
-      int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Float32Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull Float64Array srcData, int usage,
-      int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull Float64Array srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData">WebGLRenderingContext.bufferData - MDN</a>
    */
-  public native void bufferData(int target, @Nonnull DataView srcData, int usage, int srcOffset);
+  public native void bufferData(@BufferTargetType int target, @Nonnull DataView srcData,
+      @UsageType int usage, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull BufferSource srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull BufferSource srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull ArrayBufferView srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull ArrayBufferView srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int8Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int8Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int16Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int16Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int32Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int32Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint8Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint8Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint16Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint16Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint32Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint32Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset,
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
       @Nonnull Uint8ClampedArray srcData);
 
   /**
@@ -2877,91 +2910,95 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Float32Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Float32Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Float64Array srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Float64Array srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull DataView srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull DataView srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull ArrayBuffer srcData);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull ArrayBuffer srcData);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull ArrayBufferView srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull ArrayBufferView srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int8Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int8Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int16Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int16Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int32Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int32Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint8Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint8Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint16Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint16Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint32Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint32Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset,
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
       @Nonnull Uint8ClampedArray srcData, int srcOffset, int length);
 
   /**
@@ -2969,87 +3006,87 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Float32Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Float32Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Float64Array srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Float64Array srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull DataView srcData,
-      int srcOffset, int length);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull DataView srcData, int srcOffset, int length);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull ArrayBufferView srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull ArrayBufferView srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int8Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int16Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Int32Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Int32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint8Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint16Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Uint32Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Uint32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset,
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
       @Nonnull Uint8ClampedArray srcData, int srcOffset);
 
   /**
@@ -3057,411 +3094,444 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Float32Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Float32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull Float64Array srcData,
-      int srcOffset);
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull Float64Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData">WebGLRenderingContext.bufferSubData - MDN</a>
    */
-  public native void bufferSubData(int target, int dstByteOffset, @Nonnull DataView srcData,
+  public native void bufferSubData(@BufferTargetType int target, int dstByteOffset,
+      @Nonnull DataView srcData, int srcOffset);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int imageSize, int offset);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull ArrayBufferView srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int8Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int16Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int32Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint8Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint16Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint32Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint8ClampedArray srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Float32Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Float64Array srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull DataView srcData,
+      int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull ArrayBufferView srcData,
       int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, int imageSize, int offset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int8Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull ArrayBufferView srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int16Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int8Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int32Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int16Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint8Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int32Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint16Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint8Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint32Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint16Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint8ClampedArray srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint32Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Float32Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint8ClampedArray srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Float64Array srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Float32Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull DataView srcData,
+      int srcOffset);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Float64Array srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull ArrayBufferView srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull DataView srcData, int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int8Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull ArrayBufferView srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int16Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int8Array srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Int32Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int16Array srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint8Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int32Array srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint16Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint8Array srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint32Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint16Array srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Uint8ClampedArray srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint32Array srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Float32Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint8ClampedArray srcData, int srcOffset);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull Float64Array srcData);
 
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Float32Array srcData, int srcOffset);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Float64Array srcData, int srcOffset);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull DataView srcData, int srcOffset);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull ArrayBufferView srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int8Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int16Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Int32Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint8Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint16Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint32Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Uint8ClampedArray srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Float32Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull Float64Array srcData);
-
-  public native void compressedTexImage2D(int target, int level, int internalformat, int width,
-      int height, int border, @Nonnull DataView srcData);
+  public native void compressedTexImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, @Nonnull DataView srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, int imageSize, int offset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, int imageSize, int offset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull ArrayBufferView srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull ArrayBufferView srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int8Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int8Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int16Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int16Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int32Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int32Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint8Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint8Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint16Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint16Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint32Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint32Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint8ClampedArray srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Float32Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Float32Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Float64Array srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Float64Array srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull DataView srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull DataView srcData,
+      int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull ArrayBufferView srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull ArrayBufferView srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int8Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int8Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int16Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int16Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int32Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint8Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint8Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint16Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint16Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint32Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint8ClampedArray srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Float32Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Float32Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Float64Array srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Float64Array srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull DataView srcData, int srcOffset);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull DataView srcData,
+      int srcOffset);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull ArrayBufferView srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format,
+      @Nonnull ArrayBufferView srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int8Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int8Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int16Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int16Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Int32Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Int32Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint8Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint8Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint16Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint16Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint32Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Uint32Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Uint8ClampedArray srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format,
+      @Nonnull Uint8ClampedArray srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Float32Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Float32Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull Float64Array srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull Float64Array srcData);
 
   /**
    * The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D">WebGLRenderingContext.compressedTexSubImage2D - MDN</a>
    */
-  public native void compressedTexSubImage2D(int target, int level, int xoffset, int yoffset,
-      int width, int height, int format, @Nonnull DataView srcData);
+  public native void compressedTexSubImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int xoffset, int yoffset, int width, int height, int format, @Nonnull DataView srcData);
 
   /**
    * The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object.
@@ -3652,95 +3722,172 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nullable ArrayBufferView pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nullable ArrayBufferView pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int8Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Int8Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int16Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Int16Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int32Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Int32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint8Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint16Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint16Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint32Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8ClampedArray pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint8ClampedArray pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float32Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Float32Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float64Array pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Float64Array pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull DataView pixels);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull DataView pixels);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int format, @TexelDataType int type, @Nonnull TexImageSource source);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int format, @TexelDataType int type, @Nonnull ImageBitmap source);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int format, @TexelDataType int type, @Nonnull ImageData source);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int format, @TexelDataType int type, @Nonnull HTMLImageElement source);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int format, @TexelDataType int type, @Nonnull HTMLCanvasElement source);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int format, @TexelDataType int type, @Nonnull HTMLVideoElement source);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int format, @TexelDataType int type, @Nonnull OffscreenCanvas source);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      int pboOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
+   */
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
       @Nonnull TexImageSource source);
 
   /**
@@ -3748,7 +3895,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
       @Nonnull ImageBitmap source);
 
   /**
@@ -3756,7 +3904,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
       @Nonnull ImageData source);
 
   /**
@@ -3764,7 +3913,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
       @Nonnull HTMLImageElement source);
 
   /**
@@ -3772,7 +3922,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
       @Nonnull HTMLCanvasElement source);
 
   /**
@@ -3780,7 +3931,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
       @Nonnull HTMLVideoElement source);
 
   /**
@@ -3788,7 +3940,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int format, int type,
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
       @Nonnull OffscreenCanvas source);
 
   /**
@@ -3796,448 +3949,424 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, int pboOffset);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull ArrayBufferView srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull TexImageSource source);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Int8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull ImageBitmap source);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Int16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull ImageData source);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Int32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull HTMLImageElement source);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull HTMLCanvasElement source);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull HTMLVideoElement source);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull OffscreenCanvas source);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull ArrayBufferView srcData, int srcOffset);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Float32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int8Array srcData, int srcOffset);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull Float64Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
    */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int16Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Int32Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint16Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint32Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Uint8ClampedArray srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float32Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull Float64Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D">WebGLRenderingContext.texImage2D - MDN</a>
-   */
-  public native void texImage2D(int target, int level, int internalformat, int width, int height,
-      int border, int format, int type, @Nonnull DataView srcData, int srcOffset);
+  public native void texImage2D(@Texture2DSurfaceTargetType int target, int level,
+      int internalformat, int width, int height, int border, int format, @TexelDataType int type,
+      @Nonnull DataView srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nullable ArrayBufferView pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nullable ArrayBufferView pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int8Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Int8Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int16Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Int16Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int32Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Int32Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint8Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint16Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint16Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint32Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint32Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8ClampedArray pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint8ClampedArray pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float32Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Float32Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float64Array pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Float64Array pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull DataView pixels);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull DataView pixels);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull TexImageSource source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int format, @TexelDataType int type, @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull ImageBitmap source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int format, @TexelDataType int type, @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull ImageData source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int format, @TexelDataType int type, @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull HTMLImageElement source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int format, @TexelDataType int type, @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull HTMLCanvasElement source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int format, @TexelDataType int type, @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull HTMLVideoElement source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int format, @TexelDataType int type, @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int format,
-      int type, @Nonnull OffscreenCanvas source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int format, @TexelDataType int type, @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, int pboOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type, int pboOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull TexImageSource source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull ImageBitmap source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull ImageData source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull HTMLImageElement source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull HTMLCanvasElement source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull HTMLVideoElement source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull OffscreenCanvas source);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull ArrayBufferView srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull ArrayBufferView srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int8Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Int8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int16Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Int16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Int32Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Int32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint16Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint32Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Uint8ClampedArray srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float32Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Float32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull Float64Array srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull Float64Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texSubImage2D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texSubImage2D">WebGLRenderingContext.texSubImage2D - MDN</a>
    */
-  public native void texSubImage2D(int target, int level, int xoffset, int yoffset, int width,
-      int height, int format, int type, @Nonnull DataView srcData, int srcOffset);
+  public native void texSubImage2D(@Texture2DSurfaceTargetType int target, int level, int xoffset,
+      int yoffset, int width, int height, int format, @TexelDataType int type,
+      @Nonnull DataView srcData, int srcOffset);
 
   public native void uniform1fv(@Nullable WebGLUniformLocation location, @Nonnull Float32List data,
       int srcOffset, int srcLength);
@@ -4742,388 +4871,416 @@ public class WebGL2RenderingContext {
    */
   public native int clientWaitSync(@Nonnull WebGLSync sync, int flags, int timeout);
 
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, int imageSize, int offset);
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, int imageSize, int offset);
 
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull ArrayBufferView srcData, int srcOffset,
-      int srcLengthOverride);
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull ArrayBufferView srcData, int srcOffset, int srcLengthOverride);
 
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int8Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int16Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int32Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint8Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint16Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint32Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint8ClampedArray srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Float32Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Float64Array srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull DataView srcData, int srcOffset,
-      int srcLengthOverride);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull ArrayBufferView srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int8Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int16Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int32Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint8Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint16Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint32Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint8ClampedArray srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Float32Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Float64Array srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull DataView srcData, int srcOffset);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull ArrayBufferView srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int8Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int16Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Int32Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint8Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint16Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint32Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Uint8ClampedArray srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Float32Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull Float64Array srcData);
-
-  public native void compressedTexImage3D(int target, int level, int internalformat, int width,
-      int height, int depth, int border, @Nonnull DataView srcData);
-
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, int imageSize, int offset);
-
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull ArrayBufferView srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Int8Array srcData,
       int srcOffset, int srcLengthOverride);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int8Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Int16Array srcData,
       int srcOffset, int srcLengthOverride);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int16Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Int32Array srcData,
       int srcOffset, int srcLengthOverride);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int32Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Uint8Array srcData,
       int srcOffset, int srcLengthOverride);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint8Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint16Array srcData, int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint32Array srcData, int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Float32Array srcData, int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Float64Array srcData, int srcOffset, int srcLengthOverride);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull DataView srcData,
       int srcOffset, int srcLengthOverride);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint16Array srcData,
-      int srcOffset, int srcLengthOverride);
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull ArrayBufferView srcData, int srcOffset);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint32Array srcData,
-      int srcOffset, int srcLengthOverride);
-
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint8ClampedArray srcData,
-      int srcOffset, int srcLengthOverride);
-
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Float32Array srcData,
-      int srcOffset, int srcLengthOverride);
-
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Float64Array srcData,
-      int srcOffset, int srcLengthOverride);
-
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull DataView srcData,
-      int srcOffset, int srcLengthOverride);
-
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull ArrayBufferView srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Int8Array srcData,
       int srcOffset);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int8Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Int16Array srcData,
       int srcOffset);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int16Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Int32Array srcData,
       int srcOffset);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int32Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Uint8Array srcData,
       int srcOffset);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint8Array srcData,
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint16Array srcData, int srcOffset);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint32Array srcData, int srcOffset);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Float32Array srcData, int srcOffset);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Float64Array srcData, int srcOffset);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull DataView srcData,
       int srcOffset);
 
-  /**
-   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
-   */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint16Array srcData,
-      int srcOffset);
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull ArrayBufferView srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull Int8Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Int16Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Int32Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint8Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint16Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint32Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Uint8ClampedArray srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Float32Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border,
+      @Nonnull Float64Array srcData);
+
+  public native void compressedTexImage3D(@Texture3DTargetType int target, int level,
+      int internalformat, int width, int height, int depth, int border, @Nonnull DataView srcData);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint32Array srcData,
-      int srcOffset);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      int imageSize, int offset);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint8ClampedArray srcData,
-      int srcOffset);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull ArrayBufferView srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Float32Array srcData,
-      int srcOffset);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int8Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Float64Array srcData,
-      int srcOffset);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int16Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull DataView srcData,
-      int srcOffset);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int32Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull ArrayBufferView srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint8Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int8Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint16Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int16Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint32Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Int32Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint8Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Float32Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint16Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Float64Array srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Uint32Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull DataView srcData, int srcOffset, int srcLengthOverride);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format,
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull ArrayBufferView srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int8Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int16Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int32Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint8Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint16Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint32Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Float32Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Float64Array srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull DataView srcData, int srcOffset);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull ArrayBufferView srcData);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int8Array srcData);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int16Array srcData);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Int32Array srcData);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint8Array srcData);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint16Array srcData);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Uint32Array srcData);
+
+  /**
+   * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
+   */
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
       @Nonnull Uint8ClampedArray srcData);
 
   /**
@@ -5131,24 +5288,27 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Float32Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Float32Array srcData);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull Float64Array srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull Float64Array srcData);
 
   /**
    * The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexSubImage3D">WebGL2RenderingContext.compressedTexSubImage3D - MDN</a>
    */
-  public native void compressedTexSubImage3D(int target, int level, int xoffset, int yoffset,
-      int zoffset, int width, int height, int depth, int format, @Nonnull DataView srcData);
+  public native void compressedTexSubImage3D(@Texture3DTargetType int target, int level,
+      int xoffset, int yoffset, int zoffset, int width, int height, int depth, int format,
+      @Nonnull DataView srcData);
 
   /**
    * The WebGL2RenderingContext.copyBufferSubData() method of the WebGL 2 API copies part of the data of a buffer to another buffer.
@@ -5163,8 +5323,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/copyTexSubImage3D">WebGL2RenderingContext.copyTexSubImage3D - MDN</a>
    */
-  public native void copyTexSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int x, int y, int width, int height);
+  public native void copyTexSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int x, int y, int width, int height);
 
   /**
    * The WebGL2RenderingContext.createQuery() method of the WebGL 2 API creates and initializes WebGLQuery objects, which provide ways to asynchronously query for information.
@@ -5238,7 +5398,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced">WebGL2RenderingContext.drawArraysInstanced - MDN</a>
    */
-  public native void drawArraysInstanced(int mode, int first, int count, int instanceCount);
+  public native void drawArraysInstanced(@DrawPrimitiveType int mode, int first, int count,
+      int instanceCount);
 
   /**
    * The WebGL2RenderingContext.drawBuffers() method of the WebGL 2 API defines draw buffers to which fragment colors are written into. The draw buffer settings are part of the state of the currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
@@ -5259,16 +5420,16 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced">WebGL2RenderingContext.drawElementsInstanced - MDN</a>
    */
-  public native void drawElementsInstanced(int mode, int count, int type, int offset,
-      int instanceCount);
+  public native void drawElementsInstanced(@DrawPrimitiveType int mode, int count,
+      @DrawElementDataType int type, int offset, int instanceCount);
 
   /**
    * The WebGL2RenderingContext.drawRangeElements() method of the WebGL API renders primitives from array data in a given range.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawRangeElements">WebGL2RenderingContext.drawRangeElements - MDN</a>
    */
-  public native void drawRangeElements(int mode, int start, int end, int count, int type,
-      int offset);
+  public native void drawRangeElements(@DrawPrimitiveType int mode, int start, int end, int count,
+      @DrawElementDataType int type, int offset);
 
   /**
    * The WebGL2RenderingContext.endQuery() method of the WebGL 2 API marks the end of a given query target.
@@ -5341,7 +5502,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull ArrayBufferView dstBuffer, int dstOffset, int length);
 
   /**
@@ -5349,55 +5510,55 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int8Array dstBuffer,
-      int dstOffset, int length);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int8Array dstBuffer, int dstOffset, int length);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int16Array dstBuffer,
-      int dstOffset, int length);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int16Array dstBuffer, int dstOffset, int length);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int32Array dstBuffer,
-      int dstOffset, int length);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int32Array dstBuffer, int dstOffset, int length);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Uint8Array dstBuffer,
-      int dstOffset, int length);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Uint8Array dstBuffer, int dstOffset, int length);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Uint16Array dstBuffer,
-      int dstOffset, int length);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Uint16Array dstBuffer, int dstOffset, int length);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Uint32Array dstBuffer,
-      int dstOffset, int length);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Uint32Array dstBuffer, int dstOffset, int length);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Uint8ClampedArray dstBuffer, int dstOffset, int length);
 
   /**
@@ -5405,7 +5566,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Float32Array dstBuffer, int dstOffset, int length);
 
   /**
@@ -5413,7 +5574,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Float64Array dstBuffer, int dstOffset, int length);
 
   /**
@@ -5421,15 +5582,15 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull DataView dstBuffer,
-      int dstOffset, int length);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull DataView dstBuffer, int dstOffset, int length);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull ArrayBufferView dstBuffer, int dstOffset);
 
   /**
@@ -5437,55 +5598,55 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int8Array dstBuffer,
-      int dstOffset);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int8Array dstBuffer, int dstOffset);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int16Array dstBuffer,
-      int dstOffset);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int16Array dstBuffer, int dstOffset);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int32Array dstBuffer,
-      int dstOffset);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int32Array dstBuffer, int dstOffset);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Uint8Array dstBuffer,
-      int dstOffset);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Uint8Array dstBuffer, int dstOffset);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Uint16Array dstBuffer,
-      int dstOffset);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Uint16Array dstBuffer, int dstOffset);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Uint32Array dstBuffer,
-      int dstOffset);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Uint32Array dstBuffer, int dstOffset);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Uint8ClampedArray dstBuffer, int dstOffset);
 
   /**
@@ -5493,7 +5654,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Float32Array dstBuffer, int dstOffset);
 
   /**
@@ -5501,7 +5662,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Float64Array dstBuffer, int dstOffset);
 
   /**
@@ -5509,15 +5670,15 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull DataView dstBuffer,
-      int dstOffset);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull DataView dstBuffer, int dstOffset);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull ArrayBufferView dstBuffer);
 
   /**
@@ -5525,35 +5686,39 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int8Array dstBuffer);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int8Array dstBuffer);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int16Array dstBuffer);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int16Array dstBuffer);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Int32Array dstBuffer);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Int32Array dstBuffer);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull Uint8Array dstBuffer);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull Uint8Array dstBuffer);
 
   /**
    * The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Uint16Array dstBuffer);
 
   /**
@@ -5561,7 +5726,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Uint32Array dstBuffer);
 
   /**
@@ -5569,7 +5734,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Uint8ClampedArray dstBuffer);
 
   /**
@@ -5577,7 +5742,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Float32Array dstBuffer);
 
   /**
@@ -5585,7 +5750,7 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset,
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
       @Nonnull Float64Array dstBuffer);
 
   /**
@@ -5593,7 +5758,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData">WebGL2RenderingContext.getBufferSubData - MDN</a>
    */
-  public native void getBufferSubData(int target, int srcByteOffset, @Nonnull DataView dstBuffer);
+  public native void getBufferSubData(@BufferTargetType int target, int srcByteOffset,
+      @Nonnull DataView dstBuffer);
 
   /**
    * The WebGL2RenderingContext.getFragDataLocation() method of the WebGL 2 API returns the binding of color numbers to user-defined varying out variables.
@@ -5788,508 +5954,555 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, int pboOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type, int pboOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull TexImageSource source);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull TexImageSource source);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull ImageBitmap source);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull ImageBitmap source);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull ImageData source);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull ImageData source);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull HTMLImageElement source);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull HTMLImageElement source);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull HTMLCanvasElement source);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull HTMLVideoElement source);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull OffscreenCanvas source);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nullable ArrayBufferView srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nullable ArrayBufferView srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Int8Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Int8Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Int16Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Int16Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Int32Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Int32Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint8Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint8Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint16Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint16Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint32Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint32Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint8ClampedArray srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint8ClampedArray srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Float32Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Float32Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Float64Array srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Float64Array srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull DataView srcData);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull DataView srcData);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull ArrayBufferView srcData, int srcOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull ArrayBufferView srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Int8Array srcData, int srcOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Int8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Int16Array srcData, int srcOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Int16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Int32Array srcData, int srcOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Int32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint8Array srcData, int srcOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint8Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint16Array srcData, int srcOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint16Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint32Array srcData, int srcOffset);
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint32Array srcData, int srcOffset);
 
   /**
    * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
    */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Uint8ClampedArray srcData,
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
+   */
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Float32Array srcData, int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
+   */
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type,
+      @Nonnull Float64Array srcData, int srcOffset);
+
+  /**
+   * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
+   */
+  public native void texImage3D(@Texture3DTargetType int target, int level, int internalformat,
+      int width, int height, int depth, int border, int format, int type, @Nonnull DataView srcData,
       int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
-   */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Float32Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
-   */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull Float64Array srcData, int srcOffset);
-
-  /**
-   * The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D">WebGL2RenderingContext.texImage3D - MDN</a>
-   */
-  public native void texImage3D(int target, int level, int internalformat, int width, int height,
-      int depth, int border, int format, int type, @Nonnull DataView srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texStorage2D() method of the WebGL API specifies all levels of two-dimensional texture storage.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage2D">WebGL2RenderingContext.texStorage2D - MDN</a>
    */
-  public native void texStorage2D(int target, int levels, int internalformat, int width,
-      int height);
+  public native void texStorage2D(@Texture2DTargetType int target, int levels, int internalformat,
+      int width, int height);
 
   /**
    * The WebGL2RenderingContext.texStorage3D() method of the WebGL API specifies all levels of a three-dimensional texture or two-dimensional array texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage3D">WebGL2RenderingContext.texStorage3D - MDN</a>
    */
-  public native void texStorage3D(int target, int levels, int internalformat, int width, int height,
-      int depth);
+  public native void texStorage3D(@Texture3DTargetType int target, int levels, int internalformat,
+      int width, int height, int depth);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, int pboOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      int pboOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull TexImageSource source);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull TexImageSource source);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull ImageBitmap source);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull ImageBitmap source);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull ImageData source);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull ImageData source);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull HTMLImageElement source);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull HTMLImageElement source);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull HTMLCanvasElement source);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull HTMLCanvasElement source);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull HTMLVideoElement source);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull HTMLVideoElement source);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull OffscreenCanvas source);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull OffscreenCanvas source);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nullable ArrayBufferView srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nullable ArrayBufferView srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Int8Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Int8Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Int16Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Int16Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Int32Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Int32Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint8Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint8Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint16Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint16Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint32Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint32Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint8ClampedArray srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint8ClampedArray srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Float32Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Float32Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Float64Array srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Float64Array srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull DataView srcData,
-      int srcOffset);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull DataView srcData, int srcOffset);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nullable ArrayBufferView srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nullable ArrayBufferView srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Int8Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Int8Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Int16Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Int16Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Int32Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Int32Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint8Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint8Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint16Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint16Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint32Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint32Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Uint8ClampedArray srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Uint8ClampedArray srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Float32Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Float32Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull Float64Array srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull Float64Array srcData);
 
   /**
    * The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D">WebGL2RenderingContext.texSubImage3D - MDN</a>
    */
-  public native void texSubImage3D(int target, int level, int xoffset, int yoffset, int zoffset,
-      int width, int height, int depth, int format, int type, @Nonnull DataView srcData);
+  public native void texSubImage3D(@Texture3DTargetType int target, int level, int xoffset,
+      int yoffset, int zoffset, int width, int height, int depth, int format, int type,
+      @Nonnull DataView srcData);
 
   /**
    * The WebGL2RenderingContext.transformFeedbackVaryings() method of the WebGL 2 API specifies values to record in WebGLTransformFeedback buffers.
@@ -6708,7 +6921,8 @@ public class WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribIPointer">WebGL2RenderingContext.vertexAttribIPointer - MDN</a>
    */
-  public native void vertexAttribIPointer(int index, int size, int type, int stride, int offset);
+  public native void vertexAttribIPointer(int index, @VertexDimensions int size, int type,
+      int stride, int offset);
 
   /**
    * The WebGL2RenderingContext.waitSync() method of the WebGL 2 API returns immediately, but waits on the GL server until the given WebGLSync object is signaled.

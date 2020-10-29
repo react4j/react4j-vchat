@@ -95,6 +95,7 @@ public class XMLHttpRequest extends XMLHttpRequestEventTarget {
   @JsProperty(
       name = "readyState"
   )
+  @XMLHttpRequestReadyState
   public native int readyState();
 
   /**

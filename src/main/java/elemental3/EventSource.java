@@ -79,6 +79,7 @@ public class EventSource extends EventTarget {
   @JsProperty(
       name = "readyState"
   )
+  @EventSourceReadyState
   public native int readyState();
 
   /**
