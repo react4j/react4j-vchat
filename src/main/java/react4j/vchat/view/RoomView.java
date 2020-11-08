@@ -163,7 +163,7 @@ abstract class RoomView
   private void toggleFullscreen()
   {
     assert null != _view;
-    final Document document = Global.globalThis().document();
+    final Document document = Global.document();
     if ( document.fullscreen() )
     {
       document.exitFullscreen();
@@ -302,7 +302,7 @@ abstract class RoomView
   @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
   boolean isFullscreen()
   {
-    return Global.globalThis().document().fullscreen();
+    return Global.document().fullscreen();
   }
 
   @ComputableValueRef
@@ -311,13 +311,13 @@ abstract class RoomView
   @OnActivate
   void onFullscreenActivate()
   {
-    Global.globalThis().document().addFullscreenchangeListener( _onFullScreenChange );
+    Global.document().addFullscreenchangeListener( _onFullScreenChange );
   }
 
   @OnDeactivate
   void onFullscreenDeactivate()
   {
-    Global.globalThis().document().removeFullscreenchangeListener( _onFullScreenChange );
+    Global.document().removeFullscreenchangeListener( _onFullScreenChange );
   }
 
   @Action

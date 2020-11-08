@@ -355,7 +355,7 @@ public abstract class RoomModel
           } )
           .catch_( e -> {
             // TODO: An error occurred, so handle the failure to connect
-            Global.globalThis().console().log( "Offer error: ", e );
+            Console.log( "Offer error: ", e );
             _negotiationInFlight = false;
             return null;
           } );
@@ -475,7 +475,7 @@ public abstract class RoomModel
   @Nonnull
   private String deriveRoomUrl()
   {
-    final Location location = Global.globalThis().location();
+    final Location location = Global.location();
     final String protocol = "https".equals( location.protocol ) ? "wss" : "ws";
     // For local development hardcode the port. In the future we should fix this
     final int port = 3737;
@@ -522,7 +522,6 @@ public abstract class RoomModel
   {
     final Any data = event.data();
     assert null != data;
-    final Console console = Global.globalThis().console();
     final Any object = JSON.parse( data.cast() );
     assert null != object;
     final JsPropertyMap<Object> message = object.cast();
@@ -533,19 +532,19 @@ public abstract class RoomModel
       final String command = message.getAsAny( "command" ).asString();
       if ( "create".equals( command ) )
       {
-        console.log( "Connected to room as host" );
+        Console.log( "Connected to room as host" );
         setRole( Role.HOST );
         setState( State.JOINED );
       }
       else if ( "connect".equals( command ) )
       {
-        console.log( "Connected to room as guest" );
+        Console.log( "Connected to room as guest" );
         setRole( Role.GUEST );
         setState( State.CONNECTED );
       }
       else if ( "full".equals( command ) )
       {
-        console.log( "Room full. Leaving room." );
+        Console.log( "Room full. Leaving room." );
         setRole( Role.UNKNOWN );
         leaveWithState( State.FULL );
       }
@@ -553,25 +552,25 @@ public abstract class RoomModel
       {
         final String id = message.getAsAny( "id" ).asString();
         final String requestMessage = message.getAsAny( "message" ).asString();
-        console.log( "Guest '" + id + "' requested access to room with message '" + requestMessage + "'" );
+        Console.log( "Guest '" + id + "' requested access to room with message '" + requestMessage + "'" );
         _pendingAccessRequest.add( new AccessRequest( id, requestMessage ) );
         getPendingAccessRequestsObservableValue().reportChanged();
       }
       else if ( "accept".equals( command ) )
       {
-        console.log( "Host allowed guest to join room." );
+        Console.log( "Host allowed guest to join room." );
         setState( State.JOINED );
         setupPeerConnection();
       }
       else if ( "reject".equals( command ) )
       {
-        console.log( "Host rejected guest from room." );
+        Console.log( "Host rejected guest from room." );
         setState( State.JOIN_REJECTED );
       }
       else if ( "accepted".equals( command ) )
       {
         final String id = message.getAsAny( "id" ).asString();
-        console.log( "Host accepted guest '" + id + "' into room." );
+        Console.log( "Host accepted guest '" + id + "' into room." );
         _participants.add( id );
         getParticipantsObservableValue().reportChanged();
       }
@@ -580,12 +579,12 @@ public abstract class RoomModel
         final String id = message.getAsAny( "id" ).asString();
         if ( _participants.remove( id ) )
         {
-          console.log( "Guest '" + id + "' left the room." );
+          Console.log( "Guest '" + id + "' left the room." );
           getParticipantsObservableValue().reportChanged();
         }
         else if ( _pendingAccessRequest.removeIf( r -> r.getId().equals( id ) ) )
         {
-          console.log( "Client '" + id + "' left the room." );
+          Console.log( "Client '" + id + "' left the room." );
           getPendingAccessRequestsObservableValue().reportChanged();
         }
       }
@@ -606,7 +605,7 @@ public abstract class RoomModel
           } )
           .catch_( e -> {
             // TODO: An error occurred, so handle the failure to connect
-            console.log( "Answer error: ", e );
+            Console.log( "Answer error: ", e );
             completeNegotiation();
             return null;
           } );
@@ -699,7 +698,6 @@ public abstract class RoomModel
   private Promise<MediaStream> requestWebCam()
   {
     return Global
-      .globalThis()
       .navigator()
       .mediaDevices()
       .getUserMedia( MediaStreamConstraints
@@ -715,7 +713,6 @@ public abstract class RoomModel
   private Promise<MediaStream> requestScreenShare()
   {
     return Global
-      .globalThis()
       .navigator()
       .mediaDevices()
       .getDisplayMedia( DisplayMediaStreamConstraints.create().audio( false ) );

@@ -36,7 +36,7 @@ public abstract class ApplicationState
 
   ApplicationState()
   {
-    final String codes = Global.globalThis().localStorage().getItem( STORAGE_KEY );
+    final String codes = Global.localStorage().getItem( STORAGE_KEY );
     if ( null != codes )
     {
       for ( final String code : codes.split( "\\|" ) )
@@ -77,7 +77,7 @@ public abstract class ApplicationState
     }
     _latestRoomCodes.addFirst( roomCode );
     getLatestRoomCodesObservableValue().reportChanged();
-    Global.globalThis().localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomCodes ) );
+    Global.localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomCodes ) );
   }
 
   /**

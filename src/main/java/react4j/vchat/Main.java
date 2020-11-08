@@ -14,7 +14,7 @@ public final class Main
   public void onModuleLoad()
   {
     //ReactArezSpyUtil.enableSpyEventLogging();
-    final Element root = Global.globalThis().document().getElementById( "app" );
+    final Element root = Global.document().getElementById( "app" );
     assert null != root;
     // TODO: Remove Js.cast once react4j is moved to elemental3
     ReactDOM.render( ApplicationBuilder.build(), Js.cast( root ) );
