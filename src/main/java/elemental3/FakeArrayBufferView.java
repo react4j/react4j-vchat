@@ -5,9 +5,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * The Transferable type can be be transferred between contexts.
- *
- * @see <a href="https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects">Transferable - HTML Specification</a>
+ * A temporary hack to emulate ArrayBufferView as an interface.
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,5 +13,5 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface Transferable {
+public interface FakeArrayBufferView {
 }
