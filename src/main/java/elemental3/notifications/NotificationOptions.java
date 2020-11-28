@@ -1,7 +1,7 @@
 package elemental3.notifications;
 
-import elemental2.core.JsArray;
 import elemental3.VibratePattern;
+import elemental3.core.JsArray;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -276,13 +276,13 @@ public interface NotificationOptions {
   }
 
   @JsOverlay
-  default void setVibrate(@Nonnull final Double... vibrate) {
+  default void setVibrate(@Nonnull final double... vibrate) {
     setVibrate( VibratePattern.of( vibrate ) );
   }
 
   @JsOverlay
   @Nonnull
-  default NotificationOptions vibrate(@Nonnull final Double... vibrate) {
+  default NotificationOptions vibrate(@Nonnull final double... vibrate) {
     setVibrate( vibrate );
     return this;
   }

@@ -10,12 +10,12 @@ import arez.annotations.Feature;
 import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import arez.annotations.Observe;
-import elemental2.promise.Promise;
 import elemental3.DOMException;
 import elemental3.HTMLVideoElement;
 import elemental3.MediaProvider;
 import elemental3.media.MediaStream;
 import elemental3.media.MediaStreamTrackState;
+import elemental3.promise.Promise;
 import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -195,11 +195,7 @@ public abstract class MediaStreamConnection
   {
     setConnecting( false );
     setStream( stream );
-    stream.getTracks().forEach( ( track, index, tracks ) -> {
-      track.onended = e -> onTrackEnded();
-      // TODO: Should not have to return null here
-      return null;
-    } );
+    stream.getTracks().forEach( track -> track.onended = e -> onTrackEnded() );
     _onStreamConnected.accept( stream );
   }
 
@@ -219,13 +215,12 @@ public abstract class MediaStreamConnection
     setEnabled( false );
     if ( null != stream )
     {
-      stream.getTracks().forEach( ( track, index, tracks ) -> {
+      stream.getTracks().forEach(  track-> {
         if ( MediaStreamTrackState.live.equals( track.readyState() ) )
         {
           track.onended = null;
           track.stop();
         }
-        return null;
       } );
     }
   }
@@ -279,12 +274,11 @@ public abstract class MediaStreamConnection
 
   private void stopTracks( @Nonnull final MediaStream stream )
   {
-    stream.getTracks().forEach( ( track, index, array ) -> {
+    stream.getTracks().forEach( track -> {
       if ( MediaStreamTrackState.live.equals( track.readyState() ) )
       {
         track.stop();
       }
-      return null;
     } );
   }
 }

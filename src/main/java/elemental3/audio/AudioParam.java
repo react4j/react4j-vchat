@@ -1,6 +1,6 @@
 package elemental3.audio;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -133,6 +133,6 @@ public class AudioParam {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueCurveAtTime">AudioParam.setValueCurveAtTime - MDN</a>
    */
   @Nonnull
-  public native AudioParam setValueCurveAtTime(@Nonnull Double[] values, double startTime,
+  public native AudioParam setValueCurveAtTime(@Nonnull double[] values, double startTime,
       double duration);
 }

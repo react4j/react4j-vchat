@@ -13,16 +13,15 @@ import arez.annotations.Feature;
 import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import arez.annotations.ObservableValueRef;
-import elemental2.core.JsArray;
-import elemental2.promise.Promise;
 import elemental3.CloseEvent;
 import elemental3.Console;
 import elemental3.Event;
 import elemental3.Global;
-import elemental3.JSON;
 import elemental3.Location;
 import elemental3.MessageEvent;
 import elemental3.WebSocket;
+import elemental3.core.JSON;
+import elemental3.core.JsArray;
 import elemental3.media.ConstrainULongRange;
 import elemental3.media.DisplayMediaStreamConstraints;
 import elemental3.media.MediaStream;
@@ -30,6 +29,7 @@ import elemental3.media.MediaStreamConstraints;
 import elemental3.media.MediaStreamTrack;
 import elemental3.media.MediaStreamTrackEvent;
 import elemental3.media.MediaTrackConstraints;
+import elemental3.promise.Promise;
 import elemental3.rtc.RTCConfiguration;
 import elemental3.rtc.RTCIceCandidate;
 import elemental3.rtc.RTCIceCandidateInit;
@@ -303,10 +303,7 @@ public abstract class RoomModel
     // attach local media to the peer connection
     if ( null != _connection )
     {
-      stream.getTracks().forEach( ( track, index, tracks ) -> {
-        _connection.addTrack( track, stream );
-        return null;
-      } );
+      stream.getTracks().forEach( track -> _connection.addTrack( track, stream ) );
       requestNegotiation();
     }
   }
@@ -315,15 +312,14 @@ public abstract class RoomModel
   {
     if ( null != _connection )
     {
-      stream.getTracks().forEach( ( track, index, tracks ) -> {
+      stream.getTracks().forEach( track -> {
         final RTCRtpSender rtpSender =
-          _connection.getSenders().find( ( sender, senderIndex, severs ) -> sender.track() == track );
+          _connection.getSenders().find( sender -> sender.track() == track );
         if ( null != rtpSender )
         {
           _connection.removeTrack( rtpSender );
           requestNegotiation();
         }
-        return null;
       } );
     }
   }
@@ -388,7 +384,7 @@ public abstract class RoomModel
       // TODO: This is an ugly hack so that @Memoize method will return a
       //  different value and thus be marked as changed
       _remoteStreams = new ArrayList<>( _remoteStreams );
-      streams.forEach( ( stream, index, collection ) -> {
+      streams.forEach( stream -> {
         if ( _remoteStreams.stream().noneMatch( connection -> doesConnectionMatchStream( connection, stream ) ) )
         {
           final Consumer<MediaStream> noop = s -> {
@@ -399,7 +395,6 @@ public abstract class RoomModel
           _remoteStreams.add( streamConnection );
           stream.onremovetrack = this::onRemoveTrack;
         }
-        return null;
       } );
       getListMediaStreamsComputableValue().reportPossiblyChanged();
     }

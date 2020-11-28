@@ -1,6 +1,6 @@
 package elemental3.audio;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -39,13 +39,13 @@ public interface WaveShaperOptions extends AudioNodeOptions {
   }
 
   @JsOverlay
-  default void setCurve(@Nonnull final Double... curve) {
+  default void setCurve(@Nonnull final double... curve) {
     setCurve( Js.<JsArray<Double>>uncheckedCast( curve ) );
   }
 
   @JsOverlay
   @Nonnull
-  default WaveShaperOptions curve(@Nonnull final Double... curve) {
+  default WaveShaperOptions curve(@Nonnull final double... curve) {
     setCurve( curve );
     return this;
   }

@@ -1,6 +1,6 @@
 package elemental3.audio;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -39,13 +39,13 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   }
 
   @JsOverlay
-  default void setImag(@Nonnull final Double... imag) {
+  default void setImag(@Nonnull final double... imag) {
     setImag( Js.<JsArray<Double>>uncheckedCast( imag ) );
   }
 
   @JsOverlay
   @Nonnull
-  default PeriodicWaveOptions imag(@Nonnull final Double... imag) {
+  default PeriodicWaveOptions imag(@Nonnull final double... imag) {
     setImag( imag );
     return this;
   }
@@ -66,13 +66,13 @@ public interface PeriodicWaveOptions extends PeriodicWaveConstraints {
   }
 
   @JsOverlay
-  default void setReal(@Nonnull final Double... real) {
+  default void setReal(@Nonnull final double... real) {
     setReal( Js.<JsArray<Double>>uncheckedCast( real ) );
   }
 
   @JsOverlay
   @Nonnull
-  default PeriodicWaveOptions real(@Nonnull final Double... real) {
+  default PeriodicWaveOptions real(@Nonnull final double... real) {
     setReal( real );
     return this;
   }

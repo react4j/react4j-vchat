@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -29,7 +29,7 @@ public interface VibratePattern {
 
   @JsOverlay
   @Nonnull
-  static VibratePattern of(@Nonnull final Double[] value) {
+  static VibratePattern of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
 }

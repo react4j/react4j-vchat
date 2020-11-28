@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental2.core.Uint8ClampedArray;
+import elemental3.core.Uint8ClampedArray;
 import elemental3.gl.TexImageSource;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

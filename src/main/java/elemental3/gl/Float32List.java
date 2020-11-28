@@ -1,7 +1,7 @@
 package elemental3.gl;
 
-import elemental2.core.Float32Array;
-import elemental2.core.JsArray;
+import elemental3.core.Float32Array;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -30,7 +30,7 @@ public interface Float32List {
 
   @JsOverlay
   @Nonnull
-  static Float32List of(@Nonnull final Double[] value) {
+  static Float32List of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
 }

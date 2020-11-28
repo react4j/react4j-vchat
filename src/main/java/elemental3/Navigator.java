@@ -1,18 +1,10 @@
 package elemental3;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
-import elemental2.core.JsArray;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
-import elemental2.promise.Promise;
 import elemental3.bluetooth.Bluetooth;
+import elemental3.core.BufferSource;
+import elemental3.core.JsArray;
 import elemental3.media.MediaDevices;
+import elemental3.promise.Promise;
 import elemental3.xr.XRSystem;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -418,102 +410,6 @@ public class Navigator {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
    * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
    */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBufferView data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Int8Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Int16Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Int32Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint8Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint16Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint32Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Uint8ClampedArray data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Float32Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull Float64Array data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull DataView data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
-  public native boolean sendBeacon(@Nonnull String url, @Nonnull ArrayBuffer data);
-
-  /**
-   * The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon - MDN</a>
-   * @see <a href="https://w3c.github.io/beacon/#sendbeacon-method">The definition of 'sendBeacon()' in the 'Beacon' specification.</a>
-   */
   public native boolean sendBeacon(@Nonnull String url, @Nonnull FormData data);
 
   /**
@@ -599,7 +495,7 @@ public class Navigator {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate">Navigator.vibrate - MDN</a>
    * @see <a href="https://dev.w3.org/2009/dap/vibration/">Vibration API</a>
    */
-  public native boolean vibrate(@Nonnull Double[] pattern);
+  public native boolean vibrate(@Nonnull double[] pattern);
 
   /**
    * The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.

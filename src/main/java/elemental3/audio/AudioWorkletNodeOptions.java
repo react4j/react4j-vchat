@@ -1,6 +1,6 @@
 package elemental3.audio;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -76,13 +76,13 @@ public interface AudioWorkletNodeOptions extends AudioNodeOptions {
   }
 
   @JsOverlay
-  default void setOutputChannelCount(@Nonnull final Double... outputChannelCount) {
+  default void setOutputChannelCount(@Nonnull final double... outputChannelCount) {
     setOutputChannelCount( Js.<JsArray<Double>>uncheckedCast( outputChannelCount ) );
   }
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions outputChannelCount(@Nonnull final Double... outputChannelCount) {
+  default AudioWorkletNodeOptions outputChannelCount(@Nonnull final double... outputChannelCount) {
     setOutputChannelCount( outputChannelCount );
     return this;
   }

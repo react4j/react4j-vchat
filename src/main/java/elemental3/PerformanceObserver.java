@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -33,7 +33,7 @@ public class PerformanceObserver {
       name = "supportedEntryTypes"
   )
   @Nonnull
-  public native JsArray<String> supportedEntryTypes();
+  public static native JsArray<String> supportedEntryTypes();
 
   /**
    * The disconnect() method of the PerformanceObserver interface is used to stop the performance observer from receiving any performance entry events.

@@ -1,5 +1,7 @@
 package elemental3;
 
+import elemental3.core.AtomicsNamespace;
+import elemental3.core.JsMathNamespace;
 import elemental3.wasm.WebAssemblyNamespace;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -39,6 +41,12 @@ public final class GlobalWindow extends Window {
   )
   @Nonnull
   public native WebAssemblyNamespace webAssembly();
+
+  @JsProperty(
+      name = "Math"
+  )
+  @Nonnull
+  public native JsMathNamespace math();
 
   @JsProperty(
       name = "Atomics"

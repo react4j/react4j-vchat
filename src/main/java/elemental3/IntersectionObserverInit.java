@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -105,13 +105,13 @@ public interface IntersectionObserverInit {
   }
 
   @JsOverlay
-  default void setThreshold(@Nonnull final Double... threshold) {
+  default void setThreshold(@Nonnull final double... threshold) {
     setThreshold( DoubleOrDoubleArrayUnion.of( threshold ) );
   }
 
   @JsOverlay
   @Nonnull
-  default IntersectionObserverInit threshold(@Nonnull final Double... threshold) {
+  default IntersectionObserverInit threshold(@Nonnull final double... threshold) {
     setThreshold( threshold );
     return this;
   }

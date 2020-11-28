@@ -1,7 +1,7 @@
 package elemental3;
 
-import elemental2.core.JsArray;
-import elemental2.core.JsIterator;
+import elemental3.core.JsArray;
+import elemental3.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public class CSSFontFeatureValuesMap {
 
   public native void set(@Nonnull String featureValueName, @Nonnull JsArray<Double> values);
 
-  public native void set(@Nonnull String featureValueName, @Nonnull Double[] values);
+  public native void set(@Nonnull String featureValueName, @Nonnull double[] values);
 
   @JsProperty(
       name = "size"

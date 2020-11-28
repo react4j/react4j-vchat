@@ -1,8 +1,10 @@
-package elemental3;
+package elemental3.core;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
@@ -16,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "DataView"
 )
-public class DataView implements FakeArrayBufferView, FakeArrayBufferView {
+public class DataView implements ArrayBufferView {
   /**
    * The DataView() constructor is used to create DataView objects.
    *
@@ -66,13 +68,34 @@ public class DataView implements FakeArrayBufferView, FakeArrayBufferView {
   public DataView(@Nonnull final SharedArrayBuffer buffer) {
   }
 
+  @JsProperty(
+      name = "buffer"
+  )
+  @Nonnull
+  public native ArrayBuffer buffer();
+
+  @JsProperty(
+      name = "byteLength"
+  )
+  public native int byteLength();
+
+  @JsProperty(
+      name = "byteOffset"
+  )
+  public native int byteOffset();
+
+  @JsProperty(
+      name = "length"
+  )
+  public native int length();
+
   public native byte getInt8(int byteOffset);
 
-  public native int getUint8(int byteOffset);
+  public native short getUint8(int byteOffset);
 
-  public native int getInt16(int byteOffset, boolean littleEndian);
+  public native short getInt16(int byteOffset, boolean littleEndian);
 
-  public native int getInt16(int byteOffset);
+  public native short getInt16(int byteOffset);
 
   public native int getUint16(int byteOffset, boolean littleEndian);
 
@@ -121,4 +144,10 @@ public class DataView implements FakeArrayBufferView, FakeArrayBufferView {
   public native void setFloat64(int byteOffset, double value, boolean littleEndian);
 
   public native void setFloat64(int byteOffset, double value);
+
+  @JsMethod(
+      name = "toString"
+  )
+  @Nonnull
+  public native String toString_();
 }

@@ -1,9 +1,9 @@
 package elemental3.notifications;
 
-import elemental2.core.JsArray;
-import elemental2.promise.Promise;
 import elemental3.EventHandler;
 import elemental3.EventTarget;
+import elemental3.core.JsArray;
+import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -182,7 +182,7 @@ public class Notification extends EventTarget {
   @JsProperty(
       name = "maxActions"
   )
-  public native int maxActions();
+  public static native int maxActions();
 
   /**
    * The permission read-only property of the Notification interface indicates the current permission granted by the user for the current origin to display web notifications.
@@ -195,7 +195,7 @@ public class Notification extends EventTarget {
   )
   @Nonnull
   @NotificationPermission
-  public native String permission();
+  public static native String permission();
 
   /**
    * The renotify read-only property of the Notification interface specifies whether the user should be notified after a new notification replaces an old one, as specified in the renotify option of the Notification() constructor.

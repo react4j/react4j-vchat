@@ -1,8 +1,12 @@
 package elemental3;
 
+import elemental3.core.JsArray;
+import elemental3.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -107,4 +111,91 @@ public class DOMTokenList {
    */
   @Nullable
   public native String item(int index);
+
+  /**
+   * The keys() method of the DOMTokenList interface returns an iterator allowing to go through all keys contained in this object. The keys are of type unsigned integer.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/keys">DOMTokenList.keys - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'keys() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<Double> keys();
+
+  /**
+   * The values() method of the DOMTokenList interface returns an iterator allowing developers to go through all values contained in the DOMTokenList. The individual values are DOMString objects.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/values">DOMTokenList.values - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'values() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<String> values();
+
+  /**
+   * The DOMTokenList.entries() method returns an iterator allowing you to go through all key/value pairs contained in this object. The values are DOMString objects, each representing a single token.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/entries">DOMTokenList.entries - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'entries() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
+  /**
+   * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback callback);
+
+  /**
+   * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback2 callback);
+
+  /**
+   * The forEach() method of the DOMTokenList interface calls the callback given in parameter once for each value pair in the list, in insertion order.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach">DOMTokenList.forEach - MDN</a>
+   * @see <a href="https://dom.spec.whatwg.org/#domtokenlist">The definition of 'forEach() (as iterable&lt;Node&gt;)' in the 'DOM' specification.</a>
+   */
+  public native void forEach(@Nonnull ForEachCallback3 callback);
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
+  )
+  public static final class Entry extends JsArray<Object> {
+    @JsOverlay
+    public final int index() {
+      return getAtAsAny( 0 ).asInt();
+    }
+
+    @JsOverlay
+    @Nonnull
+    public final String value() {
+      return getAtAsAny( 1 ).cast();
+    }
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback {
+    void item(@Nonnull String value);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2 {
+    void item(@Nonnull String value, int index);
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3 {
+    void item(@Nonnull String value, int index, @Nonnull DOMTokenList iterable);
+  }
 }

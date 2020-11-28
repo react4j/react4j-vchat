@@ -1,6 +1,6 @@
 package elemental3;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -147,13 +147,13 @@ public interface BasePropertyIndexedKeyframe {
   }
 
   @JsOverlay
-  default void setOffset(@Nonnull final Double... offset) {
+  default void setOffset(@Nonnull final double... offset) {
     setOffset( DoubleOrDoubleArrayUnion.of( offset ) );
   }
 
   @JsOverlay
   @Nonnull
-  default BasePropertyIndexedKeyframe offset(@Nonnull final Double... offset) {
+  default BasePropertyIndexedKeyframe offset(@Nonnull final double... offset) {
     setOffset( offset );
     return this;
   }

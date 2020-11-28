@@ -1,8 +1,8 @@
 package elemental3;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.JsArray;
+import elemental3.core.Float32Array;
+import elemental3.core.Float64Array;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -46,7 +46,7 @@ public class DOMMatrixReadOnly {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly">DOMMatrixReadOnly.DOMMatrixReadOnly - MDN</a>
    * @see <a href="https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-dommatrixreadonly">The definition of 'DOMMatrixReadOnly' in the 'Geometry Interfaces Module Level 1' specification.</a>
    */
-  public DOMMatrixReadOnly(@Nonnull final Double[] init) {
+  public DOMMatrixReadOnly(@Nonnull final double[] init) {
   }
 
   /**

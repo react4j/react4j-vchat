@@ -1,6 +1,6 @@
 package elemental3.gl;
 
-import elemental2.core.JsArray;
+import elemental3.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -141,5 +141,5 @@ public class WEBGL_draw_buffers {
    * @see <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/">The definition of 'WEBGL_draw_buffers' in the 'WEBGL_draw_buffers' specification.</a>
    * @see <a href="https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml">The definition of 'glDrawBuffers' in the 'OpenGL ES 3.0' specification.</a>
    */
-  public native void drawBuffersWEBGL(@Nonnull Double[] buffers);
+  public native void drawBuffersWEBGL(@Nonnull double[] buffers);
 }

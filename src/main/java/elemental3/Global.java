@@ -1,8 +1,10 @@
 package elemental3;
 
-import elemental2.core.JsArray;
-import elemental2.promise.Promise;
+import elemental3.core.AtomicsNamespace;
+import elemental3.core.JsArray;
+import elemental3.core.JsMathNamespace;
 import elemental3.indexeddb.IDBFactory;
+import elemental3.promise.Promise;
 import elemental3.speech.SpeechSynthesis;
 import elemental3.svg.SVGImageElement;
 import elemental3.wasm.WebAssemblyNamespace;
@@ -4031,6 +4033,11 @@ public final class Global {
   @Nonnull
   public static WebAssemblyNamespace webAssembly() {
     return globalThis().webAssembly();
+  }
+
+  @Nonnull
+  public static JsMathNamespace math() {
+    return globalThis().math();
   }
 
   @Nonnull
