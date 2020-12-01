@@ -109,7 +109,7 @@ public abstract class MediaStreamConnection
   public boolean isAudioEnabled()
   {
     final MediaStream stream = getStream();
-    return null != stream && stream.getAudioTracks().some( ( track, index, tracks ) -> track.enabled );
+    return null != stream && stream.getAudioTracks().some( track -> track.enabled );
   }
 
   @ComputableValueRef
@@ -139,7 +139,7 @@ public abstract class MediaStreamConnection
     final MediaStream stream = getStream();
     if ( null != stream )
     {
-      stream.getAudioTracks().forEach( ( track, index, array ) -> track.enabled = !track.enabled );
+      stream.getAudioTracks().forEach( track -> track.enabled = !track.enabled );
     }
     getAudioEnabledComputableValue().reportPossiblyChanged();
   }
@@ -156,7 +156,7 @@ public abstract class MediaStreamConnection
     final MediaStream stream = getStream();
     if ( null != stream )
     {
-      stream.getVideoTracks().forEach( ( track, index, array ) -> track.enabled = !track.enabled );
+      stream.getVideoTracks().forEach( track -> track.enabled = !track.enabled );
     }
   }
 
@@ -215,7 +215,7 @@ public abstract class MediaStreamConnection
     setEnabled( false );
     if ( null != stream )
     {
-      stream.getTracks().forEach(  track-> {
+      stream.getTracks().forEach( track -> {
         if ( MediaStreamTrackState.live.equals( track.readyState() ) )
         {
           track.onended = null;
