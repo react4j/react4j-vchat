@@ -1,5 +1,9 @@
 package react4j.vchat.model;
 
+import akasha.Global;
+import akasha.HashChangeEvent;
+import akasha.HashChangeEventListener;
+import akasha.Location;
 import arez.ComputableValue;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
@@ -8,10 +12,6 @@ import arez.annotations.DepType;
 import arez.annotations.Memoize;
 import arez.annotations.OnActivate;
 import arez.annotations.OnDeactivate;
-import elemental3.Global;
-import elemental3.HashChangeEvent;
-import elemental3.HashChangeEventListener;
-import elemental3.Location;
 import javax.annotation.Nonnull;
 
 /**

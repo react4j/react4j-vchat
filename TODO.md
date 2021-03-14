@@ -6,6 +6,8 @@ complete as there is too much un-said.
 
 ## Shortlist Actions
 
+Adopt features from https://dev.to/arjhun777/video-chatting-and-screen-sharing-with-react-node-webrtc-peerjs-18fg
+
 * Add the ability to manually select active stream or else follow audio activity.
   Follow audio activity - https://stackoverflow.com/questions/16724414/microphone-activity-level-of-webrtc-mediastream
 * Fix styling on lower panels

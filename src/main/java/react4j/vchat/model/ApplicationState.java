@@ -1,12 +1,12 @@
 package react4j.vchat.model;
 
+import akasha.Global;
 import arez.ObservableValue;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
 import arez.annotations.CascadeDispose;
 import arez.annotations.Observable;
 import arez.annotations.ObservableValueRef;
-import elemental3.Global;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;

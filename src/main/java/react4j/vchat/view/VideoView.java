@@ -1,7 +1,7 @@
 package react4j.vchat.view;
 
+import akasha.HTMLVideoElement;
 import arez.Disposable;
-import elemental3.HTMLVideoElement;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.JsPropertyMap;

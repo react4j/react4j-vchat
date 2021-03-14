@@ -1,8 +1,8 @@
 package react4j.vchat;
 
+import akasha.Element;
+import akasha.Global;
 import com.google.gwt.core.client.EntryPoint;
-import elemental3.Element;
-import elemental3.Global;
 import jsinterop.base.Js;
 import react4j.dom.ReactDOM;
 import react4j.vchat.view.ApplicationBuilder;

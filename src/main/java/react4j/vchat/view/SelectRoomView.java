@@ -1,8 +1,8 @@
 package react4j.vchat.view;
 
+import akasha.HTMLInputElement;
 import arez.annotations.Feature;
 import arez.annotations.Observable;
-import elemental3.HTMLInputElement;
 import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

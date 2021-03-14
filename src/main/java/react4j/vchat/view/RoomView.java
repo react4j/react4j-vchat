@@ -1,5 +1,10 @@
 package react4j.vchat.view;
 
+import akasha.Document;
+import akasha.EventListener;
+import akasha.Global;
+import akasha.HTMLDivElement;
+import akasha.HTMLInputElement;
 import arez.ComputableValue;
 import arez.annotations.Action;
 import arez.annotations.CascadeDispose;
@@ -9,11 +14,6 @@ import arez.annotations.Memoize;
 import arez.annotations.OnActivate;
 import arez.annotations.OnDeactivate;
 import arez.annotations.PostConstruct;
-import elemental3.Document;
-import elemental3.EventListener;
-import elemental3.Global;
-import elemental3.HTMLDivElement;
-import elemental3.HTMLInputElement;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import react4j.ReactNode;
