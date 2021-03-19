@@ -45,8 +45,6 @@ define 'react4j-vchat' do
 
   iml.excluded_directories << project._('tmp')
 
-  ipr.add_component_from_artifact(:idea_codestyle)
-
   ipr.add_gwt_configuration(project,
                             :gwt_module => 'react4j.vchat.VideoChatDev',
                             :start_javascript_debugger => false,
@@ -54,4 +52,9 @@ define 'react4j-vchat' do
                             :vm_parameters => '-Xmx2G -Dgwt.watchFileChanges=false',
                             :shell_parameters => "-strict -style PRETTY -XmethodNameDisplayMode FULL -nostartServer -incremental -codeServerPort 8889 -bindAddress 0.0.0.0 -deploy #{_(:generated, :gwt, 'deploy')} -extra #{_(:generated, :gwt, 'extra')} -war #{_(:generated, :gwt, 'war')}",
                             :launch_page => 'http://127.0.0.1:8889/vchat_dev/index.html')
+
+  ipr.add_component_from_artifact(:idea_codestyle)
+  ipr.add_code_insight_settings
+  ipr.add_nullable_manager
+  ipr.add_javac_settings('-Xlint:all,-processing,-serial -Werror -Xmaxerrs 10000 -Xmaxwarns 10000')
 end
