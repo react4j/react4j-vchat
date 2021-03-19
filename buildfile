@@ -14,9 +14,6 @@ define 'react4j-vchat' do
 
   project.version = ENV['PRODUCT_VERSION'] if ENV['PRODUCT_VERSION']
 
-  project.processorpath << :react4j_processor
-  project.processorpath << :arez_processor
-
   compile.with :javax_annotation,
                :jetbrains_annotations,
                :jsinterop_base,
@@ -31,6 +28,8 @@ define 'react4j-vchat' do
                :arez_core,
                :arez_spytools,
                :gwt_user
+
+  compile.options[:processor_path] << [:react4j_processor, :arez_processor]
 
   # Exclude the Dev module if EXCLUDE_GWT_DEV_MODULE is true
   GWT_MODULES = %w(react4j.vchat.VideoChatProd) + (ENV['EXCLUDE_GWT_DEV_MODULE'] == 'true' ? [] : %w(react4j.vchat.VideoChatDev))
