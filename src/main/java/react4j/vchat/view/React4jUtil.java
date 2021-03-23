@@ -1,6 +1,6 @@
 package react4j.vchat.view;
 
-import elemental2.dom.Event;
+import akasha.Event;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
 import react4j.dom.events.SyntheticEvent;
