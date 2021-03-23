@@ -19,6 +19,7 @@ define 'react4j-vchat' do
                :jsinterop_base,
                :jsinterop_annotations,
                :akasha,
+               :zemeckis,
                :elemental2_core,
                :elemental2_dom,
                :elemental2_promise,
