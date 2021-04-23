@@ -1,6 +1,6 @@
 package react4j.vchat.model;
 
-import akasha.Global;
+import akasha.WindowGlobal;
 import arez.ObservableValue;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
@@ -36,7 +36,7 @@ public abstract class ApplicationState
 
   ApplicationState()
   {
-    final String codes = Global.localStorage().getItem( STORAGE_KEY );
+    final String codes = WindowGlobal.localStorage().getItem( STORAGE_KEY );
     if ( null != codes )
     {
       for ( final String code : codes.split( "\\|" ) )
@@ -77,7 +77,7 @@ public abstract class ApplicationState
     }
     _latestRoomCodes.addFirst( roomCode );
     getLatestRoomCodesObservableValue().reportChanged();
-    Global.localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomCodes ) );
+    WindowGlobal.localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomCodes ) );
   }
 
   /**

@@ -3,10 +3,10 @@ package react4j.vchat.model;
 import akasha.CloseEvent;
 import akasha.Console;
 import akasha.Event;
-import akasha.Global;
 import akasha.Location;
 import akasha.MessageEvent;
 import akasha.WebSocket;
+import akasha.WindowGlobal;
 import akasha.core.JSON;
 import akasha.lang.JsArray;
 import akasha.media.ConstrainULongRange;
@@ -470,7 +470,7 @@ public abstract class RoomModel
   @Nonnull
   private String deriveRoomUrl()
   {
-    final Location location = Global.location();
+    final Location location = WindowGlobal.location();
     final String protocol = "https".equals( location.protocol ) ? "wss" : "ws";
     // For local development hardcode the port. In the future we should fix this
     final int port = 3737;
@@ -692,7 +692,7 @@ public abstract class RoomModel
   @Nonnull
   private Promise<MediaStream> requestWebCam()
   {
-    return Global
+    return WindowGlobal
       .navigator()
       .mediaDevices()
       .getUserMedia( MediaStreamConstraints
@@ -707,7 +707,7 @@ public abstract class RoomModel
   @Nonnull
   private Promise<MediaStream> requestScreenShare()
   {
-    return Global
+    return WindowGlobal
       .navigator()
       .mediaDevices()
       .getDisplayMedia( DisplayMediaStreamConstraints.create().audio( false ) );

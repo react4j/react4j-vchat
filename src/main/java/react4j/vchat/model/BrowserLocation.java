@@ -1,9 +1,9 @@
 package react4j.vchat.model;
 
-import akasha.Global;
 import akasha.HashChangeEvent;
 import akasha.HashChangeEventListener;
 import akasha.Location;
+import akasha.WindowGlobal;
 import arez.ComputableValue;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
@@ -38,13 +38,13 @@ abstract class BrowserLocation
   @Nonnull
   String getLocation()
   {
-    final String hash = Global.location().hash;
+    final String hash = WindowGlobal.location().hash;
     return hash.isEmpty() ? hash : hash.substring( 1 );
   }
 
   void gotoLocation( @Nonnull final String hash )
   {
-    final Location location = Global.location();
+    final Location location = WindowGlobal.location();
     final String target = hash.isEmpty() ? hash : "#" + hash;
     if ( !location.hash.equals( target ) )
     {
@@ -55,13 +55,13 @@ abstract class BrowserLocation
   @OnActivate
   void onLocationActivate()
   {
-    Global.addHashchangeListener( _listener, false );
+    WindowGlobal.addHashchangeListener( _listener, false );
   }
 
   @OnDeactivate
   void onLocationDeactivate()
   {
-    Global.removeHashchangeListener( _listener, false );
+    WindowGlobal.removeHashchangeListener( _listener, false );
   }
 
   @ComputableValueRef

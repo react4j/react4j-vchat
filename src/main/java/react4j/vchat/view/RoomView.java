@@ -2,9 +2,9 @@ package react4j.vchat.view;
 
 import akasha.Document;
 import akasha.EventListener;
-import akasha.Global;
 import akasha.HTMLDivElement;
 import akasha.HTMLInputElement;
+import akasha.WindowGlobal;
 import arez.ComputableValue;
 import arez.annotations.Action;
 import arez.annotations.CascadeDispose;
@@ -163,7 +163,7 @@ abstract class RoomView
   private void toggleFullscreen()
   {
     assert null != _view;
-    final Document document = Global.document();
+    final Document document = WindowGlobal.document();
     if ( document.fullscreen() )
     {
       document.exitFullscreen();
@@ -302,7 +302,7 @@ abstract class RoomView
   @Memoize( depType = DepType.AREZ_OR_EXTERNAL )
   boolean isFullscreen()
   {
-    return Global.document().fullscreen();
+    return WindowGlobal.document().fullscreen();
   }
 
   @ComputableValueRef
@@ -311,13 +311,13 @@ abstract class RoomView
   @OnActivate
   void onFullscreenActivate()
   {
-    Global.document().addFullscreenchangeListener( _onFullScreenChange );
+    WindowGlobal.document().addFullscreenchangeListener( _onFullScreenChange );
   }
 
   @OnDeactivate
   void onFullscreenDeactivate()
   {
-    Global.document().removeFullscreenchangeListener( _onFullScreenChange );
+    WindowGlobal.document().removeFullscreenchangeListener( _onFullScreenChange );
   }
 
   @Action
