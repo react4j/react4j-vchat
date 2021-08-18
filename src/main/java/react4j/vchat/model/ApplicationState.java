@@ -36,12 +36,15 @@ public abstract class ApplicationState
 
   ApplicationState()
   {
-    final String codes = WindowGlobal.localStorage().getItem( STORAGE_KEY );
-    if ( null != codes )
+    if ( WindowGlobal.isLocalStorageSupported() )
     {
-      for ( final String code : codes.split( "\\|" ) )
+      final String codes = WindowGlobal.localStorage().getItem( STORAGE_KEY );
+      if ( null != codes )
       {
-        _latestRoomCodes.addLast( code );
+        for ( final String code : codes.split( "\\|" ) )
+        {
+          _latestRoomCodes.addLast( code );
+        }
       }
     }
   }
@@ -77,7 +80,10 @@ public abstract class ApplicationState
     }
     _latestRoomCodes.addFirst( roomCode );
     getLatestRoomCodesObservableValue().reportChanged();
-    WindowGlobal.localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomCodes ) );
+    if ( WindowGlobal.isLocalStorageSupported() )
+    {
+      WindowGlobal.localStorage().setItem( STORAGE_KEY, String.join( "|", _latestRoomCodes ) );
+    }
   }
 
   /**
