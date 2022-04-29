@@ -255,8 +255,8 @@ public abstract class RoomModel
     // Use one of Google's public STUN servers
     // The host should perform the offer role and the guest the answer role
     _connection = new RTCPeerConnection( RTCConfiguration
-                                           .create()
-                                           .iceServers( RTCIceServer.create( "stun:stun.l.google.com:19302" ) ) );
+                                           .of()
+                                           .iceServers( RTCIceServer.urls( "stun:stun.l.google.com:19302" ) ) );
     _negotiationInFlight = false;
     _negotiationRequested = false;
     _connection.onicecandidate = this::onIceCandidate;
@@ -342,7 +342,7 @@ public abstract class RoomModel
         _connection
           .createOffer()
           .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
-                                                             .create()
+                                                             .of()
                                                              .sdp( offer.sdp() )
                                                              .type( offer.type() ) ) )
           .then( e -> {
@@ -590,7 +590,8 @@ public abstract class RoomModel
         _connection.setRemoteDescription( message.getAsAny( "session" ).cast() );
         _connection
           .createAnswer()
-          .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit.create()
+          .then( offer -> _connection.setLocalDescription( RTCLocalSessionDescriptionInit
+                                                             .of()
                                                              .type( offer.type() )
                                                              .sdp( offer.sdp() ) ) )
           .then( e -> {
@@ -614,7 +615,8 @@ public abstract class RoomModel
       else if ( "candidate".equals( command ) )
       {
         assert null != _connection;
-        _connection.addIceCandidate( RTCIceCandidateInit.create()
+        _connection.addIceCandidate( RTCIceCandidateInit
+                                       .of()
                                        .sdpMLineIndex( message.getAsAny( "mlineindex" ).asDouble() )
                                        .candidate( message.getAsAny( "candidate" ).asString() ) );
       }
@@ -696,12 +698,12 @@ public abstract class RoomModel
       .navigator()
       .mediaDevices()
       .getUserMedia( MediaStreamConstraints
-                       .create()
+                       .of()
                        .audio( true )
                        .video( MediaTrackConstraints
-                                 .create()
-                                 .width( ConstrainULongRange.create().min( 160 ).ideal( 640 ).max( 1280 ) )
-                                 .height( ConstrainULongRange.create().min( 120 ).ideal( 360 ).max( 720 ) ) ) );
+                                 .of()
+                                 .width( ConstrainULongRange.of().min( 160 ).ideal( 640 ).max( 1280 ) )
+                                 .height( ConstrainULongRange.of().min( 120 ).ideal( 360 ).max( 720 ) ) ) );
   }
 
   @Nonnull
@@ -710,6 +712,6 @@ public abstract class RoomModel
     return WindowGlobal
       .navigator()
       .mediaDevices()
-      .getDisplayMedia( DisplayMediaStreamConstraints.create().audio( false ) );
+      .getDisplayMedia( DisplayMediaStreamConstraints.of().audio( false ) );
   }
 }
